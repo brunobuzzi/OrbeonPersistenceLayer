@@ -1,0 +1,4 @@
+other
+isSectionDoesNotExist
+
+	^false

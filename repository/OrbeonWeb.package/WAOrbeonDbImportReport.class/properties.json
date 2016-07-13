@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"importedData" ],
+	"name" : "WAOrbeonDbImportReport",
+	"pools" : [
+		 ],
+	"super" : "SewafChildComponent",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"initialize" : "BrunoBB 02/03/2016 09:26",
+		"ldapLoginModeName" : "BrunoBB 03/17/2015 05:29",
+		"loginModeNames" : "BrunoBB 03/17/2015 05:29",
+		"modeType" : "BrunoBB 03/17/2015 05:29",
+		"modeType:" : "BrunoBB 03/17/2015 05:29",
+		"renderContentOn:" : "BrunoBB 03/17/2015 05:29",
+		"renderLdapOptionsOn:" : "BrunoBB 02/03/2016 09:26",
+		"renderLoginModeOn:" : "BrunoBB 03/17/2015 05:29",
+		"saveLoginMode" : "BrunoBB 03/17/2015 05:29",
+		"setLocalLoginMode" : "BrunoBB 02/03/2016 09:26" } }

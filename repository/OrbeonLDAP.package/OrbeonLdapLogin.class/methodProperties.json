@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"modeName" : "BrunoBB 03/15/2015 15:59" },
+	"instance" : {
+		"bindPassword" : "BrunoBB 03/15/2015 12:01",
+		"bindPassword:" : "BrunoBB 03/15/2015 12:01",
+		"dn" : "BrunoBB 03/15/2015 12:01",
+		"dn:" : "BrunoBB 03/15/2015 12:01",
+		"isLdapMode" : "BrunoBB 03/15/2015 15:43",
+		"ldapIP" : "BrunoBB 03/15/2015 12:01",
+		"ldapIP:" : "BrunoBB 03/15/2015 12:01",
+		"ou" : "BrunoBB 03/15/2015 12:04",
+		"ou:" : "BrunoBB 03/15/2015 12:04",
+		"validateUser:password:" : "BrunoBB 06/29/2016 08:04" } }

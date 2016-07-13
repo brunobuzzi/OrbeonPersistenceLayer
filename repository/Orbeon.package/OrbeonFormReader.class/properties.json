@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"xmlDefinition",
+		"xmlDocument",
+		"xmlInstanceDocument" ],
+	"name" : "OrbeonFormReader",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

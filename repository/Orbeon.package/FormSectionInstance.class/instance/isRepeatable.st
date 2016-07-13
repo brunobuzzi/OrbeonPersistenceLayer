@@ -1,0 +1,4 @@
+other
+isRepeatable
+
+	^self subclassResponsibility

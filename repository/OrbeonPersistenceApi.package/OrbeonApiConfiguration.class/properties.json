@@ -1,0 +1,20 @@
+{
+	"category" : "OrbeonPersistenceApi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Default" ],
+	"commentStamp" : "BrunoBB 09/15/2015 14:20",
+	"instvars" : [
+		"isEnabled",
+		"deferredXmlProcessing",
+		"bpmForms",
+		"pathForAttachments",
+		"baseAttachmentPath",
+		"searchTypes",
+		"formsAudit" ],
+	"name" : "OrbeonApiConfiguration",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonFormDefinitionSummaryPanel",
+	"pools" : [
+		 ],
+	"super" : "SEWAFWebAbstractPanel",
+	"type" : "normal" }

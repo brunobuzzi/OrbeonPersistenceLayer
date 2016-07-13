@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"draft",
+		"username",
+		"groupname" ],
+	"name" : "OrbeonSavedFormDefinition",
+	"pools" : [
+		 ],
+	"super" : "OrbeonAbstractFormDefinition",
+	"type" : "normal" }

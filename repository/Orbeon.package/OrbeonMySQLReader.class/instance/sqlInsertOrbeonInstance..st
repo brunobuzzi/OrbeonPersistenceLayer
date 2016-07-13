@@ -1,0 +1,4 @@
+insert
+sqlInsertOrbeonInstance: anOrbeonFormInstance
+
+	^'mysql -h ',self databaseIP,' -u ',self databaseUser,' -p',self databasePassword,' -N -B -e "INSERT INTO orbeon_metadata.orbeon_form_instance (orbeon_instance_id, form_definition_id, form, app, created_time, modified_time, modified_user, username, groupname, deleted) VALUES (''', anOrbeonFormInstance id, ''',', '''',anOrbeonFormInstance definitionId, ''',' ,'''',anOrbeonFormInstance formName, ''',', '''', anOrbeonFormInstance getApplicationName, ''',', '''',anOrbeonFormInstance createdTime printMySqlString, ''',', '''',anOrbeonFormInstance modifiedTime printMySqlString, ''',', '''',anOrbeonFormInstance modifiedUser, ''',', '''',anOrbeonFormInstance username, ''',', '''',anOrbeonFormInstance groupname, ''',' ,'''N''', ')"'

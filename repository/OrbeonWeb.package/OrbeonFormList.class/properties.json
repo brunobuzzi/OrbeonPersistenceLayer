@@ -1,0 +1,25 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"originalCollection",
+		"collection",
+		"searchFields",
+		"description",
+		"selectedCommand",
+		"batchedList",
+		"orderMode",
+		"selectionTrack",
+		"selectedVersion",
+		"app",
+		"exportComponent",
+		"batchList" ],
+	"name" : "OrbeonFormList",
+	"pools" : [
+		 ],
+	"super" : "SewafChildComponent",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WAApplicationImportReport",
+	"pools" : [
+		 ],
+	"super" : "WAOrbeonDbImportReport",
+	"type" : "normal" }

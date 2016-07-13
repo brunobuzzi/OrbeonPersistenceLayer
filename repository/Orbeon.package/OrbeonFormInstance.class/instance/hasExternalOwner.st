@@ -1,0 +1,4 @@
+other
+hasExternalOwner
+
+	^externalOwner notNil

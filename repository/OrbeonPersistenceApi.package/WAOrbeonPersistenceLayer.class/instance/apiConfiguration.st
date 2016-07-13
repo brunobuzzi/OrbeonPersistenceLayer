@@ -1,0 +1,4 @@
+other
+apiConfiguration
+
+	^OrbeonApiConfiguration default

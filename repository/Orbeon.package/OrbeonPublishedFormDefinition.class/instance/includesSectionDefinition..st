@@ -1,0 +1,4 @@
+other
+includesSectionDefinition: aFormSectionDefinition
+
+	^sectionDefinitions includes: aFormSectionDefinition

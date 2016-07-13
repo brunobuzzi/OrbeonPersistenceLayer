@@ -1,0 +1,18 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BrunoBB 02/17/2015 11:23",
+	"instvars" : [
+		"name",
+		"sectionDefinition",
+		"formInstance",
+		"parentSection",
+		"subSections" ],
+	"name" : "FormSectionInstance",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

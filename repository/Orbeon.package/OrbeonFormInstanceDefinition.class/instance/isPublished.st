@@ -1,0 +1,3 @@
+Accessing
+isPublished
+	^isPublished

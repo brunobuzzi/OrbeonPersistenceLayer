@@ -1,0 +1,24 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BrunoBB 11/24/2014 05:12",
+	"instvars" : [
+		"draft",
+		"username",
+		"groupname",
+		"fields",
+		"definition",
+		"fieldsValues",
+		"repeatFieldsValues",
+		"sections",
+		"externalOwner",
+		"isValid",
+		"assignment" ],
+	"name" : "OrbeonFormInstance",
+	"pools" : [
+		 ],
+	"super" : "OrbeonForm",
+	"type" : "normal" }

@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"backToOrbeon" : "BrunoBB 03/18/2015 05:54",
+		"logout" : "BrunoBB 02/03/2016 09:24",
+		"renderChartsOn:" : "BrunoBB 02/23/2014 15:28",
+		"renderContentOn:" : "BrunoBB 03/17/2015 05:40",
+		"renderGarbageCollectorOn:" : "BrunoBB 02/23/2014 15:28",
+		"renderLoginModeIconOn:" : "BrunoBB 03/19/2015 16:10",
+		"renderManageGemsOn:" : "BrunoBB 11/01/2014 14:17",
+		"renderManageSurveysOn:" : "BrunoBB 11/01/2014 14:16",
+		"renderManageUsersIconOn:" : "BrunoBB 03/18/2015 06:18",
+		"renderOptionsOn:" : "BrunoBB 03/19/2015 16:21",
+		"renderOrbeonWebIconOn:" : "BrunoBB 03/19/2015 16:09",
+		"renderRestartOrbeonTomcatOn:" : "BrunoBB 02/23/2014 15:28",
+		"renderServerConfigurationSettingOn:" : "BrunoBB 03/18/2015 06:21",
+		"restartTomcat" : "BrunoBB 02/23/2014 15:28",
+		"serversConfiguration" : "BrunoBB 02/03/2016 09:41",
+		"setLoginMode" : "BrunoBB 03/19/2015 16:53",
+		"setupUser" : "BrunoBB 03/19/2015 16:53",
+		"showCharts" : "BrunoBB 02/23/2014 15:51",
+		"showSurveyManager" : "BrunoBB 03/04/2014 11:33",
+		"style" : "BrunoBB 03/19/2015 16:44",
+		"systemCollectGarbage" : "BrunoBB 02/23/2014 15:28",
+		"topPanel" : "BrunoBB 02/23/2014 15:28",
+		"updateRoot:" : "BrunoBB 02/23/2014 15:28" } }

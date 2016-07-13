@@ -1,0 +1,15 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"exportCollection",
+		"exportMode" ],
+	"name" : "OrbeonExportComposite",
+	"pools" : [
+		 ],
+	"super" : "SewafChildComponent",
+	"type" : "normal" }

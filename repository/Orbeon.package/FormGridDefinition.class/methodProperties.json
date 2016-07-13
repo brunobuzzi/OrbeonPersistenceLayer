@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"name:" : "BrunoBB 08/06/2014 17:57" },
+	"instance" : {
+		"addFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
+		"fieldDefinitions" : "BrunoBB 08/05/2014 11:10",
+		"fieldDefinitions:" : "BrunoBB 08/05/2014 11:10",
+		"includesFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
+		"initialize" : "BrunoBB 08/06/2014 17:55",
+		"name" : "BrunoBB 08/05/2014 11:10",
+		"name:" : "BrunoBB 08/05/2014 11:10",
+		"printStructureOn:count:" : "BrunoBB 02/24/2015 03:41",
+		"removeFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
+		"searchFields" : "BrunoBB 04/23/2016 12:36",
+		"sectionDefinition" : "BrunoBB 08/05/2014 11:10",
+		"sectionDefinition:" : "BrunoBB 08/05/2014 11:10",
+		"summaryFields" : "BrunoBB 08/06/2014 17:55" } }

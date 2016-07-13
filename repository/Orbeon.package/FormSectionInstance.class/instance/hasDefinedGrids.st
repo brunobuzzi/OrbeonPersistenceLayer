@@ -1,0 +1,4 @@
+other
+hasDefinedGrids
+
+	^sectionDefinition hasGrids

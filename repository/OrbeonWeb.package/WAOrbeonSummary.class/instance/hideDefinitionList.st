@@ -1,0 +1,4 @@
+other
+hideDefinitionList
+
+	isDefinitionSide := false

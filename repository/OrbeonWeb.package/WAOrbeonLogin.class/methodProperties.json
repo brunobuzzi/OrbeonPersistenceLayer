@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"ldapExample_getLdapResultForCurrentUser" : "BrunoBB 11/01/2014 15:03",
+		"ldapExample_getLdapRols" : "BrunoBB 11/01/2014 15:04",
+		"ldapExample_ldapQueryRole" : "BrunoBB 11/01/2014 15:04",
+		"newUserFromLogin" : "BrunoBB 02/18/2014 04:12",
+		"style" : "BrunoBB 07/03/2016 11:06",
+		"tryLogin" : "BrunoBB 07/03/2016 08:53",
+		"tryLogin2" : "BrunoBB 11/01/2014 15:04" } }

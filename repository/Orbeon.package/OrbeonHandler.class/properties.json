@@ -1,0 +1,18 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Default" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"mySqlReader",
+		"formReader",
+		"instanceDefinitions",
+		"synchronizations",
+		"orbeonIP" ],
+	"name" : "OrbeonHandler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

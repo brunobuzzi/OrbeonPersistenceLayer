@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WAOrbeonManagerPanel",
+	"pools" : [
+		 ],
+	"super" : "SEWAFWebObjectPanel",
+	"type" : "normal" }

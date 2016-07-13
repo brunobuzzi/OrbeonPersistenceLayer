@@ -1,0 +1,4 @@
+other
+defaultDatabaseReaderClass
+
+	^OrbeonDB2Reader

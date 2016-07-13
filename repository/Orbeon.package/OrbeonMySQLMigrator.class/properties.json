@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BrunoBB 10/18/2015 11:44",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonMySQLMigrator",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDatabaseMigrator",
+	"type" : "normal" }

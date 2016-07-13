@@ -1,0 +1,4 @@
+other
+resultSize
+
+	^resultCollection size

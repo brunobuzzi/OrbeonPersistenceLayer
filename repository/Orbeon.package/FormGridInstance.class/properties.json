@@ -1,0 +1,17 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"section",
+		"gridDefinition",
+		"gridIterations" ],
+	"name" : "FormGridInstance",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

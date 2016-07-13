@@ -1,0 +1,20 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"userCollection",
+		"rolsComponent",
+		"selectedUser",
+		"rolTypeComponent",
+		"selectedRoleType",
+		"username",
+		"password" ],
+	"name" : "OrbeonUserWebManagerPanel",
+	"pools" : [
+		 ],
+	"super" : "SEWAFWebAbstractPanel",
+	"type" : "normal" }

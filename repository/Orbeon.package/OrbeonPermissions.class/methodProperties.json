@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"add:to:" : "BrunoBB 08/14/2015 13:13",
+		"add:toAll:" : "BrunoBB 08/25/2015 14:13",
+		"addAll:toAll:" : "BrunoBB 08/25/2015 14:22",
+		"has:permission:" : "BrunoBB 08/14/2015 14:48",
+		"hasCreateAccess:" : "BrunoBB 08/15/2015 13:48",
+		"hasDeleteAccess:" : "BrunoBB 08/15/2015 13:48",
+		"hasReadAccess:" : "BrunoBB 08/15/2015 13:47",
+		"hasUpdateAccess:" : "BrunoBB 08/15/2015 13:48",
+		"initialize" : "BrunoBB 08/14/2015 13:11",
+		"isEnabled" : "BrunoBB 08/14/2015 13:10",
+		"isEnabled:" : "BrunoBB 08/14/2015 13:10",
+		"permissions" : "BrunoBB 08/14/2015 13:10",
+		"permissions:" : "BrunoBB 08/14/2015 13:10",
+		"remove:from:" : "BrunoBB 08/14/2015 13:14" } }

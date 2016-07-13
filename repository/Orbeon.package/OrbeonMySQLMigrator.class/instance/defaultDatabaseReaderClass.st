@@ -1,0 +1,4 @@
+other
+defaultDatabaseReaderClass
+
+	^Orbeon46MySQL

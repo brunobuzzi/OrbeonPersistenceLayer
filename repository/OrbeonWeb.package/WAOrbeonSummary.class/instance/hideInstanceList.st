@@ -1,0 +1,4 @@
+other
+hideInstanceList
+
+	isDefinitionSide := true

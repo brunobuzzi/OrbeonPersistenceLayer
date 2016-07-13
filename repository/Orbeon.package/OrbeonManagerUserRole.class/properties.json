@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonManagerUserRole",
+	"pools" : [
+		 ],
+	"super" : "OrbeonManagerRole",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formOne",
+		"formTwo",
+		"comparisionResult" ],
+	"name" : "FormComparator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

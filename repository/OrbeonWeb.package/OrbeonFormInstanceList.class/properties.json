@@ -1,0 +1,19 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selectedSearchField",
+		"initialSearchField",
+		"endSearchField",
+		"initialSearch",
+		"endSearch",
+		"form" ],
+	"name" : "OrbeonFormInstanceList",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFormList",
+	"type" : "normal" }

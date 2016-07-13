@@ -1,0 +1,4 @@
+insert
+sqlInsertFieldDefinition: aFormFieldDefinition id: fieldId
+
+	^'mysql -h ',self databaseIP,' -u ',self databaseUser,' -p',self databasePassword,' -N -B -e "INSERT INTO orbeon_metadata.field_definition (field_id, form_definition_id, name, isSummary, isSearch, label, field_type, repeat_name) VALUES (''', fieldId printString, ''',', '''',aFormFieldDefinition definition id, ''',', '''', aFormFieldDefinition name, ''',', '''', aFormFieldDefinition isSummary asSqlString, ''',', '''', aFormFieldDefinition isSearch asSqlString, ''',', '''', aFormFieldDefinition label, ''',', '''', aFormFieldDefinition type, ''',', '''no repeat name''', ')"'

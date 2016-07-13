@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"orbeonWebIsLinked",
+		"languageName",
+		"initialTransitionDisplayMode" ],
+	"name" : "OrbeonFormUserOptions",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

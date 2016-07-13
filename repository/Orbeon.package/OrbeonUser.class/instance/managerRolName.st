@@ -1,0 +1,4 @@
+other
+managerRolName
+
+	^managerRole roleName

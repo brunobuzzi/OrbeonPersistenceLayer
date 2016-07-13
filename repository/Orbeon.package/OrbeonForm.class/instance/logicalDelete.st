@@ -1,0 +1,4 @@
+other
+logicalDelete
+
+	deleted := 'Y'

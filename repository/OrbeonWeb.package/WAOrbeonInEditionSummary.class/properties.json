@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WAOrbeonInEditionSummary",
+	"pools" : [
+		 ],
+	"super" : "WAOrbeonSummary",
+	"type" : "normal" }

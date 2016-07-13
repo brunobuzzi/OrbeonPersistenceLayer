@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"grid" ],
+	"name" : "FormGridDifference",
+	"pools" : [
+		 ],
+	"super" : "FormDifference",
+	"type" : "normal" }

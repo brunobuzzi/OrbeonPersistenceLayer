@@ -1,0 +1,15 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"typeOne",
+		"typeTwo" ],
+	"name" : "FieldTypeNotEqual",
+	"pools" : [
+		 ],
+	"super" : "FieldDifference",
+	"type" : "normal" }

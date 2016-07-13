@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonLDAP",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonWebLocalLogin",
+	"pools" : [
+		 ],
+	"super" : "OrbeonLocalLogin",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfOrbeonPersistenceLayer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfOrbeonPersistenceLayer",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

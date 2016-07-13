@@ -1,0 +1,4 @@
+other
+hasSelectedApplication
+
+	^selectedApplication notNil

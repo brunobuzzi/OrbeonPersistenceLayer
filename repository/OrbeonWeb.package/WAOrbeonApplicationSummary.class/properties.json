@@ -1,0 +1,15 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"innerBatchList",
+		"exportComponent" ],
+	"name" : "WAOrbeonApplicationSummary",
+	"pools" : [
+		 ],
+	"super" : "SewafLateralListComposite",
+	"type" : "normal" }

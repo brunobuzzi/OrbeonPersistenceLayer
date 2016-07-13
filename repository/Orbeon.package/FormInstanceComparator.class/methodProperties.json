@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildSummaryWith:" : "BrunoBB 02/06/2015 14:14",
+		"compare" : "BrunoBB 04/18/2016 16:15",
+		"compareWith:" : "BrunoBB 02/06/2015 14:14",
+		"showFieldDoesNotExist" : "BrunoBB 04/18/2016 15:48",
+		"showFieldDoesNotExistWith:" : "BrunoBB 03/14/2015 11:49",
+		"showSummaryWith:" : "BrunoBB 02/06/2015 14:14",
+		"showValueNotEqual" : "BrunoBB 04/18/2016 15:49",
+		"showValueNotEqualWith:" : "BrunoBB 02/06/2015 14:14" } }

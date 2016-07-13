@@ -1,0 +1,22 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BrunoBB 08/06/2014 11:23",
+	"instvars" : [
+		"name",
+		"label",
+		"fieldDefinitions",
+		"gridDefinitions",
+		"isRepeatable",
+		"formDefinition",
+		"parentSection",
+		"subSections",
+		"iterationName" ],
+	"name" : "FormSectionDefinition",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

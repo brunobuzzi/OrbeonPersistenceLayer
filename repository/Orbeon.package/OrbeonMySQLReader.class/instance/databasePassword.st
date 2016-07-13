@@ -1,0 +1,4 @@
+other
+databasePassword
+
+	^self getOrbeonDatabaseConfiguration databasePassword

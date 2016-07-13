@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"warnings" ],
+	"name" : "WAOrbeonWarningReport",
+	"pools" : [
+		 ],
+	"super" : "SewafChildComponent",
+	"type" : "normal" }

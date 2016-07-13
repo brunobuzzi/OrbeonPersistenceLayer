@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "NoSqlDataRetrievedException",
+	"pools" : [
+		 ],
+	"super" : "OrbeonException",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SinglelineRecursiveFormExport",
+	"pools" : [
+		 ],
+	"super" : "RecursiveFormExport",
+	"type" : "normal" }

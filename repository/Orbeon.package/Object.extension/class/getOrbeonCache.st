@@ -1,0 +1,4 @@
+*orbeon
+getOrbeonCache
+
+	^AbstractApplication getOrbeonCache

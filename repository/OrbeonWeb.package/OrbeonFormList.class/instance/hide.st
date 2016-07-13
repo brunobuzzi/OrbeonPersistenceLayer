@@ -1,0 +1,4 @@
+other
+hide
+
+	self subclassResponsibility

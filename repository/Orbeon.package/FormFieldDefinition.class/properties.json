@@ -1,0 +1,22 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"isSummary",
+		"isSearch",
+		"label",
+		"type",
+		"definition",
+		"sectionName",
+		"repeatName",
+		"isAttachmentField" ],
+	"name" : "FormFieldDefinition",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

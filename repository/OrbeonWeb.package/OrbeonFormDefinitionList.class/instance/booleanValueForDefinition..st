@@ -1,0 +1,4 @@
+selection
+booleanValueForDefinition: anOrbeonFormDefinition
+
+	^false

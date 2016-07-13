@@ -1,0 +1,4 @@
+other
+levelNumber
+
+	^self subclassResponsibility

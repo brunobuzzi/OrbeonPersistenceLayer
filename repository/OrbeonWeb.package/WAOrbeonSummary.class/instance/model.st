@@ -1,0 +1,4 @@
+other
+model
+
+	^parent model

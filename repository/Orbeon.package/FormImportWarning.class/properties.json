@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"report",
+		"field",
+		"warning" ],
+	"name" : "FormImportWarning",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"summaryArena" ],
+	"name" : "WAOrbeonApplicationsComposite",
+	"pools" : [
+		 ],
+	"super" : "SewafChildComponent",
+	"type" : "normal" }

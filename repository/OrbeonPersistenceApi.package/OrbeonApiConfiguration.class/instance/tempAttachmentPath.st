@@ -1,0 +1,3 @@
+Accessing
+tempAttachmentPath
+	^tempAttachmentPath

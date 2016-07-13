@@ -1,0 +1,4 @@
+other
+isObeonApplication
+
+	^true

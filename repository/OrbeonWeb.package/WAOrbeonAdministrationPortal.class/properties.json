@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WAOrbeonAdministrationPortal",
+	"pools" : [
+		 ],
+	"super" : "SEWAFApplicationPortal",
+	"type" : "normal" }

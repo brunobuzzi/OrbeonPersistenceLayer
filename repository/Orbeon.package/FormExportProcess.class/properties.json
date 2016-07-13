@@ -1,0 +1,17 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"definition",
+		"formsCollection",
+		"printArray",
+		"lineNumber" ],
+	"name" : "FormExportProcess",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

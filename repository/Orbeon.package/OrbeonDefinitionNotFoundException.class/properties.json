@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonDefinitionNotFoundException",
+	"pools" : [
+		 ],
+	"super" : "OrbeonException",
+	"type" : "normal" }

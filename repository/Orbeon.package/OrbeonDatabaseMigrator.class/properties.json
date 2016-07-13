@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"application" ],
+	"name" : "OrbeonDatabaseMigrator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

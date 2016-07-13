@@ -1,0 +1,21 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		"cache" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id",
+		"createdTime",
+		"modifiedTime",
+		"modifiedUser",
+		"deleted",
+		"xmlString",
+		"version",
+		"properties" ],
+	"name" : "OrbeonForm",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

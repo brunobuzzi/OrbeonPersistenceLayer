@@ -1,0 +1,4 @@
+other
+isFieldDoesNotExist
+
+	^true

@@ -1,0 +1,4 @@
+*orbeon
+printMySqlString
+
+	^self printString

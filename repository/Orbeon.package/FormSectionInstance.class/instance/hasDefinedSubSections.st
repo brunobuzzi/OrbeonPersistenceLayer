@@ -1,0 +1,4 @@
+other
+hasDefinedSubSections
+
+	^sectionDefinition hasSubSections

@@ -1,0 +1,19 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Cache" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"centralUser",
+		"name",
+		"password",
+		"rols",
+		"managerRole",
+		"languageName" ],
+	"name" : "OrbeonUser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sectionIterations" ],
+	"name" : "RepeatSectionInstance",
+	"pools" : [
+		 ],
+	"super" : "FormSectionInstance",
+	"type" : "normal" }

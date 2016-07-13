@@ -1,0 +1,4 @@
+Accessing
+selectedDefinition
+
+	^parent selectedDefinition

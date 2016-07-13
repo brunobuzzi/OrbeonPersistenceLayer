@@ -1,0 +1,15 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isEnabled",
+		"permissions" ],
+	"name" : "OrbeonPermissions",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

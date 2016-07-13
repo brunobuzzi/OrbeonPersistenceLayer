@@ -1,0 +1,23 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formMetadata",
+		"instances",
+		"fieldInstances",
+		"labels",
+		"permissions",
+		"fieldsType",
+		"sectionDefinitions",
+		"drafts",
+		"customAttachment",
+		"attachments" ],
+	"name" : "OrbeonPublishedFormDefinition",
+	"pools" : [
+		 ],
+	"super" : "OrbeonAbstractFormDefinition",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+other
+printResume
+
+	^self subclassResponsibility

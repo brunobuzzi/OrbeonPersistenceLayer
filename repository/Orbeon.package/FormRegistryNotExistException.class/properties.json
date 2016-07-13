@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormRegistryNotExistException",
+	"pools" : [
+		 ],
+	"super" : "OrbeonException",
+	"type" : "normal" }

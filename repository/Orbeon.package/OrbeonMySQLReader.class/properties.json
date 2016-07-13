@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonMySQLReader",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDatabaseReader",
+	"type" : "normal" }

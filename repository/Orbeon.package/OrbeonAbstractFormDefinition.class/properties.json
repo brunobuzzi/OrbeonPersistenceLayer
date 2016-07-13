@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"OrbeonMapDictionary" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"definition",
+		"application",
+		"formName" ],
+	"name" : "OrbeonAbstractFormDefinition",
+	"pools" : [
+		 ],
+	"super" : "OrbeonForm",
+	"type" : "normal" }

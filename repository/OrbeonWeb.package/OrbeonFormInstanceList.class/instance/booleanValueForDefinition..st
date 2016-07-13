@@ -1,0 +1,4 @@
+other
+booleanValueForDefinition: aBoolean
+
+	^false

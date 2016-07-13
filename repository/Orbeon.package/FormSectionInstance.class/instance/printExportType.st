@@ -1,0 +1,4 @@
+other
+printExportType
+
+	^self subclassResponsibility

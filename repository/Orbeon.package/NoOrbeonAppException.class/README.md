@@ -1,0 +1,1 @@
+When OrbeonFormProcessDefinition has NO OrbeonApplication this exception arise.
