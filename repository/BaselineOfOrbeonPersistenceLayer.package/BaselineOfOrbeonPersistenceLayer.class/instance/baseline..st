@@ -9,4 +9,5 @@ baseline: spec
        spec package: 'OrbeonLDAP'.
        spec package: 'OrbeonPersistenceApi'.
        spec package: 'OrbeonWeb'.
+       spec package: 'Orbeon_Tests'.
 		]
