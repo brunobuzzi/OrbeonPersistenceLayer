@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getXMLFormInstance" : "BrunoBB 04/02/2016 16:30",
+		"setUp" : "BrunoBB 04/29/2016 14:49",
+		"tearDown" : "BrunoBB 04/02/2016 16:20",
+		"testFieldsValues" : "BrunoBB 04/04/2016 13:50",
+		"testSectionStructureAndValues" : "BrunoBB 04/09/2016 08:33" } }

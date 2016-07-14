@@ -1,0 +1,30 @@
+other
+getXMLFormInstance
+
+	^'<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<section-normal>
+		<name>Bruno</name>
+		<surname>Buzzi</surname>
+	</section-normal>
+	<section-repeatable>
+		<section-repeatable-iteration>
+			<phones>4087536</phones>
+			<section-sub>
+				<address>chana</address>
+			</section-sub>
+		</section-repeatable-iteration>
+		<section-repeatable-iteration>
+			<phones>0999</phones>
+			<section-sub>
+				<address>Libre</address>
+			</section-sub>
+		</section-repeatable-iteration>
+		<section-repeatable-iteration>
+			<phones>712</phones>
+			<section-sub>
+				<address>pocitos</address>
+			</section-sub>
+		</section-repeatable-iteration>
+	</section-repeatable>
+</form>'

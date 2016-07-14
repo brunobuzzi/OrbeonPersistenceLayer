@@ -1,0 +1,113 @@
+other
+getXMLFormInstance
+
+	^'<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<main-section>
+		<main-section-iteration>
+			<name>Bruno</name>
+			<grid-4>
+				<surname>Buzzi</surname>
+			</grid-4>
+			<grid-4>
+				<surname>Brassesco</surname>
+			</grid-4>
+			<section-7>
+				<section-7-iteration>
+					<address>Chana 1938</address>
+					<grid-10>
+						<phone>408</phone>
+					</grid-10>
+					<grid-10>
+						<phone>407</phone>
+					</grid-10>
+					<section-13>
+						<section-13-iteration>
+							<housePlace>Comedor</housePlace>
+							<grid-16>
+								<placeElements>Mesa</placeElements>
+							</grid-16>
+							<grid-16>
+								<placeElements>Tele</placeElements>
+							</grid-16>
+						</section-13-iteration>
+						<section-13-iteration>
+							<housePlace>Cocina</housePlace>
+							<grid-16>
+								<placeElements>Cocina</placeElements>
+							</grid-16>
+							<grid-16>
+								<placeElements>Heladera</placeElements>
+							</grid-16>
+						</section-13-iteration>
+					</section-13>
+				</section-7-iteration>
+				<section-7-iteration>
+					<address>Colonia 124</address>
+					<grid-10>
+						<phone>901</phone>
+					</grid-10>
+					<section-13>
+						<section-13-iteration>
+							<housePlace>Barbacoa</housePlace>
+							<grid-16>
+								<placeElements>Parrilla</placeElements>
+							</grid-16>
+							<grid-16>
+								<placeElements>BaÃ±o</placeElements>
+							</grid-16>
+						</section-13-iteration>
+						<section-13-iteration>
+							<housePlace>Comedor</housePlace>
+							<grid-16>
+								<placeElements>Mesa</placeElements>
+							</grid-16>
+							<grid-16>
+								<placeElements>Tele</placeElements>
+							</grid-16>
+						</section-13-iteration>
+					</section-13>
+				</section-7-iteration>
+			</section-7>
+		</main-section-iteration>
+		<main-section-iteration>
+			<name>Alfredo</name>
+			<grid-4>
+				<surname>Pereira</surname>
+			</grid-4>
+			<grid-4>
+				<surname>Nieto</surname>
+			</grid-4>
+			<section-7>
+				<section-7-iteration>
+					<address>Punta del Este1345</address>
+					<grid-10>
+						<phone>368</phone>
+					</grid-10>
+					<section-13>
+						<section-13-iteration>
+							<housePlace>Comedor</housePlace>
+							<grid-16>
+								<placeElements>Tele Gigante</placeElements>
+							</grid-16>
+						</section-13-iteration>
+					</section-13>
+				</section-7-iteration>
+				<section-7-iteration>
+					<address>18 de Julio</address>
+					<grid-10>
+						<phone>909</phone>
+					</grid-10>
+					<section-13>
+						<section-13-iteration>
+							<housePlace>Sala</housePlace>
+							<grid-16>
+								<placeElements>TV</placeElements>
+							</grid-16>
+						</section-13-iteration>
+					</section-13>
+				</section-7-iteration>
+			</section-7>
+		</main-section-iteration>
+	</main-section>
+</form>'

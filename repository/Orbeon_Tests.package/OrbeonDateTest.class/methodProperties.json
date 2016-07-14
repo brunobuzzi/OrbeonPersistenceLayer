@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testDashDayMonthYear" : "BrunoBB 04/06/2016 15:26",
+		"testDashMonthDayYear" : "BrunoBB 04/06/2016 15:26",
+		"testDashYearMonthDay" : "BrunoBB 04/07/2016 10:39",
+		"testDateWithTimeZone" : "BrunoBB 04/22/2016 11:17",
+		"testDateWithTimeZone2" : "BrunoBB 04/22/2016 11:17",
+		"testPointDayMonthYear" : "BrunoBB 04/06/2016 15:22",
+		"testPointMonthDayYear" : "BrunoBB 04/06/2016 15:21",
+		"testSlashDayMonthYear" : "BrunoBB 04/06/2016 15:20",
+		"testSlashMonthDayYear" : "BrunoBB 04/06/2016 15:21",
+		"testSlashYearMonthDay" : "BrunoBB 04/07/2016 10:40" } }

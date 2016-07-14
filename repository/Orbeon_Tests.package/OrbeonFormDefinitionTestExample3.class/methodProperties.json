@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getXMLFormDefinition" : "BrunoBB 04/05/2016 14:24",
+		"setUp" : "BrunoBB 04/28/2016 10:02",
+		"testFieldTypes" : "BrunoBB 04/05/2016 14:16",
+		"testFormFieldsInSection1" : "BrunoBB 04/05/2016 14:16",
+		"testFormFieldsInSection11" : "BrunoBB 03/19/2016 11:45",
+		"testFormFieldsInSection2" : "BrunoBB 03/18/2016 11:34",
+		"testFormFieldsInSection21" : "BrunoBB 04/05/2016 14:20",
+		"testGridInSection11" : "BrunoBB 03/18/2016 11:33",
+		"testGridInSection2" : "BrunoBB 03/18/2016 11:34",
+		"testIsSingleton" : "BrunoBB 05/03/2016 15:31",
+		"testMainSectionsStructure" : "BrunoBB 04/05/2016 14:22",
+		"testPermissions" : "BrunoBB 03/18/2016 09:47",
+		"testSwitchAvailable" : "BrunoBB 05/03/2016 17:36" } }
