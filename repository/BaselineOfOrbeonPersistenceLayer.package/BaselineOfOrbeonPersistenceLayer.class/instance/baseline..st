@@ -16,7 +16,7 @@ baseline: spec
 				versionString: '#stable';
 				file: 'ConfigurationOfXPath';
 				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XPath/main'].
-       spec package: 'Orbeon'.
+       spec package: 'Orbeon' with: [spec requires: 'XMLParser'].
        spec package: 'OrbeonLDAP'.
        spec package: 'OrbeonPersistenceApi'.
        spec package: 'OrbeonWeb'.
