@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"createFormDefinition" : "BrunoBB 07/16/2016 10:36",
 		"getXMLFormInstance" : "BrunoBB 04/02/2016 16:30",
-		"setUp" : "BrunoBB 04/29/2016 14:49",
+		"setUp" : "BrunoBB 07/16/2016 10:36",
 		"tearDown" : "BrunoBB 04/02/2016 16:20",
 		"testFieldsValues" : "BrunoBB 04/04/2016 13:50",
 		"testSectionStructureAndValues" : "BrunoBB 04/09/2016 08:33" } }
