@@ -1,4 +1,5 @@
 output
-getValueFrom: node
+getValueFrom: xmlNode
+	"The receiver answer the content of the XMLElement <xmlNode>."
 
-	^self getValueFrom: node ifNone: [nil]
+	^self getValueFrom: xmlNode ifNone: [nil]

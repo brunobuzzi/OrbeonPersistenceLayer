@@ -1,19 +1,13 @@
 output
-getValueFrom: node ifNone: aBlock
-	| stringNodes |
+getValueFrom: xmlNode ifNone: aBlock
+	"The receiver answer the content of the XMLElement <xmlNode>.
+	This new implementation address the following issued: 
+		#71 OrbeonPersistenceLayer.
+		#230 BpmFlow"
+	| content |
 
-	stringNodes := node stringNodes. "see issue #71 OrbeonPersistenceLayer"
+	content := xmlNode rawContentString.
 
-	stringNodes isEmpty ifTrue: [^aBlock value].
-
-	(stringNodes reject: [:e | e string = String lf]) ifEmpty: [^aBlock value]. "*"
-
-	(stringNodes allSatisfy: [:e | e string trimBlanks isEmpty]) ifTrue: [^aBlock value]. "*"
-
-	^stringNodes last string
-
-
-"*1 this change was introduced because XML parser change the behavior when dealing with <stringNodes>:
-See:
-https://github.com/brunobuzzi/BpmFlow/issues/230
-"
+	^content trimBlanks 
+		ifEmpty: [aBlock value]
+		ifNotEmpty: [content]
