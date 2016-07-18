@@ -8,9 +8,10 @@ formFieldsLabels
 	(xmlDocument xPath: '//xf:instance[@id=''fr-form-resources'']/resources//resource/*') do: [:each |  | originalLabel textNode |
 		textNode := each elementAt: 'label' ifAbsent: [nil].
 		originalLabel := textNode ifNil: ['No Label'] 
-			ifNotNil: [textNode stringNodes isEmpty 
-							ifTrue:['No Label'] 
-							ifFalse:[textNode stringNodes first string]].
+			ifNotNil: [textNode stringNodes 
+							ifEmpty: ['No Label'] 
+							ifNotEmpty: [:collection | collection first string].
+						].
 		fieldsLabels at: each name put: originalLabel].
 
 	^fieldsLabels

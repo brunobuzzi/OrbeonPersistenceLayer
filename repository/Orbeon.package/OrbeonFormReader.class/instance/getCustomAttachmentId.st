@@ -8,6 +8,6 @@ getCustomAttachmentId
 	pdfNode := attachNode findElementNamed: 'pdf'.
 	pdfNode ifNil: [^nil].
 
-	pdfNode stringNodes isEmpty ifTrue: [^nil].
-
-	^(pdfNode stringNodes last string subStrings: '=') last
+	^pdfNode stringNodes 
+	ifEmpty: [nil] 
+	ifNotEmpty: [:collection | (collection last string subStrings: '=') last]
