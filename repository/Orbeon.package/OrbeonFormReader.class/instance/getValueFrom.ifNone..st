@@ -9,5 +9,5 @@ getValueFrom: xmlNode ifNone: aBlock
 	content := xmlNode rawContentString.
 
 	^content trimBlanks 
-		ifEmpty: [aBlock value]
+		ifEmpty: aBlock
 		ifNotEmpty: [content]
