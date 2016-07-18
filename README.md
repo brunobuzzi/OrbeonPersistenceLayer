@@ -4,6 +4,8 @@ The manuals of this Orbeon Persistence Layer can be found here:<br>
 https://brunobuzzi.gitbooks.io/orbeon-persistence-layer/content/
 
 This **Orbeon Persistence Layer** is an implementation of **REST Services** on the top of GemStone/S (http://www.gemtalksystems.com) to store **Orbeon Forms** (http://www.orbeon.com) natively in **GemStone/S Database** (a NON SQL database).
+To install GemStone/S:<br>
+https://github.com/GsDevKit/GsDevKit_home
 
 The Documentation in this here is about the **REST Services** implmenentation in **GemStone/S** and is **NOT** an official documentation of Orbeon Persistence Layer. The official Documentation of Orbeon Persistence Layer can be found [here](http://doc.orbeon.com/form-runner/api/persistence/index.html).
 
