@@ -220,7 +220,7 @@ formDefinition_task4
             </xf:instance>
             <xf:submission id="security-token-submission" class="fr-service"
                            ref="instance(''fr-service-request-instance'')"
-                           resource="http://192.168.29.139:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}"
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}"
                            method="get"
                            serialization="application/xml"
                            mediatype="application/xml"
