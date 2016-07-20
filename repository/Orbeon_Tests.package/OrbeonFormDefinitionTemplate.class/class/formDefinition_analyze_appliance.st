@@ -138,9 +138,6 @@ formDefinition_analyze_appliance
                                 <hint/>
                                 <value>analyzing</value>
                             </item>
-                            
-                            
-                            
                         </applianceResult>
                         <citizenName>
                             <label>Name</label>
