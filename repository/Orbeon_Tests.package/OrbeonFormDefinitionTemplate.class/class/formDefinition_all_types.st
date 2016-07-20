@@ -96,7 +96,7 @@ formDefinition_all_types
                     <form-name>all-field-types</form-name>
                     <title xml:lang="en">All Field Types</title>
                     <description xml:lang="en">All Field Types</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

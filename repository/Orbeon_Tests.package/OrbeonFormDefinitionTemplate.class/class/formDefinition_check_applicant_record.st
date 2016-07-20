@@ -105,7 +105,7 @@ formDefinition_check_applicant_record
                     <form-name>check-applicant-record</form-name>
                     <title xml:lang="en">Check Applicant Record</title>
                     <description xml:lang="en">Check Applicant Record</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

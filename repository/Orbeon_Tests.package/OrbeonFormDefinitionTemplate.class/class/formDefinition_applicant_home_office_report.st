@@ -119,7 +119,7 @@ formDefinition_applicant_home_office_report
                     <form-name>applicant-home-office-report</form-name>
                     <title xml:lang="en">Applicant Home Office Report</title>
                     <description xml:lang="en">Applicant Home Office Report</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                     <migration version="4.8.0">[{ "path": "section-16/grid-17", "iteration-name": "grid-17-iteration" }]</migration>

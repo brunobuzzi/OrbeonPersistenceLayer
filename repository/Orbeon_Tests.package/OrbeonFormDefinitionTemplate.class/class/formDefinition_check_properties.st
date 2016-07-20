@@ -103,7 +103,7 @@ formDefinition_check_properties
                     <form-name>check-properties</form-name>
                     <title xml:lang="en">Check Properties</title>
                     <description xml:lang="en">Check Properties</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

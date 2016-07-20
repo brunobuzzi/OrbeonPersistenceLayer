@@ -86,7 +86,7 @@ formDefinition_task6
                     <form-name>task-6</form-name>
                     <title xml:lang="en">Task 6</title>
                     <description xml:lang="en">Task 6</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

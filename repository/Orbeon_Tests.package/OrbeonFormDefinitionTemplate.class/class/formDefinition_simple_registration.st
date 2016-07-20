@@ -58,7 +58,7 @@ formDefinition_simple_registration
                     <form-name>simple-registration</form-name>
                     <title xml:lang="en">Simple Registration</title>
                     <description xml:lang="en">Simple Registration</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>
