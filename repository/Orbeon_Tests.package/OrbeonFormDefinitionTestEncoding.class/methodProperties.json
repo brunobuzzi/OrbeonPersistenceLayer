@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"tesRegistration_Approval" : "BrunoBB 07/23/2016 14:25",
 		"testAnalyze_appliance" : "BrunoBB 07/20/2016 10:00",
 		"testApplicant_home_office_report" : "BrunoBB 07/20/2016 10:00",
-		"testCheck_accounts" : "BrunoBB 07/20/2016 10:01" } }
+		"testCheck_accounts" : "BrunoBB 07/20/2016 10:01",
+		"testRegistration_Approval" : "BrunoBB 07/23/2016 14:25" } }

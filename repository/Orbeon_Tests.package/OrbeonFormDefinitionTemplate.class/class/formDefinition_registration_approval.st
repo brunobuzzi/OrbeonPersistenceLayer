@@ -163,12 +163,12 @@ formDefinition_registration_approval
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opción</label>
+                                <label>Primera opciÃ³n</label>
                                 <hint/>
                                 <value>approved</value>
                             </item>
                             <item>
-                                <label>Segunda opción</label>
+                                <label>Segunda opciÃ³n</label>
                                 <hint/>
                                 <value>rejected</value>
                             </item>
