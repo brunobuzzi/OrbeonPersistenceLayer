@@ -1,4 +1,4 @@
-recursive section 2
+recursive section
 createGridsFor: aFormSectionInstance xmlSegment: xmlSubSegment
 	"Creates and store FormGridInstance on the form instance <aFormSectionInstance> getting values from xml node <xmlSubSegment>"
 	| sectionDefinition |

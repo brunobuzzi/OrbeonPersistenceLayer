@@ -1,4 +1,4 @@
-recursive section 2
+recursive section
 createFieldsInstancesFor: aFormSectionInstance xmlSegment: xmlInstanceSegment
 	"The receiver iterate over <aFormSectionInstance> fields names to get the values of each one contained in <xmlInstanceSegment>.
 	Store each value in <aFormSectionInstance>"
