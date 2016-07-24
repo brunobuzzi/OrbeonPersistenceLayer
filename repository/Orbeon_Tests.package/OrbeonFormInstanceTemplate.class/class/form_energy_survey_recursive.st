@@ -119,7 +119,7 @@ form_energy_survey_recursive
                             <dpto>montevideo</dpto>
                             <tipoConsumidor>tarifa-doble-horario</tipoConsumidor>
                             <consumoEnergiaElectrica>1555</consumoEnergiaElectrica>
-                            <combustible>16 15 14 13 01 03</combustible>
+                            <combustible>01 03</combustible>
                             <aserrin>15</aserrin>
                             <bagazo/>
                             <biodiesel>15</biodiesel>
