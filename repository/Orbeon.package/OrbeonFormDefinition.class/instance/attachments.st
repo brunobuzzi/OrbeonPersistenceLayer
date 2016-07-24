@@ -1,3 +1,0 @@
-other
-attachments
-	^attachments asOrderedCollection
