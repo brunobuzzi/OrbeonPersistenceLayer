@@ -5,7 +5,7 @@ testFieldInstancesSectionC
 
 	self assert: (self assertStringFieldNamed: 'cargoCertificador' withValues: #('CEO' 'CIO' 'CEO/CIO')).
 
-	self assert: (self assertStringFieldNamed: 'control-45' withValues: #('Apple' 'None' 'Torch' 'Lokeed' 'Bong')).
+	self assert: (self assertStringFieldNamed: 'control-45' withValues: #('Apple' 'None' 'Torch' 'Lokeed' 'Bong' 'CEO' 'CIO')).
 
 	self assert: (self assertNumberFieldNamed: 'control-46' withValues: #(1 1 2 4 23 2 2)).
 
