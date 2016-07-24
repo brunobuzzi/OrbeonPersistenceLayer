@@ -1,119 +1,36 @@
 other
 testFieldInstances
-	| fieldInstances holder fieldInstance |
 
-	fieldInstances := form generateFormFieldValueSet.
+	self assert: (self assertBooleanFieldNamed: 'boolean' withValues: #(true)).
 
-	holder := (fieldInstances at: 'autocomplete').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertNumberFieldNamed: 'currency' withValues: #(122.5)).
 
-	holder := (fieldInstances at: 'boolean').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Boolean).
-	self assert: (fieldInstance value isKindOf: Boolean).
+	self assert: (self assertDateFieldNamed: 'date1' withValues: (Array with: (Date fromString: '04/08/2016'))).
 
-	holder := (fieldInstances at: 'currency').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Number).
-	self assert: (fieldInstance value isKindOf: Number).
+	self assert: (self assertDateFieldNamed: 'date2' withValues: (Array with: (Date fromString: '07/07/2006'))).
 
-	holder := (fieldInstances at: 'date1').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Date).
-	self assert: (fieldInstance value isKindOf: Date).
+	self assert: (self assertDateFieldNamed: 'date3' withValues: (Array with: (Date fromString: '04/19/2016'))).
 
-	holder := (fieldInstances at: 'date2').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Date).
-	self assert: (fieldInstance value isKindOf: Date).
+	self assert: (self assertTimeStampFieldNamed: 'dateTime' withValues: (Array with: (TimeStamp fromString: '04/13/2016 12:50:00'))).
 
-	holder := (fieldInstances at: 'date3').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Date).
-	self assert: (fieldInstance value isKindOf: Date).
+	self assert: (self assertStringFieldNamed: 'details' withValues: #('these are the details')).
 
-	holder := (fieldInstances at: 'dateTime').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == TimeStamp).
-	self assert: (fieldInstance value isKindOf: TimeStamp).
+	self assert: (self assertStringFieldNamed: 'mail' withValues: #('b@e.tv')).
 
-	holder := (fieldInstances at: 'details').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'mobile' withValues: #('09998')).
 
-	holder := (fieldInstances at: 'details').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'moneySubject' withValues: #('3')).
 
-	holder := (fieldInstances at: 'mail').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'name' withValues: #('bruno')).
 
-	holder := (fieldInstances at: 'mobile').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'options' withValues: #('2 1')).
 
-	holder := (fieldInstances at: 'moneySubject').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'otherOptions' withValues: #('2')).
 
-	holder := (fieldInstances at: 'name').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'phone' withValues: #('4444444445')).
 
-	holder := (fieldInstances at: 'options').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertNumberFieldNamed: 'quantity' withValues: #(5005)).
 
-	holder := (fieldInstances at: 'otherOptions').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'surname' withValues: #('buzzo')).
 
-	holder := (fieldInstances at: 'phone').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
-
-	holder := (fieldInstances at: 'quantity').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues first.
-	self assert: (fieldInstance stType == Number).
-	self assert: (fieldInstance value isKindOf: Number).
-
-	holder := (fieldInstances at: 'surname').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
-
-	holder := (fieldInstances at: 'type').
-	holder currentValues ifEmpty: [self assert: false].
-	fieldInstance := holder currentValues last.
-	self assert: (fieldInstance stType == String).
-	self assert: (fieldInstance value class == String).
+	self assert: (self assertStringFieldNamed: 'type' withValues: #('1')).

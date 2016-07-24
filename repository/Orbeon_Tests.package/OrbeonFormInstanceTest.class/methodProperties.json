@@ -2,4 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testAllFormInstances" : "BrunoBB 04/18/2016 16:34" } }
+		"assertBooleanFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:39",
+		"assertDateFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:41",
+		"assertNumberFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:20",
+		"assertStringFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:24",
+		"assertTimeFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:42",
+		"assertTimeStampFieldNamed:withValues:" : "BrunoBB 07/24/2016 15:42",
+		"testAllFormInstances" : "BrunoBB 07/24/2016 16:05" } }
