@@ -5,6 +5,8 @@
 		"addFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
 		"fieldDefinitions" : "BrunoBB 08/05/2014 11:10",
 		"fieldDefinitions:" : "BrunoBB 08/05/2014 11:10",
+		"getFieldNamed:" : "BrunoBB 07/24/2016 09:00",
+		"getFieldNamed:ifAbsent:" : "BrunoBB 07/24/2016 09:00",
 		"includesFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
 		"initialize" : "BrunoBB 08/06/2014 17:55",
 		"name" : "BrunoBB 08/05/2014 11:10",

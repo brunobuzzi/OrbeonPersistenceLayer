@@ -1,4 +1,4 @@
 other
-sectionNamed: aString
+getSectionNamed: aString
 
 	^sectionDefinitions at: aString ifAbsent: [nil]
