@@ -14,7 +14,8 @@
 		"definition",
 		"sectionName",
 		"repeatName",
-		"isAttachmentField" ],
+		"isAttachmentField",
+		"tabIndex" ],
 	"name" : "FormFieldDefinition",
 	"pools" : [
 		 ],

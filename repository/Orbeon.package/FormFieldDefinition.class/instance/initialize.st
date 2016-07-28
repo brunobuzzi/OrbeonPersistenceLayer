@@ -9,3 +9,4 @@ initialize
 	label := ''.
 	type := ''.
 	isAttachmentField := false.
+	tabIndex := 0.

@@ -4,4 +4,4 @@ initialize
 	super initialize.
 
 	name := ''.
-	fieldDefinitions := OrderPreservingDictionary new.
+	fieldDefinitions := Dictionary new.

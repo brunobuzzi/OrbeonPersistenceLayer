@@ -52,7 +52,6 @@
 		"getInstanceWithId:ifNone:" : "BrunoBB 05/03/2016 17:22",
 		"getInstancesSatisfying:in:" : "BrunoBB 05/03/2016 17:22",
 		"getMandatoryFieldsMissing" : "BrunoBB 05/03/2016 17:22",
-		"getOrderedFieldNamesOn:" : "BrunoBB 07/27/2016 12:02",
 		"getSectionNamed:" : "BrunoBB 07/24/2016 10:21",
 		"gridDefinitions" : "BrunoBB 05/03/2016 17:22",
 		"gridDefinitionsNames" : "BrunoBB 05/03/2016 17:22",

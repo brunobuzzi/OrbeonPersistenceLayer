@@ -5,7 +5,7 @@ initialize
 
 	name := ''.
 	label := ''.
-	fieldDefinitions := OrderPreservingDictionary new.
-	gridDefinitions := OrderPreservingDictionary new.
+	fieldDefinitions := Dictionary new.
+	gridDefinitions := Dictionary new.
 	isRepeatable := false.
-	subSections := OrderPreservingDictionary new.
+	subSections := OrderedCollection new.

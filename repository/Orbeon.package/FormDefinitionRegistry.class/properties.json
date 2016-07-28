@@ -10,7 +10,7 @@
 		"currentVersions",
 		"oldVersions",
 		"savedDefinitions" ],
-	"name" : "FormDefintionRegistry",
+	"name" : "FormDefinitionRegistry",
 	"pools" : [
 		 ],
 	"super" : "OrbeonObject",
