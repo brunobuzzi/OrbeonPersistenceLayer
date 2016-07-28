@@ -9,3 +9,4 @@ initialize
 	gridDefinitions := Dictionary new.
 	isRepeatable := false.
 	subSections := OrderedCollection new.
+	tabIndex := 0.

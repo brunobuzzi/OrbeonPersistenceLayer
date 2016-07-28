@@ -8,7 +8,8 @@
 	"instvars" : [
 		"name",
 		"sectionDefinition",
-		"fieldDefinitions" ],
+		"fieldDefinitions",
+		"tabIndex" ],
 	"name" : "FormGridDefinition",
 	"pools" : [
 		 ],

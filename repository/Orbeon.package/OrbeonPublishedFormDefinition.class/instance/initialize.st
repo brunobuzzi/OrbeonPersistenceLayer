@@ -8,7 +8,7 @@ initialize
 	fieldInstances := RcKeyValueDictionary new. "a rc dictionary (by field name) of RcIdentityBag"
 	fieldsType := Dictionary new.
 	permissions := Dictionary new.
-	sectionDefinitions := OrderPreservingDictionary new.
+	sectionDefinitions := Dictionary new.
 	attachments := Dictionary new.
 
 	self isAvailable: false.
