@@ -4,12 +4,13 @@ getFieldsNameSpace2
 	This is to reserve room for all fields values (including repeatable) in the Matrix"
 	| fieldSpace |
 
-	fieldSpace := Dictionary new.
+	fieldSpace := OrderPreservingDictionary new.
 	formsCollection do: [:eachForm |
-		eachForm fieldsValues keysAndValuesDo: [:fieldName :valueHolder |
-			(fieldSpace includesKey: fieldName)
-			ifTrue: [fieldSpace at: fieldName put: ((fieldSpace at: fieldName) max: valueHolder currentSize).]
-			ifFalse: [fieldSpace at: fieldName put: valueHolder currentSize].		
+		eachForm fieldDefinitionsByTabIndex do:[:fieldDef | | valueHolder |
+			valueHolder := eachForm holderValueAt: fieldDef name.
+			(fieldSpace includesKey: fieldDef name)
+			ifTrue: [fieldSpace at: fieldDef name put: ((fieldSpace at: fieldDef name) max: valueHolder currentSize).]
+			ifFalse: [fieldSpace at: fieldDef name put: valueHolder currentSize].		
 		].
 	].
 

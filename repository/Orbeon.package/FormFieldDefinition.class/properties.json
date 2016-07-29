@@ -11,11 +11,10 @@
 		"isSearch",
 		"label",
 		"type",
-		"definition",
-		"sectionName",
 		"repeatName",
 		"isAttachmentField",
-		"tabIndex" ],
+		"tabIndex",
+		"parentComponent" ],
 	"name" : "FormFieldDefinition",
 	"pools" : [
 		 ],

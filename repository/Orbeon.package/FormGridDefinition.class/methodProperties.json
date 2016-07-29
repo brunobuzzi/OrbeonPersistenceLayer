@@ -2,7 +2,7 @@
 	"class" : {
 		"name:" : "BrunoBB 08/06/2014 17:57" },
 	"instance" : {
-		"addFieldDefinition:" : "BrunoBB 07/29/2016 08:04",
+		"addFieldDefinition:" : "BrunoBB 07/29/2016 08:16",
 		"fieldDefinitions" : "BrunoBB 08/05/2014 11:10",
 		"fieldDefinitions:" : "BrunoBB 08/05/2014 11:10",
 		"getFieldNamed:" : "BrunoBB 07/24/2016 09:00",
@@ -12,6 +12,7 @@
 		"name" : "BrunoBB 08/05/2014 11:10",
 		"name:" : "BrunoBB 08/05/2014 11:10",
 		"printStructureOn:count:" : "BrunoBB 02/24/2015 03:41",
+		"printTabIndex" : "BrunoBB 07/29/2016 08:20",
 		"removeFieldDefinition:" : "BrunoBB 08/06/2014 17:54",
 		"searchFields" : "BrunoBB 04/23/2016 12:36",
 		"sectionDefinition" : "BrunoBB 08/05/2014 11:10",
