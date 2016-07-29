@@ -1,6 +1,6 @@
 process xml
-createGridFieldDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader with: xmlGrid
-	"Populate receiver's section definition <aFormSectionDefinition> with Field Definition using <anOrbeonFormReader> on anXML element <xmlGrid>"
+createGridFieldDefinitionFor: aFormGridDefinition reader: anOrbeonFormReader with: xmlGrid
+	"Populate receiver's grid definition <aFormGridDefinition> with Field Definition using <anOrbeonFormReader> on anXML element <xmlGrid>"
 	| search summary |
 
 	summary := anOrbeonFormReader summaryFormFieldsNameIn: xmlGrid.
@@ -11,5 +11,5 @@ createGridFieldDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader 
 			type: (fieldsType at: fieldName ifAbsent: ['']);
 			isSummary: (summary includes: fieldName);
 			isSearch: (search includes: fieldName).
-		aFormSectionDefinition addFieldDefinition: fieldDefinition.
+		aFormGridDefinition addFieldDefinition: fieldDefinition.
 	]
