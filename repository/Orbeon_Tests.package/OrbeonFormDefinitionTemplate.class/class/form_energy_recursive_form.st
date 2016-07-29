@@ -237,7 +237,7 @@ form_energy_recursive_form
                         </nombreMedida>
                         <usoPrincipal>
                             <label>Uso principal</label>
-                            <hint>Uso de energÃa en el cual incide la medida </hint>
+                            <hint>Uso de energÃ­a en el cual incide la medida </hint>
                             <item>
                                 <label>Bombeo de Agua</label>
                                 <value>01</value>
@@ -267,7 +267,7 @@ form_energy_recursive_form
                                 <value>07</value>
                             </item>
                             <item>
-                                <label>FrÃo de Proceso</label>
+                                <label>FrÃ­o de Proceso</label>
                                 <value>08</value>
                             </item>
                             <item>
@@ -307,7 +307,7 @@ form_energy_recursive_form
                             <label>EnergÃ©tico evitado</label>
                             <hint/>
                             <item>
-                                <label>AserrÃn</label>
+                                <label>AserrÃ­n</label>
                                 <value>01</value>
                             </item>
                             <item>
@@ -331,11 +331,11 @@ form_energy_recursive_form
                                 <value>06</value>
                             </item>
                             <item>
-                                <label>CÃscara de arroz</label>
+                                <label>CÃ¡scara de arroz</label>
                                 <value>07</value>
                             </item>
                             <item>
-                                <label>CÃscara de girasol</label>
+                                <label>CÃ¡scara de girasol</label>
                                 <value>08</value>
                             </item>
                             <item>
@@ -351,7 +351,7 @@ form_energy_recursive_form
                                 <value>11</value>
                             </item>
                             <item>
-                                <label>EnergÃa el 	Ã©ctrica de la red</label>
+                                <label>EnergÃ­a el 	Ã©ctrica de la red</label>
                                 <value>12</value>
                             </item>
                             <item>
@@ -387,7 +387,7 @@ form_energy_recursive_form
                                 <value>20</value>
                             </item>
                             <item>
-                                <label>SupergÃs</label>
+                                <label>SupergÃ¡s</label>
                                 <value>21</value>
                             </item>
                         </energetico_evitado>
@@ -395,7 +395,7 @@ form_energy_recursive_form
                             <label>Seleccione los combustibles que consume</label>
                             <hint/>
                             <item>
-                                <label>AserrÃn</label>
+                                <label>AserrÃ­n</label>
                                 <value>01</value>
                             </item>
                             <item>
@@ -416,7 +416,7 @@ form_energy_recursive_form
                             </item>
                         </combustible>
                         <aserrin>
-                            <label>Indique el consumo de aserrÃn en el aÃ±o anterior (ton)</label>
+                            <label>Indique el consumo de aserrÃ­n en el aÃ±o anterior (ton)</label>
                             <hint/>
                         </aserrin>
                         <bagazo>
@@ -501,8 +501,8 @@ form_energy_recursive_form
                                 <value>paysandÃº</value>
                             </item>
                             <item>
-                                <label>RÃo Negro</label>
-                                <value>rÃo-negro</value>
+                                <label>RÃ­o Negro</label>
+                                <value>rÃ­o-negro</value>
                             </item>
                             <item>
                                 <label>Rivera</label>
@@ -629,7 +629,7 @@ form_energy_recursive_form
                             <hint/>
                         </rut>
                         <ciiu2>
-                            <label>Sector de actividad (CIIU 2 dÃgitos)</label>
+                            <label>Sector de actividad (CIIU 2 dÃ­gitos)</label>
                             <hint>Seleccione la divisiÃ³n que corresponda. Puede utilizar las notas explicativas adjuntas.</hint>
                             <item>
                                 <label>A-01. ProducciÃ³n agropecuaria, caza y actividades de servicios conexas</label>
@@ -672,7 +672,7 @@ form_energy_recursive_form
                                 <value>10</value>
                             </item>
                             <item>
-                                <label>C-16. ProducciÃ³n de madera y fabricaciÃ³n de productos de madera y corcho, excepto muebles; fabricaciÃ³n de artÃculos de paja
+                                <label>C-16. ProducciÃ³n de madera y fabricaciÃ³n de productos de madera y corcho, excepto muebles; fabricaciÃ³n de artÃ­culos de paja
                            y de materiales trenzables.
                         </label>
                                 <value>11</value>
@@ -690,19 +690,19 @@ form_energy_recursive_form
                                 <value>14</value>
                             </item>
                             <item>
-                                <label>C-20. FabricaciÃ³n de sustancias y productos quÃmicos</label>
+                                <label>C-20. FabricaciÃ³n de sustancias y productos quÃ­micos</label>
                                 <value>15</value>
                             </item>
                             <item>
-                                <label>C-21. FabricaciÃ³n de productos farmacÃ©uticos, sustancias quÃmicas medicinales y de productos botÃnicos.</label>
+                                <label>C-21. FabricaciÃ³n de productos farmacÃ©uticos, sustancias quÃ­micas medicinales y de productos botÃ¡nicos.</label>
                                 <value>16</value>
                             </item>
                             <item>
-                                <label>C-22. FabricaciÃ³n de productos de caucho y plÃstico</label>
+                                <label>C-22. FabricaciÃ³n de productos de caucho y plÃ¡stico</label>
                                 <value>17</value>
                             </item>
                             <item>
-                                <label>C-23. FabricaciÃ³n de otros productos minerales no metÃlicos</label>
+                                <label>C-23. FabricaciÃ³n de otros productos minerales no metÃ¡licos</label>
                                 <value>18</value>
                             </item>
                             <item>
@@ -714,7 +714,7 @@ form_energy_recursive_form
                                 <value>20</value>
                             </item>
                             <item>
-                                <label>C-26. FabricaciÃ³n de los productos informÃticos, electrÃ³nicos y Ã³pticos</label>
+                                <label>C-26. FabricaciÃ³n de los productos informÃ¡ticos, electrÃ³nicos y Ã³pticos</label>
                                 <value>21</value>
                             </item>
                             <item>
@@ -726,7 +726,7 @@ form_energy_recursive_form
                                 <value>23</value>
                             </item>
                             <item>
-                                <label>C-29. FabricaciÃ³n de vehÃculos automotores, remolques y semiremolques</label>
+                                <label>C-29. FabricaciÃ³n de vehÃ­culos automotores, remolques y semiremolques</label>
                                 <value>24</value>
                             </item>
                             <item>
@@ -758,7 +758,7 @@ form_energy_recursive_form
                                 <value>31</value>
                             </item>
                             <item>
-                                <label>G. Comercio al por mayor y al por menor; reparaciÃ³n de los vehÃculos de motor y de las motocicletas.</label>
+                                <label>G. Comercio al por mayor y al por menor; reparaciÃ³n de los vehÃ­culos de motor y de las motocicletas.</label>
                                 <value>32</value>
                             </item>
                             <item>
@@ -770,7 +770,7 @@ form_energy_recursive_form
                                 <value>34</value>
                             </item>
                             <item>
-                                <label>J. InformÃtica y comunicaciÃ³n</label>
+                                <label>J. InformÃ­tica y comunicaciÃ³n</label>
                                 <value>35</value>
                             </item>
                             <item>
@@ -782,7 +782,7 @@ form_energy_recursive_form
                                 <value>37</value>
                             </item>
                             <item>
-                                <label>M. Actividades profesionales, cientÃficas y tÃ©cnicas</label>
+                                <label>M. Actividades profesionales, cientÃ­ficas y tÃ©cnicas</label>
                                 <value>38</value>
                             </item>
                             <item>
@@ -840,7 +840,7 @@ form_energy_recursive_form
                             </item>
                         </control-52>
                         <pyme>
-                            <label>¿Su empresa es Pyme?</label>
+                            <label>Â¿Su empresa es Pyme?</label>
                             <hint/>
                             <item>
                                 <label>Si</label>
