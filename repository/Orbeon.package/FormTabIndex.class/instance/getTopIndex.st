@@ -1,0 +1,4 @@
+other
+getTopIndex
+
+	^componentDefinition getTopIndex

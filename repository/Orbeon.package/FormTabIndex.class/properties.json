@@ -1,0 +1,15 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"componentDefinition",
+		"tabIndex" ],
+	"name" : "FormTabIndex",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

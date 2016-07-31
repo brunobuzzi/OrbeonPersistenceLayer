@@ -1,6 +1,6 @@
 other
 printTabIndex
 
-	^parentSection 
-		ifNil: [tabIndex printString] 
-		ifNotNil: [parentSection printTabIndex, '.', tabIndex printString]
+	^self getParentTabIndex 
+		ifNil: [tabIndex printIndex] 
+		ifNotNil: ['.', parentSection printTabIndex, '.s', tabIndex printIndex ]

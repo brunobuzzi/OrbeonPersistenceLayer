@@ -9,4 +9,4 @@ initialize
 	gridDefinitions := Dictionary new.
 	isRepeatable := false.
 	subSections := OrderedCollection new.
-	tabIndex := 0.
+	tabIndex := FormTabIndex for: self withIndex: 0.

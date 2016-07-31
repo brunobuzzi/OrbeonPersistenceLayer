@@ -5,4 +5,4 @@ initialize
 
 	name := ''.
 	fieldDefinitions := Dictionary new.
-	tabIndex := 0.
+	tabIndex := FormTabIndex for: self withIndex: 0.

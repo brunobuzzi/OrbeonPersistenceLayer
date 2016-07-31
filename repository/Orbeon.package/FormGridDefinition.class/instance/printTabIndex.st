@@ -1,4 +1,4 @@
 other
 printTabIndex
 
-	^sectionDefinition printTabIndex, '.', tabIndex printString
+	^sectionDefinition printTabIndex, '.g', tabIndex printIndex

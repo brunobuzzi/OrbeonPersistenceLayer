@@ -1,0 +1,4 @@
+other
+printTabIndex
+
+	^componentDefinition printTabIndex

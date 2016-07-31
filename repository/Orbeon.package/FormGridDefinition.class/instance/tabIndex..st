@@ -1,3 +1,4 @@
 Updating
 tabIndex: newValue
-	tabIndex := newValue
+
+	tabIndex setTabIndex: newValue.

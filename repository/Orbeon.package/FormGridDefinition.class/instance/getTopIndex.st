@@ -1,0 +1,4 @@
+other
+getTopIndex
+
+	^sectionDefinition getTopIndex

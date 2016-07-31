@@ -9,4 +9,4 @@ initialize
 	label := ''.
 	type := ''.
 	isAttachmentField := false.
-	tabIndex := 0.
+	tabIndex := FormTabIndex for: self withIndex: 0.

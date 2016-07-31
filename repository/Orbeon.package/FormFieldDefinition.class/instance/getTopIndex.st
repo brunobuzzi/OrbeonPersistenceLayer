@@ -1,0 +1,4 @@
+other
+getTopIndex
+
+	^parentComponent getTopIndex

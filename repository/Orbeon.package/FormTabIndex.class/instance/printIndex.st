@@ -1,0 +1,4 @@
+Accessing
+printIndex
+
+	^tabIndex printString

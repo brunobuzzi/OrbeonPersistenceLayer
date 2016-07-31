@@ -1,4 +1,4 @@
 other
 printTabIndex
 
-	^parentComponent printTabIndex, '.', tabIndex printString
+	^parentComponent printTabIndex, '.', tabIndex printIndex
