@@ -8,6 +8,6 @@ getCustomAttachmentId
 
 	pdfNode := pdfQueryNode last.
 
-	^pdfNode stringNodes 
+	^pdfNode rawContentString 
 		ifEmpty: [nil]
-		ifNotEmpty: [:collection | (collection last string subStrings: '=') last]
+		ifNotEmpty: [:value | (value subStrings: '=') last]

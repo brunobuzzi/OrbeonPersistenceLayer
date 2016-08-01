@@ -7,11 +7,12 @@ formFieldsLabels
 
 	(xmlDocument xPath: '//xf:instance[@id=''fr-form-resources'']/resources//resource/*') do: [:each |  | originalLabel textNode |
 		textNode := each elementAt: 'label' ifAbsent: [nil].
+
 		originalLabel := textNode 
 			ifNil: ['No Label'] 
-			ifNotNil: [textNode stringNodes 
+			ifNotNil: [textNode rawContentString 
 							ifEmpty: ['No Label'] 
-							ifNotEmpty: [:collection | collection first string].
+							ifNotEmpty: [:value | value].
 						].
 		fieldsLabels at: each name put: originalLabel].
 
