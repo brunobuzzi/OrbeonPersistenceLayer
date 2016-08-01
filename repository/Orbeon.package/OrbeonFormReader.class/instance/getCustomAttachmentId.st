@@ -9,5 +9,5 @@ getCustomAttachmentId
 	pdfNode ifNil: [^nil].
 
 	^pdfNode stringNodes 
-	ifEmpty: [nil] 
-	ifNotEmpty: [:collection | (collection last string subStrings: '=') last]
+		ifEmpty: [nil] 
+		ifNotEmpty: [:collection | (collection last string subStrings: '=') last]
