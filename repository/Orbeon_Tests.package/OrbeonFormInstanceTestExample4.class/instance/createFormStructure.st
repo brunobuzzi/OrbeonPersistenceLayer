@@ -6,6 +6,7 @@ createFormStructure
 	savedDefinition := OrbeonSavedFormDefinition app: app applicationName form: 'energy-recursive'.
 	savedDefinition id: UUID new asString;
 		version: 1;
+		title: 'Energy Recursive Form';
 		setXmlString: OrbeonFormDefinitionTemplate form_energy_recursive_form.
 
 	app addSavedDefinition: savedDefinition.
