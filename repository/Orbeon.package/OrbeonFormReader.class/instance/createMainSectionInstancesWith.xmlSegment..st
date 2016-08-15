@@ -8,7 +8,7 @@ createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSe
 	sectionsInstances := OrderedCollection new.
 	anOrbeonFormDefinition sectionDefinitions do:[:section | | xmlSubSegments |
 		xmlSubSegments := section isRepeatable
-			ifTrue: [OrderedCollection withAll: (xmlInstanceSegment xPath: ('/form/', section getXPathNodeName))]
+			ifTrue: [OrderedCollection withAll: (xmlInstanceSegment xPath: ('/form/', section getIterationName))]
 			ifFalse: [ | subSegment | "elementAt: should not answer nil, ifNil --> there is a mismatch between the instance and it's definition"
 						subSegment := xmlInstanceSegment 
 													elementAt: section name 

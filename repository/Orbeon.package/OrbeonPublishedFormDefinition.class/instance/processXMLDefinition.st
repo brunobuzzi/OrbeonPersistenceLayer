@@ -4,6 +4,7 @@ processXMLDefinition
 	| reader |
 
 	reader := self newFormReader.
+	reader getAllSectionCustomIterations.
 	labels := reader formFieldsLabels. 						"answer: aDictionary (key: field name value: label)"
 	permissions := reader getPermissions. 						"answer: aDictionary (key: permission name value: collection of rols)"
 	fieldsType := reader getFieldTypes.						"answer: aDictionary (key: field name value: field type)"

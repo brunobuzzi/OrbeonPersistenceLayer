@@ -15,7 +15,8 @@
 		"parentSection",
 		"subSections",
 		"iterationName",
-		"tabIndex" ],
+		"tabIndex",
+		"bind" ],
 	"name" : "FormSectionDefinition",
 	"pools" : [
 		 ],

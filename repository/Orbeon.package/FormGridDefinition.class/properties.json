@@ -9,7 +9,8 @@
 		"name",
 		"sectionDefinition",
 		"fieldDefinitions",
-		"tabIndex" ],
+		"tabIndex",
+		"iterationName" ],
 	"name" : "FormGridDefinition",
 	"pools" : [
 		 ],
