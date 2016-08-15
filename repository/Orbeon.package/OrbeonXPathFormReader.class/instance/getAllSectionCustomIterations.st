@@ -6,12 +6,16 @@ getAllSectionCustomIterations
 
 	(xmlDocument xPath: '//xf:bind[@id=''fr-form-binds'']/xf:bind') do: [:eachXfBind | | iterationBind iterationName sectionName |
 		iterationBind := (eachXfBind xPath: 'xf:bind') 
-			ifNotEmpty: [:collection | (collection size = 1) ifTrue: [collection last] ifFalse: [OrbeonInvalidXMLException signal: 'Bad bind node format']] 
-			ifEmpty: [OrbeonInvalidXMLException signal: 'Bad bind node format'].
-		sectionName := eachXfBind attributeAt: 'name'.
-		iterationName := iterationBind attributeAt: 'name'.
+			ifNotEmpty: [:collection | (collection size = 1) 
+				ifTrue: [collection last] 
+				ifFalse: [nil]]	
+			ifEmpty: [nil].
+		iterationBind ifNotNil: [
+			sectionName := eachXfBind attributeAt: 'name'.
+			iterationName := iterationBind attributeAt: 'name'.
 
-		((sectionName, '-iteration') = iterationName) ifFalse: [customSectionIterationNames at: sectionName put: iterationName].
+			((sectionName, '-iteration') = iterationName) ifFalse: [customSectionIterationNames at: sectionName put: iterationName].
+		].
 	].
 
 	^customSectionIterationNames

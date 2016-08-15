@@ -14,7 +14,8 @@
 		"repeatName",
 		"isAttachmentField",
 		"tabIndex",
-		"parentComponent" ],
+		"parentComponent",
+		"bind" ],
 	"name" : "FormFieldDefinition",
 	"pools" : [
 		 ],
