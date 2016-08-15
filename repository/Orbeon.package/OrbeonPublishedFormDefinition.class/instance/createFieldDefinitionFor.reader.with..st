@@ -9,6 +9,7 @@ createFieldDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader with
 		fieldName := anOrbeonFormReader getNameFrom: fieldNode.
 		fieldDefinition := FormFieldDefinition name: fieldName.
 		fieldDefinition label: (labels at: fieldName ifAbsent: ['']);
+			bind: (fieldNode attributeAt: 'bind');
 			type: (fieldsType at: fieldName ifAbsent: ['']);
 			isSummary: (summary includes: fieldName);
 			isSearch: (search includes: fieldName);

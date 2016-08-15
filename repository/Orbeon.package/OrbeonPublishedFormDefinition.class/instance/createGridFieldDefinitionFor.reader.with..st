@@ -5,11 +5,14 @@ createGridFieldDefinitionFor: aFormGridDefinition reader: anOrbeonFormReader wit
 
 	summary := anOrbeonFormReader summaryFormFieldsNameIn: xmlGrid.
 	search := anOrbeonFormReader searchFormFieldsNameIn: xmlGrid.	
-	(anOrbeonFormReader formGridFieldsNameIn: xmlGrid) do: [:fieldName | | fieldDefinition |
+	(anOrbeonFormReader formGridFieldsIn: xmlGrid) do: [:fieldNode | | fieldDefinition fieldName |
+		fieldName := anOrbeonFormReader getNameFrom: fieldNode.
 		fieldDefinition := FormFieldDefinition name: fieldName.
 		fieldDefinition label: (labels at: fieldName ifAbsent: ['']);
+			bind: (fieldNode attributeAt: 'bind');
 			type: (fieldsType at: fieldName ifAbsent: ['']);
 			isSummary: (summary includes: fieldName);
-			isSearch: (search includes: fieldName).
+			isSearch: (search includes: fieldName);
+			isAttachmentField: (anOrbeonFormReader isAttachmentField: fieldNode).
 		aFormGridDefinition addFieldDefinition: fieldDefinition.
 	]
