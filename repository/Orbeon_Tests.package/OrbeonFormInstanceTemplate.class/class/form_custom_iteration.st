@@ -1,0 +1,62 @@
+custom iteration
+form_custom_iteration
+
+^'<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<userInfoSection>
+		<custom-user-info-iteration>
+			<name>bruno</name>
+			<surname>buzzi</surname>
+			<grid-mobile>
+				<mobile>099</mobile>
+			</grid-mobile>
+			<grid-mobile>
+				<mobile>098</mobile>
+			</grid-mobile>
+		</custom-user-info-iteration>
+		<custom-user-info-iteration>
+			<name>alberto</name>
+			<surname>joya</surname>
+			<grid-mobile>
+				<mobile>456</mobile>
+			</grid-mobile>
+			<grid-mobile>
+				<mobile>123</mobile>
+			</grid-mobile>
+			<grid-mobile>
+				<mobile>789</mobile>
+			</grid-mobile>
+		</custom-user-info-iteration>
+	</userInfoSection>
+	<section-8>
+		<section-8-iteration>
+			<code>888</code>
+			<grid-amount>
+				<mount>100</mount>
+			</grid-amount>
+			<grid-amount>
+				<mount>1500</mount>
+			</grid-amount>
+		</section-8-iteration>
+		<section-8-iteration>
+			<code>999</code>
+			<grid-amount>
+				<mount>2000</mount>
+			</grid-amount>
+			<grid-amount>
+				<mount>2500</mount>
+			</grid-amount>
+			<grid-amount>
+				<mount>3000</mount>
+			</grid-amount>
+		</section-8-iteration>
+	</section-8>
+	<section-grid>
+		<grid-15>
+			<number>020</number>
+		</grid-15>
+		<grid-15>
+			<number>021</number>
+		</grid-15>
+	</section-grid>
+</form>'

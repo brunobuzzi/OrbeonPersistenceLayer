@@ -1,11 +1,6 @@
 other
 testCustomNames
-	| customNames |
 
-	customNames := reader getAllSectionCustomIterations.
+	self assert: ((reader getCustomIterationNameFor: 'userInfoSection' bindName: 'userInfoSection-bind') = 'custom-user-info-iteration').
 
-	self assert: (customNames includesKey: 'userInfoSection').
-
-	self assert: ((customNames at: 'userInfoSection') = 'custom-user-info-iteration').
-
-	self deny: (customNames includesKey: 'section-grid').
+	self assert: ((reader getCustomIterationNameFor: 'section-8' bindName: 'section-8-bind') = nil).
