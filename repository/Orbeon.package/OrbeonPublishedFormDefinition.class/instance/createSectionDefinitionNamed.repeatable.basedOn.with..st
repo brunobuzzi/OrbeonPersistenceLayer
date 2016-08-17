@@ -5,8 +5,8 @@ createSectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: xmlSecti
 
 	section := FormSectionDefinition name: sectionName definition: self.
 	section bind: (xmlSection attributeAt: 'bind');
-		isRepeatable: aBoolean;
-		iterationName: (anOrbeonFormReader getCustomIterationNameFor: sectionName).
+		isRepeatable: aBoolean.
+	aBoolean ifTrue:[section iterationName: (anOrbeonFormReader getCustomIterationNameFor: sectionName bindName: section bind)].
 	self createFieldDefinitionFor: section reader: anOrbeonFormReader with: xmlSection.
 	self createGridDefinitionFor: section reader: anOrbeonFormReader with: xmlSection.
 

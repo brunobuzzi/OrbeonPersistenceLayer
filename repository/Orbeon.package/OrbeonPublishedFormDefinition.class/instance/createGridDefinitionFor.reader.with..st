@@ -4,8 +4,7 @@ createGridDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader with:
 	Only get Repeatable Grids"
 
 	(anOrbeonFormReader formGridComponentsIn: xmlGrid) do: [:eachGrid | | gridDefinition gridName |
-		((eachGrid attributeAt: 'id') size <= 5) ifTrue: [^OrbeonControlSizeException signal: 'No "-grid" word found in grid''s name'].
-		gridName := (eachGrid attributeAt: 'id') allButLast: 5. "remove: -grid"
+		gridName := (eachGrid attributeAt: 'bind') allButLast: 5. "remove: -bind"
 		gridDefinition := FormGridDefinition name: gridName.
 		gridDefinition bind: (xmlGrid attributeAt: 'bind').
 		self createGridFieldDefinitionFor: gridDefinition reader: anOrbeonFormReader with: eachGrid.

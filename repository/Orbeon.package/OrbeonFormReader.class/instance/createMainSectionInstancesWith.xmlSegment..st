@@ -1,6 +1,6 @@
 recursive section
 createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSegment
-	"The receiver answer anOrderedCollection of FormSectionInstance based on form definition <anOrbeonFormDefinition> using the xml node <xmlInstanceSegment>.
+	"The receiver answer anOrderedCollection of FormSectionInstance based on form definition <anOrbeonFormDefinition> using the xml node <xmlInstanceSegment> (/form for main sections).
 	Iterate over Main Sections definitions of <anOrbeonFormDefinition> and recursively creates the sub sections.
 	1. Create field instances. 2- Create grid instances. 3- Recursively create sub sections"
 	| sectionsInstances |
@@ -8,7 +8,7 @@ createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSe
 	sectionsInstances := OrderedCollection new.
 	anOrbeonFormDefinition sectionDefinitions do:[:section | | xmlSubSegments |
 		xmlSubSegments := section isRepeatable
-			ifTrue: [OrderedCollection withAll: (xmlInstanceSegment xPath: ('/form/', section getIterationName))]
+			ifTrue: [OrderedCollection withAll: (xmlInstanceSegment xPath: ('/form/', section getXpathForNodeContent))]
 			ifFalse: [ | subSegment | "elementAt: should not answer nil, ifNil --> there is a mismatch between the instance and it's definition"
 						subSegment := xmlInstanceSegment 
 													elementAt: section name 

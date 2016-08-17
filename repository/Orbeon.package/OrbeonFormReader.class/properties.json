@@ -8,8 +8,7 @@
 	"instvars" : [
 		"xmlDefinition",
 		"xmlDocument",
-		"xmlInstanceDocument",
-		"customSectionIterationNames" ],
+		"xmlInstanceDocument" ],
 	"name" : "OrbeonFormReader",
 	"pools" : [
 		 ],
