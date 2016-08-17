@@ -1,14 +1,13 @@
 language: smalltalk
 sudo: false
 
+# Select operating system(s)
 os:
   - linux
+  - osx
 
+# Select compatible Smalltalk image(s)
 smalltalk:
-  - GemStone-3.1.0.6
-  - GemStone-3.2.12
   - GemStone-3.3.0
-
-cache:
-  directories:
-- $SMALLTALK_CI_CACHE
+  - GemStone-3.2.12
+  - GemStone-3.1.0.6
