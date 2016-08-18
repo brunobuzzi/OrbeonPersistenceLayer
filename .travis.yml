@@ -4,10 +4,7 @@ sudo: false
 # Select operating system(s)
 os:
   - linux
-  - osx
 
 # Select compatible Smalltalk image(s)
 smalltalk:
   - GemStone-3.3.0
-  - GemStone-3.2.12
-  - GemStone-3.1.0.6
