@@ -36,6 +36,7 @@ getXMLFormInstance
         <dateTime>2016-04-13T12:50:00</dateTime>
         <date2>2006-07-07</date2>
         <date3>2016-04-19</date3>
+		<time>8:48:38 pm</time>
         <details>these are the details</details>
         <type>1</type>
         <grid-19>

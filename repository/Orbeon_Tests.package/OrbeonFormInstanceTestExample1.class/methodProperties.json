@@ -3,8 +3,10 @@
 		 },
 	"instance" : {
 		"createFormDefinition" : "BrunoBB 08/13/2016 09:58",
-		"getXMLFormInstance" : "BrunoBB 04/05/2016 14:28",
-		"setUp" : "BrunoBB 07/16/2016 10:35",
+		"createFormDefinition2" : "BrunoBB 08/18/2016 15:47",
+		"currentDefinition" : "BrunoBB 08/18/2016 15:47",
+		"getXMLFormInstance" : "BrunoBB 08/18/2016 15:48",
+		"setUp" : "BrunoBB 08/18/2016 15:45",
 		"tearDown" : "BrunoBB 04/02/2016 10:28",
 		"testFieldInstances" : "BrunoBB 07/24/2016 15:55",
 		"testFieldsValues" : "BrunoBB 04/05/2016 14:28",

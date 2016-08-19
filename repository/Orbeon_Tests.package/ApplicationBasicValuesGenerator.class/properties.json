@@ -1,0 +1,16 @@
+{
+	"category" : "Orbeon_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"FemaleNames",
+		"MaleNames",
+		"Surnames" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ApplicationBasicValuesGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
