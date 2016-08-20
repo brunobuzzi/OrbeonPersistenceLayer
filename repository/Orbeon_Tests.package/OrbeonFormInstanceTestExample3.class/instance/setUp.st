@@ -7,6 +7,6 @@ setUp
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;
-					xmlString: self getXMLFormInstance;
+					xmlString: OrbeonFormInstanceTemplate form_test_3;
 					processXMLSections;
 					yourself.

@@ -1,0 +1,4 @@
+other
+getRandomXMLFormInstance
+
+	^self subclassResponsibility

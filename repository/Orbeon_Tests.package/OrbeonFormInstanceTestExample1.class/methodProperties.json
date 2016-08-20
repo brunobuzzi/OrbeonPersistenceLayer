@@ -3,10 +3,12 @@
 		 },
 	"instance" : {
 		"createFormDefinition" : "BrunoBB 08/13/2016 09:58",
-		"getRandomXMLFormInstance" : "BrunoBB 08/19/2016 10:04",
-		"getXMLFormInstance" : "BrunoBB 08/18/2016 15:48",
-		"setUp" : "BrunoBB 08/19/2016 10:49",
+		"createFormStructure" : "BrunoBB 08/20/2016 10:12",
+		"getRandomXMLFormInstance" : "BrunoBB 08/20/2016 09:41",
+		"setUp" : "BrunoBB 08/20/2016 10:12",
 		"tearDown" : "BrunoBB 04/02/2016 10:28",
+		"testCreate100" : "BrunoBB 08/20/2016 10:05",
+		"testCreate200" : "BrunoBB 08/20/2016 10:14",
 		"testFieldInstances" : "BrunoBB 07/24/2016 15:55",
 		"testFieldsValues" : "BrunoBB 04/05/2016 14:28",
 		"testSectionStructureAndValues" : "BrunoBB 04/09/2016 08:35" } }

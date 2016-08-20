@@ -3,10 +3,10 @@ setUp
 	| definition application |
 
 	application := OrbeonApplication applicationNamed: 'agesic' ifNone: [self assert: false].
-	definition := application definitionNamed: 'test' ifNone: [self createFormDefinition].
+	definition := application definitionNamed: 'test' ifNone: [self createFormStructure].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;
-					xmlString: self getXMLFormInstance;
+					xmlString: OrbeonFormInstanceTemplate form_test;
 					processXMLSections;
 					yourself.
