@@ -15,7 +15,6 @@ createGsQueriesFor: collectionOfOrbeonQueryNode
 		stValue := (type == String) ifTrue: [each value] ifFalse: [type fromOrbeonString: each value].
 		stream nextPutAll: '(each.value = stValue) & '.
 		queryString := stream contents allButLast: 3.
-		self addToLog.
 		gsQuery := GsQuery fromString: queryString. 
 		gsQuery bind: 'stValue' to: stValue.
 		gsQueries at: each name put: gsQuery.

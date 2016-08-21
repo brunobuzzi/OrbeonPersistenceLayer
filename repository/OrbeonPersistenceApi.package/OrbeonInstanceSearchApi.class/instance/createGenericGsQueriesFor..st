@@ -11,13 +11,14 @@ createGenericGsQueriesFor: collectionOfOrbeonQueryNode
 
 	nodesWithQuery do: [:each | 
 		each beGeneric. "set the query node as generic -like an OR search-"
-		(application getAllSearchFieldsOf: formName) do: [:fieldName | | stream gsQuery |
+		(application getAllSearchFieldsOf: formName) do: [:fieldName | | type stream gsQuery stValue |
 			stream := PrintStream on: String new.
-			((lastFormDefinition stTypeOf: fieldName) == String)
-			ifTrue: [stream nextPutAll: 'each.value = ''', each value, ''' & ']
-			ifFalse: [stream nextPutAll: 'each.value = ', each value, ' & '].
+			type := lastFormDefinition stTypeOf: each name.
+			stValue := (type == String) ifTrue: [each value] ifFalse: [type fromOrbeonString: each value].
+			stream nextPutAll: '(each.value = stValue) & '.
 			queryString := stream contents allButLast: 3.
-			gsQuery := [GsQuery fromString: queryString] on: Error do: [:err | self addToLog].
+			gsQuery := GsQuery fromString: queryString.
+			gsQuery bind: 'stValue' to: stValue.
 			gsQueries at: fieldName put: gsQuery.
 			stream close]].
 
