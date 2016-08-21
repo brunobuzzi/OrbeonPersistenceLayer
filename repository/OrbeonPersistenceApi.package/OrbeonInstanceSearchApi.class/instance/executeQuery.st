@@ -1,4 +1,4 @@
-other
+queries
 executeQuery
 	"The receiver execute the query defined in it's self. Storing the result in <resultCollection>"
 

@@ -1,0 +1,7 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getXmlQuery" : "BrunoBB 08/21/2016 13:42",
+		"setUp" : "BrunoBB 08/21/2016 13:45",
+		"testIssue81" : "BrunoBB 08/21/2016 13:50" } }

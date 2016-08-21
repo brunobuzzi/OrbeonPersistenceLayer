@@ -1,15 +1,15 @@
-other
+queries
 executeQueryWithSearchCriteria
 	"The receiver answer a collection with the result of applying the collection of queries to the form definition <anOrbeonFormDefinition>"
-	| gsQueries result andResult orResult |
+	| gsQueries result andResult orResult allDefinitions |
 
 	result := Dictionary new.
 	"create all <GsQuery> for each field with a search value"
 	gsQueries := self createGsQueriesFor: queryNodes. "aDictionary (fieldName-->aGsQuery)"
-
+	allDefinitions := self getAllDefinitions.
 	gsQueries keysAndValuesDo: [:fieldName :gsQuery | | rcIdentitySet |
 		result at: fieldName put: OrderedCollection new.
-		self getAllDefinitions do: [:eachDef |
+		allDefinitions do: [:eachDef |
 			rcIdentitySet := eachDef fieldInstancesOf: fieldName."get the collection of ALL field's values of <fieldName>"
 			gsQuery on: rcIdentitySet. "set the collection of the <GsQuery>"
 			(result at: fieldName) addAll: gsQuery queryResult.]]."Excecute the <GsQuery> and store it on dictionary <result>"

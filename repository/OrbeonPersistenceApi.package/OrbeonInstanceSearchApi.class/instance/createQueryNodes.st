@@ -1,4 +1,4 @@
-other
+queries
 createQueryNodes
 	"The receiver extract the -query nodes- from the XML Document <xmlDocument>.
 	These -query nodes- are used to query the Orbeon Summary and to show summary fields"

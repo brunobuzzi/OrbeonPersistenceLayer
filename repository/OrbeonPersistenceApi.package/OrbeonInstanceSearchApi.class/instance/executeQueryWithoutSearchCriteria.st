@@ -1,4 +1,4 @@
-other
+queries
 executeQueryWithoutSearchCriteria
 	| drafts formsInRange stream instancesShift draftsSize draftsNodes draftNode |
 

@@ -1,4 +1,4 @@
-other
+queries
 executeQuerySearchFormWithDraft
 	| draftNode draftId |
 
