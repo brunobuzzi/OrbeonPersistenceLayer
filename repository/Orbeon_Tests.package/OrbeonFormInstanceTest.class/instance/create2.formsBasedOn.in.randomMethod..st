@@ -6,4 +6,6 @@ create2: integer formsBasedOn: definition in: application randomMethod: randomMe
 					definition: definition;
 					xmlString: (OrbeonFormInstanceTemplate perform: randomMethod);
 					processXML;
-					yourself.].
+					yourself.
+				System commit.
+	].

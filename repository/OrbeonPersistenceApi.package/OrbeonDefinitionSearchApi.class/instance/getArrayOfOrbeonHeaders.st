@@ -1,6 +1,7 @@
 other
 getArrayOfOrbeonHeaders
 	"The receiver creates a collection with the header of the XML to show in the Summary page"
+
 	^OrderedCollection new
 		add: 'xmlns:ev' -> 'http://www.w3.org/2001/xml-events';
 		add: 'xmlns:f' -> 'http//www.orbeon.com/function';

@@ -1,4 +1,4 @@
-other
+builder summary
 generateXmlAnswerForBuilderSummary
 	"The receiver generate a XML string for the <anOrbeonFormInstanceDefinition> in collection <definitionCollection> where total of instance is <searchTotal>.
 	<definitionCollection> is filtered collection so definitionCollection size ~= searchTotal"
