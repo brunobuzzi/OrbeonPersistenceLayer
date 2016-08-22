@@ -5,8 +5,7 @@ SmalltalkCISpec {
       #directory : 'repository',
       #onWarningLog : true,
       #load : [ 'default' ],
-      #platforms : [ #gemstone ],
-      #version : '3.0.0' 
+      #platforms : [ #gemstone ]
     }
   ]
 }
