@@ -3,7 +3,6 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'OrbeonPersistenceLayer',
       #directory : 'repository',
-      #repository : 'https://github.com/brunobuzzi/OrbeonPersistenceLayer',
       #onWarningLog : true,
       #load : [ 'default' ],
       #platforms : [ #gemstone ],
