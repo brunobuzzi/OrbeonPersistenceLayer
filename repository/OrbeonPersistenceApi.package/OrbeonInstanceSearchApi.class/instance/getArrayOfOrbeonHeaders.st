@@ -1,4 +1,4 @@
-other
+queries
 getArrayOfOrbeonHeaders
 	"The receiver creates a collection with the header of the XML to show in the Summary page"
 
@@ -17,6 +17,6 @@ getArrayOfOrbeonHeaders
 		add: 'xmlns:xs' -> 'http://www.w3.org/2001/XMLSchema';
 		add: 'xmlns:xxf' -> 'http://orbeon.org/oxf/xml/xforms';
 		add: 'page-size' -> pageSize printString;
-		add: 'total' -> searchTotal printString;
-		add: 'search-total' -> resultCollection size printString;
+		add: 'total' -> total printString;
+		add: 'search-total' -> ((mode = #noSearch) ifTrue: [total printString] ifFalse: [resultCollection size printString]);
 		asArray

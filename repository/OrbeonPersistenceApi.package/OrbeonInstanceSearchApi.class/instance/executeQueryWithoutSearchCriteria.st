@@ -1,6 +1,6 @@
 queries
 executeQueryWithoutSearchCriteria
-	| drafts formsInRange stream instancesShift draftsSize draftsNodes draftNode |
+	| drafts formsInRange stream instancesShift draftsSize draftsNodes |
 
 	drafts :=  self getAllDrafts.
 	draftsNodes := xmlSearchDefinitionDocument descendentElementsNamed: 'drafts'.
@@ -19,6 +19,7 @@ executeQueryWithoutSearchCriteria
 		(self canDisplayForm: form)
 		ifTrue: [formsInRange add: form].
 	].
+
 	total := stream size + drafts size.
 	stream close.
 

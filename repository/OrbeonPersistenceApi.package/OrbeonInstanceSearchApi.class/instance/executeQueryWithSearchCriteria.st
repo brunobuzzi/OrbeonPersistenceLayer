@@ -3,6 +3,7 @@ executeQueryWithSearchCriteria
 	"The receiver answer a collection with the result of applying the collection of queries to the form definition <anOrbeonFormDefinition>"
 	| gsQueries result andResult orResult allDefinitions |
 
+	total := 0.
 	result := Dictionary new.
 	"create all <GsQuery> for each field with a search value"
 	gsQueries := self createGsQueriesFor: queryNodes. "aDictionary (fieldName-->aGsQuery)"
@@ -12,7 +13,8 @@ executeQueryWithSearchCriteria
 		allDefinitions do: [:eachDef |
 			rcIdentitySet := eachDef fieldInstancesOf: fieldName."get the collection of ALL field's values of <fieldName>"
 			gsQuery on: rcIdentitySet. "set the collection of the <GsQuery>"
-			(result at: fieldName) addAll: gsQuery queryResult.]]."Excecute the <GsQuery> and store it on dictionary <result>"
+			(result at: fieldName) addAll: gsQuery queryResult.
+			total := total + rcIdentitySet size]]."Excecute the <GsQuery> and store it on dictionary <result>"
 
 	result isEmpty ifTrue: [^resultCollection := OrderedCollection new].
 

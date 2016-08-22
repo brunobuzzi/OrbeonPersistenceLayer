@@ -8,7 +8,8 @@
 	"instvars" : [
 		"application",
 		"formName",
-		"lastFormDefinition" ],
+		"lastFormDefinition",
+		"mode" ],
 	"name" : "OrbeonInstanceSearchApi",
 	"pools" : [
 		 ],
