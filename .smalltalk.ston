@@ -8,4 +8,7 @@ SmalltalkCISpec {
       #platforms : [ #gemstone ]
     }
   ]
+  #testing : {
+  	  #allTestCases : false
+  }
 }
