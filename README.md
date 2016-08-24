@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/brunobuzzi/OrbeonPersistenceLayer.svg?branch=master)](https://github.com/brunobuzzi/OrbeonPersistenceLayer)
 GemStone/S persistence layer for Orbeon
 =======
 The manuals of this Orbeon Persistence Layer can be found here:<br>
