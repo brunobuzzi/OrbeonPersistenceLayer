@@ -7,8 +7,10 @@ SmalltalkCISpec {
       #load : [ 'default' ],
       #platforms : [ #gemstone ]
     }
-  ]
-  #testing : {
-  	  #allTestCases : false
+  ],
+  #testing : {	
+     #exclude : {
+  	    #packages : ['Orbeon_Tests']
+    }
   }
 }
