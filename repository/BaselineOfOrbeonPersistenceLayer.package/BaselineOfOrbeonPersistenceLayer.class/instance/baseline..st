@@ -16,6 +16,9 @@ baseline: spec
 				versionString: #'stable';
 				file: 'ConfigurationOfXPath';
 				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XPath/main'].
+		spec baseline: 'AbstractApplicationObjects' with: [
+			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master' ].
+
        spec package: 'OrbeonLDAP'.
        spec package: 'Orbeon' with: [spec requires: #('XMLParser' 'XPath' 'OrbeonLDAP')].
        spec package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon')].
