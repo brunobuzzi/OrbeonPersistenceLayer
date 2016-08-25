@@ -17,8 +17,8 @@ baseline: spec
 				file: 'ConfigurationOfXPath';
 				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XPath/main'].
        spec package: 'OrbeonLDAP'.
-       spec package: 'Orbeon' with: [spec requires: #('OrbeonLDAP' 'XMLParser' 'XPath')].
-       spec package: 'OrbeonPersistenceApi'.
-       spec package: 'OrbeonWeb'.
-       spec package: 'Orbeon_Tests'.
+       spec package: 'Orbeon' with: [spec requires: #('XMLParser' 'XPath' 'OrbeonLDAP')].
+       spec package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon')].
+       spec package: 'OrbeonWeb' with: [spec requires: #('Orbeon' 'OrbeonLDAP')].
+       spec package: 'Orbeon_Tests' with: [spec requires: #('Orbeon')].
 		]
