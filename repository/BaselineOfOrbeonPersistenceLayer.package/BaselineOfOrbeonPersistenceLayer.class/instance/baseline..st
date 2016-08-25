@@ -16,13 +16,6 @@ baseline: spec
 				versionString: #'stable';
 				file: 'ConfigurationOfXPath';
 				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XPath/main'].
-		spec project: 'XMLWriter' with: [
-			spec className: 'ConfigurationOfXMLWriter';
-				versionString: #stable;
-				file: 'ConfigurationOfXMLWriter';
-				repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLWriter/main';
-				loads: #('Core').
-				].
 
 		spec baseline: 'AbstractApplicationObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master/repository' ].
@@ -30,6 +23,8 @@ baseline: spec
 			spec repository: 'github://brunobuzzi/SEWAF:master/repository' ].
 		spec baseline: 'Seaside3' with: [
 			spec repository: 'github://GsDevKit/Seaside31:gs_master/repository' ].
+		spec baseline: 'XMLWriter' with: [
+			spec repository: 'github://GsDevKit/XMLWriter:master/repository' ].
 
        spec package: 'OrbeonLDAP'.
        spec package: 'Orbeon' with: [spec requires: #('XMLParser' 'XPath' 'OrbeonLDAP')].
