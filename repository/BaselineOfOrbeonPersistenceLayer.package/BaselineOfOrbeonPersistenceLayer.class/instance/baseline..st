@@ -33,7 +33,7 @@ baseline: spec
 
        spec package: 'OrbeonLDAP'.
        spec package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath' 'OrbeonLDAP')].
-       spec package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter')].
+       spec package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')].
        spec package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'OrbeonLDAP' 'Seaside3')].
        spec package: 'Orbeon_Tests' with: [spec requires: #('Orbeon')].
 		]
