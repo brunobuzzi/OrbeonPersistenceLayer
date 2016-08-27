@@ -31,9 +31,15 @@ baseline: spec
 		spec baseline: 'Seaside3' with: [
 			spec repository: 'github://GsDevKit/Seaside31:gs_master/repository' ].
 
-       spec package: 'OrbeonLDAP'.
-       spec package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath' 'OrbeonLDAP')].
-       spec package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')].
-       spec package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'OrbeonLDAP' 'Seaside3')].
-       spec package: 'Orbeon_Tests' with: [spec requires: #('Orbeon')].
+		spec package: 'OrbeonLDAP';
+				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath' 'OrbeonLDAP')];
+				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
+				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'OrbeonLDAP' 'Seaside3')];
+				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon')].
+
+		spec
+			group: 'core' with: #('OrbeonLDAP' 'Orbeon'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
+			group: 'rest' with: #('OrbeonPersistenceApi');
+			group: 'web' with: #('OrbeonWeb');
+			group: 'test' with: #('Orbeon_Tests').
 		]
