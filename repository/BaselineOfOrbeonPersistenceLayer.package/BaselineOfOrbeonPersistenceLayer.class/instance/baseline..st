@@ -41,5 +41,6 @@ baseline: spec
 			group: 'core' with: #('OrbeonLDAP' 'Orbeon'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
 			group: 'rest' with: #('OrbeonPersistenceApi');
 			group: 'web' with: #('OrbeonWeb');
-			group: 'test' with: #('Orbeon_Tests').
+			group: 'test' with: #('Orbeon_Tests');
+			group: 'default' with: #('core' 'rest' 'web' 'test')."to load" "aMetacello load: #('default'')"
 		]
