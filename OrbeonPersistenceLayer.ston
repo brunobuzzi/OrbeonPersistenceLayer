@@ -1,4 +1,3 @@
-
 TDObjectGatewayLeafNode{#name:'OrbeonPersistenceLayer',#contents:'^ TDProjectSpecEntryDefinition new
     baseline: \'OrbeonPersistenceLayer\'
       repository: \'github://brunobuzzi/OrbeonPersistenceLayer:master/repository\'
