@@ -8,9 +8,9 @@ SmalltalkCISpec {
       #platforms : [ #gemstone ]
     }
   ],
-  #testing : {	
-     #exclude : {
-  	    #packages : ['Orbeon_Tests']
+  #testing : {  
+     #include : {
+        #packages : ['Orbeon_Tests']
     }
   }
 }
