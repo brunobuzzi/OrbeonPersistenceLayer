@@ -10,7 +10,7 @@ SmalltalkCISpec {
   ],
   #testing : {  
     #exclude : {
-      #classes : [ #OrbeonFormInstanceQTestExample1 ]
+      #classes : [ 'OrbeonFormInstanceQTestExample1' ]
     },
      #include : {
       #packages : ['Orbeon_Tests']
