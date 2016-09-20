@@ -1,0 +1,14 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"columnsForFormsDefinitions" : "BrunoBB 09/20/2016 16:49",
+		"formsBatchedList" : "BrunoBB 09/20/2016 13:45",
+		"formsBatchedList:" : "BrunoBB 09/20/2016 13:45",
+		"initialize" : "BrunoBB 09/20/2016 14:23",
+		"initializeBatchedLists" : "BrunoBB 09/20/2016 16:51",
+		"initializeSewafTableForFormsDefinitions" : "BrunoBB 09/20/2016 16:50",
+		"renderContentOn:" : "BrunoBB 09/20/2016 16:46",
+		"selectedDefinition" : "BrunoBB 09/20/2016 15:42",
+		"selectedDefinition:" : "BrunoBB 09/20/2016 15:42",
+		"sewafTableForFormsDefinitions" : "BrunoBB 09/20/2016 15:43" } }

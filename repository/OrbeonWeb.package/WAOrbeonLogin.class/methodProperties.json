@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"initialize" : "BrunoBB 09/20/2016 13:29" },
 	"instance" : {
 		"ldapExample_getLdapResultForCurrentUser" : "BrunoBB 11/01/2014 15:03",
 		"ldapExample_getLdapRols" : "BrunoBB 11/01/2014 15:04",
