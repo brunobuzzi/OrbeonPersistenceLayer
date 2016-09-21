@@ -3,12 +3,20 @@
 		 },
 	"instance" : {
 		"columnsForFormsDefinitions" : "BrunoBB 09/20/2016 16:49",
+		"drawApplicationFormsGraph" : "BrunoBB 09/21/2016 08:44",
+		"drawTypesGraph" : "BrunoBB 09/21/2016 08:30",
 		"formsBatchedList" : "BrunoBB 09/20/2016 13:45",
 		"formsBatchedList:" : "BrunoBB 09/20/2016 13:45",
+		"graphName" : "BrunoBB 09/20/2016 17:19",
+		"graphName:" : "BrunoBB 09/20/2016 17:19",
 		"initialize" : "BrunoBB 09/20/2016 14:23",
 		"initializeBatchedLists" : "BrunoBB 09/20/2016 16:51",
 		"initializeSewafTableForFormsDefinitions" : "BrunoBB 09/20/2016 16:50",
-		"renderContentOn:" : "BrunoBB 09/20/2016 16:46",
+		"renderContentOn:" : "BrunoBB 09/21/2016 08:15",
+		"renderGraphOn:" : "BrunoBB 09/21/2016 08:21",
 		"selectedDefinition" : "BrunoBB 09/20/2016 15:42",
 		"selectedDefinition:" : "BrunoBB 09/20/2016 15:42",
-		"sewafTableForFormsDefinitions" : "BrunoBB 09/20/2016 15:43" } }
+		"sewafTableForFormsDefinitions" : "BrunoBB 09/20/2016 15:43",
+		"svgCanvas" : "BrunoBB 09/21/2016 08:16",
+		"svgCanvas:" : "BrunoBB 09/21/2016 08:16",
+		"svgCanvasClass" : "BrunoBB 09/21/2016 08:23" } }

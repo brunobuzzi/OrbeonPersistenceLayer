@@ -5,4 +5,4 @@ updateRoot: anHtmlRoot
 
     SEWAFCssLibrary default updateRoot: anHtmlRoot.
 
-	anHtmlRoot stylesheet url: (SEWAFCssLibrary / #mainCss).
+	anHtmlRoot stylesheet url: (SEWAFCssLibrary / #mainOrbeonCss).
