@@ -17,7 +17,7 @@ drawFieldDistributionGraph
 	end := (self searchValueAt: 'end') ifNil: [nil] ifNotNil: [:value | value asNumber].
 
 	distribution :=  (start notNil and: [end notNil])
-		ifFalse: [selectedDefinition getPercentageDistributionForFieldNamed: fieldName]
-		ifTrue: [selectedDefinition getPercentageDistributionForFieldNamed: fieldName from: start to: end].
+		ifFalse: [selectedDefinition getQuantityDistributionForFieldNamed: fieldName]
+		ifTrue: [selectedDefinition getQuantityDistributionForFieldNamed: fieldName from: start to: end].
 
-	svgCanvas drawDonutPercentage: distribution at: 10@10 radius: 80 width: 40 backcolor: '#BCBCBC' transform: 'translate(100,120)'
+	svgCanvas drawDonutQuantity: distribution at: 10@10 radius: 80 width: 40 backcolor: '#BCBCBC' transform: 'translate(100,120)'
