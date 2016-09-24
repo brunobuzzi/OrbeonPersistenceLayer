@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"columnsForFormsDefinitions" : "BrunoBB 09/23/2016 09:22",
+		"drawApplicationFormsGraph" : "BrunoBB 09/23/2016 07:47",
+		"drawFieldDistributionGraph" : "BrunoBB 09/23/2016 11:15",
+		"drawTypesGraph" : "BrunoBB 09/23/2016 07:47",
+		"formsBatchedList" : "BrunoBB 09/23/2016 07:47",
+		"formsBatchedList:" : "BrunoBB 09/23/2016 07:47",
+		"getFormFieldList" : "BrunoBB 09/23/2016 09:12",
+		"graphName" : "BrunoBB 09/23/2016 07:47",
+		"graphName:" : "BrunoBB 09/23/2016 07:47",
+		"initialize" : "BrunoBB 09/23/2016 08:10",
+		"initializeBatchedLists" : "BrunoBB 09/23/2016 07:47",
+		"initializeSewafTableForFormsDefinitions" : "BrunoBB 09/23/2016 07:47",
+		"renderContentOn:" : "BrunoBB 09/23/2016 10:56",
+		"renderFormFieldComboOn:" : "BrunoBB 09/23/2016 09:15",
+		"renderGraphOn:" : "BrunoBB 09/23/2016 07:47",
+		"renderOpenCloseIconOn:" : "BrunoBB 09/23/2016 08:12",
+		"selectedDefinition" : "BrunoBB 09/23/2016 07:47",
+		"selectedDefinition:" : "BrunoBB 09/23/2016 07:47",
+		"sewafTableForFormsDefinitions" : "BrunoBB 09/23/2016 07:47",
+		"showDefinitionList" : "BrunoBB 09/23/2016 07:47",
+		"showDefinitionList:" : "BrunoBB 09/23/2016 07:47",
+		"svgCanvas" : "BrunoBB 09/23/2016 07:47",
+		"svgCanvas:" : "BrunoBB 09/23/2016 07:47",
+		"svgCanvasClass" : "BrunoBB 09/23/2016 07:47" } }

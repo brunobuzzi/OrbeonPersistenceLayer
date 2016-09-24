@@ -9,8 +9,9 @@
 		"formsBatchedList",
 		"selectedDefinition",
 		"graphName",
-		"svgCanvas" ],
-	"name" : "OrbeonGraphicsComposite",
+		"svgCanvas",
+		"showDefinitionList" ],
+	"name" : "OrbeonGraphicsComposite2",
 	"pools" : [
 		 ],
 	"super" : "SEWAFWebObjectComposite",
