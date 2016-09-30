@@ -1,4 +1,4 @@
 other
 applicationIcon
 
-	^SEWAFIconLibrary / #fill48Png
+	^SEWAFIconLibrary / #forms48Png
