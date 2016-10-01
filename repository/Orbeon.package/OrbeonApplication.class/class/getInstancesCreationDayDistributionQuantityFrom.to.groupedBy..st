@@ -3,7 +3,7 @@ getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate groupedBy
 	| distribution |
 
 	distribution := Dictionary new.
-	self getAllDefinitions do: [:each |  | definitionDistribution |
+	(self cache select: [:each | each class == self]) do: [:each |  | definitionDistribution |
 		definitionDistribution := each getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate groupedBy: anInteger.
 		definitionDistribution keysAndValuesDo: [:key : value |
 			(distribution includesKey: key) 

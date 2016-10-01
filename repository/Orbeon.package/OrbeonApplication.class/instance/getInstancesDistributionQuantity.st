@@ -1,4 +1,4 @@
-other
+distribution
 getInstancesDistributionQuantity
 	"Answer aDictionary where each key is the name of the form definition and value is the number of instances of that form"
 	| distribution total orderedQuantity |

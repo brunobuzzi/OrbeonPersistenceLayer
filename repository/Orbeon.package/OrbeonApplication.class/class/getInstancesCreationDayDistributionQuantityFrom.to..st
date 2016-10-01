@@ -1,10 +1,10 @@
 distribution
-getInstancesModificationDayDistributionQuantityFrom: startDate to: endDate groupedBy: anInteger
+getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate
 	| distribution |
 
 	distribution := Dictionary new.
-	self getAllDefinitions do: [:each |  | definitionDistribution |
-		definitionDistribution := each getInstancesModificationDayDistributionQuantityFrom: startDate to: endDate groupedBy: anInteger.
+	(self cache select: [:each | each class == self]) do: [:each |  | definitionDistribution |
+		definitionDistribution := each getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate.
 		definitionDistribution keysAndValuesDo: [:key : value |
 			(distribution includesKey: key) 
 			ifTrue: [distribution at: key put: (distribution at: key) + value] 

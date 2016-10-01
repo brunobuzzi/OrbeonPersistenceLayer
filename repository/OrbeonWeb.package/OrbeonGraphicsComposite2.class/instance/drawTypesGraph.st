@@ -1,4 +1,4 @@
-other
+graphics
 drawTypesGraph
 	| values text |
 

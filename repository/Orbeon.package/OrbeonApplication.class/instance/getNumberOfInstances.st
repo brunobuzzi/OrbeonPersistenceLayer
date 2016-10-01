@@ -1,5 +1,5 @@
 other
-getNumberInstances
+getNumberOfInstances
 	""
 	| total |
 

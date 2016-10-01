@@ -1,4 +1,4 @@
-other
+render
 renderFormFieldComboOn: html
 
 	selectedDefinition ifNil: [^self]. 

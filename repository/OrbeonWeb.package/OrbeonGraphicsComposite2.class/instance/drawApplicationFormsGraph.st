@@ -1,4 +1,4 @@
-other
+graphics
 drawApplicationFormsGraph
 	| values text |
 
@@ -9,7 +9,7 @@ drawApplicationFormsGraph
 	values := selectedDefinition application getInstancesDistributionQuantity. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', ' | total forms: ', selectedDefinition application getNumberInstances printString.
+	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 	svgCanvas drawDonutQuantity: values at: 10@10 radius: 80 width: 40 backcolor: '#BCBCBC' transform: 'translate(100,120)'.

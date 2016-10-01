@@ -1,4 +1,4 @@
-other
+render
 renderFormDefinitionGraphicsFormOn: html
 
 	html form with: [

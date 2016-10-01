@@ -1,15 +1,15 @@
 graphics
-drawAppFormInstancesDayDistributionGraph
+drawGlobalAppFormInstancesDayDistributionGraph
 	| values text points |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #appDayDistributionGraph.
 	
-	values := selectedDefinition application getInstancesModificationDayDistributionQuantityFrom: (Date fromString: '01/01/2016') to: (Date fromString: '12/31/2016') groupedBy: 5. 
+	values := self getOrbeonApplicationClass getInstancesModificationDayDistributionQuantityFrom: (Date fromString: '01/01/2016') to: (Date fromString: '12/31/2016') groupedBy: 5. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
+	text := 'total forms in repository: ', self getOrbeonApplicationClass getNumberOfFormInstances printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 

@@ -1,4 +1,4 @@
-other
+graphics
 drawFieldDistributionGraph
 	| fieldName distribution text start end |
 
@@ -9,7 +9,7 @@ drawFieldDistributionGraph
 	fieldName := self searchValueAt: 'field-name' ifAbsent: [^self].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', ' | total forms: ', selectedDefinition printNumberOfInstances.
+	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition printNumberOfInstances.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
