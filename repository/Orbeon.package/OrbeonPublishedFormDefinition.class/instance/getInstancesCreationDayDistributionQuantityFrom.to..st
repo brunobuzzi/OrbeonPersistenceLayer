@@ -1,4 +1,4 @@
-other
+distribution
 getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate
 	| distribution |
 

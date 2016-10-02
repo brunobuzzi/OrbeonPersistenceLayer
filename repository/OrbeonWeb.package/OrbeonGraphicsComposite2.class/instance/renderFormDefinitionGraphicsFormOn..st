@@ -13,6 +13,7 @@ renderFormDefinitionGraphicsFormOn: html
 			html checkbox value: (self searchValueAt: 'dayHasContent'); callback: [:value | self addSearchValue: value named: 'dayHasContent'].
 			html submitButton callback: [self drawFormInstancesCreationDayDistributionGraph]; with: 'Inst. Cr. Distr'.
 			html submitButton callback: [self drawFormInstancesModificationDayDistributionGraph]; with: 'Inst. Mod Distr'.
-				html submitButton callback: [self drawFormInstancesDayDistributionGraph]; with: 'Inst. Distr'.
+			html submitButton callback: [self drawFormInstancesDayDistributionGraph]; with: 'Inst. Distr'.
+			html submitButton callback: [self drawFormInstancesPieByMonthGraph]; with: 'Pie by Month'.
 		]
 	]

@@ -8,7 +8,7 @@ drawGlobalAppFormInstancesDayDistributionGraph
 	
 	values := self getOrbeonApplicationClass getInstancesModificationDayDistributionQuantityFrom: (Date fromString: '01/01/2016') to: (Date fromString: '12/31/2016') groupedBy: 5. 
 
-	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
+	svgCanvas := self svgCanvasClass newWidth: '3000px' height: '900px'.
 	text := 'total forms in repository: ', self getOrbeonApplicationClass getNumberOfFormInstances printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
