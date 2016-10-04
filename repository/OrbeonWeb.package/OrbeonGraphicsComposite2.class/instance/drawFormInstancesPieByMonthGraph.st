@@ -3,10 +3,10 @@ drawFormInstancesPieByMonthGraph
 	| values text |
 
 	selectedDefinition ifNil: [^self].
- 
+
 	graphName := #globalPieByMonthGraph.
 	
-	values := selectedDefinition getInstancesModificationDistributionByMonthFrom: (Date fromString: '01/01/2016') to: (Date fromString: '12/31/2016'). 
+	values := selectedDefinition getInstancesModificationDistributionByMonthFrom: self getStartDate to: self getEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.
