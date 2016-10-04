@@ -6,7 +6,7 @@ drawAppFormInstancesModificationDayDistributionGraph
  
 	graphName := #appDayDistributionGraph.
 	
-	values := selectedDefinition application getInstancesModificationDayDistributionQuantityFrom: (Date fromString: '01/01/2016') to: (Date fromString: '12/31/2016'). 
+	values := selectedDefinition application getInstancesModificationDayDistributionQuantityFrom: self getAppStartDate to: self getAppEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
