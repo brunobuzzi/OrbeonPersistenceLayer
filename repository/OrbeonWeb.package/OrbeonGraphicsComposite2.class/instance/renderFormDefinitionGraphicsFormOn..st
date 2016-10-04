@@ -15,5 +15,7 @@ renderFormDefinitionGraphicsFormOn: html
 			html submitButton callback: [self drawFormInstancesModificationDayDistributionGraph]; with: 'Inst. Mod Distr'.
 			html submitButton callback: [self drawFormInstancesDayDistributionGraph]; with: 'Inst. Distr'.
 			html submitButton callback: [self drawFormInstancesPieByMonthGraph]; with: 'Pie by Month'.
+			html checkbox attributeAt: 'id' put: 'all-versions'; callback: [:value | self addSearchValue: value named: 'all-version'].
+			html label attributeAt: 'for' put: 'id'; with: 'All Versions'.
 		]
 	]

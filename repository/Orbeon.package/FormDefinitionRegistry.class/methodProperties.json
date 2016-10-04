@@ -20,6 +20,8 @@
 		"getDefinitionWithId:ifNone:" : "BrunoBB 07/28/2016 10:35",
 		"getDefinitionWithSameVersionAs:" : "BrunoBB 07/28/2016 10:35",
 		"getDefinitionWithVersion:" : "BrunoBB 07/28/2016 10:35",
+		"getInstancesCreationDayDistributionQuantityFrom:to:" : "BrunoBB 10/04/2016 09:36",
+		"getInstancesModificationDayDistributionQuantityFrom:to:" : "BrunoBB 10/04/2016 09:36",
 		"getInstancesOfAllVersions" : "BrunoBB 07/28/2016 10:35",
 		"getLastSavedDefinition" : "BrunoBB 07/28/2016 10:35",
 		"getLastVersion" : "BrunoBB 07/28/2016 10:35",

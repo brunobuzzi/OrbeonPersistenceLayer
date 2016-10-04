@@ -6,7 +6,10 @@ drawFormInstancesCreationDayDistributionGraph
  
 	graphName := #dayDistributionGraph.
 	
-	values := selectedDefinition getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate. 
+	values := self hasAllVersionsSelected 
+				ifTrue: [selectedDefinition getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
+				ifFalse: [(selectedDefinition application registryForFormNamed: selectedDefinition formName)
+								getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.
