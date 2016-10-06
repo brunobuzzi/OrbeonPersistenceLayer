@@ -1,4 +1,4 @@
-graphics
+charts
 drawAppFormInstancesModificationPieByMonthGraph
 	| values text |
 

@@ -1,4 +1,4 @@
-graphics
+charts
 drawGlobalFormInstancesCreationPieByMonthGraph
 	| values text |
 

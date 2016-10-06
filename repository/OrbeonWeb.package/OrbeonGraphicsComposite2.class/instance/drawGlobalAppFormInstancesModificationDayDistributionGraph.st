@@ -1,4 +1,4 @@
-graphics
+charts
 drawGlobalAppFormInstancesModificationDayDistributionGraph
 	| values text |
 
@@ -16,8 +16,8 @@ drawGlobalAppFormInstancesModificationDayDistributionGraph
 	svgCanvas 
 		drawWorkingDays: values
 		at: 60@80 
-		from: (Date fromString: '01/01/2016') 
-		to: (Date fromString: '12/31/2016') 
+		from: self getAppStartDate
+		to: self getAppEndDate
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent').

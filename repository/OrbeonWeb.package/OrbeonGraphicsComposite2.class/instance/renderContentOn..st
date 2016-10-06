@@ -9,6 +9,7 @@ renderContentOn: html
 		with:[html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
 
 	html div with: [
+		self renderGraphicsOptionsOn: html.
 		self renderApplicationGraphicsFormOn: html.
 		self renderFormDefinitionGraphicsFormOn: html.
 	].

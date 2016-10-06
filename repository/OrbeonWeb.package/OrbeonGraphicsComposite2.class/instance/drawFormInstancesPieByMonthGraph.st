@@ -1,4 +1,4 @@
-graphics
+charts
 drawFormInstancesPieByMonthGraph
 	| values text |
 

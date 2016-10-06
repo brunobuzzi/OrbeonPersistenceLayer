@@ -1,4 +1,4 @@
-graphics
+charts
 drawAppFormInstancesDayDistributionGraph
 	| values text points |
 
@@ -17,7 +17,7 @@ drawAppFormInstancesDayDistributionGraph
 	values keysAndValuesDo: [:key :value | points add: (key @value)]. 
 
 	svgCanvas 
-		drawVerticalCurveFrom: (Date fromString: '01/01/2016')
+		drawVerticalCurveFrom: self getAppStartDate 
 		for: points
 		r: 5
 		id: UUID new asString

@@ -1,4 +1,4 @@
-graphics
+charts
 drawFormInstancesCreationDayDistributionGraph
 	| values text |
 
@@ -7,8 +7,8 @@ drawFormInstancesCreationDayDistributionGraph
 	graphName := #dayDistributionGraph.
 	
 	values := self hasAllVersionsSelected 
-				ifTrue: [selectedDefinition getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
-				ifFalse: [(selectedDefinition application registryForFormNamed: selectedDefinition formName)
+				ifFalse: [selectedDefinition getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
+				ifTrue: [(selectedDefinition application registryForFormNamed: selectedDefinition formName)
 								getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
@@ -19,8 +19,8 @@ drawFormInstancesCreationDayDistributionGraph
 	svgCanvas 
 		drawWorkingDays: values
 		at: 60@80 
-		from: (Date fromString: '01/01/2016') 
-		to: (Date fromString: '12/31/2016') 
+		from: self getStartDate
+		to: self getEndDate 
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent').

@@ -1,4 +1,4 @@
-graphics
+charts
 drawFieldDistributionGraph
 	| fieldName distribution text start end |
 

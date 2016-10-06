@@ -1,4 +1,4 @@
-graphics
+charts
 drawApplicationFormsGraph
 	| values text |
 
