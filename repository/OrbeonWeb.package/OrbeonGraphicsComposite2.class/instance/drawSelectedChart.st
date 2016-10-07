@@ -19,7 +19,13 @@ drawSelectedChart
 	(self isFormDefinitionAllVersionsScope and: [self isDonutModificationByMonthChart]) ifTrue: [self drawFormRegistryFormInstancesModificationPieByMonthGraph].
 	(self isFormDefinitionAllVersionsScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFormRegistryDonutQuantityChart].
 
-	(self isFormDefinitionScope and: [self isDayDistributionCreationChart]) ifTrue: [self drawFormDefinitionCreationDayDistributionGraph].
-	(self isFormDefinitionScope and: [self isDayDistributionModificationChart]) ifTrue: [self drawFormDefinitionModificationDayDistributionGraph].
-	(self isFormDefinitionScope and: [self isDonutCreationByMonthChart]) ifTrue: [self drawFormDefinitionFormInstancesCreationPieByMonthGraph].
-	(self isFormDefinitionScope and: [self isDonutModificationByMonthChart]) ifTrue: [self drawFormDefinitionFormInstancesModificationPieByMonthGraph].
+	(self isFormDefinitionScope and: [self isDayDistributionCreationChart]) ifTrue: [self drawFormInstancesCreationDayDistributionGraph].
+	(self isFormDefinitionScope and: [self isDayDistributionModificationChart]) ifTrue: [self drawFormInstancesModificationDayDistributionGraph].
+	(self isFormDefinitionScope and: [self isDonutCreationByMonthChart]) ifTrue: [self drawFormInstancesCreationPieByMonthGraph].
+	(self isFormDefinitionScope and: [self isDonutModificationByMonthChart]) ifTrue: [self drawFormInstancesModificationPieByMonthGraph].
+	(self isFormDefinitionScope and: [self isDonutFieldTypeDistributionChart]) ifTrue: [self drawTypesGraph].
+
+	(self isFieldValuesScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawFieldInstancesCreationDayDistributionGraph].
+	(self isFieldValuesScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawFieldInstancesModificationDayDistributionGraph].
+
+	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDonutQuantityChart].

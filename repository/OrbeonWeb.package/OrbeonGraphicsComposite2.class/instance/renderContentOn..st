@@ -10,8 +10,8 @@ renderContentOn: html
 
 	html div with: [
 		self renderGraphicsOptionsOn: html.
-		self renderApplicationGraphicsFormOn: html.
-		self renderFormDefinitionGraphicsFormOn: html.
+"		self renderApplicationGraphicsFormOn: html.
+		self renderFormDefinitionGraphicsFormOn: html."
 	].
 
 	graphName ifNotNil: [self renderGraphOn: html]

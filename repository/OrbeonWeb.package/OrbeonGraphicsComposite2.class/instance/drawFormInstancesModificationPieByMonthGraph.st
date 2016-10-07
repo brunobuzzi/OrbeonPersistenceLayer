@@ -1,5 +1,5 @@
 charts
-drawFormInstancesPieByMonthGraph
+drawFormInstancesModificationPieByMonthGraph
 	| values text |
 
 	selectedDefinition ifNil: [^self].
