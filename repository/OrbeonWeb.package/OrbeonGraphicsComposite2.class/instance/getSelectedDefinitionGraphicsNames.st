@@ -1,4 +1,4 @@
 charts names
 getSelectedDefinitionGraphicsNames
 
-	^self getAllGlobalGraphicsNames, #('Donut Field Type Distribution')
+	^#('Day Distribution Creation' 'Day Distribution Modification' 'Donut Creation by Month' 'Donut Modification by Month')

@@ -12,5 +12,5 @@ drawApplicationFormsGraph
 	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
-	svgCanvas drawDonutQuantity: values at: 10@10 radius: 80 width: 40 backcolor: '#BCBCBC' transform: 'translate(100,120)'.
+	svgCanvas drawDonutQuantity: values at: 10@30 radius: 80 width: 40 backcolor: '#BCBCBC' transform: 'translate(100,20)'.
 	"svgCanvas drawHorizontalBarGraph: values at: 20@20 maxWidth: 800 width: 25."

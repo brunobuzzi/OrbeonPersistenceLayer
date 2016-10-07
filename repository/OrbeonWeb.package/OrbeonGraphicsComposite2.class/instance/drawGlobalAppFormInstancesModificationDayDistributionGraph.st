@@ -1,8 +1,6 @@
 charts
 drawGlobalAppFormInstancesModificationDayDistributionGraph
 	| values text |
-
-	selectedDefinition ifNil: [^self].
  
 	graphName := #globalAppDayDistributionGraph. 
 	

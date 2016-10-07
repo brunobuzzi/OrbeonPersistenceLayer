@@ -2,8 +2,6 @@ charts
 drawGlobalAppFormInstancesCreationDayDistributionGraph
 	| values text |
 
-	selectedDefinition ifNil: [^self].
- 
 	graphName := #globalAppDayDistributionGraph.
 	
 	values := self getOrbeonApplicationClass getInstancesCreationDayDistributionQuantityFrom: self getAppStartDate to: self getAppEndDate. 

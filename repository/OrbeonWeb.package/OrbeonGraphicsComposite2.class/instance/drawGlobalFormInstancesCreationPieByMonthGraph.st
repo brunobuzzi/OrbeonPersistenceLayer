@@ -1,8 +1,6 @@
 charts
 drawGlobalFormInstancesCreationPieByMonthGraph
 	| values text |
-
-	selectedDefinition ifNil: [^self].
  
 	graphName := #globalPieByMonthGraph.
 	
