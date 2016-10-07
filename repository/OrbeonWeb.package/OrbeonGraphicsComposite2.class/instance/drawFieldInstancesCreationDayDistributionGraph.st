@@ -1,15 +1,19 @@
 charts
 drawFieldInstancesCreationDayDistributionGraph
-	| values text |
+	| values text total |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #dayDistributionGraph.
 	
-	values := selectedDefinition registry getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate satisfying: [:each | true].
+	values := (self searchValueAt: 'form-condition')  
+					ifNil: [selectedDefinition registry getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
+					ifNotNil: [:blockString | selectedDefinition registry getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+
+	total := values inject: 0 into:  [:sum :each | sum + each]. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.
+	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', total printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
