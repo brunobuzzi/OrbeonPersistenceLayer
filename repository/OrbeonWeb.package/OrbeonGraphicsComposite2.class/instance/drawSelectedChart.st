@@ -6,12 +6,14 @@ drawSelectedChart
 	(self isGlobalScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesCreationPieByMonthGraph].
 	(self isGlobalScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesModificationPieByMonthGraph].
 	(self isGlobalScope and: [self isDonutQuantityChart]) ifTrue: [^self drawGlobalDonutQuantityChart].
+	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [^self drawGlobalBarQuantityChart].
 
 	(self isApplicationScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawAppFormInstancesCreationDayDistributionGraph].
 	(self isApplicationScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawAppFormInstancesModificationDayDistributionGraph].
 	(self isApplicationScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawAppFormInstancesCreationPieByMonthGraph].
 	(self isApplicationScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawAppFormInstancesModificationPieByMonthGraph].
 	(self isApplicationScope and: [self isDonutQuantityChart]) ifTrue: [^self drawAppDonutQuantityChart].
+	(self isApplicationScope and: [self isBarQuantityChart]) ifTrue: [^self drawAppBarQuantityChart].
 
 	(self isFormDefinitionAllVersionsScope and: [self isDayDistributionCreationChart]) ifTrue: [self drawFormRegistryCreationDayDistributionGraph].
 	(self isFormDefinitionAllVersionsScope and: [self isDayDistributionModificationChart]) ifTrue: [self drawFormRegistryModificationDayDistributionGraph].
