@@ -4,7 +4,7 @@ drawGlobalAppFormInstancesCreationDayDistributionGraph
 
 	graphName := #globalAppDayDistributionGraph.
 	
-	values := self getOrbeonApplicationClass getInstancesCreationDayDistributionQuantityFrom: self getAppStartDate to: self getAppEndDate. 
+	values := self getOrbeonApplicationClass getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := 'total forms in repository: ', self getOrbeonApplicationClass getNumberOfFormInstances printString.
@@ -18,4 +18,4 @@ drawGlobalAppFormInstancesCreationDayDistributionGraph
 		to: self getAppEndDate
 		width: 20 
 		color: 'green' 
-		dayHasContent: (self searchValueAt: 'dayHasContent').
+		dayHasContent: (self searchValueAt: 'dayHasContent' ifAbsent: [false]).

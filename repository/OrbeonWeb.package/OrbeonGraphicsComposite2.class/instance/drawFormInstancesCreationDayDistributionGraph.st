@@ -23,4 +23,4 @@ drawFormInstancesCreationDayDistributionGraph
 		to: self getEndDate 
 		width: 20 
 		color: 'green' 
-		dayHasContent: (self searchValueAt: 'dayHasContent').
+		dayHasContent: (self searchValueAt: 'dayHasContent' ifAbsent: [false]).
