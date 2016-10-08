@@ -1,4 +1,4 @@
 render
 getCharScopeNames
 
-	^#('Global' 'Application' 'Form Definition (All Versions)' 'Form Defnition (Selected)' 'Fields Values')
+	^#('Global' 'Application' 'Form Definition (All Versions)' 'Form Definition (Selected)' 'Fields Values')

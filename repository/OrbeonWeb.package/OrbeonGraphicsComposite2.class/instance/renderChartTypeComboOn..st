@@ -7,7 +7,7 @@ renderChartTypeComboOn: html
 		selected: (self searchValueAt: 'chart-scope'); 
 		callback: [:value | self addSearchValue: value named: 'chart-scope'];
 		onChange: 'submit()'.
-	graphicTypes := ((self searchValueAt: 'chart-scope') = 'Form Defnition (Selected)')
+	graphicTypes := ((self searchValueAt: 'chart-scope') = 'Form Definition (Selected)')
 		ifTrue: [self getSelectedDefinitionGraphicsNames]
 		ifFalse: [self getAllGlobalGraphicsNames].
 	html select 
