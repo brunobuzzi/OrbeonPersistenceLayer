@@ -27,5 +27,6 @@ drawSelectedChart
 
 	(self isFieldValuesScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawFieldInstancesCreationDayDistributionGraph].
 	(self isFieldValuesScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawFieldInstancesModificationDayDistributionGraph].
-
+	(self isFieldValuesScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawFieldInstancesCreationPieByMonthGraph].
+	(self isFieldValuesScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawFieldInstancesModificationPieByMonthGraph].
 	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDonutQuantityChart].

@@ -5,8 +5,6 @@ drawFieldInstancesModificationDayDistributionGraph
 	selectedDefinition ifNil: [^self].
  
 	graphName := #dayDistributionGraph.
-	
-	values := selectedDefinition registry getInstancesModificationDayDistributionQuantityFrom: self getStartDate to: self getEndDate satisfying: [:each | true].
 
 	values := (self searchValueAt: 'form-condition')  
 					ifNil: [selectedDefinition registry getInstancesModificationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
