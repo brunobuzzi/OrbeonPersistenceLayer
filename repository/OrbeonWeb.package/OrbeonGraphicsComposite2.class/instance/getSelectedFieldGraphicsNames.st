@@ -1,4 +1,0 @@
-charts names
-getSelectedFieldGraphicsNames
-
-	^self getAllGlobalGraphicsNames
