@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"subDistributionMethods" ],
+	"name" : "OrbeonRecursiveFieldDistributionReport",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFieldDistributionReport",
+	"type" : "normal" }

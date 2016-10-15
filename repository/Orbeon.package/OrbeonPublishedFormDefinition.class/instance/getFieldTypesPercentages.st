@@ -1,4 +1,4 @@
-distribution
+distribution by fields
 getFieldTypesPercentages
 	"Answer aDictionary where the key is the name of the field and the value is percentage of that type of field"
 	| total qNumber qBoolean qString qDate qTime qTimeStamp groupedDict |

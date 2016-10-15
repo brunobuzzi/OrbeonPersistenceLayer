@@ -6,7 +6,7 @@ getInstancesDayDistributionQuantityUsing: sortSelector from: startDate to: endDa
 
 	(instances select: [:each | | value |
 		value := each perform: sortSelector.
-		startDate <= value  and: [(value <= endDate) and: [formConditionBlock value: each]]])
+		startDate <= value  and: [(value <= endDate) and: [formConditionBlock value: each parentObject]]])
 			do: [:each | | key value |
 				value := each perform: sortSelector.
 				key := value date asDays - startDate asDays.

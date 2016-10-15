@@ -1,0 +1,17 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"applicationName",
+		"formName",
+		"version",
+		"fieldName" ],
+	"name" : "OrbeonFieldDistributionReport",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDistributionReport",
+	"type" : "normal" }

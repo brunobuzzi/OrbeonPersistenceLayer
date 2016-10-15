@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonGlobalDistributionReport",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDistributionReport",
+	"type" : "normal" }
