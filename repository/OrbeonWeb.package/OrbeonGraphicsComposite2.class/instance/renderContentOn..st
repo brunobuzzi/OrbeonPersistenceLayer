@@ -8,10 +8,6 @@ renderContentOn: html
 	html div id: 'system-rols'; class: 'default-gray-table '; 
 		with:[html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
 
-	html div with: [
-		self renderGraphicsOptionsOn: html.
-"		self renderApplicationGraphicsFormOn: html.
-		self renderFormDefinitionGraphicsFormOn: html."
-	].
+	html div with: [self renderGraphicsOptionsOn: html].
 
 	graphName ifNotNil: [self renderGraphOn: html]

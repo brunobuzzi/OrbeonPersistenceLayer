@@ -7,6 +7,7 @@ drawSelectedChart
 	(self isGlobalScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesModificationPieByMonthGraph].
 	(self isGlobalScope and: [self isDonutQuantityChart]) ifTrue: [^self drawGlobalDonutQuantityChart].
 	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [^self drawGlobalBarQuantityChart].
+	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [^self drawGlobalBarSplitQuantityChart].
 
 	(self isApplicationScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawAppFormInstancesCreationDayDistributionGraph].
 	(self isApplicationScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawAppFormInstancesModificationDayDistributionGraph].
