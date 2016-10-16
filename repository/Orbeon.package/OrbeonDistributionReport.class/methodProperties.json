@@ -2,6 +2,7 @@
 	"class" : {
 		"distribution:" : "BrunoBB 10/15/2016 11:57" },
 	"instance" : {
+		"addToCache" : "BrunoBB 10/16/2016 08:25",
 		"conditionStringBlock" : "BrunoBB 10/15/2016 11:58",
 		"conditionStringBlock:" : "BrunoBB 10/15/2016 11:58",
 		"createdTime" : "BrunoBB 10/15/2016 11:57",
@@ -10,10 +11,14 @@
 		"description:" : "BrunoBB 10/15/2016 11:58",
 		"endDate" : "BrunoBB 10/15/2016 11:58",
 		"endDate:" : "BrunoBB 10/15/2016 11:58",
+		"getRootPercentageDistribution" : "BrunoBB 10/16/2016 08:29",
+		"hasFilters" : "BrunoBB 10/16/2016 06:24",
 		"initialize" : "BrunoBB 10/15/2016 11:58",
 		"name" : "BrunoBB 10/15/2016 11:58",
 		"name:" : "BrunoBB 10/15/2016 11:58",
 		"rootDistribution" : "BrunoBB 10/15/2016 11:57",
 		"rootDistribution:" : "BrunoBB 10/15/2016 11:57",
+		"runDistribution" : "BrunoBB 10/16/2016 06:27",
+		"runDistributionAndSave" : "BrunoBB 10/16/2016 06:27",
 		"startDate" : "BrunoBB 10/15/2016 11:58",
 		"startDate:" : "BrunoBB 10/15/2016 11:58" } }
