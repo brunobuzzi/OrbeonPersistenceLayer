@@ -6,8 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"name",
+		"description",
 		"createdTime",
-		"rootDistribution" ],
+		"rootDistribution",
+		"startDate",
+		"endDate",
+		"conditionStringBlock" ],
 	"name" : "OrbeonDistributionReport",
 	"pools" : [
 		 ],
