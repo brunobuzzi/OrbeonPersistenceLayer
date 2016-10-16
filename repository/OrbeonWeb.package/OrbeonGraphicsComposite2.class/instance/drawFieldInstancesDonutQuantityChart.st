@@ -1,6 +1,6 @@
 charts
 drawFieldInstancesDonutQuantityChart
-	| fieldName distribution text |
+	| fieldName report text |
 
 	selectedDefinition ifNil: [^self].
 
@@ -13,8 +13,8 @@ drawFieldInstancesDonutQuantityChart
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
-	distribution :=  (self hasSearchValueAt: 'form-condition')
-		ifTrue: [selectedDefinition getQuantityDistributionForFieldNamed: fieldName satisfying: (self searchValueAt: 'form-condition') evaluate] 
-		ifFalse: [selectedDefinition getQuantityDistributionForFieldNamed: fieldName].
+	report :=  (self hasSearchValueAt: 'form-condition')
+		ifTrue: [selectedDefinition reportValueDistributionFor: fieldName satisfying: (self searchValueAt: 'form-condition') evaluate] 
+		ifFalse: [selectedDefinition reportTotalValueDistributionFor: fieldName].
 
-	svgCanvas drawDonutQuantity: distribution at: 10@10 radius: 120 width: 60 backcolor: '#BCBCBC' transform: 'translate(150,150)'
+	svgCanvas drawDonutQuantity: report rootDistribution at: 10@10 radius: 120 width: 60 backcolor: '#BCBCBC' transform: 'translate(150,150)'
