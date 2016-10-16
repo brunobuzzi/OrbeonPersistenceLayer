@@ -5,4 +5,4 @@ getQuantityDistributionForFieldNamed: fieldName from: startDate to: endDate
 
 	dateFilteredCollection := (self fieldInstancesOf: fieldName) select: [:each | startDate <= each parentObject createdTime and: (each parentObject createdTime <= endDate)].
 
-	^self getQuantityDistributionForFieldCollection: dateFilteredCollection
+	^self getValueDistributionForFieldCollection: dateFilteredCollection

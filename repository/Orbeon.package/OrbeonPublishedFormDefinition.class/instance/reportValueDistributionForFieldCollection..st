@@ -5,7 +5,7 @@ reportValueDistributionForFieldCollection: fieldInstancesCollection
 
 	fieldName := fieldInstancesCollection ifEmpty: ['no-instances'] ifNotEmpty: [fieldInstancesCollection first name].
 
-	distribution := self getQuantityDistributionForFieldCollection: fieldInstancesCollection.
+	distribution := self getValueDistributionForFieldCollection: fieldInstancesCollection.
 	
 	^OrbeonFieldDistributionReport 
 			applicationName: self getApplicationName 

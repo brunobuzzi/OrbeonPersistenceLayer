@@ -5,4 +5,4 @@ getQuantityDistributionForFieldNamed: fieldName satisfying: formConditionBlock
 
 	blockFilteredCollection := (self fieldInstancesOf: fieldName) select: [:fieldInst | formConditionBlock value: fieldInst parentObject].
 
-	^self getQuantityDistributionForFieldCollection: blockFilteredCollection
+	^self getValueDistributionForFieldCollection: blockFilteredCollection
