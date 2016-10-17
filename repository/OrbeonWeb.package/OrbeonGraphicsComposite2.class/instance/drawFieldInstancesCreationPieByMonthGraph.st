@@ -1,20 +1,18 @@
 charts
 drawFieldInstancesCreationPieByMonthGraph
-	| values text total |
+	| report text |
 	
 	selectedDefinition ifNil: [^self].
 
 	graphName := #globalPieByMonthGraph.
 
-	values := (self searchValueAt: 'form-condition')  
-					ifNil: [selectedDefinition registry getInstancesCreationDistributionByMonthFrom: self getStartDate to: self getEndDate] 
-					ifNotNil: [:blockString | selectedDefinition registry getInstancesCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
-
-	total := values inject: 0 into:  [:sum :each | sum + each]. 
+	report := (self searchValueAt: 'form-condition')  "we search in the registry because the search is through all field instances"
+					ifNil: [selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate] 
+					ifNotNil: [:blockString | selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', total printString.
+	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition registry getTotalSize printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
-	svgCanvas drawDonutQuantity: values at: 10@10 radius: 120 width: 60 backcolor: '#BCBCBC' transform: 'translate(150,160)'.
+	svgCanvas drawDonutQuantity: report rootDistribution at: 10@10 radius: 120 width: 60 backcolor: '#BCBCBC' transform: 'translate(150,160)'.

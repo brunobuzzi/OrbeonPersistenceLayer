@@ -14,7 +14,7 @@ drawFieldInstancesDonutQuantityChart
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
 	report :=  (self hasSearchValueAt: 'form-condition')
-		ifTrue: [selectedDefinition reportValueDistributionFor: fieldName satisfying: (self searchValueAt: 'form-condition') evaluate] 
-		ifFalse: [selectedDefinition reportTotalValueDistributionFor: fieldName].
+		ifTrue: [selectedDefinition reportValueDistributionFor: fieldName from: self getStartDate to: self getEndDate satisfying: (self searchValueAt: 'form-condition') evaluate] 
+		ifFalse: [selectedDefinition reportValueDistributionFor: fieldName from: self getStartDate to: self getEndDate].
 
 	svgCanvas drawDonutQuantity: report rootDistribution at: 10@10 radius: 120 width: 60 backcolor: '#BCBCBC' transform: 'translate(150,150)'

@@ -9,9 +9,12 @@
 		"name",
 		"description",
 		"createdTime",
+		"secondsToConstruct",
+		"isClosed",
 		"rootDistribution",
 		"startDate",
 		"endDate",
+		"distributionMethod",
 		"conditionStringBlock" ],
 	"name" : "OrbeonDistributionReport",
 	"pools" : [

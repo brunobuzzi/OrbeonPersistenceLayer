@@ -1,0 +1,4 @@
+other
+hasDistributionMethod
+
+	^distributionMethod notNil

@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"version" ],
-	"name" : "OrbeonPublishedFormDistributionReport",
+		"applicationName",
+		"formName" ],
+	"name" : "OrbeonFormDistributionReport",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormDistributionReport",
+	"super" : "OrbeonDistributionReport",
 	"type" : "normal" }
