@@ -1,12 +1,12 @@
 chart command
 drawFormRegistryModificationDayDistributionGraph
-	| values text |
+	| report text |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #appDayDistributionGraph.
-	
-	values := selectedDefinition registry getInstancesModificationDayDistributionQuantityFrom: self getAppStartDate to: self getAppEndDate. 
+
+	report := selectedDefinition registry reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName , ' | total forms: ', selectedDefinition registry getAllInstancesSize printString.
@@ -14,7 +14,7 @@ drawFormRegistryModificationDayDistributionGraph
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
 	svgCanvas 
-		drawWorkingDays: values
+		drawWorkingDays: report rootDistribution
 		at: 60@80 
 		from: self getAppStartDate
 		to: self getAppEndDate 

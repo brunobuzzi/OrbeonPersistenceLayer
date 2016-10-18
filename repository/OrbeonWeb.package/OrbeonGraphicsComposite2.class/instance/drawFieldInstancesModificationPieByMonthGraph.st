@@ -6,9 +6,7 @@ drawFieldInstancesModificationPieByMonthGraph
 
 	graphName := #globalPieByMonthGraph.
 
-	report := (self searchValueAt: 'form-condition')  "we search in the registry because the search is through all field instances"
-					ifNil: [selectedDefinition registry reportModificationDistributionByMonthFrom: self getStartDate to: self getEndDate] 
-					ifNotNil: [:blockString | selectedDefinition registry reportModificationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+	report := selectedDefinition registry reportModificationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition registry numberOfInstances printString.

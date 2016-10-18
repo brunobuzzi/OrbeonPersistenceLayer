@@ -6,9 +6,7 @@ drawFormRegistryBarQuantityChart
  
 	graphName := #applicationFormsGraph.
 
-	report := (self searchValueAt: 'form-condition')  
-					ifNil: [selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: [:each | true]] 
-					ifNotNil: [:blockString | selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+	report := selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition application applicationName, ' | total forms: ', (selectedDefinition registry getInstancesQuantityFrom: self getStartDate to: self getEndDate) printString.

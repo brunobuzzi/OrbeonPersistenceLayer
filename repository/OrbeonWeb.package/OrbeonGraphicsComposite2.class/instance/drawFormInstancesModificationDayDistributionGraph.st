@@ -1,6 +1,6 @@
 charts
 drawFormInstancesModificationDayDistributionGraph
-	| report definition values text queryBlock |
+	| report definition text |
 
 	selectedDefinition ifNil: [^self].
  
@@ -8,9 +8,7 @@ drawFormInstancesModificationDayDistributionGraph
 	
 	definition := self hasAllVersionsSelected ifFalse: [selectedDefinition] ifTrue: [selectedDefinition registry].
 
-	queryBlock := (self searchValueAt: 'form-condition') ifNil: [[:each | true]] ifNotNil: [:blockString | blockString evaluate].
-
-	report := selectedDefinition definition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: queryBlock.
+	report := selectedDefinition definition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.
@@ -18,7 +16,7 @@ drawFormInstancesModificationDayDistributionGraph
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
 	svgCanvas 
-		drawWorkingDays: values
+		drawWorkingDays: report rootDistribution
 		at: 60@80 
 		from: self getStartDate
 		to: self getEndDate
