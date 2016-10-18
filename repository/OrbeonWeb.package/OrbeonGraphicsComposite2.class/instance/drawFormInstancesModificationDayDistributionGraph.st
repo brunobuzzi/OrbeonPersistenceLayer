@@ -1,15 +1,16 @@
 charts
 drawFormInstancesModificationDayDistributionGraph
-	| values text |
+	| report definition values text |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #dayDistributionGraph.
 	
-	values := self hasAllVersionsSelected 
-				ifFalse: [selectedDefinition getInstancesModificationDayDistributionQuantityFrom: self getStartDate to: self getEndDate] 
-				ifTrue: [(selectedDefinition application registryForFormNamed: selectedDefinition formName)
-								getInstancesModificationDayDistributionQuantityFrom: self getStartDate to: self getEndDate].
+	definition := self hasAllVersionsSelected ifFalse: [selectedDefinition] ifTrue: [selectedDefinition registry].
+
+	report := (self searchValueAt: 'form-condition')  
+					ifNil: [definition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: [:each | true]] 
+					ifNotNil: [:blockString |definition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: blockString evaluate].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.

@@ -6,7 +6,7 @@ drawAppFormInstancesModificationPieByMonthGraph
  
 	graphName := #globalPieByMonthGraph.
 	
-	values := selectedDefinition application getInstancesModificationDistributionByMonthFrom: self getAppStartDate to: self getAppEndDate. 
+	values := selectedDefinition application getInstancesModificationDistributionByMonthFrom: self getStartDate to: self getEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.

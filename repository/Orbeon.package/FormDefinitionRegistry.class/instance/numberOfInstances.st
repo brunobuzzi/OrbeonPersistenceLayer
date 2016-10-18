@@ -1,5 +1,5 @@
 other
-getTotalSize
+numberOfInstances
 	| total |
 
 	total := 0.

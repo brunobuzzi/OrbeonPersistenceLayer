@@ -1,4 +1,4 @@
-distribution
+distribution report
 reportInstancesDayDistributionUsing: sortSelector from: startDate to: endDate satisfying: formConditionBlock
 	| distribution secondsToRun |
 

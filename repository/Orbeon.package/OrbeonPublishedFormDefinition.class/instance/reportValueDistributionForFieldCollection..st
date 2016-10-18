@@ -1,4 +1,4 @@
-distribution by fields
+distribution report
 reportValueDistributionForFieldCollection: fieldInstancesCollection
 	"Answer a Dictionary where the key is a value of field <fieldName> and value is the percentage of value in the whole"
 	| secondsToRun distribution fieldName |

@@ -1,4 +1,4 @@
-distribution by fields
+distribution report
 reportValueDistributionFor: fieldName satisfying: formConditionBlock
 	""
 	| secondsToRun blockFilteredCollection |

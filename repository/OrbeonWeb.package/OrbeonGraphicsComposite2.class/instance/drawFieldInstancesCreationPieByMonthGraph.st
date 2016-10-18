@@ -11,7 +11,7 @@ drawFieldInstancesCreationPieByMonthGraph
 					ifNotNil: [:blockString | selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: blockString evaluate].
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition registry getTotalSize printString.
+	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition registry numberOfInstances printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
