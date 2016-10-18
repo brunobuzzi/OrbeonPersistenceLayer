@@ -1,14 +1,14 @@
 charts
 drawFieldInstancesModificationDayDistributionGraph
-	| report text |
+	| report text queryBlock |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #dayDistributionGraph.
 
-	report := (self searchValueAt: 'form-condition')  
-					ifNil: [selectedDefinition registry reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate] 
-					ifNotNil: [:blockString | selectedDefinition registry reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+	queryBlock := (self searchValueAt: 'form-condition') ifNil: [[:each | true]] ifNotNil: [:blockString | blockString evaluate].
+
+	report := selectedDefinition registry reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', report getTotalValue printString.

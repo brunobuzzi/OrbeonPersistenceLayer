@@ -1,6 +1,6 @@
 charts
 drawFormInstancesCreationDayDistributionGraph
-	| report definition values text |
+	| report definition values text queryBlock |
 
 	selectedDefinition ifNil: [^self].
  
@@ -8,10 +8,9 @@ drawFormInstancesCreationDayDistributionGraph
 
 	definition := self hasAllVersionsSelected ifFalse: [selectedDefinition] ifTrue: [selectedDefinition registry].
 
-	report := (self searchValueAt: 'form-condition')  
-					ifNil: [definition reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate] 
-					ifNotNil: [:blockString |definition reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+	queryBlock := (self searchValueAt: 'form-condition') ifNil: [[:each | true]] ifNotNil: [:blockString | blockString evaluate].
 
+	report := definition reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition applicationName, ' | ', selectedDefinition formName,' | total forms: ', definition numberOfInstances printString.

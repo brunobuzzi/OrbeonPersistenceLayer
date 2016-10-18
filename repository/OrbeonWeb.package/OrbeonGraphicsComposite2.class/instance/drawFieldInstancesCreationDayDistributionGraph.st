@@ -1,14 +1,14 @@
 charts
 drawFieldInstancesCreationDayDistributionGraph
-	| values text total report |
+	| values text total report queryBlock |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #dayDistributionGraph.
 
-	report := (self searchValueAt: 'form-condition')  
-					ifNil: [selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate] 
-					ifNotNil: [:blockString | selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: blockString evaluate].
+	queryBlock := (self searchValueAt: 'form-condition') ifNil: [[:each | true]] ifNotNil: [:blockString | blockString evaluate].
+
+	report := selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: queryBlock.
 	
 	total := values inject: 0 into:  [:sum :each | sum + each]. 
 

@@ -1,12 +1,14 @@
 charts
 drawFormInstancesCreationPieByMonthGraph
-	| report text |
+	| report text queryBlock |
 
 	selectedDefinition ifNil: [^self].
 
 	graphName := #globalPieByMonthGraph.
-	
-	report := selectedDefinition reportInstancesCreationDistributionByMonthFrom: self getStartDate to: self getEndDate. 
+
+	queryBlock := (self searchValueAt: 'form-condition') ifNil: [[:each | true]] ifNotNil: [:blockString | blockString evaluate].
+
+	report := selectedDefinition reportInstancesCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName,' | total forms: ', selectedDefinition instances size printString.
