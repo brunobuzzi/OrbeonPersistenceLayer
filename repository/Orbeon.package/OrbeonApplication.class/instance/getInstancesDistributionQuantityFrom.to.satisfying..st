@@ -1,5 +1,5 @@
 distribution
-getInstancesDistributionQuantityFrom: startDate to: endDate
+getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formConditionBlock
 	"Answer aDictionary where each key is the name of the form definition and value is the number of instances of that form"
 	| distribution total orderedQuantity |
 
@@ -8,7 +8,7 @@ getInstancesDistributionQuantityFrom: startDate to: endDate
 	total := 0.
 
 	definitionRegistry keysAndValuesDo: [:formName :registry | 
-		distribution at: formName put: (registry getInstancesDistributionQuantityFrom: startDate to: endDate)].
+		distribution at: formName put: (registry getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formConditionBlock)].
 
 	distribution asSortedCollection reverse do: [:each | | key |
 		key := distribution keyAtValue: each ifAbsent: [].

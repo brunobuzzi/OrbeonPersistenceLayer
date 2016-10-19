@@ -1,12 +1,12 @@
 charts
 drawAppFormInstancesCreationDayDistributionGraph
-	| values text |
+	| report text |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #appDayDistributionGraph.
 	
-	values := selectedDefinition application getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate. 
+	report := selectedDefinition application reportCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
@@ -14,7 +14,7 @@ drawAppFormInstancesCreationDayDistributionGraph
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
 	svgCanvas 
-		drawWorkingDays: values
+		drawWorkingDays: report rootDistribution
 		at: 60@80 
 		from: self getStartDate
 		to: self getEndDate 
