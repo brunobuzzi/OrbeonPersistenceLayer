@@ -7,6 +7,7 @@ drawAppFormInstancesCreationDayDistributionGraph
 	graphName := #appDayDistributionGraph.
 	
 	report := selectedDefinition application reportCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate. 
+	report addToCache.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', 'total forms: ', selectedDefinition application getNumberOfInstances printString.
@@ -21,3 +22,4 @@ drawAppFormInstancesCreationDayDistributionGraph
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent' ifAbsent: [false]).
+	report svgContents: svgCanvas contents.

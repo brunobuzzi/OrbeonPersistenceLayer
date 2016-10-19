@@ -7,6 +7,7 @@ drawFormRegistryCreationDayDistributionGraph
 	graphName := #appDayDistributionGraph.
 	
 	report := selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	report addToCache.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName , ' | total forms: ', selectedDefinition registry getAllInstancesSize printString.
@@ -21,3 +22,4 @@ drawFormRegistryCreationDayDistributionGraph
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent').
+	report svgContents: svgCanvas contents.

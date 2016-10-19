@@ -2,7 +2,7 @@ distribution
 reportCreationDayDistributionQuantityFrom: startDate to: endDate
 	| distribution |
 
-	distribution := self getInstancesCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate.
+	distribution := self getInstancesCreationDayDistributionQuantityFrom: startDate to: endDate.
 
 	^(OrbeonGlobalDistributionReport distribution: distribution)
 			startDate: startDate;

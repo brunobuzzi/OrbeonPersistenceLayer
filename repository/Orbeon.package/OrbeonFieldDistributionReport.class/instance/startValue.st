@@ -1,0 +1,3 @@
+Accessing
+startValue
+	^startValue

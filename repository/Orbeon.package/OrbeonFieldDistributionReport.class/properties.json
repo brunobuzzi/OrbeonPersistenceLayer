@@ -8,7 +8,9 @@
 	"instvars" : [
 		"formName",
 		"version",
-		"fieldName" ],
+		"fieldName",
+		"startValue",
+		"endValue" ],
 	"name" : "OrbeonFieldDistributionReport",
 	"pools" : [
 		 ],
