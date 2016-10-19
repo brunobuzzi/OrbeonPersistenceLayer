@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"applicationName" ],
+		 ],
 	"name" : "OrbeonApplicationDistributionReport",
 	"pools" : [
 		 ],
-	"super" : "OrbeonDistributionReport",
+	"super" : "OrbeonLocalDistributionReport",
 	"type" : "normal" }

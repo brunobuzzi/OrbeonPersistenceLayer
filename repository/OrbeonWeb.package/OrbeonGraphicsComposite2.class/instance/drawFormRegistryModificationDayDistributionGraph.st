@@ -16,8 +16,8 @@ drawFormRegistryModificationDayDistributionGraph
 	svgCanvas 
 		drawWorkingDays: report rootDistribution
 		at: 60@80 
-		from: self getAppStartDate
-		to: self getAppEndDate 
+		from: self getStartDate
+		to: self getEndDate 
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent').

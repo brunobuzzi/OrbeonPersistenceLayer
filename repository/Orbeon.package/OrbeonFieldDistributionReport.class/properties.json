@@ -6,12 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"applicationName",
 		"formName",
 		"version",
 		"fieldName" ],
 	"name" : "OrbeonFieldDistributionReport",
 	"pools" : [
 		 ],
-	"super" : "OrbeonDistributionReport",
+	"super" : "OrbeonLocalDistributionReport",
 	"type" : "normal" }
