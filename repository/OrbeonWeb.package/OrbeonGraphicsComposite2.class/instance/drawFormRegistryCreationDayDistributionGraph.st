@@ -1,13 +1,12 @@
 chart command
 drawFormRegistryCreationDayDistributionGraph
-	| report text |
+	| text |
 
 	selectedDefinition ifNil: [^self].
  
 	graphName := #appDayDistributionGraph.
 	
-	report := selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
-	report addToCache.
+	distributionReport := selectedDefinition registry reportInstancesDayDistributionUsing: #createdTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
 	text := selectedDefinition  applicationName, ' | ', selectedDefinition formName , ' | total forms: ', selectedDefinition registry getAllInstancesSize printString.
@@ -15,11 +14,11 @@ drawFormRegistryCreationDayDistributionGraph
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
 	svgCanvas 
-		drawWorkingDays: report rootDistribution
+		drawWorkingDays: distributionReport rootDistribution
 		at: 60@80 
 		from: self getStartDate
 		to: self getEndDate 
 		width: 20 
 		color: 'green' 
 		dayHasContent: (self searchValueAt: 'dayHasContent').
-	report svgContents: svgCanvas contents.
+	distributionReport svgContents: svgCanvas contents.

@@ -10,7 +10,8 @@
 		"selectedDefinition",
 		"graphName",
 		"svgCanvas",
-		"showDefinitionList" ],
+		"showDefinitionList",
+		"distributionReport" ],
 	"name" : "OrbeonGraphicsComposite2",
 	"pools" : [
 		 ],

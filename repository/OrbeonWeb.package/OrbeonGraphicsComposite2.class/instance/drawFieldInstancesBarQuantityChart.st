@@ -1,6 +1,6 @@
 charts
 drawFieldInstancesBarQuantityChart
-	| fieldName report text |
+	| fieldName text |
 
 	selectedDefinition ifNil: [^self].
 
@@ -13,9 +13,8 @@ drawFieldInstancesBarQuantityChart
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
 
-	report :=  self selectedDefinition reportValueDistributionFor: fieldName from: self getStartDate to: self getEndDate satisfying: self queryBlock.
-	report addToCache.
+	distributionReport :=  self selectedDefinition reportValueDistributionFor: fieldName from: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
-	svgCanvas drawVerticalBarGraph: report rootDistribution at: 10@10 maxHeight: 270 width: 40 transform: 'translate(20,320)'.
+	svgCanvas drawVerticalBarGraph: distributionReport rootDistribution at: 10@10 maxHeight: 270 width: 40 transform: 'translate(20,320)'.
 
-	report svgContents: svgCanvas contents
+	distributionReport svgContents: svgCanvas contents

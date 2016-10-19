@@ -1,15 +1,14 @@
 chart command
 drawGlobalBarQuantityChart
-	| report text |
+	| text |
  
 	graphName := #applicationFormsGraph.
 	
-	report := self getOrbeonApplicationClass reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
-	report addToCache.
+	distributionReport := self getOrbeonApplicationClass reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.
-	text := 'total forms: ', report getTotalValue printString.
+	text := 'total forms: ', distributionReport getTotalValue printString.
 
 	svgCanvas drawText: text at: 20@20 textSizePx: '18px'.
-	svgCanvas drawVerticalBarGraph: report rootDistribution at: 10@10 maxHeight: 270 width: 40 transform: 'translate(20,320)'.
-	report svgContents: svgCanvas contents.
+	svgCanvas drawVerticalBarGraph: distributionReport rootDistribution at: 10@10 maxHeight: 270 width: 40 transform: 'translate(20,320)'.
+	distributionReport svgContents: svgCanvas contents.
