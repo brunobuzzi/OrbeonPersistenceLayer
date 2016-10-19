@@ -8,7 +8,7 @@ drawFormInstancesModificationDayDistributionGraph
 	
 	definition := self hasAllVersionsSelected ifFalse: [selectedDefinition] ifTrue: [selectedDefinition registry].
 
-	report := selectedDefinition definition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	report := selectedDefinition reportInstancesDayDistributionUsing: #modifiedTime from: self getStartDate to: self getEndDate satisfying: self queryBlock.
 	report addToCache.
 
 	svgCanvas := self svgCanvasClass newWidth: '100%' height: '100%'.

@@ -1,5 +1,5 @@
 distribution
-reportModificationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock
+reportModificationDistributionByMonthFrom: startDate to: endDate
 	| distribution |
 
 	distribution := self getInstancesModificationDistributionByMonthFrom: startDate to: endDate.
