@@ -7,7 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"currentIndex",
-		"currentGroup" ],
+		"currentGroup",
+		"currentReport" ],
 	"name" : "OrbeonChartsReportComposite",
 	"pools" : [
 		 ],

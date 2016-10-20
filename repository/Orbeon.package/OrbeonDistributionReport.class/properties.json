@@ -16,7 +16,8 @@
 		"endDate",
 		"distributionMethod",
 		"conditionStringBlock",
-		"svgContents" ],
+		"svgContents",
+		"creator" ],
 	"name" : "OrbeonDistributionReport",
 	"pools" : [
 		 ],

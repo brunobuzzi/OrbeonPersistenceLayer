@@ -1,8 +1,7 @@
 other
 renderContentOn: html
-	| currentReport |
 
-	html form with: [
+	html form class: 'float-left'; with: [
 		html fieldSet with: [ 
 			html legend: 'Charts Report'.
 			(currentIndex > 1) ifTrue: [html submitButton callback: [self previousChart]; with: '<<'].
@@ -14,6 +13,8 @@ renderContentOn: html
 	((currentIndex > 0) and: [currentIndex <= self reporClass getCacheSize]) ifFalse: [^self]. 
 
 	currentReport := self reporClass cache at: currentIndex.
+
+	html div with: [self renderReportOn: html].
 
 	html div id: 'orbeon-graph'; class: 'overflow-scroll'; 
 		with: [html html: currentReport svgContents].
