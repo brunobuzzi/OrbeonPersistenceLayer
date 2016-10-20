@@ -1,0 +1,15 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"currentIndex",
+		"currentGroup" ],
+	"name" : "OrbeonChartsReportComposite",
+	"pools" : [
+		 ],
+	"super" : "SEWAFWebObjectComposite",
+	"type" : "normal" }
