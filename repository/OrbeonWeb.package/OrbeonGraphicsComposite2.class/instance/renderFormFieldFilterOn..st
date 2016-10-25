@@ -2,6 +2,7 @@ render
 renderFormFieldFilterOn: html
 
 	self renderFormFieldComboOn: html.
+	self isDoubleDonutQuantityChart ifTrue: [self renderFormFieldCombo2On: html]."this is the secondary field in the Distribution"
 html break.
 	html label attributeAt: 'for' put: 'range-start'; with: ('Range' translateFor: self session user).
 	html textInput attributeAt: 'id' put: 'range-start'; callback: [:value | self addSearchValue: value named: 'range-start']; with: (self searchValueAt: 'range-start').
