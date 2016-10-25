@@ -3,21 +3,25 @@ getValueDistributionForFieldName: fieldName secondaryField: secondaryField
 	"The receiver answer anArray with two Dictionaries <OrderPreservingDictionary> with receiver's field instances value distribution.
 	The first dictionary is the main distribution for the field named <fieldName>.
 	The second dictionary is the second distribution for the field named <secondaryField>."
-	| distribution secondaryDistribution |
+	| distribution secondaryDistribution orderedsecondaryDistribution |
  
 	distribution := OrderPreservingDictionary new.
-	secondaryDistribution := OrderPreservingDictionary new.
+	secondaryDistribution := Dictionary new.
+	orderedsecondaryDistribution := OrderPreservingDictionary new.
 
 	(self fieldInstancesOf: fieldName) do: [:fieldInst |  | fieldValue count secondaryKey secondaryValue secondaryCount |
 		fieldValue := (fieldInst value class = String) ifTrue: [fieldInst value] ifFalse: [fieldInst value printString] . 
 		(distribution includesKey: fieldValue) ifFalse: [distribution at: fieldValue put: 0].
 		count := (distribution at: fieldValue) + 1.
-		distribution at: fieldValue put: count.
+		distribution at: fieldValue put: count. "main distribution"
+
 		secondaryValue := fieldInst parentObject fieldValueAt: secondaryField.
 		secondaryKey := fieldValue, '.', secondaryValue.
 		(secondaryDistribution includesKey: secondaryKey) ifFalse: [secondaryDistribution at: secondaryKey put: 0].
 		secondaryCount := (secondaryDistribution at: secondaryKey) + 1.
-		secondaryDistribution at: secondaryKey put: secondaryCount.
+		secondaryDistribution at: secondaryKey put: secondaryCount. "secondary distribution"
 	].
 
-	^Array with: distribution with: secondaryDistribution
+	secondaryDistribution keys asSortedCollection do: [:key| orderedsecondaryDistribution at: key put: (secondaryDistribution at: key)].
+
+	^Array with: distribution with: orderedsecondaryDistribution
