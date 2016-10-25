@@ -2,6 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "BrunoBB 10/15/2016 10:51",
-		"subDistributionMethods" : "BrunoBB 10/15/2016 10:51",
-		"subDistributionMethods:" : "BrunoBB 10/15/2016 10:51" } }
+		"addSubDistribution:" : "BrunoBB 10/25/2016 08:24",
+		"getFirstSubDistribution" : "BrunoBB 10/25/2016 08:43",
+		"initialize" : "BrunoBB 10/25/2016 08:23",
+		"subDistributionMethods" : "BrunoBB 10/25/2016 08:23",
+		"subDistributionMethods:" : "BrunoBB 10/25/2016 08:23",
+		"subDistributions" : "BrunoBB 10/25/2016 08:23",
+		"subDistributions:" : "BrunoBB 10/25/2016 08:23" } }
