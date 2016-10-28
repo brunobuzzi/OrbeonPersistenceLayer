@@ -5,8 +5,8 @@ getValueDistributionForFieldName2: fieldName secondaryField: secondaryField
      The second dictionary is the second distribution for the field named <secondaryField>."
      | distribution secondaryDistribution  |
 
-     distribution := Dictionary new.
-     secondaryDistribution := Dictionary new.
+     distribution := OrderPreservingDictionary new.
+     secondaryDistribution := OrderPreservingDictionary new.
 
      (self fieldInstancesOf: fieldName) do: [:fieldInst |  | fieldValue count secondaryValue secondaryCount subValueDictionary |
         fieldValue := (fieldInst value class = String) ifTrue:[fieldInst value] ifFalse: [fieldInst value printString].

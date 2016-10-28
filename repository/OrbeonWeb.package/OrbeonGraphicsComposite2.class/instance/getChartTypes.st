@@ -14,6 +14,6 @@ getChartTypes
 	ifTrue: [^#('Day Distribution Creation' 'Day Distribution Modification' 'Donut Creation by Month' 'Donut Modification by Month' 'Donut Field Type Distribution')].
 
 	self isFieldValuesScope 
-	ifTrue: [^#('Bar Quantity' 'Day Distribution Creation' 'Day Distribution Modification' 'Donut Creation by Month' 'Donut Modification by Month' 'Donut Quantity' 'Double Donut Quantity')].
+	ifTrue: [^#('Bar Quantity' 'Double Bar Quantity' 'Day Distribution Creation' 'Day Distribution Modification' 'Donut Creation by Month' 'Donut Modification by Month' 'Donut Quantity' 'Double Donut Quantity')].
 
 	^#()
