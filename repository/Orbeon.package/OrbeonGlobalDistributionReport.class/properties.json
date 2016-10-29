@@ -10,5 +10,5 @@
 	"name" : "OrbeonGlobalDistributionReport",
 	"pools" : [
 		 ],
-	"super" : "OrbeonDistributionReport",
+	"super" : "AppGlobalDistributionReport",
 	"type" : "normal" }

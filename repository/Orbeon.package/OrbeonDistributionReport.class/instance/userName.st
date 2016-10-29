@@ -1,4 +1,0 @@
-other
-userName
-
-	^creator name

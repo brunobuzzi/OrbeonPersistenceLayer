@@ -14,5 +14,5 @@
 	"name" : "OrbeonFieldDistributionReport",
 	"pools" : [
 		 ],
-	"super" : "OrbeonLocalDistributionReport",
+	"super" : "AppLocalDistributionReport",
 	"type" : "normal" }

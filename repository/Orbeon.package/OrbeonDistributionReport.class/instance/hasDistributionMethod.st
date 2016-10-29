@@ -1,4 +1,0 @@
-other
-hasDistributionMethod
-
-	^distributionMethod notNil
