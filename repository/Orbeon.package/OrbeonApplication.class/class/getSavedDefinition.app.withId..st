@@ -9,4 +9,4 @@ getSavedDefinition: formName app: app withId: id
 	^application 
 		getSavedDefinitionFor: formName 
 		withId: id 
-		ifNone: [^NoOrbeonFormException signal: 'Fo form named [', formName, '] was found'].
+		ifNone: [^NoOrbeonFormException signal: ('For form named [', formName, '] was found in application [', app, '] with id [', id, ']')].

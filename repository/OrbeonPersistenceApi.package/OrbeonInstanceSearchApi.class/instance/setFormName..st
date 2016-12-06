@@ -4,4 +4,4 @@ setFormName: aString
 
 	formName := aString.
 
-	lastFormDefinition := application definitionNamed: aString ifNone: [^NoOrbeonFormException signal].
+	lastFormDefinition := application definitionNamed: aString ifNone: [^NoOrbeonFormException signal: ('No Form Definition [', formName, ']')].
