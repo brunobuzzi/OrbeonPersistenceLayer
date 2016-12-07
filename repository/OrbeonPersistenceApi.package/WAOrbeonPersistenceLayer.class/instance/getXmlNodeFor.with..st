@@ -8,5 +8,5 @@ getXmlNodeFor: anOrbeonFormDefinition with: anXMLWriter
 		anXMLWriter tag: 'title' with: anOrbeonFormDefinition title.
 		anXMLWriter tag: 'description' with: anOrbeonFormDefinition description.
 		anXMLWriter tag: 'last-modified-time' with: anOrbeonFormDefinition modifiedTime asOrbeonDateTimeString.
-		anXMLWriter tag: 'available' with: anOrbeonFormDefinition isAvailable.
+		anXMLWriter tag: 'available' with: anOrbeonFormDefinition isAvailable printString.
 	].

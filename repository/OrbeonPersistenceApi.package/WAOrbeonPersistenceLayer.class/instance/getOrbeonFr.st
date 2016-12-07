@@ -11,5 +11,4 @@ getOrbeonFr
 		writer tag: 'forms' with: [self getOrbeonApplicationClass getLastDefinitions do: [:eachDef | 
 			self getXmlNodeFor: eachDef with: writer]].
 	].
-
 	^xmlWriter contents
