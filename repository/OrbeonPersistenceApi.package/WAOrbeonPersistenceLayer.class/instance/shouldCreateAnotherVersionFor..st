@@ -5,8 +5,7 @@ shouldCreateAnotherVersionFor: newFormDefinition
 	If the current publish version is NOT equal to the new version <newFormDefinition> --> another version shoud be created."
 	| currentDefinition comparator |
 
-	currentDefinition := newFormDefinition getApplication getDefinitionWithId: newFormDefinition id ifNone: [^true].
-	(newFormDefinition version = currentDefinition version) ifFalse: [^true].
+	currentDefinition := newFormDefinition getApplication definitionNamed: newFormDefinition formName version: newFormDefinition version ifNone: [^true].
 
 	comparator := currentDefinition compareWith: newFormDefinition.
 

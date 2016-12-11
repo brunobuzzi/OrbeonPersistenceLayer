@@ -1,5 +1,5 @@
 xml op
-getXmlNodeFor: anOrbeonFormDefinition with: anXMLWriter
+getXmlNodeForRunnerHome: anOrbeonFormDefinition with: anXMLWriter
 	"The receiver create a XML structure to display the definition <anOrbeonFormDefinition> in ../orbeon/fr page"
 
 	anXMLWriter tag: 'form' with: [

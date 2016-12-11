@@ -9,6 +9,6 @@ getOrbeonFr
 	xmlWriter := XMLWriter new.
 	xmlWriter writeWith: [:writer | 
 		writer tag: 'forms' with: [self getOrbeonApplicationClass getLastDefinitions do: [:eachDef | 
-			self getXmlNodeFor: eachDef with: writer]].
+			self getXmlNodeForRunnerHome: eachDef with: writer]].
 	].
 	^xmlWriter contents
