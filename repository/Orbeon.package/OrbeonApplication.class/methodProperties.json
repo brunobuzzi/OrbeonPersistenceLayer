@@ -82,6 +82,7 @@
 		"getLatestSavedDefinition:" : "BrunoBB 12/06/2016 13:54",
 		"getLatestSavedDefinition:ifNone:" : "BrunoBB 04/30/2016 17:14",
 		"getNumberOfInstances" : "BrunoBB 10/01/2016 10:11",
+		"getSavedDefinition:version:ifNone:" : "BrunoBB 12/14/2016 09:43",
 		"getSavedDefinitionFor:withId:ifNone:" : "BrunoBB 04/30/2016 09:21",
 		"getSavedDefinitionWithId:ifNone:" : "BrunoBB 04/27/2016 14:52",
 		"hasDefinitionNamed:" : "BrunoBB 04/27/2016 14:52",
