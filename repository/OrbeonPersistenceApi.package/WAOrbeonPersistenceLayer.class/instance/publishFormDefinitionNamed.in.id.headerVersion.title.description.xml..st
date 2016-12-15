@@ -1,5 +1,5 @@
 service-put-op
-publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion xml: xmlString
+publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion title: title description: description xml: xmlString
 	""
 	| orbeonApplication orbeonDefinition existingVersion version |
 

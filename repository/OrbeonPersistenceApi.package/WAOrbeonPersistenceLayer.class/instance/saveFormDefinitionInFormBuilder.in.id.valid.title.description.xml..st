@@ -1,5 +1,5 @@
 service-put-op
-formDefinitionSavedInFormBuilder: formName in: appName id: id valid: aBoolean title: title description: description xml: xmlString
+saveFormDefinitionInFormBuilder: formName in: appName id: id valid: aBoolean title: title description: description xml: xmlString
 	"This service is called by Orbeon when a user click on -Save- inside the Form Builder.
 	A Form Definition has been saved "
 	| currentDefinition savedDefinition version |

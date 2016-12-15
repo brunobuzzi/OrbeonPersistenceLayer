@@ -11,7 +11,7 @@ saveInFormBuilderDefinitionWithId: id valid: aBoolean
 	appName := self getApplicationNameFrom: xmlDocument ifNone: [nil].
 	formName := self getFormNameFrom: xmlDocument ifNone: [nil].
 
-	^self formDefinitionSavedInFormBuilder: formName 
+	^self saveFormDefinitionInFormBuilder: formName 
 				in: appName 
 				id: id 
 				valid: aBoolean 
