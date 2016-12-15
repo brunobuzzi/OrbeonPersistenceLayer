@@ -9,7 +9,7 @@ publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion
 							ifTrue: [(orbeonApplication getLastFormDefinitionVersionOf: formName) + 1]
 							ifFalse: [Number fromString: headerVersion].
 
-	orbeonDefinition := self createDefinitionNamed: formName in: orbeonApplication withId: id version: version storeSavedDefinition: true.
+	orbeonDefinition := self createDefinitionNamed: formName in: orbeonApplication withId: id version: version.
 
 	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonDefinition. ^self]. "is a new definition --> is added as published"
 

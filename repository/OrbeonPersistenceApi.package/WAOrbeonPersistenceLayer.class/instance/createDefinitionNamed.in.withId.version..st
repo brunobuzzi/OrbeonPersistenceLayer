@@ -1,5 +1,5 @@
 create published definition
-createDefinitionNamed: formName in: anOrbeonApplication withId: documentId version: version storeSavedDefinition: aBoolean
+createDefinitionNamed: formName in: anOrbeonApplication withId: documentId version: version
 	"The receiver create a new definition <anOrbeonFormDefinition> named <formName> in application <anOrbeonApplication> with id <documentId>"
 	| orbeonSavedDefinition orbeonDefinition xmlDocument title description xmlString |
 
@@ -15,8 +15,6 @@ createDefinitionNamed: formName in: anOrbeonApplication withId: documentId versi
 													title: title 
 													description: description 
 													xml: xmlString.
-
-	aBoolean ifTrue: [anOrbeonApplication addSavedDefinition: orbeonSavedDefinition].
 
 	orbeonDefinition := orbeonSavedDefinition definition.
 

@@ -22,6 +22,4 @@ saveFormDefinitionInFormBuilder: formName in: appName id: id valid: aBoolean tit
 									description: description
 									xml: xmlString. "here the OrbeonFormDefinition is created and associate to the receiver <savedDefinition>"
 
-	savedDefinition getApplication addSavedDefinition: savedDefinition.
-
 	self moveFromTempPathFileOf: savedDefinition. "move attachments if it is the case -issue #37-"
