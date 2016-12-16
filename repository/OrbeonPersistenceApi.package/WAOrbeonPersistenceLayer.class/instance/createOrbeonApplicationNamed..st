@@ -1,4 +1,4 @@
-create published definition
+service-put-op
 createOrbeonApplicationNamed: appName
 
 	^self getOrbeonApplicationClass new

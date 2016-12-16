@@ -1,7 +1,10 @@
 service-put-op
 publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion title: title description: description xml: xmlString
-	""
-	| orbeonApplication orbeonDefinition existingVersion version |
+	"The receiver publish the form named <formName> in application named <app> with id <id> title <title> description <description> and xml <xmlString>. 
+	The version of the form is in <headerVersion> - orbeon parameter.
+	* Calculate the version number & create <anOrbeonSavedFormDefinition> 
+	* Compare latest published version with the new one --> [update the current |or| add the new one]"
+	| orbeonApplication latestSavedDefinition orbeonPublishedDefinition existingVersion version |
 
 	orbeonApplication := self getOrbeonApplicationClass applicationNamed: app ifNone: [self createOrbeonApplicationNamed: app].
 
@@ -9,17 +12,24 @@ publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion
 							ifTrue: [(orbeonApplication getLastFormDefinitionVersionOf: formName) + 1]
 							ifFalse: [Number fromString: headerVersion].
 
-	orbeonDefinition := self createDefinitionNamed: formName in: orbeonApplication withId: id version: version.
+	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: formName app: app ifNone: [nil].
+	"is there a form definition with <formName> in application <appName> & the document_id <id> are different ??? 
+	--> if <true> --> creation NOT allowed"
+	(self isCreationRejectedFor: latestSavedDefinition withId: id inApp: app form: formName) 
+	ifFalse: [self ifRequiredUpdateFormWithId: id withApplicationName: app andFormName: formName] "if the <formName> or <appName> has been changed"
+	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', formName,'] in application [', app, ']'].
 
-	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonDefinition. ^self]. "is a new definition --> is added as published"
+	orbeonPublishedDefinition := self createDefinitionNamed: formName in: orbeonApplication withId: id version: version.
 
-	existingVersion := orbeonApplication definitionNamed: orbeonDefinition formName version: version ifNone: [^nil].
-	(self shouldCreateAnotherVersionFor: orbeonDefinition)
+	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonPublishedDefinition. ^self]. "is a new definition --> is added as published"
+
+	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^nil].
+	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
 	ifFalse: ["the current published definition is updated"
 				existingVersion "get the last existing definition and discard <orbeonDefinition>"
 					updateLastModifiedTime;
-					version: orbeonDefinition version;
+					version: orbeonPublishedDefinition version;
 					xmlString: self requestContext request rawBody;
 					publish;
 					processXMLDefinition] 
-	ifTrue: [orbeonApplication replaceCurrentDefinition: existingVersion with: orbeonDefinition]
+	ifTrue: [orbeonApplication replaceCurrentDefinition: existingVersion with: orbeonPublishedDefinition]

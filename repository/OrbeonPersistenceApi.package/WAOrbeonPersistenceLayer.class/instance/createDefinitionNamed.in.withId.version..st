@@ -1,4 +1,4 @@
-create published definition
+service-put-op
 createDefinitionNamed: formName in: anOrbeonApplication withId: documentId version: version
 	"The receiver create a new definition <anOrbeonFormDefinition> named <formName> in application <anOrbeonApplication> with id <documentId>"
 	| orbeonSavedDefinition orbeonDefinition xmlDocument title description xmlString |
@@ -16,7 +16,7 @@ createDefinitionNamed: formName in: anOrbeonApplication withId: documentId versi
 													description: description 
 													xml: xmlString.
 
-	orbeonDefinition := orbeonSavedDefinition definition.
+	orbeonDefinition := orbeonSavedDefinition definition. "get the <OrbeonPublishedFormDefinition>"
 
 	^orbeonDefinition "new definition to be published"
 		updateLastModifiedTime;
