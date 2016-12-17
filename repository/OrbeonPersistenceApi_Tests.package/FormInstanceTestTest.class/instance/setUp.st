@@ -1,4 +1,0 @@
-other
-setUp
-
-	super setUp.

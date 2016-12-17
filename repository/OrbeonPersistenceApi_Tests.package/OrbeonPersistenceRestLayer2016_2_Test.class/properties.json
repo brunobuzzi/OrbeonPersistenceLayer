@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "FormInstanceTestTest",
+	"name" : "OrbeonPersistenceRestLayer2016_2_Test",
 	"pools" : [
 		 ],
-	"super" : "WAOrbeonPersistenceLayerTest",
+	"super" : "OrbeonPersistenceRestLayerTest",
 	"type" : "normal" }
