@@ -23,7 +23,7 @@ publishFormDefinitionNamed: formName in: app id: id headerVersion: headerVersion
 
 	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonPublishedDefinition. ^self]. "is a new definition --> is added as published"
 
-	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^nil].
+	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^self noRouteFound: self requestContext].
 	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
 	ifFalse: ["the current published definition is updated"
 				existingVersion "get the last existing definition and discard <orbeonDefinition>"
