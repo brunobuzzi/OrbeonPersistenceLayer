@@ -15,13 +15,13 @@ form_citizen_appliance_1
                         <formId>nil</formId>
                     </section-11>
                     <section-12>
-                        <citizenName>Bruno</citizenName>
-                        <citizenSurname>Buzzi Brassesco</citizenSurname>
+                        <citizenName>Jorge</citizenName>
+                        <citizenSurname>Cotumen</citizenSurname>
                         <citizenEmail>brunobb@dd.com</citizenEmail>
-                        <citizenPhone>999106087</citizenPhone>
+                        <citizenPhone>999789654</citizenPhone>
                         <citizenBirth>1980-03-18</citizenBirth>
                         <gender>male</gender>
                         <originCountry>uruguay</originCountry>
-                        <citizenId>37673595</citizenId>
+                        <citizenId>65874521</citizenId>
                     </section-12>
                 </form>'
