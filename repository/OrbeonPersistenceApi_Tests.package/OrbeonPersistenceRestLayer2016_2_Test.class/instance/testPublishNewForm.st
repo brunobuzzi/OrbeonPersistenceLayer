@@ -11,13 +11,8 @@ testPublishNewForm
 	restClient 
 		entity: ((ZnStringEntity xml: OrbeonFormDefinitionTemplate form_test_2) contentType: ZnMimeType applicationXml);
 		headerAt: 'orbeon-form-definition-version' put: 'next';
-		headerAt: 'Content-Type' put: 'application/xml'.
-	result := restClient  
-					url: 'http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id;
-					"contents: OrbeonFormDefinitionTemplate form_test_2;"
-					put."
-					put: ('http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id)
-					."
+		url: 'http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id.
+
+	result := restClient put.
 
 	self assert: restClient isSuccess.
-	self assert: (restClient response contentType matches: ZnMimeType applicationXml).
