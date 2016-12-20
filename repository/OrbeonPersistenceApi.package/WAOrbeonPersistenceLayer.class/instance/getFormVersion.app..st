@@ -18,5 +18,6 @@ getFormVersion: formName app: app
 	self requestContext response headerAt: 'orbeon-form-definition-version' put: latestVersionNumber printString."
 
 	latestDefinition := application getSavedDefinition: formName version: headerVersion ifNone: [^self noRouteFound: self requestContext].
+	latestDefinition isDeleted ifTrue: [^self noRouteFound: self requestContext].
 
 	^((GRCodec forEncoding: 'utf-8') decode: latestDefinition xmlString) asString

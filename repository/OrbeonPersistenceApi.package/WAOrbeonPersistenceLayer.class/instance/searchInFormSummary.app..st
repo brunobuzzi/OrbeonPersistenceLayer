@@ -11,6 +11,8 @@ searchInFormSummary: formName app: app
 	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self signalNoApplicationException: app].
 	definition := application definitionNamed: formName ifNone: [^self signalNoFormException: formName app: app].
 
+	definition isDeleted ifTrue: [^self noRouteFound: self requestContext].
+
 	searchApi := OrbeonInstanceSearchApi for: application formName: formName.
 
 	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: self requestContext request rawBody);

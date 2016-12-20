@@ -1,0 +1,4 @@
+other
+isDeleted
+
+	^deleted = 'Y'

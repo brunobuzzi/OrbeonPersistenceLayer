@@ -1,4 +1,4 @@
-other
+services
 testSaveFormDefinition
 "	<put>
 	<path: '/crud/orbeon/builder/data/{id}/data.xml/?valid={aBoolean}'>
