@@ -1,4 +1,4 @@
-services
+service-put
 testPublishNewForm
 "	<put>
 	<consumes: 'application/xml'>

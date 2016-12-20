@@ -1,4 +1,4 @@
-services
+service-delete
 testDeleteFormDefinition
 "	<delete>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml'>

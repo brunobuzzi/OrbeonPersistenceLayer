@@ -1,4 +1,4 @@
-other
+service-post
 testFormBuilderSummary
 "	<post>
 	<produces: 'application/xml'>

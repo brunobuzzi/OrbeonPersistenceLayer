@@ -1,4 +1,4 @@
-services
+other
 orbeonFormSummaryQuery
 
 ^

@@ -4,11 +4,14 @@
 	"instance" : {
 		"orbeonFormSummaryQuery" : "BrunoBB 12/19/2016 09:44",
 		"testDeleteFormDefinition" : "BrunoBB 12/19/2016 04:31",
-		"testDeleteFormInstance" : "BrunoBB 12/19/2016 08:47",
+		"testDeleteFormInstance" : "BrunoBB 12/20/2016 05:25",
+		"testDeleteFormInstanceDraft" : "BrunoBB 12/20/2016 07:30",
 		"testFormBuilderSummary" : "BrunoBB 12/19/2016 09:42",
-		"testFormSummary" : "BrunoBB 12/19/2016 09:45",
+		"testFormSummary" : "BrunoBB 12/20/2016 06:49",
+		"testOrbeonFr" : "BrunoBB 12/20/2016 06:55",
 		"testPublishNewForm" : "BrunoBB 12/19/2016 03:24",
 		"testRePublishForm" : "BrunoBB 12/18/2016 12:09",
 		"testSaveFormDefinition" : "BrunoBB 12/19/2016 07:46",
 		"testSaveFormInstance" : "BrunoBB 12/19/2016 07:53",
+		"testSaveFormInstanceDraft" : "BrunoBB 12/20/2016 07:02",
 		"testUnpublishForm" : "BrunoBB 12/17/2016 11:16" } }

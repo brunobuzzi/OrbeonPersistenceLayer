@@ -1,4 +1,4 @@
-services
+service-delete
 testDeleteFormInstance
 "	<delete>
 	<path: '/crud/{app}/{form-name}/data/{id}/data.xml'>
