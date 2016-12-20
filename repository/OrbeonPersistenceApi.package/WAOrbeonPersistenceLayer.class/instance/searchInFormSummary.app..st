@@ -8,8 +8,8 @@ searchInFormSummary: formName app: app
 	<produces: 'application/xml'>
 	<path: '/search/{2}/{1}'>
 
-	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self signalNoApplicationException: app].
-	definition := application definitionNamed: formName ifNone: [^self signalNoFormException: formName app: app].
+	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self noRouteFound: self requestContext "^self signalNoApplicationException: app"].
+	definition := application definitionNamed: formName ifNone: [self noRouteFound: self requestContext "^self signalNoFormException: formName app: app"].
 
 	definition isDeleted ifTrue: [^self noRouteFound: self requestContext].
 
