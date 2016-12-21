@@ -1,4 +1,4 @@
-service-get
+form-agesic-test-2
 testOrbeonFr
 	"This service is called when accessing Form Runner Home: ../orbeon/fr/ "
 "	<get>

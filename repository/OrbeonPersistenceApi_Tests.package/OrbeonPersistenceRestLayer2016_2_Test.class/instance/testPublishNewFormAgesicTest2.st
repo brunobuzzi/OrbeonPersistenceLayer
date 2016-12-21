@@ -1,5 +1,5 @@
-service-put
-testPublishNewForm
+form-agesic-test-2
+testPublishNewFormAgesicTest2
 "	<put>
 	<consumes: 'application/xml'>
 	<path: '/crud/{2}/{1}/form/form.xhtml?document={3}'>

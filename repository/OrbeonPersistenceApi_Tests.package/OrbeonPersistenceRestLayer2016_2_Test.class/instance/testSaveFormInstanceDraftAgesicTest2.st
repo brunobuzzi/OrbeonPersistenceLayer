@@ -1,5 +1,5 @@
-service-put
-testSaveFormInstanceDraft
+form-agesic-test-2
+testSaveFormInstanceDraftAgesicTest2
 "	<put>
 	<produces: 'application/xml'>
 	<path: '/crud/{app}/{form-name}/draft/{id}/data.xml?valid={true|false}'>

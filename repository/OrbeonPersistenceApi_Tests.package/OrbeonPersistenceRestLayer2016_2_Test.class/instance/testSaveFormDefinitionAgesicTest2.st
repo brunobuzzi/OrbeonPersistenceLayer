@@ -1,5 +1,5 @@
-service-put
-testSaveFormDefinition
+form-agesic-test-2
+testSaveFormDefinitionAgesicTest2
 "	<put>
 	<path: '/crud/orbeon/builder/data/{id}/data.xml/?valid={aBoolean}'>
 "

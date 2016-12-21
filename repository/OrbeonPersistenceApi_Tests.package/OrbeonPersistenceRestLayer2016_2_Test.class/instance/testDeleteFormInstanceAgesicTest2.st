@@ -1,5 +1,5 @@
-service-delete
-testDeleteFormInstance
+form-agesic-test-2
+testDeleteFormInstanceAgesicTest2
 "	<delete>
 	<path: '/crud/{app}/{form-name}/data/{id}/data.xml'>
 "
