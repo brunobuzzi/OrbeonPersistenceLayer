@@ -8,7 +8,7 @@ testOrbeonFr
 	| result |
 
 	restClient 
-		url: 'http://192.168.29.142:8787/orbeon-gemstone-api/form'.
+		url: self gemstoneIP, '/orbeon-gemstone-api/form'.
 
 	result := restClient get.
 

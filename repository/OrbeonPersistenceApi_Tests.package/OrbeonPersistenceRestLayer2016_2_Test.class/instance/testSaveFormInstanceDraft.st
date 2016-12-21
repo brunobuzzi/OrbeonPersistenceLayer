@@ -12,7 +12,7 @@ testSaveFormInstanceDraft
 	restClient 
 		headerAt: 'orbeon-form-definition-version' put: version;
 		entity: ((ZnStringEntity xml: OrbeonFormInstanceTemplate form_test_2) contentType: ZnMimeType applicationXml);
-		url: 'http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/draft/', id, '/data.xml?valid=true'.
+		url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/draft/', id, '/data.xml?valid=true'.
 
 	result := restClient put.
 

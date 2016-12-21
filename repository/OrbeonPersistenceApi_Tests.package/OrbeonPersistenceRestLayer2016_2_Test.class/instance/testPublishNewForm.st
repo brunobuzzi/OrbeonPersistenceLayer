@@ -11,7 +11,7 @@ testPublishNewForm
 	restClient 
 		entity: ((ZnStringEntity xml: OrbeonFormDefinitionTemplate form_test_2) contentType: ZnMimeType applicationXml);
 		headerAt: 'orbeon-form-definition-version' put: 'next';
-		url: 'http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id.
+		url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id.
 
 	result := restClient put.
 

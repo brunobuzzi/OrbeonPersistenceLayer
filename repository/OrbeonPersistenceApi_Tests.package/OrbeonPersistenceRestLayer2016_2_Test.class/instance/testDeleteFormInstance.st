@@ -9,7 +9,7 @@ testDeleteFormInstance
 				ifNil: [self assert: false] 
 				ifNotNil: [:def | (def instances asArray detect: [:inst| inst deleted = 'N'] ifNone: [self assert: false]) id].
 
-	restClient url: 'http://192.168.29.142:8787/orbeon-gemstone-api/crud/agesic/test-2/data/', id, '/data.xml'.
+	restClient url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/data/', id, '/data.xml'.
 
 	result := restClient delete.
 
