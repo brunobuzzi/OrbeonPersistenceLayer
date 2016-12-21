@@ -6,9 +6,9 @@ testFormSummary
 "
 	| result |
 
-	restClient 
-		entity: ((ZnStringEntity xml: self orbeonFormSummaryQuery) contentType: ZnMimeType applicationXml);
-		url: self gemstoneIP, '/orbeon-gemstone-api/search/agesic/test-2'.
+	self setClientUrlForFormSummary: 'test-2' in: 'agesic'.
+
+	restClient entity: ((ZnStringEntity xml: self orbeonFormSummaryQuery) contentType: ZnMimeType applicationXml).
 
 	result := restClient post.
 

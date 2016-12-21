@@ -9,10 +9,11 @@ testSaveFormInstanceDraft
 	version := (self getOrbeonApplicationClass getLatestSavedDefinition: 'test-2' app: 'agesic' ifNone: [nil]) ifNotNil: [:def | def version printString] ifNil: ['1'].
 	id := UUID new asString.
 
+	self setClientUrlToSaveFormDraft: 'test-2' in: 'agesic' id: id.
+
 	restClient 
 		headerAt: 'orbeon-form-definition-version' put: version;
-		entity: ((ZnStringEntity xml: OrbeonFormInstanceTemplate form_test_2) contentType: ZnMimeType applicationXml);
-		url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/draft/', id, '/data.xml?valid=true'.
+		entity: ((ZnStringEntity xml: OrbeonFormInstanceTemplate form_test_2) contentType: ZnMimeType applicationXml).
 
 	result := restClient put.
 

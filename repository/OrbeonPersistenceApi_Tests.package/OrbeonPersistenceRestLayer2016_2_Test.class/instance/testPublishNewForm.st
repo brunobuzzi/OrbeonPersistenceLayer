@@ -8,10 +8,11 @@ testPublishNewForm
 
 	id := (self getOrbeonApplicationClass getLatestSavedDefinition: 'test-2' app: 'agesic' ifNone: [nil]) ifNotNil: [:def | def id] ifNil: [UUID new asString].
 
+	self setClientUrlToPublishFormDefinition: 'test-2' in: 'agesic' id: id.
+
 	restClient 
 		entity: ((ZnStringEntity xml: OrbeonFormDefinitionTemplate form_test_2) contentType: ZnMimeType applicationXml);
-		headerAt: 'orbeon-form-definition-version' put: 'next';
-		url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/form/form.xhtml?document=', id.
+		headerAt: 'orbeon-form-definition-version' put: 'next'.
 
 	result := restClient put.
 

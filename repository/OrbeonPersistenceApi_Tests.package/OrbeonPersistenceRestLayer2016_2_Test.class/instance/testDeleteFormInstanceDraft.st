@@ -9,7 +9,7 @@ testDeleteFormInstanceDraft
 		ifNil: [self assert: false] 
 		ifNotNil: [:def | def drafts keysAndValuesDo: [:key :col | col do: [:each | each isDeleted ifFalse: [id := each id]]]]. 
 
-	restClient url: self gemstoneIP, '/orbeon-gemstone-api/crud/agesic/test-2/draft/', id, '/data.xml'.
+	self setClientUrlToDeleteFormDraft: 'test-2' in: 'agesic' id: id.
 
 	result := restClient delete.
 

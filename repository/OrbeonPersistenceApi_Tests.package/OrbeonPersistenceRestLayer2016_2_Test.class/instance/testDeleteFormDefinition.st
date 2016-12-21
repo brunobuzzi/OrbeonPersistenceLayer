@@ -7,7 +7,7 @@ testDeleteFormDefinition
 
 	id := (self getOrbeonApplicationClass getLatestSavedDefinition: 'test-2' app: 'agesic' ifNone: [nil]) ifNotNil: [:def | def id] ifNil: [self assert: false] .
 
-	restClient url: self gemstoneIP, '/orbeon-gemstone-api/crud/orbeon/builder/data/', id, '/data.xml'.
+	self setClientUrlToDeleteFormDefinitionWithId: id.
 
 	result := restClient delete.
 
