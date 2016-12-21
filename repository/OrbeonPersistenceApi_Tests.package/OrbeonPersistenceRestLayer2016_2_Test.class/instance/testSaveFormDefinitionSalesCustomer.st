@@ -1,15 +1,15 @@
-form-agesic-test-2
-testSaveFormDefinitionAgesicTest2
+form-sales-customer
+testSaveFormDefinitionSalesCustomer
 "	<put>
 	<path: '/crud/orbeon/builder/data/{id}/data.xml/?valid={aBoolean}'>
 "
 	| result id |
 
-	id := self getSavedDefinitionId: 'test-2' in: 'agesic'.
+	id := self getSavedDefinitionId: 'customer' in: 'sales-application'.
 
 	self setClientUrlToSaveFormDefinitionWithId: id.
 
-	restClient contents: OrbeonFormDefinitionTemplate form_test_2.
+	restClient contents: OrbeonFormDefinitionTemplate form_sales_application.
 					
 	result := restClient put.
 

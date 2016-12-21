@@ -6,7 +6,7 @@ testPublishNewFormAgesicTest2
 "
 	| result id |
 
-	id := (self getOrbeonApplicationClass getLatestSavedDefinition: 'test-2' app: 'agesic' ifNone: [nil]) ifNotNil: [:def | def id] ifNil: [UUID new asString].
+	id := self getSavedDefinitionId: 'test-2' in: 'agesic'.
 
 	self setClientUrlToPublishFormDefinition: 'test-2' in: 'agesic' id: id.
 

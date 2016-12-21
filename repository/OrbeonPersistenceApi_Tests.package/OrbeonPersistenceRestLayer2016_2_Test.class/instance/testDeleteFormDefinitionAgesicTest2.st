@@ -5,7 +5,7 @@ testDeleteFormDefinitionAgesicTest2
 "
 	| result id |
 
-	id := (self getOrbeonApplicationClass getLatestSavedDefinition: 'test-2' app: 'agesic' ifNone: [nil]) ifNotNil: [:def | def id] ifNil: [self assert: false] .
+	id := self getSavedDefinitionId: 'test-2' in: 'agesic'.
 
 	self setClientUrlToDeleteFormDefinitionWithId: id.
 
