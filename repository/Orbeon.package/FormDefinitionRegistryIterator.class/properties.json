@@ -1,0 +1,18 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Cache" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"definitionRegistry",
+		"streams",
+		"currentStream",
+		"currentDefinition",
+		"versions" ],
+	"name" : "FormDefinitionRegistryIterator",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

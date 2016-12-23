@@ -1,0 +1,3 @@
+Accessing
+currentStream
+	^currentStream
