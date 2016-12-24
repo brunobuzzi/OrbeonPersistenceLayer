@@ -7,7 +7,7 @@ skip: integerShift
 	currentDefinition := stream next.
 	size := 0.
 	"here is detected in which instances collection correspond to index <integerShift>"
-	[stream atEnd not and:[integerShift > currentDefinition instances size]] whileTrue: [
+	[stream atEnd not and:[integerShift >= currentDefinition instances size]] whileTrue: [
 		size := size + currentDefinition instances size.
 		currentDefinition := stream next.
 	].

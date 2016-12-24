@@ -1,6 +1,4 @@
-Updating
+stream
 size
 
-	currentStream ifNil: [^0]. 
-
-	^currentStream size
+	^definitionRegistry getAllInstancesSize
