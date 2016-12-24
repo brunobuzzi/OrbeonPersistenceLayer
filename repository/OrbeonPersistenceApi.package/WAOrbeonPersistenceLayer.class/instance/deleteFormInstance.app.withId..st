@@ -9,4 +9,4 @@ deleteFormInstance: formName app: app withId: id
 
 	instance := application getAnyInstanceWithId: id of: formName.
 
-	instance logicalDelete
+	instance removeFromMainCollection

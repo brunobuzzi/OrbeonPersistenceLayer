@@ -2,7 +2,8 @@ field instances
 updateFieldInstancesFrom: aFieldValueHolder
 	"The receiver update the field's values <FormFieldValue> in the holder <aFieldValueHolder> and mark it as processed.
 	The collections <aFieldValueHolder toAdd> and <aFieldValueHolder toRemove> are complemtary, so if one has elements then the other is empty and viceversa. 
-	<aFieldValueHolder> is used for repeatable fields with indexes. If a value is removed from the repeatable field --> must be removed from the index collection. <FieldValueHolder> class track these changes"
+	<aFieldValueHolder> is used for repeatable fields with indexes. 
+	If a value is removed from the repeatable field --> must be removed from the index collection. <FieldValueHolder> class track these changes"
 
 	aFieldValueHolder alreadyAddedToFormDefinition 
 	ifFalse: [aFieldValueHolder alreadyAddedToFormDefinition: true.

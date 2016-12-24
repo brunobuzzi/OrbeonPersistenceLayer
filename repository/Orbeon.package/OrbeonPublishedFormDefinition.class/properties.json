@@ -15,7 +15,9 @@
 		"sectionDefinitions",
 		"drafts",
 		"customAttachment",
-		"attachments" ],
+		"attachments",
+		"deletedInstances",
+		"deletedDrafts" ],
 	"name" : "OrbeonPublishedFormDefinition",
 	"pools" : [
 		 ],

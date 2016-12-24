@@ -5,6 +5,6 @@ getAllInstancesSize
 
 	count := 0.
 
-	self getAllVersion do: [:each | count := count + each instances size].
+	self getAllVersion do: [:each | count := count + each instances size]. "tricky value because includes deleted instances (deleted='Y')"
 
 	^count

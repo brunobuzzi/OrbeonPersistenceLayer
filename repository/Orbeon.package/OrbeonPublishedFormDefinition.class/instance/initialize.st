@@ -10,6 +10,8 @@ initialize
 	permissions := Dictionary new.
 	sectionDefinitions := Dictionary new.
 	attachments := Dictionary new.
+	deletedInstances := RcKeyValueDictionary new.
+	deletedDrafts := RcKeyValueDictionary new.
 
 	self isAvailable: false.
 	self isSingleton: false.

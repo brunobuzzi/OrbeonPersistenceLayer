@@ -2,7 +2,7 @@ queries
 executeQueryWithoutSearchCriteria
 	| drafts formsInRange stream instancesShift draftsSize draftsNodes |
 
-	drafts :=  self getAllDrafts reject: [:each | each isDeleted].
+	drafts :=  self getAllDrafts.
 	draftsNodes := xmlSearchDefinitionDocument descendentElementsNamed: 'drafts'.
 
 	(draftsNodes notEmpty and: [((draftsNodes first attributeAt: 'for-never-saved-document') = 'true') and: [draftsNodes first contentString = 'only']]) "drafts to display"

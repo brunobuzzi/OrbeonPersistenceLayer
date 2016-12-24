@@ -1,5 +1,5 @@
 other
-test
+testSearchWithoutCriteria
 |str|
 str := '<search>
     <query/>
