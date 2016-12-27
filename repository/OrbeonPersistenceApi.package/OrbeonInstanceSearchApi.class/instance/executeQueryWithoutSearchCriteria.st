@@ -15,13 +15,10 @@ executeQueryWithoutSearchCriteria
 	instancesShift := (self pageFrom = 1) ifTrue: [1] ifFalse: [self pageFrom - drafts size].
 	draftsSize :=  (self pageFrom = 1) ifTrue: [drafts size] ifFalse: [0].
 
-	stream skip: instancesShift - 1.
+	stream position: instancesShift - 1.
 	[stream atEnd not and:[(formsInRange size + draftsSize) < pageSize]] whileTrue: [ | form |
-		"form := application getAnyInstanceWithId: stream next of: formName."
-		form := stream getCurrentObject.
-		(form notNil and: [(self canDisplayForm: form) and: [form isDeleted not]]) 
-		ifTrue: [formsInRange add: form].
-		stream next.
+		form := stream nextObject.
+		(self canDisplayForm: form) ifTrue: [formsInRange add: form].
 	].
 
 	total := stream size + drafts size.

@@ -4,7 +4,7 @@ next
 
 	self atEnd ifTrue: [^nil].
  
-	currentStream ifNil: [currentStream := streams at: versions first put: (ReadStream on: versions first instances keys)].
+	currentStream ifNil: [currentStream := streams at: versions first put: (ReadStreamPortable on: versions first instances keys)].
 
 	currentStream atEnd ifFalse: [^currentStream next].
 
@@ -15,6 +15,6 @@ next
 	(nextCollectionIndex > versions size) ifTrue: [^nil]. 
 	currentDefinition := versions at: nextCollectionIndex.
 
-	currentStream := streams at: currentDefinition put: (ReadStream on: currentDefinition instances keys).
+	currentStream := streams at: currentDefinition put: (ReadStreamPortable on: currentDefinition instances keys).
 
 	^currentStream next
