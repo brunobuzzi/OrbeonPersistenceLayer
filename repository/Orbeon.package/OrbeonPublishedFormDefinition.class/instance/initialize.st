@@ -7,7 +7,7 @@ initialize
 	drafts := RcKeyValueDictionary new. 
 	fieldInstances := RcKeyValueDictionary new. "a rc dictionary (by field name) of RcIdentityBag"
 	fieldsType := Dictionary new.
-	permissions := Dictionary new.
+	permissions := OrbeonPermissions new.
 	sectionDefinitions := Dictionary new.
 	attachments := Dictionary new.
 	deletedInstances := RcKeyValueDictionary new.

@@ -10,8 +10,8 @@ generateXmlNodeForDefinition: anOrbeonSavedFormDefinition with: aXMLWriter
 		add: 'draft' -> anOrbeonSavedFormDefinition printDraft;
 		add: 'last-modified' -> anOrbeonSavedFormDefinition modifiedTime asOrbeonDateTimeString;
 		add: 'name' -> anOrbeonSavedFormDefinition id;
-		add: 'operations' -> '*';
-		asArray.
+		add: 'operations' -> '*';  "in form builder when a user has access defined in [form-builder-permissions.xml] --> it has ALL permissions (create/read/update/delete)"
+		asArray.						"only instances make user of permissions"
 
 	tag := aXMLWriter tag: 'document' attributes: nodeAttributes.
 

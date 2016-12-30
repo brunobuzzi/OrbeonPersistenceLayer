@@ -5,5 +5,6 @@ has: roleName permission: permissionName
 
 	^permissions at: 'anyone' ifPresent: [:permissionsCollection | 
 		(permissionsCollection includes: permissionName) 	
-		ifFalse: [(permissions at: roleName ifAbsent: [^false]) includes: permissionName]
-		ifTrue: [true]].
+		ifFalse: [(permissions at: roleName ifAbsent: [^false]) includes: permissionName] "specific <rolName> permissions (-anyone- not present)"
+		ifTrue: [true] "general permissions -anyone- "
+	].

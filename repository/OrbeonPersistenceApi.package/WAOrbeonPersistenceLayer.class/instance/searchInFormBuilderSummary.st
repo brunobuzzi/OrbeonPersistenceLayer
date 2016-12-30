@@ -11,11 +11,10 @@ searchInFormBuilderSummary
 	searchApi := OrbeonDefinitionSearchApi new.
 	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: self requestContext request rawBody).
 	searchApi getPageSize;
-				getPageNumber.
+				getPageNumber;
+				group: (self requestContext request headerAt: 'orbeon-group');
+				user: (self requestContext request headerAt: 'orbeon-username').
 
-	"searchApi addToLog. System commit."
 	searchApi executeQuery. 
-
-	"^self generateXmlAnswerForBuilderSummaryFor: searchApi"
 
 	^searchApi generateXmlAnswerForBuilderSummary

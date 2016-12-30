@@ -1,4 +1,4 @@
-other
+permissions
 getPermissionsForUser: user inGroup: group with: formDefinition
 	"The receiver answer a collection of permissions (a string separated by blanks) for the user <username> and group <group> using the form definition <formDefinition> to get the current permissions to apply.
 	To calculate permissions we use the last version of OrbeonFormDefinition and NOT the <formInstance definition>.
