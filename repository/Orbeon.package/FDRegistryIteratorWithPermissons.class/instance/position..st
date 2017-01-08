@@ -1,4 +1,4 @@
-stream
+gsBug46607
 position: integerShift
 	"The receiver skip to <integerShift> position. Each version in <versions> collection eventually could have a ReadStream associated to it's instances "
 	| lastPublishedVersion allPermissions rolesWithReadPermission hasOwnerPermission hasGroupPermission queryString index |
