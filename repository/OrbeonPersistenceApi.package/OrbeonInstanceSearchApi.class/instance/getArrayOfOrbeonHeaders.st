@@ -18,5 +18,5 @@ getArrayOfOrbeonHeaders
 		add: 'xmlns:xxf' -> 'http://orbeon.org/oxf/xml/xforms';
 		add: 'page-size' -> pageSize printString;
 		add: 'total' -> total printString;
-		add: 'search-total' -> ((mode = #noSearch) ifTrue: [total printString] ifFalse: [resultCollection size printString]);
+		add: 'search-total' -> ((mode = #search) ifTrue: [resultCollection size printString] ifFalse: [total printString]);
 		asArray

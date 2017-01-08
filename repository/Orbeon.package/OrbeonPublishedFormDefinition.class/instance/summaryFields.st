@@ -1,4 +1,4 @@
-other
+field definitions
 summaryFields
 	"Answer a collection with all field names that are the summary of the receiver"
 	| summaries |

@@ -17,4 +17,6 @@ position: integerShift
 
 	localShift := (integerShift = 0) ifTrue: [0] ifFalse: [integerShift - size].
 
-	currentStream position: localShift. "the local shift in instances collection"
+	currentDefinition getLatestDefinition hasPermissionsEnabled ifFalse: [^currentStream position: localShift]. "the local shift in instances collection"
+
+	currentStream position: localShift

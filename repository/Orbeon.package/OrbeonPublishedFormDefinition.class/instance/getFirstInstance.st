@@ -1,4 +1,4 @@
-other
+form instances
 getFirstInstance
 
 	instances isEmpty ifTrue: [^nil].

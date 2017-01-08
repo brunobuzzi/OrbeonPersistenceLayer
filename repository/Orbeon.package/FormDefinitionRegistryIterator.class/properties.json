@@ -3,14 +3,20 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Cache" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"definitionRegistry",
 		"streams",
 		"currentStream",
 		"currentDefinition",
-		"versions" ],
+		"versions",
+		"user",
+		"group",
+		"fromIndex",
+		"toIndex",
+		"formsInRange",
+		"globalSize" ],
 	"name" : "FormDefinitionRegistryIterator",
 	"pools" : [
 		 ],

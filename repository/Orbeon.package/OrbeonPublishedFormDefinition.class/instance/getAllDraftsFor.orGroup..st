@@ -1,4 +1,4 @@
-other
+form instances
 getAllDraftsFor: user orGroup: group
 	"The receiver answer all current saved drafts of with username <user> or groupname <group>"
 	| allDrafts |

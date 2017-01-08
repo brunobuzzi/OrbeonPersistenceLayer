@@ -1,4 +1,4 @@
-other
+field definitions
 labelAt: key
 	"The receiver answer the label associated with field name <key>"
 

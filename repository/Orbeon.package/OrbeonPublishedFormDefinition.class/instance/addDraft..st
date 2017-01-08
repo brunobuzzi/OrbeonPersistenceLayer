@@ -1,4 +1,4 @@
-other
+form instances
 addDraft: anOrbeonFormInstance
 
 	anOrbeonFormInstance definition: self.

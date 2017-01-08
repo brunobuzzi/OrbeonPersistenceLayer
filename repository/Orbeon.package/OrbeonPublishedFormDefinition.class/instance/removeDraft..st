@@ -1,4 +1,4 @@
-other
+field instances
 removeDraft: anOrbeonFormInstance
 
 	"anOrbeonFormInstance definition: nil."

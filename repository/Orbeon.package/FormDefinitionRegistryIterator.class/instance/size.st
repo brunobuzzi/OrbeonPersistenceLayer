@@ -1,4 +1,4 @@
 stream
 size
 
-	^definitionRegistry getAllInstancesSize
+	self subclassResponsibility

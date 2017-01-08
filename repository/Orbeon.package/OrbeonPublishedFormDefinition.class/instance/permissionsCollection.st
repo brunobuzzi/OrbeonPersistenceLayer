@@ -1,4 +1,4 @@
-other
+permissions
 permissionsCollection
 	| permissionCollection |
 

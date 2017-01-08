@@ -1,4 +1,4 @@
-other
+field definitions
 searchFields
 	"Answer a collection with the search fields of the receiver"
 	| searchs |

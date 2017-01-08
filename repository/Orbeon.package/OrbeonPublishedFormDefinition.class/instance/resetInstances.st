@@ -1,5 +1,5 @@
-field instances
+form instances
 resetInstances
 
-		instances := RcKeyValueDictionary new.
-		fieldInstances := Dictionary new.
+	instances := RcKeyValueDictionary new.
+	fieldInstances := Dictionary new.

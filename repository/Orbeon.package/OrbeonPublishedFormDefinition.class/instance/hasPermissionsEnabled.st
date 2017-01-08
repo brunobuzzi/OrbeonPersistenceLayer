@@ -1,0 +1,4 @@
+permissions
+hasPermissionsEnabled
+
+	^permissions isEnabled

@@ -3,13 +3,14 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Cache" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		"orbeonApplication",
 		"currentVersions",
 		"oldVersions",
-		"savedDefinitions" ],
+		"savedDefinitions",
+		"instancesSet" ],
 	"name" : "FormDefinitionRegistry",
 	"pools" : [
 		 ],

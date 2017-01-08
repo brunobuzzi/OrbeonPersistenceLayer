@@ -1,0 +1,4 @@
+other
+getCollection
+
+	self subclassResponsibility

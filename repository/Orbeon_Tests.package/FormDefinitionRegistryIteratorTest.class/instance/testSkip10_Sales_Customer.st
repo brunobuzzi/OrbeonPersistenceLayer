@@ -1,6 +1,10 @@
 other
 testSkip10_Sales_Customer
-	| forms |
+	| forms application |
+
+	application := self getOrbeonApplicationClass applicationNamed: 'sales-application' ifNone: [self assert: false].
+
+	iterator := FormDefinitionRegistryIterator on: (application registryForFormNamed: 'customer' ifNone: [nil]).
 
 	forms := OrderedCollection new.
 	iterator position: 10.

@@ -1,4 +1,4 @@
-other
+field definitions
 includesSectionDefinition: aFormSectionDefinition
 
 	^sectionDefinitions includes: aFormSectionDefinition

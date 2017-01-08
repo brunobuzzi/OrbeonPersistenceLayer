@@ -1,4 +1,4 @@
-other
+field definitions
 hasRangeSearch: attributeName
 	| type |
 

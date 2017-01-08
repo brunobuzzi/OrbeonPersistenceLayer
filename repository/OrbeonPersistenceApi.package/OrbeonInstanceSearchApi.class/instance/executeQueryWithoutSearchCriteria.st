@@ -9,19 +9,17 @@ executeQueryWithoutSearchCriteria
 	ifTrue: [total := drafts size.
 			^resultCollection := drafts].
 
-	formsInRange := OrderedCollection new.	
-	"stream := ReadStream on: self getAllKeys."
-	stream := FormDefinitionRegistryIterator on: (application registryForFormNamed: formName ifNone: [nil]).
+	formsInRange := OrderedCollection new.
 	instancesShift := (self pageFrom = 1) ifTrue: [1] ifFalse: [self pageFrom - drafts size].
 	draftsSize :=  (self pageFrom = 1) ifTrue: [drafts size] ifFalse: [0].
 
-	stream position: instancesShift - 1.
-	[stream atEnd not and:[(formsInRange size + draftsSize) < pageSize]] whileTrue: [ | form |
-		form := stream nextObject.
-		(self canDisplayForm: form) ifTrue: [formsInRange add: form].
-	].
+	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user group: group. "answer a specific iterator to go through instances"
+	stream fromIndex: instancesShift - 1;
+				toIndex: (instancesShift - 1) + pageSize - draftsSize.
 
-	total := stream size + drafts size.
+	formsInRange := stream getCollection.
+
+	total := stream "formsInRange" size + drafts size.
 	stream close.
 
 	draftsNodes isEmpty 

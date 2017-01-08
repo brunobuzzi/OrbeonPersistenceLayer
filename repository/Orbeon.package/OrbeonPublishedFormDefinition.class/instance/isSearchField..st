@@ -1,4 +1,4 @@
-other
+field definitions
 isSearchField: fieldName
 	"Answer whether or not the field named <fieldName> is a search field"
 

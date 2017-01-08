@@ -1,4 +1,4 @@
-other
+form instances
 getAllSectionsIn: anOrderedCollection
 
 	anOrderedCollection addAll: sectionDefinitions.

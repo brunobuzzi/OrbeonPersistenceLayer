@@ -1,4 +1,4 @@
-other
+form instances
 getDraftWithId: aString ifNone: aBlock
 	| currentDrafts |
 

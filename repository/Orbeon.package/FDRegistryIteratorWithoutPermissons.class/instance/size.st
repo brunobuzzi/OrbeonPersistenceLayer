@@ -1,0 +1,4 @@
+stream
+size
+
+	^definitionRegistry getAllInstancesSize
