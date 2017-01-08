@@ -17,8 +17,7 @@
 		"customAttachment",
 		"attachments",
 		"deletedInstances",
-		"deletedDrafts",
-		"instancesSet" ],
+		"deletedDrafts" ],
 	"name" : "OrbeonPublishedFormDefinition",
 	"pools" : [
 		 ],
