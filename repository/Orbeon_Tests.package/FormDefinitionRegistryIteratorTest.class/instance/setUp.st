@@ -4,6 +4,6 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass applicationNamed: 'sales-application' ifNone: [self assert: false].
+"	application := self getOrbeonApplicationClass applicationNamed: 'sales-application' ifNone: [self assert: false].
 
-	iterator := FormDefinitionRegistryIterator on: (application registryForFormNamed: 'customer' ifNone: [nil]).
+	iterator := FormDefinitionRegistryIterator on: (application registryForFormNamed: 'customer' ifNone: [nil])."
