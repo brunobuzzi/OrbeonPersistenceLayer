@@ -13,6 +13,6 @@ getMandatoryFieldsMissing
 	self getFieldNamed: 'assignmentOop' ifNone: [missingManFields add: 'assignmentOop'].
 	self getFieldNamed: 'username' ifNone: [missingManFields add: 'username'].
 	self getFieldNamed: 'rol' ifNone: [missingManFields add: 'rol'].
-	self getFieldNamed: 'formId' ifNone: [missingManFields add: 'formId'].
+	self getFieldNamed: 'processId' ifNone: [missingManFields add: 'processId'].
 
 	^missingManFields
