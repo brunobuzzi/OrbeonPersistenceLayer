@@ -1,5 +1,5 @@
 other
-initialize
+register
 	| application |
 
 	WAAdmin unregister: 'orbeon'.
@@ -9,4 +9,5 @@ initialize
 	application 
 		preferenceAt: #sessionClass put: WAOrbeonSession;
 		addLibrary: JQDeploymentLibrary;
-		addLibrary: JQUiDeploymentLibrary.
+		addLibrary: JQUiDeploymentLibrary;
+		addLibrary: JQSmoothnessTheme.

@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"initialize" : "BrunoBB 09/20/2016 13:29" },
+		"register" : "BrunoBB 02/07/2017 08:46",
+		"unregister" : "BrunoBB 02/07/2017 10:49" },
 	"instance" : {
 		"ldapExample_getLdapResultForCurrentUser" : "BrunoBB 11/01/2014 15:03",
 		"ldapExample_getLdapRols" : "BrunoBB 11/01/2014 15:04",

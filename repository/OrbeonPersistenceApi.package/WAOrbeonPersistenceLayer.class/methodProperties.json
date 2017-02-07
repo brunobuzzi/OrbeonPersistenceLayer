@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"installAlmostOutOfMemoryHandler" : "BrunoBB 09/28/2015 16:55" },
+		"register" : "BrunoBB 02/07/2017 10:52",
+		"unregister" : "BrunoBB 02/07/2017 10:52" },
 	"instance" : {
 		"addDeferredProcessingFor:" : "BrunoBB 09/11/2015 15:01",
 		"apiConfiguration" : "BrunoBB 09/03/2015 14:01",
