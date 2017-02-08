@@ -10,4 +10,4 @@ register
 		preferenceAt: #sessionClass put: WAOrbeonSession;
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: JQUiDeploymentLibrary;
-		addLibrary: JQSmoothnessTheme.
+		addLibrary: JQUiLightnessTheme.
