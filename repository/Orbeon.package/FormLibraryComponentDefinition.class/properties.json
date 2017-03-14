@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"publishedComponent" ],
+		"publishedComponent",
+		"sectionDefinition" ],
 	"name" : "FormLibraryComponentDefinition",
 	"pools" : [
 		 ],
