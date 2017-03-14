@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"section",
-		"gridDefinition",
-		"gridIterations" ],
-	"name" : "FormGridInstance",
+		"name" ],
+	"name" : "FormElement",
 	"pools" : [
 		 ],
-	"super" : "FormElementInstance",
+	"super" : "OrbeonObject",
 	"type" : "normal" }

@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
 		"isSummary",
 		"isSearch",
 		"label",
@@ -19,5 +18,5 @@
 	"name" : "FormFieldDefinition",
 	"pools" : [
 		 ],
-	"super" : "OrbeonObject",
+	"super" : "FormElementDefinition",
 	"type" : "normal" }

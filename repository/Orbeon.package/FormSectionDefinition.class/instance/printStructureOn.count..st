@@ -12,7 +12,7 @@ printStructureOn: aPrintStream count: counter
 	aPrintStream nextPutAll: String lf.
 	
 	fieldDefinitions do: [:each | 
-		1 to: (counter + 1) do: [:each | aPrintStream nextPutAll: String tab].
+		1 to: (counter + 1) do: [:count | aPrintStream nextPutAll: String tab].
 		aPrintStream nextPutAll: each name.
 		aPrintStream nextPutAll: ', ', each type.
 		aPrintStream nextPutAll: String lf.].

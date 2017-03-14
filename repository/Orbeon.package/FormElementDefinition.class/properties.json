@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"section",
-		"gridDefinition",
-		"gridIterations" ],
-	"name" : "FormGridInstance",
+		 ],
+	"name" : "FormElementDefinition",
 	"pools" : [
 		 ],
-	"super" : "FormElementInstance",
+	"super" : "FormElement",
 	"type" : "normal" }

@@ -6,8 +6,6 @@
 		 ],
 	"commentStamp" : "BrunoBB 08/06/2014 11:23",
 	"instvars" : [
-		"name",
-		"label",
 		"fieldDefinitions",
 		"gridDefinitions",
 		"isRepeatable",
@@ -20,5 +18,5 @@
 	"name" : "FormSectionDefinition",
 	"pools" : [
 		 ],
-	"super" : "OrbeonObject",
+	"super" : "FormElementContainerDefinition",
 	"type" : "normal" }

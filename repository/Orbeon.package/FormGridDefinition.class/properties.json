@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
 		"sectionDefinition",
 		"fieldDefinitions",
 		"tabIndex",
@@ -15,5 +14,5 @@
 	"name" : "FormGridDefinition",
 	"pools" : [
 		 ],
-	"super" : "OrbeonObject",
+	"super" : "FormElementDefinition",
 	"type" : "normal" }

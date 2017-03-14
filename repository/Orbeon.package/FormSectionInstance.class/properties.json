@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "BrunoBB 02/17/2015 11:23",
 	"instvars" : [
-		"name",
 		"sectionDefinition",
 		"formInstance",
 		"parentSection",
@@ -14,5 +13,5 @@
 	"name" : "FormSectionInstance",
 	"pools" : [
 		 ],
-	"super" : "OrbeonObject",
+	"super" : "FormElementInstance",
 	"type" : "normal" }
