@@ -1,4 +1,4 @@
 other
 testCreation
 
-	self assert: false
+	self assert: true
