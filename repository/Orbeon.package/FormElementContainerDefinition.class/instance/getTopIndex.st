@@ -1,7 +1,7 @@
-other
+parent section
 getTopIndex
 	"Answer the index of the top element in the form tree structure"
 
-	^parentSection 
+	^self parentSection 
 		ifNil: [tabIndex index]
-		ifNotNil: [parentSection getTopIndex]
+		ifNotNil: [self parentSection getTopIndex]

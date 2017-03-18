@@ -1,8 +1,13 @@
 {
 	"class" : {
-		 },
+		"name:definition:" : "BrunoBB 03/18/2017 09:33" },
 	"instance" : {
-		"publishedComponent" : "BrunoBB 03/14/2017 11:17",
-		"publishedComponent:" : "BrunoBB 03/14/2017 11:17",
+		"getAllFieldDefinitions" : "BrunoBB 03/18/2017 10:06",
+		"getAllSectionsIn:" : "BrunoBB 03/18/2017 10:03",
+		"getReferencedSectionName" : "BrunoBB 03/18/2017 09:43",
+		"getTreeLevel" : "BrunoBB 03/18/2017 09:48",
+		"parentSection" : "BrunoBB 03/18/2017 09:45",
+		"publishedComponent" : "BrunoBB 03/14/2017 12:50",
+		"publishedComponent:" : "BrunoBB 03/14/2017 12:50",
 		"sectionDefinition" : "BrunoBB 03/14/2017 12:50",
 		"sectionDefinition:" : "BrunoBB 03/14/2017 12:50" } }

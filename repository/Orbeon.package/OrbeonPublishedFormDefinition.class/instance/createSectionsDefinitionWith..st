@@ -8,7 +8,8 @@ createSectionsDefinitionWith: anOrbeonFormReader
 		sectionName := anOrbeonFormReader getNameFrom: xmlSection.
 		section := self createSectionDefinitionNamed: sectionName repeatable: false basedOn: xmlSection with: anOrbeonFormReader.
 		self addSectionDefinition: section.
-		self createSubSectionsFor: section node: xmlSection with: anOrbeonFormReader].
+		section isNativeComponent ifTrue: [self createSubSectionsFor: section node: xmlSection with: anOrbeonFormReader].
+	].
 
 	"Repeatable Sections"
 	(anOrbeonFormReader formMainSectionsRepeatable: true) do: [:xmlSection  | | sectionName section | 

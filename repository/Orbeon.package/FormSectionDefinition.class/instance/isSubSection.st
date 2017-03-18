@@ -1,4 +1,0 @@
-other
-isSubSection
-
-	^parentSection notNil

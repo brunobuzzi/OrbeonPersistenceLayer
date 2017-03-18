@@ -2,6 +2,21 @@
 	"class" : {
 		 },
 	"instance" : {
-		"initialize" : "BrunoBB 03/14/2017 10:20",
-		"label" : "BrunoBB 03/14/2017 10:21",
-		"label:" : "BrunoBB 03/14/2017 10:21" } }
+		"classOf:" : "BrunoBB 03/18/2017 09:44",
+		"formDefinition" : "BrunoBB 03/18/2017 09:44",
+		"formDefinition:" : "BrunoBB 03/18/2017 09:44",
+		"getParentTabIndex" : "BrunoBB 03/18/2017 09:51",
+		"getTopIndex" : "BrunoBB 03/18/2017 09:45",
+		"getTreeLevel" : "BrunoBB 03/18/2017 09:51",
+		"initialize" : "BrunoBB 03/18/2017 09:46",
+		"isMainSection" : "BrunoBB 03/18/2017 09:49",
+		"isNativeComponent" : "BrunoBB 03/18/2017 09:54",
+		"isSubSection" : "BrunoBB 03/18/2017 09:49",
+		"label" : "BrunoBB 03/18/2017 09:44",
+		"label:" : "BrunoBB 03/18/2017 09:44",
+		"levelNumber" : "BrunoBB 03/18/2017 09:49",
+		"parentName" : "BrunoBB 03/18/2017 09:50",
+		"parentSectionIsRepeatable" : "BrunoBB 03/18/2017 09:51",
+		"printTabIndex" : "BrunoBB 03/18/2017 09:46",
+		"tabIndex" : "BrunoBB 03/18/2017 09:45",
+		"tabIndex:" : "BrunoBB 03/18/2017 09:46" } }

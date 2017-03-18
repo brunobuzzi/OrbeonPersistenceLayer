@@ -1,0 +1,4 @@
+other
+getAllSectionsIn: anOrderedCollection
+
+	^publishedComponent getAllSectionsIn: anOrderedCollection

@@ -1,4 +1,0 @@
-other
-isMainSection
-
-	^parentSection isNil

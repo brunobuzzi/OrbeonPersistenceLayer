@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"label",
-		"formDefinition",
-		"tabIndex" ],
-	"name" : "FormElementContainerDefinition",
+		 ],
+	"name" : "LibraryReferenceException",
 	"pools" : [
 		 ],
-	"super" : "FormElementDefinition",
+	"super" : "OrbeonException",
 	"type" : "normal" }

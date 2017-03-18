@@ -1,7 +1,7 @@
-other
+parent section
 parentSectionIsRepeatable
 	"Answer whether or not the parent section of the receiver is repeatable"
 
-	parentSection ifNil: [^false].
+	self parentSection ifNil: [^false].
 
-	^parentSection isRepeatable
+	^self parentSection isRepeatable

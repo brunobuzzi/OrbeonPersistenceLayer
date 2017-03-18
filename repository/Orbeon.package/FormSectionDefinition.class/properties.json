@@ -9,11 +9,9 @@
 		"fieldDefinitions",
 		"gridDefinitions",
 		"isRepeatable",
-		"formDefinition",
 		"parentSection",
 		"subSections",
 		"iterationName",
-		"tabIndex",
 		"bind" ],
 	"name" : "FormSectionDefinition",
 	"pools" : [
