@@ -1,4 +1,4 @@
 other
 includesGridDefinitionNamed: aString
 
-	^gridDefinitions includesKey: aString
+	^self gridDefinitions includesKey: aString

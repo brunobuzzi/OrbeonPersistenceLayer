@@ -4,6 +4,6 @@ gridSearchFields
 	| searchs |
 
 	searchs := OrderedCollection new.
-	gridDefinitions do: [:eachGridDef | searchs addAll: eachGridDef searchFields].
+	self gridDefinitions do: [:eachGridDef | searchs addAll: eachGridDef searchFields].
 
 	^searchs

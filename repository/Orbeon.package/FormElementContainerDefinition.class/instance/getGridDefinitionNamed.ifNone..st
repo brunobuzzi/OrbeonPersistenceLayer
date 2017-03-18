@@ -1,4 +1,4 @@
 other
 getGridDefinitionNamed: aString ifNone: aBlock
 
-	^gridDefinitions at: aString ifAbsent: aBlock
+	^self gridDefinitions at: aString ifAbsent: aBlock

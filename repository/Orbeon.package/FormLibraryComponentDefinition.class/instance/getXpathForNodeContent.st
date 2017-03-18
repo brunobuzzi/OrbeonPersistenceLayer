@@ -1,0 +1,4 @@
+section
+getXpathForNodeContent
+
+	^sectionDefinition getXpathForNodeContent

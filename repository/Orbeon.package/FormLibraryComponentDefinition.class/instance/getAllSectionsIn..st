@@ -1,4 +1,4 @@
-other
+form
 getAllSectionsIn: anOrderedCollection
 
 	^publishedComponent getAllSectionsIn: anOrderedCollection

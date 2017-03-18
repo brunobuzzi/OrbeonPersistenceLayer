@@ -1,4 +1,0 @@
-other
-includesFieldDefinition: aFormFieldDefinition
-
-	^fieldDefinitions includes: aFormFieldDefinition

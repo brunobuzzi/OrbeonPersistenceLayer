@@ -2,12 +2,19 @@
 	"class" : {
 		"name:definition:" : "BrunoBB 03/18/2017 09:33" },
 	"instance" : {
+		"fieldDefinitions" : "BrunoBB 03/18/2017 10:13",
 		"getAllFieldDefinitions" : "BrunoBB 03/18/2017 10:06",
 		"getAllSectionsIn:" : "BrunoBB 03/18/2017 10:03",
 		"getReferencedSectionName" : "BrunoBB 03/18/2017 09:43",
+		"getSubSectionNamed:ifNone:" : "BrunoBB 03/18/2017 10:15",
 		"getTreeLevel" : "BrunoBB 03/18/2017 09:48",
+		"getXpathForNodeContent" : "BrunoBB 03/18/2017 10:24",
+		"gridDefinitions" : "BrunoBB 03/18/2017 10:16",
+		"hasCustomIterationName" : "BrunoBB 03/18/2017 10:19",
 		"parentSection" : "BrunoBB 03/18/2017 09:45",
 		"publishedComponent" : "BrunoBB 03/14/2017 12:50",
 		"publishedComponent:" : "BrunoBB 03/14/2017 12:50",
 		"sectionDefinition" : "BrunoBB 03/14/2017 12:50",
-		"sectionDefinition:" : "BrunoBB 03/14/2017 12:50" } }
+		"sectionDefinition:" : "BrunoBB 03/14/2017 12:50",
+		"sectionDefinitions" : "BrunoBB 03/18/2017 10:18",
+		"subSections" : "BrunoBB 03/18/2017 10:21" } }
