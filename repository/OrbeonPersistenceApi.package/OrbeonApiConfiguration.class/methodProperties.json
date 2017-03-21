@@ -15,6 +15,7 @@
 		"enableDefinitionAuditFor:in:" : "BrunoBB 09/21/2015 09:57",
 		"enableDraftAuditFor:in:" : "BrunoBB 09/21/2015 09:56",
 		"enableInstanceAuditFor:in:" : "BrunoBB 09/21/2015 09:56",
+		"existDirectoryStructureForAttachments" : "BrunoBB 03/21/2017 14:15",
 		"formsAudit" : "BrunoBB 09/21/2015 09:44",
 		"formsAudit:" : "BrunoBB 09/21/2015 09:44",
 		"getBasePathFor:in:" : "BrunoBB 09/03/2015 14:31",
