@@ -1,7 +1,19 @@
 library forms
 production_form_orbeon_library
 
-	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xxi="http://orbeon.org/oxf/xml/xinclude" xmlns:xxf="http://orbeon.org/oxf/xml/xforms" xmlns:exf="http://www.exforms.org/exf/1-0" xmlns:fr="http://orbeon.org/oxf/xml/form-runner" xmlns:saxon="http://saxon.sf.net/" xmlns:sql="http://orbeon.org/oxf/xml/sql" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fb="http://orbeon.org/oxf/xml/form-builder">
+	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ev="http://www.w3.org/2001/xml-events"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xxi="http://orbeon.org/oxf/xml/xinclude"
+         xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
+         xmlns:exf="http://www.exforms.org/exf/1-0"
+         xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+         xmlns:saxon="http://saxon.sf.net/"
+         xmlns:sql="http://orbeon.org/oxf/xml/sql"
+         xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:fb="http://orbeon.org/oxf/xml/form-builder">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <xh:title>Seaside Integration</xh:title>
@@ -16,25 +28,45 @@ production_form_orbeon_library
                         <oop/>
                         <assignmentOop/>
                     </internal-section>
-                    <section-11>
+                    <login-section>
                         <username/>
                         <rol/>
                         <processId/>
-                    </section-11>
+                    </login-section>
                 </form>
             </xf:instance>
             <!-- Bindings -->
          <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
                 <xf:bind id="internal-section-bind" name="internal-section" ref="internal-section">
-                    <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')" required="true()" readonly="true()" calculate="xxf:get-request-parameter(''s'')"/>
-                    <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')" required="true()" readonly="true()" calculate="xxf:get-request-parameter(''k'')"/>
-                    <xf:bind id="uuid-bind" ref="uuid" name="uuid" xxf:default="xxf:get-request-parameter(''token'')" required="true()" readonly="true()" calculate="xxf:get-request-parameter(''token'')"/>
-                    <xf:bind id="oop-bind" ref="oop" name="oop" xxf:default="xxf:get-request-parameter(''oop'')" required="true()" readonly="true()" calculate="xxf:get-request-parameter(''oop'')"/>
-                    <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop" required="true()" readonly="true()" calculate="xxf:get-request-parameter(''oop2'')" xxf:default="xxf:get-request-parameter(''oop2'')"/>
+                    <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')"
+                             required="true()"
+                             readonly="true()"
+                             calculate="xxf:get-request-parameter(''s'')"/>
+                    <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')"
+                             required="true()"
+                             readonly="true()"
+                             calculate="xxf:get-request-parameter(''k'')"/>
+                    <xf:bind id="uuid-bind" ref="uuid" name="uuid"
+                             xxf:default="xxf:get-request-parameter(''token'')"
+                             required="true()"
+                             readonly="true()"
+                             calculate="xxf:get-request-parameter(''token'')"/>
+                    <xf:bind id="oop-bind" ref="oop" name="oop"
+                             xxf:default="xxf:get-request-parameter(''oop'')"
+                             required="true()"
+                             readonly="true()"
+                             calculate="xxf:get-request-parameter(''oop'')"/>
+                    <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
+                             required="true()"
+                             readonly="true()"
+                             calculate="xxf:get-request-parameter(''oop2'')"
+                             xxf:default="xxf:get-request-parameter(''oop2'')"/>
                 </xf:bind>
-                <xf:bind id="section-11-bind" ref="section-11" name="section-11">
-                    <xf:bind id="username-bind" ref="username" name="username" required="true()" readonly="true()"/>
-                    <xf:bind id="processId-bind" ref="processId" name="processId" required="true()" readonly="true()"/>
+                <xf:bind id="login-section-bind" ref="login-section" name="login-section">
+                    <xf:bind id="username-bind" ref="username" name="username" required="true()"
+                             readonly="true()"/>
+                    <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
+                             readonly="true()"/>
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
             </xf:bind>
@@ -97,10 +129,10 @@ production_form_orbeon_library
                             <label>OOP2</label>
                             <hint/>
                         </assignmentOop>
-                        <section-11>
+                        <login-section>
                             <label>User</label>
                             <help/>
-                        </section-11>
+                        </login-section>
                     </resource>
                     <resource xml:lang="es">
                         <username>
@@ -138,10 +170,10 @@ production_form_orbeon_library
                             <label/>
                             <hint/>
                         </assignmentOop>
-                        <section-11>
+                        <login-section>
                             <label>Usuario</label>
                             <help/>
-                        </section-11>
+                        </login-section>
                     </resource>
                 </resources>
             </xf:instance>
@@ -152,10 +184,22 @@ production_form_orbeon_library
             <xf:instance id="fr-service-response-instance" xxf:exclude-result-prefixes="#all">
                 <response/>
             </xf:instance>
-            <xf:instance id="security-token-instance" class="fr-service" xxf:exclude-result-prefixes="#all">
-                <body xmlns:secure="java:org.orbeon.oxf.util.SecureUtils" xmlns:frf="java:org.orbeon.oxf.fr.FormRunner" xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder">&lt;uuid&gt;&lt;/uuid&gt;</body>
+            <xf:instance id="security-token-instance" class="fr-service"
+                         xxf:exclude-result-prefixes="#all">
+                <body xmlns:secure="java:org.orbeon.oxf.util.SecureUtils"
+                      xmlns:frf="java:org.orbeon.oxf.fr.FormRunner"
+                      xmlns:p="http://www.orbeon.com/oxf/pipeline"
+                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder">&lt;uuid&gt;&lt;/uuid&gt;</body>
             </xf:instance>
-            <xf:submission id="security-token-submission" class="fr-service" ref="instance(''fr-service-request-instance'')" resource="http://gemstoneIP:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}" method="get" serialization="application/xml" mediatype="application/xml" replace="instance" instance="fr-service-response-instance"/>
+            <xf:submission id="security-token-submission" class="fr-service"
+                           ref="instance(''fr-service-request-instance'')"
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}"
+                           method="get"
+                           serialization="application/xml"
+                           mediatype="application/xml"
+                           replace="instance"
+                           instance="fr-service-response-instance"/>
+            
             <xf:action id="security-action-binding">
             <!-- React to event... on control... -->
             <xf:action event="xforms-ready" ev:observer="fr-form-model" if="true()">
@@ -167,7 +211,8 @@ production_form_orbeon_library
                <!-- Get reference to initial request -->
                <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
                     <!-- Copy over to read-write request instance -->
-               <xf:insert ref="instance(''fr-service-request-instance'')" origin="saxon:parse(instance($request-instance-name))"/>
+               <xf:insert ref="instance(''fr-service-request-instance'')"
+                               origin="saxon:parse(instance($request-instance-name))"/>
                     <!--<xf:insert ref="instance(''fr-service-request-instance'')" origin="instance($request-instance-name)"/>-->
                <!-- Set values if needed -->
                <xf:action context="instance(''fr-service-request-instance'')">
@@ -175,14 +220,24 @@ production_form_orbeon_library
                </xf:action>
                 </xf:action>
                 <!-- Response actions -->
-            <xf:action event="xforms-submit-done" ev:observer="security-token-submission" context="instance(''fr-service-response-instance'')">
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''username''"/><xf:var name="control-value" value="/result/username"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''citizenName''"/><xf:var name="control-value" value="/result/citizenName"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''citizenSurname''"/><xf:var name="control-value" value="/result/citizenSurname"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''originCountry''"/><xf:var name="control-value" value="/result/originCountry"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''citizenId''"/><xf:var name="control-value" value="/result/citizenId"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''rol''"/><xf:var name="control-value" value="/result/rol"/></xf:action>
-                    <xf:action class="fr-set-control-value-action"><xf:var name="control-name" value="''processId''"/><xf:var name="control-value" value="/result/processid"/></xf:action>
+            <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
+                           context="instance(''fr-service-response-instance'')">
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''username''"/>
+                        <xf:var name="control-value" value="/result/username"/>
+                    </xf:action>
+                    
+                    
+                    
+                    
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''rol''"/>
+                        <xf:var name="control-value" value="/result/rol"/>
+                    </xf:action>
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''processId''"/>
+                        <xf:var name="control-value" value="/result/processid"/>
+                    </xf:action>
                     <!-- Response actions will be here -->
             </xf:action>
             </xf:action>
@@ -190,7 +245,8 @@ production_form_orbeon_library
    </xh:head>
    <xh:body>
         <fr:view>
-            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:oxf="http://www.orbeon.com/oxf/processors">
+            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
+                     xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
                     <fr:grid>
@@ -236,8 +292,8 @@ production_form_orbeon_library
                         </xh:tr>
                     </fr:grid>
                 </fr:section>
-                <fr:section id="section-11-control" bind="section-11-bind">
-                    <xf:label ref="$form-resources/section-11/label"/>
+                <fr:section id="login-section-control" bind="login-section-bind">
+                    <xf:label ref="$form-resources/login-section/label"/>
                     <fr:grid>
                         <xh:tr>
                             <xh:td>

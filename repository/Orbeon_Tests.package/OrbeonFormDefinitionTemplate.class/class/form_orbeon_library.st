@@ -28,11 +28,11 @@ form_orbeon_library
                         <oop/>
                         <assignmentOop/>
                     </internal-section>
-                    <section-11>
+                    <login-section>
                         <username/>
                         <rol/>
                         <processId/>
-                    </section-11>
+                    </login-section>
                 </form>
             </xf:instance>
             <!-- Bindings -->
@@ -45,7 +45,7 @@ form_orbeon_library
                     <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
                              required="true()"/>
                 </xf:bind>
-                <xf:bind id="section-11-bind" ref="section-11" name="section-11">
+                <xf:bind id="login-section-bind" ref="login-section" name="login-section">
                     <xf:bind id="username-bind" ref="username" name="username" required="true()"/>
                     <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"/>
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()"/>
@@ -61,6 +61,7 @@ form_orbeon_library
                     <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <version-comment/>
+                    
                 </metadata>
             </xf:instance>
             <!-- Attachments -->
@@ -110,10 +111,10 @@ form_orbeon_library
                             <label>OOP2</label>
                             <hint/>
                         </assignmentOop>
-                        <section-11>
+                        <login-section>
                             <label>User</label>
                             <help/>
-                        </section-11>
+                        </login-section>
                     </resource>
                     <resource xml:lang="es">
                         <username>
@@ -151,10 +152,10 @@ form_orbeon_library
                             <label/>
                             <hint/>
                         </assignmentOop>
-                        <section-11>
+                        <login-section>
                             <label>Usuario</label>
                             <help/>
-                        </section-11>
+                        </login-section>
                     </resource>
                 </resources>
             </xf:instance>
@@ -180,6 +181,7 @@ form_orbeon_library
                            mediatype="application/xml"
                            replace="instance"
                            instance="fr-service-response-instance"/>
+            
             <xf:action id="security-action-binding">
             <!-- React to event... on control... -->
             <xf:action event="xforms-ready" ev:observer="fr-form-model" if="true()">
@@ -194,7 +196,7 @@ form_orbeon_library
                <xf:insert ref="instance(''fr-service-request-instance'')"
                                origin="saxon:parse(instance($request-instance-name))"/>
              
-               <!-- Set values if needed -->
+                    <!-- Set values if needed -->
                <xf:action context="instance(''fr-service-request-instance'')">
                   <!-- Setvalue actions will be here -->
                </xf:action>
@@ -206,22 +208,10 @@ form_orbeon_library
                         <xf:var name="control-name" value="''username''"/>
                         <xf:var name="control-value" value="/result/username"/>
                     </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''citizenName''"/>
-                        <xf:var name="control-value" value="/result/citizenName"/>
-                    </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''citizenSurname''"/>
-                        <xf:var name="control-value" value="/result/citizenSurname"/>
-                    </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''originCountry''"/>
-                        <xf:var name="control-value" value="/result/originCountry"/>
-                    </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''citizenId''"/>
-                        <xf:var name="control-value" value="/result/citizenId"/>
-                    </xf:action>
+                    
+                    
+                    
+                    
                     <xf:action class="fr-set-control-value-action">
                         <xf:var name="control-name" value="''rol''"/>
                         <xf:var name="control-value" value="/result/rol"/>
@@ -284,8 +274,8 @@ form_orbeon_library
                         </xh:tr>
                     </fr:grid>
                 </fr:section>
-                <fr:section id="section-11-control" bind="section-11-bind">
-                    <xf:label ref="$form-resources/section-11/label"/>
+                <fr:section id="login-section-control" bind="login-section-bind">
+                    <xf:label ref="$form-resources/login-section/label"/>
                     <fr:grid>
                         <xh:tr>
                             <xh:td>
