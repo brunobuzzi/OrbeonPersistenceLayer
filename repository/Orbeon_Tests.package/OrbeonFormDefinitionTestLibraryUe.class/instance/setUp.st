@@ -2,7 +2,7 @@ other
 setUp
 	| application |
 
-	application := OrbeonApplication applicationNamed: 'ue' ifNone: [self assert: false].
+	application := OrbeonApplication getExistingApplicationOrCreateNewNamed: 'ue'.
 	form := application definitionNamed: 'library' ifNone: [self createFormStructure].
 
 	form xmlString: OrbeonFormDefinitionTemplate form_ue_library;

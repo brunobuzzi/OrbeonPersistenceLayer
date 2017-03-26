@@ -2,7 +2,7 @@ other
 setUp
 	| definition application |
 
-	application := OrbeonApplication applicationNamed: 'ue' ifNone: [self assert: false].
+	application := OrbeonApplication getExistingApplicationOrCreateNewNamed: 'ue'.
 	definition := application definitionNamed: 'library-composed-form' ifNone: [self createFormStructure.].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
