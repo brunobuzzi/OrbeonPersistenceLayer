@@ -1,8 +1,11 @@
 other
 setUp
+	| application |
 
-"	form := OrbeonPublishedFormDefinition app: 'orbeon' form: 'library'.
+	application := OrbeonApplication applicationNamed: 'ue' ifNone: [self assert: false].
+	form := application definitionNamed: 'library' ifNone: [self createFormStructure].
+
 	form xmlString: OrbeonFormDefinitionTemplate form_ue_library;
 		id: self defaultFormId;
-		title: 'Test Section Interation Name';
-		processXMLDefinition"
+		title: 'Library';
+		processXMLDefinition

@@ -2,5 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "BrunoBB 03/19/2017 17:18",
-		"testCreation" : "BrunoBB 03/18/2017 13:40" } }
+		"createFormStructure" : "BrunoBB 03/25/2017 18:30",
+		"setUp" : "BrunoBB 03/25/2017 18:29",
+		"testSectionsStructure" : "BrunoBB 03/25/2017 18:35" } }

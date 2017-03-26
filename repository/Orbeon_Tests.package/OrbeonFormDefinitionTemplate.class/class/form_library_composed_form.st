@@ -20,18 +20,18 @@ form_library_composed_form
 		      <xh:title>Library Composed Form</xh:title>
 		      <xf:model xxf:expose-xpath-types="true" id="fr-form-model"><!-- Main instance --><xf:instance xxf:exclude-result-prefixes="#all" id="fr-form-instance" xxf:index="id">
 				            <form>
-					               <section-8>
+					               <internal-section>
                         <s/>
                         <k/>
                         <uuid/>
                         <oop/>
                         <assignmentOop/>
-                    </section-8>
-                    <section-14>
+                    </internal-section>
+                    <login-section>
                         <username/>
                         <rol/>
                         <processId/>
-                    </section-14>
+                    </login-section>
                     <section-name>
                         <name/>
                         <surname/>
@@ -44,8 +44,8 @@ form_library_composed_form
 				            </form>
 			         </xf:instance>
             <!-- Bindings --><xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
-				            <xf:bind id="section-8-bind" ref="section-8" name="section-8"/>
-                <xf:bind id="section-14-bind" ref="section-14" name="section-14"/>
+				            <xf:bind id="internal-section-bind" ref="internal-section" name="internal-section"/>
+                <xf:bind id="login-section-bind" ref="login-section" name="login-section"/>
                 <xf:bind id="section-name-bind" name="section-name" ref="section-name"/>
 				            <xf:bind id="section-address-bind" name="section-address" ref="section-address"/>
 			         </xf:bind>
@@ -73,14 +73,14 @@ form_library_composed_form
 							                     <label>Name</label>
 							                     <help/>
 						                  </section-name>
-                        <section-8>
+                        <internal-section>
                             <label>Internal</label>
                             <help/>
-                        </section-8>
-                        <section-14>
+                        </internal-section>
+                        <login-section>
                             <label>User</label>
                             <help/>
-                        </section-14>
+                        </login-section>
 						                  <section-address>
 							                     <label>Adress</label>
 							                     <help/>
@@ -91,14 +91,14 @@ form_library_composed_form
 							                     <label/>
 							                     <help/>
 						                  </section-name>
-                        <section-8>
+                        <internal-section>
                             <label/>
                             <help/>
-                        </section-8>
-                        <section-14>
+                        </internal-section>
+                        <login-section>
                             <label/>
                             <help/>
-                        </section-14>
+                        </login-section>
 						                  <section-address>
 							                     <label/>
 							                     <help/>
@@ -188,15 +188,15 @@ form_library_composed_form
 		      <fr:view>
 			         <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
-				            <fr:section id="section-8-control" bind="section-8-bind">
-                    <xf:label ref="$form-resources/section-8/label"/>
+				            <fr:section id="internal-section-control" bind="internal-section-bind">
+                    <xf:label ref="$form-resources/internal-section/label"/>
                     <component:internal-section xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/orbeon/library"
                                                 xmlns="http://orbeon.org/oxf/xml/form-builder"
                                                 xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder"
                                                 xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"/>
                 </fr:section>
-                <fr:section id="section-14-control" bind="section-14-bind">
-                    <xf:label ref="$form-resources/section-14/label"/>
+                <fr:section id="login-section-control" bind="login-section-bind">
+                    <xf:label ref="$form-resources/login-section/label"/>
                     <component:section-11 xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/orbeon/library"
                                           xmlns="http://orbeon.org/oxf/xml/form-builder"
                                           xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder"
