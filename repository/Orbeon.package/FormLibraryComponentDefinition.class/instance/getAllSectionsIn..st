@@ -1,4 +1,4 @@
 form
 getAllSectionsIn: anOrderedCollection
 
-	^publishedComponent getAllSectionsIn: anOrderedCollection
+	^sectionDefinition getAllSectionsIn: anOrderedCollection

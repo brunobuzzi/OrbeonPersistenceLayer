@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"name:" : "BrunoBB 08/06/2014 17:57",
-		"name:definition:" : "BrunoBB 08/06/2014 11:38" },
+		"name:" : "BrunoBB 03/14/2017 10:02",
+		"name:definition:" : "BrunoBB 03/14/2017 10:02" },
 	"instance" : {
-		"addIteration:" : "BrunoBB 08/06/2014 06:46",
-		"getAllValuesFor:" : "BrunoBB 04/04/2016 15:15",
-		"gridDefinition" : "BrunoBB 08/05/2014 11:15",
-		"gridDefinition:" : "BrunoBB 08/05/2014 11:15",
-		"gridIterations" : "BrunoBB 08/05/2014 11:13",
-		"gridIterations:" : "BrunoBB 08/05/2014 11:13",
+		"addIteration:" : "BrunoBB 03/14/2017 10:02",
+		"getAllValuesFor:" : "BrunoBB 03/14/2017 10:02",
+		"gridDefinition" : "BrunoBB 03/14/2017 10:02",
+		"gridDefinition:" : "BrunoBB 03/14/2017 10:02",
+		"gridIterations" : "BrunoBB 03/14/2017 10:02",
+		"gridIterations:" : "BrunoBB 03/14/2017 10:02",
 		"initialize" : "BrunoBB 03/14/2017 10:02",
-		"printStructureOn:count:" : "BrunoBB 02/24/2015 03:50",
-		"section" : "BrunoBB 08/05/2014 11:15",
-		"section:" : "BrunoBB 08/05/2014 11:15",
-		"sectionName" : "BrunoBB 02/28/2015 09:44" } }
+		"printStructureOn:count:" : "BrunoBB 03/14/2017 10:02",
+		"section" : "BrunoBB 03/14/2017 10:02",
+		"section:" : "BrunoBB 03/14/2017 10:02",
+		"sectionName" : "BrunoBB 03/14/2017 10:02" } }

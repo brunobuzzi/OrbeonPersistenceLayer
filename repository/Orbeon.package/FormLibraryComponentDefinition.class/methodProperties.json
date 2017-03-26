@@ -4,7 +4,7 @@
 	"instance" : {
 		"fieldDefinitions" : "BrunoBB 03/18/2017 10:13",
 		"getAllFieldDefinitions" : "BrunoBB 03/18/2017 10:06",
-		"getAllSectionsIn:" : "BrunoBB 03/18/2017 10:03",
+		"getAllSectionsIn:" : "BrunoBB 03/26/2017 09:24",
 		"getReferencedSectionName" : "BrunoBB 03/18/2017 09:43",
 		"getSubSectionNamed:ifNone:" : "BrunoBB 03/18/2017 10:15",
 		"getTreeLevel" : "BrunoBB 03/18/2017 09:48",

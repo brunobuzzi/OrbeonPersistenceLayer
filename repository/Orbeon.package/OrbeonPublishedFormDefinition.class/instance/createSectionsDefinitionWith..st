@@ -4,7 +4,6 @@ createSectionsDefinitionWith: anOrbeonFormReader
 
 	"Normal Sections"
 	(anOrbeonFormReader formMainSectionsRepeatable: false) do: [:xmlSection | | sectionName section |
-
 		sectionName := anOrbeonFormReader getNameFrom: xmlSection.
 		section := self createSectionDefinitionNamed: sectionName repeatable: false basedOn: xmlSection with: anOrbeonFormReader.
 		self addSectionDefinition: section.
