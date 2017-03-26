@@ -2,10 +2,6 @@ other
 testSectionsStructure
 	| section |
 
-	self assert: (form sectionDefinitions size = 4).
-	self assert: (form fieldDefinitions size = 13).
-	self assert: ((form getAllSectionsIn: OrderedCollection new) size = 4).
-
 	section := form getSectionNamed: 'internal-section'.
 	section getFieldNamed: 's' ifAbsent: [self assert: false].
 	section getFieldNamed: 'k' ifAbsent: [self assert: false].
