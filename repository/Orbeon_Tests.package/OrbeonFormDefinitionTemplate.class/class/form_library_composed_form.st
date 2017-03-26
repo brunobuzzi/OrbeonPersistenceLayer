@@ -197,21 +197,21 @@ form_library_composed_form
                 </fr:section>
                 <fr:section id="login-section-control" bind="login-section-bind">
                     <xf:label ref="$form-resources/login-section/label"/>
-                    <component:section-11 xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/orbeon/library"
+                    <component:login-section xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/orbeon/library"
                                           xmlns="http://orbeon.org/oxf/xml/form-builder"
                                           xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder"
                                           xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"/>
                 </fr:section>
                 <fr:section bind="section-name-bind" id="section-name-control">
 					               <xf:label ref="$form-resources/section-name/label"/>
-					               <component:section-1 xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/ue/library"
+					               <component:section-name xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/ue/library"
                                          xmlns="http://orbeon.org/oxf/xml/form-builder"
                                          xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder"
                                          xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"/>
 				            </fr:section>
 				            <fr:section bind="section-address-bind" id="section-address-control">
 					               <xf:label ref="$form-resources/section-address/label"/>
-					               <component:section-4 xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/ue/library"
+					               <component:section-address xmlns:component="http://orbeon.org/oxf/xml/form-builder/component/ue/library"
                                          xmlns="http://orbeon.org/oxf/xml/form-builder"
                                          xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder"
                                          xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"/>
