@@ -55,7 +55,6 @@ form_library_composed_form
 					               <form-name>library-composed-form</form-name>
 					               <title xml:lang="en">Library Composed Form</title>
 					               <description xml:lang="en">Library Composed Form</description>
-					               <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
 					               <description xml:lang="es"/>
                     <version-comment/>
 				            </metadata>

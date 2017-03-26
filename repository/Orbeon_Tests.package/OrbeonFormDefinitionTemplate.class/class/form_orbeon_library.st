@@ -1,7 +1,7 @@
 library forms
 form_orbeon_library
 
-	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
+	^'<?xml version="1.0" encoding="UTF-8"?><xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -58,10 +58,8 @@ form_orbeon_library
                     <form-name>library</form-name>
                     <title xml:lang="en">Seaside Integration</title>
                     <description xml:lang="en">Seaside Integration</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <version-comment/>
-                    
                 </metadata>
             </xf:instance>
             <!-- Attachments -->
@@ -181,7 +179,6 @@ form_orbeon_library
                            mediatype="application/xml"
                            replace="instance"
                            instance="fr-service-response-instance"/>
-            
             <xf:action id="security-action-binding">
             <!-- React to event... on control... -->
             <xf:action event="xforms-ready" ev:observer="fr-form-model" if="true()">
@@ -195,7 +192,6 @@ form_orbeon_library
                     <!-- Copy over to read-write request instance -->
                <xf:insert ref="instance(''fr-service-request-instance'')"
                                origin="saxon:parse(instance($request-instance-name))"/>
-             
                     <!-- Set values if needed -->
                <xf:action context="instance(''fr-service-request-instance'')">
                   <!-- Setvalue actions will be here -->
@@ -208,10 +204,6 @@ form_orbeon_library
                         <xf:var name="control-name" value="''username''"/>
                         <xf:var name="control-value" value="/result/username"/>
                     </xf:action>
-                    
-                    
-                    
-                    
                     <xf:action class="fr-set-control-value-action">
                         <xf:var name="control-name" value="''rol''"/>
                         <xf:var name="control-value" value="/result/rol"/>
