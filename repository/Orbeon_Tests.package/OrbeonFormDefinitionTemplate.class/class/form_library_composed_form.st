@@ -20,7 +20,7 @@ form_library_composed_form
 		      <xh:title>Library Composed Form</xh:title>
 		      <xf:model xxf:expose-xpath-types="true" id="fr-form-model"><!-- Main instance --><xf:instance xxf:exclude-result-prefixes="#all" id="fr-form-instance" xxf:index="id">
 				            <form>
-					               <internal-section>
+					 <internal-section>
                         <s/>
                         <k/>
                         <uuid/>
@@ -35,12 +35,12 @@ form_library_composed_form
                     <section-name>
                         <name/>
                         <surname/>
-					               </section-name>
-					               <section-address>
+				   </section-name>
+				   <section-address>
                         <street/>
                         <number/>
                         <subNumber/>
-					               </section-address>
+				    </section-address>
 				            </form>
 			         </xf:instance>
             <!-- Bindings --><xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
