@@ -1,7 +1,7 @@
 library forms
 form_orbeon_library
 
-	^'<?xml version="1.0" encoding="UTF-8"?><xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
+	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -60,6 +60,7 @@ form_orbeon_library
                     <description xml:lang="en">Seaside Integration</description>
                     <description xml:lang="es"/>
                     <version-comment/>
+                    
                 </metadata>
             </xf:instance>
             <!-- Attachments -->
@@ -164,57 +165,6 @@ form_orbeon_library
             <xf:instance id="fr-service-response-instance" xxf:exclude-result-prefixes="#all">
                 <response/>
             </xf:instance>
-            <xf:instance id="security-token-instance" class="fr-service"
-                         xxf:exclude-result-prefixes="#all">
-                <body xmlns:secure="java:org.orbeon.oxf.util.SecureUtils"
-                      xmlns:frf="java:org.orbeon.oxf.fr.FormRunner"
-                      xmlns:p="http://www.orbeon.com/oxf/pipeline"
-                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder">&lt;uuid&gt;&lt;/uuid&gt;</body>
-            </xf:instance>
-            <xf:submission id="security-token-submission" class="fr-service"
-                           ref="instance(''fr-service-request-instance'')"
-                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}"
-                           method="get"
-                           serialization="application/xml"
-                           mediatype="application/xml"
-                           replace="instance"
-                           instance="fr-service-response-instance"/>
-            <xf:action id="security-action-binding">
-            <!-- React to event... on control... -->
-            <xf:action event="xforms-ready" ev:observer="fr-form-model" if="true()">
-               <!-- Service to call -->
-               <xf:send submission="security-token-submission"/>            
-                </xf:action> 
-                <!-- Request actions -->
-            <xf:action event="xforms-submit" ev:observer="security-token-submission">
-               <!-- Get reference to initial request -->
-               <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
-                    <!-- Copy over to read-write request instance -->
-               <xf:insert ref="instance(''fr-service-request-instance'')"
-                               origin="saxon:parse(instance($request-instance-name))"/>
-                    <!-- Set values if needed -->
-               <xf:action context="instance(''fr-service-request-instance'')">
-                  <!-- Setvalue actions will be here -->
-               </xf:action>
-                </xf:action>
-                <!-- Response actions -->
-            <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
-                           context="instance(''fr-service-response-instance'')">
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''username''"/>
-                        <xf:var name="control-value" value="/result/username"/>
-                    </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''rol''"/>
-                        <xf:var name="control-value" value="/result/rol"/>
-                    </xf:action>
-                    <xf:action class="fr-set-control-value-action">
-                        <xf:var name="control-name" value="''processId''"/>
-                        <xf:var name="control-value" value="/result/processid"/>
-                    </xf:action>
-                    <!-- Response actions will be here -->
-            </xf:action>
-            </xf:action>
         </xf:model>
    </xh:head>
    <xh:body>
@@ -229,21 +179,21 @@ form_orbeon_library
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
                                     <xf:hint ref="$form-resources/s/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td>
                                 <xf:input id="k-control" bind="k-bind">
                                     <xf:label ref="$form-resources/k/label"/>
                                     <xf:hint ref="$form-resources/k/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td>
                                 <xf:input id="uuid-control" bind="uuid-bind">
                                     <xf:label ref="$form-resources/uuid/label"/>
                                     <xf:hint ref="$form-resources/uuid/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                         </xh:tr>
@@ -253,13 +203,14 @@ form_orbeon_library
                                     <xf:label ref="$form-resources/oop/label"/>
                                     <xf:hint ref="$form-resources/oop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td>
                                 <xf:input id="assignmentOop-control" bind="assignmentOop-bind">
                                     <xf:label ref="$form-resources/assignmentOop/label"/>
                                     <xf:hint ref="$form-resources/assignmentOop/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td/>
@@ -274,21 +225,21 @@ form_orbeon_library
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
                                     <xf:hint ref="$form-resources/username/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td>
                                 <xf:input id="rol-control" bind="rol-bind">
                                     <xf:label ref="$form-resources/rol/label"/>
                                     <xf:hint ref="$form-resources/rol/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                             <xh:td>
                                 <xf:input id="processId-control" bind="processId-bind">
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </xh:td>
                         </xh:tr>
