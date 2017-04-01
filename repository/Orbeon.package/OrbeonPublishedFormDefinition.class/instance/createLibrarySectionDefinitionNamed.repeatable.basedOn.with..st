@@ -1,7 +1,7 @@
 process xml
 createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: xmlSection with: anOrbeonFormReader
 	"The receiver create a reference to a -Library Section- named <sectionName>"
-		| section componentNode httpStringReference publishedComponent appName referencedSectionName |
+		| section componentNode httpStringReference publishedComponent appName referencedSectionName referencedSection |
 
 	section := FormLibraryComponentDefinition name: sectionName definition: self.
 
@@ -17,7 +17,10 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 	publishedComponent ifNil: [LibraryReferenceException signal: 'The referenced Published Form does NOT exist !'].
 
 	referencedSectionName := (componentNode name subStrings: ':') last.
+	referencedSection := publishedComponent getSectionNamed: referencedSectionName.
 
-	section sectionDefinition: (publishedComponent getSectionNamed: referencedSectionName).
+	referencedSection getAllFieldDefinitions do: [:each | labels at: each name put: each label]. "set the labels of the referenced Section"
+
+	section sectionDefinition: referencedSection.
 
 	^section

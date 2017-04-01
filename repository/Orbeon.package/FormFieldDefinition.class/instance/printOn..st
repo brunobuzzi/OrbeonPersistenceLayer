@@ -1,6 +1,5 @@
 other
 printOn: aStream
 
-	super printOn: aStream.
 
-	aStream nextPutAll: '[', name, ' t:', self printTabIndex, ']'
+	aStream nextPutAll: self asString, '[', name, ' t:', self printTabIndex, ']'
