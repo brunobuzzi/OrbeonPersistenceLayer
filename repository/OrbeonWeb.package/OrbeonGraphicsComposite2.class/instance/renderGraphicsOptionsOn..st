@@ -1,8 +1,8 @@
 render
 renderGraphicsOptionsOn: html
 
-		html form with: [
-			html fieldSet with: [ 
+		html form class: 'centered-unique-form'; with: [
+			html fieldSet class: 'border-radius10px'; with: [ 
 				html legend: 'Charts'.
 				self renderChartTypeComboOn: html.
 				self renderStartEndDatesOn: html.

@@ -5,4 +5,5 @@ initialize
 
 	self initializeBatchedLists.
 
-	showDefinitionList := true
+	showDefinitionList := true.
+	showOptionsForms := true.

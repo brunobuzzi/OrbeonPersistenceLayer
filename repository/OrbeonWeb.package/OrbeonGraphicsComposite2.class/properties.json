@@ -11,7 +11,8 @@
 		"graphName",
 		"svgCanvas",
 		"showDefinitionList",
-		"distributionReport" ],
+		"distributionReport",
+		"showOptionsForms" ],
 	"name" : "OrbeonGraphicsComposite2",
 	"pools" : [
 		 ],

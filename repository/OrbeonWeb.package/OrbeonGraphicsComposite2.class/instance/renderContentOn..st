@@ -8,6 +8,8 @@ renderContentOn: html
 	html div id: 'system-rols'; class: 'default-gray-table '; 
 		with:[html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
 
-	html div with: [self renderGraphicsOptionsOn: html].
+	showOptionsForms 
+	ifTrue: [html div with: [self renderGraphicsOptionsOn: html]]
+	ifFalse: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
 
 	graphName ifNotNil: [self renderGraphOn: html]
