@@ -42,3 +42,4 @@ testSectionStructureAndValues
 	grid19 := section14 grids at: 'grid-19' ifAbsent: [self assert: false].
 	self assert: ((grid19 getAllValuesFor: 'options') includes: '2 1').
 	self assert: ((grid19 getAllValuesFor: 'otherOptions') includes: '2').
+self halt.

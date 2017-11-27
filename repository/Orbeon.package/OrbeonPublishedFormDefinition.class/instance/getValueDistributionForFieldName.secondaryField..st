@@ -10,17 +10,20 @@ getValueDistributionForFieldName: fieldName secondaryField: secondaryField
      orderedSecondaryDistribution := OrderPreservingDictionary new.
      orderedDistribution := OrderPreservingDictionary new.
 
-     (self fieldInstancesOf: fieldName) do: [:fieldInst |  | fieldValue count secondaryKey secondaryValue secondaryCount |
+     (self fieldInstancesOf: fieldName) do: [:fieldInst |  | fieldValue count secondaryKey secondaryValueHolder secondaryCount |
          fieldValue := (fieldInst value class = String) ifTrue:[fieldInst value] ifFalse: [fieldInst value printString].
          (distribution includesKey: fieldValue) ifFalse: [distribution at: fieldValue put: 0].
          count := (distribution at: fieldValue) + 1.
          distribution at: fieldValue put: count. "main distribution"
 
-         secondaryValue := fieldInst parentObject fieldValueAt: secondaryField.
-         secondaryKey := fieldValue, '.', secondaryValue.
-         (secondaryDistribution includesKey: secondaryKey) ifFalse: [secondaryDistribution at: secondaryKey put: 0].
-         secondaryCount := (secondaryDistribution at: secondaryKey) + 1.
-         secondaryDistribution at: secondaryKey put: secondaryCount. "secondary distribution"
+		secondaryValueHolder := fieldInst parentObject holderValueAt: secondaryField.
+
+		secondaryValueHolder currentValues do: [:eachValue | 
+			 secondaryKey := fieldValue, '.', eachValue.
+			 (secondaryDistribution includesKey: secondaryKey) ifFalse: [secondaryDistribution at: secondaryKey put: 0].
+			 secondaryCount := (secondaryDistribution at: secondaryKey) + 1.
+			 secondaryDistribution at: secondaryKey put: secondaryCount. "secondary distribution"
+		].
      ].
 
     distribution keys asSortedCollection do: [:key| orderedDistribution at: key put: (distribution at: key)].
