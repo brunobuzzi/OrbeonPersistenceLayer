@@ -15,7 +15,6 @@
 		"getAnyDraftWith:formName:in:ifNone:" : "BrunoBB 04/27/2016 14:52",
 		"getAnyInstanceWith:formName:in:ifNone:" : "BrunoBB 04/27/2016 14:52",
 		"getDefinitionWithId:ifNone:" : "BrunoBB 04/27/2016 14:52",
-		"getExistingApplicationOrCreateNewNamed:" : "BrunoBB 04/27/2016 15:20",
 		"getInstancesCreationDayDistributionQuantityFrom:to:" : "BrunoBB 10/01/2016 10:04",
 		"getInstancesCreationDayDistributionQuantityFrom:to:groupedBy:" : "BrunoBB 10/01/2016 09:58",
 		"getInstancesCreationDistributionByMonthFrom:to:" : "BrunoBB 10/02/2016 11:55",
