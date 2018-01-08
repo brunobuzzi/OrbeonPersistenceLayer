@@ -1,4 +1,4 @@
 other
 processId
 
-	^externalOwner processId
+	^assignment processId
