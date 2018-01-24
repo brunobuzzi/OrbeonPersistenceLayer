@@ -1,7 +1,7 @@
 form-field-value
 fieldValueAt: fieldName
 	"Answer the converted value (a Smalltalk object) for the field named <fieldName>.
-	If it is a non repeatable field then answer the value of the field if it is a repeatable field then answer aCollection of values "
+	If it is a non repeatable field then answer the value of the field and if it is a repeatable field then answer aCollection of values "
 	| valueHolder |
 
 	valueHolder := fieldsValues at: fieldName ifAbsent: [^nil].
