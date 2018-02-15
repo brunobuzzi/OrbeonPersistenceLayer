@@ -1,8 +1,10 @@
 {
 	"class" : {
-		"newWithXml:" : "brunobb 02/15/2018 13:14",
+		"newWithXml:" : "brunobb 02/15/2018 13:47",
 		"newWithXml:id:" : "brunobb 02/15/2018 12:57" },
 	"instance" : {
+		"apiConfiguration" : "brunobb 02/15/2018 13:35",
+		"createFormReader" : "brunobb 02/15/2018 13:48",
 		"formReader" : "brunobb 02/15/2018 13:11",
 		"formReader:" : "brunobb 02/15/2018 13:11",
 		"getApplicationName" : "brunobb 02/15/2018 13:14",
@@ -11,8 +13,9 @@
 		"getTitle" : "brunobb 02/15/2018 13:15",
 		"id" : "brunobb 02/15/2018 12:44",
 		"id:" : "brunobb 02/15/2018 12:44",
-		"newFormReader" : "brunobb 02/15/2018 13:12",
 		"parseXmlString" : "brunobb 02/15/2018 13:05",
+		"restHandler" : "brunobb 02/15/2018 14:00",
+		"restHandler:" : "brunobb 02/15/2018 14:00",
 		"version" : "brunobb 02/15/2018 12:44",
 		"version:" : "brunobb 02/15/2018 12:44",
 		"xmlDocument" : "brunobb 02/15/2018 12:59",

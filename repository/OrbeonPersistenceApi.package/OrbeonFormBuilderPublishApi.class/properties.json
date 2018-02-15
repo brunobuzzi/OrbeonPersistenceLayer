@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"headerVersion" ],
+		"headerVersion",
+		"appName",
+		"formName" ],
 	"name" : "OrbeonFormBuilderPublishApi",
 	"pools" : [
 		 ],
