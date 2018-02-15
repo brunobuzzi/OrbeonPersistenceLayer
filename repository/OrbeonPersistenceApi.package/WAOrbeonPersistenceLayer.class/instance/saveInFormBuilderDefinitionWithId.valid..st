@@ -6,7 +6,8 @@ saveInFormBuilderDefinitionWithId: id valid: aBoolean
 	<put>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml/?valid={2}'>
 
-	apiOperation := OrbeonFormBuilderSaveApi newWithXml: self requestContext request rawBody id: id.
+	apiOperation := OrbeonFormBuilderSaveApi newFor: self withXml: self requestContext request rawBody id: id.
+
 	apiOperation createFormReader.
 
 	apiOperation execute

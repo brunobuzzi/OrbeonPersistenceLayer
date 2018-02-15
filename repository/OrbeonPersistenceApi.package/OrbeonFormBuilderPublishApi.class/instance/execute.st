@@ -6,7 +6,7 @@ execute
 	* Compare latest published version with the new one --> [update the current |or| add the new one]"
 	| orbeonApplication latestSavedDefinition orbeonPublishedDefinition existingVersion |
 
-	orbeonApplication := self getOrbeonApplicationClass applicationNamed: appName ifNone: [self createOrbeonApplicationNamed: appName].
+	orbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
 
 	version := (headerVersion = 'next') 
 							ifTrue: [(orbeonApplication getLastFormDefinitionVersionOf: formName) + 1]
@@ -23,7 +23,7 @@ execute
 
 	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonPublishedDefinition. ^self]. "is a new definition --> is added as published"
 
-	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^self noRouteFound: self requestContext].
+	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^restHandler noRouteFound: self requestContext].
 	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
 	ifFalse: ["the current published definition is updated"
 				existingVersion "get the last existing definition and discard <orbeonDefinition>"
