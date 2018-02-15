@@ -1,4 +1,0 @@
-other
-process
-
-	^externalOwner process

@@ -1,4 +1,0 @@
-other
-hasExternalOwner
-
-	^externalOwner notNil
