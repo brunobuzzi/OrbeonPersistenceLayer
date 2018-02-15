@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"xmlString",
-		"id",
-		"version",
-		"xmlDocument" ],
-	"name" : "OrbeonServiceOperationApi",
+		 ],
+	"name" : "OrbeonFormRunnerApi",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrbeonServiceOperationApi",
 	"type" : "normal" }

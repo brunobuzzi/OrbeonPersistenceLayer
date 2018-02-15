@@ -10,5 +10,5 @@
 	"name" : "OrbeonFormDefinitionDuplicateApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormDuplicateApi",
+	"super" : "OrbeonFormBuilderApi",
 	"type" : "normal" }

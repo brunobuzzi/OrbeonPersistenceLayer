@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"id",
-		"version" ],
-	"name" : "OrbeonFormDuplicateApi",
+		 ],
+	"name" : "OrbeonFormSaveFinalApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonServiceOperationApi",
+	"super" : "OrbeonFormRunnerApi",
 	"type" : "normal" }

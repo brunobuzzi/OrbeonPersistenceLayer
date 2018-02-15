@@ -1,7 +1,6 @@
 other
-id: id xmlString: xmlString
+newWithXml: xmlString
 
 	^super new initialize
-		id: id;
 		xmlString: xmlString;
 		yourself
