@@ -9,7 +9,8 @@
 		"xmlString",
 		"id",
 		"version",
-		"xmlDocument" ],
+		"xmlDocument",
+		"formReader" ],
 	"name" : "OrbeonServiceOperationApi",
 	"pools" : [
 		 ],

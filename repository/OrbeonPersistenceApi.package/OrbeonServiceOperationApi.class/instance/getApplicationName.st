@@ -1,0 +1,4 @@
+metadata
+getApplicationName
+
+	^formReader getApplicationName
