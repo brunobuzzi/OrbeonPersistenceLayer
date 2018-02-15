@@ -3,4 +3,4 @@ printOn: aStream
 
 	super printOn: aStream.
 
-	aStream nextPutAll: '[', self getApplicationName, '.', formName, ']'
+	aStream nextPutAll: '[', self getApplicationName, '.', self getFormName, ']'

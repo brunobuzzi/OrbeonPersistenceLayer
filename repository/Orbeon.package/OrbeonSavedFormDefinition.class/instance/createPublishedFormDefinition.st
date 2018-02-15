@@ -5,7 +5,7 @@ createPublishedFormDefinition
 		id: id;
 		application: application;
 		formName: formName;
-		xmlString: xmlString;
 		title: self title;
 		description: self description;
+		xmlString: xmlString;
 		yourself

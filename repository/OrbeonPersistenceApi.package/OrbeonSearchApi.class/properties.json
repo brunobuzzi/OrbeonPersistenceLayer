@@ -21,5 +21,5 @@
 	"name" : "OrbeonSearchApi",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrbeonServiceOperationApi",
 	"type" : "normal" }

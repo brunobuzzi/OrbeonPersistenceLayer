@@ -12,8 +12,6 @@ duplicateFormInstance: formName app: app newId: id
 	orbeonInstance := OrbeonFormInstance new.
 
 	orbeonInstance xmlString: self requestContext request rawBody;
-	"	app: app;
-		form: formName; "
 		id: id;
 		definition: currentInstance definition;
 		version: (self requestContext request headerAt: 'orbeon-form-definition-version');

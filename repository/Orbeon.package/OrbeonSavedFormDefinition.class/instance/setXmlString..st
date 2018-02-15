@@ -9,5 +9,3 @@ setXmlString: aString
 				definition definition: self].
 
 	definition xmlString: xmlString.
-
-	self setMetadata.

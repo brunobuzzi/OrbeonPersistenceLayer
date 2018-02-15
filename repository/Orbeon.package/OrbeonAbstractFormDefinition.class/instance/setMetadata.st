@@ -3,7 +3,10 @@ setMetadata
 	| reader |
 
 	reader := self newFormReader.
-	app := reader getApplicationName.
-	form := reader getFormName.
-	self setProperty: 'title' with: reader getTitle.
-	self setProperty: 'description' with: reader getDescription.
+
+	formName := reader getFormName.
+
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: reader getApplicationName.
+
+	self title: reader getTitle.
+	self description: reader getDescription.

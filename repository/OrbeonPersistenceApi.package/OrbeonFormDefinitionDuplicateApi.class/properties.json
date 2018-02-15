@@ -1,0 +1,15 @@
+{
+	"category" : "OrbeonPersistenceApi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id",
+		"version" ],
+	"name" : "OrbeonFormDefinitionDuplicateApi",
+	"pools" : [
+		 ],
+	"super" : "OrbeonServiceOperationApi",
+	"type" : "normal" }
