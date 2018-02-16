@@ -1,5 +1,5 @@
 other
-ifRequiredUpdateFormInApplication: appName andFormName: formName
+ifRequiredUpdateForm
 	"If required the receiver rename the application and form name.
 	At this point is SAFE to move everything to new location because an <AlreadyExistApplicationOrFormNameException> is NOT possible"
 	| currentIdDefinition | 

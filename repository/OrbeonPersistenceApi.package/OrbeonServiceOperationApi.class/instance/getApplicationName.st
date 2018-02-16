@@ -1,4 +1,6 @@
 metadata
 getApplicationName
 
-	^formReader getApplicationName
+	appName ifNil: [appName := formReader getApplicationName].
+
+	^appName

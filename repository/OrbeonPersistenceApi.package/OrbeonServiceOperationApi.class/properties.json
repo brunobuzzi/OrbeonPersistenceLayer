@@ -11,7 +11,9 @@
 		"id",
 		"version",
 		"xmlDocument",
-		"formReader" ],
+		"formReader",
+		"appName",
+		"formName" ],
 	"name" : "OrbeonServiceOperationApi",
 	"pools" : [
 		 ],
