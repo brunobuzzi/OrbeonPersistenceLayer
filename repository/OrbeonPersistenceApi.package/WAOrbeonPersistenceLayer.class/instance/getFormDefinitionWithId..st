@@ -6,5 +6,4 @@ getFormDefinitionWithId: id
 	<produces: 'application/xml'>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml'>
 
-	^((GRCodec forEncoding: 'utf-8') 
-		decode: (self getOrbeonApplicationClass getSavedDefinitionWithId: id ifNone: [^NoOrbeonFormException signal: ('No Form Definition with id:' , id)]) xmlString) asString
+	^(OrbeonFormDefinitionSourceApi newFor: self id: id) doIt
