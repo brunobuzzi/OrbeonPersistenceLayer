@@ -10,8 +10,8 @@
 		"deleteFormDefinitionWithId:" : "BrunoBB 02/08/2016 11:25",
 		"deleteFormDraft:app:withId:" : "BrunoBB 12/20/2016 07:33",
 		"deleteFormInstance:app:withId:" : "BrunoBB 03/25/2017 14:08",
-		"duplicateFormDefinitionNewId:" : "brunobb 02/15/2018 14:05",
-		"duplicateFormInstance:app:newId:" : "brunobb 02/16/2018 10:27",
+		"duplicateFormDefinitionNewId:" : "brunobb 02/16/2018 11:47",
+		"duplicateFormInstance:app:newId:" : "brunobb 02/16/2018 11:47",
 		"generateXmlNodeForFormBuilderVersionList:with:" : "BrunoBB 12/08/2016 08:10",
 		"getAllFormDefinitionVesionsFor:app:allversions:" : "BrunoBB 12/29/2016 07:30",
 		"getApplicationNameFrom:ifNone:" : "BrunoBB 09/11/2015 12:57",
@@ -47,4 +47,4 @@
 		"signalNoFormException:id:app:" : "BrunoBB 09/30/2015 14:05",
 		"signalNoFormException:id:app:version:" : "BrunoBB 09/30/2015 13:56",
 		"storeFileOnTempPath:definitionId:" : "BrunoBB 09/11/2015 13:03",
-		"unpublishFormDefinition:app:" : "BrunoBB 02/08/2016 11:30" } }
+		"unpublishFormDefinition:app:" : "brunobb 02/16/2018 11:46" } }

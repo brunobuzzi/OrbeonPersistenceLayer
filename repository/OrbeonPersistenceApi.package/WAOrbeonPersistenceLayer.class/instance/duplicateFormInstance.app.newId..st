@@ -11,4 +11,4 @@ duplicateFormInstance: formName app: app newId: id
 		formName: formName;
 		version: (Number fromString: (self requestContext request headerAt: 'orbeon-form-definition-version')).
 
-	apiOperation execute.
+	apiOperation execute

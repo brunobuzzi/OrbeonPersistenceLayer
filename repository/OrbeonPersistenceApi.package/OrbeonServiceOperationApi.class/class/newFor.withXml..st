@@ -1,7 +1,6 @@
 other
 newFor: aWARestfulHandler withXml: xmlString
 
-	^super new initialize
-		restHandler: aWARestfulHandler;
+	^(self newFor: aWARestfulHandler)
 		xmlString: xmlString;
 		yourself
