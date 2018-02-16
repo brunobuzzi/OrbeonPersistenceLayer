@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	| savedDefinition application currentDefinition |
 
 	savedDefinition := OrbeonSavedFormDefinition new.

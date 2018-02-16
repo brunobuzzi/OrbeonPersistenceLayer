@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	"The receiver publish the form named <formName> in application named <app> with id <id> title <title> description <description> and xml <xmlString>. 
 	The version of the form is in <headerVersion> - orbeon parameter.
 	* Calculate the version number & create <anOrbeonSavedFormDefinition> 

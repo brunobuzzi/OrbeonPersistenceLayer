@@ -12,4 +12,4 @@ publishFormDefinition: formName app: app withId: documentId
 		formName: formName;
 		headerVersion: (self requestContext request headerAt: 'orbeon-form-definition-version').
 
-	apiOperation execute
+	apiOperation doIt

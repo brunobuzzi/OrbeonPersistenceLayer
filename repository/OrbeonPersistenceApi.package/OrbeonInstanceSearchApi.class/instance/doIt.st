@@ -1,5 +1,5 @@
 queries
-executeQuery
+doIt
 	"The receiver execute the query defined in it's self. Storing the result in <resultCollection>"
 
 	"if there is NO query nodes --> Orbeon is searching for a draft for a given form <id>"

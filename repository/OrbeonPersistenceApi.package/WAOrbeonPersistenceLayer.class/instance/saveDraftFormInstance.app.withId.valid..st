@@ -15,4 +15,4 @@ saveDraftFormInstance: formName app: app withId: id valid: aBoolean
 		modifiedUser: (self requestContext request headerAt: 'orbeon-username');
 		groupname: (self requestContext request headerAt: 'orbeon-group').
 
-	apiOperation execute.
+	apiOperation doIt

@@ -1,12 +1,12 @@
 service-delete
 deleteFormInstance: formName app: app withId: id
-	"This method is called by Orbeon when a user click -Send- in a Form Instance page"
-	| application instance |
+	"This method is called by Orbeon when a user click 'Delete' in a Form Instance in the Form Runner page"
+	| apiOperation |
 	<delete>
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
-	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^NoApplicationException signal: 'No application named [', app, '] was found'].
+	apiOperation := OrbeonFormInstanceDeleteApi newFor: self id: id.
+	apiOperation appName: app;
+		formName: formName.
 
-	instance := application getAnyInstanceWithId: id of: formName.
-
-	instance removeFromMainCollection
+	apiOperation doIt

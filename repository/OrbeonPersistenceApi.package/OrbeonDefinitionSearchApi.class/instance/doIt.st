@@ -1,5 +1,5 @@
 other
-executeQuery
+doIt
 	| savedDefinitions |
 
 	savedDefinitions := self getOrbeonApplicationClass getAllSavedDefinitions.

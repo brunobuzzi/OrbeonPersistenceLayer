@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	| application definition instance |
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^self signalNoApplicationException: self getApplicationName].

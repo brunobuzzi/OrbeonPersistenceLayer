@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	"This method is called by Orbeon when a user click 'Duplicate' in a Form Instance in the Form Runner"
 	| orbeonInstance application currentInstance |
 

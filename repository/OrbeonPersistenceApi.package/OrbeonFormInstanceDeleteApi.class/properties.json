@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"fileId" ],
-	"name" : "OrbeonFileOperationApi",
+		 ],
+	"name" : "OrbeonFormInstanceDeleteApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonServiceOperationApi",
+	"super" : "OrbeonFormRunnerApi",
 	"type" : "normal" }

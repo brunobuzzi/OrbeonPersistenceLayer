@@ -8,4 +8,4 @@ duplicateFormDefinitionNewId: id
 
 	apiOperation := OrbeonFormDefinitionDuplicateApi newFor: self withXml: self requestContext request rawBody id: id.
 
-	apiOperation execute
+	apiOperation doIt

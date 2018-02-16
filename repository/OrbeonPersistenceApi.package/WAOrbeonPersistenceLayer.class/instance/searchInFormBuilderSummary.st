@@ -15,6 +15,6 @@ searchInFormBuilderSummary
 				group: (self requestContext request headerAt: 'orbeon-group');
 				user: (self requestContext request headerAt: 'orbeon-username').
 
-	searchApi executeQuery. 
+	searchApi doIt. 
 
 	^searchApi generateXmlAnswerForBuilderSummary

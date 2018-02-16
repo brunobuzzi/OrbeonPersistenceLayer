@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	"This method is called by Orbeon when a Form Definition has been unpublished with form name <formName> in application <app>"
 	| application definition |
 

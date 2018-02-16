@@ -1,5 +1,5 @@
 other
-execute
+doIt
 	"This method is called by Orbeon when a Form is autosaved in a Form Instance page"
 	| application definition orbeonDraft |
 
