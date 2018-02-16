@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OrbeonDefinitionSearchApi",
+		"allversions" ],
+	"name" : "OrbeonAllFormDefinitionVersionsApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonSummaryApi",
+	"super" : "OrbeonGenericGetApi",
 	"type" : "normal" }

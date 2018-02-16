@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonDefinitionSearchApi",
+	"name" : "OrbeonGenericGetApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonSummaryApi",
+	"super" : "OrbeonSearchApi",
 	"type" : "normal" }

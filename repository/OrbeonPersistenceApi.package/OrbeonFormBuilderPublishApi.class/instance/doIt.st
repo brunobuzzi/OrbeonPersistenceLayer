@@ -23,7 +23,7 @@ doIt
 
 	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonPublishedDefinition. ^self]. "is a new definition --> is added as published"
 
-	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^restHandler noRouteFound: self requestContext].
+	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
 	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
 	ifFalse: ["the current published definition is updated"
 				existingVersion "get the last existing definition and discard <orbeonDefinition>"

@@ -1,0 +1,25 @@
+{
+	"category" : "OrbeonPersistenceApi",
+	"classinstvars" : [
+		"log",
+		"queryErrors" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"xmlSearchDefinitionDocument",
+		"user",
+		"group",
+		"resultCollection",
+		"total",
+		"searchTotal",
+		"pageNumber",
+		"pageSize",
+		"queryNodes",
+		"queryString",
+		"searchValues" ],
+	"name" : "OrbeonSummaryApi",
+	"pools" : [
+		 ],
+	"super" : "OrbeonSearchApi",
+	"type" : "normal" }

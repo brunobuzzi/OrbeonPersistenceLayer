@@ -1,4 +1,4 @@
-xml op
+other
 generateXmlNodeForFormBuilderVersionList: anOrbeonPublishedFormDefinition with: anXMLWriter
 	"The receiver create a XML structure to display the definition <anOrbeonFormDefinition> in ../orbeon/fr page"
 	| attributes |

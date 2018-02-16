@@ -2,24 +2,14 @@ service-get
 getAllFormDefinitionVesionsFor: formName app: app allversions: aStringBoolean
 	"Implemented as stated in: 
 	https://doc.orbeon.com/form-runner/api/persistence/forms-metadata.html#returning-all-form-definition-versions"
-	| application registry xmlWriter getAllVersions |
+	| apiOperation |
 	<get>
 	<produces: 'application/xml'>
 	<path: '/form/{2}/{1}?all-versions={3}'>
 
-	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self noRouteFound: self requestContext].
+	apiOperation := OrbeonAllFormDefinitionVersionsApi newFor: self.
+	apiOperation appName: app;
+		formName: formName;
+		allversions: aStringBoolean.
 
-	registry := application registryForFormNamed: formName ifNone: [^self noRouteFound: self requestContext].
-
-	getAllVersions := aStringBoolean = 'true'.
-	getAllVersions ifFalse: [^registry getLastVersionNumber].
- 
-	xmlWriter := XMLWriter new.
-
-	xmlWriter writeWith: [:writer | 
-		writer tag: 'forms' with: [
-			registry currentVersions do: [:publishedVersion | self generateXmlNodeForFormBuilderVersionList: publishedVersion with: writer].
-		].
-	].
-
-	^xmlWriter contents
+	^apiOperation doIt
