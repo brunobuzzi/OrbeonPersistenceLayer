@@ -6,9 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OrbeonFormSaveDraftApi",
+		"isValid",
+		"username",
+		"modifiedUser",
+		"groupname" ],
+	"name" : "OrbeonFormSaveApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormSaveApi",
+	"super" : "OrbeonFormRunnerApi",
 	"type" : "normal" }

@@ -15,8 +15,8 @@ execute
 		definition: definition;
 		draft: 'Y';
 		version: version;
-		username:  (self requestContext request headerAt: 'orbeon-username'); "BUG - creator set only one time"
-		modifiedUser: (self requestContext request headerAt: 'orbeon-username');
-		groupname: (self requestContext request headerAt: 'orbeon-group');
+		username: username; "BUG - creator set only one time"
+		modifiedUser: modifiedUser;
+		groupname: groupname;
 		updateLastModifiedTime;
 		processXMLSections. "create the sections and fields but NOT the FormFieldValues"

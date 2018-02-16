@@ -10,5 +10,5 @@
 	"name" : "OrbeonFormSaveFinalApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormRunnerApi",
+	"super" : "OrbeonFormSaveApi",
 	"type" : "normal" }
