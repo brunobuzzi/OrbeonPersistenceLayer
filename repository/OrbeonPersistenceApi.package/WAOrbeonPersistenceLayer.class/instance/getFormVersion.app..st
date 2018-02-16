@@ -4,17 +4,14 @@ getFormVersion: formName app: app
 	This method answer the latest version of the form definition <formName> in application <app>.
 	Using the header <orbeon-form-definition-version> to set the version number.
 	It also called when a new Form Instance page is about to be displayed (app/form/new)"
-	| application latestDefinition headerVersion headerValue |
+	| apiOperation |
 	<get>
 	<produces: 'application/xml'>
 	<path: '/crud/{2}/{1}/form/form.xhtml'>
 
-	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self noRouteFound: self requestContext].
+	apiOperation := OrbeonLastFormDefinitionSourceApi newFor: self.
+	apiOperation appName: app;
+		formName: formName;
+		headerVersion: (self requestContext request headerAt: 'orbeon-form-definition-version').
 
-	headerValue := self requestContext request headerAt: 'orbeon-form-definition-version'.
-	headerVersion := headerValue ifNil: [application getLastFormDefinitionVersionOf: formName] ifNotNil: [Number fromString: headerValue].
-
-	latestDefinition := application getSavedDefinition: formName version: headerVersion ifNone: [^self noRouteFound: self requestContext].
-	latestDefinition isDeleted ifTrue: [^self noRouteFound: self requestContext].
-
-	^((GRCodec forEncoding: 'utf-8') decode: latestDefinition xmlString) asString
+	^apiOperation doIt
