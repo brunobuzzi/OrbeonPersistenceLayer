@@ -1,0 +1,3 @@
+Accessing
+fileContents
+	^fileContents

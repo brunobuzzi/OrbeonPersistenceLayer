@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"fileId",
-		"fileContents" ],
-	"name" : "OrbeonFileOperationApi",
+		 ],
+	"name" : "OrbeonReceiveAndSaveDefinitionFileApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonServiceOperationApi",
+	"super" : "OrbeonFileReceiveApi",
 	"type" : "normal" }
