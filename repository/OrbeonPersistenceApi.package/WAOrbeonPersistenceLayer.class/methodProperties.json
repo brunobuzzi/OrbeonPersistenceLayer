@@ -3,7 +3,6 @@
 		"register" : "BrunoBB 02/08/2017 06:11",
 		"unregister" : "BrunoBB 02/07/2017 10:52" },
 	"instance" : {
-		"addDeferredProcessingFor:" : "BrunoBB 09/11/2015 15:01",
 		"apiConfiguration" : "BrunoBB 09/03/2015 14:01",
 		"auditStorage" : "BrunoBB 09/21/2015 11:09",
 		"defaultDefinitionAnswer:app:" : "BrunoBB 03/16/2017 10:52",
@@ -24,12 +23,11 @@
 		"getToolboxForApplication:" : "brunobb 02/16/2018 12:47",
 		"getXmlOfFormDraftWithId:form:app:" : "brunobb 02/17/2018 07:32",
 		"getXmlOfFormInstanceWithId:form:app:" : "brunobb 02/17/2018 07:35",
-		"moveFromTempPathFileOf:" : "BrunoBB 03/21/2017 14:14",
 		"publishFormDefinition:app:withId:" : "brunobb 02/16/2018 12:05",
 		"receiveAndPublishFileFor:app:documentId:fileId:" : "brunobb 02/17/2018 08:34",
 		"receiveAndSaveFileForDefinitionWithId:fileId:valid:" : "brunobb 02/17/2018 08:34",
-		"receiveAndSaveFileForDraft:app:definitionId:fileId:valid:" : "BrunoBB 09/06/2015 14:29",
-		"receiveAndSaveFileForInstance:app:definitionId:fileId:valid:" : "BrunoBB 09/06/2015 14:29",
+		"receiveAndSaveFileForDraft:app:draftId:fileId:valid:" : "brunobb 02/17/2018 08:43",
+		"receiveAndSaveFileForInstance:app:instanceId:fileId:valid:" : "brunobb 02/17/2018 08:51",
 		"saveDraftFormInstance:app:withId:valid:" : "brunobb 02/16/2018 12:05",
 		"saveFinalFormInstance:app:withId:valid:" : "brunobb 02/16/2018 12:05",
 		"saveInFormBuilderDefinitionWithId:valid:" : "brunobb 02/16/2018 12:05",
@@ -44,5 +42,4 @@
 		"signalNoFormException:app:" : "BrunoBB 09/30/2015 15:00",
 		"signalNoFormException:id:app:" : "BrunoBB 09/30/2015 14:05",
 		"signalNoFormException:id:app:version:" : "BrunoBB 09/30/2015 13:56",
-		"storeFileOnTempPath:definitionId:" : "BrunoBB 09/11/2015 13:03",
 		"unpublishFormDefinition:app:" : "brunobb 02/16/2018 12:05" } }
