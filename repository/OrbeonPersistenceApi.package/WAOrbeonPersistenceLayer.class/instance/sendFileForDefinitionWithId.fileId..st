@@ -2,18 +2,12 @@ service-get
 sendFileForDefinitionWithId: definitionId fileId: fileId
 	"This service is called by Orbeon Form Builder to get/obtain the attached file with id <fileId> for the Form Definition <definitionId>.
 	The service answer an octet stream to the caller."
-	| definition contents gsFile |
+	| apiOperation |
 	<get>
 	<produces: 'application/octet-stream'>
 	<path: '/crud/orbeon/builder/data/{1}/{2}'>
 
-	definition := self getOrbeonApplicationClass getAnyDefinitionWithId: definitionId ifNone: [^NoOrbeonFormException signal: 'No form definition with id [', definitionId, ']'].
+	apiOperation := OrbeonSendFormDefinitionFileApi newFor: self id: definitionId.
+	apiOperation fileId: fileId.
 
-	self requestContext response contentType: WAMimeType applicationOctetStream.
-
-	gsFile := GsFile openOnServer: ((self apiConfiguration getSavedDefinitionsPathFor: definition formName in: definition getApplicationName), definitionId, '-',fileId) mode: 'rb'.
-	contents := gsFile contentsAsUtf8.
-
-	gsFile close.
-
-	^contents
+	^apiOperation doIt
