@@ -29,13 +29,8 @@
 		"saveInFormBuilderDefinitionWithId:valid:" : "brunobb 02/16/2018 12:05",
 		"searchInFormBuilderSummary" : "brunobb 02/16/2018 12:06",
 		"searchInFormSummary:app:" : "brunobb 02/16/2018 12:06",
-		"seasideMimeDocument" : "BrunoBB 08/25/2015 16:02",
 		"sendFileForCustomPDF:app:fileId:" : "brunobb 02/17/2018 09:54",
 		"sendFileForDefinitionWithId:fileId:" : "brunobb 02/17/2018 09:38",
 		"sendFileForDraft:app:draftId:fileId:" : "brunobb 02/17/2018 09:44",
 		"sendFileForInstance:app:instanceId:fileId:" : "brunobb 02/17/2018 09:48",
-		"signalNoApplicationException:" : "BrunoBB 02/07/2016 15:36",
-		"signalNoFormException:app:" : "BrunoBB 09/30/2015 15:00",
-		"signalNoFormException:id:app:" : "BrunoBB 09/30/2015 14:05",
-		"signalNoFormException:id:app:version:" : "BrunoBB 09/30/2015 13:56",
 		"unpublishFormDefinition:app:" : "brunobb 02/16/2018 12:05" } }
