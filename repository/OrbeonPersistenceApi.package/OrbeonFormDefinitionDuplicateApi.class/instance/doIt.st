@@ -15,4 +15,6 @@ doIt
 
 	savedDefinition setXmlString: savedDefinition xmlString. "create the associated <OrbeonPublishedFormDefinition>"
 
-	application addSavedDefinition: savedDefinition
+	application addSavedDefinition: savedDefinition.
+
+	^savedDefinition xmlString

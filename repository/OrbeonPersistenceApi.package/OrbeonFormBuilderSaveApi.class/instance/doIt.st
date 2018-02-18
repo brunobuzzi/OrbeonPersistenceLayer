@@ -17,3 +17,5 @@ doIt
 	savedDefinition := self createSavedDefinitionNamed. "here the OrbeonFormDefinition is created and associate to the receiver <savedDefinition>"
 
 	self moveFromTempPathFileOf: savedDefinition. "move attachments if it is the case -issue #37-"
+
+	^savedDefinition xmlString

@@ -4,4 +4,4 @@ deleteFormDefinitionWithId: id
 	<delete>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml'>
 
-	(OrbeonFormDefinitionDeleteApi newFor: self id: id) doIt
+	^(OrbeonFormDefinitionDeleteApi newFor: self id: id) doIt

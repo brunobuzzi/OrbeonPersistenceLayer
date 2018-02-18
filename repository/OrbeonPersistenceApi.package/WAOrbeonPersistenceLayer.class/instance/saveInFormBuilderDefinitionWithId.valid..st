@@ -10,4 +10,4 @@ saveInFormBuilderDefinitionWithId: id valid: aBoolean
 
 	apiOperation createFormReader.
 
-	apiOperation doIt
+	^apiOperation doIt
