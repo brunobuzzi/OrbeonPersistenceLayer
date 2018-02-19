@@ -14,7 +14,7 @@ doIt
 	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
 	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', self getFormName,'] in application [', self getApplicationName, ']'].
 
-	savedDefinition := self createSavedDefinitionNamed. "here the OrbeonFormDefinition is created and associate to the receiver <savedDefinition>"
+	savedDefinition := self createSavedDefinition. "here the OrbeonFormDefinition is created and associate to the receiver <savedDefinition>"
 
 	self moveFromTempPathFileOf: savedDefinition. "move attachments if it is the case -issue #37-"
 

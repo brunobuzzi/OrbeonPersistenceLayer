@@ -1,6 +1,6 @@
 other
 doIt
-	| savedDefinition application currentDefinition |
+	| savedDefinition application |
 
 	savedDefinition := OrbeonSavedFormDefinition new.
 
@@ -11,7 +11,6 @@ doIt
 		updateLastModifiedTime.
 
 	application := savedDefinition application.
-	currentDefinition := application getLatestSavedDefinition: savedDefinition formName.
 
 	savedDefinition setXmlString: savedDefinition xmlString. "create the associated <OrbeonPublishedFormDefinition>"
 
