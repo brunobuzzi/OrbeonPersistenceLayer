@@ -1,15 +1,20 @@
 other
 doIt
 	"This method is called by Orbeon when a user click 'Duplicate' in a Form Instance in the Form Runner"
-	| orbeonInstance application currentInstance |
+	| orbeonInstance application instanceDefinition |
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^self signalNoApplicationException: self getApplicationName].
-	currentInstance := application getAnyInstanceWithId: id of: self getFormName.
+
+	instanceDefinition := application getDefinitionNamed: self getFormName withVersion: version ifNone: [^self signalNoFormException].
 
 	orbeonInstance := OrbeonFormInstance new.
 
 	orbeonInstance xmlString: xmlString;
 		id: id;
-		definition: currentInstance definition;
+		definition: instanceDefinition;
 		version: version;
 		updateLastModifiedTime.
+
+	(self apiConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
+	ifTrue: [self addDeferredProcessingFor: orbeonInstance] 
+	ifFalse: [orbeonInstance processXML].
