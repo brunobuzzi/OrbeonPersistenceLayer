@@ -11,6 +11,6 @@ ifRequiredUpdateForm
 
 	"move the registry to the new location and set the form name and application as requiered"
 	currentIdDefinition registry
-			moveTo: appName 
-			currentName: currentIdDefinition formName 
-			withNewName: formName
+		move: currentIdDefinition 
+		toApplication: appName	 
+		andForm: formName

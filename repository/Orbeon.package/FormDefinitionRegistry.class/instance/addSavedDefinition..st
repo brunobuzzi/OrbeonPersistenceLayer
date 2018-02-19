@@ -6,9 +6,10 @@ addSavedDefinition: anOrbeonSavedFormDefinition
 
 	savedCollection := savedDefinitions at: anOrbeonSavedFormDefinition id ifAbsentPut: [OrderedCollection new].
 
-	oldSavedVersion := savedCollection detect: [:each | each version = anOrbeonSavedFormDefinition version] 
-														ifNone: [^savedCollection add: anOrbeonSavedFormDefinition].
+	oldSavedVersion := savedCollection detect: [:each | each version = anOrbeonSavedFormDefinition version] ifNone: [^savedCollection add: anOrbeonSavedFormDefinition].
 
-	savedCollection remove: oldSavedVersion ifAbsent: [].
+	savedCollection remove: oldSavedVersion 
+						ifAbsent: [OrbeonDefinitionNotFoundException signal: 'OrbeonSavedFormDefinition named [', oldSavedVersion formName,'] in app', oldSavedVersion getApplicationName,'] not found'].
+
 
 	^savedCollection add: anOrbeonSavedFormDefinition

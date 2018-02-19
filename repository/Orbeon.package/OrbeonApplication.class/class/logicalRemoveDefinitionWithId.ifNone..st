@@ -6,4 +6,4 @@ logicalRemoveDefinitionWithId: stringId ifNone: aBlock
 
 	instanceDefinition logicalDelete. "delete the OrbeonFormInstanceDefinition"
 
-	instanceDefinition definition logicalDelete.  "delete the OrbeonFormDefinition"
+	^instanceDefinition definition logicalDelete.  "delete the OrbeonFormDefinition"
