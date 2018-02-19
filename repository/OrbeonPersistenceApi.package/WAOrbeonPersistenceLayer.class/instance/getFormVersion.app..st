@@ -12,6 +12,6 @@ getFormVersion: formName app: app
 	apiOperation := OrbeonLastFormDefinitionSourceApi newFor: self.
 	apiOperation appName: app;
 		formName: formName;
-		headerVersion: (self requestContext request headerAt: 'orbeon-form-definition-version').
+		headerVersionValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
 
 	^apiOperation doIt

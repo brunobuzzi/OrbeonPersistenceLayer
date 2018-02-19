@@ -8,7 +8,7 @@ doIt
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^restHandler noRouteFound: restHandler requestContext].
 
-	headerVersion := headerValue ifNil: [application getLastFormDefinitionVersionOf: self getFormName] ifNotNil: [Number fromString: headerValue].
+	headerVersion := headerVersionValue ifNil: [application getLastFormDefinitionVersionOf: self getFormName] ifNotNil: [Number fromString: headerVersionValue].
 
 	latestDefinition := application getSavedDefinition: formName version: headerVersion ifNone: [^restHandler noRouteFound: restHandler requestContext].
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
