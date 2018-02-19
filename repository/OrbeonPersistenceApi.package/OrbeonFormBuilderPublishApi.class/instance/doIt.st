@@ -29,7 +29,7 @@ doIt
 				existingVersion "get the last existing definition and discard <orbeonDefinition>"
 					updateLastModifiedTime;
 					version: orbeonPublishedDefinition version;
-					xmlString: self requestContext request rawBody;
+					xmlString: xmlString;
 					publish;
 					processXMLDefinition] 
 	ifTrue: [orbeonApplication replaceCurrentDefinition: existingVersion with: orbeonPublishedDefinition]
