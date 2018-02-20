@@ -1,9 +1,10 @@
 other
 applyQueryToFormDefinitions: anOrderedCollection
-	"The receiver apply the query contained in xml document <xmlDocument> to the OrbeonFormInstanceDefinition in the collection <anOrderedCollection>"
-	| queryFields result |
+	"The receiver apply the query contained in xml document <xmlDocument> to all <OrbeonSavedFormDefinition> in collection <anOrderedCollection>"
+	| queryFields result conditions |
 
 	queryFields := Dictionary new. "dictionary with the criteria to search"
+	conditions := OrderedCollection new.
 	result := anOrderedCollection select: [:each | each deleted = 'N']. "exclude deleted definitions"
 
 	queryNodes := (xmlSearchDefinitionDocument allElementsNamed: 'query') do: [:node | "get the criteria from <xmlDocument>"
@@ -11,10 +12,14 @@ applyQueryToFormDefinitions: anOrderedCollection
 
 	"apply all available criteria to the result collection <result>"
 	queryFields keysAndValuesDo: [:key :value |
-		(key = 'application-name') ifTrue: [result := result select: [:each | each getApplicationName = (queryFields at: 'application-name')]].
-		(key = 'form-name') ifTrue: [result := result select: [:each | each formName = (queryFields at: 'form-name')]].
-		(key = 'title') ifTrue: [result := result select: [:each | each title = (queryFields at: 'title')]].
-		(key = 'description') ifTrue: [result := result select: [:each | each description = (queryFields at: 'description')]].
+		(key = 'application-name') ifTrue: [conditions add: [:each | value match: each getApplicationName]].
+		(key = 'form-name') ifTrue: [conditions add: [:each | value match: each formName]].
+		(key = 'title') ifTrue: [conditions add: [:each | value match: each title]].
+		(key = 'description') ifTrue: [conditions add: ([:each | value match: each description])].
+		(key = '') ifTrue: [conditions add: [:each | (value match: each getApplicationName) or: [(value match: each formName) or: [(value match: each title) or: [(value match: each description)]]]]
+					].
 	].
+
+	conditions do: [:conditionBlock | result := result select: conditionBlock].
 
 	^resultCollection := result
