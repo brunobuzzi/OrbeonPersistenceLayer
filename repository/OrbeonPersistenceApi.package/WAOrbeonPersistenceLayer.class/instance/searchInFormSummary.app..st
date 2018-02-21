@@ -9,9 +9,9 @@ searchInFormSummary: formName app: app
 	<path: '/search/{2}/{1}'>
 
 	application := self getOrbeonApplicationClass applicationNamed: app ifNone: [^self noRouteFound: self requestContext "^self signalNoApplicationException: app"].
-	definition := application definitionNamed: formName ifNone: [self noRouteFound: self requestContext "^self signalNoFormException: formName app: app"].
+	definition := application definitionNamed: formName ifNone: [^self noRouteFound: self requestContext "^self signalNoFormException: formName app: app"].
 
-	definition isDeleted ifTrue: [^self noRouteFound: self requestContext].
+	(definition isDeleted or:[definition isAvailable not]) ifTrue: [^self noRouteFound: self requestContext].
 
 	searchApi := OrbeonInstanceSearchApi for: application formName: formName.
 
