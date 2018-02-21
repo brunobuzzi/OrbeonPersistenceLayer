@@ -9,4 +9,4 @@ unpublishFormDefinition: formName app: app
 	apiOperation appName: app;
 		formName: formName.
 
-	apiOperation doIt
+	^apiOperation doIt
