@@ -12,6 +12,6 @@ doIt
 
 	latestDefinition := application getSavedDefinition: formName version: headerVersion ifNone: [^restHandler noRouteFound: restHandler requestContext].
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
-	latestDefinition definition isAvailable ifFalse: [^restHandler noRouteFound: restHandler requestContext].
+	"latestDefinition definition isAvailable ifFalse: [^restHandler noRouteFound: restHandler requestContext]."
 
 	^((GRCodec forEncoding: 'utf-8') decode: latestDefinition xmlString) asString
