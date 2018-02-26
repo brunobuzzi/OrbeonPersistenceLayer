@@ -12,7 +12,7 @@ doIt
 	(instance xmlString notNil and:[self apiConfiguration isInstanceAuditEnableFor: self getFormName in: self getApplicationName]) 
 	ifTrue: [self auditStorage addInstanceAudit: instance cloneForAudit].
 
-	instance xmlString: self requestContext request rawBody;
+	instance xmlString: xmlString;
 		draft: 'N';
 		definition: definition;
 		version: version;
