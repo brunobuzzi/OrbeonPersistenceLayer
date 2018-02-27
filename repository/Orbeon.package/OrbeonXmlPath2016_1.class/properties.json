@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"xmlDefinition",
-		"xmlDocument",
-		"xmlInstanceDocument",
-		"orbeonXPath" ],
-	"name" : "OrbeonFormReader",
+		 ],
+	"name" : "OrbeonXmlPath2016_1",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrbeonXmlPath",
 	"type" : "normal" }
