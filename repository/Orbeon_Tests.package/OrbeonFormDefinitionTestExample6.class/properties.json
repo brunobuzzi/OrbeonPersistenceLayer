@@ -10,5 +10,5 @@
 	"name" : "OrbeonFormDefinitionTestExample6",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormDefinitionTest",
+	"super" : "OrbeonFormDefinitionTest_Upto_2017_1",
 	"type" : "normal" }
