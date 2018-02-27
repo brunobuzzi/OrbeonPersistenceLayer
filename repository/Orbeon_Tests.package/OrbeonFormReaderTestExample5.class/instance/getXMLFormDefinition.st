@@ -1,0 +1,4 @@
+other
+getXMLFormDefinition
+
+	^OrbeonFormDefinitionTemplate formDefinition_custom_iteration.

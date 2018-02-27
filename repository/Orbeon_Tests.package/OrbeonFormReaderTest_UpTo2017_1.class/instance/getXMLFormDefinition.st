@@ -1,0 +1,4 @@
+other
+getXMLFormDefinition
+
+	self subclassResponsibility

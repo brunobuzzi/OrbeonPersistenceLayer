@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonFormReaderTestExample5",
+	"name" : "OrbeonFormReaderTest_2017_2",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormReaderTest_UpTo2017_1",
+	"super" : "OrbeonFormReaderTest",
 	"type" : "normal" }

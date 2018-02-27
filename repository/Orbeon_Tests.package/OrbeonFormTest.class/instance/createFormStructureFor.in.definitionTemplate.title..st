@@ -4,7 +4,7 @@ createFormStructureFor: formName in: appName definitionTemplate: methodName titl
 	The XML of the form is take it from <OrbeonFormDefinitionTemplate> using the class method <methodName>"
 	| savedDefinition app |
 
-	app := OrbeonApplication applicationNamed: appName.
+	app := self getOrbeonApplicationClass applicationNamed: appName.
 	savedDefinition := OrbeonSavedFormDefinition app: app applicationName form: formName.
 	savedDefinition id: UUID new asString;
 		version: 1;
