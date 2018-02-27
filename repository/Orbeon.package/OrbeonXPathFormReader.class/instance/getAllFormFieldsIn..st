@@ -6,8 +6,8 @@ getAllFormFieldsIn: xmlNode
 	| fields |
 
 	fields := OrderedCollection new.
-	(xmlNode xPath: './/fr:grid/xh:tr/xh:td/*[starts-with(name(), ''fr:'')]') addAllTo: fields.
-	(xmlNode xPath: './/fr:grid/xh:tr/xh:td/*[starts-with(name(), ''us:'')]') addAllTo: fields.
-	(xmlNode xPath: './/fr:grid/xh:tr/xh:td/*[starts-with(name(), ''xf:'')]') addAllTo: fields.
+	(xmlNode xPath: orbeonXPath frFieldsInDocumentXpath) addAllTo: fields.
+	(xmlNode xPath: orbeonXPath usFieldsInDocumentXpath) addAllTo: fields.
+	(xmlNode xPath: orbeonXPath xfFieldsInDocumentXpath) addAllTo: fields.
 
 	^fields

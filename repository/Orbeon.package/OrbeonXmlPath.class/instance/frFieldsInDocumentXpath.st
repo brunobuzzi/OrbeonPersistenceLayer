@@ -1,0 +1,4 @@
+other
+frFieldsInDocumentXpath
+
+	self subclassResponsibility

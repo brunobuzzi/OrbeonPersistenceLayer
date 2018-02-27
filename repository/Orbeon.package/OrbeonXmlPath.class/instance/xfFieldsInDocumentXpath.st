@@ -1,0 +1,4 @@
+other
+xfFieldsInDocumentXpath
+
+	self subclassResponsibility

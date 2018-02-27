@@ -2,5 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"frFieldsInDocumentXpath" : "brunobb 02/27/2018 11:02",
+		"frFieldsInSectionXpath" : "brunobb 02/27/2018 09:49",
 		"searchFieldsXPath" : "brunobb 02/27/2018 06:09",
-		"summaryFieldsXPath" : "brunobb 02/27/2018 06:09" } }
+		"summaryFieldsXPath" : "brunobb 02/27/2018 06:09",
+		"usFieldsInDocumentXpath" : "brunobb 02/27/2018 11:03",
+		"usFieldsInSectionXpath" : "brunobb 02/27/2018 09:49",
+		"xfFieldsInDocumentXpath" : "brunobb 02/27/2018 11:03",
+		"xfFieldsInSectionXpath" : "brunobb 02/27/2018 09:49" } }
