@@ -14,4 +14,4 @@ doIt
 
 	restHandler requestContext response headerAt: 'orbeon-form-definition-version' put: orbeonDefinition version printString.
 
-	^((GRCodec forEncoding: 'utf-8') decode: orbeonDefinition xmlString) asString
+	^self decodeFromUTF8: orbeonDefinition xmlString
