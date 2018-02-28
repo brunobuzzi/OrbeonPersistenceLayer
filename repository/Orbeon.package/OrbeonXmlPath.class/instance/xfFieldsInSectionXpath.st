@@ -1,4 +1,4 @@
-other
+section
 xfFieldsInSectionXpath
 
 	self subclassResponsibility

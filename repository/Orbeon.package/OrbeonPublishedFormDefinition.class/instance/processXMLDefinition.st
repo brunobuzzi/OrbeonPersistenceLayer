@@ -2,7 +2,7 @@ process xml
 processXMLDefinition
 	"This is a time consuming operation. Uses a XML Parser to get data from <xmlString> variable"
 	| reader |
-self halt.
+
 	reader := self newFormReader.
 	labels := reader formFieldsLabels. 						"answer: aDictionary (key: field name value: label)"
 	permissions := reader getPermissions. 						"answer: aDictionary (key: permission name value: collection of rols)"

@@ -1,4 +1,4 @@
-section
-xfFieldsInSectionXpath
+grid
+xfFieldsInGridXpath
 
 	^'fr:c/*[starts-with(name(), ''xf:'')]'

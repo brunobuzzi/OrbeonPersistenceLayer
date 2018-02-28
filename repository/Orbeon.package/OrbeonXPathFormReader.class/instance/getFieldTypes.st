@@ -8,4 +8,4 @@ getFieldTypes
 	(xmlDocument xPath: '//xf:bind') do: [:eachBindNode |  
 		fieldTypes at: (eachBindNode attributeAt: 'name') put: (self getTypeFrom: eachBindNode)].
 
-	^fieldTypes.
+	^fieldTypes

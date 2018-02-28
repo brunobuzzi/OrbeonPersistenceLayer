@@ -1,4 +1,4 @@
-other
+document
 frFieldsInDocumentXpath
 
 	self subclassResponsibility

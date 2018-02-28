@@ -1,0 +1,4 @@
+grid
+frFieldsInGridXpath
+
+	self subclassResponsibility
