@@ -7,5 +7,5 @@ setUp
 
 	form xmlString: OrbeonFormDefinitionTemplate formDefinition_Test_2017_2;
 		title: 'Test'.
-self halt.
+
 	form processXMLDefinition
