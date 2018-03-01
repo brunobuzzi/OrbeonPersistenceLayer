@@ -12,7 +12,8 @@
 		"parentSection",
 		"subSections",
 		"iterationName",
-		"bind" ],
+		"bind",
+		"libraryComponent" ],
 	"name" : "FormSectionDefinition",
 	"pools" : [
 		 ],

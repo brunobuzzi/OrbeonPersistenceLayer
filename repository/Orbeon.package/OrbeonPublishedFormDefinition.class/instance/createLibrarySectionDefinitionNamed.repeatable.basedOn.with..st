@@ -22,5 +22,6 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 	referencedSection getAllFieldDefinitions do: [:each | labels at: each name put: each label]. "set the labels of the referenced Section"
 
 	section sectionDefinition: referencedSection.
+	referencedSection libraryComponent: section.
 
 	^section
