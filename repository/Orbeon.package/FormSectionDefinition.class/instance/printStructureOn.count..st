@@ -9,6 +9,7 @@ printStructureOn: aPrintStream count: counter
 
 	aPrintStream nextPutAll: '[', name, ']'.
 	isRepeatable ifTrue: [aPrintStream nextPutAll: '(R)'] ifFalse: [aPrintStream nextPutAll: '(N)']. "normal or repeat section"
+	libraryComponent ifNotNil: [:value | aPrintStream nextPutAll: '(L)']. "is Library Component"
 	aPrintStream nextPutAll: String lf.
 	
 	fieldDefinitions do: [:each | 
