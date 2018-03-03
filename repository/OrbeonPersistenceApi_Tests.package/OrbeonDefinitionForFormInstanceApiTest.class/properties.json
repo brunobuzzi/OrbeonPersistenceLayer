@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonPersistenceApi_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonDefinitionForFormInstanceApiTest",
+	"pools" : [
+		 ],
+	"super" : "OrbeonGenericGetApiTest",
+	"type" : "normal" }
