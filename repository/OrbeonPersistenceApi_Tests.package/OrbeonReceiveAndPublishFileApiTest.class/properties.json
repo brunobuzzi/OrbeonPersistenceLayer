@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonPersistenceApi_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonReceiveAndPublishFileApiTest",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFileReceiveApiTest",
+	"type" : "normal" }
