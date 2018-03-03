@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonFormDefinitionDuplicateApiTest",
+	"name" : "OrbeonServiceOperationApiTest",
 	"pools" : [
 		 ],
-	"super" : "OrbeonServiceOperationApiTest",
+	"super" : "TestCase",
 	"type" : "normal" }
