@@ -5,7 +5,7 @@ setUp
 				id: 'sldfjlsajfd-asfdlaslfdj-asd4f6a4sdf6';
 				setApplication: 'agesic';
 				formName: 'test';
-				xmlString: OrbeonFormDefinitionTemplate form_withAllField_Types_no_Attachements_01;
+				xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_withAllField_Types_no_Attachements_01;
 				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.
 
@@ -13,6 +13,6 @@ setUp
 				id: 'sldfjlsajfd-asfdlaslfdj-asd4f6a4sdf6';
 				setApplication: 'agesic';
 				formName: 'test';
-				xmlString: OrbeonFormDefinitionTemplate form_withAllField_Types_no_Attachements_02;
+				xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_withAllField_Types_no_Attachements_02;
 				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.
