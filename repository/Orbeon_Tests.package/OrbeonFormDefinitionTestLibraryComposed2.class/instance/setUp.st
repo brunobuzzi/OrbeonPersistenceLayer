@@ -12,4 +12,4 @@ setUp
 
 	form xmlString: OrbeonFormDefinitionTemplate form_library_composed_form2;
 		title: 'Test Section Library Composed Forms';
-		processXMLDefinition
+		processXMLDefinitionFor: OrbeonXmlPath2016_1 new.

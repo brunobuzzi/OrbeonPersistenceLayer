@@ -7,4 +7,4 @@ setUp
 
 	form xmlString: OrbeonFormDefinitionTemplate form_orbeon_library;
 		title: 'Library';
-		processXMLDefinition
+		processXMLDefinitionFor: OrbeonXmlPath2016_1 new.
