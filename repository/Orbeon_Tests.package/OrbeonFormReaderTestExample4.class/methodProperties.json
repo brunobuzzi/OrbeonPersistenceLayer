@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getXMLFormDefinition" : "BrunoBB 03/19/2016 13:10",
+		"setUp" : "brunobb 03/05/2018 13:01",
 		"testApplicationName" : "BrunoBB 03/18/2016 10:10",
 		"testAttachments" : "BrunoBB 03/19/2016 14:25",
 		"testCustomPDFAttachment" : "BrunoBB 03/18/2016 10:49",

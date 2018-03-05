@@ -1,5 +1,5 @@
 other
-getXMLFormDefinition
+form_example4
 
 ^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"

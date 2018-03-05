@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getXMLFormDefinition" : "brunobb 02/27/2018 09:18",
+		"setUp" : "brunobb 03/05/2018 13:00",
 		"testFieldsInDocument" : "brunobb 02/27/2018 11:00",
 		"testFieldsInMainSections" : "brunobb 02/27/2018 10:12",
 		"testFieldsTypes" : "brunobb 02/27/2018 14:39",

@@ -2,6 +2,6 @@ other
 setUp
 
 	form := OrbeonPublishedFormDefinition app: 'agesic' form: 'test'.
-	form xmlString: self getXMLFormDefinition;
+	form xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_imageAnnotation;
 		title: 'Test';
 		processXMLDefinition.

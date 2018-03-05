@@ -1,7 +1,7 @@
 other
-getXMLFormDefinition
+form_FormReader_example_3
 
-^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
+	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -14,12 +14,11 @@ getXMLFormDefinition
          xmlns:sql="http://orbeon.org/oxf/xml/sql"
          xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
          xmlns:fb="http://orbeon.org/oxf/xml/form-builder">
-   <xh:head>
-        <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <xh:head>
         <xh:title>Test</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
-         <!-- Main instance -->
-         <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all">
+            <!-- Main instance -->
+            <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all">
                 <form>
                     <section-1>
                         <section-1-iteration>
@@ -31,11 +30,9 @@ getXMLFormDefinition
                                 <control-8/>
                                 <mobile/>
                                 <grid-10>
-                                    <grid-10-iteration>
-                                        <moneySubject/>
-                                        <quantity/>
-                                        <currency/>
-                                    </grid-10-iteration>
+                                    <moneySubject/>
+                                    <quantity/>
+                                    <currency/>
                                 </grid-10>
                             </section-7>
                         </section-1-iteration>
@@ -48,26 +45,17 @@ getXMLFormDefinition
                         <details/>
                         <type/>
                         <grid-19>
-                            <grid-19-iteration>
-                                <options/>
-                                <otherOptions/>
-                            </grid-19-iteration>
+                            <options/>
+                            <otherOptions/>
                         </grid-19>
                         <section-24>
                             <formatedText/>
-                            <fileAttachment filename="query.xml" mediatype="text/xml" size="44">file:/opt/apache-tomcat-6.0.20/work/Catalina/www.orbeon.com/exist/cocoon-files/cache-dir/xforms_upload_6277316898590994612.tmp?filename=query.xml&amp;mediatype=text%2Fxml&amp;size=44&amp;mac=bf85b292873cc3a16998f1079bffe4e4225dbcae</fileAttachment>
-                            <imageAttachment filename="Snapshot_20150316.JPG" mediatype="image/jpeg" size="22588">file:/opt/apache-tomcat-6.0.20/work/Catalina/www.orbeon.com/exist/cocoon-files/cache-dir/xforms_upload_1730605233090086650.tmp?filename=Snapshot_20150316.JPG&amp;mediatype=image%2Fjpeg&amp;size=22588&amp;mac=712d1a563c8150a94d6e6518984c9864d3c3af95</imageAttachment>
-                            <imageAnnotation>
-                                <image filename="" mediatype="" size=""/>
-                                <annotation/>
-                            </imageAnnotation>
-                            <autocomplete label=""/>
                         </section-24>
                     </section-14>
                 </form>
             </xf:instance>
             <!-- Bindings -->
-         <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
+            <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
                 <xf:bind id="section-1-bind" name="section-1" ref="section-1">
                     <xf:bind id="section-1-iteration-bind" ref="section-1-iteration"
                              name="section-1-iteration">
@@ -80,11 +68,9 @@ getXMLFormDefinition
                             <xf:bind id="control-8-bind" ref="control-8" name="control-8"/>
                             <xf:bind id="mobile-bind" ref="mobile" name="mobile"/>
                             <xf:bind id="grid-10-bind" ref="grid-10" name="grid-10">
-                                <xf:bind id="grid-10-iteration-bind" ref="grid-10-iteration" name="grid-10-iteration">
-                                    <xf:bind id="quantity-bind" ref="quantity" name="quantity" type="xf:decimal"/>
-                                    <xf:bind id="currency-bind" ref="currency" name="currency" type="xf:decimal"/>
-                                    <xf:bind id="moneySubject-bind" ref="moneySubject" name="moneySubject"/>
-                                </xf:bind>
+                                <xf:bind id="quantity-bind" ref="quantity" name="quantity" type="xf:decimal"/>
+                                <xf:bind id="currency-bind" ref="currency" name="currency" type="xf:decimal"/>
+                                <xf:bind id="moneySubject-bind" ref="moneySubject" name="moneySubject"/>
                             </xf:bind>
                         </xf:bind>
                     </xf:bind>
@@ -95,78 +81,47 @@ getXMLFormDefinition
                     <xf:bind id="date2-bind" ref="date2" name="date2" type="xf:date"/>
                     <xf:bind id="date3-bind" ref="date3" name="date3" type="xf:date"/>
                     <xf:bind id="grid-19-bind" ref="grid-19" name="grid-19">
-                        <xf:bind id="grid-19-iteration-bind" ref="grid-19-iteration" name="grid-19-iteration">
-                            <xf:bind id="options-bind" ref="options" name="options"/>
-                            <xf:bind id="otherOptions-bind" ref="otherOptions" name="otherOptions"/>
-                        </xf:bind>
+                        <xf:bind id="options-bind" ref="options" name="options"/>
+                        <xf:bind id="otherOptions-bind" ref="otherOptions" name="otherOptions"/>
                     </xf:bind>
                     <xf:bind id="details-bind" ref="details" name="details"/>
                     <xf:bind id="type-bind" ref="type" name="type"/>
                     <xf:bind id="section-24-bind" ref="section-24" name="section-24">
                         <xf:bind id="formatedText-bind" ref="formatedText" name="formatedText"/>
-                        <xf:bind id="fileAttachment-bind" ref="fileAttachment" name="fileAttachment"
-                                 type="xf:anyURI"/>
-                        <xf:bind id="imageAttachment-bind" ref="imageAttachment" name="imageAttachment"
-                                 type="xf:anyURI"/>
-                        <xf:bind id="imageAnnotation-bind" ref="imageAnnotation" name="imageAnnotation"/>
-                        <xf:bind id="autocomplete-bind" ref="autocomplete" name="autocomplete"/>
                     </xf:bind>
                 </xf:bind>
             </xf:bind>
             <!-- Metadata -->
-         <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
+            <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>agesic</application-name>
                     <form-name>test</form-name>
                     <title xml:lang="en">Test</title>
                     <description xml:lang="en"/>
                     <permissions>
-                        <permission operations="read update">
-                            <group-member/>
-                        </permission>
-                        <permission operations="read update delete">
-                            <owner/>
-                        </permission>
                         <permission operations="create"/>
-                        <permission operations="read delete">
-                            <user-role any-of="orbeon-role"/>
+                        <permission operations="read update delete">
+                            <user-role any-of="orbeon-agesic-uaip-admin"/>
                         </permission>
                     </permissions>
-                    <singleton>false</singleton>
                 </metadata>
             </xf:instance>
             <!-- Attachments -->
-         <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
                 <attachments>
                     <css mediatype="text/css" filename="" size=""/>
-                    <pdf mediatype="application/pdf" filename="Dec_Jurada_Miem.pdf" size="85471">file:/var/cache/tomcat/temp/xforms_upload_4574241681918696094.tmp?filename=Dec_Jurada_Miem.pdf&amp;mediatype=application%2Fpdf&amp;size=85471&amp;mac=e483cd29568e074402e8461223977d0ac23be915</pdf>
+                    <pdf mediatype="application/pdf" filename="" size=""/>
                 </attachments>
             </xf:instance>
             <!-- All form resources -->
-         <!-- Dont make readonly by default in case a service modifies the resources -->
-         <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
+            <!-- Dont make readonly by default in case a service modifies the resources -->
+            <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
                         <formatedText>
                             <label>Formatted Text</label>
                             <hint/>
                         </formatedText>
-                        <fileAttachment>
-                            <label>Attach Document</label>
-                            <hint/>
-                        </fileAttachment>
-                        <imageAttachment>
-                            <label>Image Attachment</label>
-                            <hint/>
-                        </imageAttachment>
-                        <imageAnnotation>
-                            <label>Annotation</label>
-                            <hint/>
-                        </imageAnnotation>
-                        <autocomplete>
-                            <label>Autocomplete</label>
-                            <hint/>
-                        </autocomplete>
                         <options>
                             <label>Options</label>
                             <hint/>
@@ -308,13 +263,13 @@ getXMLFormDefinition
                 </resources>
             </xf:instance>
             <!-- Utility instances for services -->
-         <xf:instance id="fr-service-request-instance" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-service-request-instance" xxf:exclude-result-prefixes="#all">
                 <request/>
             </xf:instance>
             <xf:instance id="fr-service-response-instance" xxf:exclude-result-prefixes="#all">
                 <response/>
             </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-1-template">
+            <xf:instance xxf:readonly="true" id="section-1-template">
                 <section-1-iteration>
                     <name/>
                     <surname/>
@@ -331,27 +286,26 @@ getXMLFormDefinition
                     </section-7>
                 </section-1-iteration>
             </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="grid-10-template">
+            <xf:instance xxf:readonly="true" id="grid-10-template">
                 <grid-10>
                     <quantity/>
                     <currency/>
                     <moneySubject/>
                 </grid-10>
             </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="grid-19-template">
+            <xf:instance xxf:readonly="true" id="grid-19-template">
                 <grid-19>
                     <options/>
                     <otherOptions/>
                 </grid-19>
             </xf:instance>
         </xf:model>
-   </xh:head>
-   <xh:body>
+    </xh:head>
+    <xh:body>
         <fr:view>
-            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl"
-                     xmlns:oxf="http://www.orbeon.com/oxf/processors"
-                     xmlns:p="http://www.orbeon.com/oxf/pipeline">
-                <fr:section id="section-1-control" bind="section-1-bind" repeat="content" min="1"
+            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
+                     xmlns:oxf="http://www.orbeon.com/oxf/processors">
+                <fr:section id="section-1-control" bind="section-1-bind" repeat="true" min="1"
                             template="instance(''section-1-template'')">
                     <xf:label ref="$form-resources/section-1/label"/>
                     <fr:grid>
@@ -414,7 +368,7 @@ getXMLFormDefinition
                                 </xh:td>
                             </xh:tr>
                         </fr:grid>
-                        <fr:grid id="grid-10-grid" repeat="content" bind="grid-10-bind"
+                        <fr:grid id="grid-10-grid" repeat="true" bind="grid-10-bind"
                                  template="instance(''grid-10-template'')"
                                  min="1">
                             <xh:tr>
@@ -518,7 +472,7 @@ getXMLFormDefinition
                             </xh:td>
                         </xh:tr>
                     </fr:grid>
-                    <fr:grid id="grid-19-grid" repeat="content" bind="grid-19-bind"
+                    <fr:grid id="grid-19-grid" repeat="true" bind="grid-19-bind"
                              template="instance(''grid-19-template'')"
                              min="1">
                         <xh:tr>
@@ -563,72 +517,10 @@ getXMLFormDefinition
                                     </fr:tinymce>
                                 </xh:td>
                             </xh:tr>
-                            <xh:tr>
-                                <xh:td>
-                                    <fr:attachment xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                   xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                   id="fileAttachment-control"
-                                                   bind="fileAttachment-bind"
-                                                   class="fr-attachment">
-                                        <xf:label ref="$form-resources/fileAttachment/label"/>
-                                        <xf:hint ref="$form-resources/fileAttachment/hint"/>
-                                        <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                        <xf:filename ref="@filename"/>
-                                        <xf:mediatype ref="@mediatype"/>
-                                        <xxf:size ref="@size"/>
-                                    </fr:attachment>
-                                </xh:td>
-                            </xh:tr>
-                            <xh:tr>
-                                <xh:td>
-                                    <fr:image-attachment xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                         xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                         id="imageAttachment-control"
-                                                         bind="imageAttachment-bind"
-                                                         class="fr-attachment">
-                                        <xf:label ref="$form-resources/imageAttachment/label"/>
-                                        <xf:hint ref="$form-resources/imageAttachment/hint"/>
-                                        <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                        <xf:filename ref="@filename"/>
-                                        <xf:mediatype ref="@mediatype"/>
-                                        <xxf:size ref="@size"/>
-                                    </fr:image-attachment>
-                                </xh:td>
-                            </xh:tr>
-                            <xh:tr>
-                                <xh:td>
-                                    <fr:wpaint xmlns:xxbl="http://orbeon.org/oxf/xml/xbl" id="imageAnnotation-control"
-                                               bind="imageAnnotation-bind">
-                                        <xf:label ref="$form-resources/imageAnnotation/label"/>
-                                        <xf:hint ref="$form-resources/imageAnnotation/hint"/>
-                                        <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                    </fr:wpaint>
-                                </xh:td>
-                            </xh:tr>
-                            <xh:tr>
-                                <xh:td>
-                                    <fr:autocomplete xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                                                     id="autocomplete-control"
-                                                     appearance="minimal"
-                                                     labelref="@label"
-                                                     resource=""
-                                                     bind="autocomplete-bind">
-                                        <xf:label ref="$form-resources/autocomplete/label"/>
-                                        <xf:hint ref="$form-resources/autocomplete/hint"/>
-                                        <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                        <!-- Itemset points to an empty nodeset until users set them in the control details dialog -->
-                        <xf:itemset ref="()">
-                                            <xf:label ref="()"/>
-                                            <xf:value ref="()"/>
-                                        </xf:itemset>
-                                    </fr:autocomplete>
-                                </xh:td>
-                            </xh:tr>
                         </fr:grid>
                     </fr:section>
                 </fr:section>
             </fr:body>
         </fr:view>
-   </xh:body>
+    </xh:body>
 </xh:html>'

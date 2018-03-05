@@ -2,7 +2,7 @@ other
 setUp
 
 	form := OrbeonPublishedFormDefinition app: 'agesic' form: 'test'.
-	form xmlString: self getXMLFormDefinition;
+	form xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_example4;
 		id: self defaultFormId;
 		title: 'Test';
 		processXMLDefinition.

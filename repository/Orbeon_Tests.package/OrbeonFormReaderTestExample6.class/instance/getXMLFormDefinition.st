@@ -1,4 +1,0 @@
-other
-getXMLFormDefinition
-
-	^OrbeonFormDefinitionTemplate formDefinition_Test_2017_2
