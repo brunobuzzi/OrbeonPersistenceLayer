@@ -6,7 +6,7 @@ setUp
 				setApplication: 'agesic';
 				formName: 'test';
 				xmlString: OrbeonFormDefinitionTemplate form_withAllField_Types_no_Attachements_01;
-				processXMLDefinition;
+				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.
 
 	formTwo := OrbeonPublishedFormDefinition new
@@ -14,5 +14,5 @@ setUp
 				setApplication: 'agesic';
 				formName: 'test';
 				xmlString: OrbeonFormDefinitionTemplate form_withAllField_Types_no_Attachements_02;
-				processXMLDefinition;
+				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.

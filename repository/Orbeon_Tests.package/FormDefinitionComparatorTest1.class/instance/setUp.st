@@ -6,7 +6,7 @@ setUp
 				setApplication: 'agesic';
 				formName: 'comparision';
 				xmlString: OrbeonFormDefinitionTemplate formDefinition_comparision_v1;
-				processXMLDefinition;
+				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.
 
 	formTwo := OrbeonPublishedFormDefinition new
@@ -14,5 +14,5 @@ setUp
 				setApplication: 'agesic';
 				formName: 'comparision';
 				xmlString: OrbeonFormDefinitionTemplate formDefinition_comparision_v2;
-				processXMLDefinition;
+				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 				yourself.
