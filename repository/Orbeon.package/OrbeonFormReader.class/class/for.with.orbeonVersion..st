@@ -1,4 +1,4 @@
-other
+instance creation
 for: xmlOrbeonFormDefinition with: xmlOrbeonInstance orbeonVersion: xpathVersionInstance
 
 	^super new initialize

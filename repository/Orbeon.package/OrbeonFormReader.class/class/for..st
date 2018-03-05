@@ -1,4 +1,4 @@
-other
+instance creation
 for: xmlOrbeonFormDefinition
 
 	^super new initialize

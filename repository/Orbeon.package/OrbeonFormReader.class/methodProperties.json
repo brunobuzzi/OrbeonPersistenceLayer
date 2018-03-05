@@ -1,14 +1,8 @@
 {
 	"class" : {
-		"definitionExample" : "BrunoBB 08/16/2016 05:33",
-		"example1" : "BrunoBB 08/16/2016 05:33",
-		"example2" : "BrunoBB 08/16/2016 05:33",
-		"example3" : "BrunoBB 08/16/2016 05:33",
-		"example4" : "BrunoBB 08/16/2016 05:33",
-		"example5" : "BrunoBB 08/16/2016 05:33",
-		"for:" : "BrunoBB 08/16/2016 05:33",
+		"for:" : "brunobb 02/27/2018 06:01",
 		"for:orbeonVersion:" : "brunobb 02/27/2018 06:36",
-		"for:with:" : "BrunoBB 08/16/2016 05:33",
+		"for:with:" : "brunobb 02/27/2018 06:01",
 		"for:with:orbeonVersion:" : "brunobb 02/27/2018 06:36" },
 	"instance" : {
 		"addAnyOnePermissionTo:fromString:" : "BrunoBB 08/16/2016 05:33",
