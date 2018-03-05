@@ -7,7 +7,7 @@ formGridFieldsIn: xmlGrid
 
 	fields := OrderedCollection new.
 
-	(xmlGrid xPath: orbeonXPath xfFieldsInGridXpath) addAllTo: fields.
+	(xmlGrid xPath: orbeonXPath frFieldsInGridXpath) addAllTo: fields.
 	(xmlGrid xPath: orbeonXPath usFieldsInGridXpath) addAllTo: fields.
 	(xmlGrid xPath: orbeonXPath xfFieldsInGridXpath) addAllTo: fields.
 
