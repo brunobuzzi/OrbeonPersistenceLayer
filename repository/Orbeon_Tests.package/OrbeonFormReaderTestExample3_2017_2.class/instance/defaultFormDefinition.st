@@ -1,0 +1,4 @@
+other
+defaultFormDefinition
+
+	^OrbeonFormDefinitionTemplateFrom2017_2 form_FormReader_example_3

@@ -1,0 +1,4 @@
+other
+defaultOrbeonXpathVersion
+
+	self subclassResponsibility

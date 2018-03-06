@@ -2,4 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"defaultFormDefinition" : "brunobb 03/06/2018 11:26",
+		"defaultOrbeonXpathVersion" : "brunobb 03/06/2018 11:19",
+		"testFieldsInDocument" : "brunobb 03/06/2018 11:28",
+		"testFieldsInMainSections" : "brunobb 03/06/2018 11:28",
+		"testFieldsTypes" : "brunobb 03/06/2018 11:28",
+		"testRepeatableGridsInMainSections" : "brunobb 03/06/2018 11:28",
+		"testSearchFields" : "brunobb 03/06/2018 11:28",
+		"testSubSections" : "brunobb 03/06/2018 11:28",
+		"testSummaryFields" : "brunobb 03/06/2018 11:28" } }
