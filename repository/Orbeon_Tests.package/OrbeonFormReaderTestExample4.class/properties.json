@@ -10,5 +10,5 @@
 	"name" : "OrbeonFormReaderTestExample4",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormReaderTest_UpTo2017_1",
+	"super" : "OrbeonFormReaderTest",
 	"type" : "normal" }
