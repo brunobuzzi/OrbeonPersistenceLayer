@@ -7,12 +7,12 @@ createFormStructure
 	savedDefinition id: UUID new asString;
 		version: 1;
 		title: 'Test';
-		setXmlString: OrbeonFormDefinitionTemplate form_test.
+		setXmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_test.
 
 	app addSavedDefinition: savedDefinition.
 	savedDefinition definition 
 		publish; 
-		processXMLDefinition.
+		processXMLDefinitionFor: OrbeonXmlPath2016_1 new.
 
 	app addPublishedDefinition: savedDefinition definition.
 

@@ -2,8 +2,8 @@ other
 createFormDefinition
 
 	^(OrbeonPublishedFormDefinition app: 'agesic' form: 'test')
-			xmlString: OrbeonFormDefinitionTemplate form_test;
+			xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_test;
 			id: UUID new asString;
 			title: 'Test';
-			processXMLDefinition;
+			processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
 			yourself
