@@ -1,13 +1,6 @@
 other
-testComparision_2017_2
+testComparision
 	| differences |
-
-	formOne xmlString: OrbeonFormDefinitionTemplateFrom2017_2 form_withAllField_Types_no_Attachements_01;
-				processXMLDefinitionFor: OrbeonXmlPath2017_2 new;
-				yourself.
-
-	formTwo xmlString: OrbeonFormDefinitionTemplateFrom2017_2 form_withAllField_Types_no_Attachements_02;
-				processXMLDefinitionFor: OrbeonXmlPath2017_2 new.
 
 	differences := (formOne compareWith: formTwo) comparisionResult.
 

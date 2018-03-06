@@ -5,14 +5,14 @@ setUp
 				id: 'sldfjlsajfd-asfdlaslfdj-asd4f6a4sdf6';
 				setApplication: 'agesic';
 				formName: 'comparision';
-				xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 formDefinition_comparision_v1;
-				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
+				xmlString: self defaultForm1FormDefinition;
+				processXMLDefinitionFor: self defaultOrbeonXpathVersion;
 				yourself.
 
 	formTwo := OrbeonPublishedFormDefinition new
 				id: 'sldfjlsajfd-asfdlaslfdj-asd4f6a4sdf6';
 				setApplication: 'agesic';
 				formName: 'comparision';
-				xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 formDefinition_comparision_v2;
-				processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
+				xmlString: self defaultForm2FormDefinition;
+				processXMLDefinitionFor: self defaultOrbeonXpathVersion;
 				yourself.
