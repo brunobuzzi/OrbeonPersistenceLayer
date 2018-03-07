@@ -2,23 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 03/05/2018 13:24",
-		"testApplicationName" : "BrunoBB 03/16/2016 15:28",
-		"testCustomPDFAttachment" : "BrunoBB 03/18/2016 10:55",
-		"testDescription" : "BrunoBB 03/16/2016 15:30",
-		"testFieldTypes" : "BrunoBB 03/17/2016 13:46",
-		"testFormFieldsLabels" : "BrunoBB 03/17/2016 11:45",
-		"testFormMainSectionsNames" : "BrunoBB 03/16/2016 16:07",
-		"testFormMainSectionsSize" : "BrunoBB 03/16/2016 16:01",
-		"testFormName" : "BrunoBB 03/16/2016 15:29",
-		"testFormSubSectionsStructure" : "BrunoBB 03/17/2016 10:35",
-		"testFormTitle" : "BrunoBB 03/17/2016 14:28",
-		"testGetAllFormFieldsInSection1" : "BrunoBB 03/17/2016 10:36",
-		"testGetAllFormFieldsInSection2" : "BrunoBB 03/17/2016 10:37",
-		"testGetFieldsOfGridsInSection1" : "brunobb 03/05/2018 13:34",
-		"testGetFieldsOfGridsInSection2" : "BrunoBB 03/17/2016 12:52",
-		"testGetGridsFromSection1" : "BrunoBB 03/17/2016 12:10",
-		"testGetGridsFromSection2" : "BrunoBB 03/17/2016 12:11",
-		"testGetSearchFields" : "BrunoBB 03/17/2016 14:01",
-		"testGetSummaryFields" : "BrunoBB 03/17/2016 14:04",
-		"testPermissions" : "BrunoBB 03/18/2016 09:44" } }
+		 } }

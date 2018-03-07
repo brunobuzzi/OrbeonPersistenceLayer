@@ -2,11 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 03/06/2018 11:50",
-		"testFieldsInDocument" : "brunobb 02/27/2018 11:00",
-		"testFieldsInMainSections" : "brunobb 02/27/2018 10:12",
-		"testFieldsTypes" : "brunobb 02/27/2018 14:39",
-		"testRepeatableGridsInMainSections" : "brunobb 02/27/2018 10:49",
-		"testSearchFields" : "brunobb 02/27/2018 09:29",
-		"testSubSections" : "brunobb 02/27/2018 10:52",
-		"testSummaryFields" : "brunobb 02/27/2018 09:28" } }
+		 } }

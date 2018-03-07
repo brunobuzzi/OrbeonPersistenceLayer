@@ -2,5 +2,24 @@
 	"class" : {
 		 },
 	"instance" : {
-		"defaultFormDefinition" : "brunobb 03/06/2018 11:18",
-		"defaultOrbeonXpathVersion" : "brunobb 03/06/2018 11:18" } }
+		"defaultFormDefinition" : "brunobb 03/07/2018 11:31",
+		"defaultOrbeonXpathVersion" : "brunobb 03/06/2018 11:18",
+		"testApplicationName" : "brunobb 03/07/2018 11:31",
+		"testCustomPDFAttachment" : "brunobb 03/07/2018 11:31",
+		"testDescription" : "brunobb 03/07/2018 11:31",
+		"testFieldTypes" : "brunobb 03/07/2018 11:31",
+		"testFormFieldsLabels" : "brunobb 03/07/2018 11:31",
+		"testFormMainSectionsNames" : "brunobb 03/07/2018 11:31",
+		"testFormMainSectionsSize" : "brunobb 03/07/2018 11:31",
+		"testFormName" : "brunobb 03/07/2018 11:31",
+		"testFormSubSectionsStructure" : "brunobb 03/07/2018 11:31",
+		"testFormTitle" : "brunobb 03/07/2018 11:31",
+		"testGetAllFormFieldsInSection1" : "brunobb 03/07/2018 11:31",
+		"testGetAllFormFieldsInSection2" : "brunobb 03/07/2018 11:31",
+		"testGetFieldsOfGridsInSection1" : "brunobb 03/07/2018 11:31",
+		"testGetFieldsOfGridsInSection2" : "brunobb 03/07/2018 11:31",
+		"testGetGridsFromSection1" : "brunobb 03/07/2018 11:31",
+		"testGetGridsFromSection2" : "brunobb 03/07/2018 11:31",
+		"testGetSearchFields" : "brunobb 03/07/2018 11:31",
+		"testGetSummaryFields" : "brunobb 03/07/2018 11:31",
+		"testPermissions" : "brunobb 03/07/2018 11:31" } }
