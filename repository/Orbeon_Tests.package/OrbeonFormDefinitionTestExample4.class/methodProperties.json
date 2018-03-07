@@ -2,18 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"defaultFormId" : "BrunoBB 03/20/2016 16:01",
-		"setUp" : "brunobb 03/07/2018 12:48",
-		"testAttachments" : "BrunoBB 03/20/2016 16:02",
-		"testCustomPDFAttachment" : "BrunoBB 03/19/2016 14:15",
-		"testFieldTypes" : "BrunoBB 03/19/2016 14:14",
-		"testFormFieldsInSection1" : "BrunoBB 03/18/2016 11:12",
-		"testFormFieldsInSection11" : "BrunoBB 03/19/2016 11:46",
-		"testFormFieldsInSection2" : "BrunoBB 03/19/2016 11:04",
-		"testFormFieldsInSection21" : "BrunoBB 03/19/2016 11:08",
-		"testGridInSection11" : "BrunoBB 08/16/2016 16:02",
-		"testGridInSection2" : "BrunoBB 08/16/2016 16:02",
-		"testIsSingleton" : "BrunoBB 05/03/2016 15:31",
-		"testMainSectionsStructure" : "BrunoBB 03/18/2016 11:14",
-		"testPermissions" : "BrunoBB 03/18/2016 11:16",
-		"testSwitchAvailable" : "BrunoBB 05/03/2016 17:36" } }
+		"defaultFormId" : "BrunoBB 03/20/2016 16:01" } }

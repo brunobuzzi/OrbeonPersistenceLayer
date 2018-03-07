@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "brunobb 03/07/2018 13:17",
+		"testAttachments" : "brunobb 03/07/2018 13:16",
+		"testCustomPDFAttachment" : "brunobb 03/07/2018 13:16",
+		"testFieldTypes" : "brunobb 03/07/2018 13:16",
+		"testFormFieldsInSection1" : "brunobb 03/07/2018 13:16",
+		"testFormFieldsInSection11" : "brunobb 03/07/2018 13:16",
+		"testFormFieldsInSection2" : "brunobb 03/07/2018 13:16",
+		"testFormFieldsInSection21" : "brunobb 03/07/2018 13:16",
+		"testGridInSection11" : "brunobb 03/07/2018 13:16",
+		"testGridInSection2" : "brunobb 03/07/2018 13:16",
+		"testIsSingleton" : "brunobb 03/07/2018 13:16",
+		"testMainSectionsStructure" : "brunobb 03/07/2018 13:16",
+		"testPermissions" : "brunobb 03/07/2018 13:16",
+		"testSwitchAvailable" : "brunobb 03/07/2018 13:16" } }
