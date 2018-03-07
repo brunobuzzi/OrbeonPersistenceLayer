@@ -1,4 +1,4 @@
 grid
 usFieldsInGridXpath
 
-	^'fr:c/*[starts-with(name(), ''fr:'')]'
+	^'fr:c/*[starts-with(name(), ''us:'')]'
