@@ -12,7 +12,7 @@ createFormStructure
 	app addSavedDefinition: savedDefinition.
 	savedDefinition definition 
 		publish; 
-		processXMLDefinitionFor: OrbeonXmlPath2016_1 new.
+		processXMLDefinitionFor: OrbeonXmlPathUpTo2017_1 new.
 
 	app addPublishedDefinition: savedDefinition definition.
 

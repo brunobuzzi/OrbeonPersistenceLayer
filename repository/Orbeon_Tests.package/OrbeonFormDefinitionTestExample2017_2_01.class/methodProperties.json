@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"setUp" : "brunobb 02/27/2018 15:02",
-		"testFieldsTypes" : "brunobb 02/27/2018 15:12",
-		"testFormFieldsInSection1" : "brunobb 02/27/2018 15:20",
-		"testFormFieldsInSection2" : "brunobb 02/27/2018 15:44",
-		"testFormFieldsInSection3" : "brunobb 02/27/2018 16:24" } }

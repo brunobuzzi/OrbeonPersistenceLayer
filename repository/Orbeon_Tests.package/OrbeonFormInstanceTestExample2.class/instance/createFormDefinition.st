@@ -5,5 +5,5 @@ createFormDefinition
 			xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_test_2;
 			id: UUID new asString;
 			title: 'Test 2';
-			processXMLDefinitionFor: OrbeonXmlPath2016_1 new;
+			processXMLDefinitionFor: OrbeonXmlPathUpTo2017_1 new;
 			yourself
