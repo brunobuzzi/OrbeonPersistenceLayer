@@ -3,7 +3,8 @@
 		"for:" : "brunobb 02/27/2018 06:01",
 		"for:orbeonVersion:" : "brunobb 02/27/2018 06:36",
 		"for:with:" : "brunobb 02/27/2018 06:01",
-		"for:with:orbeonVersion:" : "brunobb 02/27/2018 06:36" },
+		"for:with:orbeonVersion:" : "brunobb 02/27/2018 06:36",
+		"getCurrentOrbeonXmlPath" : "brunobb 03/08/2018 10:37" },
 	"instance" : {
 		"addAnyOnePermissionTo:fromString:" : "brunobb 02/27/2018 06:01",
 		"addPermissionTo:fromString:using:" : "brunobb 02/27/2018 06:01",
@@ -35,7 +36,7 @@
 		"getValueFrom:" : "brunobb 02/27/2018 06:01",
 		"getValueFrom:ifNone:" : "brunobb 02/27/2018 06:01",
 		"hasSubSections:" : "brunobb 02/27/2018 06:01",
-		"initialize" : "brunobb 02/27/2018 06:01",
+		"initialize" : "brunobb 03/08/2018 10:37",
 		"isAttachmentField:" : "brunobb 02/27/2018 06:01",
 		"isAvailable" : "brunobb 02/27/2018 06:01",
 		"isSingleton" : "brunobb 02/27/2018 06:01",
