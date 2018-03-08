@@ -5,4 +5,4 @@ createFormStructure
 			in: 'ue' 
 			definitionTemplate: #form_library_composed_form 
 			title: 'Library Composed Form'
-			xPathVersion: OrbeonXmlPathUpTo2017_1 new
+			xPathVersion: self getOrbeonXmlXpathUpto2017_1

@@ -5,4 +5,4 @@ setUp
 	form xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 formDefinition_custom_iteration;
 		id: self defaultFormId;
 		title: 'Test Section Interation Name';
-		processXMLDefinitionFor: OrbeonXmlPathUpTo2017_1 new.
+		processXMLDefinitionFor: self getOrbeonXmlXpathUpto2017_1.

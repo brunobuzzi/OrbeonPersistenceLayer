@@ -5,4 +5,4 @@ setUp
 	form xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_energy_recursive_form;
 		id: self defaultFormId;
 		title: 'Energy Recursive Form';
-		processXMLDefinitionFor: OrbeonXmlPathUpTo2017_1 new.
+		processXMLDefinitionFor: self getOrbeonXmlXpathUpto2017_1.

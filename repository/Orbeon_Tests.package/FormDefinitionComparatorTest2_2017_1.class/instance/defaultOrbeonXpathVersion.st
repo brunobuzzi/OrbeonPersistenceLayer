@@ -1,4 +1,4 @@
 other
 defaultOrbeonXpathVersion
 
-	^OrbeonXmlPathUpTo2017_1 new
+	^self getOrbeonXmlXpathUpto2017_1
