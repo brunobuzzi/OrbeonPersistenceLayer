@@ -1,10 +1,10 @@
 service-put
-saveDraftFormInstance: formName app: app withId: id valid: aBoolean
+saveDraftFormInstance: formName app: app withId: id dataFormat: dataFormatVersion valid: aBoolean
 	"This method is called by Orbeon when a Form is autosaved in a Form Instance page"
 	| apiOperation |
 	<put>
 	<produces: 'application/xml'>
-	<path: '/crud/{2}/{1}/draft/{3}/data.xml?valid={4}'>
+	<path: '/crud/{2}/{1}/draft/{3}/data.xml?data-format-version={4}&valid={5}'>
 
 	apiOperation := OrbeonFormSaveDraftApi newFor: self withXml: self requestContext request rawBody id: id.
 	apiOperation appName: app;
