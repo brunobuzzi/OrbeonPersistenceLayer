@@ -10,7 +10,7 @@ doIt
 	"is there a form definition with <formName> in application <appName> & the document_id <id> are different ??? 
 	--> if <true> --> creation NOT allowed"
 
-	(self isCreationRejectedFor: latestSavedDefinition) 
+	(restHandler isCreationRejectedFor: latestSavedDefinition withId: id appName: self getApplicationName formName: self getFormName) 
 	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
 	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', self getFormName,'] in application [', self getApplicationName, ']'].
 
