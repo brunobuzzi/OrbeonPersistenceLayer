@@ -1,4 +1,4 @@
 other
 getCurrentOrbeonXmlPath
 
-	^self getOrbeonXmlXpathFrom2017_2
+	^self getOrbeonWebServerConfiguration orbeonXpathVersion
