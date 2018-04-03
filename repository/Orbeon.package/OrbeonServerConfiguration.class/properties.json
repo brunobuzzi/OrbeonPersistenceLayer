@@ -1,0 +1,17 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Default" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"orbeonIP",
+		"dateFormat",
+		"timeFormat",
+		"orbeonXpathVersion" ],
+	"name" : "OrbeonServerConfiguration",
+	"pools" : [
+		 ],
+	"super" : "ApplicationServerConfiguration",
+	"type" : "normal" }

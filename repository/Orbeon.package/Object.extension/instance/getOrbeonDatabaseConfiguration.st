@@ -1,0 +1,4 @@
+*orbeon
+getOrbeonDatabaseConfiguration
+
+	^self class getOrbeonDatabaseConfiguration

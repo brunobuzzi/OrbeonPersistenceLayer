@@ -1,0 +1,4 @@
+*orbeon
+getOrbeonWebServerConfiguration
+
+	^self class getOrbeonWebServerConfiguration

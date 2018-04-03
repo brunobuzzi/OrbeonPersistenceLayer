@@ -1,0 +1,4 @@
+*orbeon
+getOrbeonWebServerConfiguration
+
+	^OrbeonServerConfiguration default

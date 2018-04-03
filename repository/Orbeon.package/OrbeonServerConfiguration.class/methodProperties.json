@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"default" : "brunobb 04/03/2018 12:08",
+		"initializeDateFormat" : "brunobb 04/03/2018 12:08",
+		"initializeTimeFormat" : "brunobb 04/03/2018 12:08" },
+	"instance" : {
+		"dateFormat" : "brunobb 04/03/2018 12:08",
+		"dateFormat:" : "brunobb 04/03/2018 12:08",
+		"orbeonIP" : "brunobb 04/03/2018 12:08",
+		"orbeonIP:" : "brunobb 04/03/2018 12:08",
+		"orbeonXpathVersion" : "brunobb 04/03/2018 12:09",
+		"orbeonXpathVersion:" : "brunobb 04/03/2018 12:09",
+		"setXpathVersionTo_2017_2" : "brunobb 04/03/2018 12:10",
+		"setXpathVersionUpTo_2017_1" : "brunobb 04/03/2018 12:10",
+		"timeFormat" : "brunobb 04/03/2018 12:08",
+		"timeFormat:" : "brunobb 04/03/2018 12:08" } }
