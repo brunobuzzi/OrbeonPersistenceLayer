@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 
-	orbeonXPath := self class getCurrentOrbeonXmlPath.
+	orbeonXPath := self getOrbeonWebServerConfiguration orbeonXpathVersion.

@@ -1,4 +1,0 @@
-other
-getCurrentOrbeonXmlPath
-
-	^self getOrbeonWebServerConfiguration orbeonXpathVersion
