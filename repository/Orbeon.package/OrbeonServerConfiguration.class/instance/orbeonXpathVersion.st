@@ -1,3 +1,3 @@
-xpath version
+Accessing
 orbeonXpathVersion
 	^orbeonXpathVersion

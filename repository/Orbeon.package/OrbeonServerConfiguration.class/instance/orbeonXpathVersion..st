@@ -1,3 +1,3 @@
-xpath version
+Updating
 orbeonXpathVersion: newValue
 	orbeonXpathVersion := newValue
