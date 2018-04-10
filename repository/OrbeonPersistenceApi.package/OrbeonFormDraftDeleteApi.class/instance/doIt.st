@@ -6,4 +6,4 @@ doIt
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^NoApplicationException signal: 'No application named [', self getApplicationName, '] was found'].
 	instance := application getAnyDraftWithId: id of: self getFormName.
 
-	instance definition removeDraft: instance
+	^instance definition removeDraft: instance

@@ -9,4 +9,6 @@ deleteFormDraft: formName app: app withId: id
 	apiOperation appName: app;
 		formName: formName.
 
-	apiOperation doIt
+	apiOperation doIt.
+
+	^apiOperation
