@@ -7,8 +7,7 @@ deleteFormInstance: formName app: app withId: id
 
 	apiOperation := OrbeonFormInstanceDeleteApi newFor: self id: id.
 	apiOperation appName: app;
-		formName: formName.
-
-	apiOperation doIt.
+		formName: formName;
+		doIt.
 
 	^apiOperation
