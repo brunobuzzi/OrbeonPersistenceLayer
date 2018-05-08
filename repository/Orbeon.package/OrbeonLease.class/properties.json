@@ -1,0 +1,18 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formInstance",
+		"id",
+		"username",
+		"groupname",
+		"expiration" ],
+	"name" : "OrbeonLease",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }
