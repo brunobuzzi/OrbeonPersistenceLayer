@@ -10,7 +10,7 @@
 		"deleteFormDraft:app:withId:" : "brunobb 04/10/2018 09:36",
 		"deleteFormInstance:app:withId:" : "brunobb 04/10/2018 09:48",
 		"duplicateFormDefinitionNewId:" : "brunobb 02/18/2018 10:57",
-		"duplicateFormInstance:app:newId:" : "brunobb 02/19/2018 13:59",
+		"duplicateOrLeaseFormInstance:app:newId:" : "brunobb 06/18/2018 10:34",
 		"getAllFormDefinitionVesionsFor:app:allversions:" : "brunobb 02/19/2018 13:30",
 		"getDefinitionForFormInstanceWithId:form:app:" : "brunobb 03/09/2018 12:05",
 		"getFormDefinitionWithId:dataFormat:" : "brunobb 02/21/2018 11:14",

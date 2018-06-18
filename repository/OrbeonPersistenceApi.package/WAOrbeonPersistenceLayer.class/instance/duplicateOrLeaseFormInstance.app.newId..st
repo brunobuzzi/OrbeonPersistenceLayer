@@ -1,5 +1,5 @@
 service-put
-duplicateFormInstance: formName app: app newId: id
+duplicateOrLeaseFormInstance: formName app: app newId: id
 	"This method is called by Orbeon when a user click 'Duplicate' in a Form Instance in the Form Runner"
 	| apiOperation versionNumber |
 	<put>
