@@ -6,11 +6,13 @@ duplicateOrLeaseFormInstance: formName app: app newId: id
 	<produces: 'application/xml'>
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
-	versionNumber := (self requestContext request headerAt: 'orbeon-form-definition-version') ifNil: [1] ifNotNil: [:value | Number fromString: value].
- 
-	apiOperation := OrbeonFormInstanceDuplicateApi newFor: self withXml: self requestContext request rawBody id: id.
-	apiOperation appName: app;
-		formName: formName;
-		version: versionNumber.
+	(self requestContext request headerAt: 'Timeout') isNil
+	ifFalse: [
+		versionNumber := (self requestContext request headerAt: 'orbeon-form-definition-version') ifNil: [1] ifNotNil: [:value | Number fromString: value].
+		apiOperation := OrbeonFormInstanceDuplicateApi newFor: self withXml: self requestContext request rawBody id: id.
+		apiOperation appName: app;
+			formName: formName;
+			version: versionNumber.]
+	ifTrue: [].
 
 	^apiOperation doIt
