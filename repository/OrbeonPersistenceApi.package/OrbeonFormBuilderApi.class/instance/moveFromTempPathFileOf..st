@@ -1,11 +1,12 @@
 other
 moveFromTempPathFileOf: anOrbeonFormDefinition
 	"The receiver move all files from temp path to the actual path of <anOrbeonFormDefinition>"
-	| filesToMove defaultFilePath |
+	| filesToMove defaultFilePath currentFiles |
 
-	filesToMove := (((GsFile contentsOfDirectory: self apiConfiguration getTempPath onClient: false) "get all current files in <path>"
-			reject: [:eachPathFile | ((eachPathFile subStrings: '/') last = '.') or: [(eachPathFile subStrings: '/') last = '..']])
-			collect: [:each | (each subStrings: '/') last])
+	currentFiles := GsFile contentsOfDirectory: self apiConfiguration getTempPath onClient: false. "get all current files in <path>"	
+	currentFiles ifNil: [DirectoryStructureNotPresentException signal: 'Directory Structure to Store Forms attachments on disk has not been created'].
+
+	filesToMove := ((currentFiles reject: [:eachPathFile | ((eachPathFile subStrings: '/') last = '.') or: [(eachPathFile subStrings: '/') last = '..']]) collect: [:each | (each subStrings: '/') last])
 			select: [:fileName | fileName includesSubstring: anOrbeonFormDefinition id].
 
 	filesToMove isEmpty ifTrue: [^self]. "no files to move"
