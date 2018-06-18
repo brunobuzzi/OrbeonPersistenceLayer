@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"timeout" ],
-	"name" : "OrbeonFormInstanceLeaseApi",
+		 ],
+	"name" : "TimeoutBadFormatException",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormRunnerApi",
+	"super" : "OrbeonException",
 	"type" : "normal" }

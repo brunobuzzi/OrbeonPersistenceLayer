@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"doIt" : "brunobb 06/18/2018 11:01" } }
+		"doIt" : "brunobb 06/18/2018 11:01",
+		"setTimeoutFromString:" : "brunobb 06/18/2018 11:19",
+		"timeout" : "brunobb 06/18/2018 11:05",
+		"timeout:" : "brunobb 06/18/2018 11:05" } }
