@@ -15,7 +15,8 @@
 		"repeatFieldsValues",
 		"sections",
 		"isValid",
-		"assignment" ],
+		"assignment",
+		"lease" ],
 	"name" : "OrbeonFormInstance",
 	"pools" : [
 		 ],

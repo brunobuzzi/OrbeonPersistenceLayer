@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "NoCurrentLeaseException",
+	"pools" : [
+		 ],
+	"super" : "OrbeonException",
+	"type" : "normal" }

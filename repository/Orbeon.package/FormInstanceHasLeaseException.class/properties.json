@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormInstanceHasLeaseException",
+	"pools" : [
+		 ],
+	"super" : "OrbeonException",
+	"type" : "normal" }
