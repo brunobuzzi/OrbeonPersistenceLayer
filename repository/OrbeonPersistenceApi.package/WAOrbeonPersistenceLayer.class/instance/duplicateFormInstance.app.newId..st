@@ -1,5 +1,5 @@
 service-put
-duplicateOrLeaseFormInstance: formName app: app newId: id
+duplicateFormInstance: formName app: app newId: id
 	"This method is called by Orbeon when:
 		* A user click 'Duplicate' in a Form Instance in the Form Runner
 		* A user click 'Lease' or 'Reliquish Lease' in a Form Instance in the Form Runner"
