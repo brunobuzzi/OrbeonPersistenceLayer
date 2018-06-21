@@ -1,5 +1,5 @@
 service-put
-unpublishFormDefinition: formName app: app
+publishUnpublishFormDefinition: formName app: app
 	"This method is called by Orbeon when a Form Definition has been unpublished with form name <formName> in application <app>"
 	| apiOperation |
 	<put>

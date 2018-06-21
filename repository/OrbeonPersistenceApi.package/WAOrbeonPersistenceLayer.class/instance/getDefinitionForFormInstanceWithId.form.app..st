@@ -11,9 +11,4 @@ getDefinitionForFormInstanceWithId: id form: form app: app
 	apiOperation appName: app;
 		formName: form.
 
-	self requestContext response headerAt: 'lease-owned-by-current-user' put: 'false'.
-
 	^apiOperation doIt
-
-
-"lease-owned-by-current-user"

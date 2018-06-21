@@ -8,4 +8,5 @@ doIt
 		writer tag: 'forms' with: [self getOrbeonApplicationClass getLastDefinitions do: [:eachDef | 
 			self getXmlNodeForRunnerHome: eachDef with: writer]].
 	].
+
 	^xmlWriter contents
