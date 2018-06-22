@@ -1,11 +1,13 @@
 other
 doIt
 	"This method is called by Orbeon when a Form Definition has been unpublished with form name <formName> in application <app>"
-	| application definition |
+	| application publishedDefinition savedDefinition |
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^NoApplicationException signal: 'No such application [', self getApplicationName, ']'].
-	definition := application definitionNamed: self getFormName ifNone: [^NoOrbeonFormException signal: 'No such form [', self getFormName, '] in application [', self getApplicationName, ']'].
+	publishedDefinition := application definitionNamed: self getFormName ifNone: [^NoOrbeonFormException signal: 'No such form [', self getFormName, '] in application [', self getApplicationName, ']'].
+	savedDefinition := publishedDefinition definition.
 
-	definition switchAvailable.
+	publishedDefinition switchAvailable.
+	savedDefinition switchAvailable.
 
-	^definition xmlString
+	^publishedDefinition xmlString

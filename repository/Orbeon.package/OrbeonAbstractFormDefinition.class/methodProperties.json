@@ -15,6 +15,10 @@
 		"getApplicationName" : "BrunoBB 04/27/2016 15:57",
 		"getFormName" : "brunobb 02/15/2018 10:38",
 		"getLatestDefinition" : "BrunoBB 01/02/2017 06:17",
+		"isAvailable" : "brunobb 06/22/2018 11:44",
+		"isAvailable:" : "brunobb 06/22/2018 11:36",
 		"printOn:" : "brunobb 02/15/2018 10:38",
 		"setApplication:" : "BrunoBB 04/28/2016 09:58",
-		"setMetadata" : "brunobb 02/15/2018 12:12" } }
+		"setAvailableNodeWith:" : "brunobb 06/22/2018 11:35",
+		"setMetadata" : "brunobb 02/15/2018 12:12",
+		"switchAvailable" : "brunobb 06/22/2018 11:36" } }
