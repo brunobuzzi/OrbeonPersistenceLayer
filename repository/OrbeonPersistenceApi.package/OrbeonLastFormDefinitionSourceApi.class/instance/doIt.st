@@ -15,6 +15,5 @@ doIt
 	restHandler requestContext response headerAt: 'orbeon-form-definition-version' put: latestDefinition version printString.
 
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
-"	latestDefinition definition isAvailable ifFalse: [restHandler noRouteFound: restHandler requestContext]."
 
 	^self decodeFromUTF8: latestDefinition xmlString
