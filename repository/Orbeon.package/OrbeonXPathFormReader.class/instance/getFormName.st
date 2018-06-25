@@ -1,8 +1,8 @@
-other
+metadata
 getFormName
 
 	^(xmlDocument xPath: '//metadata/form-name')
-		ifEmpty: [OrbeonInvalidXMLException signal: 'Form-Name node missing'] 
+		ifEmpty: [OrbeonInvalidXMLException signal: '<form-name> is node missing'] 
 		ifNotEmpty: [:collection | 
 			collection first strings isEmpty 
 				ifTrue: [''] 

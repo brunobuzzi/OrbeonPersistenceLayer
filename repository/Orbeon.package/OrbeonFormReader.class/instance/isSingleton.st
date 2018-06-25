@@ -1,4 +1,4 @@
-other
+metadata
 isSingleton
 	"Answer whether or not the form definition is a Singleton form or not"
 

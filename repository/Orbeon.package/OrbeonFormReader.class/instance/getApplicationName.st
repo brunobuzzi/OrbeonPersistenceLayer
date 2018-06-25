@@ -1,4 +1,4 @@
-other
+metadata
 getApplicationName
 
 	^(xmlDocument findElementNamed: 'application-name')

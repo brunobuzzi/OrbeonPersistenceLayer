@@ -1,4 +1,4 @@
-other
+metadata
 isAvailable
 	"Answer whether or not the form definition is published or not"
 

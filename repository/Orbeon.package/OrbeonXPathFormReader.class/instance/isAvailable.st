@@ -1,10 +1,10 @@
-other
+metadata
 isAvailable
-	"Answer whether or not the form definition is published or not"
+	"Answer whether or not the form definition is available or not"
+	| node |
 
-	^(xmlDocument xPath: '//metadata/available')
-		ifEmpty: [false] 
-		ifNotEmpty: [:collection | 
-			collection first strings isEmpty 
-				ifTrue: [false] 
-				ifFalse: [(collection first strings last = 'true')]]
+	node := self getXmlAvailableNodeIfNone: [^true].
+
+	node strings isEmpty ifTrue: [OrbeonInvalidXMLException signal: '<available> node value is invalid'].
+
+	^node strings last = 'true'

@@ -1,18 +1,9 @@
 publish
 setAvailableNodeWith: aBooleanString
-	| xmlDoc metadata available newXML |
+	"The receiver set the value to the <available> node with <aBooleanString>.
+	Answer xml <aString> the new xml definition. 
+	On any error answer the current xml definition"
 
-	xmlDoc := XMLDOMParser parse: xmlString.
-	metadata := xmlDoc allElementsNamed: 'metadata'.
-	metadata isEmpty ifTrue: [^self].
-	metadata := metadata last.
+	((aBooleanString = 'true') or: [aBooleanString = 'false']) ifFalse: [^OrbeonInvalidXMLException signal: '<available> node value is invalid'].
 
-	metadata removeNodes: (metadata allElementsNamed: 'available').
-
-	available := XMLElement named: 'available'.
-	available addContent: aBooleanString.
-	metadata addNode: available.
-
-	newXML := String new.
-	xmlDoc printOn: (PrintStream on: newXML).
-	xmlString := newXML.
+	xmlString := self newFormReader setAvailableNodeValueWith: aBooleanString.
