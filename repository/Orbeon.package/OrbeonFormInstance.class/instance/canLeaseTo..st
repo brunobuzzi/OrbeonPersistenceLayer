@@ -4,4 +4,4 @@ canLeaseTo: leaseUsername
 
 	(self secondsToExpire < 0) ifTrue: [lease := nil]. "if the lease has expired --> remove it"
 
-	^self hasLease not and: [self leaseUsername = leaseUsername]
+	^self hasLease not or: [self leaseUsername = leaseUsername]
