@@ -2,9 +2,12 @@ service-lock
 rejectLeaseFor: anOrbeonFormInstance withXml: xmlString
 	| mimeDocument |
 
-	mimeDocument := WAMimeDocument on: xmlString mimeType: WAMimeType textPlain.
+	mimeDocument := WAMimeDocument on: '' mimeType: WAMimeType applicationAtomXml.
 
-	^self requestContext response
+	self requestContext response
 		headerAt: 'timeout' put: ('Second-', anOrbeonFormInstance secondsToExpire printString);
-		document: mimeDocument;
-		status: WAResponse statusLocked message: xmlString
+		document: mimeDocument mimeType: WAMimeType applicationAtomXml;
+		status: WAResponse statusLocked;
+		nextPutAll: xmlString.
+
+	^mimeDocument

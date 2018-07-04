@@ -1,5 +1,5 @@
-Updating
+other
 secondsToExpire
 	"Answer the number of remaining seconds to expire"
 
-	^Time now asSeconds - expiration asSeconds
+	^(expiration time asSeconds - Time now asSeconds)

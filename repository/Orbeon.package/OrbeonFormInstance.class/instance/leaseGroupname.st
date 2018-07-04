@@ -1,4 +1,4 @@
 lease
 leaseGroupname
 
-	^lease groupname
+	^lease groupname ifNil: ['']
