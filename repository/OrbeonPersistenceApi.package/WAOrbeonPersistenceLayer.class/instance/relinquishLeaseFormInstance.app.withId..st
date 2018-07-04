@@ -13,5 +13,3 @@ relinquishLeaseFormInstance: formName app: app withId: id
 		formName: formName.
 
 	^apiOperation doIt
-
-"	^WAMimeDocument on: 'OK' mimeType: WAMimeType textPlain"

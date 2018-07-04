@@ -15,5 +15,3 @@ leaseFormInstance: formName app: app withId: id
 	timeoutValue ifNotNil: [apiOperation setTimeoutFromString: timeoutValue]. 
 
 	^apiOperation doIt
-
-	"^WAMimeDocument on: 'OK' mimeType: WAMimeType textPlain"

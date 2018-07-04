@@ -1,5 +1,5 @@
 other
-getXmlLockRejectionFor: anOrbeonFormInstance
+getXmlLockUnlockRejectionFor: anOrbeonFormInstance
 
 	^'<d:lockinfo xmlns:d="DAV:" xmlns:fr="http://orbeon.org/oxf/xml/form-runner">
     <d:lockscope><d:exclusive/></d:lockscope>
