@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OrbeonFormInstanceLeaseApi",
+		"timeout" ],
+	"name" : "OrbeonFormInstanceGetLeaseApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormRunnerApi",
+	"super" : "OrbeonFormInstanceLeaseApi",
 	"type" : "normal" }

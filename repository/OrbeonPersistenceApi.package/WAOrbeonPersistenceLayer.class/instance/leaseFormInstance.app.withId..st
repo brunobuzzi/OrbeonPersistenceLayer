@@ -7,8 +7,8 @@ leaseFormInstance: formName app: app withId: id
 	<lock>
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
-	timeoutValue := self requestContext request headerAt: 'Timeout'.
-	apiOperation := OrbeonFormInstanceLeaseApi newFor: self withXml: self requestContext request rawBody id: id.
+	timeoutValue := self requestContext request headerAt: 'timeout'.
+	apiOperation := OrbeonFormInstanceGetLeaseApi newFor: self withXml: self requestContext request rawBody id: id.
 	apiOperation appName: app;
 		formName: formName.
 
@@ -16,4 +16,4 @@ leaseFormInstance: formName app: app withId: id
 
 	^apiOperation doIt
 
-"	^WAMimeDocument on: 'OK' mimeType: WAMimeType textPlain"
+	"^WAMimeDocument on: 'OK' mimeType: WAMimeType textPlain"

@@ -2,7 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"doIt" : "brunobb 07/04/2018 09:01",
-		"setTimeoutFromString:" : "brunobb 07/04/2018 09:21",
-		"timeout" : "brunobb 06/18/2018 11:05",
-		"timeout:" : "brunobb 06/18/2018 11:05" } }
+		"getUsernameFromXmlString" : "brunobb 07/04/2018 10:14",
+		"getXmlLockRejectionFor:" : "brunobb 07/04/2018 10:07" } }

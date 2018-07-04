@@ -1,3 +1,0 @@
-other
-doIt
-	self halt.
