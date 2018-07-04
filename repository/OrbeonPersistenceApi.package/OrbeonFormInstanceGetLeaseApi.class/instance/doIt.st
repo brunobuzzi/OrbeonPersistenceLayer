@@ -6,6 +6,7 @@ doIt
 
 	instance := application getAnyInstanceWithId: id of: self getFormName.
 
-	instance hasLease ifTrue: [^restHandler rejectLeaseFor: instance withXml: (self getXmlLockRejectionFor: instance)].
+	(instance canLeaseTo: self getUsernameFromXmlString) 
+	ifFalse: [^restHandler rejectLeaseFor: instance withXml: (self getXmlLockRejectionFor: instance)].
 
 	instance grantLeaseForSeconds: timeout to: self getUsernameFromXmlString.
