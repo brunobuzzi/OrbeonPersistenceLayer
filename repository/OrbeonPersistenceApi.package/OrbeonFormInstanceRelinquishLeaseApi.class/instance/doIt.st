@@ -1,3 +1,3 @@
 other
 doIt
-	self halt.
+self halt.

@@ -1,5 +1,6 @@
 other
 setTimeoutFromString: stringTimeout
+	"<stringTimeout> format: Second-600 "
 	| stringSeconds |
 
 	stringSeconds := (stringTimeout subStrings: '-') last.
