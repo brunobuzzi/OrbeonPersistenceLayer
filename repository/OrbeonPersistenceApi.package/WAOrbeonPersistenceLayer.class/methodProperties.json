@@ -30,7 +30,7 @@
 		"receiveAndSaveFileForDefinitionWithId:fileId:valid:" : "brunobb 02/17/2018 08:34",
 		"receiveAndSaveFileForDraft:app:draftId:fileId:valid:" : "brunobb 02/17/2018 08:43",
 		"receiveAndSaveFileForInstance:app:instanceId:fileId:valid:" : "brunobb 02/17/2018 08:51",
-		"reindexOrbeonForms" : "brunobb 06/21/2018 09:37",
+		"reindexOrbeonForms" : "brunobb 07/04/2018 12:21",
 		"rejectLeaseFor:withXml:" : "brunobb 07/04/2018 11:08",
 		"rejectRelinquishLeaseFor:withXml:" : "brunobb 07/04/2018 12:03",
 		"relinquishLeaseFormInstance:app:withId:" : "brunobb 07/04/2018 11:53",

@@ -6,5 +6,5 @@ reindexOrbeonForms
 	<path: '/reindex'>
 
 	apiOperation := OrbeonReIndexDatabaseApi newFor: self .
-self halt.
+
 	^apiOperation doIt
