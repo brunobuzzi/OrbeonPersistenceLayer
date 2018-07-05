@@ -4,5 +4,5 @@ doIt
 	It trigger a reindex process all indexed collections"
 
 	self getOrbeonApplicationClass getAllFormDefinitions do: [:publishedFormDefinition |
-
+		publishedFormDefinition rebuildAllIndexes.
 	].

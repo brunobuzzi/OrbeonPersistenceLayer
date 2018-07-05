@@ -14,7 +14,7 @@ executeQueryWithSearchCriteria
 			rcIdentitySet := eachDef fieldInstancesOf: fieldName."get the collection of ALL field's values of <fieldName>"
 			gsQuery on: rcIdentitySet. "set the collection of the <GsQuery>"
 			(result at: fieldName) addAll: gsQuery queryResult.
-			total := total + rcIdentitySet size]]."Excecute the <GsQuery> and store it on dictionary <result>"
+			total := total + rcIdentitySet size]]."Excecute the <GsQuery> and store it on <result> dictionary"
 
 	result isEmpty ifTrue: [^resultCollection := OrderedCollection new].
 
