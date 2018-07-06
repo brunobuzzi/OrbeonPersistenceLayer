@@ -1,4 +1,4 @@
-migration script
+db import
 importDataOf: anOrbeonFormDefinition version: version
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>"
 	| dbInstance gsObjects |

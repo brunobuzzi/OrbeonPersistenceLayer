@@ -1,4 +1,4 @@
-db import
+migration script
 getAllDocumentIdsForDefinition: anOrbeonFormDefinition
 
 	"^self execute: (mySqlReader sqlGetAllDocumentIdsFrom: anOrbeonFormDefinition form of: anOrbeonFormDefinition app)"

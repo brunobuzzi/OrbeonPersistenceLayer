@@ -12,7 +12,7 @@ migrateFormDefinitionNamed: aString version: version
 
 	instanceDefinition := self getOrbeonHandler generateFormInstanceDefinition: aString app: application applicationName from: dbString.
 	instanceDefinition setMetadata.
-	definition instanceDefinition: instanceDefinition.
+	definition definition: instanceDefinition.
 	instanceDefinition definition: definition.
 	application addSavedDefinition: instanceDefinition.
 
