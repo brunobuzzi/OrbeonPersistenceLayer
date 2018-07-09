@@ -4,8 +4,9 @@
 	"instance" : {
 		"applicationIcon" : "BrunoBB 09/30/2016 08:14",
 		"applicationName" : "BrunoBB 09/30/2016 08:08",
+		"importFormsFromDatabase" : "brunobb 07/09/2018 08:19",
 		"initialize" : "BrunoBB 07/03/2016 08:49",
-		"initializeNavigation" : "BrunoBB 10/20/2016 11:12",
+		"initializeNavigation" : "brunobb 07/09/2018 08:21",
 		"logout" : "BrunoBB 07/03/2016 08:57",
 		"style2" : "BrunoBB 09/20/2016 13:33",
 		"updateRoot:" : "BrunoBB 09/21/2016 07:16",

@@ -1,6 +1,6 @@
 other
 initializeNavigation
-	| subMenu1 subMenu2  |
+	| subMenu1 subMenu2 subMenu3 |
 
 	navigation := SewafPortalMenu new iconLibrary: SEWAFIconLibrary.
 	subMenu1 := (SewafSubMenuItem label: 'Applications' icon: #box148Png)
@@ -11,5 +11,9 @@ initializeNavigation
 		addItem: (SewafCommandItem label: 'Create Graphics' command: #viewGraphics);
 		addItem: (SewafCommandItem label: 'View Graphics Report' command: #viewGraphicsReports);
 		yourself.
+	subMenu3 := (SewafSubMenuItem label: 'Repository Operations' icon: #databaseactive48Png)
+		addItem: (SewafCommandItem label: 'Import Forms from DB' command: #importFormsFromDatabase);
+		yourself.
 	navigation addItem: subMenu1;
-		addItem: subMenu2.
+		addItem: subMenu2;
+		addItem: subMenu3.
