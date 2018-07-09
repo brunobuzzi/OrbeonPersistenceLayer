@@ -12,6 +12,7 @@ initializeNavigation
 		addItem: (SewafCommandItem label: 'View Graphics Report' command: #viewGraphicsReports);
 		yourself.
 	subMenu3 := (SewafSubMenuItem label: 'Repository Operations' icon: #databaseactive48Png)
+		addItem: (SewafCommandItem label: 'Server Configuration' command: #setServersConfiguration);
 		addItem: (SewafCommandItem label: 'Import Forms from DB' command: #importFormsFromDatabase);
 		yourself.
 	navigation addItem: subMenu1;
