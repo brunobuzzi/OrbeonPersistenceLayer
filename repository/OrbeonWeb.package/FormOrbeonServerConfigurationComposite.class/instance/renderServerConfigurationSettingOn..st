@@ -21,4 +21,10 @@ renderServerConfigurationSettingOn: html
 	html textInput attributeAt: 'id' put: 'gemstoneIP'; 
 			callback: [:value | self getGemStoneServerConfiguration gemstoneIP: value]; 
 			with: self getGemStoneServerConfiguration gemstoneIP.
+	html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('Version Name' translateFor: self session user).
+	html select 
+		attributeAt: 'id' put: 'versionName';
+		list: self getOrbeonWebServerConfiguration getOrbeonXpathVersions;
+		callback: [:versionName | self setOrbeonVersion: versionName];
+		selected: self getOrbeonWebServerConfiguration getOrbeonXpathVersionForCombo.
 	html submitButton callback: [self savePreferences]; with: ('Save Preferences' translateFor: self session user).

@@ -1,0 +1,4 @@
+other
+setOrbeonVersion: versionName
+
+	self getOrbeonWebServerConfiguration setOrbeonVersionName: versionName

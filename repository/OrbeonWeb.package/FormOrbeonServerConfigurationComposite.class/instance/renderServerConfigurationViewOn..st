@@ -29,5 +29,11 @@ renderServerConfigurationViewOn: html
 				callback: [:value | self getGemStoneServerConfiguration gemstoneIP: value]; 
 				readonly: true; 
 				with: self getGemStoneServerConfiguration gemstoneIP.
+			html select 
+				disable: true;
+				attributeAt: 'id' put: 'versionName';
+				list: self getOrbeonWebServerConfiguration getOrbeonXpathVersions;
+				callback: [:versionName | self setOrbeonVersion: versionName];
+				selected: self getOrbeonWebServerConfiguration getOrbeonXpathVersionForCombo.
 		].
 	].
