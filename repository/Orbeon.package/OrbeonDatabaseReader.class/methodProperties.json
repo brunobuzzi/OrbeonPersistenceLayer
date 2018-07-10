@@ -1,5 +1,8 @@
 {
 	"class" : {
-		 },
+		"databaseName" : "brunobb 07/10/2018 05:45",
+		"getAllDatabaseReaders" : "brunobb 07/10/2018 05:45",
+		"getAllDatabaseReadersComboNames" : "brunobb 07/10/2018 05:56",
+		"getDatabaseReaderFrom:" : "brunobb 07/10/2018 05:57" },
 	"instance" : {
 		 } }

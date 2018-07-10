@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"databaseName" : "brunobb 07/10/2018 05:54" },
 	"instance" : {
 		"selectAllVersionOf:in:" : "BrunoBB 10/14/2015 14:48",
 		"sqlDumpFileDefinitionAttachmentOn:definitionId:fileId:version:" : "BrunoBB 10/16/2015 13:59",

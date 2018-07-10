@@ -1,4 +1,4 @@
-other
+xpath version
 setOrbeonVersionName: versionName
 	| newXPathOrbeonVersion |
 

@@ -1,0 +1,4 @@
+other
+databaseName
+
+	^self subclassResponsibility

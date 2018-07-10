@@ -1,0 +1,4 @@
+other
+setDatabaseName: databaseNameName
+
+	self getOrbeonWebServerConfiguration setDatabaseReaderFromDatabaseName: databaseNameName

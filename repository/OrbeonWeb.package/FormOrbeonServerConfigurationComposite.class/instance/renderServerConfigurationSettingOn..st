@@ -5,6 +5,12 @@ renderServerConfigurationSettingOn: html
 	html textInput attributeAt: 'id' put: 'databaseIP'; 
 			callback: [:value | self getOrbeonDatabaseConfiguration databaseIP: value]; 
 			with: self getOrbeonDatabaseConfiguration databaseIP.
+	html label class: 'margin-right-10px'; attributeAt: 'for' put: 'databaseName'; with: ('Database & Orbeon DB Version' translateFor: self session user).
+	html select 
+		attributeAt: 'id' put: 'databaseName';
+		list: OrbeonDatabaseReader getAllDatabaseReadersComboNames;
+		callback: [:versionName | self setDatabaseName: versionName];
+		selected: self getOrbeonWebServerConfiguration getDatabaseReaderName.
 	html label attributeAt: 'for' put: 'databaseUser'; with: ('Database User' translateFor: self session user).
 	html textInput attributeAt: 'id' put: 'databaseUser'; 
 			callback: [:value | self getOrbeonDatabaseConfiguration databaseUser: value]; 
@@ -21,7 +27,7 @@ renderServerConfigurationSettingOn: html
 	html textInput attributeAt: 'id' put: 'gemstoneIP'; 
 			callback: [:value | self getGemStoneServerConfiguration gemstoneIP: value]; 
 			with: self getGemStoneServerConfiguration gemstoneIP.
-	html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('Version Name' translateFor: self session user).
+	html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('XPath for Orbeon Version' translateFor: self session user).
 	html select 
 		attributeAt: 'id' put: 'versionName';
 		list: self getOrbeonWebServerConfiguration getOrbeonXpathVersions;
