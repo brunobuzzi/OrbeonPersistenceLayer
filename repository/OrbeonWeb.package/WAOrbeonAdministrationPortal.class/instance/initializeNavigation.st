@@ -6,7 +6,7 @@ initializeNavigation
 	subMenu1 := (SewafSubMenuItem label: 'Applications' icon: #box148Png)
 		addItem: (SewafCommandItem label: 'View Applications' command: #viewOrbeonApplications);
 		yourself.
-	subMenu2 := (SewafSubMenuItem label: 'Orbeon Charts' icon: #actionsviewlistdetails48Png)
+	subMenu2 := (SewafSubMenuItem label: 'Orbeon Charts' icon: #chart48Png)
 		addItem: (SewafCommandItem label: 'Create Chart' command: #viewGraphics);
 		addItem: (SewafCommandItem label: 'Saved Charts' command: #viewGraphicsReports);
 		yourself.
