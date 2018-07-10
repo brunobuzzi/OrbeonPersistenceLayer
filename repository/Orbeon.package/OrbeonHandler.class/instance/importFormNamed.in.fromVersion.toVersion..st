@@ -5,8 +5,10 @@ importFormNamed: formName in: appName fromVersion: startVersion toVersion: toVer
 
 	(appName isNil or:[appName isEmpty or:[formName isNil or:[formName isEmpty]]]) 
 	ifTrue: [InvalidImportOrbeonDataConfigurationException signal: 'The application name and/or the form name is nil or empty'].
+
 	(startVersion class == SmallInteger and: [toVersion class == SmallInteger and:[(startVersion > 0) and:[toVersion > 0]]])
 	ifFalse: [InvalidImportOrbeonDataConfigurationException signal: 'Range Versions must be a valid number'].
+
 	(startVersion > toVersion) 
 	ifTrue: [InvalidImportOrbeonDataConfigurationException signal: 'StartVersion can not be greater than ToVersion'].
 
@@ -15,7 +17,7 @@ importFormNamed: formName in: appName fromVersion: startVersion toVersion: toVer
 		].
 
 	startVersion to: toVersion do: [:index | | application formDefinition registry |
-		application := OrbeonApplication applicationNamed: appName ifNone: [nil]. 
+		application := OrbeonApplication getExistingApplicationOrCreateNewNamed: appName. 
 		registry := application registryForFormNamed: formName ifNone: [nil].
 		formDefinition := registry getDefinitionWithVersion: index.
 		self importDataFromScratchOf: formDefinition.  
