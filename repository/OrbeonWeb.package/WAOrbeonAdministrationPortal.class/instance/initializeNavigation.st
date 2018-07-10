@@ -6,10 +6,9 @@ initializeNavigation
 	subMenu1 := (SewafSubMenuItem label: 'Applications' icon: #box148Png)
 		addItem: (SewafCommandItem label: 'View Applications' command: #viewOrbeonApplications);
 		yourself.
-	subMenu2 := (SewafSubMenuItem label: 'Orbeon Summaries' icon: #actionsviewlistdetails48Png)
-		addItem: (SewafCommandItem label: 'View Summary' command: #viewOrbeonSummary);
-		addItem: (SewafCommandItem label: 'Create Graphics' command: #viewGraphics);
-		addItem: (SewafCommandItem label: 'View Graphics Report' command: #viewGraphicsReports);
+	subMenu2 := (SewafSubMenuItem label: 'Orbeon Charts' icon: #actionsviewlistdetails48Png)
+		addItem: (SewafCommandItem label: 'Create Chart' command: #viewGraphics);
+		addItem: (SewafCommandItem label: 'Saved Charts' command: #viewGraphicsReports);
 		yourself.
 	subMenu3 := (SewafSubMenuItem label: 'Repository Operations' icon: #databaseactive48Png)
 		addItem: (SewafCommandItem label: 'Server Configuration' command: #setServersConfiguration);
