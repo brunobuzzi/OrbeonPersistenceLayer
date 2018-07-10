@@ -1,4 +1,0 @@
-other
-hideDefinitionList
-
-	isDefinitionSide := false

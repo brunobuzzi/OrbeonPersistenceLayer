@@ -1,4 +1,0 @@
-other
-hasSelectedApplication
-
-	^selectedApplication notNil

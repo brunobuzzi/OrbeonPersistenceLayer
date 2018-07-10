@@ -1,4 +1,0 @@
-other
-model
-
-	^parent model
