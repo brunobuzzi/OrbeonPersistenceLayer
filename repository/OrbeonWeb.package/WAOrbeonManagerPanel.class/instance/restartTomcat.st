@@ -1,4 +1,0 @@
-commands
-restartTomcat
-
-	"System performOnServer:  '' "

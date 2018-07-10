@@ -9,6 +9,4 @@ tryLogin
 
 	self session user: logedUser.
 
-	"self show: (WAOrbeonHandler on: OrbeonHandler default)."
-
 	self show: WAOrbeonAdministrationPortal new.

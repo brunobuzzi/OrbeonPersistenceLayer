@@ -1,8 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"initialize" : "BrunoBB 11/27/2013 14:58",
-		"renderContentOn:" : "BrunoBB 12/14/2013 12:54",
-		"renderFormDefinitionFor:" : "BrunoBB 11/28/2013 16:17",
-		"renderFormInstanceFor:" : "BrunoBB 04/28/2016 10:51" } }
