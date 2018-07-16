@@ -15,7 +15,7 @@ The following Diagrams are grouped by Orbeon functionality.<br>
 [Service Diagrams](https://bpmflow.gitbook.io/project/orbeon-integration/orbeon-persistence-layer-for-gemstone-s/service-diagrams)
 
 The following link show all services that MUST be implemented for a complete Orbeon Persistence Layer. You will notice that various services can be implemented as one because of it's service path. But at implementation level we choose to split them by funcionality not by path.<br>
-[Service Methods](https://brunobuzzi.gitbooks.io/orbeon-persistence-layer/content/service_methods.html)
+[Service Methods](https://bpmflow.gitbook.io/project/orbeon-integration/orbeon-persistence-layer-for-gemstone-s/service-http-methods)
 <br><br>
 **Persistence Layer Configuration Options**<br>
 There are a lof of options that can be configured in this persistence layer such as: deferred processing, path for attachments, search type and audit options.<br>
