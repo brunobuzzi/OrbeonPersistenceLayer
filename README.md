@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/brunobuzzi/OrbeonPersistenceLayer.svg?branch=master)](https://github.com/brunobuzzi/OrbeonPersistenceLayer)
+[![Build Status](https://travis-ci.org/brunobuzzi/OrbeonPersistenceLayer.svg?branch=master)](https://bpmflow.gitbook.io/project/orbeon-integration/orbeon-persistence-layer-for-gemstone-s)
 GemStone/S persistence layer for Orbeon
 =======
 The manuals of this Orbeon Persistence Layer can be found here:<br>
