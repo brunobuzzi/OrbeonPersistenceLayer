@@ -2,8 +2,6 @@ other
 doIt
 	| application instance |
 
-	((self applicationName = 'orbeon') and: [self getFormName = 'builder']) ifTrue: [^self]. "issue #189"
-
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^NoApplicationException signal: 'No application named [', self getApplicationName, '] was found'].
 
 	instance := application getAnyInstanceWithId: id of: self getFormName.

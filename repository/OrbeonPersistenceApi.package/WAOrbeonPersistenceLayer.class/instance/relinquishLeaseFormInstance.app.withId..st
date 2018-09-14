@@ -12,4 +12,6 @@ relinquishLeaseFormInstance: formName app: app withId: id
 	apiOperation appName: app;
 		formName: formName.
 
+	((app = 'orbeon') and: [formName = 'builder']) ifTrue: [^self requestContext response headerAt: 'timeout' put: 'Second-600']. "issue #189 & #190"
+
 	^apiOperation doIt
