@@ -17,6 +17,6 @@ form_study_loan_application_1: purchaseProcessId
                     <section-20>
                         <purchaseProcessId>',purchaseProcessId,'</purchaseProcessId>
                         <loanDecision>Documentation OK</loanDecision>
-                        <loanApproved>yes</loanApproved>
+                        <loanApproved>true</loanApproved>
                     </section-20>
                 </form>'
