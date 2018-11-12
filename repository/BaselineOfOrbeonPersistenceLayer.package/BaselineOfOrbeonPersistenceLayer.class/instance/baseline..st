@@ -35,14 +35,15 @@ baseline: spec
 
 		spec package: 'OrbeonLDAP';
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath' 'OrbeonLDAP')];
+				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
 				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
 				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'OrbeonLDAP' 'Seaside3' 'Jasvgi')];
-				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon')].
+				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates')].
 
 		spec
 			group: 'core' with: #('OrbeonLDAP' 'Orbeon'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
 			group: 'rest' with: #('OrbeonPersistenceApi');
 			group: 'web' with: #('OrbeonWeb');
-			group: 'test' with: #('Orbeon_Tests');
+			group: 'test' with: #('Orbeon_Templates' 'Orbeon_Tests');
 			group: 'default' with: #('core' 'rest' 'web' 'test')."to load" "aMetacello load: #('default'')"
 		]
