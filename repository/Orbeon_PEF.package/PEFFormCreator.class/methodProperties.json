@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"createDefinition:with:in:" : "brunobb 11/08/2018 07:31",
+		"createDefinition:with:in:" : "brunobb 11/12/2018 08:50",
+		"createDefinition:with:in:title:xPathVersion:" : "brunobb 11/12/2018 08:49",
 		"createFormInstance:definitionNamed:app:definitionMethod:in:" : "brunobb 11/08/2018 07:31",
 		"createFormInstance:withValues:definitionNamed:app:definitionMethod:in:" : "brunobb 11/08/2018 07:32" },
 	"instance" : {
