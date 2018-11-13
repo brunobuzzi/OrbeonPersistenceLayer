@@ -1,5 +1,7 @@
 publish
 createPublishedFormDefinition
+	"The receiver create the published form <OrbeonPublishedFormDefinition>.
+	In Orbeon the <available> node is not present but in GemStone we force it (see issue: #194)"
 	| publishedForm |
 
 	publishedForm := OrbeonPublishedFormDefinition new
@@ -11,7 +13,7 @@ createPublishedFormDefinition
 									xmlString: xmlString;
 									yourself.
 
-	publishedForm setAvailableNodeWith: 'false'.
-	self setAvailableNodeWith: 'false'.
+	publishedForm setAvailableNodeWith: 'false'. "force the creation of <available> node"
+	self setAvailableNodeWith: 'false'. "force the creation of <available> node"
 
 	^publishedForm
