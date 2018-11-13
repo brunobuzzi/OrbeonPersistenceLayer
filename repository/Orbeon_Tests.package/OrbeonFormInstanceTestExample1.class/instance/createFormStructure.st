@@ -1,19 +1,7 @@
 other
 createFormStructure
-	| savedDefinition app |
+	| app |
 
 	app := OrbeonApplication applicationNamed: 'agesic'.
-	savedDefinition := OrbeonSavedFormDefinition app: app applicationName form: 'test'.
-	savedDefinition id: UUID new asString;
-		version: 1;
-		title: 'Test';
-		setXmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_test.
-
-	app addSavedDefinition: savedDefinition.
-	savedDefinition definition 
-		publish; 
-		processXMLDefinitionFor: self getOrbeonXmlXpathUpto2017_1.
-
-	app addPublishedDefinition: savedDefinition definition.
-
-	^savedDefinition definition
+	
+	^OrbeonSavedFormDefinition createDefinition: 'test' with: #form_test in: app title: 'Test' xPathVersion: self getOrbeonXmlXpathUpto2017_1

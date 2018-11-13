@@ -6,4 +6,4 @@ createFormStructureFor: formName in: appName definitionTemplate: methodName titl
 
 	anOrbeonApplication := self getOrbeonApplicationClass applicationNamed: appName.
 
-	^PEFFormCreator createDefinition: formName with: methodName in: anOrbeonApplication title: title xPathVersion: anOrbeonXmlPath
+	^OrbeonSavedFormDefinition createDefinition: formName with: methodName in: anOrbeonApplication title: title xPathVersion: anOrbeonXmlPath

@@ -1,7 +1,7 @@
 other
 createFormDefinition
 
-	^(OrbeonPublishedFormDefinition app: 'agesic' form: 'test-3')
+	^(OrbeonPublishedFormDefinition newNamed: 'test-3' inAppNamed: 'agesic')
 			xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 form_test_3;
 			id: UUID new asString;
 			title: 'Test 3';

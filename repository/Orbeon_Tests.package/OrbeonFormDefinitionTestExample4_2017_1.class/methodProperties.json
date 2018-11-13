@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 03/08/2018 10:23",
-		"testAttachments" : "brunobb 03/07/2018 13:16",
+		"setUp" : "brunobb 11/13/2018 02:57",
+		"testAttachments" : "brunobb 11/12/2018 11:54",
 		"testCustomPDFAttachment" : "brunobb 03/07/2018 13:16",
 		"testFieldTypes" : "brunobb 03/07/2018 13:16",
 		"testFormFieldsInSection1" : "brunobb 03/07/2018 13:16",
@@ -15,4 +15,4 @@
 		"testIsSingleton" : "brunobb 03/07/2018 13:16",
 		"testMainSectionsStructure" : "brunobb 03/07/2018 13:16",
 		"testPermissions" : "brunobb 03/07/2018 13:16",
-		"testSwitchAvailable" : "brunobb 03/07/2018 13:16" } }
+		"testSwitchAvailable" : "brunobb 11/12/2018 09:57" } }

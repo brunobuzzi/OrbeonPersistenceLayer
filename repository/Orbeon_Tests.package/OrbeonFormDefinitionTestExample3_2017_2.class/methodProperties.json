@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 03/08/2018 10:29",
+		"setUp" : "brunobb 11/13/2018 02:57",
 		"testFieldTypes" : "brunobb 03/07/2018 12:52",
 		"testFormFieldsInSection1" : "brunobb 03/07/2018 12:52",
 		"testFormFieldsInSection11" : "brunobb 03/07/2018 12:52",
@@ -13,4 +13,4 @@
 		"testIsSingleton" : "brunobb 03/07/2018 12:52",
 		"testMainSectionsStructure" : "brunobb 03/07/2018 12:52",
 		"testPermissions" : "brunobb 03/07/2018 12:52",
-		"testSwitchAvailable" : "brunobb 03/07/2018 12:52" } }
+		"testSwitchAvailable" : "brunobb 11/12/2018 09:57" } }
