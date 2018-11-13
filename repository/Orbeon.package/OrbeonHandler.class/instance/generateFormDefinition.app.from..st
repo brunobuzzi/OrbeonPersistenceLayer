@@ -5,7 +5,7 @@ generateFormDefinition: formName app: appName from: dbArray
 
 	version := Integer fromString: (dbArray at: 7).
 
-	formDefinition := OrbeonPublishedFormDefinition app: appName form: formName.
+	formDefinition := OrbeonPublishedFormDefinition newNamed: formName inAppNamed: appName.
 
 	^formDefinition updateFrom: dbArray;
 		version: version;
