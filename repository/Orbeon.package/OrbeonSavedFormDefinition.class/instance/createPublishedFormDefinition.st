@@ -1,11 +1,17 @@
-other
+publish
 createPublishedFormDefinition
+	| publishedForm |
 
-	^OrbeonPublishedFormDefinition new
-		id: id;
-		application: application;
-		formName: formName;
-		title: self title;
-		description: self description;
-		xmlString: xmlString;
-		yourself
+	publishedForm := OrbeonPublishedFormDefinition new
+									id: id;
+									application: application;
+									formName: formName;
+									title: self title;
+									description: self description;
+									xmlString: xmlString;
+									yourself.
+
+	publishedForm setAvailableNodeWith: 'false'.
+	self setAvailableNodeWith: 'false'.
+
+	^publishedForm
