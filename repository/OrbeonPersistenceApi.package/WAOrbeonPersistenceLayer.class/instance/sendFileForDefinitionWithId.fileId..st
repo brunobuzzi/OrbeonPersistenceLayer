@@ -10,4 +10,6 @@ sendFileForDefinitionWithId: definitionId fileId: fileId
 	apiOperation := OrbeonSendFormDefinitionFileApi newFor: self id: definitionId.
 	apiOperation fileId: fileId.
 
+	self requestContext response contentType: WAMimeType applicationOctetStream.
+
 	^apiOperation doIt

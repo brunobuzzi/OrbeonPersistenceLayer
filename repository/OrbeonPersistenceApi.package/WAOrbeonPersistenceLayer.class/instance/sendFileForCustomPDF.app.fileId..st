@@ -11,4 +11,6 @@ sendFileForCustomPDF: formName app: app fileId: fileId
 		appName: app;
 		formName: formName.
 
+	self requestContext response contentType: WAMimeType applicationOctetStream.
+
 	^apiOperation doIt

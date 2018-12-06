@@ -11,4 +11,6 @@ sendFileForInstance: formName app: app instanceId: instanceId fileId: fileId
 		appName: app;
 		formName: formName.
 
+	self requestContext response contentType: WAMimeType applicationOctetStream.
+
 	^apiOperation doIt

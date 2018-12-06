@@ -11,4 +11,6 @@ sendFileForDraft: formName app: app draftId: draftId fileId: fileId
 		appName: app;
 		formName: formName.
 
+	self requestContext response contentType: WAMimeType applicationOctetStream.
+
 	^apiOperation doIt

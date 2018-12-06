@@ -6,8 +6,6 @@ doIt
 
 	definition := self getOrbeonApplicationClass getAnyDefinitionWithId: id ifNone: [^NoOrbeonFormException signal: 'No form definition with id [', id, ']'].
 
-	restHandler requestContext response contentType: WAMimeType applicationOctetStream.
-
 	gsFile := GsFile openOnServer: ((self apiConfiguration getSavedDefinitionsPathFor: definition formName in: definition getApplicationName), id, '-',fileId) mode: 'rb'.
 	fileContents := gsFile contentsAsUtf8.
 
