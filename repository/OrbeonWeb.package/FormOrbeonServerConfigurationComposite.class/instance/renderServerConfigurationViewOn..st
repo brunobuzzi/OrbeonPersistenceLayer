@@ -9,7 +9,7 @@ renderServerConfigurationViewOn: html
 				callback: [:value | self getOrbeonDatabaseConfiguration databaseIP: value]; 
 				readonly: true; 
 				with: self getOrbeonDatabaseConfiguration databaseIP.
-			html label class: 'margin-right-10px'; attributeAt: 'for' put: 'databaseName'; with: ('Database & Orbeon DB Version' translateFor: self session user).
+			html label class: 'margin-right-10px'; attributeAt: 'for' put: 'databaseName'; with: ('Database & Orbeon DB Version' translateIn: self session).
 			html select 
 				attributeAt: 'id' put: 'databaseName';
 				list: OrbeonDatabaseReader getAllDatabaseReadersComboNames;
@@ -35,7 +35,7 @@ renderServerConfigurationViewOn: html
 				callback: [:value | self getGemStoneServerConfiguration gemstoneIP: value]; 
 				readonly: true; 
 				with: self getGemStoneServerConfiguration gemstoneIP.
-			html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('XPath for Orbeon Version' translateFor: self session user).
+			html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('XPath for Orbeon Version' translateIn: self session).
 			html select 
 				disable: true;
 				attributeAt: 'id' put: 'versionName';
