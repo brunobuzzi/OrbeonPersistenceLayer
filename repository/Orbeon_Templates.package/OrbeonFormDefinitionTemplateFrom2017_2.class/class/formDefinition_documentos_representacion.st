@@ -294,75 +294,69 @@ formDefinition_documentos_representacion
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-1-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
                                     <xf:hint ref="$form-resources/s/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="k-control" bind="k-bind">
                                     <xf:label ref="$form-resources/k/label"/>
                                     <xf:hint ref="$form-resources/k/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="uuid-control" bind="uuid-bind">
                                     <xf:label ref="$form-resources/uuid/label"/>
                                     <xf:hint ref="$form-resources/uuid/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="4">
                                 <xf:input id="oop-control" bind="oop-bind">
                                     <xf:label ref="$form-resources/oop/label"/>
                                     <xf:hint ref="$form-resources/oop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="5" w="4">
                                 <xf:input id="assignmentOop-control" bind="assignmentOop-bind">
                                     <xf:label ref="$form-resources/assignmentOop/label"/>
                                     <xf:hint ref="$form-resources/assignmentOop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
-                            </xh:td>
-                            <xh:td/>
-                        </xh:tr>
+                            </fr:c>
+                        <fr:c y="2" x="9" w="4"/>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-11-control" bind="section-11-bind">
                     <xf:label ref="$form-resources/section-11/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-2-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
                                     <xf:hint ref="$form-resources/username/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="rol-control" bind="rol-bind">
                                     <xf:label ref="$form-resources/rol/label"/>
                                     <xf:hint ref="$form-resources/rol/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="processId-control" bind="processId-bind">
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-12-control" bind="section-12-bind" repeat="content" min="1"
@@ -370,37 +364,33 @@ formDefinition_documentos_representacion
                             apply-defaults="true"
                             fb:initial-iterations="first">
                     <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-3-grid">
+                        <fr:c y="1" x="1" w="12">
                                 <fr:attachment xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                               xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                               id="docUpload-control"
-                                               bind="docUpload-bind"
-                                               class="fr-attachment">
+                                           xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                           id="docUpload-control"
+                                           bind="docUpload-bind"
+                                           class="fr-attachment">
                                     <xf:label ref="$form-resources/docUpload/label"/>
                                     <xf:hint ref="$form-resources/docUpload/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:attachment>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-14-control" bind="section-14-bind">
                     <xf:label ref="$form-resources/section-14/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-4-grid">
+                        <fr:c y="1" x="1" w="12">
                                 <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                id="proceder-control"
-                                                bind="proceder-bind">
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="proceder-control"
+                                            bind="proceder-bind">
                                     <xf:label ref="$form-resources/proceder/label"/>
                                     <xf:hint ref="$form-resources/proceder/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:yesno-input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>

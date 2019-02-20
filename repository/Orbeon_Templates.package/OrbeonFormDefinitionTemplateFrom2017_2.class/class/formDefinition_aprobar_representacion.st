@@ -1,5 +1,5 @@
 miem
-formDefinition_documentos_representacion
+formDefinition_aprobar_representacion
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -17,7 +17,7 @@ formDefinition_documentos_representacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Documentos de la Representación</xh:title>
+        <xh:title>Aprobar Representación</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -34,13 +34,10 @@ formDefinition_documentos_representacion
                         <rol/>
                         <processId/>
                     </section-11>
-                    <section-12>
-                        <section-12-iteration>
-                            <docUpload filename="" mediatype="" size=""/>
-                        </section-12-iteration>
-                    </section-12>
+                    
                     <section-14>
-                        <proceder/>
+                        <aprobada/>
+                        <aprMotivosRechazo/>
                     </section-14>
                 </form>
             </xf:instance>
@@ -78,24 +75,20 @@ formDefinition_documentos_representacion
                              readonly="true()"/>
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
-                <xf:bind id="section-12-bind" ref="section-12" name="section-12">
-                    <xf:bind id="section-12-iteration-bind" ref="section-12-iteration"
-                             name="section-12-iteration">
-                        <xf:bind id="docUpload-bind" ref="docUpload" name="docUpload" type="xs:anyURI"
-                                 required="true()"/>
-                    </xf:bind>
-                </xf:bind>
+                
                 <xf:bind id="section-14-bind" ref="section-14" name="section-14">
-                    <xf:bind id="proceder-bind" ref="proceder" name="proceder" type="xs:boolean"
+                    <xf:bind id="aprobada-bind" ref="aprobada" name="aprobada" type="xs:boolean"
                              required="true()"/>
+                    <xf:bind id="aprMotivosRechazo-bind" ref="aprMotivosRechazo" name="aprMotivosRechazo"
+                             relevant="$aprobada = false()"/>
                 </xf:bind>
             </xf:bind>
             <!-- Metadata -->
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>dne</application-name>
-                    <form-name>documentos-representacion</form-name>
-                    <title xml:lang="en">Documentos de la Representación</title>
+                    <form-name>aprobar-representacion</form-name>
+                    <title xml:lang="en">Aprobar Representación</title>
                     <description xml:lang="en"/>
                     <title xml:lang="es">Documentos de la Representación</title>
                     <description xml:lang="es"/>
@@ -113,16 +106,17 @@ formDefinition_documentos_representacion
          <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
-                        <proceder>
-                            <label>Todos los datos previamente ingresados son correctos ?</label>
+                        <aprobada>
+                            <label>Los datos de la representación son correctos ?</label>
                             <hint/>
-                        </proceder>
-                        <docUpload>
-                            <label>Adjunte los documentos de la representación</label>
+                        </aprobada>
+                        <aprMotivosRechazo>
+                            <label>Motivos de Rechazo</label>
                             <hint/>
-                        </docUpload>
+                        </aprMotivosRechazo>
+                        
                         <section-14>
-                            <label>Confirmar Datos</label>
+                            <label>Aprobar Representación</label>
                             <help/>
                         </section-14>
                         <username>
@@ -137,10 +131,7 @@ formDefinition_documentos_representacion
                             <label>Process Id</label>
                             <hint/>
                         </processId>
-                        <section-12>
-                            <label>Documentos</label>
-                            <help/>
-                        </section-12>
+                        
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -170,14 +161,15 @@ formDefinition_documentos_representacion
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
-                        <proceder>
+                        <aprobada>
                             <label/>
                             <hint/>
-                        </proceder>
-                        <docUpload>
+                        </aprobada>
+                        <aprMotivosRechazo>
                             <label/>
                             <hint/>
-                        </docUpload>
+                        </aprMotivosRechazo>
+                        
                         <section-14>
                             <label/>
                             <help/>
@@ -194,10 +186,7 @@ formDefinition_documentos_representacion
                             <label>Form Id</label>
                             <hint/>
                         </processId>
-                        <section-12>
-                            <label/>
-                            <help/>
-                        </section-12>
+                        
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -235,11 +224,7 @@ formDefinition_documentos_representacion
                       xmlns:p="http://www.orbeon.com/oxf/pipeline"
                       xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder">&lt;uuid&gt;&lt;/uuid&gt;</body>
             </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-12-template">
-                <section-12-iteration>
-                    <docUpload filename="" mediatype="" size=""/>
-                </section-12-iteration>
-            </xf:instance>
+            
             <xf:submission id="security-token-submission" class="fr-service"
                            ref="instance(''fr-service-request-instance'')"
                            resource="http://gemstoneIP:8787/orbeon-gemstone-api/securityToken?token={xxf:get-request-parameter(''token'')}"
@@ -294,113 +279,94 @@ formDefinition_documentos_representacion
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-1-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
                                     <xf:hint ref="$form-resources/s/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="k-control" bind="k-bind">
                                     <xf:label ref="$form-resources/k/label"/>
                                     <xf:hint ref="$form-resources/k/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="uuid-control" bind="uuid-bind">
                                     <xf:label ref="$form-resources/uuid/label"/>
                                     <xf:hint ref="$form-resources/uuid/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="4">
                                 <xf:input id="oop-control" bind="oop-bind">
                                     <xf:label ref="$form-resources/oop/label"/>
                                     <xf:hint ref="$form-resources/oop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="5" w="4">
                                 <xf:input id="assignmentOop-control" bind="assignmentOop-bind">
                                     <xf:label ref="$form-resources/assignmentOop/label"/>
                                     <xf:hint ref="$form-resources/assignmentOop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
-                            </xh:td>
-                            <xh:td/>
-                        </xh:tr>
+                            </fr:c>
+                        <fr:c y="2" x="9" w="4"/>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-11-control" bind="section-11-bind">
                     <xf:label ref="$form-resources/section-11/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-2-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
                                     <xf:hint ref="$form-resources/username/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="rol-control" bind="rol-bind">
                                     <xf:label ref="$form-resources/rol/label"/>
                                     <xf:hint ref="$form-resources/rol/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="processId-control" bind="processId-bind">
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
-                <fr:section id="section-12-control" bind="section-12-bind" repeat="content" min="1"
-                            template="instance(''section-12-template'')"
-                            apply-defaults="true"
-                            fb:initial-iterations="first">
-                    <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
-                                <fr:attachment xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                               xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                               id="docUpload-control"
-                                               bind="docUpload-bind"
-                                               class="fr-attachment">
-                                    <xf:label ref="$form-resources/docUpload/label"/>
-                                    <xf:hint ref="$form-resources/docUpload/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                </fr:attachment>
-                            </xh:td>
-                        </xh:tr>
-                    </fr:grid>
-                </fr:section>
+                
                 <fr:section id="section-14-control" bind="section-14-bind">
                     <xf:label ref="$form-resources/section-14/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-3-grid">
+                        <fr:c y="1" x="1" w="12">
                                 <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                id="proceder-control"
-                                                bind="proceder-bind">
-                                    <xf:label ref="$form-resources/proceder/label"/>
-                                    <xf:hint ref="$form-resources/proceder/hint"/>
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="aprobada-control"
+                                            bind="aprobada-bind"
+                                            class="fr-summary fr-search">
+                                    <xf:label ref="$form-resources/aprobada/label"/>
+                                    <xf:hint ref="$form-resources/aprobada/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    
                                 </fr:yesno-input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="12">
+                                <xf:textarea id="aprMotivosRechazo-control" bind="aprMotivosRechazo-bind">
+                                    <xf:label ref="$form-resources/aprMotivosRechazo/label"/>
+                                    <xf:hint ref="$form-resources/aprMotivosRechazo/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:textarea>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>

@@ -111,7 +111,7 @@ formDefinition_alta_instalacion
             <!-- Metadata -->
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>agesic-com</application-name>
+                    <application-name>dne</application-name>
                     <form-name>alta-instalacion</form-name>
                     <title xml:lang="en">Alta Instalación</title>
                     <description xml:lang="en"/>

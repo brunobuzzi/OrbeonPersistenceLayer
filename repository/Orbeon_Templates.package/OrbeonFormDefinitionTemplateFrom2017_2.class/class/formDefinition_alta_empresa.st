@@ -1,5 +1,5 @@
 miem
-formDefinition_documentos_representacion
+formDefinition_alta_empresa
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -17,7 +17,7 @@ formDefinition_documentos_representacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Documentos de la Representación</xh:title>
+        <xh:title>Alta Empresa</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -35,13 +35,17 @@ formDefinition_documentos_representacion
                         <processId/>
                     </section-11>
                     <section-12>
-                        <section-12-iteration>
-                            <docUpload filename="" mediatype="" size=""/>
-                        </section-12-iteration>
+                        <empRazonSocial/>
+                        <empRut/>
+                        <empCIIU/>
+                        <empTelefono/>
+                        <empFax/>
+                        <empDireccion/>
+                        <empMail/>
+                        <empDepartamento/>
+                        <empClasificacion/>
+                        <empCertificadoPyme/>
                     </section-12>
-                    <section-14>
-                        <proceder/>
-                    </section-14>
                 </form>
             </xf:instance>
             <!-- Bindings -->
@@ -79,14 +83,31 @@ formDefinition_documentos_representacion
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
                 <xf:bind id="section-12-bind" ref="section-12" name="section-12">
-                    <xf:bind id="section-12-iteration-bind" ref="section-12-iteration"
-                             name="section-12-iteration">
-                        <xf:bind id="docUpload-bind" ref="docUpload" name="docUpload" type="xs:anyURI"
-                                 required="true()"/>
-                    </xf:bind>
-                </xf:bind>
-                <xf:bind id="section-14-bind" ref="section-14" name="section-14">
-                    <xf:bind id="proceder-bind" ref="proceder" name="proceder" type="xs:boolean"
+                    <xf:bind id="empRazonSocial-bind" ref="empRazonSocial" name="empRazonSocial"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empRut-bind" ref="empRut" name="empRut" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empCIIU-bind" ref="empCIIU" name="empCIIU" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empTelefono-bind" ref="empTelefono" name="empTelefono"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empDepartamento-bind" ref="empDepartamento" name="empDepartamento"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empMail-bind" ref="empMail" name="empMail" type="xf:email"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empFax-bind" ref="empFax" name="empFax" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empDireccion-bind" ref="empDireccion" name="empDireccion"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empClasificacion-bind" ref="empClasificacion" name="empClasificacion"
+                             xxf:whitespace="trim"/>
+                    <xf:bind id="empCertificadoPyme-bind" ref="empCertificadoPyme" name="empCertificadoPyme"
+                             type="xs:boolean"
                              required="true()"/>
                 </xf:bind>
             </xf:bind>
@@ -94,10 +115,10 @@ formDefinition_documentos_representacion
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>dne</application-name>
-                    <form-name>documentos-representacion</form-name>
-                    <title xml:lang="en">Documentos de la Representación</title>
+                    <form-name>alta-empresa</form-name>
+                    <title xml:lang="en">Alta Empresa</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Documentos de la Representación</title>
+                    <title xml:lang="es">Alta Empresa</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>
@@ -113,18 +134,46 @@ formDefinition_documentos_representacion
          <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
-                        <proceder>
-                            <label>Todos los datos previamente ingresados son correctos ?</label>
+                        <empRazonSocial>
+                            <label>Razón Social</label>
                             <hint/>
-                        </proceder>
-                        <docUpload>
-                            <label>Adjunte los documentos de la representación</label>
+                        </empRazonSocial>
+                        <empRut>
+                            <label>RUT</label>
                             <hint/>
-                        </docUpload>
-                        <section-14>
-                            <label>Confirmar Datos</label>
-                            <help/>
-                        </section-14>
+                        </empRut>
+                        <empCIIU>
+                            <label>CIIU</label>
+                            <hint/>
+                        </empCIIU>
+                        <empTelefono>
+                            <label>Teléfono</label>
+                            <hint/>
+                        </empTelefono>
+                        <empFax>
+                            <label>Fax</label>
+                            <hint/>
+                        </empFax>
+                        <empDireccion>
+                            <label>Dirección</label>
+                            <hint/>
+                        </empDireccion>
+                        <empMail>
+                            <label>Mail</label>
+                            <hint/>
+                        </empMail>
+                        <empDepartamento>
+                            <label>Departamento</label>
+                            <hint/>
+                        </empDepartamento>
+                        <empClasificacion>
+                            <label>Clasificación</label>
+                            <hint/>
+                        </empClasificacion>
+                        <empCertificadoPyme>
+                            <label>Certificado PYME</label>
+                            <hint/>
+                        </empCertificadoPyme>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -138,7 +187,7 @@ formDefinition_documentos_representacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Documentos</label>
+                            <label>Datos de la Empresa</label>
                             <help/>
                         </section-12>
                         <internal-section>
@@ -170,18 +219,46 @@ formDefinition_documentos_representacion
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
-                        <proceder>
+                        <empRazonSocial>
                             <label/>
                             <hint/>
-                        </proceder>
-                        <docUpload>
+                        </empRazonSocial>
+                        <empRut>
                             <label/>
                             <hint/>
-                        </docUpload>
-                        <section-14>
+                        </empRut>
+                        <empCIIU>
                             <label/>
-                            <help/>
-                        </section-14>
+                            <hint/>
+                        </empCIIU>
+                        <empTelefono>
+                            <label/>
+                            <hint/>
+                        </empTelefono>
+                        <empFax>
+                            <label/>
+                            <hint/>
+                        </empFax>
+                        <empDireccion>
+                            <label/>
+                            <hint/>
+                        </empDireccion>
+                        <empMail>
+                            <label/>
+                            <hint/>
+                        </empMail>
+                        <empDepartamento>
+                            <label/>
+                            <hint/>
+                        </empDepartamento>
+                        <empClasificacion>
+                            <label/>
+                            <hint/>
+                        </empClasificacion>
+                        <empCertificadoPyme>
+                            <label/>
+                            <hint/>
+                        </empCertificadoPyme>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -234,11 +311,6 @@ formDefinition_documentos_representacion
                       xmlns:frf="java:org.orbeon.oxf.fr.FormRunner"
                       xmlns:p="http://www.orbeon.com/oxf/pipeline"
                       xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilder">&lt;uuid&gt;&lt;/uuid&gt;</body>
-            </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-12-template">
-                <section-12-iteration>
-                    <docUpload filename="" mediatype="" size=""/>
-                </section-12-iteration>
             </xf:instance>
             <xf:submission id="security-token-submission" class="fr-service"
                            ref="instance(''fr-service-request-instance'')"
@@ -294,113 +366,147 @@ formDefinition_documentos_representacion
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-1-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
                                     <xf:hint ref="$form-resources/s/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="k-control" bind="k-bind">
                                     <xf:label ref="$form-resources/k/label"/>
                                     <xf:hint ref="$form-resources/k/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="uuid-control" bind="uuid-bind">
                                     <xf:label ref="$form-resources/uuid/label"/>
                                     <xf:hint ref="$form-resources/uuid/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="4">
                                 <xf:input id="oop-control" bind="oop-bind">
                                     <xf:label ref="$form-resources/oop/label"/>
                                     <xf:hint ref="$form-resources/oop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="5" w="4">
                                 <xf:input id="assignmentOop-control" bind="assignmentOop-bind">
                                     <xf:label ref="$form-resources/assignmentOop/label"/>
                                     <xf:hint ref="$form-resources/assignmentOop/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
-                            </xh:td>
-                            <xh:td/>
-                        </xh:tr>
+                            </fr:c>
+                        <fr:c y="2" x="9" w="4"/>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-11-control" bind="section-11-bind">
                     <xf:label ref="$form-resources/section-11/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-2-grid">
+                        <fr:c y="1" x="1" w="4">
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
                                     <xf:hint ref="$form-resources/username/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="5" w="4">
                                 <xf:input id="rol-control" bind="rol-bind">
                                     <xf:label ref="$form-resources/rol/label"/>
                                     <xf:hint ref="$form-resources/rol/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="9" w="4">
                                 <xf:input id="processId-control" bind="processId-bind">
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
-                <fr:section id="section-12-control" bind="section-12-bind" repeat="content" min="1"
-                            template="instance(''section-12-template'')"
-                            apply-defaults="true"
-                            fb:initial-iterations="first">
+                <fr:section id="section-12-control" bind="section-12-bind">
                     <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
-                                <fr:attachment xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                               xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                               id="docUpload-control"
-                                               bind="docUpload-bind"
-                                               class="fr-attachment">
-                                    <xf:label ref="$form-resources/docUpload/label"/>
-                                    <xf:hint ref="$form-resources/docUpload/hint"/>
+                    <fr:grid id="grid-3-grid">
+                        <fr:c y="1" x="1" w="6">
+                                <xf:input id="empRazonSocial-control" bind="empRazonSocial-bind">
+                                    <xf:label ref="$form-resources/empRazonSocial/label"/>
+                                    <xf:hint ref="$form-resources/empRazonSocial/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                </fr:attachment>
-                            </xh:td>
-                        </xh:tr>
-                    </fr:grid>
-                </fr:section>
-                <fr:section id="section-14-control" bind="section-14-bind">
-                    <xf:label ref="$form-resources/section-14/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="1" x="7" w="6">
+                                <xf:input id="empRut-control" bind="empRut-bind">
+                                    <xf:label ref="$form-resources/empRut/label"/>
+                                    <xf:hint ref="$form-resources/empRut/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="6">
+                                <xf:input id="empCIIU-control" bind="empCIIU-bind">
+                                    <xf:label ref="$form-resources/empCIIU/label"/>
+                                    <xf:hint ref="$form-resources/empCIIU/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="2" x="7" w="6">
+                                <xf:input id="empTelefono-control" bind="empTelefono-bind">
+                                    <xf:label ref="$form-resources/empTelefono/label"/>
+                                    <xf:hint ref="$form-resources/empTelefono/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="3" x="1" w="6">
+                                <xf:input id="empFax-control" bind="empFax-bind">
+                                    <xf:label ref="$form-resources/empFax/label"/>
+                                    <xf:hint ref="$form-resources/empFax/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="3" x="7" w="6">
+                                <xf:input id="empDireccion-control" bind="empDireccion-bind">
+                                    <xf:label ref="$form-resources/empDireccion/label"/>
+                                    <xf:hint ref="$form-resources/empDireccion/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="4" x="1" w="6">
+                                <xf:input id="empMail-control" bind="empMail-bind">
+                                    <xf:label ref="$form-resources/empMail/label"/>
+                                    <xf:hint ref="$form-resources/empMail/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="4" x="7" w="6">
+                                <xf:input id="empDepartamento-control" bind="empDepartamento-bind">
+                                    <xf:label ref="$form-resources/empDepartamento/label"/>
+                                    <xf:hint ref="$form-resources/empDepartamento/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="5" x="1" w="6">
+                                <xf:input id="empClasificacion-control" bind="empClasificacion-bind">
+                                    <xf:label ref="$form-resources/empClasificacion/label"/>
+                                    <xf:hint ref="$form-resources/empClasificacion/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="5" x="7" w="6">
                                 <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                id="proceder-control"
-                                                bind="proceder-bind">
-                                    <xf:label ref="$form-resources/proceder/label"/>
-                                    <xf:hint ref="$form-resources/proceder/hint"/>
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="empCertificadoPyme-control"
+                                            bind="empCertificadoPyme-bind">
+                                    <xf:label ref="$form-resources/empCertificadoPyme/label"/>
+                                    <xf:hint ref="$form-resources/empCertificadoPyme/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:yesno-input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>

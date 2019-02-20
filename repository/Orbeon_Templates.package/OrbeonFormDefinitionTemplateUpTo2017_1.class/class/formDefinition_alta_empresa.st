@@ -114,7 +114,7 @@ formDefinition_alta_empresa
             <!-- Metadata -->
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>agesic-com</application-name>
+                    <application-name>dne</application-name>
                     <form-name>alta-empresa</form-name>
                     <title xml:lang="en">Alta Empresa</title>
                     <description xml:lang="en"/>

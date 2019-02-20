@@ -86,7 +86,7 @@ formDefinition_aprobar_representacion
             <!-- Metadata -->
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>agesic-com</application-name>
+                    <application-name>dne</application-name>
                     <form-name>aprobar-representacion</form-name>
                     <title xml:lang="en">Aprobar Representación</title>
                     <description xml:lang="en"/>
