@@ -46,6 +46,14 @@ formDefinition_alta_empresa
                         <empClasificacion/>
                         <empCertificadoPyme/>
                     </section-12>
+                    <section-1>
+                        <empCuentaBanco/>
+                        <empCuentaSucursal/>
+                        <empCuentaTitular/>
+                        <empCuentaNumero/>
+                        <empCuentaTipo/>
+                        <empCuentaMoneda/>
+                    </section-1>
                 </form>
             </xf:instance>
             <!-- Bindings -->
@@ -110,6 +118,26 @@ formDefinition_alta_empresa
                              type="xs:boolean"
                              required="true()"/>
                 </xf:bind>
+                <xf:bind id="section-1-bind" ref="section-1" name="section-1">
+                    <xf:bind id="empCuentaBanco-bind" ref="empCuentaBanco" name="empCuentaBanco"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empCuentaSucursal-bind" ref="empCuentaSucursal" name="empCuentaSucursal"
+                             xxf:whitespace="trim"
+                             required="true()"
+                             type="xs:integer"/>
+                    <xf:bind id="empCuentaTitular-bind" ref="empCuentaTitular" name="empCuentaTitular"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="empCuentaNumero-bind" ref="empCuentaNumero" name="empCuentaNumero"
+                             xxf:whitespace="trim"
+                             required="true()"
+                             type="xs:integer"/>
+                    <xf:bind id="empCuentaTipo-bind" ref="empCuentaTipo" name="empCuentaTipo"
+                             required="true()"/>
+                    <xf:bind id="empCuentaMoneda-bind" ref="empCuentaMoneda" name="empCuentaMoneda"
+                             required="true()"/>
+                </xf:bind>
             </xf:bind>
             <!-- Metadata -->
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
@@ -134,6 +162,55 @@ formDefinition_alta_empresa
          <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
+                        <empCuentaBanco>
+                            <label>Banco</label>
+                            <hint/>
+                        </empCuentaBanco>
+                        <empCuentaSucursal>
+                            <label>Sucursal</label>
+                            <hint/>
+                        </empCuentaSucursal>
+                        <empCuentaTitular>
+                            <label>Titular</label>
+                            <hint/>
+                        </empCuentaTitular>
+                        <empCuentaNumero>
+                            <label>Número</label>
+                            <hint/>
+                        </empCuentaNumero>
+                        <empCuentaTipo>
+                            <label>Tipo</label>
+                            <hint/>
+                            <item>
+                                <label>Cuenta Corriente</label>
+                                <hint/>
+                                <value>cuenta-corriente</value>
+                            </item>
+                            <item>
+                                <label>Caja de Ahorro</label>
+                                <hint/>
+                                <value>caja-de-ahorro</value>
+                            </item>
+                        </empCuentaTipo>
+                        <empCuentaMoneda>
+                            <label>Moneda</label>
+                            <hint/>
+                            <item>
+                                <label>USD</label>
+                                <hint/>
+                                <value>usd</value>
+                            </item>
+                            <item>
+                                <label>UYU</label>
+                                <hint/>
+                                <value>uyu</value>
+                            </item>
+                            <item>
+                                <label>EUR</label>
+                                <hint/>
+                                <value>eur</value>
+                            </item>
+                        </empCuentaMoneda>
                         <empRazonSocial>
                             <label>Razón Social</label>
                             <hint/>
@@ -174,6 +251,10 @@ formDefinition_alta_empresa
                             <label>Certificado PYME</label>
                             <hint/>
                         </empCertificadoPyme>
+                        <section-1>
+                            <label>Cuenta Bancaria</label>
+                            <help/>
+                        </section-1>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -219,6 +300,55 @@ formDefinition_alta_empresa
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
+                        <empCuentaBanco>
+                            <label/>
+                            <hint/>
+                        </empCuentaBanco>
+                        <empCuentaSucursal>
+                            <label/>
+                            <hint/>
+                        </empCuentaSucursal>
+                        <empCuentaTitular>
+                            <label/>
+                            <hint/>
+                        </empCuentaTitular>
+                        <empCuentaNumero>
+                            <label/>
+                            <hint/>
+                        </empCuentaNumero>
+                        <empCuentaTipo>
+                            <label/>
+                            <hint/>
+                            <item>
+                                <label/>
+                                <hint/>
+                                <value>cuenta-corriente</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <hint/>
+                                <value>caja-de-ahorro</value>
+                            </item>
+                        </empCuentaTipo>
+                        <empCuentaMoneda>
+                            <label/>
+                            <hint/>
+                            <item>
+                                <label/>
+                                <hint/>
+                                <value>usd</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <hint/>
+                                <value>uyu</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <hint/>
+                                <value>eur</value>
+                            </item>
+                        </empCuentaMoneda>
                         <empRazonSocial>
                             <label/>
                             <hint/>
@@ -259,6 +389,10 @@ formDefinition_alta_empresa
                             <label/>
                             <hint/>
                         </empCertificadoPyme>
+                        <section-1>
+                            <label/>
+                            <help/>
+                        </section-1>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -507,6 +641,63 @@ formDefinition_alta_empresa
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:yesno-input>
                             </fr:c>
+                    </fr:grid>
+                </fr:section>
+                <fr:section id="section-1-section" bind="section-1-bind">
+                    <xf:label ref="$form-resources/section-1/label"/>
+                    <fr:grid id="grid-4-grid">
+                        <fr:c x="1" y="1" w="6">
+                            <xf:input id="empCuentaBanco-control" bind="empCuentaBanco-bind">
+                                <xf:label ref="$form-resources/empCuentaBanco/label"/>
+                                <xf:hint ref="$form-resources/empCuentaBanco/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                            </xf:input>
+                        </fr:c>
+                        <fr:c x="7" y="1" w="6">
+                            <fr:number id="empCuentaSucursal-control" bind="empCuentaSucursal-bind">
+                                <xf:label ref="$form-resources/empCuentaSucursal/label"/>
+                                <xf:hint ref="$form-resources/empCuentaSucursal/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                            </fr:number>
+                        </fr:c>
+                        <fr:c x="1" y="2" w="6">
+                            <xf:input id="empCuentaTitular-control" bind="empCuentaTitular-bind">
+                                <xf:label ref="$form-resources/empCuentaTitular/label"/>
+                                <xf:hint ref="$form-resources/empCuentaTitular/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                            </xf:input>
+                        </fr:c>
+                        <fr:c x="7" y="2" w="6">
+                            <fr:number id="empCuentaNumero-control" bind="empCuentaNumero-bind">
+                                <xf:label ref="$form-resources/empCuentaNumero/label"/>
+                                <xf:hint ref="$form-resources/empCuentaNumero/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                            </fr:number>
+                        </fr:c>
+                        <fr:c x="1" y="3" w="6">
+                            <xf:select1 id="empCuentaTipo-control" appearance="full" bind="empCuentaTipo-bind">
+                                <xf:label ref="$form-resources/empCuentaTipo/label"/>
+                                <xf:hint ref="$form-resources/empCuentaTipo/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                <xf:itemset ref="$form-resources/empCuentaTipo/item">
+                                    <xf:label ref="label"/>
+                                    <xf:value ref="value"/>
+                                    <xf:hint ref="hint"/>
+                                </xf:itemset>
+                            </xf:select1>
+                        </fr:c>
+                        <fr:c x="7" y="3" w="6">
+                            <xf:select1 id="empCuentaMoneda-control" appearance="full" bind="empCuentaMoneda-bind">
+                                <xf:label ref="$form-resources/empCuentaMoneda/label"/>
+                                <xf:hint ref="$form-resources/empCuentaMoneda/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                <xf:itemset ref="$form-resources/empCuentaMoneda/item">
+                                    <xf:label ref="label"/>
+                                    <xf:value ref="value"/>
+                                    <xf:hint ref="hint"/>
+                                </xf:itemset>
+                            </xf:select1>
+                        </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>

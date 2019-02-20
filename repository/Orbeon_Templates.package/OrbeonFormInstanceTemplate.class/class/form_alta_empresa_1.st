@@ -27,4 +27,12 @@ form_alta_empresa_1
 		<empClasificacion/>
 		<empCertificadoPyme>true</empCertificadoPyme>
 	</section-12>
+	<section-1>
+		<empCuentaBanco>BROU</empCuentaBanco>
+		<empCuentaSucursal>00001</empCuentaSucursal>
+		<empCuentaTitular>John Kaplan</empCuentaTitular>
+		<empCuentaNumero>789456123</empCuentaNumero>
+		<empCuentaTipo>cuenta-corriente</empCuentaTipo>
+		<empCuentaMoneda>usd</empCuentaMoneda>
+	</section-1>
 </form>'
