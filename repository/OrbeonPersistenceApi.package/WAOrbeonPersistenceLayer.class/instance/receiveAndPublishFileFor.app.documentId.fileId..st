@@ -14,4 +14,4 @@ receiveAndPublishFileFor: formName app: app documentId: documentId fileId: fileI
 		appName: app;
 		formName: formName.
 
-	apiOperation doIt
+	^apiOperation doIt

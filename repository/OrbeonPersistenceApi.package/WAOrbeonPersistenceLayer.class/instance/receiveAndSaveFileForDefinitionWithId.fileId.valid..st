@@ -11,4 +11,4 @@ receiveAndSaveFileForDefinitionWithId: definitionId fileId: fileId valid: aBoole
 	apiOperation fileId: fileId;
 		fileContents: self requestContext request rawBody.
 		
-	apiOperation doIt
+	^apiOperation doIt
