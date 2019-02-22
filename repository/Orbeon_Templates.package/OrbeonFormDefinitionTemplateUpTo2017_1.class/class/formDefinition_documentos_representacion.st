@@ -17,7 +17,7 @@ formDefinition_documentos_representacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Documentos de la Representación</xh:title>
+        <xh:title>Documentos de la RepresentaciÃ³n</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -95,9 +95,9 @@ formDefinition_documentos_representacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>documentos-representacion</form-name>
-                    <title xml:lang="en">Documentos de la Representación</title>
+                    <title xml:lang="en">Documentos de la RepresentaciÃ³n</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Documentos de la Representación</title>
+                    <title xml:lang="es">Documentos de la RepresentaciÃ³n</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>
@@ -118,7 +118,7 @@ formDefinition_documentos_representacion
                             <hint/>
                         </proceder>
                         <docUpload>
-                            <label>Adjunte los documentos de la representación</label>
+                            <label>Adjunte los documentos de la representaciÃ³n</label>
                             <hint/>
                         </docUpload>
                         <section-14>

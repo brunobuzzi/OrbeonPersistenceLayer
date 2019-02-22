@@ -1,0 +1,1 @@
+Orbeon Form Definitions MUST BE encoded as UTF-8 (see #encodeAsUTF8IntoString)
