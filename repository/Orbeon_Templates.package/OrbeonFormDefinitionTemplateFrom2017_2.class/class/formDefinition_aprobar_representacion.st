@@ -90,7 +90,7 @@ formDefinition_aprobar_representacion
                     <form-name>aprobar-representacion</form-name>
                     <title xml:lang="en">Aprobar RepresentaciÃ³n</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Documentos de la RepresentaciÃ³n</title>
+                    <title xml:lang="es">Aprobar RepresentaciÃ³n</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>

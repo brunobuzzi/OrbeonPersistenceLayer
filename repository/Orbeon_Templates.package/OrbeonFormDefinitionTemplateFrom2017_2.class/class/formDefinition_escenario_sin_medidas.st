@@ -17,7 +17,7 @@ formDefinition_escenario_sin_medidas
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Escenario Sin Medidas Energéticas</xh:title>
+        <xh:title>Escenario Sin Medidas EnergÃ©ticas</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -122,13 +122,13 @@ formDefinition_escenario_sin_medidas
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:decimal"/>
-                        <xf:bind id="escSinMedidaUsoPrincipal-bind" ref="escSinMedidaUsoPrincipal"
-                                 name="escSinMedidaUsoPrincipal"
-                                 required="true()"/>
                         <xf:bind id="escSinMedidaFechaInicioOperacion-bind"
                                  ref="escSinMedidaFechaInicioOperacion"
                                  name="escSinMedidaFechaInicioOperacion"
                                  type="xs:date"
+                                 required="true()"/>
+                        <xf:bind id="escSinMedidaUsoPrincipal-bind" ref="escSinMedidaUsoPrincipal"
+                                 name="escSinMedidaUsoPrincipal"
                                  required="true()"/>
                     </xf:bind>
                 </xf:bind>
@@ -137,9 +137,9 @@ formDefinition_escenario_sin_medidas
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>escenario-sin-medidas</form-name>
-                    <title xml:lang="en">Escenario Sin Medidas Energéticas</title>
+                    <title xml:lang="en">Escenario Sin Medidas EnergÃ©ticas</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Alta Empresa</title>
+                    <title xml:lang="es">Escenario Sin Medidas EnergÃ©ticas</title>
                     <description xml:lang="es"/>
                     <available>false</available>
                 </metadata>
@@ -173,20 +173,80 @@ formDefinition_escenario_sin_medidas
                             <label>Uso Principal</label>
                             <hint/>
                             <item>
-                                <label>First choice</label>
-                                <value>1</value>
+                                <label>Bombeo de Agua</label>
+                                <value>bombeo-de-agua</value>
                             </item>
                             <item>
-                                <label>Second choice</label>
-                                <value>2</value>
+                                <label>Alumbrado PÃºblico</label>
+                                <value>alumbrado-publico</value>
                             </item>
                             <item>
-                                <label>Third choice</label>
-                                <value>3</value>
+                                <label>CalefacciÃ³n de ambientes</label>
+                                <value>calefaccion-de-ambientes</value>
+                            </item>
+                            <item>
+                                <label>Calentamiento de Agua</label>
+                                <value>calentamiento-de-agua</value>
+                            </item>
+                            <item>
+                                <label>Calor directo</label>
+                                <value>calor-directo</value>
+                            </item>
+                            <item>
+                                <label>CocciÃ³n</label>
+                                <value>coccion</value>
+                            </item>
+                            <item>
+                                <label>CogeneraciÃ³n</label>
+                                <value>cogeneracion</value>
+                            </item>
+                            <item>
+                                <label>ConservaciÃ³n de alimentos</label>
+                                <value>conservacion-de-alimentos</value>
+                            </item>
+                            <item>
+                                <label>FrÃ­o de Proceso</label>
+                                <value>frio-de-proceso</value>
+                            </item>
+                            <item>
+                                <label>Fuerza Motriz fija</label>
+                                <value>fuerza-motriz-fija</value>
+                            </item>
+                            <item>
+                                <label>GeneraciÃ³n de electricidad</label>
+                                <value>generacion-de-electricidad</value>
+                            </item>
+                            <item>
+                                <label>Generacion de vapor</label>
+                                <value>generacion-de-vapor</value>
+                            </item>
+                            <item>
+                                <label>IluminaciÃ³n</label>
+                                <value>iluminacion</value>
+                            </item>
+                            <item>
+                                <label>Riego</label>
+                                <value>riego</value>
+                            </item>
+                            <item>
+                                <label>Transporte</label>
+                                <value>transporte</value>
+                            </item>
+                            <item>
+                                <label>Transporte interno</label>
+                                <value>transporte-interno</value>
+                            </item>
+                            <item>
+                                <label>VentilaciÃ³n y RefrigeraciÃ³n de Ambientes</label>
+                                <value>ventilacion-y-refrigeracion-de-ambientes</value>
+                            </item>
+                            <item>
+                                <label>Otros usos</label>
+                                <value>otros-usos</value>
                             </item>
                         </escSinMedidaUsoPrincipal>
                         <escSinMedidaFechaInicioOperacion>
-                            <label>Fecha Inicio Operación</label>
+                            <label>Fecha Inicio OperaciÃ³n</label>
                             <hint/>
                         </escSinMedidaFechaInicioOperacion>
                         <escSinMedidaEsOperativa>
@@ -198,51 +258,159 @@ formDefinition_escenario_sin_medidas
                             <hint/>
                         </escSinMedidaVidaUtil>
                         <escSinMedidaInversionTotal>
-                            <label>Inversión Total</label>
+                            <label>InversiÃ³n Total</label>
                             <hint/>
                         </escSinMedidaInversionTotal>
                         <escSinMedidaMoneda>
                             <label>Moneda</label>
                             <hint/>
                             <item>
-                                <label>First choice</label>
-                                <value>1</value>
+                                <label>USD</label>
+                                <value>usd</value>
                             </item>
                             <item>
-                                <label>Second choice</label>
-                                <value>2</value>
+                                <label>UYU</label>
+                                <value>uyu</value>
                             </item>
                             <item>
-                                <label>Third choice</label>
-                                <value>3</value>
+                                <label>EUR</label>
+                                <value>eur</value>
                             </item>
                         </escSinMedidaMoneda>
                         <escSinMedidaFuenteEnergia>
-                            <label>Fuente de Energía</label>
+                            <label>Fuente de EnergÃ­a</label>
                             <hint/>
                             <item>
-                                <label>First choice</label>
-                                <value>1</value>
+                                <label>AserrÃ­n</label>
+                                <value>aserrin</value>
                             </item>
                             <item>
-                                <label>Second choice</label>
-                                <value>2</value>
+                                <label>Bagazo</label>
+                                <value>bagazo</value>
                             </item>
                             <item>
-                                <label>Third choice</label>
-                                <value>3</value>
+                                <label>Biodiesel</label>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label>Bioetanol</label>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label>CarbÃ³n mineral</label>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label>CarbÃ³n vegetal</label>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label>CÃ¡scara de arroz</label>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label>Casullo de cebada</label>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label>Chips</label>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label>Coque de carbÃ³n</label>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label>Coque de petrÃ³leo</label>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label>Coque de petrÃ³leo importado</label>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label>Electricidad de la red</label>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil calefacciÃ³n</label>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil intermedio</label>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil pesado</label>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label>Gas natural</label>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 10S</label>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 50S</label>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label>Gasolina aviaciÃ³n 100/130</label>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label>Gasolina premium 97 30SP</label>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label>Gasolina super 95 30SP</label>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label>GLP</label>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label>Leña</label>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label>Licor negro</label>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label>Pellets de madera</label>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label>Propano</label>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label>Queroseno</label>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label>Residuos forestales</label>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label>Supergas</label>
+                                <value>supergas</value>
                             </item>
                         </escSinMedidaFuenteEnergia>
                         <escSinMedidaEmisionCO2>
-                            <label>Emisión CO2</label>
+                            <label>EmisiÃ³n CO2</label>
                             <hint/>
                         </escSinMedidaEmisionCO2>
                         <escSinMedidaPrecioFuenteEnergia>
-                            <label>Precio Fuente de Energía</label>
+                            <label>Precio Fuente de EnergÃ­a</label>
                             <hint/>
                         </escSinMedidaPrecioFuenteEnergia>
                         <escSinMedidaConsumoEnergia>
-                            <label>Consumo Energía</label>
+                            <label>Consumo EnergÃ­a</label>
                             <hint/>
                         </escSinMedidaConsumoEnergia>
                         <username>
@@ -258,7 +426,7 @@ formDefinition_escenario_sin_medidas
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Medidas Energéticas</label>
+                            <label>Medidas EnergÃ©ticas</label>
                         </section-12>
                         <internal-section>
                             <label>Internal Section</label>
@@ -293,15 +461,15 @@ formDefinition_escenario_sin_medidas
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opción</label>
+                                <label>Primera opciÃ³n</label>
                                 <value>1</value>
                             </item>
                             <item>
-                                <label>Segunda opción</label>
+                                <label>Segunda opciÃ³n</label>
                                 <value>2</value>
                             </item>
                             <item>
-                                <label>Tercera opción</label>
+                                <label>Tercera opciÃ³n</label>
                                 <value>3</value>
                             </item>
                         </escSinMedidaNombre>
@@ -309,16 +477,76 @@ formDefinition_escenario_sin_medidas
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opción</label>
-                                <value>1</value>
+                                <label/>
+                                <value>bombeo-de-agua</value>
                             </item>
                             <item>
-                                <label>Segunda opción</label>
-                                <value>2</value>
+                                <label/>
+                                <value>alumbrado-publico</value>
                             </item>
                             <item>
-                                <label>Tercera opción</label>
-                                <value>3</value>
+                                <label/>
+                                <value>calefaccion-de-ambientes</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>calentamiento-de-agua</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>calor-directo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coccion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>cogeneracion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>conservacion-de-alimentos</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>frio-de-proceso</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuerza-motriz-fija</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>generacion-de-electricidad</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>generacion-de-vapor</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>iluminacion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>riego</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>transporte</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>transporte-interno</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>ventilacion-y-refrigeracion-de-ambientes</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>otros-usos</value>
                             </item>
                         </escSinMedidaUsoPrincipal>
                         <escSinMedidaFechaInicioOperacion>
@@ -341,32 +569,140 @@ formDefinition_escenario_sin_medidas
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opción</label>
-                                <value>1</value>
+                                <label/>
+                                <value>usd</value>
                             </item>
                             <item>
-                                <label>Segunda opción</label>
-                                <value>2</value>
+                                <label/>
+                                <value>uyu</value>
                             </item>
                             <item>
-                                <label>Tercera opción</label>
-                                <value>3</value>
+                                <label/>
+                                <value>eur</value>
                             </item>
                         </escSinMedidaMoneda>
                         <escSinMedidaFuenteEnergia>
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opción</label>
-                                <value>1</value>
+                                <label/>
+                                <value>aserrin</value>
                             </item>
                             <item>
-                                <label>Segunda opción</label>
-                                <value>2</value>
+                                <label/>
+                                <value>bagazo</value>
                             </item>
                             <item>
-                                <label>Tercera opción</label>
-                                <value>3</value>
+                                <label/>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>supergas</value>
                             </item>
                         </escSinMedidaFuenteEnergia>
                         <escSinMedidaEmisionCO2>
@@ -437,8 +773,8 @@ formDefinition_escenario_sin_medidas
                     <escSinMedidaEmisionCO2/>
                     <escSinMedidaPrecioFuenteEnergia/>
                     <escSinMedidaConsumoEnergia/>
-                    <escSinMedidaUsoPrincipal/>
                     <escSinMedidaFechaInicioOperacion/>
+                    <escSinMedidaUsoPrincipal/>
                 </section-12-iteration>
             </xf:instance>
             <xf:instance id="security-token-instance" class="fr-service"

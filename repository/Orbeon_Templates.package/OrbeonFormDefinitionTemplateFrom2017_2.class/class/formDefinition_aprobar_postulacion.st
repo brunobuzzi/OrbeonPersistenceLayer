@@ -17,7 +17,7 @@ formDefinition_aprobar_postulacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Aprobar Postulación</xh:title>
+        <xh:title>Aprobar PostulaciÃ³n</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -82,9 +82,9 @@ formDefinition_aprobar_postulacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>aprobar-postulacion</form-name>
-                    <title xml:lang="en">Aprobar Postulación</title>
+                    <title xml:lang="en">Aprobar PostulaciAnalizar PostulaciÃ³n</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Alta Empresa</title>
+                    <title xml:lang="es">Aprobar PostulaciAnalizar PostulaciÃ³n</title>
                     <description xml:lang="es"/>
                     <available>false</available>
                 </metadata>
@@ -99,7 +99,7 @@ formDefinition_aprobar_postulacion
                 <resources>
                     <resource xml:lang="en">
                         <aprobar>
-                            <label>Aprobar Postulación ?</label>
+                            <label>Aprobar PostulaciÃ³n ?</label>
                             <hint/>
                         </aprobar>
                         <aprobarComentarios>
@@ -119,7 +119,7 @@ formDefinition_aprobar_postulacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Recibir Postulación</label>
+                            <label>Recibir PostulaciÃ³n</label>
                         </section-12>
                         <internal-section>
                             <label>Internal Section</label>

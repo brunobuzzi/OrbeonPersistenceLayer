@@ -17,7 +17,7 @@ formDefinition_resolver_postulacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Resolver Postulación</xh:title>
+        <xh:title>Resolver PostulaciÃ³n</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -85,9 +85,9 @@ formDefinition_resolver_postulacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>resolver-postulacion</form-name>
-                    <title xml:lang="en">Resolver Postulación</title>
+                    <title xml:lang="en">Resolver PostulaciÃ³n</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Alta Empresa</title>
+                    <title xml:lang="es">Resolver PostulaciÃ³n</title>
                     <description xml:lang="es"/>
                     <available>false</available>
                 </metadata>
@@ -102,7 +102,7 @@ formDefinition_resolver_postulacion
                 <resources>
                     <resource xml:lang="en">
                         <resolucionFavorable>
-                            <label>Resolución Favorable</label>
+                            <label>ResoluciÃ³n Favorable</label>
                             <hint/>
                         </resolucionFavorable>
                         <resolucionComentarios>
@@ -125,7 +125,7 @@ formDefinition_resolver_postulacion
                             <hint/>
                         </processId>
                         <section-1>
-                            <label>Resolución</label>
+                            <label>ResoluciÃ³n</label>
                             <help/>
                         </section-1>
                         <internal-section>

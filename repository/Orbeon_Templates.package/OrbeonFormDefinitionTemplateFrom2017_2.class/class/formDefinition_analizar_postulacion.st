@@ -17,7 +17,7 @@ formDefinition_analizar_postulacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Analizar Postulación</xh:title>
+        <xh:title>Analizar PostulaciÃ³n</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -89,9 +89,9 @@ formDefinition_analizar_postulacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>analizar-postulacion</form-name>
-                    <title xml:lang="en">Analizar Postulación</title>
+                    <title xml:lang="en">Analizar PostulaciÃ³n</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Alta Empresa</title>
+                    <title xml:lang="es">Analizar PostulaciÃ³n</title>
                     <description xml:lang="es"/>
                     <available>false</available>
                 </metadata>
@@ -122,7 +122,7 @@ formDefinition_analizar_postulacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Análisis</label>
+                            <label>AnÃ¡lisis</label>
                         </section-12>
                         <internal-section>
                             <label>Internal Section</label>
