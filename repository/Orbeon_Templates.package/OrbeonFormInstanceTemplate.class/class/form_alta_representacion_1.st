@@ -16,6 +16,7 @@ form_alta_representacion_1
 		<processId/>
 	</section-11>
 	<section-12>
+		<repNombreUsuario>juan@MIEM</repNombreUsuario>
 		<repNombre>Pedro</repNombre>
 		<repApellido>Pereira Perez</repApellido>
 		<repCargo>Operario Web</repCargo>

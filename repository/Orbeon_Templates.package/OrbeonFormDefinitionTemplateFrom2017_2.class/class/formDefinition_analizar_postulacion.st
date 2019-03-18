@@ -17,7 +17,7 @@ formDefinition_analizar_postulacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Analizar PostulaciÃ³n</xh:title>
+        <xh:title>Alta RepresentaciÃ³n</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -34,12 +34,17 @@ formDefinition_analizar_postulacion
                         <processId/>
                     </section-11>
                     <section-12>
-                        <grid-4>
-                            <grid-4-iteration>
-                                <analisisComentarios/>
-                            </grid-4-iteration>
-                        </grid-4>
+                        <repNombreUsuario/>
+                        <repNombre/>
+                        <repApellido/>
+                        <repCargo/>
+                        <repTelefono/>
+                        <repMail/>
+                        <repTipo/>
                     </section-12>
+                    <section-18>
+                        <repEsTotal/>
+                    </section-18>
                 </form>
             </xf:instance>
             <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
@@ -76,24 +81,39 @@ formDefinition_analizar_postulacion
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
                 <xf:bind id="section-12-bind" ref="section-12" name="section-12">
-                    <xf:bind id="grid-4-bind" ref="grid-4" name="grid-4">
-                        <xf:bind id="grid-4-iteration-bind" ref="grid-4-iteration" name="grid-4-iteration">
-                            <xf:bind id="analisisComentarios-bind" ref="analisisComentarios"
-                                     name="analisisComentarios"
-                                     required="true()"/>
-                        </xf:bind>
-                    </xf:bind>
+                    <xf:bind id="repNombre-bind" ref="repNombre" name="repNombre" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repApellido-bind" ref="repApellido" name="repApellido"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repCargo-bind" ref="repCargo" name="repCargo" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repTelefono-bind" ref="repTelefono" name="repTelefono"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repTipo-bind" ref="repTipo" name="repTipo" xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repMail-bind" ref="repMail" name="repMail" type="xf:email"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                    <xf:bind id="repNombreUsuario-bind" ref="repNombreUsuario" name="repNombreUsuario"
+                             xxf:whitespace="trim"
+                             required="true()"/>
+                </xf:bind>
+                <xf:bind id="section-18-bind" ref="section-18" name="section-18">
+                    <xf:bind id="repEsTotal-bind" ref="repEsTotal" name="repEsTotal" type="xs:boolean"
+                             required="true()"/>
                 </xf:bind>
             </xf:bind>
             <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>dne</application-name>
-                    <form-name>analizar-postulacion</form-name>
-                    <title xml:lang="en">Analizar PostulaciÃ³n</title>
-                    <description xml:lang="en"/>
-                    <title xml:lang="es">Analizar PostulaciÃ³n</title>
+                    <form-name>alta-representaction</form-name>
+                    <title xml:lang="en">Alta RepresentaciÃ³n</title>
+                    <description xml:lang="en">Process of Visa Citizen Appliance</description>
+                    <title xml:lang="es">Alta RepresentaciÃ³n</title>
                     <description xml:lang="es"/>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
@@ -105,10 +125,38 @@ formDefinition_analizar_postulacion
             <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
-                        <analisisComentarios>
-                            <label>Comentarios</label>
+                        <repNombreUsuario>
+                            <label>Nombre Usuario</label>
                             <hint/>
-                        </analisisComentarios>
+                        </repNombreUsuario>
+                        <repEsTotal>
+                            <label>Es Total ?</label>
+                            <hint/>
+                        </repEsTotal>
+                        <repNombre>
+                            <label>Nombre</label>
+                            <hint/>
+                        </repNombre>
+                        <repApellido>
+                            <label>Apellido</label>
+                            <hint/>
+                        </repApellido>
+                        <repCargo>
+                            <label>Cargo</label>
+                            <hint/>
+                        </repCargo>
+                        <repTelefono>
+                            <label>TelÃ©fono</label>
+                            <hint/>
+                        </repTelefono>
+                        <repMail>
+                            <label>Mail</label>
+                            <hint/>
+                        </repMail>
+                        <repTipo>
+                            <label>Tipo</label>
+                            <hint/>
+                        </repTipo>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -122,8 +170,13 @@ formDefinition_analizar_postulacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>AnÃ¡lisis</label>
+                            <label>Datos de la RepresentaciÃ³n</label>
+                            <help/>
                         </section-12>
+                        <section-18>
+                            <label>Tipo RepresentaciÃ³n</label>
+                            <help/>
+                        </section-18>
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -148,15 +201,43 @@ formDefinition_analizar_postulacion
                             <hint/>
                         </assignmentOop>
                         <section-11>
-                            <label>Usuario</label>
+                            <label>User</label>
                             <help/>
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
-                        <analisisComentarios>
+                        <repNombreUsuario>
                             <label/>
                             <hint/>
-                        </analisisComentarios>
+                        </repNombreUsuario>
+                        <repEsTotal>
+                            <label/>
+                            <hint/>
+                        </repEsTotal>
+                        <repNombre>
+                            <label/>
+                            <hint/>
+                        </repNombre>
+                        <repApellido>
+                            <label/>
+                            <hint/>
+                        </repApellido>
+                        <repCargo>
+                            <label/>
+                            <hint/>
+                        </repCargo>
+                        <repTelefono>
+                            <label/>
+                            <hint/>
+                        </repTelefono>
+                        <repMail>
+                            <label/>
+                            <hint/>
+                        </repMail>
+                        <repTipo>
+                            <label/>
+                            <hint/>
+                        </repTipo>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -171,7 +252,12 @@ formDefinition_analizar_postulacion
                         </processId>
                         <section-12>
                             <label/>
+                            <help/>
                         </section-12>
+                        <section-18>
+                            <label/>
+                            <help/>
+                        </section-18>
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -201,11 +287,6 @@ formDefinition_analizar_postulacion
                         </section-11>
                     </resource>
                 </resources>
-            </xf:instance>
-            <xf:instance xxf:readonly="true" id="grid-4-template" xxf:exclude-result-prefixes="#all">
-                <grid-4-iteration>
-                    <analisisComentarios/>
-                </grid-4-iteration>
             </xf:instance>
             <xf:instance id="security-token-instance" class="fr-service"
                          xxf:exclude-result-prefixes="#all">
@@ -325,17 +406,72 @@ formDefinition_analizar_postulacion
                 </fr:section>
                 <fr:section id="section-12-control" bind="section-12-bind">
                     <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid id="grid-4-grid" bind="grid-4-bind" repeat="content" min="1"
-                             template="instance(''grid-4-template'')"
-                             apply-defaults="true"
-                             fb:initial-iterations="first">
+                    <fr:grid id="grid-3-grid">
                         <fr:c x="1" y="1" w="12">
-                            <xf:textarea id="analisisComentarios-control" bind="analisisComentarios-bind">
-                                <xf:label ref="$form-resources/analisisComentarios/label"/>
-                                <xf:hint ref="$form-resources/analisisComentarios/hint"/>
+                            <xf:input id="repNombreUsuario-control" bind="repNombreUsuario-bind"
+                                      class="fr-summary fr-search">
+                                <xf:label ref="$form-resources/repNombreUsuario/label"/>
+                                <xf:hint ref="$form-resources/repNombreUsuario/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:textarea>
+                            </xf:input>
                         </fr:c>
+                        <fr:c y="2" x="1" w="6">
+                                <xf:input id="repNombre-control" bind="repNombre-bind">
+                                    <xf:label ref="$form-resources/repNombre/label"/>
+                                    <xf:hint ref="$form-resources/repNombre/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="2" x="7" w="6">
+                                <xf:input id="repApellido-control" bind="repApellido-bind">
+                                    <xf:label ref="$form-resources/repApellido/label"/>
+                                    <xf:hint ref="$form-resources/repApellido/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="3" x="1" w="6">
+                                <xf:input id="repCargo-control" bind="repCargo-bind">
+                                    <xf:label ref="$form-resources/repCargo/label"/>
+                                    <xf:hint ref="$form-resources/repCargo/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="3" x="7" w="6">
+                                <xf:input id="repTelefono-control" bind="repTelefono-bind">
+                                    <xf:label ref="$form-resources/repTelefono/label"/>
+                                    <xf:hint ref="$form-resources/repTelefono/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="4" x="1" w="6">
+                                <xf:input id="repMail-control" bind="repMail-bind">
+                                    <xf:label ref="$form-resources/repMail/label"/>
+                                    <xf:hint ref="$form-resources/repMail/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                        <fr:c y="4" x="7" w="6">
+                                <xf:input id="repTipo-control" bind="repTipo-bind">
+                                    <xf:label ref="$form-resources/repTipo/label"/>
+                                    <xf:hint ref="$form-resources/repTipo/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                    </fr:grid>
+                </fr:section>
+                <fr:section id="section-18-control" bind="section-18-bind">
+                    <xf:label ref="$form-resources/section-18/label"/>
+                    <fr:grid id="grid-4-grid">
+                        <fr:c y="1" x="1" w="12">
+                                <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="repEsTotal-control"
+                                            bind="repEsTotal-bind">
+                                    <xf:label ref="$form-resources/repEsTotal/label"/>
+                                    <xf:hint ref="$form-resources/repEsTotal/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:yesno-input>
+                            </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>

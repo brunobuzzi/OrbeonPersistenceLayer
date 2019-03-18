@@ -16,7 +16,7 @@ form_alta_representacion_2
 		<processId/>
 	</section-11>
 	<section-12>
-		<repNombre>Juan</repNombre>
+		<repNombre>juan@MIEM</repNombre>
 		<repApellido>Gomez Perez</repApellido>
 		<repCargo>Encargado Digital</repCargo>
 		<repTelefono>789 695 448</repTelefono>
