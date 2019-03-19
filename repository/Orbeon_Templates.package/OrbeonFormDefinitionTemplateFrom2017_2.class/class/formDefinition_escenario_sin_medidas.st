@@ -157,16 +157,24 @@ formDefinition_escenario_sin_medidas
                             <label>Nombre de la Medida</label>
                             <hint/>
                             <item>
-                                <label>First choice</label>
-                                <value>1</value>
+                                <label>Cambio Lamparitas Bajo Consumo</label>
+                                <value>lamparitas-bajo-consumo</value>
                             </item>
                             <item>
-                                <label>Second choice</label>
-                                <value>2</value>
+                                <label>EnergÃ­a EÃ³lica Propia</label>
+                                <value>energia-eolica-propia</value>
                             </item>
                             <item>
-                                <label>Third choice</label>
-                                <value>3</value>
+                                <label>Mini Represa Propia</label>
+                                <value>mini-represa-propia</value>
+                            </item>
+                            <item>
+                                <label>EnergÃ­a Solar</label>
+                                <value>energia-solar</value>
+                            </item>
+                            <item>
+                                <label>Cambio Equipos Bajo Consumo</label>
+                                <value>equipos-bajo-consumo</value>
                             </item>
                         </escSinMedidaNombre>
                         <escSinMedidaUsoPrincipal>
@@ -460,18 +468,6 @@ formDefinition_escenario_sin_medidas
                         <escSinMedidaNombre>
                             <label/>
                             <hint/>
-                            <item>
-                                <label>Primera opciÃ³n</label>
-                                <value>1</value>
-                            </item>
-                            <item>
-                                <label>Segunda opciÃ³n</label>
-                                <value>2</value>
-                            </item>
-                            <item>
-                                <label>Tercera opciÃ³n</label>
-                                <value>3</value>
-                            </item>
                         </escSinMedidaNombre>
                         <escSinMedidaUsoPrincipal>
                             <label/>
