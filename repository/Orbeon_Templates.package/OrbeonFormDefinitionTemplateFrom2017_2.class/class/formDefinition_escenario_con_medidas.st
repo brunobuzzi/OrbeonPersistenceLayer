@@ -141,7 +141,7 @@ formDefinition_escenario_con_medidas
                     <description xml:lang="en"/>
                     <title xml:lang="es">Escenario Con Medidas EnergÃ©ticas</title>
                     <description xml:lang="es"/>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
