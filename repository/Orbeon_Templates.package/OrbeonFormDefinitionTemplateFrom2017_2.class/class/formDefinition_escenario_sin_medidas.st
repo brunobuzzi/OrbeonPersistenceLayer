@@ -373,7 +373,7 @@ formDefinition_escenario_sin_medidas
                                 <value>glp</value>
                             </item>
                             <item>
-                                <label>Leña</label>
+                                <label>LeÃ±a</label>
                                 <value>lena</value>
                             </item>
                             <item>
