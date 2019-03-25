@@ -3,7 +3,7 @@ createFormInstance: xmlMethodName withValues: anArray definitionNamed: definitio
 	"The receiver create <anOrbeonFormInstance> of form definition named <definitionName> of Orbeon Application named <app> using the method <xmlMethodName> to get the XML string of the form"
 	| application definition formInstance |
 
-	application := self getApplicationManagerClass getAnyApplicationNamed: app.
+	application := self defaultApplicationManagerClass getAnyApplicationNamed: app.
 	definition := application definitionNamed: definitionName ifNone: [self createDefinition: definitionName with: definitionMethod in: application].
 
 	formInstance := 
