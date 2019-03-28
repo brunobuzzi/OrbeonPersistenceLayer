@@ -1,6 +1,6 @@
 form-field-value
 multipleFieldValuesAt: fieldName
-	"Answer aCollection if converted values (a Smalltalk object) for the field named <fieldName>"
+	"Answer <aCollection> with converted values (a Smalltalk object) for the field named <fieldName>"
 	"This is used form repeatable fields"
 	| valueHolder |
 
