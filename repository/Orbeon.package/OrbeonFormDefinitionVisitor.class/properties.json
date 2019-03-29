@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonFormDefinitionVisitor",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFormVisitor",
+	"type" : "normal" }

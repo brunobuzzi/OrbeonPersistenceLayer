@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"acceptVisitor:" : "brunobb 03/29/2019 13:10",
 		"addGrid:" : "BrunoBB 04/03/2016 13:55",
 		"anySubSectionHasGrids" : "BrunoBB 04/03/2016 13:55",
 		"fieldAt:put:" : "BrunoBB 04/03/2016 13:55",
