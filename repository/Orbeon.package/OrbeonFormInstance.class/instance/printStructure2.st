@@ -3,6 +3,8 @@ printStructure2
 	| visitor stream |
 
 	stream := PrintStream on: String new.
+	stream nextPutAll: '<', self getApplicationName, '.', self getFormName,'>'.
+	stream nextPutAll: String lf.
 	visitor := OrbeonFormInstanceVisitor new.
 	visitor sectionsDo: [:s |  
 		1 to: s levelNumber do: [:idx |  stream nextPutAll: String tab].
@@ -16,9 +18,14 @@ printStructure2
 		stream nextPutAll: String lf.	
 	]. 
 	visitor fieldsDo: [:s :g :dict | 
+		g ifNotNil: [
+			1 to: (s levelNumber + 2) do: [:idx |  stream nextPutAll: String tab].
+			stream nextPutAll: 'iteration(', (g getIterationIndexOf: dict) printString, ')'.
+			stream nextPutAll: String lf.
+		].
 		dict associationsDo: [:assoc | 
 			1 to: (s levelNumber + 1) do: [:idx |  stream nextPutAll: String tab].
-			g ifNotNil: [stream nextPutAll: String tab].
+			g ifNotNil: [stream nextPutAll: (String tab, String tab)].
 			stream nextPutAll: (assoc key, ': ', assoc value).
 			stream nextPutAll: String lf.
 		].
