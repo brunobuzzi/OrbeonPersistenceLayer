@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"sectionsDo",
+		"gridsDo",
+		"fieldsDo" ],
 	"name" : "OrbeonFormVisitor",
 	"pools" : [
 		 ],

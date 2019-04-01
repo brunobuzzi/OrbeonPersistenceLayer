@@ -2,6 +2,7 @@
 	"class" : {
 		"defaultXmlDefinition:app:" : "BrunoBB 01/04/2017 06:01" },
 	"instance" : {
+		"acceptVisitor:" : "brunobb 04/01/2019 13:00",
 		"addDraft:" : "BrunoBB 01/04/2017 06:01",
 		"addFieldInstance:" : "BrunoBB 01/04/2017 06:01",
 		"addInstance:" : "brunobb 09/14/2018 11:02",
@@ -125,6 +126,7 @@
 		"printNumberOfInstances" : "BrunoBB 01/04/2017 06:01",
 		"printStructure" : "BrunoBB 01/04/2017 06:01",
 		"printStructureOn:" : "BrunoBB 01/04/2017 06:01",
+		"printVisitorPath" : "brunobb 04/01/2019 13:24",
 		"processXMLDefinition" : "brunobb 04/03/2018 12:34",
 		"processXMLDefinitionFor:" : "brunobb 03/05/2018 13:48",
 		"publish" : "brunobb 11/13/2018 02:36",

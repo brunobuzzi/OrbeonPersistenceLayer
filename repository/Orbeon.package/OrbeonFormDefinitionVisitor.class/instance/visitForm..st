@@ -1,2 +1,4 @@
 other
-visitForm: anOrbeonFormDefinition
+visitForm: anOrbeonPublishedFormDefinition
+
+	^anOrbeonPublishedFormDefinition acceptVisitor: self

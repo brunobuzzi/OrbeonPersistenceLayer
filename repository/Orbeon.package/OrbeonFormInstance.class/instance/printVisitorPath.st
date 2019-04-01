@@ -1,5 +1,5 @@
 other
-printStructure2
+printVisitorPath
 	| visitor stream |
 
 	stream := PrintStream on: String new.

@@ -1,0 +1,4 @@
+other
+acceptLibrarySection: aFormLibraryComponentDefinition
+
+	self acceptSection: aFormLibraryComponentDefinition sectionDefinition

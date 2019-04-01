@@ -2,6 +2,7 @@
 	"class" : {
 		"name:definition:" : "brunobb 03/01/2018 09:24" },
 	"instance" : {
+		"acceptVisitor:" : "brunobb 04/01/2019 12:55",
 		"addFieldDefinition:" : "brunobb 03/01/2018 09:24",
 		"addGridDefinition:" : "brunobb 03/01/2018 09:24",
 		"addSubSection:" : "brunobb 03/01/2018 09:24",
