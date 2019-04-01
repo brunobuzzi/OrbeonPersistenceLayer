@@ -1,4 +1,4 @@
 other
 acceptVisitor: aVisitor
 
-	aVisitor acceptGridInstance: self
+	aVisitor acceptGrid: self
