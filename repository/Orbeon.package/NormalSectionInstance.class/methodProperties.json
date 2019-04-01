@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "brunobb 03/29/2019 13:10",
+		"acceptVisitor:" : "brunobb 04/01/2019 09:45",
 		"addGrid:" : "BrunoBB 04/03/2016 13:55",
 		"anySubSectionHasGrids" : "BrunoBB 04/03/2016 13:55",
 		"fieldAt:put:" : "BrunoBB 04/03/2016 13:55",
@@ -12,6 +12,7 @@
 		"getComplexSections" : "BrunoBB 04/03/2016 13:55",
 		"getComplexSectionsWithGrids" : "BrunoBB 04/03/2016 13:55",
 		"getGridNamed:" : "BrunoBB 04/03/2016 13:55",
+		"getIterationIndex" : "brunobb 04/01/2019 10:02",
 		"getRepeatableComplexSections" : "BrunoBB 04/03/2016 13:55",
 		"getRepeatableComplexSectionsWithGrids" : "BrunoBB 04/03/2016 13:55",
 		"getRepeatableSimpleSections" : "BrunoBB 04/03/2016 13:55",

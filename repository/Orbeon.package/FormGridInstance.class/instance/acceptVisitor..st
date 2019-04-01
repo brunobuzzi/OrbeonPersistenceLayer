@@ -1,4 +1,4 @@
 other
 acceptVisitor: aVisitor
 
-	gridIterations do: [:eachDictionary | aVisitor acceptGridFields: eachDictionary]
+	aVisitor acceptGridInstance: self
