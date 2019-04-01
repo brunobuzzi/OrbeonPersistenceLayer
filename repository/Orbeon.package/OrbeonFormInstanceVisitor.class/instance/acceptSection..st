@@ -1,7 +1,9 @@
 other
 acceptSection: aFormSectionInstance
 
-	"aFormSectionInstance acceptFields: fields."
+	sectionsDo value: aFormSectionInstance.
+
+	fieldsDo value: aFormSectionInstance fields.
 
 	aFormSectionInstance grids do: [:each | each acceptVisitor: self].
 
