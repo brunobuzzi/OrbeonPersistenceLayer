@@ -18,7 +18,7 @@ printStructure2
 		stream nextPutAll: String lf.	
 	]. 
 	visitor fieldsDo: [:s :g :dict | 
-		g ifNotNil: [
+		g ifNotNil: [ "fields belong to <aFormGridInstance>. if <g> is <nil> then fields belong to <aNormalSectionInstance>"
 			1 to: (s levelNumber + 2) do: [:idx |  stream nextPutAll: String tab].
 			stream nextPutAll: 'iteration(', (g getIterationIndexOf: dict) printString, ')'.
 			stream nextPutAll: String lf.
