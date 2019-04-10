@@ -9,7 +9,7 @@ printStructure
 	visitor sectionsDo: [:s |  
 		1 to: s levelNumber do: [:idx |  stream nextPutAll: String tab].
 		stream nextPutAll: ('[', s name, ']').
-		stream nextPutAll: (' (iteration(', s getIterationIndex printString, ')').
+		stream nextPutAll: (' iteration(', s getIterationIndex printString, ')').
 		stream nextPutAll: String lf.
 	].
 	visitor gridsDo: [:s :g | 
