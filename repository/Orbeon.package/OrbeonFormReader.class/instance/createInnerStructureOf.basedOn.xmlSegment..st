@@ -12,7 +12,7 @@ createInnerStructureOf: aFormSectionInstance basedOn: aFormSectionDefinition xml
 								ifEmpty: [OrbeonInvalidXMLException signal: 'Invalid Subsections Structure'].
 
 		sections do: [:xmlSection | | subSection |
-			subSection := FormSectionInstance2 name: subSectionDef name definition: subSectionDef.
+			subSection := FormSectionInstance name: subSectionDef name definition: subSectionDef.
 			aFormSectionInstance addSubSection: subSection.
 			self createInnerStructureOf: subSection basedOn: subSectionDef xmlSegment: xmlSection].
 	].

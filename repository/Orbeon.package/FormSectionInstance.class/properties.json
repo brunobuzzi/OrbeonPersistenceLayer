@@ -13,7 +13,7 @@
 		"fields",
 		"grids",
 		"nextIteration" ],
-	"name" : "FormSectionInstance2",
+	"name" : "FormSectionInstance",
 	"pools" : [
 		 ],
 	"super" : "FormElementInstance",
