@@ -3,6 +3,6 @@ unregisterScript
 
 	super unregisterScript.
 
-	WAOrbeonPersistenceLayer unregister.
+	WAPersistenceOrbeonLayer unregister.
 
 	WAOrbeonLogin unregister.

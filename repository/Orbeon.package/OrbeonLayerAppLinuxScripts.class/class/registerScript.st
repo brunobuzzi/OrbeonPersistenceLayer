@@ -3,6 +3,6 @@ registerScript
 
 	super registerScript.
 
-	WAOrbeonPersistenceLayer register.
+	WAPersistenceOrbeonLayer register.
 
 	WAOrbeonLogin register.

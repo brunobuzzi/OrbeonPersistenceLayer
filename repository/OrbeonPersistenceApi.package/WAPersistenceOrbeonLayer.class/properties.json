@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "WAOrbeonPersistenceLayer",
+	"name" : "WAPersistenceOrbeonLayer",
 	"pools" : [
 		 ],
 	"super" : "WARestfulHandler",

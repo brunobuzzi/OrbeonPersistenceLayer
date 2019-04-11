@@ -3,7 +3,7 @@ test1
 
 	self assert: form isAvailable.
 
-	apiOperation := OrbeonSwitchAvailabilityApi newFor: WAOrbeonPersistenceLayer new.
+	apiOperation := OrbeonSwitchAvailabilityApi newFor: WAPersistenceOrbeonLayer new.
 
 	apiOperation appName: 'test';
 		formName: 'test';
