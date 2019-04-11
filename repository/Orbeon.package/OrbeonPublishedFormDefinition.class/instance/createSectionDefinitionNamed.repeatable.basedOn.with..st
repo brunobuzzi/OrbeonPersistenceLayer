@@ -7,7 +7,7 @@ createSectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: xmlSecti
 	
 	librarySection isEmpty ifFalse: [^self createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: xmlSection with: anOrbeonFormReader].
 
-	section := FormSectionDefinition name: sectionName definition: self.
+	section := FormSectionDefinition newNamed: sectionName definition: self.
 	section bind: (xmlSection attributeAt: 'bind');
 		isRepeatable: aBoolean.
 	aBoolean ifTrue:[section iterationName: (anOrbeonFormReader getCustomIterationNameFor: sectionName bindName: section bind)].

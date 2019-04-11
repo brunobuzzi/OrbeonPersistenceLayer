@@ -1,5 +1,5 @@
 other
-name: aString definition: aFormSectionDefinition
+newNamed: aString definition: aFormSectionDefinition
 
 	^super new initialize
 		name: aString;

@@ -1,5 +1,5 @@
 other
-name: aString definition: aFormGridDefinition 
+newNamed: aString definition: aFormGridDefinition 
 
 	^super new initialize
 		name: aString;

@@ -1,5 +1,5 @@
 other
-name: aString definition: anOrbeonFormDefinition
+newNamed: aString definition: anOrbeonFormDefinition
 
 	^super new initialize
 		name: aString;

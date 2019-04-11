@@ -3,7 +3,7 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 	"The receiver create a reference to a -Library Section- named <sectionName>"
 		| section componentNode httpStringReference publishedComponent appName referencedSectionName referencedSection |
 
-	section := FormLibraryComponentDefinition name: sectionName definition: self.
+	section := FormLibraryComponentDefinition newNamed: sectionName definition: self.
 
 	componentNode := xmlSection descendantNodesDetect: [:e | 'component:*' match: e name].
 
