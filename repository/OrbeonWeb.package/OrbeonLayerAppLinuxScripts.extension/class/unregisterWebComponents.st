@@ -1,0 +1,4 @@
+*orbeonWeb
+unregisterWebComponents
+
+	WAOrbeonLogin unregister.

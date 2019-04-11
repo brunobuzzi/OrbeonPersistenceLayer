@@ -3,6 +3,6 @@ registerScript
 
 	super registerScript.
 
-	WAPersistenceOrbeonLayer register.
+	self registerRestComponents.
 
-	WAOrbeonLogin register.
+	self registerWebComponents.

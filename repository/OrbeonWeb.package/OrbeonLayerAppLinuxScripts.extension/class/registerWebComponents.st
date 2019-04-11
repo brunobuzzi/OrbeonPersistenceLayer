@@ -1,0 +1,4 @@
+*orbeonWeb
+registerWebComponents
+
+	WAOrbeonLogin register.
