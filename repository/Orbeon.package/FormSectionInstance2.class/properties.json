@@ -6,11 +6,15 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"sectionDefinition",
+		"formInstance",
+		"parentSection",
+		"subSections",
 		"fields",
 		"grids",
 		"nextIteration" ],
-	"name" : "NormalSectionInstance",
+	"name" : "FormSectionInstance2",
 	"pools" : [
 		 ],
-	"super" : "FormSectionInstance",
+	"super" : "FormElementInstance",
 	"type" : "normal" }

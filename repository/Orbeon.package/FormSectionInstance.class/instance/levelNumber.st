@@ -1,4 +1,0 @@
-other
-levelNumber
-
-	^self subclassResponsibility

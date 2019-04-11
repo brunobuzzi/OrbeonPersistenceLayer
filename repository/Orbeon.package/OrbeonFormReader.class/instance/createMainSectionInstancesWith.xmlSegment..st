@@ -16,7 +16,7 @@ createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSe
 						OrderedCollection with: subSegment].
 
 		(xmlSubSegments select: [:each | each notNil]) do: [:xmlSegment | | sectionInst |
-			sectionInst := NormalSectionInstance name: section name definition: section.
+			sectionInst := FormSectionInstance2 name: section name definition: section.
 			sectionsInstances add: sectionInst. "store the section instance in the dictionary collector"
 			"if <xmlSubSegment> is NIL then the definition <anOrbeonFormDefinition> does NOT MATCH with the xml <xmlInstanceSegment>.
 			This could be the case when in Orbeon a field is added/removed/renamed and the definition is saved with the same version"
