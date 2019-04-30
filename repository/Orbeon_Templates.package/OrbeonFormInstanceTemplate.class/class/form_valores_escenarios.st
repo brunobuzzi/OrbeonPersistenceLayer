@@ -28,7 +28,7 @@ form_valores_escenarios
 			<escSinMedidaPrecioEnergetico>500</escSinMedidaPrecioEnergetico>
 			<escConMedidaPrecioEnergetico>550</escConMedidaPrecioEnergetico>
 			<escSinMedidaUyuUnidadFisica>UYU/t</escSinMedidaUyuUnidadFisica>
-			<escConMedidaUyuUnidadFisica>t</escConMedidaUyuUnidadFisica>
+			<escConMedidaUyuUnidadFisica>UYU/t</escConMedidaUyuUnidadFisica>
 			<escSinMedidaConsumoEnergia>250</escSinMedidaConsumoEnergia>
 			<escConMedidaConsumoEnergia>250</escConMedidaConsumoEnergia>
 			<escSinMedidaUnidadFisica>t</escSinMedidaUnidadFisica>
@@ -52,7 +52,7 @@ form_valores_escenarios
 			<escSinMedidaPrecioEnergetico>650</escSinMedidaPrecioEnergetico>
 			<escConMedidaPrecioEnergetico>400</escConMedidaPrecioEnergetico>
 			<escSinMedidaUyuUnidadFisica>UYU/t</escSinMedidaUyuUnidadFisica>
-			<escConMedidaUyuUnidadFisica>t</escConMedidaUyuUnidadFisica>
+			<escConMedidaUyuUnidadFisica>UYU/t</escConMedidaUyuUnidadFisica>
 			<escSinMedidaConsumoEnergia>350</escSinMedidaConsumoEnergia>
 			<escConMedidaConsumoEnergia>300</escConMedidaConsumoEnergia>
 			<escSinMedidaUnidadFisica>t</escSinMedidaUnidadFisica>
