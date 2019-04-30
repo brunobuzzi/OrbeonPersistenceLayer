@@ -1,5 +1,5 @@
 miem
-formDefinition_resolver_postulacion
+formDefinition_razones_rechazo
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -17,7 +17,7 @@ formDefinition_resolver_postulacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Resolver Postulación</xh:title>
+        <xh:title>Razones Rechazo de la Postulación</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
@@ -34,9 +34,7 @@ formDefinition_resolver_postulacion
                         <processId/>
                     </section-11>
                     <section-1>
-                        <necesitaAclaraciones/>
-                        <aprobada/>
-                        <resolucionComentarios/>
+                        <detalleRechazo/>
                     </section-1>
                 </form>
             </xf:instance>
@@ -74,23 +72,16 @@ formDefinition_resolver_postulacion
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
                 <xf:bind id="section-1-bind" ref="section-1" name="section-1">
-                    <xf:bind id="aprobada-bind" ref="aprobada" name="aprobada" type="xs:boolean"
-                             required="true()"/>
-                    <xf:bind id="resolucionComentarios-bind" ref="resolucionComentarios"
-                             name="resolucionComentarios"/>
-                    <xf:bind id="necesitaAclaraciones-bind" ref="necesitaAclaraciones"
-                             name="necesitaAclaraciones"
-                             type="xs:boolean"
-                             required="true()"/>
+                    <xf:bind id="detalleRechazo-bind" ref="detalleRechazo" name="detalleRechazo"/>
                 </xf:bind>
             </xf:bind>
             <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>dne</application-name>
-                    <form-name>resolver-postulacion</form-name>
-                    <title xml:lang="en">Resolver Postulación</title>
+                    <form-name>razones-rechazo</form-name>
+                    <title xml:lang="en">Razones Rechazo de la Postulación</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Resolver PostulaciÃ³n</title>
+                    <title xml:lang="es">Escenario Sin Medidas Energéticas</title>
                     <description xml:lang="es"/>
                     <available>true</available>
                 </metadata>
@@ -104,18 +95,10 @@ formDefinition_resolver_postulacion
             <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
-                        <necesitaAclaraciones>
-                            <label>Necesita Aclaraciones ?</label>
+                        <detalleRechazo>
+                            <label>Detalle</label>
                             <hint/>
-                        </necesitaAclaraciones>
-                        <aprobada>
-                            <label>Aprobada ?</label>
-                            <hint/>
-                        </aprobada>
-                        <resolucionComentarios>
-                            <label>Comentarios</label>
-                            <hint/>
-                        </resolucionComentarios>
+                        </detalleRechazo>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -129,7 +112,7 @@ formDefinition_resolver_postulacion
                             <hint/>
                         </processId>
                         <section-1>
-                            <label>Resolución</label>
+                            <label>Detalle Rechazo Postulación</label>
                             <help/>
                         </section-1>
                         <internal-section>
@@ -161,18 +144,10 @@ formDefinition_resolver_postulacion
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
-                        <necesitaAclaraciones>
+                        <detalleRechazo>
                             <label/>
                             <hint/>
-                        </necesitaAclaraciones>
-                        <aprobada>
-                            <label/>
-                            <hint/>
-                        </aprobada>
-                        <resolucionComentarios>
-                            <label/>
-                            <hint/>
-                        </resolucionComentarios>
+                        </detalleRechazo>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -339,31 +314,9 @@ formDefinition_resolver_postulacion
                     <xf:label ref="$form-resources/section-1/label"/>
                     <fr:grid id="grid-3-grid">
                         <fr:c x="1" y="1" w="12">
-                            <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                            id="necesitaAclaraciones-control"
-                                            bind="necesitaAclaraciones-bind"
-                                            class="fr-search fr-summary">
-                                <xf:label ref="$form-resources/necesitaAclaraciones/label"/>
-                                <xf:hint ref="$form-resources/necesitaAclaraciones/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:yesno-input>
-                        </fr:c>
-                        <fr:c x="1" y="2" w="12">
-                            <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                            id="aprobada-control"
-                                            bind="aprobada-bind"
-                                            class="fr-search fr-summary">
-                                <xf:label ref="$form-resources/aprobada/label"/>
-                                <xf:hint ref="$form-resources/aprobada/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:yesno-input>
-                        </fr:c>
-                        <fr:c x="1" y="3" w="12">
-                            <xf:textarea id="resolucionComentarios-control" bind="resolucionComentarios-bind">
-                                <xf:label ref="$form-resources/resolucionComentarios/label"/>
-                                <xf:hint ref="$form-resources/resolucionComentarios/hint"/>
+                            <xf:textarea id="detalleRechazo-control" bind="detalleRechazo-bind">
+                                <xf:label ref="$form-resources/detalleRechazo/label"/>
+                                <xf:hint ref="$form-resources/detalleRechazo/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </xf:textarea>
                         </fr:c>

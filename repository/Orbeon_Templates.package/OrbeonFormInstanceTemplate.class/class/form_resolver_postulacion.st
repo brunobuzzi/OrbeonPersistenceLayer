@@ -16,7 +16,8 @@ form_resolver_postulacion
 		<processId>2982381295</processId>
 	</section-11>
 	<section-1>
-		<resolucionFavorable>true</resolucionFavorable>
+		<necesitaAclaraciones>false</necesitaAclaraciones>
+		<aprobada>true</aprobada>
 		<resolucionComentarios/>
 	</section-1>
 </form>'

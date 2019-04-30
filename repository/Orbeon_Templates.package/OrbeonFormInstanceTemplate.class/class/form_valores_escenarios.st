@@ -1,0 +1,68 @@
+miem
+form_valores_escenarios
+
+	^'<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:fr="http://orbeon.org/oxf/xml/form-runner" fr:data-format-version="4.0.0">
+	<internal-section>
+		<s>3r2XieSNo_77YKBH</s>
+		<k>kEycpq6V1-MaJQDn</k>
+		<uuid>4be93c65-edfa-4e2d-8474-0e91e92db9c7</uuid>
+		<oop>9823090433</oop>
+		<assignmentOop>9822736641</assignmentOop>
+	</internal-section>
+	<section-11>
+		<username>juan@MIEM</username>
+		<rol>[Empresa]</rol>
+		<processId>2982381295</processId>
+	</section-11>
+	<section-12>
+		<section-12-iteration>
+			<escSinMedidaUsoPrincipal>iluminacion</escSinMedidaUsoPrincipal>
+			<escSinMedidaFechaInicioOperacion>2019-03-01</escSinMedidaFechaInicioOperacion>
+			<escSinMedidaEsOperativa>true</escSinMedidaEsOperativa>
+			<escSinMedidaVidaUtil>2</escSinMedidaVidaUtil>
+			<escSinMedidaInversionTotal>60500</escSinMedidaInversionTotal>
+			<escSinMedidaMoneda>usd</escSinMedidaMoneda>
+			<escSinMedidaFuenteEnergia>electricidad-de-la-red</escSinMedidaFuenteEnergia>
+			<escConMedidaFuenteEnergia>electricidad-de-la-red</escConMedidaFuenteEnergia>
+			<escSinMedidaPrecioEnergetico>500</escSinMedidaPrecioEnergetico>
+			<escConMedidaPrecioEnergetico>550</escConMedidaPrecioEnergetico>
+			<escSinMedidaUyuUnidadFisica>UYU/t</escSinMedidaUyuUnidadFisica>
+			<escConMedidaUyuUnidadFisica>t</escConMedidaUyuUnidadFisica>
+			<escSinMedidaConsumoEnergia>250</escSinMedidaConsumoEnergia>
+			<escConMedidaConsumoEnergia>250</escConMedidaConsumoEnergia>
+			<escSinMedidaUnidadFisica>t</escSinMedidaUnidadFisica>
+			<escConMedidaUnidadFisica>t</escConMedidaUnidadFisica>
+			<escSinMedidaValorTepAnio>200</escSinMedidaValorTepAnio>
+			<escConMedidaValorTepAnio>200</escConMedidaValorTepAnio>
+			<escSinMedidaValorUyu>28</escSinMedidaValorUyu>
+			<escConMedidaValorUyu>28</escConMedidaValorUyu>
+			<escSinMedidaEmisionCO2>2</escSinMedidaEmisionCO2>
+			<escConMedidaEmisionCO2>1</escConMedidaEmisionCO2>
+		</section-12-iteration>
+		<section-12-iteration>
+			<escSinMedidaUsoPrincipal>riego</escSinMedidaUsoPrincipal>
+			<escSinMedidaFechaInicioOperacion>2018-03-01</escSinMedidaFechaInicioOperacion>
+			<escSinMedidaEsOperativa>true</escSinMedidaEsOperativa>
+			<escSinMedidaVidaUtil>2</escSinMedidaVidaUtil>
+			<escSinMedidaInversionTotal>100250</escSinMedidaInversionTotal>
+			<escSinMedidaMoneda>usd</escSinMedidaMoneda>
+			<escSinMedidaFuenteEnergia>propano</escSinMedidaFuenteEnergia>
+			<escConMedidaFuenteEnergia>gas-natural</escConMedidaFuenteEnergia>
+			<escSinMedidaPrecioEnergetico>650</escSinMedidaPrecioEnergetico>
+			<escConMedidaPrecioEnergetico>400</escConMedidaPrecioEnergetico>
+			<escSinMedidaUyuUnidadFisica>UYU/t</escSinMedidaUyuUnidadFisica>
+			<escConMedidaUyuUnidadFisica>t</escConMedidaUyuUnidadFisica>
+			<escSinMedidaConsumoEnergia>350</escSinMedidaConsumoEnergia>
+			<escConMedidaConsumoEnergia>300</escConMedidaConsumoEnergia>
+			<escSinMedidaUnidadFisica>t</escSinMedidaUnidadFisica>
+			<escConMedidaUnidadFisica>t</escConMedidaUnidadFisica>
+			<escSinMedidaValorTepAnio>180</escSinMedidaValorTepAnio>
+			<escConMedidaValorTepAnio>195</escConMedidaValorTepAnio>
+			<escSinMedidaValorUyu>35</escSinMedidaValorUyu>
+			<escConMedidaValorUyu>35</escConMedidaValorUyu>
+			<escSinMedidaEmisionCO2>3</escSinMedidaEmisionCO2>
+			<escConMedidaEmisionCO2>2</escConMedidaEmisionCO2>
+		</section-12-iteration>
+	</section-12>
+</form>'
