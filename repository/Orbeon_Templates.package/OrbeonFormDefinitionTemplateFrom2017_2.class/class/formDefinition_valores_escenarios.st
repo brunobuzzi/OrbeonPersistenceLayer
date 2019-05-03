@@ -33,32 +33,36 @@ formDefinition_valores_escenarios
                         <rol/>
                         <processId/>
                     </section-11>
-                    <section-12>
-                        <section-12-iteration>
+                    <section-1>
+                        <section-1-iteration>
                             <escSinMedidaUsoPrincipal/>
                             <escSinMedidaFechaInicioOperacion/>
                             <escSinMedidaEsOperativa/>
-                            <escSinMedidaVidaUtil/>
-                            <escSinMedidaInversionTotal/>
                             <escSinMedidaMoneda/>
-                            <escSinMedidaFuenteEnergia>fuel-oil-pesado</escSinMedidaFuenteEnergia>
-                            <escConMedidaFuenteEnergia/>
-                            <escSinMedidaPrecioEnergetico/>
-                            <escConMedidaPrecioEnergetico/>
-                            <escSinMedidaUyuUnidadFisica/>
-                            <escConMedidaUyuUnidadFisica/>
-                            <escSinMedidaConsumoEnergia/>
-                            <escConMedidaConsumoEnergia/>
-                            <escSinMedidaUnidadFisica/>
-                            <escConMedidaUnidadFisica/>
-                            <escSinMedidaValorTepAnio/>
-                            <escConMedidaValorTepAnio/>
-                            <escSinMedidaValorUyu/>
-                            <escConMedidaValorUyu/>
-                            <escSinMedidaEmisionCO2/>
-                            <escConMedidaEmisionCO2/>
-                        </section-12-iteration>
-                    </section-12>
+                            <escSinMedidaInversionTotal/>
+                            <escSinMedidaVidaUtil/>
+                            <section-2>
+                                <section-2-iteration>
+                                    <escSinMedidaFuenteEnergia>fuel-oil-pesado</escSinMedidaFuenteEnergia>
+                                    <escConMedidaFuenteEnergia/>
+                                    <escSinMedidaPrecioEnergetico/>
+                                    <escConMedidaPrecioEnergetico/>
+                                    <escSinMedidaUyuUnidadFisica/>
+                                    <escConMedidaUyuUnidadFisica/>
+                                    <escSinMedidaConsumoEnergia/>
+                                    <escConMedidaConsumoEnergia/>
+                                    <escSinMedidaUnidadFisica/>
+                                    <escConMedidaUnidadFisica/>
+                                    <escSinMedidaValorTepAnio/>
+                                    <escConMedidaValorTepAnio/>
+                                    <escSinMedidaValorUyu/>
+                                    <escConMedidaValorUyu/>
+                                    <escSinMedidaEmisionCO2/>
+                                    <escConMedidaEmisionCO2/>
+                                </section-2-iteration>
+                            </section-2>
+                        </section-1-iteration>
+                    </section-1>
                 </form>
             </xf:instance>
             <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
@@ -94,18 +98,21 @@ formDefinition_valores_escenarios
                              readonly="true()"/>
                     <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
                 </xf:bind>
-                <xf:bind id="section-12-bind" ref="section-12" name="section-12">
-                    <xf:bind id="section-12-iteration-bind" ref="section-12-iteration"
-                             name="section-12-iteration">
+                <xf:bind id="section-1-bind" ref="section-1" name="section-1">
+                    <xf:bind id="section-1-iteration-bind" ref="section-1-iteration"
+                             name="section-1-iteration">
+                        <xf:bind id="escSinMedidaUsoPrincipal-bind" ref="escSinMedidaUsoPrincipal"
+                                 name="escSinMedidaUsoPrincipal"
+                                 required="true()"/>
+                        <xf:bind id="escSinMedidaFechaInicioOperacion-bind"
+                                 ref="escSinMedidaFechaInicioOperacion"
+                                 name="escSinMedidaFechaInicioOperacion"
+                                 type="xs:date"
+                                 required="true()"/>
                         <xf:bind id="escSinMedidaEsOperativa-bind" ref="escSinMedidaEsOperativa"
                                  name="escSinMedidaEsOperativa"
                                  type="xs:boolean"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaVidaUtil-bind" ref="escSinMedidaVidaUtil"
-                                 name="escSinMedidaVidaUtil"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:integer"/>
                         <xf:bind id="escSinMedidaInversionTotal-bind" ref="escSinMedidaInversionTotal"
                                  name="escSinMedidaInversionTotal"
                                  xxf:whitespace="trim"
@@ -113,98 +120,100 @@ formDefinition_valores_escenarios
                                  type="xs:decimal"/>
                         <xf:bind id="escSinMedidaMoneda-bind" ref="escSinMedidaMoneda" name="escSinMedidaMoneda"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaFechaInicioOperacion-bind"
-                                 ref="escSinMedidaFechaInicioOperacion"
-                                 name="escSinMedidaFechaInicioOperacion"
-                                 type="xs:date"
-                                 required="true()"/>
-                        <xf:bind id="escSinMedidaUsoPrincipal-bind" ref="escSinMedidaUsoPrincipal"
-                                 name="escSinMedidaUsoPrincipal"
-                                 required="true()"/>
-                        <xf:bind id="escSinMedidaFuenteEnergia-bind" ref="escSinMedidaFuenteEnergia"
-                                 name="escSinMedidaFuenteEnergia"
-                                 required="true()"/>
-                        <xf:bind id="escConMedidaFuenteEnergia-bind" ref="escConMedidaFuenteEnergia"
-                                 name="escConMedidaFuenteEnergia"
-                                 required="true()"/>
-                        <xf:bind id="escSinMedidaUnidadFisica-bind" ref="escSinMedidaUnidadFisica"
-                                 name="escSinMedidaUnidadFisica"
+                        <xf:bind id="escSinMedidaVidaUtil-bind" ref="escSinMedidaVidaUtil"
+                                 name="escSinMedidaVidaUtil"
                                  xxf:whitespace="trim"
                                  required="true()"
-                                 readonly="true()"/>
-                        <xf:bind id="escConMedidaUnidadFisica-bind" ref="escConMedidaUnidadFisica"
-                                 name="escConMedidaUnidadFisica"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 readonly="true()"/>
-                        <xf:bind id="escSinMedidaValorTepAnio-bind" ref="escSinMedidaValorTepAnio"
-                                 name="escSinMedidaValorTepAnio"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"/>
-                        <xf:bind id="escConMedidaValorTepAnio-bind" ref="escConMedidaValorTepAnio"
-                                 name="escConMedidaValorTepAnio"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"/>
-                        <xf:bind id="escSinMedidaEmisionCO2-bind" ref="escSinMedidaEmisionCO2"
-                                 name="escSinMedidaEmisionCO2"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"/>
-                        <xf:bind id="escConMedidaEmisionCO2-bind" ref="escConMedidaEmisionCO2"
-                                 name="escConMedidaEmisionCO2"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"/>
-                        <xf:bind id="escSinMedidaPrecioEnergetico-bind" ref="escSinMedidaPrecioEnergetico"
-                                 name="escSinMedidaPrecioEnergetico"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
-                        <xf:bind id="escConMedidaPrecioEnergetico-bind" ref="escConMedidaPrecioEnergetico"
-                                 name="escConMedidaPrecioEnergetico"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
-                        <xf:bind id="escSinMedidaUyuUnidadFisica-bind" ref="escSinMedidaUyuUnidadFisica"
-                                 name="escSinMedidaUyuUnidadFisica"
-                                 xxf:whitespace="trim"
-                                 readonly="true()"
-                                 calculate="concat(''UYU/'',$escSinMedidaUnidadFisica)"/>
-                        <xf:bind id="escConMedidaUyuUnidadFisica-bind" ref="escConMedidaUyuUnidadFisica"
-                                 name="escConMedidaUyuUnidadFisica"
-                                 xxf:whitespace="trim"
-                                 readonly="true()"
-                                 calculate="concat(''UYU/'',$escConMedidaUnidadFisica)"/>
-                        <xf:bind id="escSinMedidaValorUyu-bind" ref="escSinMedidaValorUyu"
-                                 name="escSinMedidaValorUyu"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"
-                                 calculate="$escSinMedidaPrecioEnergetico * $escSinMedidaConsumoEnergia"/>
-                        <xf:bind id="escConMedidaValorUyu-bind" ref="escConMedidaValorUyu"
-                                 name="escConMedidaValorUyu"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"
-                                 readonly="true()"
-                                 calculate="$escConMedidaPrecioEnergetico * $escConMedidaConsumoEnergia"/>
-                        <xf:bind id="escSinMedidaConsumoEnergia-bind" ref="escSinMedidaConsumoEnergia"
-                                 name="escSinMedidaConsumoEnergia"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
-                        <xf:bind id="escConMedidaConsumoEnergia-bind" ref="escConMedidaConsumoEnergia"
-                                 name="escConMedidaConsumoEnergia"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
+                                 type="xs:integer"/>
+                        <xf:bind id="section-2-bind" ref="section-2" name="section-2">
+                            <xf:bind id="section-2-iteration-bind" ref="section-2-iteration"
+                                     name="section-2-iteration">
+                                <xf:bind id="escSinMedidaFuenteEnergia-bind" ref="escSinMedidaFuenteEnergia"
+                                         name="escSinMedidaFuenteEnergia"
+                                         required="true()"/>
+                                <xf:bind id="escConMedidaFuenteEnergia-bind" ref="escConMedidaFuenteEnergia"
+                                         name="escConMedidaFuenteEnergia"
+                                         required="true()"/>
+                                <xf:bind id="escSinMedidaPrecioEnergetico-bind" ref="escSinMedidaPrecioEnergetico"
+                                         name="escSinMedidaPrecioEnergetico"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"/>
+                                <xf:bind id="escConMedidaPrecioEnergetico-bind" ref="escConMedidaPrecioEnergetico"
+                                         name="escConMedidaPrecioEnergetico"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"/>
+                                <xf:bind id="escSinMedidaUyuUnidadFisica-bind" ref="escSinMedidaUyuUnidadFisica"
+                                         name="escSinMedidaUyuUnidadFisica"
+                                         xxf:whitespace="trim"
+                                         readonly="true()"
+                                         calculate="concat(''UYU/'',$escSinMedidaUnidadFisica)"/>
+                                <xf:bind id="escConMedidaUyuUnidadFisica-bind" ref="escConMedidaUyuUnidadFisica"
+                                         name="escConMedidaUyuUnidadFisica"
+                                         xxf:whitespace="trim"
+                                         readonly="true()"
+                                         calculate="concat(''UYU/'',$escConMedidaUnidadFisica)"/>
+                                <xf:bind id="escSinMedidaConsumoEnergia-bind" ref="escSinMedidaConsumoEnergia"
+                                         name="escSinMedidaConsumoEnergia"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"/>
+                                <xf:bind id="escConMedidaConsumoEnergia-bind" ref="escConMedidaConsumoEnergia"
+                                         name="escConMedidaConsumoEnergia"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"/>
+                                <xf:bind id="escSinMedidaUnidadFisica-bind" ref="escSinMedidaUnidadFisica"
+                                         name="escSinMedidaUnidadFisica"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         readonly="true()"/>
+                                <xf:bind id="escConMedidaUnidadFisica-bind" ref="escConMedidaUnidadFisica"
+                                         name="escConMedidaUnidadFisica"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         readonly="true()"/>
+                                <xf:bind id="escSinMedidaValorTepAnio-bind" ref="escSinMedidaValorTepAnio"
+                                         name="escSinMedidaValorTepAnio"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"/>
+                                <xf:bind id="escConMedidaValorTepAnio-bind" ref="escConMedidaValorTepAnio"
+                                         name="escConMedidaValorTepAnio"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"/>
+                                <xf:bind id="escSinMedidaValorUyu-bind" ref="escSinMedidaValorUyu"
+                                         name="escSinMedidaValorUyu"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"
+                                         calculate="$escSinMedidaPrecioEnergetico * $escSinMedidaConsumoEnergia"/>
+                                <xf:bind id="escConMedidaValorUyu-bind" ref="escConMedidaValorUyu"
+                                         name="escConMedidaValorUyu"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"
+                                         calculate="$escConMedidaPrecioEnergetico * $escConMedidaConsumoEnergia"/>
+                                <xf:bind id="escSinMedidaEmisionCO2-bind" ref="escSinMedidaEmisionCO2"
+                                         name="escSinMedidaEmisionCO2"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"/>
+                                <xf:bind id="escConMedidaEmisionCO2-bind" ref="escConMedidaEmisionCO2"
+                                         name="escConMedidaEmisionCO2"
+                                         xxf:whitespace="trim"
+                                         required="true()"
+                                         type="xs:decimal"
+                                         readonly="true()"/>
+                            </xf:bind>
+                        </xf:bind>
                     </xf:bind>
                 </xf:bind>
             </xf:bind>
@@ -228,6 +237,310 @@ formDefinition_valores_escenarios
             <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
+                        <escSinMedidaFuenteEnergia>
+                            <label>Fuente de Energía</label>
+                            <hint/>
+                            <item>
+                                <label>Aserrín</label>
+                                <value>aserrin</value>
+                            </item>
+                            <item>
+                                <label>Bagazo</label>
+                                <value>bagazo</value>
+                            </item>
+                            <item>
+                                <label>Biodiesel</label>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label>Bioetanol</label>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label>Carbón mineral</label>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label>Carbón vegetal</label>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label>Cáscara de arroz</label>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label>Casullo de cebada</label>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label>Chips</label>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label>Coque de carbón</label>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label>Coque de petróleo</label>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label>Coque de petróleo importado</label>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label>Electricidad de la red</label>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil calefacción</label>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil intermedio</label>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil pesado</label>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label>Gas natural</label>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 10S</label>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 50S</label>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label>Gasolina aviación 100/130</label>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label>Gasolina premium 97 30SP</label>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label>Gasolina super 95 30SP</label>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label>GLP</label>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label>Leña</label>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label>Licor negro</label>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label>Pellets de madera</label>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label>Propano</label>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label>Queroseno</label>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label>Residuos forestales</label>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label>Supergas</label>
+                                <value>supergas</value>
+                            </item>
+                        </escSinMedidaFuenteEnergia>
+                        <escConMedidaFuenteEnergia>
+                            <label>Fuente de Energía</label>
+                            <hint/>
+                            <item>
+                                <label>Aserrín</label>
+                                <value>aserrin</value>
+                            </item>
+                            <item>
+                                <label>Bagazo</label>
+                                <value>bagazo</value>
+                            </item>
+                            <item>
+                                <label>Biodiesel</label>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label>Bioetanol</label>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label>Carbón mineral</label>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label>Carbón vegetal</label>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label>Cáscara de arroz</label>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label>Casullo de cebada</label>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label>Chips</label>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label>Coque de carbón</label>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label>Coque de petróleo</label>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label>Coque de petróleo importado</label>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label>Electricidad de la red</label>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil calefacción</label>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil intermedio</label>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label>Fuel oil pesado</label>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label>Gas natural</label>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 10S</label>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label>Gasoil 50S</label>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label>Gasolina aviación 100/130</label>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label>Gasolina premium 97 30SP</label>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label>Gasolina super 95 30SP</label>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label>GLP</label>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label>Leña</label>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label>Licor negro</label>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label>Pellets de madera</label>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label>Propano</label>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label>Queroseno</label>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label>Residuos forestales</label>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label>Supergas</label>
+                                <value>supergas</value>
+                            </item>
+                        </escConMedidaFuenteEnergia>
+                        <escSinMedidaPrecioEnergetico>
+                            <label>Precio del Energético - Valor</label>
+                            <hint/>
+                        </escSinMedidaPrecioEnergetico>
+                        <escConMedidaPrecioEnergetico>
+                            <label>Precio del Energético - Valor</label>
+                            <hint/>
+                        </escConMedidaPrecioEnergetico>
+                        <escSinMedidaUyuUnidadFisica>
+                            <label>UYU/unidad física</label>
+                            <hint/>
+                        </escSinMedidaUyuUnidadFisica>
+                        <escConMedidaUyuUnidadFisica>
+                            <label>UYU/unidad física</label>
+                            <hint/>
+                        </escConMedidaUyuUnidadFisica>
+                        <escSinMedidaConsumoEnergia>
+                            <label>Consumo Energía - Valor (unidad física/año)</label>
+                            <hint/>
+                        </escSinMedidaConsumoEnergia>
+                        <escConMedidaConsumoEnergia>
+                            <label>Consumo Energía - Valor (unidad física/año)</label>
+                            <hint/>
+                        </escConMedidaConsumoEnergia>
+                        <escSinMedidaUnidadFisica>
+                            <label>Unidad física</label>
+                            <hint/>
+                        </escSinMedidaUnidadFisica>
+                        <escConMedidaUnidadFisica>
+                            <label>Unidad física</label>
+                            <hint/>
+                        </escConMedidaUnidadFisica>
+                        <escSinMedidaValorTepAnio>
+                            <label>Valor (tep/año)</label>
+                            <hint/>
+                        </escSinMedidaValorTepAnio>
+                        <escConMedidaValorTepAnio>
+                            <label>Valor (tep/año)</label>
+                            <hint/>
+                        </escConMedidaValorTepAnio>
+                        <escSinMedidaValorUyu>
+                            <label>Valor (UYU/año)</label>
+                            <hint/>
+                        </escSinMedidaValorUyu>
+                        <escConMedidaValorUyu>
+                            <label>Valor (UYU/año)</label>
+                            <hint/>
+                        </escConMedidaValorUyu>
+                        <escSinMedidaEmisionCO2>
+                            <label>Emisión CO2 - tCO2 / año</label>
+                            <hint/>
+                        </escSinMedidaEmisionCO2>
+                        <escConMedidaEmisionCO2>
+                            <label>Emisión CO2 - tCO2 / año</label>
+                            <hint/>
+                        </escConMedidaEmisionCO2>
                         <escSinMedidaUsoPrincipal>
                             <label>Uso Principal</label>
                             <hint/>
@@ -312,14 +625,6 @@ formDefinition_valores_escenarios
                             <label>Es Operativa ?</label>
                             <hint/>
                         </escSinMedidaEsOperativa>
-                        <escSinMedidaVidaUtil>
-                            <label>Vida Util</label>
-                            <hint/>
-                        </escSinMedidaVidaUtil>
-                        <escSinMedidaInversionTotal>
-                            <label>Inversión Total</label>
-                            <hint/>
-                        </escSinMedidaInversionTotal>
                         <escSinMedidaMoneda>
                             <label>Moneda</label>
                             <hint/>
@@ -336,310 +641,17 @@ formDefinition_valores_escenarios
                                 <value>eur</value>
                             </item>
                         </escSinMedidaMoneda>
-                        <escSinMedidaFuenteEnergia>
-                            <label>Fuente de Energía</label>
+                        <escSinMedidaInversionTotal>
+                            <label>Inversión Total</label>
                             <hint/>
-                            <item>
-                                <label>Aserrín</label>
-                                <value>aserrin</value>
-                            </item>
-                            <item>
-                                <label>Bagazo</label>
-                                <value>bagazo</value>
-                            </item>
-                            <item>
-                                <label>Biodiesel</label>
-                                <value>biodiesel</value>
-                            </item>
-                            <item>
-                                <label>Bioetanol</label>
-                                <value>bioetanol</value>
-                            </item>
-                            <item>
-                                <label>Carbón mineral</label>
-                                <value>carbon-mineral</value>
-                            </item>
-                            <item>
-                                <label>Carbón vegetal</label>
-                                <value>carbon-vegetal</value>
-                            </item>
-                            <item>
-                                <label>Cáscara de arroz</label>
-                                <value>cascara-de-arroz</value>
-                            </item>
-                            <item>
-                                <label>Casullo de cebada</label>
-                                <value>casullo-de-cebada</value>
-                            </item>
-                            <item>
-                                <label>Chips</label>
-                                <value>chips</value>
-                            </item>
-                            <item>
-                                <label>Coque de carbón</label>
-                                <value>coque-de-carbon</value>
-                            </item>
-                            <item>
-                                <label>Coque de petróleo</label>
-                                <value>coque-de-petroleo</value>
-                            </item>
-                            <item>
-                                <label>Coque de petróleo importado</label>
-                                <value>coque-de-petroleo-importado</value>
-                            </item>
-                            <item>
-                                <label>Electricidad de la red</label>
-                                <value>electricidad-de-la-red</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil calefacción</label>
-                                <value>fuel-oil-calefaccion</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil intermedio</label>
-                                <value>fuel-oil-intermedio</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil pesado</label>
-                                <value>fuel-oil-pesado</value>
-                            </item>
-                            <item>
-                                <label>Gas natural</label>
-                                <value>gas-natural</value>
-                            </item>
-                            <item>
-                                <label>Gasoil 10S</label>
-                                <value>gasoil-10s</value>
-                            </item>
-                            <item>
-                                <label>Gasoil 50S</label>
-                                <value>gasoil-50s</value>
-                            </item>
-                            <item>
-                                <label>Gasolina aviación 100/130</label>
-                                <value>gasolina-aviacion-100-130</value>
-                            </item>
-                            <item>
-                                <label>Gasolina premium 97 30SP</label>
-                                <value>gasolina-premium-97-30sp</value>
-                            </item>
-                            <item>
-                                <label>Gasolina super 95 30SP</label>
-                                <value>gasolina-super-95-30sp</value>
-                            </item>
-                            <item>
-                                <label>GLP</label>
-                                <value>glp</value>
-                            </item>
-                            <item>
-                                <label>Leña</label>
-                                <value>lena</value>
-                            </item>
-                            <item>
-                                <label>Licor negro</label>
-                                <value>licor-negro</value>
-                            </item>
-                            <item>
-                                <label>Pellets de madera</label>
-                                <value>pellets-de-madera</value>
-                            </item>
-                            <item>
-                                <label>Propano</label>
-                                <value>propano</value>
-                            </item>
-                            <item>
-                                <label>Queroseno</label>
-                                <value>queroseno</value>
-                            </item>
-                            <item>
-                                <label>Residuos forestales</label>
-                                <value>residuos-forestales</value>
-                            </item>
-                            <item>
-                                <label>Supergas</label>
-                                <value>supergas</value>
-                            </item>
-                        </escSinMedidaFuenteEnergia>
-                        <escConMedidaFuenteEnergia>
-                            <label>Fuente de Energía</label>
+                        </escSinMedidaInversionTotal>
+                        <escSinMedidaVidaUtil>
+                            <label>Vida Util</label>
                             <hint/>
-                            <item>
-                                <label>Aserrín</label>
-                                <value>aserrin</value>
-                            </item>
-                            <item>
-                                <label>Bagazo</label>
-                                <value>bagazo</value>
-                            </item>
-                            <item>
-                                <label>Biodiesel</label>
-                                <value>biodiesel</value>
-                            </item>
-                            <item>
-                                <label>Bioetanol</label>
-                                <value>bioetanol</value>
-                            </item>
-                            <item>
-                                <label>Carbón mineral</label>
-                                <value>carbon-mineral</value>
-                            </item>
-                            <item>
-                                <label>Carbón vegetal</label>
-                                <value>carbon-vegetal</value>
-                            </item>
-                            <item>
-                                <label>Cáscara de arroz</label>
-                                <value>cascara-de-arroz</value>
-                            </item>
-                            <item>
-                                <label>Casullo de cebada</label>
-                                <value>casullo-de-cebada</value>
-                            </item>
-                            <item>
-                                <label>Chips</label>
-                                <value>chips</value>
-                            </item>
-                            <item>
-                                <label>Coque de carbón</label>
-                                <value>coque-de-carbon</value>
-                            </item>
-                            <item>
-                                <label>Coque de petróleo</label>
-                                <value>coque-de-petroleo</value>
-                            </item>
-                            <item>
-                                <label>Coque de petróleo importado</label>
-                                <value>coque-de-petroleo-importado</value>
-                            </item>
-                            <item>
-                                <label>Electricidad de la red</label>
-                                <value>electricidad-de-la-red</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil calefacción</label>
-                                <value>fuel-oil-calefaccion</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil intermedio</label>
-                                <value>fuel-oil-intermedio</value>
-                            </item>
-                            <item>
-                                <label>Fuel oil pesado</label>
-                                <value>fuel-oil-pesado</value>
-                            </item>
-                            <item>
-                                <label>Gas natural</label>
-                                <value>gas-natural</value>
-                            </item>
-                            <item>
-                                <label>Gasoil 10S</label>
-                                <value>gasoil-10s</value>
-                            </item>
-                            <item>
-                                <label>Gasoil 50S</label>
-                                <value>gasoil-50s</value>
-                            </item>
-                            <item>
-                                <label>Gasolina aviación 100/130</label>
-                                <value>gasolina-aviacion-100-130</value>
-                            </item>
-                            <item>
-                                <label>Gasolina premium 97 30SP</label>
-                                <value>gasolina-premium-97-30sp</value>
-                            </item>
-                            <item>
-                                <label>Gasolina super 95 30SP</label>
-                                <value>gasolina-super-95-30sp</value>
-                            </item>
-                            <item>
-                                <label>GLP</label>
-                                <value>glp</value>
-                            </item>
-                            <item>
-                                <label>Leña</label>
-                                <value>lena</value>
-                            </item>
-                            <item>
-                                <label>Licor negro</label>
-                                <value>licor-negro</value>
-                            </item>
-                            <item>
-                                <label>Pellets de madera</label>
-                                <value>pellets-de-madera</value>
-                            </item>
-                            <item>
-                                <label>Propano</label>
-                                <value>propano</value>
-                            </item>
-                            <item>
-                                <label>Queroseno</label>
-                                <value>queroseno</value>
-                            </item>
-                            <item>
-                                <label>Residuos forestales</label>
-                                <value>residuos-forestales</value>
-                            </item>
-                            <item>
-                                <label>Supergas</label>
-                                <value>supergas</value>
-                            </item>
-                        </escConMedidaFuenteEnergia>
-                        <escSinMedidaPrecioEnergetico>
-                            <label>Precio del Energético - Valor</label>
-                            <hint/>
-                        </escSinMedidaPrecioEnergetico>
-                        <escConMedidaPrecioEnergetico>
-                            <label>Precio del Energético - Valor</label>
-                            <hint/>
-                        </escConMedidaPrecioEnergetico>
-                        <escSinMedidaUyuUnidadFisica>
-                            <label>UYU/unidad física</label>
-                            <hint/>
-                        </escSinMedidaUyuUnidadFisica>
-                        <escConMedidaUyuUnidadFisica>
-                            <label>UYU/unidad física</label>
-                            <hint/>
-                        </escConMedidaUyuUnidadFisica>
-                        <escSinMedidaConsumoEnergia>
-                            <label>Consumo Energía - Valor (unidad física/año)</label>
-                            <hint/>
-                        </escSinMedidaConsumoEnergia>
-                        <escConMedidaConsumoEnergia>
-                            <label>Consumo Energía - Valor (unidad física/año)</label>
-                            <hint/>
-                        </escConMedidaConsumoEnergia>
-                        <escSinMedidaUnidadFisica>
-                            <label>Unidad física</label>
-                            <hint/>
-                        </escSinMedidaUnidadFisica>
-                        <escConMedidaUnidadFisica>
-                            <label>Unidad física</label>
-                            <hint/>
-                        </escConMedidaUnidadFisica>
-                        <escSinMedidaValorTepAnio>
-                            <label>Valor (tep/año)</label>
-                            <hint/>
-                        </escSinMedidaValorTepAnio>
-                        <escConMedidaValorTepAnio>
-                            <label>Valor (tep/año)</label>
-                            <hint/>
-                        </escConMedidaValorTepAnio>
-                        <escSinMedidaValorUyu>
-                            <label>Valor (UYU/año)</label>
-                            <hint/>
-                        </escSinMedidaValorUyu>
-                        <escConMedidaValorUyu>
-                            <label>Valor (UYU/año)</label>
-                            <hint/>
-                        </escConMedidaValorUyu>
-                        <escSinMedidaEmisionCO2>
-                            <label>Emisión CO2 - tCO2 / año</label>
-                            <hint/>
-                        </escSinMedidaEmisionCO2>
-                        <escConMedidaEmisionCO2>
-                            <label>Emisión CO2 - tCO2 / año</label>
-                            <hint/>
-                        </escConMedidaEmisionCO2>
+                        </escSinMedidaVidaUtil>
+                        <section-2>
+                            <label>Valores Antes y Después</label>
+                        </section-2>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -652,9 +664,9 @@ formDefinition_valores_escenarios
                             <label>Process Id</label>
                             <hint/>
                         </processId>
-                        <section-12>
+                        <section-1>
                             <label>Medidas Energéticas</label>
-                        </section-12>
+                        </section-1>
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -684,6 +696,310 @@ formDefinition_valores_escenarios
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
+                        <escSinMedidaFuenteEnergia>
+                            <label/>
+                            <hint/>
+                            <item>
+                                <label/>
+                                <value>aserrin</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>bagazo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>supergas</value>
+                            </item>
+                        </escSinMedidaFuenteEnergia>
+                        <escConMedidaFuenteEnergia>
+                            <label/>
+                            <hint/>
+                            <item>
+                                <label/>
+                                <value>aserrin</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>bagazo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>biodiesel</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>bioetanol</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-mineral</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>carbon-vegetal</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>cascara-de-arroz</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>casullo-de-cebada</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>chips</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-carbon</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>coque-de-petroleo-importado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>electricidad-de-la-red</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-calefaccion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-intermedio</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>fuel-oil-pesado</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gas-natural</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-10s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasoil-50s</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-aviacion-100-130</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-premium-97-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>gasolina-super-95-30sp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>glp</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>lena</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>licor-negro</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>pellets-de-madera</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>propano</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>queroseno</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>residuos-forestales</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>supergas</value>
+                            </item>
+                        </escConMedidaFuenteEnergia>
+                        <escSinMedidaPrecioEnergetico>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaPrecioEnergetico>
+                        <escConMedidaPrecioEnergetico>
+                            <label/>
+                            <hint/>
+                        </escConMedidaPrecioEnergetico>
+                        <escSinMedidaUyuUnidadFisica>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaUyuUnidadFisica>
+                        <escConMedidaUyuUnidadFisica>
+                            <label/>
+                            <hint/>
+                        </escConMedidaUyuUnidadFisica>
+                        <escSinMedidaConsumoEnergia>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaConsumoEnergia>
+                        <escConMedidaConsumoEnergia>
+                            <label/>
+                            <hint/>
+                        </escConMedidaConsumoEnergia>
+                        <escSinMedidaUnidadFisica>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaUnidadFisica>
+                        <escConMedidaUnidadFisica>
+                            <label/>
+                            <hint/>
+                        </escConMedidaUnidadFisica>
+                        <escSinMedidaValorTepAnio>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaValorTepAnio>
+                        <escConMedidaValorTepAnio>
+                            <label/>
+                            <hint/>
+                        </escConMedidaValorTepAnio>
+                        <escSinMedidaValorUyu>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaValorUyu>
+                        <escConMedidaValorUyu>
+                            <label/>
+                            <hint/>
+                        </escConMedidaValorUyu>
+                        <escSinMedidaEmisionCO2>
+                            <label/>
+                            <hint/>
+                        </escSinMedidaEmisionCO2>
+                        <escConMedidaEmisionCO2>
+                            <label/>
+                            <hint/>
+                        </escConMedidaEmisionCO2>
                         <escSinMedidaUsoPrincipal>
                             <label/>
                             <hint/>
@@ -768,14 +1084,6 @@ formDefinition_valores_escenarios
                             <label/>
                             <hint/>
                         </escSinMedidaEsOperativa>
-                        <escSinMedidaVidaUtil>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaVidaUtil>
-                        <escSinMedidaInversionTotal>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaInversionTotal>
                         <escSinMedidaMoneda>
                             <label/>
                             <hint/>
@@ -792,310 +1100,17 @@ formDefinition_valores_escenarios
                                 <value>eur</value>
                             </item>
                         </escSinMedidaMoneda>
-                        <escSinMedidaFuenteEnergia>
+                        <escSinMedidaInversionTotal>
                             <label/>
                             <hint/>
-                            <item>
-                                <label/>
-                                <value>aserrin</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>bagazo</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>biodiesel</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>bioetanol</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>carbon-mineral</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>carbon-vegetal</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>cascara-de-arroz</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>casullo-de-cebada</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>chips</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-carbon</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-petroleo</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-petroleo-importado</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>electricidad-de-la-red</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-calefaccion</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-intermedio</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-pesado</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gas-natural</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasoil-10s</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasoil-50s</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-aviacion-100-130</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-premium-97-30sp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-super-95-30sp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>glp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>lena</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>licor-negro</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>pellets-de-madera</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>propano</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>queroseno</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>residuos-forestales</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>supergas</value>
-                            </item>
-                        </escSinMedidaFuenteEnergia>
-                        <escConMedidaFuenteEnergia>
+                        </escSinMedidaInversionTotal>
+                        <escSinMedidaVidaUtil>
                             <label/>
                             <hint/>
-                            <item>
-                                <label/>
-                                <value>aserrin</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>bagazo</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>biodiesel</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>bioetanol</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>carbon-mineral</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>carbon-vegetal</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>cascara-de-arroz</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>casullo-de-cebada</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>chips</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-carbon</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-petroleo</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>coque-de-petroleo-importado</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>electricidad-de-la-red</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-calefaccion</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-intermedio</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>fuel-oil-pesado</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gas-natural</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasoil-10s</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasoil-50s</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-aviacion-100-130</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-premium-97-30sp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>gasolina-super-95-30sp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>glp</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>lena</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>licor-negro</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>pellets-de-madera</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>propano</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>queroseno</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>residuos-forestales</value>
-                            </item>
-                            <item>
-                                <label/>
-                                <value>supergas</value>
-                            </item>
-                        </escConMedidaFuenteEnergia>
-                        <escSinMedidaPrecioEnergetico>
+                        </escSinMedidaVidaUtil>
+                        <section-2>
                             <label/>
-                            <hint/>
-                        </escSinMedidaPrecioEnergetico>
-                        <escConMedidaPrecioEnergetico>
-                            <label/>
-                            <hint/>
-                        </escConMedidaPrecioEnergetico>
-                        <escSinMedidaUyuUnidadFisica>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaUyuUnidadFisica>
-                        <escConMedidaUyuUnidadFisica>
-                            <label/>
-                            <hint/>
-                        </escConMedidaUyuUnidadFisica>
-                        <escSinMedidaConsumoEnergia>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaConsumoEnergia>
-                        <escConMedidaConsumoEnergia>
-                            <label/>
-                            <hint/>
-                        </escConMedidaConsumoEnergia>
-                        <escSinMedidaUnidadFisica>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaUnidadFisica>
-                        <escConMedidaUnidadFisica>
-                            <label/>
-                            <hint/>
-                        </escConMedidaUnidadFisica>
-                        <escSinMedidaValorTepAnio>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaValorTepAnio>
-                        <escConMedidaValorTepAnio>
-                            <label/>
-                            <hint/>
-                        </escConMedidaValorTepAnio>
-                        <escSinMedidaValorUyu>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaValorUyu>
-                        <escConMedidaValorUyu>
-                            <label/>
-                            <hint/>
-                        </escConMedidaValorUyu>
-                        <escSinMedidaEmisionCO2>
-                            <label/>
-                            <hint/>
-                        </escSinMedidaEmisionCO2>
-                        <escConMedidaEmisionCO2>
-                            <label/>
-                            <hint/>
-                        </escConMedidaEmisionCO2>
+                        </section-2>
                         <username>
                             <label>User</label>
                             <hint/>
@@ -1108,9 +1123,9 @@ formDefinition_valores_escenarios
                             <label>Form Id</label>
                             <hint/>
                         </processId>
-                        <section-12>
+                        <section-1>
                             <label/>
-                        </section-12>
+                        </section-1>
                         <internal-section>
                             <label>Internal Section</label>
                         </internal-section>
@@ -1141,31 +1156,55 @@ formDefinition_valores_escenarios
                     </resource>
                 </resources>
             </xf:instance>
-            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-12-template">
-                <section-12-iteration>
+            <xf:instance xxf:readonly="true" id="section-1-template" xxf:exclude-result-prefixes="#all">
+                <section-1-iteration>
+                    <escSinMedidaUsoPrincipal/>
+                    <escSinMedidaFechaInicioOperacion/>
                     <escSinMedidaEsOperativa/>
-                    <escSinMedidaVidaUtil/>
                     <escSinMedidaInversionTotal/>
                     <escSinMedidaMoneda/>
-                    <escSinMedidaFechaInicioOperacion/>
-                    <escSinMedidaUsoPrincipal/>
+                    <escSinMedidaVidaUtil/>
+                    <section-2>
+                        <section-2-iteration>
+                            <escSinMedidaFuenteEnergia/>
+                            <escConMedidaFuenteEnergia/>
+                            <escSinMedidaPrecioEnergetico/>
+                            <escConMedidaPrecioEnergetico/>
+                            <escSinMedidaUyuUnidadFisica/>
+                            <escConMedidaUyuUnidadFisica/>
+                            <escSinMedidaConsumoEnergia/>
+                            <escConMedidaConsumoEnergia/>
+                            <escSinMedidaUnidadFisica/>
+                            <escConMedidaUnidadFisica/>
+                            <escSinMedidaValorTepAnio/>
+                            <escConMedidaValorTepAnio/>
+                            <escSinMedidaValorUyu/>
+                            <escConMedidaValorUyu/>
+                            <escSinMedidaEmisionCO2/>
+                            <escConMedidaEmisionCO2/>
+                        </section-2-iteration>
+                    </section-2>
+                </section-1-iteration>
+            </xf:instance>
+            <xf:instance xxf:readonly="true" id="section-2-template" xxf:exclude-result-prefixes="#all">
+                <section-2-iteration>
                     <escSinMedidaFuenteEnergia/>
                     <escConMedidaFuenteEnergia/>
-                    <escSinMedidaUnidadFisica/>
-                    <escConMedidaUnidadFisica/>
-                    <escSinMedidaValorTepAnio/>
-                    <escConMedidaValorTepAnio/>
-                    <escSinMedidaEmisionCO2/>
-                    <escConMedidaEmisionCO2/>
                     <escSinMedidaPrecioEnergetico/>
                     <escConMedidaPrecioEnergetico/>
                     <escSinMedidaUyuUnidadFisica/>
                     <escConMedidaUyuUnidadFisica/>
-                    <escSinMedidaValorUyu/>
-                    <escConMedidaValorUyu/>
                     <escSinMedidaConsumoEnergia/>
                     <escConMedidaConsumoEnergia/>
-                </section-12-iteration>
+                    <escSinMedidaUnidadFisica/>
+                    <escConMedidaUnidadFisica/>
+                    <escSinMedidaValorTepAnio/>
+                    <escConMedidaValorTepAnio/>
+                    <escSinMedidaValorUyu/>
+                    <escConMedidaValorUyu/>
+                    <escSinMedidaEmisionCO2/>
+                    <escConMedidaEmisionCO2/>
+                </section-2-iteration>
             </xf:instance>
             <xf:instance id="security-token-instance" class="fr-service"
                          xxf:exclude-result-prefixes="#all">
@@ -1349,12 +1388,12 @@ formDefinition_valores_escenarios
                             </fr:c>
                     </fr:grid>
                 </fr:section>
-                <fr:section id="section-12-control" bind="section-12-bind" repeat="content" min="1"
-                            template="instance(''section-12-template'')"
+                <fr:section id="section-1-section" bind="section-1-bind" repeat="content" min="1"
+                            template="instance(''section-1-template'')"
                             apply-defaults="true"
                             fb:initial-iterations="first">
-                    <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid id="grid-3-grid">
+                    <xf:label ref="$form-resources/section-1/label"/>
+                    <fr:grid id="grid-5-grid">
                         <fr:c x="1" y="1" w="12">
                             <xf:select1 id="escSinMedidaUsoPrincipal-control" bind="escSinMedidaUsoPrincipal-bind"
                                         class="fr-summary fr-search"
@@ -1368,7 +1407,9 @@ formDefinition_valores_escenarios
                                 </xf:itemset>
                             </xf:select1>
                         </fr:c>
-                        <fr:c x="1" y="2" w="12">
+                    </fr:grid>
+                    <fr:grid id="grid-6-grid">
+                        <fr:c x="1" y="1" w="6">
                             <fr:date xmlns:map="http://www.w3.org/2005/xpath-functions/map"
                                      xmlns:array="http://www.w3.org/2005/xpath-functions/array"
                                      id="escSinMedidaFechaInicioOperacion-control"
@@ -1378,7 +1419,7 @@ formDefinition_valores_escenarios
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:date>
                         </fr:c>
-                        <fr:c y="3" x="1" w="12">
+                        <fr:c x="7" y="1" w="6">
                             <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
                                             xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
                                             id="escSinMedidaEsOperativa-control"
@@ -1388,22 +1429,8 @@ formDefinition_valores_escenarios
                                 <xf:hint ref="$form-resources/escSinMedidaEsOperativa/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:yesno-input>
-                            </fr:c>
-                        <fr:c y="4" x="1" w="12">
-                            <fr:number id="escSinMedidaVidaUtil-control" bind="escSinMedidaVidaUtil-bind">
-                                <xf:label ref="$form-resources/escSinMedidaVidaUtil/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaVidaUtil/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                            </fr:c>
-                        <fr:c y="5" x="1" w="12">
-                            <fr:number id="escSinMedidaInversionTotal-control" bind="escSinMedidaInversionTotal-bind">
-                                <xf:label ref="$form-resources/escSinMedidaInversionTotal/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaInversionTotal/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                            </fr:c>
-                        <fr:c y="6" x="1" w="12">
+                        </fr:c>
+                        <fr:c x="1" y="2" w="6">
                             <xf:select1 id="escSinMedidaMoneda-control" bind="escSinMedidaMoneda-bind"
                                         appearance="dropdown"
                                         class="fr-summary fr-search">
@@ -1415,138 +1442,159 @@ formDefinition_valores_escenarios
                                     <xf:value ref="value"/>
                                 </xf:itemset>
                             </xf:select1>
-                            </fr:c>
-                    </fr:grid>
-                    <fr:grid id="grid-4-grid">
-                        <fr:c x="1" y="1" w="6">
-                            <xf:select1 id="escSinMedidaFuenteEnergia-control" bind="escSinMedidaFuenteEnergia-bind"
-                                        appearance="dropdown"
-                                        class="fr-summary fr-search">
-                                <xf:label ref="$form-resources/escSinMedidaFuenteEnergia/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaFuenteEnergia/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                <xf:itemset ref="$form-resources/escSinMedidaFuenteEnergia/item">
-                                    <xf:label ref="label"/>
-                                    <xf:value ref="value"/>
-                                </xf:itemset>
-                            </xf:select1>
-                        </fr:c>
-                        <fr:c x="7" y="1" w="6">
-                            <xf:select1 id="escConMedidaFuenteEnergia-control" bind="escConMedidaFuenteEnergia-bind"
-                                        appearance="dropdown"
-                                        class="fr-summary fr-search">
-                                <xf:label ref="$form-resources/escConMedidaFuenteEnergia/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaFuenteEnergia/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                <xf:itemset ref="$form-resources/escConMedidaFuenteEnergia/item">
-                                    <xf:label ref="label"/>
-                                    <xf:value ref="value"/>
-                                </xf:itemset>
-                            </xf:select1>
-                        </fr:c>
-                        <fr:c x="1" y="2" w="6">
-                            <fr:number id="escSinMedidaPrecioEnergetico-control"
-                                       bind="escSinMedidaPrecioEnergetico-bind">
-                                <xf:label ref="$form-resources/escSinMedidaPrecioEnergetico/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaPrecioEnergetico/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
                         </fr:c>
                         <fr:c x="7" y="2" w="6">
-                            <fr:number id="escConMedidaPrecioEnergetico-control"
-                                       bind="escConMedidaPrecioEnergetico-bind">
-                                <xf:label ref="$form-resources/escConMedidaPrecioEnergetico/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaPrecioEnergetico/hint"/>
+                            <fr:number id="escSinMedidaInversionTotal-control" bind="escSinMedidaInversionTotal-bind">
+                                <xf:label ref="$form-resources/escSinMedidaInversionTotal/label"/>
+                                <xf:hint ref="$form-resources/escSinMedidaInversionTotal/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:number>
                         </fr:c>
                         <fr:c x="1" y="3" w="6">
-                            <xf:input id="escSinMedidaUyuUnidadFisica-control"
-                                      bind="escSinMedidaUyuUnidadFisica-bind">
-                                <xf:label ref="$form-resources/escSinMedidaUyuUnidadFisica/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaUyuUnidadFisica/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
-                        </fr:c>
-                        <fr:c x="7" y="3" w="6">
-                            <xf:input id="escConMedidaUyuUnidadFisica-control"
-                                      bind="escConMedidaUyuUnidadFisica-bind">
-                                <xf:label ref="$form-resources/escConMedidaUyuUnidadFisica/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaUyuUnidadFisica/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
-                        </fr:c>
-                        <fr:c x="1" y="4" w="6">
-                            <fr:number id="escSinMedidaConsumoEnergia-control" bind="escSinMedidaConsumoEnergia-bind">
-                                <xf:label ref="$form-resources/escSinMedidaConsumoEnergia/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaConsumoEnergia/hint"/>
+                            <fr:number id="escSinMedidaVidaUtil-control" bind="escSinMedidaVidaUtil-bind">
+                                <xf:label ref="$form-resources/escSinMedidaVidaUtil/label"/>
+                                <xf:hint ref="$form-resources/escSinMedidaVidaUtil/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:number>
                         </fr:c>
-                        <fr:c x="7" y="4" w="6">
-                            <fr:number id="escConMedidaConsumoEnergia-control" bind="escConMedidaConsumoEnergia-bind">
-                                <xf:label ref="$form-resources/escConMedidaConsumoEnergia/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaConsumoEnergia/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="1" y="5" w="6">
-                            <xf:input id="escSinMedidaUnidadFisica-control" bind="escSinMedidaUnidadFisica-bind">
-                                <xf:label ref="$form-resources/escSinMedidaUnidadFisica/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaUnidadFisica/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
-                        </fr:c>
-                        <fr:c x="7" y="5" w="6">
-                            <xf:input id="escConMedidaUnidadFisica-control" bind="escConMedidaUnidadFisica-bind">
-                                <xf:label ref="$form-resources/escConMedidaUnidadFisica/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaUnidadFisica/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
-                        </fr:c>
-                        <fr:c x="1" y="6" w="6">
-                            <fr:number id="escSinMedidaValorTepAnio-control" bind="escSinMedidaValorTepAnio-bind">
-                                <xf:label ref="$form-resources/escSinMedidaValorTepAnio/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaValorTepAnio/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="7" y="6" w="6">
-                            <fr:number id="escConMedidaValorTepAnio-control" bind="escConMedidaValorTepAnio-bind">
-                                <xf:label ref="$form-resources/escConMedidaValorTepAnio/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaValorTepAnio/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="1" y="7" w="6">
-                            <fr:number id="escSinMedidaValorUyu-control" bind="escSinMedidaValorUyu-bind">
-                                <xf:label ref="$form-resources/escSinMedidaValorUyu/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaValorUyu/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="7" y="7" w="6">
-                            <fr:number id="escConMedidaValorUyu-control" bind="escConMedidaValorUyu-bind">
-                                <xf:label ref="$form-resources/escConMedidaValorUyu/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaValorUyu/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="1" y="8" w="6">
-                            <fr:number id="escSinMedidaEmisionCO2-control" bind="escSinMedidaEmisionCO2-bind">
-                                <xf:label ref="$form-resources/escSinMedidaEmisionCO2/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaEmisionCO2/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
-                        <fr:c x="7" y="8" w="6">
-                            <fr:number id="escConMedidaEmisionCO2-control" bind="escConMedidaEmisionCO2-bind">
-                                <xf:label ref="$form-resources/escConMedidaEmisionCO2/label"/>
-                                <xf:hint ref="$form-resources/escConMedidaEmisionCO2/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
+                        <fr:c x="7" y="3" w="6"/>
                     </fr:grid>
+                    <fr:section id="section-2-section" bind="section-2-bind" repeat="content" min="1"
+                                template="instance(''section-2-template'')"
+                                apply-defaults="true"
+                                fb:initial-iterations="first">
+                        <xf:label ref="$form-resources/section-2/label"/>
+                        <fr:grid id="grid-7-grid">
+                            <fr:c x="1" y="1" w="6">
+                                <xf:select1 id="escSinMedidaFuenteEnergia-control" bind="escSinMedidaFuenteEnergia-bind"
+                                            appearance="dropdown"
+                                            class="fr-summary fr-search">
+                                    <xf:label ref="$form-resources/escSinMedidaFuenteEnergia/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaFuenteEnergia/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:itemset ref="$form-resources/escSinMedidaFuenteEnergia/item">
+                                        <xf:label ref="label"/>
+                                        <xf:value ref="value"/>
+                                    </xf:itemset>
+                                </xf:select1>
+                            </fr:c>
+                            <fr:c x="7" y="1" w="6">
+                                <xf:select1 id="escConMedidaFuenteEnergia-control" bind="escConMedidaFuenteEnergia-bind"
+                                            appearance="dropdown"
+                                            class="fr-summary fr-search">
+                                    <xf:label ref="$form-resources/escConMedidaFuenteEnergia/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaFuenteEnergia/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                    <xf:itemset ref="$form-resources/escConMedidaFuenteEnergia/item">
+                                        <xf:label ref="label"/>
+                                        <xf:value ref="value"/>
+                                    </xf:itemset>
+                                </xf:select1>
+                            </fr:c>
+                            <fr:c x="1" y="2" w="6">
+                                <fr:number id="escSinMedidaPrecioEnergetico-control"
+                                           bind="escSinMedidaPrecioEnergetico-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaPrecioEnergetico/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaPrecioEnergetico/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="7" y="2" w="6">
+                                <fr:number id="escConMedidaPrecioEnergetico-control"
+                                           bind="escConMedidaPrecioEnergetico-bind">
+                                    <xf:label ref="$form-resources/escConMedidaPrecioEnergetico/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaPrecioEnergetico/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="1" y="3" w="6">
+                                <xf:input id="escSinMedidaUyuUnidadFisica-control"
+                                          bind="escSinMedidaUyuUnidadFisica-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaUyuUnidadFisica/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaUyuUnidadFisica/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                            <fr:c x="7" y="3" w="6">
+                                <xf:input id="escConMedidaUyuUnidadFisica-control"
+                                          bind="escConMedidaUyuUnidadFisica-bind">
+                                    <xf:label ref="$form-resources/escConMedidaUyuUnidadFisica/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaUyuUnidadFisica/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                            <fr:c x="1" y="4" w="6">
+                                <fr:number id="escSinMedidaConsumoEnergia-control" bind="escSinMedidaConsumoEnergia-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaConsumoEnergia/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaConsumoEnergia/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="7" y="4" w="6">
+                                <fr:number id="escConMedidaConsumoEnergia-control" bind="escConMedidaConsumoEnergia-bind">
+                                    <xf:label ref="$form-resources/escConMedidaConsumoEnergia/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaConsumoEnergia/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="1" y="5" w="6">
+                                <xf:input id="escSinMedidaUnidadFisica-control" bind="escSinMedidaUnidadFisica-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaUnidadFisica/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaUnidadFisica/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                            <fr:c x="7" y="5" w="6">
+                                <xf:input id="escConMedidaUnidadFisica-control" bind="escConMedidaUnidadFisica-bind">
+                                    <xf:label ref="$form-resources/escConMedidaUnidadFisica/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaUnidadFisica/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </xf:input>
+                            </fr:c>
+                            <fr:c x="1" y="6" w="6">
+                                <fr:number id="escSinMedidaValorTepAnio-control" bind="escSinMedidaValorTepAnio-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaValorTepAnio/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaValorTepAnio/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="7" y="6" w="6">
+                                <fr:number id="escConMedidaValorTepAnio-control" bind="escConMedidaValorTepAnio-bind">
+                                    <xf:label ref="$form-resources/escConMedidaValorTepAnio/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaValorTepAnio/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="1" y="7" w="6">
+                                <fr:number id="escSinMedidaValorUyu-control" bind="escSinMedidaValorUyu-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaValorUyu/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaValorUyu/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="7" y="7" w="6">
+                                <fr:number id="escConMedidaValorUyu-control" bind="escConMedidaValorUyu-bind">
+                                    <xf:label ref="$form-resources/escConMedidaValorUyu/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaValorUyu/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="1" y="8" w="6">
+                                <fr:number id="escSinMedidaEmisionCO2-control" bind="escSinMedidaEmisionCO2-bind">
+                                    <xf:label ref="$form-resources/escSinMedidaEmisionCO2/label"/>
+                                    <xf:hint ref="$form-resources/escSinMedidaEmisionCO2/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                            <fr:c x="7" y="8" w="6">
+                                <fr:number id="escConMedidaEmisionCO2-control" bind="escConMedidaEmisionCO2-bind">
+                                    <xf:label ref="$form-resources/escConMedidaEmisionCO2/label"/>
+                                    <xf:hint ref="$form-resources/escConMedidaEmisionCO2/hint"/>
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                </fr:number>
+                            </fr:c>
+                        </fr:grid>
+                    </fr:section>
                 </fr:section>
             </fr:body>
         </fr:view>
