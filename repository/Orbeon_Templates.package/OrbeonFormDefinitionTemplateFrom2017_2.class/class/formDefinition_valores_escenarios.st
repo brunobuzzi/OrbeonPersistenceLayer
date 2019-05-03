@@ -124,37 +124,45 @@ formDefinition_valores_escenarios
                         <xf:bind id="escSinMedidaFuenteEnergia-bind" ref="escSinMedidaFuenteEnergia"
                                  name="escSinMedidaFuenteEnergia"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaPrecioEnergetico-bind" ref="escSinMedidaPrecioEnergetico"
-                                 name="escSinMedidaPrecioEnergetico"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
                         <xf:bind id="escConMedidaFuenteEnergia-bind" ref="escConMedidaFuenteEnergia"
                                  name="escConMedidaFuenteEnergia"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaUyuUnidadFisica-bind" ref="escSinMedidaUyuUnidadFisica"
-                                 name="escSinMedidaUyuUnidadFisica"
-                                 xxf:whitespace="trim"/>
-                        <xf:bind id="escSinMedidaConsumoEnergia-bind" ref="escSinMedidaConsumoEnergia"
-                                 name="escSinMedidaConsumoEnergia"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
                         <xf:bind id="escSinMedidaUnidadFisica-bind" ref="escSinMedidaUnidadFisica"
                                  name="escSinMedidaUnidadFisica"
-                                 xxf:whitespace="trim"/>
+                                 xxf:whitespace="trim"
+                                 required="true()"
+                                 readonly="true()"/>
+                        <xf:bind id="escConMedidaUnidadFisica-bind" ref="escConMedidaUnidadFisica"
+                                 name="escConMedidaUnidadFisica"
+                                 xxf:whitespace="trim"
+                                 required="true()"
+                                 readonly="true()"/>
                         <xf:bind id="escSinMedidaValorTepAnio-bind" ref="escSinMedidaValorTepAnio"
                                  name="escSinMedidaValorTepAnio"
                                  xxf:whitespace="trim"
                                  required="true()"
-                                 type="xs:decimal"/>
-                        <xf:bind id="escSinMedidaValorUyu-bind" ref="escSinMedidaValorUyu"
-                                 name="escSinMedidaValorUyu"
+                                 type="xs:decimal"
+                                 readonly="true()"/>
+                        <xf:bind id="escConMedidaValorTepAnio-bind" ref="escConMedidaValorTepAnio"
+                                 name="escConMedidaValorTepAnio"
                                  xxf:whitespace="trim"
                                  required="true()"
-                                 type="xs:decimal"/>
+                                 type="xs:decimal"
+                                 readonly="true()"/>
                         <xf:bind id="escSinMedidaEmisionCO2-bind" ref="escSinMedidaEmisionCO2"
                                  name="escSinMedidaEmisionCO2"
+                                 xxf:whitespace="trim"
+                                 required="true()"
+                                 type="xs:decimal"
+                                 readonly="true()"/>
+                        <xf:bind id="escConMedidaEmisionCO2-bind" ref="escConMedidaEmisionCO2"
+                                 name="escConMedidaEmisionCO2"
+                                 xxf:whitespace="trim"
+                                 required="true()"
+                                 type="xs:decimal"
+                                 readonly="true()"/>
+                        <xf:bind id="escSinMedidaPrecioEnergetico-bind" ref="escSinMedidaPrecioEnergetico"
+                                 name="escSinMedidaPrecioEnergetico"
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:decimal"/>
@@ -163,29 +171,37 @@ formDefinition_valores_escenarios
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:decimal"/>
+                        <xf:bind id="escSinMedidaUyuUnidadFisica-bind" ref="escSinMedidaUyuUnidadFisica"
+                                 name="escSinMedidaUyuUnidadFisica"
+                                 xxf:whitespace="trim"
+                                 readonly="true()"
+                                 calculate="concat(''UYU/'',$escSinMedidaUnidadFisica)"/>
                         <xf:bind id="escConMedidaUyuUnidadFisica-bind" ref="escConMedidaUyuUnidadFisica"
                                  name="escConMedidaUyuUnidadFisica"
-                                 xxf:whitespace="trim"/>
-                        <xf:bind id="escConMedidaConsumoEnergia-bind" ref="escConMedidaConsumoEnergia"
-                                 name="escConMedidaConsumoEnergia"
+                                 xxf:whitespace="trim"
+                                 readonly="true()"
+                                 calculate="concat(''UYU/'',$escConMedidaUnidadFisica)"/>
+                        <xf:bind id="escSinMedidaValorUyu-bind" ref="escSinMedidaValorUyu"
+                                 name="escSinMedidaValorUyu"
                                  xxf:whitespace="trim"
                                  required="true()"
-                                 type="xs:decimal"/>
-                        <xf:bind id="escConMedidaUnidadFisica-bind" ref="escConMedidaUnidadFisica"
-                                 name="escConMedidaUnidadFisica"
-                                 xxf:whitespace="trim"/>
-                        <xf:bind id="escConMedidaValorTepAnio-bind" ref="escConMedidaValorTepAnio"
-                                 name="escConMedidaValorTepAnio"
-                                 xxf:whitespace="trim"
-                                 required="true()"
-                                 type="xs:decimal"/>
+                                 type="xs:decimal"
+                                 readonly="true()"
+                                 calculate="$escSinMedidaPrecioEnergetico * $escSinMedidaConsumoEnergia"/>
                         <xf:bind id="escConMedidaValorUyu-bind" ref="escConMedidaValorUyu"
                                  name="escConMedidaValorUyu"
                                  xxf:whitespace="trim"
                                  required="true()"
+                                 type="xs:decimal"
+                                 readonly="true()"
+                                 calculate="$escConMedidaPrecioEnergetico * $escConMedidaConsumoEnergia"/>
+                        <xf:bind id="escSinMedidaConsumoEnergia-bind" ref="escSinMedidaConsumoEnergia"
+                                 name="escSinMedidaConsumoEnergia"
+                                 xxf:whitespace="trim"
+                                 required="true()"
                                  type="xs:decimal"/>
-                        <xf:bind id="escConMedidaEmisionCO2-bind" ref="escConMedidaEmisionCO2"
-                                 name="escConMedidaEmisionCO2"
+                        <xf:bind id="escConMedidaConsumoEnergia-bind" ref="escConMedidaConsumoEnergia"
+                                 name="escConMedidaConsumoEnergia"
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:decimal"/>
@@ -1134,21 +1150,21 @@ formDefinition_valores_escenarios
                     <escSinMedidaFechaInicioOperacion/>
                     <escSinMedidaUsoPrincipal/>
                     <escSinMedidaFuenteEnergia/>
-                    <escSinMedidaPrecioEnergetico/>
                     <escConMedidaFuenteEnergia/>
-                    <escSinMedidaUyuUnidadFisica/>
-                    <escSinMedidaConsumoEnergia/>
                     <escSinMedidaUnidadFisica/>
-                    <escSinMedidaValorTepAnio/>
-                    <escSinMedidaValorUyu/>
-                    <escSinMedidaEmisionCO2/>
-                    <escConMedidaPrecioEnergetico/>
-                    <escConMedidaUyuUnidadFisica/>
-                    <escConMedidaConsumoEnergia/>
                     <escConMedidaUnidadFisica/>
+                    <escSinMedidaValorTepAnio/>
                     <escConMedidaValorTepAnio/>
-                    <escConMedidaValorUyu/>
+                    <escSinMedidaEmisionCO2/>
                     <escConMedidaEmisionCO2/>
+                    <escSinMedidaPrecioEnergetico/>
+                    <escConMedidaPrecioEnergetico/>
+                    <escSinMedidaUyuUnidadFisica/>
+                    <escConMedidaUyuUnidadFisica/>
+                    <escSinMedidaValorUyu/>
+                    <escConMedidaValorUyu/>
+                    <escSinMedidaConsumoEnergia/>
+                    <escConMedidaConsumoEnergia/>
                 </section-12-iteration>
             </xf:instance>
             <xf:instance id="security-token-instance" class="fr-service"
@@ -1191,6 +1207,72 @@ formDefinition_valores_escenarios
                     <xf:action class="fr-set-control-value-action">
                         <xf:var name="control-name" value="''processId''"/>
                         <xf:var name="control-value" value="/result/processid"/>
+                    </xf:action>
+                </xf:action>
+            </xf:action>
+            <xf:instance id="conversion-instance" class="fr-service" xxf:exclude-result-prefixes="#all">
+                        <body xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;params/&gt;</body>
+                    </xf:instance>
+            <xf:submission id="conversion-submission" class="fr-service"
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia?fuente={fr:control-string-value(''escSinMedidaFuenteEnergia'')}&amp;precio={fr:control-string-value(''escSinMedidaPrecioEnergetico'')}&amp;consumo={fr:control-string-value(''escSinMedidaConsumoEnergia'')}"
+                           method="get"
+                           serialization="none"
+                           mediatype="none"/>
+            <xf:instance id="conversion2-instance" class="fr-service" xxf:exclude-result-prefixes="#all">
+                        <body xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;params/&gt;</body>
+                    </xf:instance>
+            <xf:submission id="conversion2-submission" class="fr-service"
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia?fuente={fr:control-string-value(''escConMedidaFuenteEnergia'')}&amp;precio={fr:control-string-value(''escConMedidaPrecioEnergetico'')}&amp;consumo={fr:control-string-value(''escConMedidaConsumoEnergia'')}"
+                           method="get"
+                           serialization="none"
+                           mediatype="none"/>
+            <xf:action id="conversion-action-binding">
+                <xf:action event="xforms-value-changed" ev:observer="escSinMedidaFuenteEnergia-control"
+                           if="true()">
+                    <xf:send submission="conversion-submission"/>
+                </xf:action>
+                <xf:action event="xforms-submit" ev:observer="conversion-submission">
+                    <xf:var name="request-instance-name" value="''conversion-instance''"/>
+                    <xf:action/>
+                </xf:action>
+                <xf:action event="xforms-submit-done" ev:observer="conversion-submission">
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escSinMedidaUnidadFisica''"/>
+                        <xf:var name="control-value" value="/conversion/unidad"/>
+                    </xf:action>
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escSinMedidaValorTepAnio''"/>
+                        <xf:var name="control-value" value="/conversion/valorTEP"/>
+                    </xf:action>
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escSinMedidaEmisionCO2''"/>
+                        <xf:var name="control-value" value="/conversion/valorEmisionCO2"/>
+                    </xf:action>
+                </xf:action>
+            </xf:action>
+            <xf:action id="conversion-action-2-binding">
+                <xf:action event="xforms-value-changed" ev:observer="escConMedidaFuenteEnergia-control"
+                           if="true()">
+                    <xf:send submission="conversion2-submission"/>
+                </xf:action>
+                <xf:action event="xforms-submit" ev:observer="conversion2-submission">
+                    <xf:var name="request-instance-name" value="''conversion2-instance''"/>
+                    <xf:action/>
+                </xf:action>
+                <xf:action event="xforms-submit-done" ev:observer="conversion2-submission">
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escConMedidaUnidadFisica''"/>
+                        <xf:var name="control-value" value="/conversion/unidad"/>
+                    </xf:action>
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escConMedidaValorTepAnio''"/>
+                        <xf:var name="control-value" value="/conversion/valorTEP"/>
+                    </xf:action>
+                    <xf:action class="fr-set-control-value-action">
+                        <xf:var name="control-name" value="''escConMedidaEmisionCO2''"/>
+                        <xf:var name="control-value" value="/conversion/valorEmisionCO2"/>
                     </xf:action>
                 </xf:action>
             </xf:action>
@@ -1368,7 +1450,6 @@ formDefinition_valores_escenarios
                                 <xf:label ref="$form-resources/escSinMedidaPrecioEnergetico/label"/>
                                 <xf:hint ref="$form-resources/escSinMedidaPrecioEnergetico/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                
                             </fr:number>
                         </fr:c>
                         <fr:c x="7" y="2" w="6">
@@ -1377,7 +1458,6 @@ formDefinition_valores_escenarios
                                 <xf:label ref="$form-resources/escConMedidaPrecioEnergetico/label"/>
                                 <xf:hint ref="$form-resources/escConMedidaPrecioEnergetico/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                
                             </fr:number>
                         </fr:c>
                         <fr:c x="1" y="3" w="6">
