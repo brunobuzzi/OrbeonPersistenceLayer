@@ -23,10 +23,11 @@ printStructure
 			stream nextPutAll: 'iteration(', (g getIterationIndexOf: dict) printString, ')'.
 			stream nextPutAll: String lf.
 		].
-		dict associationsDo: [:assoc | 
+		dict associationsDo: [:assoc | | fieldValue |
 			1 to: (s levelNumber + 1) do: [:idx |  stream nextPutAll: String tab].
 			g ifNotNil: [stream nextPutAll: (String tab, String tab)].
-			stream nextPutAll: (assoc key, ': ', assoc value).
+			fieldValue := assoc value isOctetString ifTrue:[assoc value] ifFalse: [assoc value printString].
+			stream nextPutAll: (assoc key, ': ', fieldValue).
 			stream nextPutAll: String lf.
 		].
 	].

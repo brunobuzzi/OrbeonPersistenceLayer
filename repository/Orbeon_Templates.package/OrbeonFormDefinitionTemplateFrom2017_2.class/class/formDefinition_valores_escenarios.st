@@ -35,15 +35,16 @@ formDefinition_valores_escenarios
                     </section-11>
                     <section-1>
                         <section-1-iteration>
-                            <escSinMedidaUsoPrincipal/>
-                            <escSinMedidaFechaInicioOperacion/>
-                            <escSinMedidaEsOperativa/>
-                            <escSinMedidaMoneda/>
-                            <escSinMedidaInversionTotal/>
-                            <escSinMedidaVidaUtil/>
+                            <medidaUsoPrincipal/>
+                            <medidaFechaInicioOperacion/>
+                            <medidaEsOperativa/>
+                            <medidaMoneda/>
+                            <medidaInversionTotal/>
+                            <medidaVidaUtil/>
+                            <medidaGradoImplementacion/>
                             <section-2>
                                 <section-2-iteration>
-                                    <escSinMedidaFuenteEnergia>fuel-oil-pesado</escSinMedidaFuenteEnergia>
+                                    <escSinMedidaFuenteEnergia/>
                                     <escConMedidaFuenteEnergia/>
                                     <escSinMedidaPrecioEnergetico/>
                                     <escConMedidaPrecioEnergetico/>
@@ -101,27 +102,22 @@ formDefinition_valores_escenarios
                 <xf:bind id="section-1-bind" ref="section-1" name="section-1">
                     <xf:bind id="section-1-iteration-bind" ref="section-1-iteration"
                              name="section-1-iteration">
-                        <xf:bind id="escSinMedidaUsoPrincipal-bind" ref="escSinMedidaUsoPrincipal"
-                                 name="escSinMedidaUsoPrincipal"
+                        <xf:bind id="medidaUsoPrincipal-bind" ref="medidaUsoPrincipal" name="medidaUsoPrincipal"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaFechaInicioOperacion-bind"
-                                 ref="escSinMedidaFechaInicioOperacion"
-                                 name="escSinMedidaFechaInicioOperacion"
+                        <xf:bind id="medidaFechaInicioOperacion-bind" ref="medidaFechaInicioOperacion"
+                                 name="medidaFechaInicioOperacion"
                                  type="xs:date"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaEsOperativa-bind" ref="escSinMedidaEsOperativa"
-                                 name="escSinMedidaEsOperativa"
+                        <xf:bind id="medidaEsOperativa-bind" ref="medidaEsOperativa" name="medidaEsOperativa"
                                  type="xs:boolean"
                                  required="true()"/>
-                        <xf:bind id="escSinMedidaInversionTotal-bind" ref="escSinMedidaInversionTotal"
-                                 name="escSinMedidaInversionTotal"
+                        <xf:bind id="medidaInversionTotal-bind" ref="medidaInversionTotal"
+                                 name="medidaInversionTotal"
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:decimal"/>
-                        <xf:bind id="escSinMedidaMoneda-bind" ref="escSinMedidaMoneda" name="escSinMedidaMoneda"
-                                 required="true()"/>
-                        <xf:bind id="escSinMedidaVidaUtil-bind" ref="escSinMedidaVidaUtil"
-                                 name="escSinMedidaVidaUtil"
+                        <xf:bind id="medidaMoneda-bind" ref="medidaMoneda" name="medidaMoneda" required="true()"/>
+                        <xf:bind id="medidaVidaUtil-bind" ref="medidaVidaUtil" name="medidaVidaUtil"
                                  xxf:whitespace="trim"
                                  required="true()"
                                  type="xs:integer"/>
@@ -214,6 +210,9 @@ formDefinition_valores_escenarios
                                          readonly="true()"/>
                             </xf:bind>
                         </xf:bind>
+                        <xf:bind id="medidaGradoImplementacion-bind" ref="medidaGradoImplementacion"
+                                 name="medidaGradoImplementacion"
+                                 required="true()"/>
                     </xf:bind>
                 </xf:bind>
             </xf:bind>
@@ -541,7 +540,7 @@ formDefinition_valores_escenarios
                             <label>Emisión CO2 - tCO2 / año</label>
                             <hint/>
                         </escConMedidaEmisionCO2>
-                        <escSinMedidaUsoPrincipal>
+                        <medidaUsoPrincipal>
                             <label>Uso Principal</label>
                             <hint/>
                             <item>
@@ -616,16 +615,16 @@ formDefinition_valores_escenarios
                                 <label>Otros usos</label>
                                 <value>otros-usos</value>
                             </item>
-                        </escSinMedidaUsoPrincipal>
-                        <escSinMedidaFechaInicioOperacion>
+                        </medidaUsoPrincipal>
+                        <medidaFechaInicioOperacion>
                             <label>Fecha Inicio Operación</label>
                             <hint/>
-                        </escSinMedidaFechaInicioOperacion>
-                        <escSinMedidaEsOperativa>
+                        </medidaFechaInicioOperacion>
+                        <medidaEsOperativa>
                             <label>Es Operativa ?</label>
                             <hint/>
-                        </escSinMedidaEsOperativa>
-                        <escSinMedidaMoneda>
+                        </medidaEsOperativa>
+                        <medidaMoneda>
                             <label>Moneda</label>
                             <hint/>
                             <item>
@@ -640,15 +639,31 @@ formDefinition_valores_escenarios
                                 <label>EUR</label>
                                 <value>eur</value>
                             </item>
-                        </escSinMedidaMoneda>
-                        <escSinMedidaInversionTotal>
+                        </medidaMoneda>
+                        <medidaInversionTotal>
                             <label>Inversión Total</label>
                             <hint/>
-                        </escSinMedidaInversionTotal>
-                        <escSinMedidaVidaUtil>
+                        </medidaInversionTotal>
+                        <medidaVidaUtil>
                             <label>Vida Util</label>
                             <hint/>
-                        </escSinMedidaVidaUtil>
+                        </medidaVidaUtil>
+                        <medidaGradoImplementacion>
+                            <label>Grado Implementación</label>
+                            <hint/>
+                            <item>
+                                <label>En Diagnóstico</label>
+                                <value>en-diagnostico</value>
+                            </item>
+                            <item>
+                                <label>En Implementación</label>
+                                <value>en-implementacion</value>
+                            </item>
+                            <item>
+                                <label>En Operación</label>
+                                <value>en-operacion</value>
+                            </item>
+                        </medidaGradoImplementacion>
                         <section-2>
                             <label>Valores Antes y Después</label>
                         </section-2>
@@ -1000,7 +1015,7 @@ formDefinition_valores_escenarios
                             <label/>
                             <hint/>
                         </escConMedidaEmisionCO2>
-                        <escSinMedidaUsoPrincipal>
+                        <medidaUsoPrincipal>
                             <label/>
                             <hint/>
                             <item>
@@ -1075,16 +1090,16 @@ formDefinition_valores_escenarios
                                 <label/>
                                 <value>otros-usos</value>
                             </item>
-                        </escSinMedidaUsoPrincipal>
-                        <escSinMedidaFechaInicioOperacion>
+                        </medidaUsoPrincipal>
+                        <medidaFechaInicioOperacion>
                             <label/>
                             <hint/>
-                        </escSinMedidaFechaInicioOperacion>
-                        <escSinMedidaEsOperativa>
+                        </medidaFechaInicioOperacion>
+                        <medidaEsOperativa>
                             <label/>
                             <hint/>
-                        </escSinMedidaEsOperativa>
-                        <escSinMedidaMoneda>
+                        </medidaEsOperativa>
+                        <medidaMoneda>
                             <label/>
                             <hint/>
                             <item>
@@ -1099,15 +1114,31 @@ formDefinition_valores_escenarios
                                 <label/>
                                 <value>eur</value>
                             </item>
-                        </escSinMedidaMoneda>
-                        <escSinMedidaInversionTotal>
+                        </medidaMoneda>
+                        <medidaInversionTotal>
                             <label/>
                             <hint/>
-                        </escSinMedidaInversionTotal>
-                        <escSinMedidaVidaUtil>
+                        </medidaInversionTotal>
+                        <medidaVidaUtil>
                             <label/>
                             <hint/>
-                        </escSinMedidaVidaUtil>
+                        </medidaVidaUtil>
+                        <medidaGradoImplementacion>
+                            <label/>
+                            <hint/>
+                            <item>
+                                <label/>
+                                <value>en-diagnostico</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>en-implementacion</value>
+                            </item>
+                            <item>
+                                <label/>
+                                <value>en-operacion</value>
+                            </item>
+                        </medidaGradoImplementacion>
                         <section-2>
                             <label/>
                         </section-2>
@@ -1158,12 +1189,12 @@ formDefinition_valores_escenarios
             </xf:instance>
             <xf:instance xxf:readonly="true" id="section-1-template" xxf:exclude-result-prefixes="#all">
                 <section-1-iteration>
-                    <escSinMedidaUsoPrincipal/>
-                    <escSinMedidaFechaInicioOperacion/>
-                    <escSinMedidaEsOperativa/>
-                    <escSinMedidaInversionTotal/>
-                    <escSinMedidaMoneda/>
-                    <escSinMedidaVidaUtil/>
+                    <medidaUsoPrincipal/>
+                    <medidaFechaInicioOperacion/>
+                    <medidaEsOperativa/>
+                    <medidaInversionTotal/>
+                    <medidaMoneda/>
+                    <medidaVidaUtil/>
                     <section-2>
                         <section-2-iteration>
                             <escSinMedidaFuenteEnergia/>
@@ -1184,6 +1215,7 @@ formDefinition_valores_escenarios
                             <escConMedidaEmisionCO2/>
                         </section-2-iteration>
                     </section-2>
+                    <medidaGradoImplementacion/>
                 </section-1-iteration>
             </xf:instance>
             <xf:instance xxf:readonly="true" id="section-2-template" xxf:exclude-result-prefixes="#all">
@@ -1395,13 +1427,13 @@ formDefinition_valores_escenarios
                     <xf:label ref="$form-resources/section-1/label"/>
                     <fr:grid id="grid-5-grid">
                         <fr:c x="1" y="1" w="12">
-                            <xf:select1 id="escSinMedidaUsoPrincipal-control" bind="escSinMedidaUsoPrincipal-bind"
-                                        class="fr-summary fr-search"
-                                        appearance="dropdown">
-                                <xf:label ref="$form-resources/escSinMedidaUsoPrincipal/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaUsoPrincipal/hint"/>
+                            <xf:select1 id="medidaUsoPrincipal-control" bind="medidaUsoPrincipal-bind"
+                                        appearance="dropdown"
+                                        class="fr-summary fr-search">
+                                <xf:label ref="$form-resources/medidaUsoPrincipal/label"/>
+                                <xf:hint ref="$form-resources/medidaUsoPrincipal/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                <xf:itemset ref="$form-resources/escSinMedidaUsoPrincipal/item">
+                                <xf:itemset ref="$form-resources/medidaUsoPrincipal/item">
                                     <xf:label ref="label"/>
                                     <xf:value ref="value"/>
                                 </xf:itemset>
@@ -1412,52 +1444,62 @@ formDefinition_valores_escenarios
                         <fr:c x="1" y="1" w="6">
                             <fr:date xmlns:map="http://www.w3.org/2005/xpath-functions/map"
                                      xmlns:array="http://www.w3.org/2005/xpath-functions/array"
-                                     id="escSinMedidaFechaInicioOperacion-control"
-                                     bind="escSinMedidaFechaInicioOperacion-bind">
-                                <xf:label ref="$form-resources/escSinMedidaFechaInicioOperacion/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaFechaInicioOperacion/hint"/>
+                                     id="medidaFechaInicioOperacion-control"
+                                     bind="medidaFechaInicioOperacion-bind">
+                                <xf:label ref="$form-resources/medidaFechaInicioOperacion/label"/>
+                                <xf:hint ref="$form-resources/medidaFechaInicioOperacion/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:date>
                         </fr:c>
                         <fr:c x="7" y="1" w="6">
                             <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
                                             xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                            id="escSinMedidaEsOperativa-control"
-                                            bind="escSinMedidaEsOperativa-bind"
+                                            id="medidaEsOperativa-control"
+                                            bind="medidaEsOperativa-bind"
                                             class="fr-summary fr-search">
-                                <xf:label ref="$form-resources/escSinMedidaEsOperativa/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaEsOperativa/hint"/>
+                                <xf:label ref="$form-resources/medidaEsOperativa/label"/>
+                                <xf:hint ref="$form-resources/medidaEsOperativa/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:yesno-input>
                         </fr:c>
                         <fr:c x="1" y="2" w="6">
-                            <xf:select1 id="escSinMedidaMoneda-control" bind="escSinMedidaMoneda-bind"
-                                        appearance="dropdown"
+                            <xf:select1 id="medidaMoneda-control" bind="medidaMoneda-bind" appearance="dropdown"
                                         class="fr-summary fr-search">
-                                <xf:label ref="$form-resources/escSinMedidaMoneda/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaMoneda/hint"/>
+                                <xf:label ref="$form-resources/medidaMoneda/label"/>
+                                <xf:hint ref="$form-resources/medidaMoneda/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                <xf:itemset ref="$form-resources/escSinMedidaMoneda/item">
+                                <xf:itemset ref="$form-resources/medidaMoneda/item">
                                     <xf:label ref="label"/>
                                     <xf:value ref="value"/>
                                 </xf:itemset>
                             </xf:select1>
                         </fr:c>
                         <fr:c x="7" y="2" w="6">
-                            <fr:number id="escSinMedidaInversionTotal-control" bind="escSinMedidaInversionTotal-bind">
-                                <xf:label ref="$form-resources/escSinMedidaInversionTotal/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaInversionTotal/hint"/>
+                            <fr:number id="medidaInversionTotal-control" bind="medidaInversionTotal-bind">
+                                <xf:label ref="$form-resources/medidaInversionTotal/label"/>
+                                <xf:hint ref="$form-resources/medidaInversionTotal/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:number>
                         </fr:c>
                         <fr:c x="1" y="3" w="6">
-                            <fr:number id="escSinMedidaVidaUtil-control" bind="escSinMedidaVidaUtil-bind">
-                                <xf:label ref="$form-resources/escSinMedidaVidaUtil/label"/>
-                                <xf:hint ref="$form-resources/escSinMedidaVidaUtil/hint"/>
+                            <fr:number id="medidaVidaUtil-control" bind="medidaVidaUtil-bind">
+                                <xf:label ref="$form-resources/medidaVidaUtil/label"/>
+                                <xf:hint ref="$form-resources/medidaVidaUtil/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </fr:number>
                         </fr:c>
-                        <fr:c x="7" y="3" w="6"/>
+                        <fr:c x="7" y="3" w="6">
+                            <xf:select1 id="medidaGradoImplementacion-control" bind="medidaGradoImplementacion-bind"
+                                        appearance="dropdown">
+                                <xf:label ref="$form-resources/medidaGradoImplementacion/label"/>
+                                <xf:hint ref="$form-resources/medidaGradoImplementacion/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                <xf:itemset ref="$form-resources/medidaGradoImplementacion/item">
+                                    <xf:label ref="label"/>
+                                    <xf:value ref="value"/>
+                                </xf:itemset>
+                            </xf:select1>
+                        </fr:c>
                     </fr:grid>
                     <fr:section id="section-2-section" bind="section-2-bind" repeat="content" min="1"
                                 template="instance(''section-2-template'')"

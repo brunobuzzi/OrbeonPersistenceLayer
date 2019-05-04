@@ -9,7 +9,9 @@
 		"xmlDefinition",
 		"xmlDocument",
 		"xmlInstanceDocument",
-		"orbeonXPath" ],
+		"orbeonXPath",
+		"orbeonFormDefinition",
+		"orbeonFormInstance" ],
 	"name" : "OrbeonFormReader",
 	"pools" : [
 		 ],

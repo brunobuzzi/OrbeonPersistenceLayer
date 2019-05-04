@@ -13,10 +13,11 @@ createGridsFor: aFormSectionInstance xmlSegment: xmlSubSegment
 		xmlGrid := xmlSubSegment elementsAt: gridName do: [:xmlGridIteration | | iteration |
 			iteration := Dictionary new.
 			"iterate over fields of the current grid iteration to get field names and values"
-			gridDefinition fieldDefinitions do: [:fieldDefinition | | fieldValue |
+			gridDefinition fieldDefinitions do: [:fieldDefinition | | fieldValue stValue |
 				fieldValue := xmlGridIteration elementAt: fieldDefinition name.
 				fieldValue := (fieldValue isNil or: [fieldValue hasChildren not]) ifTrue: [''] ifFalse: [self getValueFrom: fieldValue].
-				iteration at: fieldDefinition name put: fieldValue].
+				stValue := (orbeonFormInstance classOf: fieldDefinition name) convertToStValue: fieldValue. "see issue #208"
+				iteration at: fieldDefinition name put: stValue].
 
 			grid addIteration: iteration]. "store the iteration in the grid instance"
 
