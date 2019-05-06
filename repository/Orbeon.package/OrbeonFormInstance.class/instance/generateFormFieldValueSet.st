@@ -6,10 +6,10 @@ generateFormFieldValueSet
 	"#getAllFields answer aDictionary where each key is the name of the field and each value is a collection of string values"
 	self getAllFields keysAndValuesDo: [:key :valuesCollection | | valueHolder |
 			valueHolder := (fieldsValues includesKey: key) "<fieldsValues at:> answer aFieldValueHolder"
-								ifFalse: [fieldsValues at: key put: (OrbeonFieldValueHolder parentObject: self forFieldNamed: key)]
+								ifFalse: [fieldsValues at: key put: (OrbeonFieldValueHolder newWithNoConvertionFor: self forFieldNamed: key)]
 								ifTrue: [fieldsValues at: key].
 			"convert string values to real type values or update added/removed values"
-			valueHolder processFieldValueCollection: valuesCollection withFieldClass: (self classOf: key) in: self isStObject: true. "see issue #208"
+			valueHolder processFieldValueCollection: valuesCollection withFieldClass: (self classOf: key) in: self. "see issue #208"
 			definition updateFieldInstancesFrom: valueHolder. "update general index collection of the OrbeonFormDefinition"
 
 	].
