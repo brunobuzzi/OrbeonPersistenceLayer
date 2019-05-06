@@ -12,7 +12,7 @@ testSectionStructureAndValues
 	sectionMain := form sections detect: [:each | each name = 'Datos-generales'].
 
 	self assert: ((sectionMain valueAt: 'nombre') = 'Antofagasta').
-	self assert: ((sectionMain valueAt: 'rut') = '987654').
+	self assert: ((sectionMain valueAt: 'rut') = 987654).
 	self assert: ((sectionMain valueAt: 'ciiu2') = '02').
 	self assert: ((sectionMain valueAt: 'control-52') = '2').
 	self assert: ((sectionMain valueAt: 'pyme') = '1').
@@ -24,7 +24,7 @@ testSectionStructureAndValues
 	self assert: ((section41 valueAt: 'nombreDirectivo') = 'Bill Gates').
 	self assert: ((section41 valueAt: 'cargoDirectivo') = 'CEO').
 	self assert: ((section41 valueAt: 'direccionDirectivo') = 'California 45689').
-	self assert: ((section41 valueAt: 'telefonoDirectivo') = '0994444').
+	self assert: ((section41 valueAt: 'telefonoDirectivo') = 994444).
 	self assert: ((section41 valueAt: 'emailDirectivo') = 'bill@bill.com').
 
 	sections53 := form sections select: [:each | each name = 'section-53'].
@@ -33,9 +33,9 @@ testSectionStructureAndValues
 	self assert: ((section53 valueAt: 'cargoCertificador') = 'CEO').
 	grid := section53 getGridNamed: 'grid-43'.
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'Apple').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '4').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 4).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'None').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '23').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 23).
 	subSection := section53 subSections at: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'UCLA').
 	grid := subSection getGridNamed: 'grid-50'.
@@ -52,11 +52,11 @@ testSectionStructureAndValues
 	self assert: ((section53 valueAt: 'cargoCertificador') = 'CIO').
 	grid := section53 getGridNamed: 'grid-43'.
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'Torch').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '1').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 1).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'Lokeed').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '1').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 1).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'Bong').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '2').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
 	subSection := section53 subSections at: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'Arizona').
 	grid := subSection getGridNamed: 'grid-50'.
@@ -78,9 +78,9 @@ testSectionStructureAndValues
 	self assert: ((section53 valueAt: 'cargoCertificador') = 'CEO/CIO').
 	grid := section53 getGridNamed: 'grid-43'.
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'CIO').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '2').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'CEO').
-	self assert: ((grid getAllValuesFor: 'control-46') includes: '2').
+	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
 	subSection := section53 subSections at: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'Harvard').
 	grid := subSection getGridNamed: 'grid-50'.
@@ -98,13 +98,13 @@ testSectionStructureAndValues
 	self assert: ((section81 valueAt: 'ciudad') = 'Montevideo').
 	self assert: ((section81 valueAt: 'dpto') = 'montevideo').
 	self assert: ((section81 valueAt: 'tipoConsumidor') = 'tarifa-doble-horario').
-	self assert: ((section81 valueAt: 'consumoEnergiaElectrica') = '1555').
+	self assert: ((section81 valueAt: 'consumoEnergiaElectrica') = 1555).
 	self assert: ((section81 valueAt: 'combustible') = '01 03').
-	self assert: ((section81 valueAt: 'aserrin') = '15').
-	self assert: ((section81 valueAt: 'bagazo') = '').
-	self assert: ((section81 valueAt: 'biodiesel') = '15').
-	self assert: ((section81 valueAt: 'bioetanol') = '').
-	self assert: ((section81 valueAt: 'carbon_mineral') = '').
+	self assert: ((section81 valueAt: 'aserrin') = 15).
+	self assert: ((section81 valueAt: 'bagazo') = nil).
+	self assert: ((section81 valueAt: 'biodiesel') = 15).
+	self assert: ((section81 valueAt: 'bioetanol') = nil).
+	self assert: ((section81 valueAt: 'carbon_mineral') = nil).
 	grid := section81 getGridNamed: 'grid-83'.
 	self assert: ((grid getAllValuesFor: 'nombreMedida') includes: 'GH-58').
 	self assert: ((grid getAllValuesFor: 'usoPrincipal') includes: '06').
@@ -118,13 +118,13 @@ testSectionStructureAndValues
 	self assert: ((section81 valueAt: 'ciudad') = 'San Jose').
 	self assert: ((section81 valueAt: 'dpto') = 'san-josÃ©').
 	self assert: ((section81 valueAt: 'tipoConsumidor') = 'gc1').
-	self assert: ((section81 valueAt: 'consumoEnergiaElectrica') = '1580').
+	self assert: ((section81 valueAt: 'consumoEnergiaElectrica') = 1580).
 	self assert: ((section81 valueAt: 'combustible') = '05 04 03 02 01').
-	self assert: ((section81 valueAt: 'aserrin') = '10').
-	self assert: ((section81 valueAt: 'bagazo') = '25').
-	self assert: ((section81 valueAt: 'biodiesel') = '50').
-	self assert: ((section81 valueAt: 'bioetanol') = '75').
-	self assert: ((section81 valueAt: 'carbon_mineral') = '100').
+	self assert: ((section81 valueAt: 'aserrin') = 10).
+	self assert: ((section81 valueAt: 'bagazo') = 25).
+	self assert: ((section81 valueAt: 'biodiesel') = 50).
+	self assert: ((section81 valueAt: 'bioetanol') = 75).
+	self assert: ((section81 valueAt: 'carbon_mineral') = 100).
 	grid := section81 getGridNamed: 'grid-83'.
 	self assert: ((grid getAllValuesFor: 'nombreMedida') includes: 'WEFG-458').
 	self assert: ((grid getAllValuesFor: 'usoPrincipal') includes: '03').

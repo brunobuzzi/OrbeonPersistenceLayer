@@ -14,12 +14,12 @@ testSectionStructureAndValues
 	self assert: ((section1 valueAt: 'surname') = 'buzzo').
 	self assert: ((section1 valueAt: 'phone') = '4444444445').
 	self assert: ((section1 valueAt: 'mail') = 'b@e.tv').
-	self assert: ((section1 valueAt: 'boolean') = 'true').
+	self assert: ((section1 valueAt: 'boolean') = true).
 
-	self assert: ((section14 valueAt: 'date1') = '2016-04-08').
-	self assert: ((section14 valueAt: 'dateTime') = '2016-04-13T12:50:00').
-	self assert: ((section14 valueAt: 'date2') = '2006-07-07').
-	self assert: ((section14 valueAt: 'date3') = '2016-04-19').
+	self assert: ((section14 valueAt: 'date1') = (Date fromString: '04/08/2016')).
+	self assert: ((section14 valueAt: 'dateTime') = (TimeStamp fromString: '04/13/2016 12:50:00')).
+	self assert: ((section14 valueAt: 'date2') = (Date fromString: '07/07/2006')).
+	self assert: ((section14 valueAt: 'date3') = (Date fromString: '04/19/2016')).
 	self assert: ((section14 valueAt: 'details') = 'these are the details').
 	self assert: ((section14 valueAt: 'type') = '1').
 
@@ -31,8 +31,8 @@ testSectionStructureAndValues
 
 	grid10 := section7 grids at: 'grid-10' ifAbsent: [self assert: false].
 	self assert: ((grid10 getAllValuesFor: 'moneySubject') includes: '3').
-	self assert: ((grid10 getAllValuesFor: 'quantity') includes: '5005').
-	self assert: ((grid10 getAllValuesFor: 'currency') includes: '122.5').
+	self assert: ((grid10 getAllValuesFor: 'quantity') includes: 5005).
+	self assert: ((grid10 getAllValuesFor: 'currency') includes: 122.5).
 
 	"SubSection 14 - Fields"
 	section24 := section14 subSections detect: [:each | each name = 'section-24'] ifNone: [self assert: false].
