@@ -11,4 +11,4 @@ doIt
 	latestDefinition := application getSavedDefinition: 'library' version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: self requestContext].
 
-	^self decodeFromUTF8: latestDefinition xmlString
+	^latestDefinition xmlString

@@ -6,4 +6,8 @@ doIt
 
 	definition := self getOrbeonApplicationClass getSavedDefinitionWithId: id ifNone: [^NoOrbeonFormException signal: ('No Form Definition with id:' , id)].
 
-	^self decodeFromUTF8: definition xmlString
+	"^self decodeFromUTF8: definition xmlString"
+
+	"^definition xmlString encodeAsUTF8IntoString"
+
+	^definition xmlString

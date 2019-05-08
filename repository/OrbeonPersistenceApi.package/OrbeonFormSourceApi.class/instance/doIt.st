@@ -11,4 +11,4 @@ doIt
 	
 	restHandler requestContext response headerAt: 'orbeon-operations' put: permissions.
 
-	^self decodeFromUTF8: instance xmlString
+	^instance xmlString

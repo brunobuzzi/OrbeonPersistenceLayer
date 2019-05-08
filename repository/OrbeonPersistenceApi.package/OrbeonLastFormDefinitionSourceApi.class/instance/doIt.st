@@ -16,4 +16,8 @@ doIt
 
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
 
-	^self decodeFromUTF8: latestDefinition xmlString
+	"^self decodeFromUTF8: latestDefinition xmlString"
+
+	"^latestDefinition xmlString decodeFromUTF8ToString"
+
+	^latestDefinition xmlString
