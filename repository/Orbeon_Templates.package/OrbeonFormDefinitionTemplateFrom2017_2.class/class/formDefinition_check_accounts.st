@@ -103,7 +103,7 @@ formDefinition_check_accounts
                     <form-name>check-accounts</form-name>
                     <title xml:lang="en">Check Accounts</title>
                     <description xml:lang="en">Check Accounts</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

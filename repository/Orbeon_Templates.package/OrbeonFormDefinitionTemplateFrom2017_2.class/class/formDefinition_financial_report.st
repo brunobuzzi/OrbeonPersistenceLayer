@@ -121,7 +121,7 @@ formDefinition_financial_report
                     <form-name>financial-report</form-name>
                     <title xml:lang="en">Financial Report</title>
                     <description xml:lang="en">Financial Report</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                     

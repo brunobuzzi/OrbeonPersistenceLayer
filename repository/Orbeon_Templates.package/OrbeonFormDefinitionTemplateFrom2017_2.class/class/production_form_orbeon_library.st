@@ -77,7 +77,7 @@ production_form_orbeon_library
                     <form-name>library</form-name>
                     <title xml:lang="en">Seaside Integration</title>
                     <description xml:lang="en">Seaside Integration</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <version-comment/>
                 </metadata>

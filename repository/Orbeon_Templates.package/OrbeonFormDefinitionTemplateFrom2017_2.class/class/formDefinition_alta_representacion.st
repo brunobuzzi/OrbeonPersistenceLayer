@@ -17,7 +17,7 @@ formDefinition_alta_representacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Alta RepresentaciÃ³n</xh:title>
+        <xh:title>Alta Representación</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -108,9 +108,9 @@ formDefinition_alta_representacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>alta-representaction</form-name>
-                    <title xml:lang="en">Alta RepresentaciÃ³n</title>
+                    <title xml:lang="en">Alta Representación</title>
                     <description xml:lang="en">Process of Visa Citizen Appliance</description>
-                    <title xml:lang="es">Alta RepresentaciÃ³n</title>
+                    <title xml:lang="es">Alta Representación</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>
@@ -143,7 +143,7 @@ formDefinition_alta_representacion
                             <hint/>
                         </repCargo>
                         <repTelefono>
-                            <label>TelÃ©fono</label>
+                            <label>Teléfono</label>
                             <hint/>
                         </repTelefono>
                         <repMail>
@@ -167,11 +167,11 @@ formDefinition_alta_representacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Datos de la RepresentaciÃ³n</label>
+                            <label>Datos de la Representación</label>
                             <help/>
                         </section-12>
                         <section-18>
-                            <label>Tipo RepresentaciÃ³n</label>
+                            <label>Tipo Representación</label>
                             <help/>
                         </section-18>
                         <internal-section>

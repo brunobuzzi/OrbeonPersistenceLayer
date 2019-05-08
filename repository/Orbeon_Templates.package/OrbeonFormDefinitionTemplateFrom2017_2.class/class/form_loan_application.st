@@ -98,7 +98,6 @@ form_loan_application
                     <form-name>loan-application</form-name>
                     <title xml:lang="en">Loan Application</title>
                     <description xml:lang="en">Loan Application</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>

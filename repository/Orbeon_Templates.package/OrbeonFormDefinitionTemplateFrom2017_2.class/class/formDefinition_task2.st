@@ -83,7 +83,7 @@ formDefinition_task2
                     <form-name>task-2</form-name>
                     <title xml:lang="en">Task 2</title>
                     <description xml:lang="en">Task 2</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

@@ -84,7 +84,7 @@ formDefinition_set_timer_term
                     <form-name>set-timer-term</form-name>
                     <title xml:lang="en">Set Timer Term</title>
                     <description xml:lang="en">Set Timer Term</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <version-comment/>
                     

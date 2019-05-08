@@ -83,7 +83,7 @@ formDefinition_user_form
                     <form-name>user-form</form-name>
                     <title xml:lang="en">User Form</title>
                     <description xml:lang="en">User Form</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <version-comment/>
                     

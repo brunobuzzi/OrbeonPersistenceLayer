@@ -175,7 +175,7 @@ formDefinition_alta_empresa
                             <hint/>
                         </empCuentaTitular>
                         <empCuentaNumero>
-                            <label>NÃºmero</label>
+                            <label>Número</label>
                             <hint/>
                         </empCuentaNumero>
                         <empCuentaTipo>
@@ -212,7 +212,7 @@ formDefinition_alta_empresa
                             </item>
                         </empCuentaMoneda>
                         <empRazonSocial>
-                            <label>RazÃ³n Social</label>
+                            <label>Razón Social</label>
                             <hint/>
                         </empRazonSocial>
                         <empRut>
@@ -224,7 +224,7 @@ formDefinition_alta_empresa
                             <hint/>
                         </empCIIU>
                         <empTelefono>
-                            <label>TelÃ©fono</label>
+                            <label>Teléfono</label>
                             <hint/>
                         </empTelefono>
                         <empFax>
@@ -232,7 +232,7 @@ formDefinition_alta_empresa
                             <hint/>
                         </empFax>
                         <empDireccion>
-                            <label>DirecciÃ³n</label>
+                            <label>Dirección</label>
                             <hint/>
                         </empDireccion>
                         <empMail>
@@ -244,7 +244,7 @@ formDefinition_alta_empresa
                             <hint/>
                         </empDepartamento>
                         <empClasificacion>
-                            <label>ClasificaciÃ³n</label>
+                            <label>Clasificación</label>
                             <hint/>
                         </empClasificacion>
                         <empCertificadoPyme>

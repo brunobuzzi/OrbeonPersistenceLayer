@@ -11,12 +11,11 @@ form_alta_representacion_1
 		<assignmentOop/>
 	</internal-section>
 	<section-11>
-		<username/>
+		<username>juan@MIEM</username>
 		<rol/>
 		<processId/>
 	</section-11>
 	<section-12>
-		<repNombreUsuario>juan@MIEM</repNombreUsuario>
 		<repNombre>Pedro</repNombre>
 		<repApellido>Pereira Perez</repApellido>
 		<repCargo>Operario Web</repCargo>

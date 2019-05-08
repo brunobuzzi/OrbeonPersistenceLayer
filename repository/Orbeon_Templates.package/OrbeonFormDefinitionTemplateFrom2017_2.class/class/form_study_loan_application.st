@@ -89,7 +89,6 @@ form_study_loan_application
                     <form-name>study-loan-application</form-name>
                     <title xml:lang="en">Study Loan Application</title>
                     <description xml:lang="en">Study Loan Application</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>

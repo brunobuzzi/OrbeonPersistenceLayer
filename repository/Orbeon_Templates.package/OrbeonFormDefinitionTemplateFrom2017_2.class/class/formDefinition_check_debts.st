@@ -102,7 +102,7 @@ formDefinition_check_debts
                     <form-name>check-debts</form-name>
                     <title xml:lang="en">Check Debts</title>
                     <description xml:lang="en">Check Debts</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

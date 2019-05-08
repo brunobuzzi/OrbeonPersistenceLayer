@@ -115,7 +115,7 @@ formDefinition_check_previous_appliance
                     <form-name>check-previous-appliance</form-name>
                     <title xml:lang="en">Check Previous Appliance</title>
                     <description xml:lang="en">Check Previous Appliance</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                     

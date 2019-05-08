@@ -17,7 +17,7 @@ formDefinition_alta_instalacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Alta InstalaciÃ³n</xh:title>
+        <xh:title>Alta Instalación</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -113,9 +113,9 @@ formDefinition_alta_instalacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>alta-instalacion</form-name>
-                    <title xml:lang="en">Alta InstalaciÃ³n</title>
+                    <title xml:lang="en">Alta Instalación</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Alta InstalaciÃ³n</title>
+                    <title xml:lang="es">Alta Instalación</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>
@@ -136,11 +136,11 @@ formDefinition_alta_instalacion
                             <hint/>
                         </instNombre>
                         <instTelefono>
-                            <label>TelÃ©fono</label>
+                            <label>Teléfono</label>
                             <hint/>
                         </instTelefono>
                         <instDireccion>
-                            <label>DirecciÃ³n</label>
+                            <label>Dirección</label>
                             <hint/>
                         </instDireccion>
                         <instLocalidad>
@@ -176,7 +176,7 @@ formDefinition_alta_instalacion
                             <hint/>
                         </processId>
                         <section-12>
-                            <label>Datos de la InstalaciÃ³n</label>
+                            <label>Datos de la Instalación</label>
                             <help/>
                         </section-12>
                         <internal-section>

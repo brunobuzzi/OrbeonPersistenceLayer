@@ -83,7 +83,7 @@ formDefinition_registration_approval
                     <form-name>registration-approval</form-name>
                     <title xml:lang="en">Registration Approval</title>
                     <description xml:lang="en">Registration Approval</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>
@@ -163,12 +163,12 @@ formDefinition_registration_approval
                             <label/>
                             <hint/>
                             <item>
-                                <label>Primera opciÃ³n</label>
+                                <label>Primera opción</label>
                                 <hint/>
                                 <value>approved</value>
                             </item>
                             <item>
-                                <label>Segunda opciÃ³n</label>
+                                <label>Segunda opción</label>
                                 <hint/>
                                 <value>rejected</value>
                             </item>

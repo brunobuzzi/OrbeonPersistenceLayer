@@ -237,13 +237,13 @@ form_energy_recursive_form
                         </nombreMedida>
                         <usoPrincipal>
                             <label>Uso principal</label>
-                            <hint>Uso de energÃ­a en el cual incide la medida </hint>
+                            <hint>Uso de energía en el cual incide la medida </hint>
                             <item>
                                 <label>Bombeo de Agua</label>
                                 <value>01</value>
                             </item>
                             <item>
-                                <label>CalefacciÃ³n de ambientes</label>
+                                <label>Calefacción de ambientes</label>
                                 <value>02</value>
                             </item>
                             <item>
@@ -255,19 +255,19 @@ form_energy_recursive_form
                                 <value>04</value>
                             </item>
                             <item>
-                                <label>CocciÃ³n</label>
+                                <label>Cocción</label>
                                 <value>05</value>
                             </item>
                             <item>
-                                <label>CogeneraciÃ³n</label>
+                                <label>Cogeneración</label>
                                 <value>06</value>
                             </item>
                             <item>
-                                <label>ConservaciÃ³n de alimentos</label>
+                                <label>Conservación de alimentos</label>
                                 <value>07</value>
                             </item>
                             <item>
-                                <label>FrÃ­o de Proceso</label>
+                                <label>Frío de Proceso</label>
                                 <value>08</value>
                             </item>
                             <item>
@@ -275,11 +275,11 @@ form_energy_recursive_form
                                 <value>09</value>
                             </item>
                             <item>
-                                <label>GeneraciÃ³n de Vapor</label>
+                                <label>Generación de Vapor</label>
                                 <value>10</value>
                             </item>
                             <item>
-                                <label>IluminaciÃ³n</label>
+                                <label>Iluminación</label>
                                 <value>11</value>
                             </item>
                             <item>
@@ -287,7 +287,7 @@ form_energy_recursive_form
                                 <value>12</value>
                             </item>
                             <item>
-                                <label>Otros artefactos el Ã©ctricos</label>
+                                <label>Otros artefactos el éctricos</label>
                                 <value>13</value>
                             </item>
                             <item>
@@ -299,15 +299,15 @@ form_energy_recursive_form
                                 <value>15</value>
                             </item>
                             <item>
-                                <label>VentilaciÃ³n y RefrigeraciÃ³n de Ambientes</label>
+                                <label>Ventilación y Refrigeración de Ambientes</label>
                                 <value>16</value>
                             </item>
                         </usoPrincipal>
                         <energetico_evitado>
-                            <label>EnergÃ©tico evitado</label>
+                            <label>Energético evitado</label>
                             <hint/>
                             <item>
-                                <label>AserrÃ­n</label>
+                                <label>Aserrín</label>
                                 <value>01</value>
                             </item>
                             <item>
@@ -323,19 +323,19 @@ form_energy_recursive_form
                                 <value>04</value>
                             </item>
                             <item>
-                                <label>CarbÃ³n mineral</label>
+                                <label>Carbón mineral</label>
                                 <value>05</value>
                             </item>
                             <item>
-                                <label>CarbÃ³n vegetal</label>
+                                <label>Carbón vegetal</label>
                                 <value>06</value>
                             </item>
                             <item>
-                                <label>CÃ¡scara de arroz</label>
+                                <label>Cáscara de arroz</label>
                                 <value>07</value>
                             </item>
                             <item>
-                                <label>CÃ¡scara de girasol</label>
+                                <label>Cáscara de girasol</label>
                                 <value>08</value>
                             </item>
                             <item>
@@ -351,7 +351,7 @@ form_energy_recursive_form
                                 <value>11</value>
                             </item>
                             <item>
-                                <label>EnergÃ­a el  Ã©ctrica de la red</label>
+                                <label>Energía el  éctrica de la red</label>
                                 <value>12</value>
                             </item>
                             <item>
@@ -375,7 +375,7 @@ form_energy_recursive_form
                                 <value>17</value>
                             </item>
                             <item>
-                                <label>LeÃ±a</label>
+                                <label>Leña</label>
                                 <value>18</value>
                             </item>
                             <item>
@@ -387,7 +387,7 @@ form_energy_recursive_form
                                 <value>20</value>
                             </item>
                             <item>
-                                <label>SupergÃ¡s</label>
+                                <label>Supergás</label>
                                 <value>21</value>
                             </item>
                         </energetico_evitado>
@@ -395,7 +395,7 @@ form_energy_recursive_form
                             <label>Seleccione los combustibles que consume</label>
                             <hint/>
                             <item>
-                                <label>AserrÃ­n</label>
+                                <label>Aserrín</label>
                                 <value>01</value>
                             </item>
                             <item>
@@ -411,42 +411,42 @@ form_energy_recursive_form
                                 <value>04</value>
                             </item>
                             <item>
-                                <label>CarbÃ³n mineral</label>
+                                <label>Carbón mineral</label>
                                 <value>05</value>
                             </item>
                         </combustible>
                         <aserrin>
-                            <label>Indique el consumo de aserrÃ­n en el aÃ±o anterior (ton)</label>
+                            <label>Indique el consumo de aserrín en el año anterior (ton)</label>
                             <hint/>
                         </aserrin>
                         <bagazo>
-                            <label>Indique el consumo de bagazo en el aÃ±o anterior (ton)</label>
+                            <label>Indique el consumo de bagazo en el año anterior (ton)</label>
                             <hint/>
                         </bagazo>
                         <biodiesel>
-                            <label>Indique el consumo de biodiesel en el aÃ±o anterior (m3)</label>
+                            <label>Indique el consumo de biodiesel en el año anterior (m3)</label>
                             <hint/>
                         </biodiesel>
                         <bioetanol>
-                            <label>Indique el consumo de bioetanol en el aÃ±o anterior (m3)</label>
+                            <label>Indique el consumo de bioetanol en el año anterior (m3)</label>
                             <hint/>
                         </bioetanol>
                         <carbon_mineral>
-                            <label>Indique el consumo de carbÃ³n mineral en el aÃ±o anterior (ton)</label>
+                            <label>Indique el consumo de carbón mineral en el año anterior (ton)</label>
                             <hint/>
                         </carbon_mineral>
                         <control-72>
-                            <label>Por favor liste las medidas de eficiencia energÃ©tica implementadas. AgreguÃ© la cantidad de filas que sean necesarias con el
-                        botÃ³n (+).                                                                                                               
+                            <label>Por favor liste las medidas de eficiencia energética implementadas. Agregué la cantidad de filas que sean necesarias con el
+                        botón (+).                                                                                                               
                      </label>
                             <hint/>
                         </control-72>
                         <denominacionLocal>
-                            <label>DenominaciÃ³n del Local</label>
+                            <label>Denominación del Local</label>
                             <hint/>
                         </denominacionLocal>
                         <direccion>
-                            <label>DirecciÃ³n de las instalaciones</label>
+                            <label>Dirección de las instalaciones</label>
                             <hint/>
                         </direccion>
                         <ciudad>
@@ -497,12 +497,12 @@ form_energy_recursive_form
                                 <value>montevideo</value>
                             </item>
                             <item>
-                                <label>PaysandÃº</label>
-                                <value>paysandÃº</value>
+                                <label>Paysandú</label>
+                                <value>paysandú</value>
                             </item>
                             <item>
-                                <label>RÃ­o Negro</label>
-                                <value>rÃ­o-negro</value>
+                                <label>Río Negro</label>
+                                <value>río-negro</value>
                             </item>
                             <item>
                                 <label>Rivera</label>
@@ -517,16 +517,16 @@ form_energy_recursive_form
                                 <value>salto</value>
                             </item>
                             <item>
-                                <label>San JosÃ©</label>
-                                <value>san-josÃ©</value>
+                                <label>San José</label>
+                                <value>san-josé</value>
                             </item>
                             <item>
                                 <label>Soriano</label>
                                 <value>soriano</value>
                             </item>
                             <item>
-                                <label>TacuarembÃ³</label>
-                                <value>tacuarembÃ³</value>
+                                <label>Tacuarembó</label>
+                                <value>tacuarembó</value>
                             </item>
                             <item>
                                 <label>Treinta y Tres</label>
@@ -534,7 +534,7 @@ form_energy_recursive_form
                             </item>
                         </dpto>
                         <tipoConsumidor>
-                            <label>Tipo de consumidor de energÃ­a elÃ©ctrica</label>
+                            <label>Tipo de consumidor de energía eléctrica</label>
                             <hint/>
                             <item>
                                 <label>Tarifa Residencial Simple</label>
@@ -582,8 +582,8 @@ form_energy_recursive_form
                             </item>
                         </tipoConsumidor>
                         <consumoEnergiaElectrica>
-                            <label>Consumo de energÃ©a elÃ©ctrica (MWh/aÃ±o) </label>
-                            <hint>Indique su consumo de electricidad en el aÃ±o anterior </hint>
+                            <label>Consumo de energéa eléctrica (MWh/año) </label>
+                            <hint>Indique su consumo de electricidad en el año anterior </hint>
                         </consumoEnergiaElectrica>
                         <section-81>
                             <label>D. DATOS DEL LOCAL</label>
@@ -606,11 +606,11 @@ form_energy_recursive_form
                             <hint/>
                         </cargoDirectivo>
                         <direccionDirectivo>
-                            <label>DirecciÃ³n</label>
+                            <label>Dirección</label>
                             <hint/>
                         </direccionDirectivo>
                         <telefonoDirectivo>
-                            <label>TelÃ©fono</label>
+                            <label>Teléfono</label>
                             <hint/>
                         </telefonoDirectivo>
                         <emailDirectivo>
@@ -621,22 +621,22 @@ form_energy_recursive_form
                             <label>A. DATOS GENERALES</label>
                         </Datos-generales>
                         <nombre>
-                            <label>DenominaciÃ³n</label>
-                            <hint>Nombre de la empresa, instituciÃ³n o centro de trabajo</hint>
+                            <label>Denominación</label>
+                            <hint>Nombre de la empresa, institución o centro de trabajo</hint>
                         </nombre>
                         <rut>
-                            <label>NÃºmero de RUT</label>
+                            <label>Número de RUT</label>
                             <hint/>
                         </rut>
                         <ciiu2>
-                            <label>Sector de actividad (CIIU 2 dÃ­gitos)</label>
-                            <hint>Seleccione la divisiÃ³n que corresponda. Puede utilizar las notas explicativas adjuntas.</hint>
+                            <label>Sector de actividad (CIIU 2 dígitos)</label>
+                            <hint>Seleccione la división que corresponda. Puede utilizar las notas explicativas adjuntas.</hint>
                             <item>
-                                <label>A-01. ProducciÃ³n agropecuaria, caza y actividades de servicios conexas</label>
+                                <label>A-01. Producción agropecuaria, caza y actividades de servicios conexas</label>
                                 <value>01</value>
                             </item>
                             <item>
-                                <label>A-02. ForestaciÃ³n y extracciÃ³n de madera</label>
+                                <label>A-02. Forestación y extracción de madera</label>
                                 <value>02</value>
                             </item>
                             <item>
@@ -644,97 +644,97 @@ form_energy_recursive_form
                                 <value>03</value>
                             </item>
                             <item>
-                                <label>B. ExplotaciÃ³n de minas y canteras</label>
+                                <label>B. Explotación de minas y canteras</label>
                                 <value>04</value>
                             </item>
                             <item>
-                                <label>C-10. ElaboraciÃ³n de productos alimenticios</label>
+                                <label>C-10. Elaboración de productos alimenticios</label>
                                 <value>05</value>
                             </item>
                             <item>
-                                <label>C-11. ElaboraciÃ³n de bebidas</label>
+                                <label>C-11. Elaboración de bebidas</label>
                                 <value>06</value>
                             </item>
                             <item>
-                                <label>C-12. ElaboraciÃ³n de productos de tabaco</label>
+                                <label>C-12. Elaboración de productos de tabaco</label>
                                 <value>07</value>
                             </item>
                             <item>
-                                <label>C-13. FabricaciÃ³n de productos textiles</label>
+                                <label>C-13. Fabricación de productos textiles</label>
                                 <value>08</value>
                             </item>
                             <item>
-                                <label>C-14. FabricaciÃ³n de prendas de vestir</label>
+                                <label>C-14. Fabricación de prendas de vestir</label>
                                 <value>09</value>
                             </item>
                             <item>
-                                <label>C-15. FabricaciÃ³n de cueros y productos conexos</label>
+                                <label>C-15. Fabricación de cueros y productos conexos</label>
                                 <value>10</value>
                             </item>
                             <item>
-                                <label>C-16. ProducciÃ³n de madera y fabricaciÃ³n de productos de madera y corcho, excepto muebles; fabricaciÃ³n de artÃ­culos de paja
+                                <label>C-16. Producción de madera y fabricación de productos de madera y corcho, excepto muebles; fabricación de artículos de paja
                            y de materiales trenzables.
                         </label>
                                 <value>11</value>
                             </item>
                             <item>
-                                <label>C-17. FabricaciÃ³n de papel y de los productos de papel</label>
+                                <label>C-17. Fabricación de papel y de los productos de papel</label>
                                 <value>12</value>
                             </item>
                             <item>
-                                <label>C-18. Actividades de impresiÃ³n y reproducciÃ³n de grabaciones</label>
+                                <label>C-18. Actividades de impresión y reproducción de grabaciones</label>
                                 <value>13</value>
                             </item>
                             <item>
-                                <label>C-19. FabricaciÃ³n de coque y de productos de la refinaciÃ³n del petrÃ³leo</label>
+                                <label>C-19. Fabricación de coque y de productos de la refinación del petróleo</label>
                                 <value>14</value>
                             </item>
                             <item>
-                                <label>C-20. FabricaciÃ³n de sustancias y productos quÃ­micos</label>
+                                <label>C-20. Fabricación de sustancias y productos químicos</label>
                                 <value>15</value>
                             </item>
                             <item>
-                                <label>C-21. FabricaciÃ³n de productos farmacÃ©uticos, sustancias quÃ­micas medicinales y de productos botÃ¡nicos.</label>
+                                <label>C-21. Fabricación de productos farmacéuticos, sustancias químicas medicinales y de productos botánicos.</label>
                                 <value>16</value>
                             </item>
                             <item>
-                                <label>C-22. FabricaciÃ³n de productos de caucho y plÃ¡stico</label>
+                                <label>C-22. Fabricación de productos de caucho y plástico</label>
                                 <value>17</value>
                             </item>
                             <item>
-                                <label>C-23. FabricaciÃ³n de otros productos minerales no metÃ¡licos</label>
+                                <label>C-23. Fabricación de otros productos minerales no metálicos</label>
                                 <value>18</value>
                             </item>
                             <item>
-                                <label>C-24. FabricaciÃ³n de metales comunes</label>
+                                <label>C-24. Fabricación de metales comunes</label>
                                 <value>19</value>
                             </item>
                             <item>
-                                <label>C-25. FabricaciÃ³n de productos derivados del metal, excepto maquinaria y equipo</label>
+                                <label>C-25. Fabricación de productos derivados del metal, excepto maquinaria y equipo</label>
                                 <value>20</value>
                             </item>
                             <item>
-                                <label>C-26. FabricaciÃ³n de los productos informÃ¡ticos, electrÃ³nicos y Ã³pticos</label>
+                                <label>C-26. Fabricación de los productos informáticos, electrónicos y ópticos</label>
                                 <value>21</value>
                             </item>
                             <item>
-                                <label>C-27. FabricaciÃ³n de equipo el  Ã©ctrico</label>
+                                <label>C-27. Fabricación de equipo el  éctrico</label>
                                 <value>22</value>
                             </item>
                             <item>
-                                <label>C-28. FabricaciÃ³n de la maquinaria y equipo n.c.p.</label>
+                                <label>C-28. Fabricación de la maquinaria y equipo n.c.p.</label>
                                 <value>23</value>
                             </item>
                             <item>
-                                <label>C-29. FabricaciÃ³n de vehÃ­culos automotores, remolques y semiremolques</label>
+                                <label>C-29. Fabricación de vehículos automotores, remolques y semiremolques</label>
                                 <value>24</value>
                             </item>
                             <item>
-                                <label>C-30. FabricaciÃ³n de otros tipos de equipo de transporte</label>
+                                <label>C-30. Fabricación de otros tipos de equipo de transporte</label>
                                 <value>25</value>
                             </item>
                             <item>
-                                <label>C-31. FabricaciÃ³n de muebles</label>
+                                <label>C-31. Fabricación de muebles</label>
                                 <value>26</value>
                             </item>
                             <item>
@@ -742,7 +742,7 @@ form_energy_recursive_form
                                 <value>27</value>
                             </item>
                             <item>
-                                <label>C-33. ReparaciÃ³n e instalaciÃ³n de la maquinaria y equipo</label>
+                                <label>C-33. Reparación e instalación de la maquinaria y equipo</label>
                                 <value>28</value>
                             </item>
                             <item>
@@ -750,15 +750,15 @@ form_energy_recursive_form
                                 <value>29</value>
                             </item>
                             <item>
-                                <label>E. Suministro de agua; alcantarillado, gestiÃ³n de desechos y actividades de saneamiento</label>
+                                <label>E. Suministro de agua; alcantarillado, gestión de desechos y actividades de saneamiento</label>
                                 <value>30</value>
                             </item>
                             <item>
-                                <label>F. ConstrucciÃ³n</label>
+                                <label>F. Construcción</label>
                                 <value>31</value>
                             </item>
                             <item>
-                                <label>G. Comercio al por mayor y al por menor; reparaciÃ³n de los vehÃ­culos de motor y de las motocicletas.</label>
+                                <label>G. Comercio al por mayor y al por menor; reparación de los vehículos de motor y de las motocicletas.</label>
                                 <value>32</value>
                             </item>
                             <item>
@@ -770,7 +770,7 @@ form_energy_recursive_form
                                 <value>34</value>
                             </item>
                             <item>
-                                <label>J. InformÃ­tica y comunicaciÃ³n</label>
+                                <label>J. Informítica y comunicación</label>
                                 <value>35</value>
                             </item>
                             <item>
@@ -782,7 +782,7 @@ form_energy_recursive_form
                                 <value>37</value>
                             </item>
                             <item>
-                                <label>M. Actividades profesionales, cientÃ­ficas y tÃ©cnicas</label>
+                                <label>M. Actividades profesionales, científicas y técnicas</label>
                                 <value>38</value>
                             </item>
                             <item>
@@ -790,11 +790,11 @@ form_energy_recursive_form
                                 <value>39</value>
                             </item>
                             <item>
-                                <label>O. AdministraciÃ³n pÃºblica y defensa; planes de seguridad social de afiliaciÃ³n obligatoria</label>
+                                <label>O. Administración pública y defensa; planes de seguridad social de afiliación obligatoria</label>
                                 <value>40</value>
                             </item>
                             <item>
-                                <label>P. EnseÃ±anza</label>
+                                <label>P. Enseñanza</label>
                                 <value>41</value>
                             </item>
                             <item>
@@ -802,7 +802,7 @@ form_energy_recursive_form
                                 <value>42</value>
                             </item>
                             <item>
-                                <label>R. Artes, entretenimiento y recreaciÃ³n</label>
+                                <label>R. Artes, entretenimiento y recreación</label>
                                 <value>43</value>
                             </item>
                             <item>
@@ -810,13 +810,13 @@ form_energy_recursive_form
                                 <value>44</value>
                             </item>
                             <item>
-                                <label>T. Actividades de los hogares en calidad de empleadores, actividades indiferenciadas de producciÃ³n de bienes y servicios de
+                                <label>T. Actividades de los hogares en calidad de empleadores, actividades indiferenciadas de producción de bienes y servicios de
                            los hogares para uso propio.
                         </label>
                                 <value>45</value>
                             </item>
                             <item>
-                                <label>U.Actividades de organizaciones y Ã³rganos extraterritoriales</label>
+                                <label>U.Actividades de organizaciones y órganos extraterritoriales</label>
                                 <value>46</value>
                             </item>
                         </ciiu2>
@@ -824,23 +824,23 @@ form_energy_recursive_form
                             <label>Subsector</label>
                             <hint/>
                             <item>
-                                <label>Primera opciÃ³n</label>
+                                <label>Primera opción</label>
                                 <value>1</value>
                                 <hint/>
                             </item>
                             <item>
-                                <label>Segunda opciÃ³n</label>
+                                <label>Segunda opción</label>
                                 <value>2</value>
                                 <hint/>
                             </item>
                             <item>
-                                <label>Tercera opciÃ³n</label>
+                                <label>Tercera opción</label>
                                 <value>3</value>
                                 <hint/>
                             </item>
                         </control-52>
                         <pyme>
-                            <label>Â¿Su empresa es Pyme?</label>
+                            <label>¿Su empresa es Pyme?</label>
                             <hint/>
                             <item>
                                 <label>Si</label>
@@ -896,11 +896,11 @@ form_energy_recursive_form
                             <hint/>
                         </certificado_pyme>
                         <section-41>
-                            <label>B. DATOS DEL DIRECTIVO QUE REPRESENTA A LA EMPRESA/INSTITUCIÃ³N</label>
+                            <label>B. DATOS DEL DIRECTIVO QUE REPRESENTA A LA EMPRESA/INSTITUCIóN</label>
                             <help/>
                         </section-41>
                         <section-53>
-                            <label>C. DATOS DEL DIRECTIVO QUE REPRESENTA A LA EMPRESA/INSTITUCIÃ³N</label>
+                            <label>C. DATOS DEL DIRECTIVO QUE REPRESENTA A LA EMPRESA/INSTITUCIóN</label>
                             <help/>
                         </section-53>
                     </resource>

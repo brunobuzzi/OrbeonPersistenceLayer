@@ -115,7 +115,7 @@ formDefinition_emit_visa
                     <form-name>emit-visa</form-name>
                     <title xml:lang="en">Emit Visa</title>
                     <description xml:lang="en">Emit Visa</description>
-                    <title xml:lang="es">PeticiÃ³n de Permiso de Construccion CASA</title>
+                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
                 </metadata>

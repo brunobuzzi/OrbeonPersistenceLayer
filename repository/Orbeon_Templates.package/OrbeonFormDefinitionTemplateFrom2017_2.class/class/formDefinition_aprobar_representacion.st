@@ -17,7 +17,7 @@ formDefinition_aprobar_representacion
          fr:data-format-version="4.0.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Aprobar RepresentaciÃ³n</xh:title>
+        <xh:title>Aprobar Representación</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
          <!-- Main instance -->
          <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
@@ -88,9 +88,9 @@ formDefinition_aprobar_representacion
                 <metadata>
                     <application-name>dne</application-name>
                     <form-name>aprobar-representacion</form-name>
-                    <title xml:lang="en">Aprobar RepresentaciÃ³n</title>
+                    <title xml:lang="en">Aprobar Representación</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Aprobar RepresentaciÃ³n</title>
+                    <title xml:lang="es">Aprobar Representación</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>
@@ -107,7 +107,7 @@ formDefinition_aprobar_representacion
                 <resources>
                     <resource xml:lang="en">
                         <aprobada>
-                            <label>Los datos de la representaciÃ³n son correctos ?</label>
+                            <label>Los datos de la representación son correctos ?</label>
                             <hint/>
                         </aprobada>
                         <aprMotivosRechazo>
@@ -116,7 +116,7 @@ formDefinition_aprobar_representacion
                         </aprMotivosRechazo>
                         
                         <section-14>
-                            <label>Aprobar RepresentaciÃ³n</label>
+                            <label>Aprobar Representación</label>
                             <help/>
                         </section-14>
                         <username>

@@ -83,7 +83,6 @@ form_cancel_purchase
                     <form-name>cancel-purchase</form-name>
                     <title xml:lang="en">Cancel House Purchase</title>
                     <description xml:lang="en">Cancel House Purchase</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>

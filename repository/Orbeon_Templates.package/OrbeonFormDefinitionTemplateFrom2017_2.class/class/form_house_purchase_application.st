@@ -97,7 +97,6 @@ form_house_purchase_application
                     <form-name>house-purchase-application</form-name>
                     <title xml:lang="en">House Purchase Application</title>
                     <description xml:lang="en">House Purchase Application</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                 </metadata>
             </xf:instance>

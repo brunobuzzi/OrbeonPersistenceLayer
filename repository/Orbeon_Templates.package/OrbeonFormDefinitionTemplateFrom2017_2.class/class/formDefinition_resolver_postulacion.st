@@ -90,7 +90,7 @@ formDefinition_resolver_postulacion
                     <form-name>resolver-postulacion</form-name>
                     <title xml:lang="en">Resolver Postulación</title>
                     <description xml:lang="en"/>
-                    <title xml:lang="es">Resolver PostulaciÃ³n</title>
+                    <title xml:lang="es">Resolver Postulación</title>
                     <description xml:lang="es"/>
                     <available>true</available>
                 </metadata>
