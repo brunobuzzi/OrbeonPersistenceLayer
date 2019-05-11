@@ -6,4 +6,4 @@ setAvailableNodeWith: aBooleanString
 
 	((aBooleanString = 'true') or: [aBooleanString = 'false']) ifFalse: [^OrbeonInvalidXMLException signal: '<available> node value is invalid'].
 
-	xmlString := self newFormReader setAvailableNodeValueWith: aBooleanString.
+	self xmlString: (self newFormReader setAvailableNodeValueWith: aBooleanString)
