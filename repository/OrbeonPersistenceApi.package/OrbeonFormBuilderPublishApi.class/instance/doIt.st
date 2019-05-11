@@ -26,7 +26,8 @@ doIt
 	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
 	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
 	ifFalse: ["the current published definition is updated"
-				existingVersion "get the last existing definition and discard <orbeonDefinition>"
+				existingVersion "get the last existing definition and discard <orbeonPublishedDefinition>"
+					definition: orbeonPublishedDefinition definition;  "set the new saved definition to <existingVersion> - see issue #210" 
 					updateLastModifiedTime;
 					version: orbeonPublishedDefinition version;
 					xmlString: xmlString;
