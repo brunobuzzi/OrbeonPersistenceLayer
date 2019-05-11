@@ -15,7 +15,7 @@ searchInFormSummary: formName app: app
 
 	searchApi := OrbeonInstanceSearchApi for: application formName: formName.
 
-	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: self requestContext request rawBody);
+	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: (self requestContext request bodyDecodeUsing: 'utf-8'));
 					createQueryNodes;
 					getPageSize;
 					getPageNumber;

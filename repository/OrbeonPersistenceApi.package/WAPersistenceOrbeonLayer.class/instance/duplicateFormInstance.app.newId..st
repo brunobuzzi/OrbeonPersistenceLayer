@@ -9,7 +9,7 @@ duplicateFormInstance: formName app: app newId: id
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
 	versionNumber := (self requestContext request headerAt: 'orbeon-form-definition-version') ifNil: [1] ifNotNil: [:value | Number fromString: value].
-	apiOperation := OrbeonFormInstanceDuplicateApi newFor: self withXml: self requestContext request rawBody id: id.
+	apiOperation := OrbeonFormInstanceDuplicateApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 	apiOperation appName: app;
 		formName: formName;
 		version: versionNumber.

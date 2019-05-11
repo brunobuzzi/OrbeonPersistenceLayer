@@ -6,6 +6,6 @@ duplicateFormDefinitionNewId: id
 	<produces: 'application/xml'>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml'>
 
-	apiOperation := OrbeonFormDefinitionDuplicateApi newFor: self withXml: self requestContext request rawBody id: id.
+	apiOperation := OrbeonFormDefinitionDuplicateApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 
 	^apiOperation doIt
