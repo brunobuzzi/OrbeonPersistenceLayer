@@ -2,7 +2,7 @@ other
 doIt
 	"This service is called by Orbeon when a user click on -Save- inside the Form Builder.
 	A Form Definition has been saved "
-	| latestSavedDefinition savedDefinition |
+	| latestSavedDefinition |
 
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: self getFormName app: self getApplicationName ifNone: [nil].
 	version := (self getOrbeonApplicationClass getDefinitionWithId: id ifNone: [nil]) ifNil: [1] ifNotNil: [:def | def version].
@@ -14,8 +14,8 @@ doIt
 	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
 	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', self getFormName,'] in application [', self getApplicationName, ']'].
 
-	savedDefinition := self createSavedDefinition. "here the OrbeonFormDefinition is created and associate to the receiver <savedDefinition>"
+	savedFormDefinition := self createSavedDefinition. "here the OrbeonFormDefinition is created and associate to the receiver <savedFormDefinition>"
 
-	self moveFromTempPathFileOf: savedDefinition. "move attachments if it is the case -issue #37-"
+	self moveFromTempPathFileOf: savedFormDefinition. "move attachments if it is the case -issue #37-"
 
-	^savedDefinition xmlString
+	^savedFormDefinition xmlString

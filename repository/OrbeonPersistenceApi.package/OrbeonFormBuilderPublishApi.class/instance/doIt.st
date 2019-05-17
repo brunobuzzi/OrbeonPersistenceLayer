@@ -4,12 +4,12 @@ doIt
 	The version of the form is in <headerVersion> - orbeon parameter.
 	* Calculate the version number & create <anOrbeonSavedFormDefinition> 
 	* Compare latest published version with the new one --> [update the current |or| add the new one]"
-	| orbeonApplication latestSavedDefinition orbeonPublishedDefinition existingVersion |
+	| latestSavedDefinition existingVersion |
 
-	orbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
 
 	version := (headerVersion = 'next') 
-							ifTrue: [(orbeonApplication getLastFormDefinitionVersionOf: formName) + 1]
+							ifTrue: [(application getLastFormDefinitionVersionOf: formName) + 1]
 							ifFalse: [Number fromString: headerVersion].
 
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: formName app: appName ifNone: [nil].
@@ -19,18 +19,18 @@ doIt
 	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
 	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', formName,'] in application [', appName, ']'].
 
-	orbeonPublishedDefinition := self createPublishedDefinition.
+	publishedFormDefinition := self createPublishedDefinition.
 
-	(headerVersion = 'next') ifTrue: [orbeonApplication addPublishedDefinition: orbeonPublishedDefinition. ^self]. "is a new definition --> is added as published"
+	(headerVersion = 'next') ifTrue: [application addPublishedDefinition: publishedFormDefinition. ^self]. "is a new definition --> is added as published"
 
-	existingVersion := orbeonApplication definitionNamed: orbeonPublishedDefinition formName version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
-	(self shouldCreateAnotherVersionFor: orbeonPublishedDefinition)
+	existingVersion := application definitionNamed: publishedFormDefinition formName version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
+	(self shouldCreateAnotherVersionFor: publishedFormDefinition)
 	ifFalse: ["the current published definition is updated"
-				existingVersion "get the last existing definition and discard <orbeonPublishedDefinition>"
-					definition: orbeonPublishedDefinition definition;  "set the new saved definition to <existingVersion> - see issue #210" 
+				existingVersion "get the last existing definition and discard <publishedFormDefinition>"
+					definition: publishedFormDefinition definition;  "set the new saved definition to <existingVersion> - see issue #210" 
 					updateLastModifiedTime;
-					version: orbeonPublishedDefinition version;
+					version: publishedFormDefinition version;
 					xmlString: xmlString;
 					publish;
 					processXMLDefinition] 
-	ifTrue: [orbeonApplication replaceCurrentDefinition: existingVersion with: orbeonPublishedDefinition]
+	ifTrue: [application replaceCurrentDefinition: existingVersion with: publishedFormDefinition]
