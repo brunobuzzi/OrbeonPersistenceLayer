@@ -1187,7 +1187,7 @@ formDefinition_valores_escenarios
                     </resource>
                 </resources>
             </xf:instance>
-            <xf:instance xxf:readonly="true" id="section-1-template" xxf:exclude-result-prefixes="#all">
+            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-1-template">
                 <section-1-iteration>
                     <medidaUsoPrincipal/>
                     <medidaFechaInicioOperacion/>
@@ -1218,7 +1218,7 @@ formDefinition_valores_escenarios
                     <medidaGradoImplementacion/>
                 </section-1-iteration>
             </xf:instance>
-            <xf:instance xxf:readonly="true" id="section-2-template" xxf:exclude-result-prefixes="#all">
+            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-2-template">
                 <section-2-iteration>
                     <escSinMedidaFuenteEnergia/>
                     <escConMedidaFuenteEnergia/>
@@ -1283,22 +1283,31 @@ formDefinition_valores_escenarios
             </xf:action>
             <xf:instance id="conversion-instance" class="fr-service" xxf:exclude-result-prefixes="#all">
                         <body xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;params/&gt;</body>
+                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;request&gt;
+&lt;fuenteEnergia/&gt;
+&lt;precioEnergetico/&gt;
+&lt;consumoEnergia/&gt;
+&lt;/request&gt;
+</body>
                     </xf:instance>
             <xf:submission id="conversion-submission" class="fr-service"
-                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia?fuente={fr:control-string-value(''escSinMedidaFuenteEnergia'')}&amp;precio={fr:control-string-value(''escSinMedidaPrecioEnergetico'')}&amp;consumo={fr:control-string-value(''escSinMedidaConsumoEnergia'')}"
-                           method="get"
-                           serialization="none"
-                           mediatype="none"/>
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia"
+                           method="post"
+                           serialization="application/xml"
+                           mediatype="application/xml"/>
             <xf:instance id="conversion2-instance" class="fr-service" xxf:exclude-result-prefixes="#all">
                         <body xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;params/&gt;</body>
+                      xmlns:fbf="java:org.orbeon.oxf.fb.FormBuilderXPathApi">&lt;request&gt;
+&lt;fuenteEnergia/&gt;
+&lt;precioEnergetico/&gt;
+&lt;consumoEnergia/&gt;
+&lt;/request&gt;</body>
                     </xf:instance>
             <xf:submission id="conversion2-submission" class="fr-service"
-                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia?fuente={fr:control-string-value(''escConMedidaFuenteEnergia'')}&amp;precio={fr:control-string-value(''escConMedidaPrecioEnergetico'')}&amp;consumo={fr:control-string-value(''escConMedidaConsumoEnergia'')}"
-                           method="get"
-                           serialization="none"
-                           mediatype="none"/>
+                           resource="http://gemstoneIP:8787/orbeon-gemstone-api/conversionfuenteenergia"
+                           method="post"
+                           serialization="application/xml"
+                           mediatype="application/xml"/>
             <xf:action id="conversion-action-binding">
                 <xf:action event="xforms-value-changed" ev:observer="escSinMedidaFuenteEnergia-control"
                            if="true()">
@@ -1306,7 +1315,20 @@ formDefinition_valores_escenarios
                 </xf:action>
                 <xf:action event="xforms-submit" ev:observer="conversion-submission">
                     <xf:var name="request-instance-name" value="''conversion-instance''"/>
-                    <xf:action/>
+                    <xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escSinMedidaFuenteEnergia''"/>
+                            <xf:var name="path" value="/request/fuenteEnergia"/>
+                        </xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escSinMedidaPrecioEnergetico''"/>
+                            <xf:var name="path" value="/request/precioEnergetico"/>
+                        </xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escSinMedidaConsumoEnergia''"/>
+                            <xf:var name="path" value="/request/consumoEnergia"/>
+                        </xf:action>
+                    </xf:action>
                 </xf:action>
                 <xf:action event="xforms-submit-done" ev:observer="conversion-submission">
                     <xf:action class="fr-set-control-value-action">
@@ -1330,7 +1352,20 @@ formDefinition_valores_escenarios
                 </xf:action>
                 <xf:action event="xforms-submit" ev:observer="conversion2-submission">
                     <xf:var name="request-instance-name" value="''conversion2-instance''"/>
-                    <xf:action/>
+                    <xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escConMedidaFuenteEnergia''"/>
+                            <xf:var name="path" value="/request/fuenteEnergia"/>
+                        </xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escConMedidaPrecioEnergetico''"/>
+                            <xf:var name="path" value="/request/precioEnergetico"/>
+                        </xf:action>
+                        <xf:action class="fr-set-service-value-action">
+                            <xf:var name="control-name" value="''escConMedidaConsumoEnergia''"/>
+                            <xf:var name="path" value="/request/consumoEnergia"/>
+                        </xf:action>
+                    </xf:action>
                 </xf:action>
                 <xf:action event="xforms-submit-done" ev:observer="conversion2-submission">
                     <xf:action class="fr-set-control-value-action">
