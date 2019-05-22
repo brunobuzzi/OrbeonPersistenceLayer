@@ -108,6 +108,7 @@
 		"reportModificationDistributionByMonthFrom:to:satisfying:" : "BrunoBB 10/19/2016 07:00",
 		"reportQuantityDistributionFrom:to:" : "BrunoBB 10/18/2016 11:31",
 		"reportQuantityDistributionFrom:to:satisfying:" : "BrunoBB 10/18/2016 11:55",
+		"resetDefinitionRegistry" : "brunobb 05/22/2019 10:56",
 		"setRegistryFormNamed:with:" : "BrunoBB 04/30/2016 15:24",
 		"unregisterDefinition:" : "BrunoBB 04/27/2016 14:52",
 		"unregisterDefinitionNamed:" : "BrunoBB 04/27/2016 14:52" } }
