@@ -8,8 +8,6 @@ initialize
 	batchedList batchSize: 10;
 		navigationCssClass: 'batch-div-lateral-top'.
 
-	self setShowToElementNamed: 'search-area'. "the search-are is shown by default"
-
 	lateralCollection := self applicationsForCurrentUser.
 
 	innerBatchList := SewafBatchedList parentComponent: self.
