@@ -98,7 +98,8 @@ formDefinition_dashboard_form
                              calculate="$cost * 0.22"/>
                     <xf:bind id="paymentDate-bind" ref="paymentDate" name="paymentDate" type="xs:date"
                              required="true()"/>
-                    <xf:bind id="confirmed-bind" ref="confirmed" name="confirmed" required="true()"/>
+                    <xf:bind id="confirmed-bind" ref="confirmed" name="confirmed" required="true()"
+                             type="xs:boolean"/>
                     <xf:bind id="deductible-bind" ref="deductible" name="deductible" type="xs:decimal"
                              required="true()"/>
                     <xf:bind id="deductibleTax-bind" ref="deductibleTax" name="deductibleTax"
@@ -619,6 +620,7 @@ formDefinition_dashboard_form
                                     <xf:label ref="$form-resources/confirmed/label"/>
                                     <xf:hint ref="$form-resources/confirmed/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                                
                                     <xf:itemset ref="$form-resources/confirmed/item">
                                         <xf:label ref="label"/>
                                         <xf:value ref="value"/>
