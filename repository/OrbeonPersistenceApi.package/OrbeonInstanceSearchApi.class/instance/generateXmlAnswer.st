@@ -7,6 +7,7 @@ generateXmlAnswer
 	xmlWriter := XMLWriter new.
 
 	xmlWriter writeWith: [:writer | | tag |
+
 		tag := writer tag: 'documents' attributes: self getArrayOfOrbeonHeaders. "create the header of the XML"
 
 		"generate a XML node for each form in <instanceCollection>"
