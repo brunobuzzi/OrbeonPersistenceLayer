@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"allversions" ],
+		"allversions",
+		"allforms" ],
 	"name" : "OrbeonAllFormDefinitionVersionsApi",
 	"pools" : [
 		 ],

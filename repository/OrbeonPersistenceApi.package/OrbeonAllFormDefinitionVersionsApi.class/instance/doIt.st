@@ -2,14 +2,16 @@ other
 doIt
 	"Implemented as stated in: 
 	https://doc.orbeon.com/form-runner/api/persistence/forms-metadata.html#returning-all-form-definition-versions"
-	| application registry xmlWriter getAllVersions |
+	| application registry xmlWriter |
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^restHandler noRouteFound: restHandler requestContext].
 
 	registry := application registryForFormNamed: self getFormName ifNone: [^restHandler noRouteFound: restHandler requestContext].
 
-	getAllVersions := allversions = 'true'.
-	getAllVersions ifFalse: [^registry getLastVersionNumber].
+	allversions := allversions = 'true'. "the original values is <aString>"
+	allforms := allforms = 'true'. "the original values is <aString>"
+
+	allversions ifFalse: [^registry getLastVersionNumber].
  
 	xmlWriter := XMLWriter new.
 
