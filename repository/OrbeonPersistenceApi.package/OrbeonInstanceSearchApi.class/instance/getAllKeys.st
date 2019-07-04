@@ -1,4 +1,4 @@
 other
 getAllKeys
 
-	^application getAllInstancesKeysOfFormNamed: formName
+	^application getAllInstancesKeysOfFormNamed: formName version: version

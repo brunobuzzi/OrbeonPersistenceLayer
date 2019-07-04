@@ -1,4 +1,4 @@
 stream
 size
 
-	^definitionRegistry getAllInstancesSize
+	^definitionRegistry getAllInstancesSizeOf: currentVersion

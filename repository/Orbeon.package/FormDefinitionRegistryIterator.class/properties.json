@@ -16,7 +16,8 @@
 		"fromIndex",
 		"toIndex",
 		"formsInRange",
-		"globalSize" ],
+		"globalSize",
+		"currentVersion" ],
 	"name" : "FormDefinitionRegistryIterator",
 	"pools" : [
 		 ],

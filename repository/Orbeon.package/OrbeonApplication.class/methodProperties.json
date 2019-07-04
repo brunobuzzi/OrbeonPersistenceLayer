@@ -55,6 +55,7 @@
 		"getAllDefinitionsNamed:withVersion:ifNone:" : "BrunoBB 05/04/2016 13:48",
 		"getAllInstances" : "BrunoBB 04/27/2016 14:52",
 		"getAllInstancesKeysOfFormNamed:" : "BrunoBB 04/27/2016 14:52",
+		"getAllInstancesKeysOfFormNamed:version:" : "brunobb 07/04/2019 05:19",
 		"getAllSavedDefinitions" : "BrunoBB 04/27/2016 14:52",
 		"getAllSearchFieldsOf:" : "BrunoBB 04/27/2016 14:52",
 		"getAnyDraftWithId:of:" : "BrunoBB 04/27/2016 14:52",

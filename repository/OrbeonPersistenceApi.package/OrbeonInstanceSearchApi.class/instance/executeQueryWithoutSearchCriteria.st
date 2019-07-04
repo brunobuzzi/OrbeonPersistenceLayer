@@ -7,13 +7,13 @@ executeQueryWithoutSearchCriteria
 
 	(draftsNodes notEmpty and: [((draftsNodes first attributeAt: 'for-never-saved-document') = 'true') and: [draftsNodes first contentString = 'only']]) "drafts to display"
 	ifTrue: [total := drafts size.
-			^resultCollection := drafts].
+			^resultCollection := (drafts select: [:each | each version = version]) ]. "only display draft of the selected version"
 
 	formsInRange := OrderedCollection new.
 	instancesShift := (self pageFrom = 1) ifTrue: [1] ifFalse: [self pageFrom - drafts size].
 	draftsSize :=  (self pageFrom = 1) ifTrue: [drafts size] ifFalse: [0].
 
-	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user group: group. "answer a specific iterator to go through instances"
+	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user group: group version: version. "answer a specific iterator to go through instances"
 	stream fromIndex: instancesShift - 1;
 				toIndex: (instancesShift - 1) + pageSize - draftsSize.
 
