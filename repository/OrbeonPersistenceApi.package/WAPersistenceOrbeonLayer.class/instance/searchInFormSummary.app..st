@@ -20,7 +20,8 @@ searchInFormSummary: formName app: app
 					getPageSize;
 					getPageNumber;
 					group: (self requestContext request headerAt: 'orbeon-group');
-					user: (self requestContext request headerAt: 'orbeon-username').
+					user: (self requestContext request headerAt: 'orbeon-username');
+					version: (self requestContext request headerAt: 'orbeon-form-definition-version') asInteger.
 
 	searchApi doIt.
 
