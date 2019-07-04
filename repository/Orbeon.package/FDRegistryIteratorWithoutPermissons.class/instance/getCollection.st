@@ -1,7 +1,7 @@
 stream
 getCollection
 
-	self position: fromIndex.
+	self position: fromIndex. "set the <currentStream> position"
 
 	fromIndex to: toIndex do: [:index | | form |
 		self atEnd 
