@@ -1,4 +1,4 @@
-other
+instance redirect
 viewPdf
 
 	selectedFormInstance ifNil: [^self].

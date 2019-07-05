@@ -1,4 +1,4 @@
-other
+instance redirect
 edit
 
 	selectedFormInstance ifNil: [^self].

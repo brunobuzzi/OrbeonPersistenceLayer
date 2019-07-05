@@ -4,9 +4,9 @@ tableForOrbeonDefinition
 	^(SewafBooleanOperationTable parent: self)
 		summary: 'Designed Forms';
 		buttonsFormId: 'operations-buttons';
-		operations: #(#(#editSelection 'Edit') #(#new 'New') #(#synchronizeSelection 'Import Forms') #(#deleteSelection 'Delete'));
+		operations: #(#(#editDefinition 'Edit') #(#newDefinition 'New') #(#synchronizeSelection 'Import Forms') #(#deleteSelection 'Delete'));
 		booleanSelector: #booleanValueForDefinition:;
-		callbackSelector: #modifySelection:value:;
+		callbackSelector: #selectFormDefinition:value:;
 		beSortable;
 		"rows: self getDefinitionsCollection; ""get collection elements"
 		columns: (OrderedCollection new  

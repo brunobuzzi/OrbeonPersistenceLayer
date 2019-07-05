@@ -8,6 +8,7 @@
 	"instvars" : [
 		"innerBatchList",
 		"exportComponent",
+		"selectedFormDefinition",
 		"selectedFormInstance" ],
 	"name" : "WAOrbeonApplicationSummary",
 	"pools" : [

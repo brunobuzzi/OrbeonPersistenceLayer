@@ -1,4 +1,4 @@
-other
+instance redirect
 view
 
 	selectedFormInstance ifNil: [^self].

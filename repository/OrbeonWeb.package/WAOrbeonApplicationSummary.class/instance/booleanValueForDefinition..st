@@ -1,4 +1,4 @@
-other
+definition redirect
 booleanValueForDefinition: anOrbeonFormDefinition
 
 	^false
