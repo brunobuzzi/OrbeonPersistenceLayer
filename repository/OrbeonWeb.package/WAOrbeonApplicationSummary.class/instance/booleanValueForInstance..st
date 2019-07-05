@@ -1,0 +1,4 @@
+other
+booleanValueForInstance: aBoolean
+
+	^false

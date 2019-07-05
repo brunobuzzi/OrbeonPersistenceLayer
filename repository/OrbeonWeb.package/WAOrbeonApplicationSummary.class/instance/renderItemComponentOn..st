@@ -1,6 +1,7 @@
 other
 renderItemComponentOn: html
 
+	selectedFormInstance := nil.
 	selectedLateralItem ifNil: [^self].
 
 	self isClassSide 

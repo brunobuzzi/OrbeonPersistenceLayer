@@ -10,7 +10,7 @@ tableColumnsForOrbeonInstance
 						renderBlock: [:each :html | | fieldValue |
 							fieldValue := each valueAt: value.
 							fieldValue ifNil: [fieldValue := ''].
-							fieldValue isEmpty ifFalse: [html anchor callback: [self topPanel viewInstance: each]; with: fieldValue].
+							html anchor target: '_blank'; url: (self generateViewUrlFor: each); with: fieldValue.
 							] 
 						title: (formDefinition labelAt:value).
 		column sortBlock: (self sortBlockForInstances: value);

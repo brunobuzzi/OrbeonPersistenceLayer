@@ -3,4 +3,4 @@ getDefinitionsCollection
 
 	selectedLateralItem ifNil: [^#()].
 
-	^(selectedLateralItem getLastDefinitions select: [:each | self session user hasReadPermissionOn: each]) asArray
+	^(selectedLateralItem getAllDefinitions select: [:each | self session user hasReadPermissionOn: each]) asArray
