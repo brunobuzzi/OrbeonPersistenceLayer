@@ -1,6 +1,9 @@
-other
+main components
 getDefinitionsCollection
+	| definitions |
 
 	selectedLateralItem ifNil: [^#()].
 
-	^(selectedLateralItem getAllDefinitions select: [:each | self session user hasReadPermissionOn: each]) asArray
+	definitions := ((self componentValueAt: 'all-latest') = 'All Versions') ifFalse: [selectedLateralItem getLastDefinitions] ifTrue: [selectedLateralItem getAllDefinitions].
+
+	^(definitions select: [:each | self session user hasReadPermissionOn: each]) asArray
