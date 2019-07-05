@@ -1,6 +1,6 @@
 stream
 nextObject
-	"The receiver answer the next element if none answer <nil>"
+	"The receiver answer the next element <anOrbeonFormInstance> if none answer <nil>"
 	| id |
 
 	id := self next. "get the id of the form"

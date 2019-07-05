@@ -1,5 +1,11 @@
 stream
 next
+	"The receiver answer the next element in <currentStream> if none answer <nil>.
+	1) If <currentStream> is nil then initialize it with the first <OrbeonPublishedFormDefinition> instances keys in <versions>.
+	2) Try to get next element from <currentStream>
+	3) If 2) fail then iterate over <versions> to get next available <OrbeonPublishedFormDefinition>.
+	4) Set new <currentStream> from <streams> Dictionary.
+	5) Try to get next element from <currentStream>"
 	| nextCollectionIndex |
 
 	self atEnd ifTrue: [^nil].

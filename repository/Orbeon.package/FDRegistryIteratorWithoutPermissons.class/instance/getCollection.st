@@ -1,5 +1,6 @@
 stream
 getCollection
+	"The receiver answer a collection of elements from <fromIndex> to <toIndex>"
 
 	self position: fromIndex. "set the <currentStream> position"
 
