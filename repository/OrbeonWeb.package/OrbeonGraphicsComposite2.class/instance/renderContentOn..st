@@ -12,4 +12,7 @@ renderContentOn: html
 	ifTrue: [html div with: [self renderGraphicsOptionsOn: html]]
 	ifFalse: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
 
-	graphName ifNotNil: [self renderGraphOn: html]
+	"graphName ifNotNil: [self renderGraphOn: html] "
+
+	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [self drawGlobalBarQuantityChartOn: html].
+	(self isGlobalScope and: [self isDonutQuantityChart]) ifTrue: [^self drawGlobalPieQuantityChartOn: html].
