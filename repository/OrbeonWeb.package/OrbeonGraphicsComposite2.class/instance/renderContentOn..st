@@ -14,5 +14,6 @@ renderContentOn: html
 
 	"graphName ifNotNil: [self renderGraphOn: html] "
 
-	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [self drawGlobalBarQuantityChartOn: html].
+	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraphOn: html].
+	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [^self drawGlobalBarQuantityChartOn: html].
 	(self isGlobalScope and: [self isDonutQuantityChart]) ifTrue: [^self drawGlobalPieQuantityChartOn: html].
