@@ -2,7 +2,7 @@ stream
 getCollection
 	"The receiver answer a collection of elements from <fromIndex> to <toIndex>"
 
-	self position: fromIndex. "set the <currentStream> position"
+	self position: fromIndex - 1. "set the <currentStream> position" "issue #223"
 
 	fromIndex to: toIndex do: [:index | | form |
 		self atEnd 

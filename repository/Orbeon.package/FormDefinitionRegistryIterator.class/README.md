@@ -19,4 +19,4 @@ fromIndex - the index of the first OrbeonFormInstance to show.
 toIndex - the index of the last OrbeonFormInstance to show.
 formsInRange - a collection of OrbeonFormInstance from <fromIndex> to <toIndex>. It can be a mix of OrbeonFormInstance of two o more OrbeonPublishedFormDefinition.
 globalSize - the total number of OrbeonFormInstance including all OrbeonPublishedFormDefinition.
-currentVersion - the version number.
+versionNumber - the version number.
