@@ -17,7 +17,7 @@ position: integerShift
 
 	rolesWithReadPermission do: [:roleName | queryString := queryString, (queryString ifEmpty: ['(each.groupname = ''', roleName, ''')'] ifNotEmpty: [' | ', '(each.groupname = ''', roleName, ''')'])].
 
-	gsQuery := queryString asQueryOn: definitionRegistry instancesSet.
+	gsQuery := queryString asQueryOn: (definitionRegistry instancesSetOfVersion: versionNumber).
 
 	index := 0.
 	gsQuery asArray asSet do:[:eachForm | 
