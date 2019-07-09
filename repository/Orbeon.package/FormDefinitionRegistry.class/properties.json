@@ -10,7 +10,8 @@
 		"currentVersions",
 		"oldVersions",
 		"savedDefinitions",
-		"instancesSet" ],
+		"instancesSet",
+		"instancesVersionSet" ],
 	"name" : "FormDefinitionRegistry",
 	"pools" : [
 		 ],
