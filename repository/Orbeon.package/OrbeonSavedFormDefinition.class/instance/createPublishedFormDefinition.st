@@ -6,6 +6,7 @@ createPublishedFormDefinition
 
 	publishedForm := OrbeonPublishedFormDefinition new
 									id: id;
+									version: version;
 									application: application;
 									formName: formName;
 									title: self title;
