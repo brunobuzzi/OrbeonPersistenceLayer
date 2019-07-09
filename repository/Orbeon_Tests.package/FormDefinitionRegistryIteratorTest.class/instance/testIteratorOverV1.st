@@ -11,25 +11,48 @@ testIteratorOverV1
 		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v1_name: withValues: (Array with: each) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV1.
 	].
 
-	iterator := FDRegistryIteratorWithoutPermissons on: (self application registryForFormNamed: 'iterator' ifNone: [self assert: false]) forVersion: 1.
+	"page size = 10 and 16 forms"
+	iterator := self newIteratorForVersion: 1.
 	iterator fromIndex: 1; toIndex: 10.
 	self assert: (iterator getCollection size = 10).
-
-	iterator := FDRegistryIteratorWithoutPermissons on: (self application registryForFormNamed: 'iterator' ifNone: [self assert: false]) forVersion: 1.
+	"page size = 5 and 16 forms"
+	iterator := self newIteratorForVersion: 1.
 	iterator fromIndex: 1; toIndex: 5.
 	self assert: (iterator getCollection size = 5).
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 6; toIndex: 10.
+	self assert: (iterator getCollection size = 5).
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 11; toIndex: 15.
+	self assert: (iterator getCollection size = 5).
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 16; toIndex: 16.
+	self assert: (iterator getCollection size = 1).
 
-	iterator := FDRegistryIteratorWithoutPermissons on: (self application registryForFormNamed: 'iterator' ifNone: [self assert: false]) forVersion: 1.
+	"page size = 7 and 16 forms"
+	iterator := self newIteratorForVersion: 1.
 	iterator fromIndex: 1; toIndex: 7.
 	self assert: (iterator getCollection size = 7).
-
-	iterator := FDRegistryIteratorWithoutPermissons on: (self application registryForFormNamed: 'iterator' ifNone: [self assert: false]) forVersion: 1.
-	iterator fromIndex: 1; toIndex: 15.
-	self assert: (iterator getCollection size = 15).
-
-	self assert: (iterator nextObject notNil). "we reach the last object a position: 16"
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 8; toIndex: 14.
+	self assert: (iterator getCollection size = 7).
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 15; toIndex: 16.
+	self assert: (iterator getCollection size = 2).
 	self assert: (iterator nextObject isNil).
 
-	iterator := FDRegistryIteratorWithoutPermissons on: (self application registryForFormNamed: 'iterator' ifNone: [self assert: false]) forVersion: 1.
+	"page size = 15 and 16 forms"
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 1; toIndex: 15.
+	self assert: (iterator getCollection size = 15).
+	iterator := self newIteratorForVersion: 1.
+	iterator fromIndex: 16; toIndex: 16.
+	self assert: (iterator getCollection size = 1).
+	self assert: (iterator nextObject isNil).
+
+	"page size = 16 and 16 forms"
+	iterator := self newIteratorForVersion: 1.
 	iterator fromIndex: 1; toIndex: 16.
 	self assert: (iterator getCollection size = 16).
+	self assert: (iterator nextObject isNil).
+	self assert: (iterator nextObject isNil).
