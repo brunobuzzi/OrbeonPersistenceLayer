@@ -14,8 +14,8 @@ executeQueryWithoutSearchCriteria
 	draftsSize :=  (self pageFrom = 1) ifTrue: [drafts size] ifFalse: [0].
 
 	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user group: group version: version. "answer a specific iterator to go through instances"
-	stream fromIndex: instancesShift - 1; "subtract 1 because #getCollection set the position of <stream> equal to <instancesShift> --> #next read the element at <instancesShift> position"
-				toIndex: (instancesShift - 1) + pageSize - draftsSize - 1.
+	stream fromIndex: instancesShift;
+				toIndex: (instancesShift - 1) + pageSize - draftsSize.
 
 	formsInRange := stream getCollection.
 
