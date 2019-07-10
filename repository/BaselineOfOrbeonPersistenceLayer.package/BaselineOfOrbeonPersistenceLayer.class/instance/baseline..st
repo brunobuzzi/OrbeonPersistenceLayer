@@ -26,6 +26,8 @@ baseline: spec
 
 		spec baseline: 'AbstractApplicationObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master/repository' ].
+		spec baseline: 'Ston' with: [
+			spec repository: 'github://GsDevKit/ston:gemstone/repository' ].
 		spec baseline: 'Sewaf' with: [
 			spec repository: 'github://brunobuzzi/SEWAF:master/repository' ].
 		spec baseline: 'Seaside3' with: [
@@ -37,7 +39,7 @@ baseline: spec
 		spec package: 'OrbeonLDAP';
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath' 'OrbeonLDAP')];
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
-				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
+				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
 				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'OrbeonLDAP' 'Seaside3' 'Jasvgi')];
 				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates')].
 
