@@ -5,7 +5,7 @@ getPermissions
 
 	permissions := OrbeonPermissions new.
 	permissionNodes := xmlDocument xPath: '//metadata/permissions/permission'.
-
+ 
 	permissionNodes do: [:node |
 		node hasContentNodes " -anyone- role does not have content"
 		ifTrue: [self addPermissionTo: permissions fromString: (node attributeAt: 'operations') using: node]

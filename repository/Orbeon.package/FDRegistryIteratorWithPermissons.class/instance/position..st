@@ -15,13 +15,13 @@ position: integerShift
 	hasOwnerPermission ifTrue: [queryString := queryString, (queryString ifEmpty: ['(each.username = ''', user, ''')'] ifNotEmpty: [' | ', '(each.username = ''', user, ''')']) ].
 	hasGroupPermission ifTrue: [queryString := queryString, (queryString ifEmpty: ['(each.groupname = ''', group, ''')'] ifNotEmpty: [' | ', '(each.groupname = ''', group, ''')']) ].
 
-	rolesWithReadPermission do: [:roleName | queryString := queryString, (queryString ifEmpty: ['(each.groupname = ''', roleName, ''')'] ifNotEmpty: [' | ', '(each.groupname = ''', roleName, ''')'])].
+	"rolesWithReadPermission do: [:roleName | queryString := queryString, (queryString ifEmpty: ['(each.groupname = ''', roleName, ''')'] ifNotEmpty: [' | ', '(each.groupname = ''', roleName, ''')'])]."
 
 	gsQuery := queryString asQueryOn: (definitionRegistry instancesSetOfVersion: versionNumber).
 
 	index := 0.
 	gsQuery asArray asSet do:[:eachForm | 
 		index := index + 1.
-		((fromIndex < index) and: [index <= toIndex]) ifTrue: [self addResult: eachForm].
+		((fromIndex <= index) and: [index <= toIndex]) ifTrue: [self addResult: eachForm].
 		(index >= toIndex) ifTrue: [^self]. 
 	].
