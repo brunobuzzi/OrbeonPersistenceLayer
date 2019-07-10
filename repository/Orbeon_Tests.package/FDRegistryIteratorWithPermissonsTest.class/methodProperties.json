@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testIteratorOverV1" : "brunobb 07/10/2019 10:42" } }
+		"testIteratorOverV1" : "brunobb 07/10/2019 10:42",
+		"testIteratorOverV1andV2" : "brunobb 07/10/2019 12:33",
+		"testIteratorOverV1andV2andV3" : "brunobb 07/10/2019 12:34" } }
