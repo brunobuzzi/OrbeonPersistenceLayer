@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"gsQuery" ],
+		"gsQuery",
+		"roles" ],
 	"name" : "FDRegistryIteratorWithPermissons",
 	"pools" : [
 		 ],
