@@ -17,7 +17,8 @@
 		"pageSize",
 		"queryNodes",
 		"queryString",
-		"searchValues" ],
+		"searchValues",
+		"userCredentials" ],
 	"name" : "OrbeonSummaryApi",
 	"pools" : [
 		 ],
