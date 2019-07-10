@@ -1,7 +1,7 @@
 gsBug46607
 position: integerShift
 	"The receiver skip to <integerShift> position. Each version in <versions> collection eventually could have a ReadStream associated to it's instances "
-	| lastPublishedVersion allPermissions rolesWithReadPermission hasOwnerPermission hasGroupPermission queryString index |
+	| lastPublishedVersion allPermissions rolesWithReadPermission hasOwnerPermission hasGroupPermission queryString |
 
 	lastPublishedVersion := definitionRegistry getLastVersion.
 
@@ -19,9 +19,8 @@ position: integerShift
 
 	gsQuery := queryString asQueryOn: (definitionRegistry instancesSetOfVersion: versionNumber).
 
-	index := 0.
-	gsQuery asArray asSet do:[:eachForm | 
-		index := index + 1.
-		((fromIndex <= index) and: [index <= toIndex]) ifTrue: [self addResult: eachForm].
-		(index >= toIndex) ifTrue: [^self]. 
-	].
+	currentStream := ReadStreamPortable on: gsQuery asArray asSet asArray. "GS bug 46607 - the query return duplicate objects --> asSet"
+
+	(integerShift > currentStream size) ifTrue: [^ImproperOrbeonOperationException signal: 'An attempt was made to set the Stream to position ',integerShift printString,' beyond the limits of the collection.'].
+	
+	currentStream position: integerShift

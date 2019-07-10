@@ -1,4 +1,4 @@
 stream
 atEnd
 
-	^formsInRange size = self getTotalIntancesToSearch
+	^currentStream isNil or:[currentStream atEnd or: [formsInRange size = self getTotalIntancesToSearch]]
