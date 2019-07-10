@@ -13,7 +13,7 @@ executeQueryWithoutSearchCriteria
 	instancesShift := (self pageFrom = 1) ifTrue: [1] ifFalse: [self pageFrom - drafts size].
 	draftsSize :=  (self pageFrom = 1) ifTrue: [drafts size] ifFalse: [0].
 
-	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user group: group version: version. "answer a specific iterator to go through instances"
+	stream := (application registryForFormNamed: formName ifNone: [nil]) getIteratorFor: user roles: userCredentials group: group version: version. "answer a specific iterator to go through instances"
 	stream fromIndex: instancesShift;
 				toIndex: (instancesShift - 1) + pageSize - draftsSize.
 
