@@ -1,7 +1,7 @@
 iterator
-getIteratorClass
+getIteratorClassFor: versionNumber
 	"The receiver answer a suitable class to iterate over receiver's form instances"
 
-	^self getLastVersion hasPermissionsEnabled 
+	^(self getDefinitionVersion: versionNumber) hasPermissionsEnabled 
 		ifTrue: [FDRegistryIteratorWithPermissons] 
 		ifFalse: [FDRegistryIteratorWithoutPermissons]
