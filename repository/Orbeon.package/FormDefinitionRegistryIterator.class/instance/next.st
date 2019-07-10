@@ -1,4 +1,0 @@
-stream
-next
-
-	self subclassResponsibility

@@ -1,4 +1,7 @@
 stream
 nextObject
+	"The receiver answer the next element <anOrbeonFormInstance> if none answer <nil>"
 
-	self subclassResponsibility
+	self atEnd ifTrue: [^nil].
+
+	^currentStream next

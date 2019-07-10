@@ -6,5 +6,3 @@ on: aFormDefinitionRegistry forVersion: version
 	definitionRegistry := aFormDefinitionRegistry.
 
 	versionNumber := version.
-
-	versions := (aFormDefinitionRegistry getAllVersion: versionNumber) reverse. "the lastest version is the first"

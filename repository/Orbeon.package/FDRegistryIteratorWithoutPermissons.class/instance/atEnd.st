@@ -1,6 +1,5 @@
 stream
 atEnd
-	"Answer whether or not the receiver is atEnd.
-	Is atEnd if: the iteration is the last in <versions> and the <currentStream> is atEnd (no more instances availables)"
+	"Answer whether or not the receiver is atEnd"
 
-	^(currentDefinition == versions last) and: [currentStream atEnd]
+	^currentStream isNil or: [currentStream atEnd]

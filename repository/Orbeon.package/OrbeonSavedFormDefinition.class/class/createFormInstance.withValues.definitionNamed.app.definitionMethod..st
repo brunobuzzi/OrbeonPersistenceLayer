@@ -10,6 +10,7 @@ createFormInstance: xmlMethodName withValues: anArray definitionNamed: definitio
 		(OrbeonFormInstance newFor: definition withId: UUID new asString)
 			definition: definition;
 			xmlString: (OrbeonFormInstanceTemplate perform: xmlMethodName withArguments: anArray);
+			version: definition version;
 			processXML;
 			yourself.
 
