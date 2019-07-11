@@ -17,3 +17,11 @@ renderContentOn: html
 	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isBarQuantityChart]) ifTrue: [^self drawGlobalBarQuantityChartOn: html].
 	(self isGlobalScope and: [self isDonutQuantityChart]) ifTrue: [^self drawGlobalPieQuantityChartOn: html].
+
+
+	(self isApplicationScope and: [self isDonutQuantityChart]) ifTrue: [^self drawAppDonutQuantityChartOn: html].
+	(self isApplicationScope and: [self isBarQuantityChart]) ifTrue: [^self drawAppBarQuantityChartOn: html].
+
+
+	(self isFormDefinitionAllVersionsScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFormRegistryDonutQuantityChartOn: html].
+	(self isFormDefinitionAllVersionsScope and: [self isBarQuantityChart]) ifTrue: [^self drawFormRegistryBarQuantityChartOn: html].

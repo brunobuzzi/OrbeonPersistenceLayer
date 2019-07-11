@@ -1,4 +1,4 @@
 other
 bpmEnvironmentName
 
-	^'Orbeon'
+	^'GemStone/S 3.4.1'

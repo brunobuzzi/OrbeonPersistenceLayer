@@ -1,0 +1,4 @@
+chart command
+drawFormRegistryBarQuantityChartOn: html
+
+	self drawFormRegistryQuantityChartOn: html series: HighchartsSeriesColumn

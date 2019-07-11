@@ -1,0 +1,4 @@
+chart command
+drawFormRegistryDonutQuantityChartOn: html
+
+	self drawFormRegistryQuantityChartOn: html series: HighchartsSeriesPie
