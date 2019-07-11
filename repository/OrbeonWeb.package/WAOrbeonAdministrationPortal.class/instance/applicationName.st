@@ -1,4 +1,4 @@
 other
 applicationName
 
-	^'Orbeon Persitence Layer Backoffice'
+	^'Orbeon PL Backoffice'

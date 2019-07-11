@@ -1,4 +1,4 @@
 other
 bpmEnvironmentName
 
-	^'GemStone/S 3.4.1'
+	^'Persistence Layer: GemStone/S 3.4.1'

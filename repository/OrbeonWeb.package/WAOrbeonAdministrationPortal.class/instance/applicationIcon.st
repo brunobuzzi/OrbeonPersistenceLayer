@@ -1,4 +1,4 @@
 other
 applicationIcon
 
-	^SEWAFIconLibrary / #forms48Png
+	^SEWAFIconLibrary / #activitymonitor48Png
