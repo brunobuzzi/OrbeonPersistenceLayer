@@ -6,7 +6,7 @@ renderAllLatestVersionRadioButtonOn: html
 
 	html div with: [
 		html form with: [ 
-			html fieldSet with: [
+			html fieldSet class: 'border-none'; with: [
 				html radioGroup
 					callback: [:value | self updateRadioButtonOption: value];
 					selected: (self currentRadioButtonSelection);
