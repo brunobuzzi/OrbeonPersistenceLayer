@@ -1,4 +1,4 @@
 main component banner
 renderItemDescriptionTitleOn: html
 
-	html output:  selectedLateralItem applicationName.
+	html output:  ('Application: ' translateIn: self session), selectedLateralItem applicationName.

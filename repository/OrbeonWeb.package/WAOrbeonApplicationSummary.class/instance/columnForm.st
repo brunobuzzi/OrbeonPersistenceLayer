@@ -1,4 +1,4 @@
-other
+table columns
 columnForm
 
 		^(SewafReportColumn selector: #formName title: 'Form' onClick: [:each | self renderFormInstanceFor: each])

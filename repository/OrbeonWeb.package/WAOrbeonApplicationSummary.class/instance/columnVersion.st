@@ -1,6 +1,6 @@
-other
+table columns
 columnVersion
 
-		^(SewafReportColumn selector: #version title: 'Version' onClick: [:each | mainPanel renderFormInstanceFor: each])
+		^(SewafReportColumn selector: #version title: 'Version')
 			sortBlock: [:a :b | a version < b version];
 			yourself

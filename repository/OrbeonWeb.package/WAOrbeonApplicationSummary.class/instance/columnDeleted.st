@@ -1,7 +1,7 @@
-other
+table columns
 columnDeleted
 
-		^(SewafReportColumn selector: #deleted title: 'Deleted' onClick: [:each | mainPanel renderFormInstanceFor: each])
+		^(SewafReportColumn selector: #deleted title: 'Deleted')
 			sortBlock: [:a :b | a deleted < b deleted ];
 			beSortable;
 			yourself
