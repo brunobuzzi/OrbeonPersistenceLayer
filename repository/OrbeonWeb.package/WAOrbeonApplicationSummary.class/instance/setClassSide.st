@@ -1,4 +1,6 @@
-other
+main components
 setClassSide
 
-	self addValue: 'class' named: 'type'
+	self addValue: 'class' named: 'type'.
+
+	selectedFormDefinition := nil

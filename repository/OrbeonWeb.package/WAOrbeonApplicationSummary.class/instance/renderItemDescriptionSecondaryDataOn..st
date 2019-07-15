@@ -1,2 +1,2 @@
-other
+main component banner
 renderItemDescriptionSecondaryDataOn: html
