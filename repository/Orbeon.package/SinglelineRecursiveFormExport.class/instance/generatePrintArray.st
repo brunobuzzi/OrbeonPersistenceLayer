@@ -30,7 +30,7 @@ generatePrintArray
         columnNumber := 2.
         (fieldSpace orderedKeys reject: [:each | each isNil]) do: [:fieldName | | valueHolder |
             valueHolder := eachForm holderValueAt: fieldName.
-            newArray addAll: (valueHolder currentValues collect: [:e | e originalValue ifNil: [nil] ifNotNil: [:value | value copyWithoutAll: String lf]"decodeFromUTF8ToUnicode asString"])
+            newArray addAll: (valueHolder currentValues collect: [:appFieldValue | (appFieldValue valueAsString copyWithoutAll: String lf)"decodeFromUTF8ToUnicode asString"])
                             afterIndex: columnNumber.
             columnNumber := columnNumber + (fieldSpace at: fieldName).
         ].

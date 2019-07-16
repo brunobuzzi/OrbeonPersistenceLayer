@@ -7,4 +7,4 @@ insert: fieldName value: fieldValue
 
 	column := fieldPositions at: fieldName. "get the column of <fieldName>"
 	valueArray := printArray at: lineNumber. "get the current row"
-	valueArray at: column put: fieldValue. "insert the value"
+	valueArray at: column put: (fieldValue isOctetString ifTrue: [fieldValue] ifFalse: [fieldValue printString]). "insert the value"
