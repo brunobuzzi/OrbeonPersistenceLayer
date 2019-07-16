@@ -1,4 +1,4 @@
-tables
+table columns
 tableColumnsForOrbeonInstance
 	| columns formDefinition |
 
@@ -10,11 +10,17 @@ tableColumnsForOrbeonInstance
 						renderBlock: [:each :html | | fieldValue |
 							fieldValue := each valueAt: value.
 							fieldValue ifNil: [fieldValue := ''].
-							html anchor target: '_blank'; url: (self generateViewUrlFor: each); with: fieldValue.
+							"html anchor target: '_blank'; url: (self generateViewUrlFor: each); with: fieldValue."
+							html output: fieldValue.
 							] 
 						title: (formDefinition labelAt:value).
 		column sortBlock: (self sortBlockForInstances: value);
 			beSortable.
 		columns add: column].
+
+	columns add: self columnViewInstance;
+		add: self columnEditInstance;
+		add: self columnPdfInstance;
+		add: self columnDeleteInstance.
 
 	^columns
