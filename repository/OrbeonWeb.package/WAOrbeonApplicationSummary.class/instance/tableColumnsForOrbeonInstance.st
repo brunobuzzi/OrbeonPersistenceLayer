@@ -20,7 +20,6 @@ tableColumnsForOrbeonInstance
 
 	columns add: self columnViewInstance;
 		add: self columnEditInstance;
-		add: self columnPdfInstance;
-		add: self columnDeleteInstance.
+		add: self columnPdfInstance.
 
 	^columns

@@ -4,8 +4,8 @@ initializeSewafTableForFormsDefinitions
 
 	table := (SewafSelectTableReport parent: self)
 		"rows: self searchRoles; "
-		selectedColor: 'beige';
-		nonSelectedColor: 'darkgray';
+		selectedColor: 'gray';
+		nonSelectedColor: 'white';
 		columns: self columnsForFormsDefinitions;
 		rowColors: #(white white);
 		rowPeriod: 1;

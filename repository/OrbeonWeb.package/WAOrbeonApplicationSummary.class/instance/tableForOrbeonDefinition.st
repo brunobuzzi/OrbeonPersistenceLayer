@@ -13,7 +13,6 @@ tableForOrbeonDefinition
 						add: self columnDeleted;
 						add: self columnEdit;
 						add: self columnImport;
-						add: self columnDelete;
 						yourself);
 		rowColors: #(white white);
 		rowPeriod: 1;
