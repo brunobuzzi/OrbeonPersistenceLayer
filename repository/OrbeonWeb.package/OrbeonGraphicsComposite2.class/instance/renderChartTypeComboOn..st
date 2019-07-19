@@ -14,10 +14,8 @@ renderChartTypeComboOn: html
 
 	((self searchValueAt: 'chart-type' ifAbsent: ['']) includesSubString: 'Day Distribution') 
 	ifTrue: [
-html break.
 		html label: [ 
 			html checkbox value: (self searchValueAt: 'dayHasContent' ifAbsent: ['']); callback: [:value | self addSearchValue: value named: 'dayHasContent'].
 			html text: 'Show Days Count'
 		].
 	].
-html break.

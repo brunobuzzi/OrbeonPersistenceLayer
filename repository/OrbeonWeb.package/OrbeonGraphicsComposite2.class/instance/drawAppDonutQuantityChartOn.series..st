@@ -2,6 +2,8 @@ chart command
 drawAppDonutQuantityChartOn: html series: aHighchartsSeriesClass
 	| highchart |
 	
+	selectedDefinition ifNil: [^self].
+
 	distributionReport := selectedDefinition application reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
 
 	highchart := html highcharts newChart.

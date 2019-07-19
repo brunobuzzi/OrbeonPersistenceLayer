@@ -3,7 +3,7 @@ renderGraphicsOptionsOn: html
 
 		html form class: 'centered-unique-form'; with: [
 			html fieldSet class: 'border-radius10px'; with: [ 
-				html legend: 'Charts'.
+				html legend: ('Charts Configuration' translateIn: self session).
 				self renderChartTypeComboOn: html.
 				self renderStartEndDatesOn: html.
 				((self searchValueAt: 'chart-scope') = 'Fields Values') ifTrue: [self renderFormFieldFilterOn: html]. 
