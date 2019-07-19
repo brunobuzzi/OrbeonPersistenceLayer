@@ -23,6 +23,10 @@ renderContentOn: html
 
 	(self isApplicationScope and: [self isDonutQuantityChart]) ifTrue: [^self drawAppDonutQuantityChartOn: html].
 	(self isApplicationScope and: [self isBarQuantityChart]) ifTrue: [^self drawAppBarQuantityChartOn: html].
+	(self isApplicationScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawAppFormInstancesCreationDayDistributionGraphOn: html].
+	(self isApplicationScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawAppFormInstancesModificationDayDistributionGraphOn: html].
+	(self isApplicationScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawAppFormInstancesCreationPieByMonthGraphOn: html].
+	(self isApplicationScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawAppFormInstancesModificationPieByMonthGraphOn: html].
 
 	(self isFormDefinitionAllVersionsScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFormRegistryDonutQuantityChartOn: html].
 	(self isFormDefinitionAllVersionsScope and: [self isBarQuantityChart]) ifTrue: [^self drawFormRegistryBarQuantityChartOn: html].
