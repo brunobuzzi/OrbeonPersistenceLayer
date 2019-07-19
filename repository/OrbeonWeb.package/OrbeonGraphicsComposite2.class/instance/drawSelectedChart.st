@@ -1,8 +1,7 @@
 chart command
 drawSelectedChart
 
-	showOptionsForms := false.
-	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraph].
+"	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraph].
 	(self isGlobalScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawGlobalAppFormInstancesModificationDayDistributionGraph].
 	(self isGlobalScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesCreationPieByMonthGraph].
 	(self isGlobalScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesModificationPieByMonthGraph].
@@ -37,4 +36,4 @@ drawSelectedChart
 	(self isFieldValuesScope and: [self isBarQuantityChart]) ifTrue: [^self drawFieldInstancesBarQuantityChart].
 	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDonutQuantityChart].
 	(self isFieldValuesScope and: [self isDoubleDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDoubleDonutQuantityChart].
-	(self isFieldValuesScope and: [self isDoubleBarQuantityChart]) ifTrue: [^self drawFieldInstancesDoubleBarQuantityChart].
+	(self isFieldValuesScope and: [self isDoubleBarQuantityChart]) ifTrue: [^self drawFieldInstancesDoubleBarQuantityChart]."

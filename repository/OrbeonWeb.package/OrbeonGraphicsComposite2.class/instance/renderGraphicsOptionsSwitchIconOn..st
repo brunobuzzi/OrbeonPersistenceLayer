@@ -2,5 +2,5 @@ render
 renderGraphicsOptionsSwitchIconOn: html
 
 	html anchor 
-		callback: [showOptionsForms := true];
+		callback: [showOptionsForms := showOptionsForms not];
 		with: [html image url: (SEWAFIconLibrary / #photovideoswitchcameraPng)]
