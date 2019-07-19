@@ -30,3 +30,7 @@ renderContentOn: html
 
 	(self isFormDefinitionAllVersionsScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFormRegistryDonutQuantityChartOn: html].
 	(self isFormDefinitionAllVersionsScope and: [self isBarQuantityChart]) ifTrue: [^self drawFormRegistryBarQuantityChartOn: html].
+	(self isFormDefinitionAllVersionsScope and: [self isDayDistributionCreationChart]) ifTrue: [self drawFormRegistryCreationDayDistributionGraphOn: html].
+	(self isFormDefinitionAllVersionsScope and: [self isDayDistributionModificationChart]) ifTrue: [self drawFormRegistryModificationDayDistributionGraphOn: html].
+	(self isFormDefinitionAllVersionsScope and: [self isDonutCreationByMonthChart]) ifTrue: [self drawFormRegistryFormInstancesCreationPieByMonthGraphOn: html].
+	(self isFormDefinitionAllVersionsScope and: [self isDonutModificationByMonthChart]) ifTrue: [self drawFormRegistryFormInstancesModificationPieByMonthGraphOn: html].

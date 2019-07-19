@@ -1,10 +1,10 @@
 highcharts
-drawFormRegistryDonutQuantityChartOn: html
+drawFormRegistryFormInstancesCreationPieByMonthGraphOn: html
 	| highchart |
 	
 	selectedDefinition ifNil: [^self].
 
-	distributionReport := selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport := selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.
