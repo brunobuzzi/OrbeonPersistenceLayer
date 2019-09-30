@@ -1,5 +1,5 @@
 other
-getMandatoryFieldsMissing
+getMissingMandatoryFields
 	"Answer a collection of mandatory fields missing needed to use Orbeon Form Processes.
 	All these fields must be included in the Orbeon Form Definition in order the Form Worflow work correctly"
 	| missingManFields |
