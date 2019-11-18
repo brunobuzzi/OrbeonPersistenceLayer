@@ -8,7 +8,7 @@ generateFormFieldValueSet
 			valueHolder := (fieldsValues includesKey: key) "<fieldsValues at:> answer aFieldValueHolder"
 								ifFalse: [fieldsValues at: key put: (OrbeonFieldValueHolder newWithNoConvertionFor: self forFieldNamed: key)]
 								ifTrue: [fieldsValues at: key].
-			"convert string values to real type values or update added/removed values"
+			"update the fields contained in <valueHolder>"
 			valueHolder processFieldValueCollection: valuesCollection withFieldClass: (self classOf: key) in: self. "see issue #208"
 			definition updateFieldInstancesFrom: valueHolder. "update general index collection of the OrbeonFormDefinition"
 
