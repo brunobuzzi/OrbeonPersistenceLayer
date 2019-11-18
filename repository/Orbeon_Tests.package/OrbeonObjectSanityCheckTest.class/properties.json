@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonObjectSanityCheckTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
