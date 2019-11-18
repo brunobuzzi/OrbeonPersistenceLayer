@@ -40,7 +40,7 @@ formDefinition_issue243_v1_1
             <!-- Metadata -->
             <xf:instance id="fr-form-metadata" xxf:readonly="true" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>ue</application-name>
+                    <application-name>ue-test</application-name>
                     <form-name>issue-243</form-name>
                     <title xml:lang="en">Issue 243</title>
                     <description xml:lang="en"/>
