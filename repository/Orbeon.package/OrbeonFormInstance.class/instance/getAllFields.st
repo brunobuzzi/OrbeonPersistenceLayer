@@ -3,7 +3,7 @@ getAllFields
 	"The receiver answer a Dictionary with ALL fields (including nested sections) where the key is the field name and the value is the collection of fields value. 
 	If collection size = 0 --> empty collection, 
 	if the collection size = 1 --> simple field, 
-	otherwise a field inside a repeat component"
+	otherwise a is a field inside a repeat component"
 	| allFields |
 
 	allFields := Dictionary new.
