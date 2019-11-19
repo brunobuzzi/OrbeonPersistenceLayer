@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"formDefinition_v1",
+		"formDefinition_1_1" ],
 	"name" : "OrbeonFormInstanceTestIssue243",
 	"pools" : [
 		 ],
