@@ -1,6 +1,6 @@
 other
 addForm: anOrbeonFormInstance
 
-	(instancesVersionSet at: anOrbeonFormInstance version ifAbsentPut: [RcIdentityBag new]) add: anOrbeonFormInstance.
+	(instancesVersionSet at: anOrbeonFormInstance version ifAbsentPut: [RcIdentitySet new]) add: anOrbeonFormInstance.
 
 	^instancesSet add: anOrbeonFormInstance
