@@ -6,3 +6,5 @@ removeFieldsValuesIn: anOrbeonPublishedFormDefinition
 	fieldsValues keysAndValuesDo: [:fieldName :valueHolder |  
 		valueHolder currentValues do: [:fieldValue | anOrbeonPublishedFormDefinition removeFieldInstance: fieldValue].
 	].
+
+	self removeLostFieldsValues.
