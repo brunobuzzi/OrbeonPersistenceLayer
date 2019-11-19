@@ -5,7 +5,7 @@ setUserCredentialsFrom: jsonString
 
 	userCredentials := OrderedCollection new.
 
-	[jsonDictionary := STON fromString: jsonString] on: STONReaderError do: [:ex | ^self].
+	[jsonDictionary := STON fromString: jsonString] on: Error "STONReaderError" do: [:ex | ^self].
 
 	rolesArray := jsonDictionary at: 'roles' ifAbsent: [^self].
 
