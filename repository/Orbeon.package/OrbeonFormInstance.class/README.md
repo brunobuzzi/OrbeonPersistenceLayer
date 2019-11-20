@@ -7,7 +7,6 @@ groupname 				- groupname of the user (mysql).
 fields              			- aDictionary where each key is a field name and each value is a string value of the field.
 definition 				- the OrbeonFormDefinition of the receiver.
 fieldsValues 			- aDictionary where each key is the field name and each value is a AppFieldValueHolder.
-repeatFieldsValues 	- aDictionary with the repeats components of the form and it's values.
 sections					- aDictionary with the section components of the form and it's values.
 externalOwner		- an external owner to be used by third parties packages as Orbeon Form Processes where the <externalOwner> is an OrbeonFormTransition. 
 
