@@ -9,15 +9,23 @@ testAppFieldValuesWithFormInstances
 			formRegistry getAllVersion do: [:publishedDefinition | | instances |
 				instances := Set new.
 				publishedDefinition fieldInstances do: [:collection | 
-					instances addAll: (collection collect: [:each | each parentObject]).
+					instances addAll: (collection collect: [:each | each parentObject]). "collect form instances from <AppFieldValue>"
 				]. 
 				allInstances addAll: instances.
 				instances do: [:formInstance | 
-					self assert: (formRegistry anyDefinitionIncludes: formInstance).
+					"check form instance from <AppFieldValue> is included in the any definition of the form registry"
+					self assert: (formRegistry anyDefinitionIncludes: formInstance). 
+					"check form instance from <AppFieldValue> is included in <instancesSet> of the form registry"
 					self assert: (formRegistry instancesSet includes: formInstance).
+					"check form instance from <AppFieldValue> is included in <instancesVersionSet> of the form registry"
 					self assert: ((formRegistry instancesSetOfVersion: formInstance version) includes: formInstance).
+					"check if all <AppFieldValue> are included in fields general collection of the form definition"
+					formInstance getAllFieldsValues do: [:fieldValue | 
+						self assert: ((publishedDefinition fieldInstancesOf: fieldValue name) includes: fieldValue).
+					]. 
 				].
 			].
+			"check if all form instances (collected from <AppFieldValue>) size is equal to general instance collection of the registry"
 			self assert: allInstances size equals: formRegistry instancesSet size.
 		].
 	].
