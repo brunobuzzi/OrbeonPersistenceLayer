@@ -1,6 +1,7 @@
 other
 setUserCredentialsFrom: jsonString
-	"The receiver read roles of the user from <jsonString> and store them in <userCredentials> inst var "
+	"The receiver read roles of the user from <jsonString> and store them in <userCredentials> inst var.
+	<jsonString> it could be <nil> if security is disable at Orbeon level in <web.xml> configuration file"
 	| jsonDictionary rolesArray |
 
 	userCredentials := OrderedCollection new.
