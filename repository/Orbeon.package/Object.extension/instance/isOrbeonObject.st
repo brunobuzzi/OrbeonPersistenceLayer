@@ -1,0 +1,4 @@
+*orbeon
+isOrbeonObject
+
+	^false
