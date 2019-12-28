@@ -65,6 +65,7 @@
 		"getInstancesCreationDayDistributionQuantityFrom:to:satisfying:" : "BrunoBB 01/04/2017 06:01",
 		"getInstancesCreationDistributionByMonthFrom:to:" : "BrunoBB 01/04/2017 06:01",
 		"getInstancesCreationDistributionByMonthFrom:to:satisfying:" : "BrunoBB 01/04/2017 06:01",
+		"getInstancesCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 12/01/2019 08:27",
 		"getInstancesDayDistributionQuantityUsing:from:to:" : "BrunoBB 01/04/2017 06:01",
 		"getInstancesDayDistributionQuantityUsing:from:to:satisfying:" : "BrunoBB 01/04/2017 06:01",
 		"getInstancesModificationDayDistributionQuantityFrom:to:" : "BrunoBB 01/04/2017 06:01",
