@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonWebLocalLogin",
+	"pools" : [
+		 ],
+	"super" : "AppLocalLogin",
+	"type" : "normal" }
