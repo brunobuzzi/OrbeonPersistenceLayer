@@ -32,7 +32,7 @@ baseline: spec
 			spec repository: 'github://brunobuzzi/SEWAF:master/repository' ].
 		spec baseline: 'Seaside3' with: [
 			spec loads: #('Core' 'REST' 'Seaside-Tools-Web');
-				repository: 'github://GsDevKit/Seaside31:gs_master/repository' ].
+				repository: 'github://SeasideSt/Seaside:master/repository' ].
 		spec baseline: 'Jasvgi' with: [
 			spec repository: 'github://brunobuzzi/JASVGI:master/repository'].
 
