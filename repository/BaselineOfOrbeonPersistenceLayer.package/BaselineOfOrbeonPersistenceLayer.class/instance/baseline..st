@@ -33,8 +33,8 @@ baseline: spec
 		spec baseline: 'Seaside3' with: [
 			spec loads: #('Core' 'REST' 'Seaside-Tools-Web');
 				repository: 'github://SeasideSt/Seaside:master/repository' ].
-"		spec baseline: 'Jasvgi' with: [
-			spec repository: 'github://brunobuzzi/JASVGI:master/repository']."
+		spec baseline: 'Jasvgi' with: [
+			spec repository: 'github://brunobuzzi/JASVGI:master/repository'].
 
 		spec 
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath')];
