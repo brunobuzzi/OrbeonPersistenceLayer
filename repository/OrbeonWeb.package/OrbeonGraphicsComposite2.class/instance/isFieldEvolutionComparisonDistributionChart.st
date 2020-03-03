@@ -1,4 +1,4 @@
 chart type
-isFieldEvolutionComparisionDistributionChart
+isFieldEvolutionComparisonDistributionChart
 
 	^(self searchValueAt: 'chart-type') = 'Field Evolution Comparison'

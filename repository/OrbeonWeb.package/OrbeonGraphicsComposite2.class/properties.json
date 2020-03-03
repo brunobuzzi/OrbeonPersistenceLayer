@@ -12,7 +12,9 @@
 		"svgCanvas",
 		"showDefinitionList",
 		"distributionReport",
-		"showOptionsForms" ],
+		"showOptionsForms",
+		"selectedFields",
+		"isRenderingChart" ],
 	"name" : "OrbeonGraphicsComposite2",
 	"pools" : [
 		 ],

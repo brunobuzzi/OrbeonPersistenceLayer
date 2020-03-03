@@ -12,7 +12,7 @@ renderContentOn: html
 		ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: [self renderGraphicsOptionsOn: html]].
 		showDefinitionList ifTrue: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
 	].
-	"graphName ifNotNil: [self renderGraphOn: html] "
+	isRenderingChart ifFalse: [^self].
 
 	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawGlobalAppFormInstancesModificationDayDistributionGraphOn: html].
@@ -44,3 +44,6 @@ renderContentOn: html
 	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionPieGraphOn: html].
 	(self isFieldValuesScope and: [self isBarQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionBarGraphOn: html].
 	(self isFieldValuesScope and: [self isFieldEvolutionDistributionChart]) ifTrue: [^self drawFieldEvolutionDistributionBarGraphOn: html].
+	(self isFieldValuesScope and: [self isFieldEvolutionComparisonDistributionChart]) ifTrue: [^self drawFieldEvolutionComparisionDistributionBarGraphOn: html].
+
+	isRenderingChart := false.

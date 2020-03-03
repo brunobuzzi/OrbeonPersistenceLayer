@@ -7,3 +7,5 @@ initialize
 
 	showDefinitionList := true.
 	showOptionsForms := true.
+	selectedFields := OrderedCollection new.
+	isRenderingChart := false.

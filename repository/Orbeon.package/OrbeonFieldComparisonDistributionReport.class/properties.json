@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonFieldComparisonDistributionReport",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFieldDistributionReport",
+	"type" : "normal" }
