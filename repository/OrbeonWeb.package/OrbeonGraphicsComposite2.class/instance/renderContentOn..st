@@ -14,8 +14,6 @@ renderContentOn: html
 	].
 	"graphName ifNotNil: [self renderGraphOn: html] "
 
-	showOptionsForms := false.
-	showDefinitionList := false.
 	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawGlobalAppFormInstancesModificationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesCreationPieByMonthGraphOn: html].
@@ -42,3 +40,6 @@ renderContentOn: html
 	(self isFormDefinitionScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawFormDefinitionModificationnDayDistributionGraphOn: html].
 	(self isFormDefinitionScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawFormDefinitionFormInstancesCreationPieByMonthGraphOn: html].
 	(self isFormDefinitionScope and: [self isDonutModificationByMonthChart]) ifTrue: [^self drawFormDefinitionFormInstancesModificationPieByMonthGraphOn: html].
+
+	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionPieGraphOn: html].
+	(self isFieldValuesScope and: [self isBarQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionBarGraphOn: html].
