@@ -2,7 +2,6 @@ highcharts
 drawGlobalFormInstancesModificationPieByMonthGraphOn: html
 	| highchart |
  
-	graphName := #applicationFormsGraph.
 	distributionReport := self getOrbeonApplicationClass reportModificationDistributionByMonthFrom: self getStartDate to: self getEndDate. 
 
 	highchart := html highcharts newChart.

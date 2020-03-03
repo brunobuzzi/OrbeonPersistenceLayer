@@ -2,7 +2,6 @@ highcharts
 drawGlobalQuantityChartOn: html series: aHighchartsSeriesClass
 	| highchart |
 
-	graphName := #applicationFormsGraph.
 	distributionReport := self getOrbeonApplicationClass reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
 
 	highchart := html highcharts newChart.
