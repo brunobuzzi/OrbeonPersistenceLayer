@@ -1,9 +1,10 @@
 highcharts
-drawGlobalQuantityChartOn: html series: aHighchartsSeriesClass
+drawFormDefinitionTypesDonutQuantityChartOn: html
 	| highchart |
+	
+	selectedDefinition ifNil: [^self].
 
-	graphName := #applicationFormsGraph.
-	distributionReport := self getOrbeonApplicationClass reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
+	distributionReport := selectedDefinition reporFormDefinitionTypesDistribution.
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.
@@ -20,7 +21,7 @@ drawGlobalQuantityChartOn: html series: aHighchartsSeriesClass
 		(eachDistributionReport getDistributionToRenderFor: nil) keysAndValuesDo: [:key :value | 
 			data add: (Array with: key with: value).
 		].
-		(highchart addSeriesOf: aHighchartsSeriesClass)
+		(highchart addSeriesOf: HighchartsSeriesPie)
 			index: 0;
 			name: eachDistributionReport seriesName;
 			data: data asArray.
