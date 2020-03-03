@@ -12,5 +12,6 @@ reportFieldsComparisonEvolutionFor: fieldCollection startDate: startDate to: end
 	].
 
 	^(OrbeonFieldComparisonDistributionReport applicationName: self applicationName formName: formName version: self version fieldName: 'all' distribution: distributionCollection)
+		fieldDistributions: distributionCollection;
 		sumSecondsToConstruct: secondsToRun;
 		yourself

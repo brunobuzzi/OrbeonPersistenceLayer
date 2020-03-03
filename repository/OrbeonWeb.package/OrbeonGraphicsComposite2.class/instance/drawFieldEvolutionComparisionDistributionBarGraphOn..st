@@ -5,6 +5,8 @@ drawFieldEvolutionComparisionDistributionBarGraphOn: html
 	selectedDefinition ifNil: [^self].
 
 	distributionReport := selectedDefinition reportFieldsComparisonEvolutionFor: selectedFields startDate: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport xAxisIsDate: true.
+	distributionReport createSecondaryDistributions.
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.
@@ -16,12 +18,12 @@ drawFieldEvolutionComparisionDistributionBarGraphOn: html
 
 	distributionReport categories ifNotNil: [:categories | highchart xAxis categories: categories].
 
-	distributionReport rootDistribution do: [:eachDistributionReport | | data |
+	distributionReport fieldDistributions do: [:eachDistributionReport | | data |
 		data := OrderedCollection new.
 		(eachDistributionReport getDistributionToRenderFor: nil) keysAndValuesDo: [:key :value | 
 			data add: (Array with: key with: value).
 		].
-		(highchart addSeriesOf: HighchartsSeriesAreaspline)
+		(highchart addSeriesOf: HighchartsSeriesSpline)
 			index: 0;
 			name: eachDistributionReport seriesName;
 			data: data asArray.
