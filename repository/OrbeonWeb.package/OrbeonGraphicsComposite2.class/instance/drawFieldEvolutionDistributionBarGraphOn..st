@@ -5,6 +5,8 @@ drawFieldEvolutionDistributionBarGraphOn: html
 	selectedDefinition ifNil: [^self].
 
 	distributionReport := selectedDefinition reportFieldEvolutionFor: self getFieldName startDate: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport xAxisIsDate: true.
+	distributionReport createSecondaryDistributions.
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.
@@ -18,7 +20,7 @@ drawFieldEvolutionDistributionBarGraphOn: html
 
 	distributionReport getAllReports do: [:eachDistributionReport | | data |
 		data := OrderedCollection new.
-		(eachDistributionReport getDistributionToRenderFor: nil) keysAndValuesDo: [:key :value | 
+		(eachDistributionReport getDistributionToRenderFor: (self componentValueAt: 'time-span')) keysAndValuesDo: [:key :value | 
 			data add: (Array with: key with: value).
 		].
 		(highchart addSeriesOf: HighchartsSeriesAreaspline)
