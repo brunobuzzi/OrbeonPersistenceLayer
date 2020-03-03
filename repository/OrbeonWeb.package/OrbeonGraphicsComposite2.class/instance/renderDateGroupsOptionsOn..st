@@ -9,6 +9,7 @@ renderDateGroupsOptionsOn: html
 			html fieldSet with: [
 				html radioGroup
 					callback: [:value | self onDateRadioButtonChanged: value];
+					selected: (self componentValueAt: 'time-span');
 					with: [ :group |
 						groupsOptions do: [ :each |
 							html label: [ 
