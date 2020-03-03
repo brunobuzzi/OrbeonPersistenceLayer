@@ -36,3 +36,5 @@ renderContentOn: html
 	(self isFormDefinitionAllVersionsScope and: [self isDonutModificationByMonthChart]) ifTrue: [self drawFormRegistryFormInstancesModificationPieByMonthGraphOn: html].
 
 	(self isFormDefinitionScope and: [self isDonutFieldTypeDistributionChart]) ifTrue: [^self drawFormDefinitionTypesDonutQuantityChartOn: html].
+	(self isFormDefinitionScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawFormDefinitionCreationDayDistributionGraphOn: html].
+	(self isFormDefinitionScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawFormDefinitionModificationnDayDistributionGraphOn: html].
