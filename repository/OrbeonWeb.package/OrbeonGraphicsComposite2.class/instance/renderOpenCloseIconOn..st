@@ -6,7 +6,7 @@ renderOpenCloseIconOn: html
 
 	html anchor 
 		class: 'float-left';
-		callback: [showDefinitionList := showDefinitionList not];
+		callback: [showDefinitionList := true. showOptionsForms := true];
 		with: [
 			html image url: (SEWAFIconLibrary / iconSymbol); 
 				altText: 'Toggle Window'; 
