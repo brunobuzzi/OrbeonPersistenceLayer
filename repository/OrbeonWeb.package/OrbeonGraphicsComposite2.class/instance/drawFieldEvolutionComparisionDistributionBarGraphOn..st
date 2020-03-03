@@ -20,7 +20,7 @@ drawFieldEvolutionComparisionDistributionBarGraphOn: html
 
 	distributionReport fieldDistributions do: [:eachDistributionReport | | data |
 		data := OrderedCollection new.
-		(eachDistributionReport getDistributionToRenderFor: nil) keysAndValuesDo: [:key :value | 
+		(eachDistributionReport getDistributionToRenderFor: (self componentValueAt: 'time-span')) keysAndValuesDo: [:key :value | 
 			data add: (Array with: key with: value).
 		].
 		(highchart addSeriesOf: HighchartsSeriesSpline)

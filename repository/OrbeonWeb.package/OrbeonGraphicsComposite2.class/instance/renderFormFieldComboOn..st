@@ -18,5 +18,6 @@ renderFormFieldComboOn: html
 	self isFieldEvolutionComparisonDistributionChart ifTrue: [
 		self renderAddFieldIconOn: html.
 		self renderRemoveFieldIconOn: html.
-		selectedFields do: [:each | html text: '[',each, '],'] 
+		selectedFields do: [:each | html text: '[',each, '],'].
+		self renderDateGroupsOptionsOn: html.
 	].
