@@ -16,9 +16,11 @@ renderFormFieldComboOn: html
 		selected: (self searchValueAt: 'field-name' ifAbsent: ['']).
 
 	self isFieldEvolutionComparisonDistributionChart ifTrue: [
-		self renderAddFieldIconOn: html.
-		self renderRemoveFieldIconOn: html.
-		selectedFields do: [:each | html text: '[',each, '],'].
+		html div class: 'display-inline-flex'; with: [
+			self renderAddFieldIconOn: html.
+			self renderRemoveFieldIconOn: html.
+		].
+		html div class: 'selected-field-list'; with: [selectedFields do: [:each | html text: ' [',each, '] ']].
 	].
 	(self isFieldEvolutionComparisonDistributionChart or: [self isFieldEvolutionDistributionChart]) ifTrue: [
 		self renderDateGroupsOptionsOn: html.

@@ -13,11 +13,16 @@ renderArray2Chart: aHighchart distributions: distributionCollection chartsTypes:
 	aHighchart xAxis type: 'category'.
 	mainDistribution categories ifNotNil: [:categories | aHighchart xAxis categories: categories]. 
 
-	distributionCollection keysAndValuesDo: [:index :eachDistribution | | serieClass |
+	distributionCollection keysAndValuesDo: [:index :eachDistribution | | serieClass data |
 		serieClass := seriesClassCollection at: index.
-		self distribution isGrouped "this is used to group BarCharts (to display versions of different processes)"
-		ifFalse: [self setRegularDataFrom: eachDistribution for: aHighchart withSerie: serieClass] "<AppDistributionReport> distribution: dictionary of key and value"
-		ifTrue: [self setGroupedDataFrom: eachDistribution for: aHighchart withSerie: serieClass]. "<AppDistributionReport> distribution: dictionary of key and anArray of values"
+		data := OrderedCollection new.
+		(eachDistribution getDistributionToRenderFor: nil) keysAndValuesDo: [:key :value | 
+			data add: (Array with: key with: value).
+		].
+		(aHighchart addSeriesOf: serieClass)
+			index: 0;
+			name: eachDistribution seriesName;
+			data: data asArray.
 	]. 
 
 	aWADivTag script: aHighchart
