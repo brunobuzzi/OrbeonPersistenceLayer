@@ -37,7 +37,7 @@ renderServerConfigurationViewOn: html
 				with: self getGemStoneServerConfiguration gemstoneIP.
 			html label class: 'margin-right-10px'; attributeAt: 'for' put: 'versionName'; with: ('XPath for Orbeon Version' translateIn: self session).
 			html select 
-				disable: true;
+				isEnabled: false;
 				attributeAt: 'id' put: 'versionName';
 				list: self getOrbeonWebServerConfiguration getOrbeonXpathVersions;
 				callback: [:versionName | self setOrbeonVersion: versionName];
