@@ -4,12 +4,14 @@ renderArray3Chart: aHighchart distributions: distributionCollection chartsTypes:
 
 	distributionCollection ifEmpty: [^self].
 
-	yAxisCategories := #('Sunday' 'Monday' 'Tuesday' 'Wednesday' 'Thursday' 'Friday' 'Saturday') collect: [:each | each translateFor: self user].
-	
+	yAxisCategories := #(#Sunday #Monday #Tuesday #Wednesday #Thursday #Friday #Saturday) "collect: [:each | each translateFor: self user]".
+
 	mainDistribution := distributionCollection at: 1.
 	aHighchart colorAxis minColor: '#ffffff'.
 	aHighchart colorAxis maxColor: '#000099'.
-	aHighchart addYAxis categories: yAxisCategories.
+	aHighchart addYAxis.
+	aHighchart yAxis first type: 'category'.
+	aHighchart yAxis first categories: yAxisCategories.
 	aHighchart yAxis first title text: 'Days'.
 
 	aHighchart legend enabled: false.
@@ -31,8 +33,7 @@ renderArray3Chart: aHighchart distributions: distributionCollection chartsTypes:
 			name: eachDistribution seriesName;
 			data: data asArray.
 		newSerie dataLabels color: '#000000';
-							enabled: true.
-				
+							enabled: true.		
 	]. 
 
 	aWADivTag script: aHighchart.
