@@ -102,6 +102,7 @@ exec
 OrbeonServerConfiguration default orbeonIP: 'http://192.168.178.130'. "example IP"
 OrbeonServerConfiguration initializeDateFormat.
 OrbeonServerConfiguration initializeTimeFormat.
+GemStoneServerConfiguration default gemstoneIP: 'http://192.168.178.130'. "example IP"
 WAPersistenceOrbeonLayer register.
 "To register a centralized Component to access the other applications"
 WAOrbeonLogin register. "ipaddress:port/orbeon"
