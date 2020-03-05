@@ -100,8 +100,8 @@ set user DataCurator password swordfish gemstone $1
 login
 exec
 OrbeonServerConfiguration default orbeonIP: 'http://192.168.178.130'. "example IP"
-OrbeonServerConfiguration default initializeDateFormat.
-OrbeonServerConfiguration default initializeTimeFormat.
+OrbeonServerConfiguration initializeDateFormat.
+OrbeonServerConfiguration initializeTimeFormat.
 WAPersistenceOrbeonLayer register.
 "To register a centralized Component to access the other applications"
 WAOrbeonLogin register. "ipaddress:port/orbeon"
