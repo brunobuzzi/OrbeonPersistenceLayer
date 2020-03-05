@@ -99,7 +99,7 @@ $GS_HOME/bin/startTopaz $1 -il <<EOF
 set user DataCurator password swordfish gemstone $1
 login
 exec
-OrbeonServerConfiguration default orbeonIP: 'WAOrbeonhttp://192.168.178.130'. "example IP"
+OrbeonServerConfiguration default orbeonIP: 'http://192.168.178.130'. "example IP"
 OrbeonServerConfiguration default initializeDateFormat.
 OrbeonServerConfiguration default initializeTimeFormat.
 WAPersistenceOrbeonLayer register.

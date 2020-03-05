@@ -38,7 +38,7 @@ baseline: spec
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath')];
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
 				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
-				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'Jasvgi')];
+				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3')];
 				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates')].
 
 		spec
