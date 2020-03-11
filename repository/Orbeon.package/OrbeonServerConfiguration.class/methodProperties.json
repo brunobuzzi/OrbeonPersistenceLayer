@@ -6,7 +6,6 @@
 	"instance" : {
 		"dateFormat" : "brunobb 04/03/2018 12:08",
 		"dateFormat:" : "brunobb 04/03/2018 12:08",
-		"getDatabaseReaderName" : "brunobb 07/10/2018 06:01",
 		"getOrbeonXpathVersionClass" : "brunobb 04/09/2018 11:28",
 		"getOrbeonXpathVersionForCombo" : "brunobb 04/09/2018 11:29",
 		"getOrbeonXpathVersions" : "brunobb 04/09/2018 11:20",
@@ -15,7 +14,6 @@
 		"orbeonIP:" : "brunobb 04/03/2018 12:08",
 		"orbeonXpathVersion" : "brunobb 04/03/2018 12:09",
 		"orbeonXpathVersion:" : "brunobb 04/03/2018 12:09",
-		"setDatabaseReader:" : "brunobb 07/10/2018 05:42",
 		"setDatabaseReaderFromDatabaseName:" : "brunobb 07/10/2018 06:03",
 		"setOrbeonVersionName:" : "brunobb 04/09/2018 11:38",
 		"setXpathVersionTo_2017_2" : "brunobb 04/03/2018 12:37",

@@ -1,4 +1,4 @@
-sql reader
+*orbeonFormMigrator
 getDatabaseReaderName
 
 	^OrbeonHandler default mySqlReader class databaseName

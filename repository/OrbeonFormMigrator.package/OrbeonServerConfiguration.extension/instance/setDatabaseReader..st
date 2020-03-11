@@ -1,4 +1,4 @@
-sql reader
+*orbeonFormMigrator
 setDatabaseReader: anOrbeonDatabaseReader
 
 	^OrbeonHandler default mySqlReader: anOrbeonDatabaseReader
