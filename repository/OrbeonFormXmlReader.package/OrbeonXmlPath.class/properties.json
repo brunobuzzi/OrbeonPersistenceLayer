@@ -1,15 +1,13 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonFormXmlReader",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"report",
-		"field",
-		"warning" ],
-	"name" : "FormImportWarning",
+		 ],
+	"name" : "OrbeonXmlPath",
 	"pools" : [
 		 ],
 	"super" : "Object",

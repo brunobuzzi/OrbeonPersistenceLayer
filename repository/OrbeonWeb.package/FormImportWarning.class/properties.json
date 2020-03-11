@@ -1,14 +1,16 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonWeb",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OrbeonXmlPathUpTo2017_1",
+		"report",
+		"field",
+		"warning" ],
+	"name" : "FormImportWarning",
 	"pools" : [
 		 ],
-	"super" : "OrbeonXmlPath",
+	"super" : "Object",
 	"type" : "normal" }

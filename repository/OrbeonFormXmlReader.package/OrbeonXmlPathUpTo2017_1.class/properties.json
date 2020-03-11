@@ -1,5 +1,5 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonFormXmlReader",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonXmlPath",
+	"name" : "OrbeonXmlPathUpTo2017_1",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OrbeonXmlPath",
 	"type" : "normal" }

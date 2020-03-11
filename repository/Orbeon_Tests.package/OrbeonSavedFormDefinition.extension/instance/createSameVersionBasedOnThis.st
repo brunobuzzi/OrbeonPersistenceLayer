@@ -1,11 +1,11 @@
-testing phase
-createNewVersionBasedOnThis
+*orbeon_Tests
+createSameVersionBasedOnThis
 	"This method is for testing purpose.
 	Create and publish a new version of the receiver"
 
 	^self class 
 			createDefinition: formName 
-			version: (self getLatestDefinition version + 1) 
+			version: version	 
 			withXML: xmlString 
 			in: application 
 			title: self title
