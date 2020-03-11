@@ -1,6 +1,6 @@
 mysql
 defaultMySqlClass
 
-	^Orbeon46MySQL
+	^OrbeonMySQL80
 
 	"^OrbeonMySQLReader"

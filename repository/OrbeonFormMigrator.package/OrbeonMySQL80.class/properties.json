@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormMigrator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonMySQL80",
+	"pools" : [
+		 ],
+	"super" : "OrbeonMySQLReader",
+	"type" : "normal" }

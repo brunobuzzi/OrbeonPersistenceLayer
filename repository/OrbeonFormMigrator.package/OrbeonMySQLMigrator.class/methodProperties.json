@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"defaultDatabaseReaderClass" : "BrunoBB 10/14/2015 14:02",
+		"defaultDatabaseReaderClass" : "brunobb 03/11/2020 14:31",
 		"migrateDefinitionAttachmentsOf:" : "BrunoBB 04/28/2016 10:48",
 		"migrateDefinitionCustomAttachmentOf:" : "BrunoBB 04/28/2016 10:48",
 		"migrateFormDefinitionNamed:" : "BrunoBB 02/08/2016 12:45",
