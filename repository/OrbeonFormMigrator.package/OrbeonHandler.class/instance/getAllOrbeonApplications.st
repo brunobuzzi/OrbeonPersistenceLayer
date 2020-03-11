@@ -6,5 +6,5 @@ getAllOrbeonApplications
 	dbApplicationsNames := (self getAllApplicationsName subStrings: String lf) "a collection of strings with App names"
 												reject: [:each | self getOrbeonApplicationClass hasApplicationNamed: each]. "we filter existing app"
 
-	^(dbApplicationsNames collect: [:eachName | self getOrbeonApplicationClass newNamed: eachName]) "we create a new app for each new row"
+	^(dbApplicationsNames collect: [:eachName | self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: eachName]) "we create a new app for each new row"
 					asSortedCollection: [:a :b | a applicationName <= b applicationName]
