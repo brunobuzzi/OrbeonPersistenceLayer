@@ -1,4 +1,4 @@
 parse
 createFormReader
 
-	formReader := OrbeonXPathFormReader for: xmlString
+	formReader := self defaultXFormReaderClass for: xmlString

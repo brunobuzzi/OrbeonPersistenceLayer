@@ -1,4 +1,4 @@
 other
 setUp
 
-	reader := OrbeonXPathFormReader for: self defaultFormDefinition orbeonVersion: self defaultOrbeonXpathVersion.
+	reader := self defaultXFormReaderClass for: self defaultFormDefinition orbeonVersion: self defaultOrbeonXpathVersion.

@@ -1,0 +1,4 @@
+*orbeon
+defaultXFormReaderClass
+
+	^OrbeonXPathFormReader

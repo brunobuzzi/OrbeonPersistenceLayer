@@ -4,4 +4,4 @@ formReader
 
 	"^OrbeonFormReader for: xmlString."
 
-	^OrbeonXPathFormReader for: xmlString.
+	^self defaultXFormReaderClass for: xmlString.

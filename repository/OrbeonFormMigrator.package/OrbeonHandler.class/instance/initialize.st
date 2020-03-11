@@ -7,4 +7,4 @@ initialize
 	synchronizations := Dictionary new.
 
 	mySqlReader := self defaultMySqlClass new.
-	formReader := OrbeonXPathFormReader new.
+	formReader := self defaultXFormReaderClass new.
