@@ -1,14 +1,14 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonFormExport",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"fieldPositions" ],
-	"name" : "RecursiveFormExport",
+		 ],
+	"name" : "SinglelineRecursiveFormExport",
 	"pools" : [
 		 ],
-	"super" : "FormExportProcess",
+	"super" : "RecursiveFormExport",
 	"type" : "normal" }
