@@ -1,0 +1,4 @@
+other
+startOfDirtyText
+
+	^1

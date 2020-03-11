@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"isFirstLineDirty" : "brunobb 03/11/2020 14:42",
 		"selectAllVersionOf:in:" : "brunobb 03/11/2020 14:31",
 		"sqlDumpFileDefinitionAttachmentOn:definitionId:fileId:version:" : "brunobb 03/11/2020 14:31",
 		"sqlDumpFileInstanceAttachmentOn:definitionId:fileId:version:" : "brunobb 03/11/2020 14:31",
@@ -26,4 +27,5 @@
 		"sqlGetInstanceDefinitionTimeStamp:" : "brunobb 03/11/2020 14:31",
 		"sqlGetInstanceDefinitionWithId:" : "brunobb 03/11/2020 14:31",
 		"sqlGetInstanceDefinitionWithId:version:" : "brunobb 03/11/2020 14:31",
-		"sqlGetXMLInstanceDefinitionWithId:" : "brunobb 03/11/2020 14:31" } }
+		"sqlGetXMLInstanceDefinitionWithId:" : "brunobb 03/11/2020 14:31",
+		"startOfDirtyText" : "brunobb 03/11/2020 14:48" } }
