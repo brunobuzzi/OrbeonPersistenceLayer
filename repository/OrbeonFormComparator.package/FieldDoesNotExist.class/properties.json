@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormComparator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FieldDoesNotExist",
+	"pools" : [
+		 ],
+	"super" : "FieldDifference",
+	"type" : "normal" }

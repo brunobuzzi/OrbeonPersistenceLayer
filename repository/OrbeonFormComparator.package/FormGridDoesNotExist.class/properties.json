@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormComparator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormGridDoesNotExist",
+	"pools" : [
+		 ],
+	"super" : "FormGridDifference",
+	"type" : "normal" }

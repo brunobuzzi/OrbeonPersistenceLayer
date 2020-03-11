@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormComparator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"section" ],
+	"name" : "FormSectionDifference",
+	"pools" : [
+		 ],
+	"super" : "FormDifference",
+	"type" : "normal" }
