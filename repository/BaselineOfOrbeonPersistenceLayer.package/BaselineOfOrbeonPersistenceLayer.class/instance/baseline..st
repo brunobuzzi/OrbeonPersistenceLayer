@@ -38,9 +38,10 @@ baseline: spec
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath')];
 				package: 'OrbeonFormComparator' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator')];
+				package: 'OrbeonFormExport' with: [spec requires: #('Orbeon')];
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
 				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
-				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator')];
+				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport')];
 				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator')].
 
 		spec
