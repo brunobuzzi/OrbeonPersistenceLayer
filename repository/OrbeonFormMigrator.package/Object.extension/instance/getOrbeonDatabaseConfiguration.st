@@ -1,4 +1,4 @@
-*orbeon
+*orbeonFormMigrator
 getOrbeonDatabaseConfiguration
 
 	^self class getOrbeonDatabaseConfiguration

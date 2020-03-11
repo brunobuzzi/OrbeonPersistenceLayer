@@ -1,13 +1,13 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonFormMigrator",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "BrunoBB 10/18/2015 11:44",
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonMySQLMigrator",
+	"name" : "OrbeonOracleMigrator",
 	"pools" : [
 		 ],
 	"super" : "OrbeonDatabaseMigrator",

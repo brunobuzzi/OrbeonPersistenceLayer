@@ -1,4 +1,4 @@
-*orbeon
+*orbeonFormMigrator
 getOrbeonDatabaseConfiguration
 
 	^OrbeonDatabaseConfiguration default
