@@ -36,16 +36,17 @@ baseline: spec
 
 		spec 
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath')];
+				package: 'OrbeonFormXmlReader' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormComparator' with: [spec requires: #('Orbeon')];
-				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator')];
+				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator' 'OrbeonFormXmlReader')];
 				package: 'OrbeonFormExport' with: [spec requires: #('Orbeon')];
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
-				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
-				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport')];
-				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator')].
+				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormXmlReader' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
+				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport' 'OrbeonFormXmlReader')];
+				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator' 'OrbeonFormXmlReader')].
 
 		spec
-			group: 'core' with: #('Orbeon'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
+			group: 'core' with: #('Orbeon' 'OrbeonFormXmlReader'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
 			group: 'rest' with: #('OrbeonPersistenceApi');
 			group: 'web' with: #('OrbeonWeb');
 			group: 'test' with: #('Orbeon_Templates' 'Orbeon_Tests');
