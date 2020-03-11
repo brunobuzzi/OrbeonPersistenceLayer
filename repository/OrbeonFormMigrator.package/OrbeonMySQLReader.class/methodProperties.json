@@ -2,9 +2,6 @@
 	"class" : {
 		"databaseName" : "brunobb 07/10/2018 05:46" },
 	"instance" : {
-		"databaseIP" : "BrunoBB 02/03/2016 08:58",
-		"databasePassword" : "BrunoBB 02/03/2016 08:58",
-		"databaseUser" : "BrunoBB 02/03/2016 08:58",
 		"initialize" : "BrunoBB 10/31/2014 16:58",
 		"sqlFormDefinitionLastUpdateFor:form:" : "BrunoBB 10/31/2014 16:58",
 		"sqlFormDefinitionLastUpdateFor:form:version:" : "BrunoBB 04/01/2015 07:42",

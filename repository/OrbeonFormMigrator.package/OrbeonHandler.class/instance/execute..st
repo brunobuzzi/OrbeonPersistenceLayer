@@ -1,4 +1,4 @@
-other
+db connection
 execute: aString
 	"Execute the command <aString> in the Linux Server whereas GemStone/S is installed"
 	| result strippedResult |

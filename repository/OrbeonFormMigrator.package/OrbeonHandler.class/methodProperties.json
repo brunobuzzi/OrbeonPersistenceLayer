@@ -2,7 +2,6 @@
 	"class" : {
 		"default" : "BrunoBB 10/31/2014 16:27" },
 	"instance" : {
-		"configuration" : "BrunoBB 02/03/2016 08:58",
 		"defaultMySqlClass" : "BrunoBB 10/31/2014 16:27",
 		"execute:" : "BrunoBB 02/04/2016 12:42",
 		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "BrunoBB 10/16/2015 19:37",
@@ -46,7 +45,7 @@
 		"mySqlReader:" : "BrunoBB 12/20/2013 08:39",
 		"orbeonIP" : "BrunoBB 10/31/2014 16:28",
 		"orbeonIP:" : "BrunoBB 10/31/2014 16:28",
-		"setMySQLhost:user:password:" : "BrunoBB 10/31/2014 17:08",
+		"setDatabaseIP:user:password:" : "brunobb 03/11/2020 14:24",
 		"synchronizations" : "BrunoBB 12/20/2013 08:39",
 		"synchronizations:" : "BrunoBB 12/20/2013 08:39",
 		"updateApplication:" : "BrunoBB 02/08/2016 12:40",
