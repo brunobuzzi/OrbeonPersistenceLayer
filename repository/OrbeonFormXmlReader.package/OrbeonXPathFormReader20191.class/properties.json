@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormXmlReader",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonXPathFormReader20191",
+	"pools" : [
+		 ],
+	"super" : "OrbeonXPathFormReader",
+	"type" : "normal" }
