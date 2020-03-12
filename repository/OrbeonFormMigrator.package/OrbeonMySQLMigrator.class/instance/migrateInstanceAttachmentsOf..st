@@ -1,4 +1,4 @@
-other
+attachments
 migrateInstanceAttachmentsOf: anOrbeonFormDefinition
 	"The receiver export all attachments of <anOrbeonFormDefinition> instances to the file system.
 	This is done directly from MySql via: select file_content INTO DUMPFILE 'fileName'.
