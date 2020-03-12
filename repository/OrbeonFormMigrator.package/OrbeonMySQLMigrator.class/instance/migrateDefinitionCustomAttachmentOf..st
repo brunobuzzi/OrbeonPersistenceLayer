@@ -11,7 +11,7 @@ migrateDefinitionCustomAttachmentOf: anOrbeonFormDefinition
 	../definitions/published"
 
 	anOrbeonFormDefinition customAttachment ifNotNil: [ | path definitionId fileId |
-			path := self defaultOrbeonApiConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
+			path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
 			definitionId := (anOrbeonFormDefinition printCompleteCustomAttachmentId subStrings: '-') first.
 			fileId := (anOrbeonFormDefinition printCompleteCustomAttachmentId subStrings: '-') last.
 			self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.

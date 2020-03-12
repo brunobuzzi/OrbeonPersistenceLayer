@@ -15,6 +15,6 @@ doIt
 		version: version;
 		updateLastModifiedTime.
 
-	(self defaultOrbeonApiConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
+	(self getOrbeonWebServerConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
 	ifTrue: [self addDeferredProcessingFor: orbeonInstance] 
 	ifFalse: [orbeonInstance processXML].

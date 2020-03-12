@@ -11,7 +11,7 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 	../definitions/published"
 
 	anOrbeonFormDefinition attachments do: [:defIdfileId | | path fileId definitionId |
-			path := self defaultOrbeonApiConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
+			path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
 			definitionId := (defIdfileId subStrings: '-') first.
 			fileId := (defIdfileId subStrings: '/') last.
 			self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.

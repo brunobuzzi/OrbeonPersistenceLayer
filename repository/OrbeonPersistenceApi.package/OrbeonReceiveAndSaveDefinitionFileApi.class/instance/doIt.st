@@ -7,7 +7,7 @@ doIt
 
 	definition := self getOrbeonApplicationClass getAnyDefinitionWithId: id ifNone: [^self storeFileOnTempPath].
 
-	gsFile := GsFile open: ((self defaultOrbeonApiConfiguration getSavedDefinitionsPathFor: definition formName in: definition getApplicationName), id, '-', fileId, '.bin') mode: 'wb' onClient: false.
+	gsFile := GsFile open: ((self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: definition formName in: definition getApplicationName), id, '-', fileId, '.bin') mode: 'wb' onClient: false.
 
 	gsFile
 		nextPutAll: fileContents;

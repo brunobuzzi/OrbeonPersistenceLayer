@@ -5,7 +5,7 @@ doIt
 
 	definition := self getOrbeonApplicationClass formDefinitionNamed: self getFormName in: self getApplicationName.
 
-	gsFile := GsFile openOnServer: ((self defaultOrbeonApiConfiguration getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName), definition id, '-', fileId) mode: 'rb'.
+	gsFile := GsFile openOnServer: ((self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName), definition id, '-', fileId) mode: 'rb'.
 	fileContents := gsFile contentsAsUtf8.
 
 	gsFile close.

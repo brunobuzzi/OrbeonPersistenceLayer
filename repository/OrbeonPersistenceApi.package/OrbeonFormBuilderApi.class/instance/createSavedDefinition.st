@@ -16,7 +16,7 @@ createSavedDefinition
 
 	savedDefinition storeInApplication. "anOrbeonApplication addSavedDefinition: savedDefinition"
 
-	(self defaultOrbeonApiConfiguration isDefinitionAuditEnableFor: savedDefinition formName in: savedDefinition getApplicationName) 
+	(self getOrbeonWebServerConfiguration isDefinitionAuditEnableFor: savedDefinition formName in: savedDefinition getApplicationName) 
 	ifTrue: [self auditStorage addDefinitionAudit: savedDefinition cloneForAudit].
 
 	^savedDefinition

@@ -6,7 +6,7 @@ deleteUnusedOSFiles: usedDictionaryIds pathSelector: pathSelector
 	usedDictionaryIds keysAndValuesDo: [:appForm :collectionId | | path app form currentFiles |
 		app := (appForm subStrings: '.') first.
 		form := (appForm subStrings: '.') second.
-		path := self defaultOrbeonApiConfiguration perform: pathSelector with: form with: app."get tha path for <app> and <form>"
+		path := self getOrbeonWebServerConfiguration perform: pathSelector with: form with: app."get tha path for <app> and <form>"
 		currentFiles := ((GsFile contentsOfDirectory: path onClient: false) "get all current files in <path>"
 			reject: [:eachPathFile | ((eachPathFile subStrings: '/') last = '.') or: [(eachPathFile subStrings: '/') last = '..']])
 			collect: [:each | (each subStrings: '/') last].
