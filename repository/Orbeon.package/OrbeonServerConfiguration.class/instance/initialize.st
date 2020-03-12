@@ -13,3 +13,5 @@ initialize
 	pathForAttachments := Dictionary new. "the path to store attachments of the forms"
 	searchTypes := Dictionary new. "the search type of each form when a search has more than one value (#or #and)"
 	formsAudit := Dictionary new. "whether or not an app.form has any audit configurations #(#drafs #instances #definitions)"
+
+	orbeonFormReaderClass := OrbeonXPathFormReader2019_1.

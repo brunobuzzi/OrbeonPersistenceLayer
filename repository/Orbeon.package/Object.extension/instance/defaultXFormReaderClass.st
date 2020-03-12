@@ -1,4 +1,4 @@
 *orbeon
 defaultXFormReaderClass
 
-	^OrbeonXPathFormReader
+	^self getOrbeonWebServerConfiguration orbeonFormReaderClass

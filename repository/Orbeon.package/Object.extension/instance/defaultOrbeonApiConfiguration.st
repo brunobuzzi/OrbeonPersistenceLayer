@@ -1,4 +1,0 @@
-*orbeon
-defaultOrbeonApiConfiguration
-
-	^self class defaultOrbeonApiConfiguration
