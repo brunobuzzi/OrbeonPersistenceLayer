@@ -19,7 +19,7 @@ executeQueryWithSearchCriteria
 	result isEmpty ifTrue: [^resultCollection := OrderedCollection new].
 
 	"perform an OR search if OR is setted - (OR or AND search is useful when the search has more than one search criteria)"
-	((self apiConfiguration typeSearchIsOr: lastFormDefinition formName in: application applicationName) or: [self isGenericSearch])
+	((self defaultOrbeonApiConfiguration typeSearchIsOr: lastFormDefinition formName in: application applicationName) or: [self isGenericSearch])
 	ifTrue: [orResult := Set new.
 		result do: [:queryResult | orResult addAll: queryResult].
 		orResult  := (orResult collect: [:each | each parentObject]) asOrderedCollection.

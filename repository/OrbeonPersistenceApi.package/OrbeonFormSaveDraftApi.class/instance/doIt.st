@@ -8,7 +8,7 @@ doIt
 	orbeonDraft := definition getDraftWithId: id ifNone: [definition addDraft: (OrbeonFormInstance newFor: definition withId: id)].
 
 	"execute the audit options. if <xmlString> is nil --> is a new form"
-	(orbeonDraft xmlString isNil and:[self apiConfiguration isDraftAuditEnableFor: self getFormName in: self getApplicationName]) 
+	(orbeonDraft xmlString isNil and:[self defaultOrbeonApiConfiguration isDraftAuditEnableFor: self getFormName in: self getApplicationName]) 
 	ifTrue: [self auditStorage addDraftAudit: orbeonDraft cloneForAudit].
 
 	orbeonDraft xmlString: xmlString;

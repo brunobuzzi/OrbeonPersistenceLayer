@@ -1,10 +1,12 @@
 {
 	"class" : {
+		"defaultOrbeonApiConfiguration" : "brunobb 03/12/2020 14:36",
 		"getOrbeonApplicationCache" : "BrunoBB 02/08/2016 11:11",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:09",
 		"getOrbeonCache" : "BrunoBB 02/26/2016 13:46",
 		"getOrbeonWebServerConfiguration" : "BrunoBB 02/03/2016 10:07" },
 	"instance" : {
+		"defaultOrbeonApiConfiguration" : "brunobb 03/12/2020 14:36",
 		"defaultXFormReaderClass" : "brunobb 03/11/2020 13:20",
 		"getOrbeonApplicationCache" : "BrunoBB 02/08/2016 11:12",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:08",

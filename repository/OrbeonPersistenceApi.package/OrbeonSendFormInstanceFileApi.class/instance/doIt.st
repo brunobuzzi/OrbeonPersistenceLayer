@@ -3,7 +3,7 @@ doIt
 	"This service is called when rendering the Draft of the form in Form Instance page"
 	| gsFile |
 
-	gsFile := GsFile openOnServer: ((self apiConfiguration getInstancesPathFor: self getFormName in: self getApplicationName), id, '-', fileId) mode: 'rb'.
+	gsFile := GsFile openOnServer: ((self defaultOrbeonApiConfiguration getInstancesPathFor: self getFormName in: self getApplicationName), id, '-', fileId) mode: 'rb'.
 	fileContents := gsFile contentsAsUtf8.
 
 	gsFile close.

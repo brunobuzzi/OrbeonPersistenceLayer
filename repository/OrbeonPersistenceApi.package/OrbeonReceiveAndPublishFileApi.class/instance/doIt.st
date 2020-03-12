@@ -6,7 +6,7 @@ doIt
 	The attached file is stored in the repository"
 	| gsFile path |
 
-	path := self apiConfiguration getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName.
+	path := self defaultOrbeonApiConfiguration getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName.
 
 	(GsFile existsOnServer: path) ifFalse: [DirectoryStructureNotPresentException signal: 'Directory Structure to Store Forms attachments on disk has not been created'].
 

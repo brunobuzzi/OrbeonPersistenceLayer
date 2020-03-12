@@ -6,7 +6,7 @@ storeFileOnTempPath
 	See issue #37 and is caused because Orbeon first call a service to store attachments and then call a service to store XML definition"
 	| gsFile |
 
-	gsFile := GsFile open: (self apiConfiguration getTempPath,'/', id, '-', fileId, '.bin') mode: 'wb' onClient: false.
+	gsFile := GsFile open: (self defaultOrbeonApiConfiguration getTempPath,'/', id, '-', fileId, '.bin') mode: 'wb' onClient: false.
 
 	gsFile
 		nextPutAll: self requestContext request rawBody;

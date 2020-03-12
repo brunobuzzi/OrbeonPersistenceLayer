@@ -2,7 +2,6 @@
 	"class" : {
 		"default" : "BrunoBB 10/31/2014 16:27" },
 	"instance" : {
-		"apiConfiguration" : "brunobb 03/12/2020 11:36",
 		"defaultMySqlClass" : "brunobb 03/11/2020 14:31",
 		"execute:" : "brunobb 03/11/2020 14:48",
 		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "brunobb 03/12/2020 14:15",
