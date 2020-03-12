@@ -2,10 +2,11 @@
 	"class" : {
 		"default" : "BrunoBB 10/31/2014 16:27" },
 	"instance" : {
+		"apiConfiguration" : "brunobb 03/12/2020 11:36",
 		"defaultMySqlClass" : "brunobb 03/11/2020 14:31",
 		"execute:" : "brunobb 03/11/2020 14:48",
-		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "BrunoBB 10/16/2015 19:37",
-		"fileoutInstanceAttachmentOn:defintionId:fileId:version:" : "BrunoBB 10/16/2015 20:21",
+		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "brunobb 03/12/2020 11:37",
+		"fileoutInstanceAttachmentOn:defintionId:fileId:version:" : "brunobb 03/12/2020 11:37",
 		"formReader" : "BrunoBB 12/20/2013 08:39",
 		"formReader:" : "BrunoBB 12/20/2013 08:39",
 		"generateFormDefinition:app:from:" : "brunobb 11/13/2018 02:46",
@@ -24,7 +25,7 @@
 		"getDBStringForInstanceDefinitionWithId:version:" : "BrunoBB 10/15/2015 11:24",
 		"getDefinitionAttachmentContentFor:version:" : "BrunoBB 10/14/2015 17:26",
 		"getFormWithId:" : "BrunoBB 11/19/2014 03:27",
-		"getIdForDefinition:" : "BrunoBB 04/28/2016 11:01",
+		"getIdForDefinition:" : "brunobb 03/12/2020 07:39",
 		"getLastUpdateOf:in:version:" : "BrunoBB 05/03/2016 15:16",
 		"getOldTimeStamp" : "BrunoBB 05/03/2016 15:14",
 		"host" : "BrunoBB 10/31/2014 16:27",
