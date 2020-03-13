@@ -4,6 +4,7 @@
 	"instance" : {
 		"defaultFormDefinition" : "brunobb 03/06/2018 11:41",
 		"defaultOrbeonXpathVersion" : "brunobb 03/08/2018 10:15",
+		"defaultXFormReaderClass" : "brunobb 03/13/2020 09:58",
 		"testAvailability" : "brunobb 06/25/2018 09:43",
 		"testFieldsInDocument" : "brunobb 03/06/2018 11:50",
 		"testFieldsInMainSections" : "brunobb 03/06/2018 11:28",
