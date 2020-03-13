@@ -1,6 +1,6 @@
 metadata
 getFormName
 
-	^(xmlDocument findElementNamed: 'form-name')
+	^(xmlDocument findElementNamed: self defaultOrbeonXpathVersion xfInstanceFormNameXpath)
 		ifNotNil: [:value | value strings isEmpty ifTrue: [''] ifFalse: [value strings last]]
 		ifNil: [''].

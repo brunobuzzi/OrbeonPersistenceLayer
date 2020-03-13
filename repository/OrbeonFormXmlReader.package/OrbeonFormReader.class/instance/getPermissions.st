@@ -4,7 +4,7 @@ getPermissions
 	| permissions permissionNodes |
 
 	permissions := OrbeonPermissions new.
-	permissionNodes := xmlDocument allElementsNamed: 'permission'.
+	permissionNodes := xmlDocument allElementsNamed: self defaultOrbeonXpathVersion xfInstanceFormPermissionsXpath.
 
 	permissionNodes do: [:node |
 		node hasContentNodes " -anyone- role does not have content (is an empty node)"

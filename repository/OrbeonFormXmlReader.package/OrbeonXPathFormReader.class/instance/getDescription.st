@@ -1,7 +1,7 @@
 metadata
 getDescription
 
-	^(xmlDocument xPath: '//metadata/description')
+	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceFormDescriptionXpath)
 		ifEmpty: [OrbeonInvalidXMLException signal: '<description> node is missing'] 
 		ifNotEmpty: [:collection | 
 			collection first strings isEmpty 

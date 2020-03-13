@@ -1,6 +1,6 @@
 metadata
 getXmlMetadataNodeIfNone: aBlock
 
-	^(xmlDocument findElementNamed: 'metadata')
+	^(xmlDocument findElementNamed: self defaultOrbeonXpathVersion xfInstanceFormMetadataXpath)
 		ifNotNil: [:value | value]
 		ifNil: aBlock.

@@ -1,0 +1,4 @@
+section
+frSectionXpath
+
+	^'fr:section'

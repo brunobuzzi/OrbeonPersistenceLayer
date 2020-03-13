@@ -1,6 +1,6 @@
 attachments
 getAttachmentsFields
 
-	^(xmlDocument xPath: '//fr:view//fr:attachment') , 
-		(xmlDocument xPath: '//fr:view//fr:image-attachment'),
-		(xmlDocument xPath: '//fr:view//contains[@class, ''fb-attachment'']')
+	^(xmlDocument xPath: self defaultOrbeonXpathVersion frViewFrAttachmentXpath) , 
+		(xmlDocument xPath: self defaultOrbeonXpathVersion frViewFrImageAttachmentXpath),
+		(xmlDocument xPath: self defaultOrbeonXpathVersion frViewContainsFbAttachmentXpathFunction)

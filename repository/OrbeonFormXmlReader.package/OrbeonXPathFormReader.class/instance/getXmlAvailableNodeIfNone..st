@@ -1,6 +1,6 @@
 metadata
 getXmlAvailableNodeIfNone: aBlock
 
-	^(xmlDocument xPath: '//metadata/available')
+	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceFormAvailableXpath)
 		ifEmpty: aBlock 
 		ifNotEmpty: [:collection | collection first]

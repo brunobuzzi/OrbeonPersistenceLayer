@@ -4,6 +4,6 @@ formGridComponentsIn: xmlSection
 	| grids |
 
 	grids := OrderedCollection new.
-	xmlSection elementsAt: 'fr:grid' do: [:eachGrid | (eachGrid includesAttribute: 'repeat') 
+	xmlSection elementsAt: self defaultOrbeonXpathVersion frGridsRepeatXpath do: [:eachGrid | (eachGrid includesAttribute: 'repeat') 
 		ifTrue: [grids add: eachGrid]].
 	^grids

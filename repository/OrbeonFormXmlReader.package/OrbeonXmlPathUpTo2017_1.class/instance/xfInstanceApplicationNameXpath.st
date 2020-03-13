@@ -1,0 +1,4 @@
+metadata
+xfInstanceApplicationNameXpath
+
+	^'application-name'

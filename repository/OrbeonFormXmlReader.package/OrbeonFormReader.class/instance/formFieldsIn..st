@@ -7,6 +7,6 @@ formFieldsIn: xmlSection
 
 	collectableFields := self orbeonCollectableFieldsTags.
 	fields := OrderedCollection new.
-	xmlSection elementsAt: 'fr:grid' do: [:eachGrid | (eachGrid includesAttribute: 'repeat') 
+	xmlSection elementsAt: self defaultOrbeonXpathVersion frGridsNoRepeatXpath do: [:eachGrid | (eachGrid includesAttribute: 'repeat') 
 		ifFalse: [collectableFields do:[:nodeName | eachGrid allElementsNamed: nodeName do: [:eachField | fields add: eachField]]]].
 	^fields

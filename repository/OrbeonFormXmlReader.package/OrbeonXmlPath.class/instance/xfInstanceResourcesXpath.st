@@ -1,0 +1,4 @@
+resources
+xfInstanceResourcesXpath
+
+	self subclassResponsibility

@@ -1,0 +1,4 @@
+attachments
+frWpaintXpath
+
+	self subclassResponsibility

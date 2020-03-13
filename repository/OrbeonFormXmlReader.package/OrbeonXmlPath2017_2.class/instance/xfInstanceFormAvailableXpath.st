@@ -1,0 +1,4 @@
+metadata
+xfInstanceFormAvailableXpath
+
+	^'//metadata/available'

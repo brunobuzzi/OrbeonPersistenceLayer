@@ -4,7 +4,7 @@ formFieldsLabels
 	| fieldsLabels labelNode |
 
 	fieldsLabels := Dictionary new.
-	labelNode := xmlDocument allElementsNamed: 'xf:instance' do: [:each | ((each includesAttribute: 'id') and: [(each attributeAt: 'id') = 'fr-form-resources']) ifTrue: [labelNode := each]]. "the node where labels are in '/xf:instance/resources/resource' "
+	labelNode := xmlDocument allElementsNamed: self defaultOrbeonXpathVersion xfInstanceResourcesXpath do: [:each | ((each includesAttribute: 'id') and: [(each attributeAt: 'id') = 'fr-form-resources']) ifTrue: [labelNode := each]]. "the node where labels are in '/xf:instance/resources/resource' "
 
 	(labelNode findElementNamed: 'resource') elementsDo: [:each |  | originalLabel textNode |
 		textNode := each elementAt: 'label' ifAbsent: [nil].
