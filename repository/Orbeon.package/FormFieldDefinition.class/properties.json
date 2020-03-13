@@ -14,7 +14,8 @@
 		"isAttachmentField",
 		"tabIndex",
 		"parentComponent",
-		"bind" ],
+		"bind",
+		"isAnnotationField" ],
 	"name" : "FormFieldDefinition",
 	"pools" : [
 		 ],

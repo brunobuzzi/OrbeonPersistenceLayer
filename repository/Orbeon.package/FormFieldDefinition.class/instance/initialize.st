@@ -8,4 +8,5 @@ initialize
 	label := ''.
 	type := ''.
 	isAttachmentField := false.
+	isAnnotationField := false.
 	tabIndex := FormTabIndex for: self withIndex: 0.

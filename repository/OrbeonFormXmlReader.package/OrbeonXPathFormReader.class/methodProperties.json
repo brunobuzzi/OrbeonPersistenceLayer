@@ -25,6 +25,7 @@
 		"getXmlMetadataNodeIfNone:" : "brunobb 03/13/2020 10:48",
 		"getXmlSingletonNodeIfNone:" : "brunobb 03/13/2020 10:43",
 		"hasSubSections:" : "BrunoBB 03/16/2016 12:28",
+		"isAnnotationField:" : "brunobb 03/13/2020 15:09",
 		"isAttachmentField:" : "brunobb 03/13/2020 14:35",
 		"isAvailable" : "brunobb 06/25/2018 09:18",
 		"isSingleton" : "brunobb 06/25/2018 09:17",

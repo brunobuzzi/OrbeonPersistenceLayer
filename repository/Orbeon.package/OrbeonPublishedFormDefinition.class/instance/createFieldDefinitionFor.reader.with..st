@@ -13,6 +13,7 @@ createFieldDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader with
 			type: (fieldsType at: fieldName ifAbsent: ['']);
 			isSummary: (summary includes: fieldName);
 			isSearch: (search includes: fieldName);
-			isAttachmentField: (anOrbeonFormReader isAttachmentField: fieldNode).
+			isAttachmentField: (anOrbeonFormReader isAttachmentField: fieldNode);
+			isAnnotationField: (anOrbeonFormReader isAnnotationField: fieldNode).
 		aFormSectionDefinition addFieldDefinition: fieldDefinition.
 	]
