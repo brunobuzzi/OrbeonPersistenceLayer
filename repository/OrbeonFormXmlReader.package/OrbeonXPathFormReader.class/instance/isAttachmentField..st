@@ -8,4 +8,8 @@ isAttachmentField: fieldNode
 	^((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frAttachmentXpath)
 		or:[((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frImageAttachmentXpath)
 			or:[((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frWpaintXpath)
-				or: [(fieldNode xPath: self defaultOrbeonXpathVersion containsClassFbAttachmentXpathFunction) notEmpty]]]
+				or: [(fieldNode xPath: self defaultOrbeonXpathVersion containsClassFbAttachmentXpathFunction) notEmpty 
+					or: [(fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frImageXpath]
+				]
+			]
+		]
