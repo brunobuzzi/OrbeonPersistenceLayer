@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"form",
-		"formReaderClass" ],
-	"name" : "OrbeonFormTest",
+		 ],
+	"name" : "OrbeonFormDefinitionTestAllFieldTypes",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "OrbeonFormDefinitionTest",
 	"type" : "normal" }
