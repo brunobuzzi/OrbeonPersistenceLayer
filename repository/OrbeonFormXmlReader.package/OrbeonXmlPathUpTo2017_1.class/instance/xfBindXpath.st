@@ -1,4 +1,4 @@
 binding
 xfBindXpath
 
-	^'//xf:bind'
+	^'xf:bind'
