@@ -11,17 +11,19 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 	nativeOrbeonIds := Dictionary new.
 	ids := Dictionary new.
 	"iterate over attachment fields #getAttachmentFields"
+
 	anOrbeonFormDefinition getAttachmentFields do: [:each |
 		(formNode xPath: './/',each name) 
 		ifNotEmpty: [:collection | | attachNode |
 			attachNode := collection last.
-			(self getValueFrom: attachNode) ifNotNil: [:value | nativeOrbeonIds at: each name put: value]]
+			(self getValueFrom: attachNode) 
+			ifNotNil: [:value | | newValue |
+				newValue := (value subStrings: '/') last allButLast: 4.
+				nativeOrbeonIds at: each name put: newValue]]
 	].
 	"the file name format is: <definitionId>-<fileId>"
-	nativeOrbeonIds keysAndValuesDo: [:key :value |  | macIndex attachmentId |
-		macIndex := value findString: 'mac='.
-		macIndex ifNil: [^OrbeonInvalidXMLException signal: 'No "mac=" sentence in attachment value'].
-		attachmentId := value copyFrom: macIndex + 4 to: value size.
-		ids at: key put: (anOrbeonFormDefinition getId, '-', attachmentId)].
+
+	nativeOrbeonIds keysAndValuesDo: [:key :value |  
+		ids at: key put: (anOrbeonFormDefinition getId, '-', value)].
 
 	^ids

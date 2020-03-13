@@ -20,7 +20,7 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 	"the file name format is: <definitionId>-<fileId>"
 	nativeOrbeonIds keysAndValuesDo: [:key :value |  | macIndex attachmentId |
 		macIndex := value findString: 'mac='.
-		macIndex ifNil: [^OrbeonInvalidXMLException signal: 'No "mac=" sentence in attachment value'].
+		(macIndex = 0) ifTrue: [^OrbeonInvalidXMLException signal: 'No "mac=" sentence in attachment value'].
 		attachmentId := value copyFrom: macIndex + 4 to: value size.
 		ids at: key put: (anOrbeonFormDefinition getId, '-', attachmentId)].
 
