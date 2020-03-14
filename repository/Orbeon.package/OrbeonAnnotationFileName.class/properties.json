@@ -1,0 +1,15 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"imageFileName",
+		"annotationFileName" ],
+	"name" : "OrbeonAnnotationFileName",
+	"pools" : [
+		 ],
+	"super" : "OrbeonAbstractFileName",
+	"type" : "normal" }

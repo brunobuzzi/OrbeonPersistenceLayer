@@ -10,9 +10,7 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 	../definitions/saved
 	../definitions/published"
 
-	anOrbeonFormDefinition attachments do: [:defIdfileId | | path fileId definitionId |
+	anOrbeonFormDefinition attachments do: [:orbeonFileName | | path |
 			path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
-			definitionId := anOrbeonFormDefinition id.
-			fileId := (defIdfileId subStrings: '-') last.
-			self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.
+			self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version.
 		].

@@ -19,11 +19,10 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 			(self getValueFrom: attachNode) 
 			ifNotNil: [:value | | newValue |
 				newValue := (value subStrings: '/') last allButLast: 4.
-				nativeOrbeonIds at: each name put: newValue]]
+				ids at: each name put: (OrbeonFileName newForFieldNamed: each name fileName: (anOrbeonFormDefinition getId, '-', newValue)).
+			]
+		].
 	].
 	"the file name format is: <definitionId>-<fileId>"
-
-	nativeOrbeonIds keysAndValuesDo: [:key :value |  
-		ids at: key put: (anOrbeonFormDefinition getId, '-', value)].
 
 	^ids

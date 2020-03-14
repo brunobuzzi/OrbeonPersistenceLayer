@@ -22,6 +22,6 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 		macIndex := value findString: 'mac='.
 		(macIndex = 0) ifTrue: [^OrbeonInvalidXMLException signal: 'No "mac=" sentence in attachment value'].
 		attachmentId := value copyFrom: macIndex + 4 to: value size.
-		ids at: key put: (anOrbeonFormDefinition getId, '-', attachmentId)].
+		ids at: key put: (OrbeonFileName newForFieldNamed: key fileName: (anOrbeonFormDefinition getId, '-', attachmentId))].
 
 	^ids

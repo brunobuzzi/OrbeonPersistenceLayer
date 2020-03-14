@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fieldName" ],
+	"name" : "OrbeonAbstractFileName",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
