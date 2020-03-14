@@ -16,11 +16,8 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 		(formNode xPath: './/',each name) 
 		ifNotEmpty: [:collection | | attachNode |
 			attachNode := collection last.
-			(self getValueFrom: attachNode) 
-			ifNotNil: [:value | | newValue |
-				newValue := (value subStrings: '/') last allButLast: 4.
-				ids at: each name put: (OrbeonFileName newForFieldNamed: each name fileName: (anOrbeonFormDefinition getId, '-', newValue)).
-			]
+			(self createExternalFileObjectFor: anOrbeonFormDefinition field: each node: attachNode)
+			ifNotNil: [:value | ids at: each name put: value].
 		].
 	].
 	"the file name format is: <definitionId>-<fileId>"

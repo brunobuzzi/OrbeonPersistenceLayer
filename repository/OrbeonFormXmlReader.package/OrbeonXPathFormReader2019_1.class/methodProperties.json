@@ -2,5 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getAttachmentIdsFrom:" : "brunobb 03/14/2020 14:56",
+		"createExternalFileObjectFor:field:node:" : "brunobb 03/14/2020 16:04",
+		"getAttachmentIdsFrom:" : "brunobb 03/14/2020 15:50",
 		"getCustomAttachmentId" : "brunobb 03/13/2020 13:23" } }
