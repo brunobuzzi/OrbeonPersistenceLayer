@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"defaultDatabaseReaderClass" : "brunobb 03/11/2020 14:31",
-		"migrateDefinitionAttachmentsOf:" : "brunobb 03/14/2020 15:11",
+		"migrateDefinitionAttachmentsOf:" : "brunobb 03/14/2020 16:17",
 		"migrateDefinitionCustomAttachmentOf:" : "brunobb 03/12/2020 15:06",
 		"migrateFormDefinitionNamed:" : "BrunoBB 02/08/2016 12:45",
 		"migrateFormDefinitionNamed:version:" : "brunobb 07/06/2018 08:21",

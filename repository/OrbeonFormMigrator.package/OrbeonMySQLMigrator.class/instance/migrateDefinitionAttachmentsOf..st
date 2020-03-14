@@ -12,5 +12,8 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 
 	anOrbeonFormDefinition attachments do: [:orbeonFileName | | path |
 			path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
-			self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version.
+			orbeonFileName isAnnotationField
+			ifFalse: [self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version]
+			ifTrue: [self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName imageFileNameDefinitionId fileId: orbeonFileName imageFileNameFileId version: anOrbeonFormDefinition version.
+						self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName annotationFileNameDefinitionId fileId: orbeonFileName annotationFileNameFileId version: anOrbeonFormDefinition version].
 		].
