@@ -5,7 +5,8 @@ createExternalFileObjectFor: anOrbeonFormDefinition field: aFormFieldDefinition 
 
 	fileId := self getValueFrom: xmlNode.
 	fileId ifNil: [^nil].
-	fileId := (fileId subStrings: '/') last allButLast: 4. "remove '.bin' extesion from file name"
+
+	fileId := (fileId subStrings: '=') last.
 	
 	aFormFieldDefinition isAnnotationField
 	ifFalse: [^OrbeonFileName newForFieldNamed: aFormFieldDefinition name fileName: (anOrbeonFormDefinition getId, '-', fileId)].
