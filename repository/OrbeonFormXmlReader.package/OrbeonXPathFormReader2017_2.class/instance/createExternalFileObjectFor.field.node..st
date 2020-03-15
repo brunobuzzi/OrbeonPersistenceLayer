@@ -11,8 +11,8 @@ createExternalFileObjectFor: anOrbeonFormDefinition field: aFormFieldDefinition 
 	aFormFieldDefinition isAnnotationField
 	ifFalse: [^OrbeonFileName newForFieldNamed: aFormFieldDefinition name fileName: (anOrbeonFormDefinition getId, '-', fileId)].
 
-	image := ((self getValueFrom: (xmlNode elementAt: 'image')) subStrings: 'mac=') last.
-	annotation := ((self getValueFrom: (xmlNode elementAt: 'annotation')) subStrings: 'mac=') last.
+	image := ((self getValueFrom: (xmlNode elementAt: 'image')) subStrings: '=') last.
+	annotation := ((self getValueFrom: (xmlNode elementAt: 'annotation')) subStrings: '=') last.
 
 	^OrbeonAnnotationFileName 
 			newForFieldNamed: aFormFieldDefinition name 

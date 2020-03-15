@@ -10,7 +10,7 @@ getCustomAttachmentId
 
 	^pdfNode rawContentString 
 		ifEmpty: [nil]
-		ifNotEmpty: [:value | (value subStrings: '/') last allButLast: 4] "remove '.bin' from the string "
+		ifNotEmpty: [:value | (value subStrings: '/') last]
 
 "the format of the Custom Attachment is:
  '/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/9428f017fea4876d39f15cea48ea78b5e2bb822b.bin'
