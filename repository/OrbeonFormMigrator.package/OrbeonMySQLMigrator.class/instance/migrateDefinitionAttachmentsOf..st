@@ -10,10 +10,16 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 	../definitions/saved
 	../definitions/published"
 
-	anOrbeonFormDefinition attachments do: [:orbeonFileName | | path |
-			path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
+	anOrbeonFormDefinition attachments do: [:orbeonFileName | | savedPath publishedPath |
+			savedPath := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
+			publishedPath := self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName. 
+
 			orbeonFileName isAnnotationField
-			ifFalse: [self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version]
-			ifTrue: [self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName imageFileNameDefinitionId fileId: orbeonFileName imageFileNameFileId version: anOrbeonFormDefinition version.
-						self getOrbeonHandler fileoutDefinitionAttachmentOn: path defintionId: orbeonFileName annotationFileNameDefinitionId fileId: orbeonFileName annotationFileNameFileId version: anOrbeonFormDefinition version].
+			ifFalse: [(Array with: savedPath with: publishedPath) do: [:eachPath | 
+							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version].
+			]
+			ifTrue: [(Array with: savedPath with: publishedPath) do: [:eachPath | 
+							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName imageFileNameDefinitionId fileId: orbeonFileName imageFileNameFileId version: anOrbeonFormDefinition version.
+							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName annotationFileNameDefinitionId fileId: orbeonFileName annotationFileNameFileId version: anOrbeonFormDefinition version].
+			].
 		].
