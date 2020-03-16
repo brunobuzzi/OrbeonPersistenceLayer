@@ -6,8 +6,7 @@
 		"Default" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"mySqlReader",
-		"formReader" ],
+		"mySqlReader" ],
 	"name" : "OrbeonHandler",
 	"pools" : [
 		 ],
