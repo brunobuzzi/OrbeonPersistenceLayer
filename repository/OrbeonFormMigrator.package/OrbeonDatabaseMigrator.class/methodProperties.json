@@ -6,4 +6,5 @@
 		"application:" : "BrunoBB 10/14/2015 14:07",
 		"defaultDatabaseReaderClass" : "BrunoBB 10/14/2015 14:00",
 		"getOrbeonHandler" : "BrunoBB 10/14/2015 14:12",
+		"migrateAll" : "brunobb 03/16/2020 12:22",
 		"setApplicationNamed:" : "brunobb 03/12/2020 07:55" } }
