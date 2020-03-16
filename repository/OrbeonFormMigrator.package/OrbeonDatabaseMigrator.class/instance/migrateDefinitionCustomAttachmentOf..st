@@ -17,6 +17,6 @@ migrateDefinitionCustomAttachmentOf: anOrbeonFormDefinition
 			definitionId := (anOrbeonFormDefinition printCompleteCustomAttachmentId subStrings: '-') first.
 			fileId := (anOrbeonFormDefinition printCompleteCustomAttachmentId subStrings: '-') last.
 
-			self getOrbeonHandler fileoutDefinitionAttachmentOn: savedPath defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.
-			self getOrbeonHandler fileoutDefinitionAttachmentOn: publishedPath defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.
+			self fileoutDefinitionAttachmentOn: savedPath defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.
+			self fileoutDefinitionAttachmentOn: publishedPath defintionId: definitionId fileId: fileId version: anOrbeonFormDefinition version.
 		].

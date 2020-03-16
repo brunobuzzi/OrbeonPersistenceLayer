@@ -15,6 +15,6 @@ migrateInstanceAttachmentsOf: anOrbeonFormDefinition
 			path := self getOrbeonWebServerConfiguration getInstancesPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
 			instanceId := eachInstance id.
 			fileId := (instIdFileId subStrings: '-') last.
-			self getOrbeonHandler fileoutInstanceAttachmentOn: path defintionId: instanceId fileId: fileId version: anOrbeonFormDefinition version.
+			self fileoutInstanceAttachmentOn: path defintionId: instanceId fileId: fileId version: anOrbeonFormDefinition version.
 		]
 	].

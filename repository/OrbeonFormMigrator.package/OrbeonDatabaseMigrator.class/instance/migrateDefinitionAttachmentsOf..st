@@ -16,10 +16,10 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 
 			(anOrbeonFormDefinition getFieldNamed: orbeonFileName fieldName) isAnnotationField
 			ifFalse: [(Array with: savedPath with: publishedPath) do: [:eachPath | 
-							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version].
+							self fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName definitionId fileId: orbeonFileName fileId version: anOrbeonFormDefinition version].
 			]
 			ifTrue: [(Array with: savedPath with: publishedPath) do: [:eachPath | 
-							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName imageFileNameDefinitionId fileId: orbeonFileName imageFileNameFileId version: anOrbeonFormDefinition version.
-							self getOrbeonHandler fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName annotationFileNameDefinitionId fileId: orbeonFileName annotationFileNameFileId version: anOrbeonFormDefinition version].
+							self fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName imageFileNameDefinitionId fileId: orbeonFileName imageFileNameFileId version: anOrbeonFormDefinition version.
+							self fileoutDefinitionAttachmentOn: eachPath defintionId: orbeonFileName annotationFileNameDefinitionId fileId: orbeonFileName annotationFileNameFileId version: anOrbeonFormDefinition version].
 			].
 		].
