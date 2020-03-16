@@ -8,9 +8,7 @@
 	"instvars" : [
 		"mySqlReader",
 		"formReader",
-		"instanceDefinitions",
-		"synchronizations",
-		"orbeonIP" ],
+		"synchronizations" ],
 	"name" : "OrbeonHandler",
 	"pools" : [
 		 ],

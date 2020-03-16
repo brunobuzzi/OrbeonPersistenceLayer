@@ -3,7 +3,6 @@ initialize
 
 	super initialize.
 
-	instanceDefinitions := OrderedCollection new.
 	synchronizations := Dictionary new.
 
 	mySqlReader := self defaultMySqlClass new.
