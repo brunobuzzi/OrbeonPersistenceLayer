@@ -15,7 +15,8 @@
 		"baseAttachmentPath",
 		"searchTypes",
 		"formsAudit",
-		"orbeonFormReaderClass" ],
+		"orbeonFormReaderClass",
+		"databaseMigratorClass" ],
 	"name" : "OrbeonServerConfiguration",
 	"pools" : [
 		 ],

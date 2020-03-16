@@ -1,5 +1,5 @@
 {
 	"class" : {
-		 },
+		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17" },
 	"instance" : {
-		"defaultDatabaseReaderClass" : "BrunoBB 10/14/2015 14:02" } }
+		 } }

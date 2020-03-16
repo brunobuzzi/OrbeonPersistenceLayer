@@ -15,3 +15,5 @@ initialize
 	formsAudit := Dictionary new. "whether or not an app.form has any audit configurations #(#drafs #instances #definitions)"
 
 	orbeonFormReaderClass := OrbeonXPathFormReader2019_1.
+
+	databaseMigratorClass := OrbeonMySQLMigrator.

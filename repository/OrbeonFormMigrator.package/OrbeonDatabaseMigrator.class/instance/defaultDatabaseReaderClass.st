@@ -1,4 +1,4 @@
 other
 defaultDatabaseReaderClass
 
-	^self subclassResponsibility
+	^self class defaultDatabaseReaderClass

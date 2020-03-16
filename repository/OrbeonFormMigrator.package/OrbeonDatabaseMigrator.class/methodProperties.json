@@ -1,10 +1,11 @@
 {
 	"class" : {
+		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
 		"forApplicationNamed:" : "BrunoBB 10/14/2015 14:07" },
 	"instance" : {
 		"application" : "BrunoBB 10/14/2015 14:07",
 		"application:" : "BrunoBB 10/14/2015 14:07",
-		"defaultDatabaseReaderClass" : "BrunoBB 10/14/2015 14:00",
+		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
 		"execute:" : "brunobb 03/16/2020 13:37",
 		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "brunobb 03/16/2020 13:38",
 		"fileoutInstanceAttachmentOn:defintionId:fileId:version:" : "brunobb 03/16/2020 13:38",
