@@ -1,4 +1,0 @@
-other
-host
-
-	^mySqlReader host
