@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"application" ],
+		"application",
+		"sqlReader" ],
 	"name" : "OrbeonDatabaseMigrator",
 	"pools" : [
 		 ],
