@@ -16,4 +16,4 @@ initialize
 
 	orbeonFormReaderClass := OrbeonXPathFormReader2019_1.
 
-	databaseMigratorClass := OrbeonMySQLMigrator.
+	databaseMigrator := OrbeonMySQLMigrator new.

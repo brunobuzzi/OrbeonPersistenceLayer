@@ -7,7 +7,7 @@ importDataFromDatabase
 	startVersion := Number fromString: (self componentValueAt: 'from-version').
 	endVersion := Number fromString: (self componentValueAt: 'to-version').
 
-	OrbeonHandler default
+	self getOrbeonWebServerConfiguration databaseMigrator
 		importFormNamed: formName 
 		in: applicationName 
 		fromVersion: startVersion 
