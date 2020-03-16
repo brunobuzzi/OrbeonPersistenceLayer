@@ -36,7 +36,7 @@
 		"importNewApplicationsButNoData" : "BrunoBB 07/22/2015 13:25",
 		"importNewDefinition:version:application:addDefToApp:excludeExistingApp:" : "BrunoBB 02/08/2016 11:17",
 		"importNewDefinitionAndDataOf:version:application:addDefToApp:excludeExistingApp:" : "BrunoBB 02/08/2016 11:17",
-		"initialize" : "brunobb 03/16/2020 12:39",
+		"initialize" : "brunobb 03/16/2020 12:53",
 		"mySqlReader" : "BrunoBB 12/20/2013 08:39",
 		"mySqlReader:" : "BrunoBB 12/20/2013 08:39",
 		"setDatabaseIP:user:password:" : "brunobb 03/11/2020 14:24",
