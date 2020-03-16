@@ -1,10 +1,7 @@
 {
 	"class" : {
-		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
-		"forApplicationNamed:" : "BrunoBB 10/14/2015 14:07" },
+		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17" },
 	"instance" : {
-		"application" : "BrunoBB 10/14/2015 14:07",
-		"application:" : "BrunoBB 10/14/2015 14:07",
 		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
 		"execute:" : "brunobb 03/16/2020 13:37",
 		"fileoutDefinitionAttachmentOn:defintionId:fileId:version:" : "brunobb 03/16/2020 13:38",
@@ -30,7 +27,7 @@
 		"importDataOf:version:" : "brunobb 03/16/2020 13:39",
 		"importDataOfFormId:form:app:" : "brunobb 03/16/2020 13:39",
 		"importFormDefinitionNamed:version:in:addToApp:" : "brunobb 03/16/2020 13:43",
-		"importFormNamed:in:fromVersion:toVersion:" : "brunobb 03/16/2020 14:30",
+		"importFormNamed:in:fromVersion:toVersion:" : "brunobb 03/16/2020 15:06",
 		"importNewApplications" : "brunobb 03/16/2020 13:39",
 		"importNewApplicationsButNoData" : "brunobb 03/16/2020 13:40",
 		"importNewDefinition:version:application:addDefToApp:excludeExistingApp:" : "brunobb 03/16/2020 13:43",
@@ -39,10 +36,9 @@
 		"migrateAll" : "brunobb 03/16/2020 14:05",
 		"migrateDefinitionAttachmentsOf:" : "brunobb 03/16/2020 14:05",
 		"migrateDefinitionCustomAttachmentOf:" : "brunobb 03/16/2020 14:05",
-		"migrateFormDefinitionNamed:" : "brunobb 03/16/2020 14:05",
-		"migrateFormDefinitionNamed:version:" : "brunobb 03/16/2020 14:05",
+		"migrateFormDefinitionNamed:in:" : "brunobb 03/16/2020 15:10",
+		"migrateFormDefinitionNamed:version:in:" : "brunobb 03/16/2020 15:10",
 		"migrateInstanceAttachmentsOf:" : "brunobb 03/16/2020 14:06",
-		"setApplicationNamed:" : "brunobb 03/12/2020 07:55",
 		"setDatabaseIP:user:password:" : "brunobb 03/16/2020 13:37",
 		"sqlReader" : "brunobb 03/16/2020 13:34",
 		"sqlReader:" : "brunobb 03/16/2020 13:34",

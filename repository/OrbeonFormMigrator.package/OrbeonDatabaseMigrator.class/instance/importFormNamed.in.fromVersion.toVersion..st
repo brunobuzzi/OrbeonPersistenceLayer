@@ -16,9 +16,9 @@ importFormNamed: formName in: appName fromVersion: startVersion toVersion: toVer
 		self importFormDefinitionNamed: formName version: index in: appName addToApp: true. 
 		].
 
-	startVersion to: toVersion do: [:index | | formDefinition registry |
-		application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName. 
-		registry := application registryForFormNamed: formName ifNone: [nil].
+	startVersion to: toVersion do: [:index | | formDefinition registry app |
+		app := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName. 
+		registry := app registryForFormNamed: formName ifNone: [nil].
 		formDefinition := registry getDefinitionWithVersion: index.
 		self importDataFromScratchOf: formDefinition.  
 		].
