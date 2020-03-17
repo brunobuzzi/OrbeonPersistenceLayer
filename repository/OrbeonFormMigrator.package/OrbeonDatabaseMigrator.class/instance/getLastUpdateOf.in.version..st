@@ -1,6 +1,6 @@
 other
 getLastUpdateOf: formName in: appName version: version
-	"Answer the last update time for form named <formNamed> in Orbeon applicaiton <appName> in MySql database"
+	"Answer the last update time for form named <formNamed> in Orbeon applicaiton <appName> in Orbeon relational database"
 	| sqlResult |
 
 	sqlResult := self execute: (sqlReader sqlFormDefinitionLastUpdateFor: appName form: formName version: version).

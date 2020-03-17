@@ -1,6 +1,6 @@
 db import
 importNewApplicationsButNoData
-	"The receiver perform the first and initial synchronization with the Orbeon Mysql database.
+	"The receiver perform the first and initial synchronization with the Orbeon relational database.
 	Get all applications and synchronize all forms of each application"
 	| formsToMigrate newInstances |
 
