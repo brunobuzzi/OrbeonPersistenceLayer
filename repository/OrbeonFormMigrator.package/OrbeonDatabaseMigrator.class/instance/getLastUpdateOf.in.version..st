@@ -1,4 +1,4 @@
-other
+sql queries
 getLastUpdateOf: formName in: appName version: version
 	"Answer the last update time for form named <formNamed> in Orbeon applicaiton <appName> in Orbeon relational database"
 	| sqlResult |

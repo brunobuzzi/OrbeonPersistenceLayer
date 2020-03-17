@@ -1,4 +1,4 @@
-other
+sql queries
 getAllVersionsNumberOf: formName in: app
 	"Answer a collection with all version number of form definition named <formName> in application named <app>"
 

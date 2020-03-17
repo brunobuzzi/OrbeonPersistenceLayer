@@ -1,4 +1,4 @@
-migration scripts
+sql queries
 getIdForDefinition: anOrbeonFormDefinition
 	"The receiver get the [id] of definition <anOrbeonFormDefinition> from the database if it is the first version otherwise get the [id] from the already stored form definition"
 	| sqlResult query |

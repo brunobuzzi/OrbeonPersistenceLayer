@@ -1,4 +1,4 @@
-db import
+sql queries
 getAllOrbeonApplications
 	"Answer a collection of string with all application name's of Orbeon Application"
 	| dbApplicationsNames |

@@ -1,4 +1,4 @@
-db import
+sql queries
 getFormWithId: documentId
 	"Answer the last stored version of the form with id <documentId>"
 

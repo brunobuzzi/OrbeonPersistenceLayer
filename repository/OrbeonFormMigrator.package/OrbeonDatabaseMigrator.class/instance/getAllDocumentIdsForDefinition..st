@@ -1,4 +1,4 @@
-migration scripts
+sql queries
 getAllDocumentIdsForDefinition: anOrbeonFormDefinition
 
 	"^self execute: (mySqlReader sqlGetAllDocumentIdsFrom: anOrbeonFormDefinition form of: anOrbeonFormDefinition app)"
