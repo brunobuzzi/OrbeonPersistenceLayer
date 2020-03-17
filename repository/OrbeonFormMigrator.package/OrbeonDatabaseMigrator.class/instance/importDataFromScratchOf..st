@@ -1,11 +1,11 @@
 db import
 importDataFromScratchOf: anOrbeonFormDefinition
-	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
-	This method has NO SENDERS is intented to use manually (programmatically) to import a Form Definition and Instances from the Scratch.
+	"The receiver import into Orbeon Application <anOrbeonApplication> and form named <formDefinitionName> all <OrbeonFormInstance>s in Orbeon relational database.
 	Optimized for definitions with a lof of form instances."
 	| ids gsObjects |
 
-	ids := self getAllDocumentIdsForDefinition: anOrbeonFormDefinition. "answer aString (filter by anOrbeonFormDefinition version)"
+	"answer aString (filter by <anOrbeonFormDefinition> version). There are NO TimeStamp filters (get all rows for <anOrbeonFormDefinition>)"
+	ids := self getAllDocumentIdsForDefinition: anOrbeonFormDefinition.
 
 	gsObjects := (ids subStrings: String lf) collect: [:eachId | | sqlResult dbArray | 
 			sqlResult := self getFormWithId: eachId.
