@@ -1,4 +1,4 @@
-mapping
+generate orbeon objects
 generateFormInstanceDefinition: formName app: appName from: aDBString
 	"Create a new instance of the Form based on <dbArray>"
 	| instance resultArray |

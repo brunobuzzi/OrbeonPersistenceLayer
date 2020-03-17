@@ -1,4 +1,4 @@
-mapping
+generate orbeon objects
 generateFormInstanceOf: anOrbeonFormDefinition from: dbArray
 	"Create a new instance of the Form based on <dbArray>"
 	| formId formInstance |

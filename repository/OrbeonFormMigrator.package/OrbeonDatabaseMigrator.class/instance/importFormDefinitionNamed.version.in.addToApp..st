@@ -1,4 +1,4 @@
-migration scripts
+db import
 importFormDefinitionNamed: formDefinitionName version: version in: appName addToApp: aBoolean
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>"
 	| dbDefnition gsDefinition dbArray app sqlString |

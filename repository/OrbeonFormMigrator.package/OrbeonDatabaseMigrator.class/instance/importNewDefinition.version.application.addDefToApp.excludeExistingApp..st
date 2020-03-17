@@ -1,4 +1,4 @@
-migration scripts
+db import
 importNewDefinition: form version: version application: appName addDefToApp: addToAppBool excludeExistingApp: excludeBoolean
 	"The receiver import new definition and data of OrbeonApplication named <appName> for form definition named <form> with version <version>.
 	If <aBoolean> is <true> then exclude existing OrbeonApplication from the process"

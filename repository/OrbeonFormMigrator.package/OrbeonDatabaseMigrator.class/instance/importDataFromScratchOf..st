@@ -1,4 +1,4 @@
-migration scripts
+db import
 importDataFromScratchOf: anOrbeonFormDefinition
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
 	This method has NO SENDERS is intented to use manually (programmatically) to import a Form Definition and Instances from the Scratch.

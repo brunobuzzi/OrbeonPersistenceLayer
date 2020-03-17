@@ -1,4 +1,4 @@
-mapping
+generate orbeon objects
 generateFormDefinition: formName app: appName from: dbArray
 	"Create a new definition of the Form based on <dbArray>"
 	| version formDefinition |
