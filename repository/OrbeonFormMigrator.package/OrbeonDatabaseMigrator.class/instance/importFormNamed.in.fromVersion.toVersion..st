@@ -1,4 +1,4 @@
-db import
+db import core
 importFormNamed: formName in: appName fromVersion: startVersion toVersion: toVersion
 	"The receiver only import the form definition and forms instances of form named <formName> in application <appName>  (no attachments are imported).
 	The version range of import is from <startVersion> to <toVersion>"

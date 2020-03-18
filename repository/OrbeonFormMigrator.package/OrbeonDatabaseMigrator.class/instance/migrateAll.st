@@ -12,6 +12,6 @@ migrateAll
 		app := resultArray at: 1. "app"
 		form := resultArray at: 2. "form"
 		version := resultArray at: 3. "version"
-		"import and create the OrbeonFormDefinition into OrbeonApplication <application>"
-		self importNewDefinitionAndDataOf: form version: version application: app addDefToApp: true excludeExistingApp: false.
+
+		self migrateFormDefinitionNamed: form version: version in: app.
 	]

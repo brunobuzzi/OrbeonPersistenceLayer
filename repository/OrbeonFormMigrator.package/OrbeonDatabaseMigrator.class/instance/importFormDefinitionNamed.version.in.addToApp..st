@@ -1,4 +1,4 @@
-db import basic
+db import core
 importFormDefinitionNamed: formDefinitionName version: version in: appName addToApp: aBoolean
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
 	Does NOT import attachments."
