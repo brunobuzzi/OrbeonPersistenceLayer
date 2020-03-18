@@ -1,5 +1,5 @@
 db import core
-importDataOf: anOrbeonFormDefinition version: version
+importFormInstancesOf: anOrbeonFormDefinition version: version from: stringTimeStamp
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
 	Does NOT import attachments."
 	| dbInstance gsObjects |

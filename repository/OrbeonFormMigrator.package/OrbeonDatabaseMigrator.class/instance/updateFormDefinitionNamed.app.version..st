@@ -12,16 +12,16 @@ updateFormDefinitionNamed: form app: app version: version
 
 	^currentDefinition 
 		ifNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: true.
-			self importDataOf: newDefinition version: version]
+			self importFormInstancesOf: newDefinition version: version]
 		ifNotNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: false.
 			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
 				ifTrue: [(self getOrbeonApplicationClass applicationNamed: app) addPublishedDefinition: newDefinition.
-							self importDataOf: newDefinition version: version] 
+							self importFormInstancesOf: newDefinition version: version] 
 				ifFalse: [ | dbDefnition dbArray |
 					dbDefnition := self execute: (sqlReader sqlGetAllFormsDefinition: form of: app version: version after: self getOldTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.
 					currentDefinition updateFrom: dbArray. "the form is almost the same --> we update the existing one"
 					currentDefinition processXMLDefinition.
-					self importDataOf: currentDefinition version: version].].
+					self importFormInstancesOf: currentDefinition version: version].].

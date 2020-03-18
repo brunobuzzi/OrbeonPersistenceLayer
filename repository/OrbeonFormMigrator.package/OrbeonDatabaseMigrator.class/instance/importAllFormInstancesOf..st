@@ -1,5 +1,5 @@
 db import core
-importDataFromScratchOf: anOrbeonFormDefinition
+importAllFormInstancesOf: anOrbeonFormDefinition
 	"The receiver import into Orbeon Application <anOrbeonApplication> and form named <formDefinitionName> all <OrbeonFormInstance>s in Orbeon relational database.
 	Does NOT import attachments."
 	| ids gsObjects |

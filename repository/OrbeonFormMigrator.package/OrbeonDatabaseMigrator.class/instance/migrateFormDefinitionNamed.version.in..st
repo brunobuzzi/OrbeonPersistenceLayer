@@ -17,7 +17,7 @@ migrateFormDefinitionNamed: aString version: version in: applicationName
 	app := self getOrbeonApplicationClass applicationNamed: applicationName.
 	app addSavedDefinition: instanceDefinition.
 
-	self importDataFromScratchOf: definition. "import data <OrbeonFormInstance> filtered by <definition> version"
+	self importAllFormInstancesOf: definition. "import data <OrbeonFormInstance> filtered by <definition> version"
 
 	self migrateDefinitionCustomAttachmentOf: definition.
 	self migrateDefinitionAttachmentsOf: definition.

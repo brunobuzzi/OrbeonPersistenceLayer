@@ -12,7 +12,7 @@ updateFormDefinitionNamedButNoData: form app: app version: version
 
 	^currentDefinition 
 		ifNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: true.
-			self importDataOf: newDefinition version: version]
+			self importFormInstancesOf: newDefinition version: version]
 		ifNotNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: false.
 			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
