@@ -1,4 +1,4 @@
-migration api
+db migration api
 migrateAll
 	"Migrate all Definitions and Instances from Orbeon to GemStone/S. This method MUST called only one Time !!!.
 	It ignore <application> instance variable and migrate all applications"

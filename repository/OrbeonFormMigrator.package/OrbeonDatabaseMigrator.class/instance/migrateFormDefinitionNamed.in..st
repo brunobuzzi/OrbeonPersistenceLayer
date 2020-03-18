@@ -1,4 +1,4 @@
-migration api
+db migration api
 migrateFormDefinitionNamed: aString in: applicationName
 	"The receiver migrate ALL VERSIONS (from relational database to GemStone) of the form definition named <aString> in application named <applicationName>"
 

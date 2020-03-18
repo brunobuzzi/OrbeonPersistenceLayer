@@ -1,7 +1,7 @@
-db import
+db import basic
 importDataFromScratchOf: anOrbeonFormDefinition
 	"The receiver import into Orbeon Application <anOrbeonApplication> and form named <formDefinitionName> all <OrbeonFormInstance>s in Orbeon relational database.
-	Optimized for definitions with a lof of form instances."
+	Does NOT import attachments."
 	| ids gsObjects |
 
 	"answer aString (filter by <anOrbeonFormDefinition> version). There are NO TimeStamp filters (get all rows for <anOrbeonFormDefinition>)"

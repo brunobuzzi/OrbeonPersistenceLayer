@@ -1,4 +1,4 @@
-update gs objects
+db update gs objects
 updateApplicationButNotDataOf: anOrbeonApplication
 	| formsToMigrate instances |
 

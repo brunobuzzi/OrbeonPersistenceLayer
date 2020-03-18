@@ -1,4 +1,4 @@
-migration api
+db migration api
 migrateFormDefinitionNamed: aString version: version in: applicationName
 	"The receiver migrate (from relational database to GemStone) the form definition named <aString> with version <version>.
 	An OrbeonFormDefinition will be create inside OrbeonApplication <application>"

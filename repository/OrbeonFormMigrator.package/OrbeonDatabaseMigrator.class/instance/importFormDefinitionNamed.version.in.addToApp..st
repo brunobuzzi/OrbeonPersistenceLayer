@@ -1,6 +1,7 @@
-db import
+db import basic
 importFormDefinitionNamed: formDefinitionName version: version in: appName addToApp: aBoolean
-	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>"
+	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
+	Does NOT import attachments."
 	| dbDefnition gsDefinition dbArray app sqlString |
 
 	sqlString := sqlReader sqlGetFormDefinition: formDefinitionName version: version of: appName after: self getOldTimeStamp.

@@ -1,6 +1,7 @@
-db import
+db import basic
 importDataOf: anOrbeonFormDefinition version: version
-	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>"
+	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
+	Does NOT import attachments."
 	| dbInstance gsObjects |
 
 	"filter rows in <orbeon_form_data> table by a TimeStamp <getOldTimeStamp>"
