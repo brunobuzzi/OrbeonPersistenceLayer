@@ -27,7 +27,6 @@
 		"importFormDefinitionNamed:version:in:addToApp:" : "brunobb 03/18/2020 06:50",
 		"importFormInstancesOf:version:" : "brunobb 03/18/2020 16:26",
 		"importFormInstancesOf:version:from:" : "brunobb 03/18/2020 16:26",
-		"importFormNamed:in:fromVersion:toVersion:" : "brunobb 03/18/2020 16:25",
 		"initialize" : "brunobb 03/16/2020 13:49",
 		"migrateAll" : "brunobb 03/18/2020 16:19",
 		"migrateDefinitionAttachmentsOf:" : "brunobb 03/17/2020 05:57",
@@ -39,6 +38,4 @@
 		"sqlReader" : "brunobb 03/16/2020 13:34",
 		"sqlReader:" : "brunobb 03/16/2020 13:34",
 		"updateApplication:" : "brunobb 03/16/2020 13:51",
-		"updateApplicationButNotDataOf:" : "brunobb 03/16/2020 13:51",
-		"updateFormDefinitionNamed:app:version:" : "brunobb 03/18/2020 16:27",
-		"updateFormDefinitionNamedButNoData:app:version:" : "brunobb 03/18/2020 16:27" } }
+		"updateFormDefinitionNamed:app:version:" : "brunobb 03/18/2020 16:27" } }

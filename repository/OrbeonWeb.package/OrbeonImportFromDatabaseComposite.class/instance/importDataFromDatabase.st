@@ -1,14 +1,8 @@
 other
 importDataFromDatabase
-	| applicationName formName startVersion endVersion |
+	| applicationName formName |
 
 	applicationName := self componentValueAt: 'app-name'.
 	formName := self componentValueAt: 'form-name'.
-	startVersion := Number fromString: (self componentValueAt: 'from-version').
-	endVersion := Number fromString: (self componentValueAt: 'to-version').
 
-	self getOrbeonWebServerConfiguration databaseMigrator
-		importFormNamed: formName 
-		in: applicationName 
-		fromVersion: startVersion 
-		toVersion: endVersion
+	self getOrbeonWebServerConfiguration databaseMigrator migrateFormDefinitionNamed: formName in: applicationName
