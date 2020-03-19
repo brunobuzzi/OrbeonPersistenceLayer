@@ -5,7 +5,7 @@ importFormInstancesOf: anOrbeonFormDefinition version: version from: stringTimeS
 	| dbInstance gsObjects |
 
 	"filter rows in <orbeon_form_data> table by a TimeStamp <getOldTimeStamp>"
-	dbInstance := self execute: (sqlReader sqlGetAllFormsData: anOrbeonFormDefinition formName version: version of: anOrbeonFormDefinition getApplicationName after: self getOldTimeStamp).
+	dbInstance := self execute: (sqlReader sqlGetAllFormsData: anOrbeonFormDefinition formName version: version of: anOrbeonFormDefinition getApplicationName after: stringTimeStamp).
 
 	gsObjects := (dbInstance subStrings: String lf) collect: [:eachDBLine | | dbArray |
 			dbArray := eachDBLine subStrings: String tab.

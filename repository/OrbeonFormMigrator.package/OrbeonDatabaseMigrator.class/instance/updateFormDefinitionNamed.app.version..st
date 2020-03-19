@@ -1,4 +1,4 @@
-db update gs objects
+db migration api
 updateFormDefinitionNamed: form app: app version: version
 	"The receiver update or create the OrbeonFormDefinition named <form> with version <version> in OrbeonApplication named <app>.
 	1. Get the current definition named <form>
