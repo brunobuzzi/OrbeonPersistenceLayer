@@ -9,21 +9,21 @@ updateFormDefinitionNamed: form app: app version: version
 	| currentDefinition newDefinition comparator shouldCreateAnotherVersion |
 
 	currentDefinition := self getOrbeonApplicationClass getLastPublishedDefinitionNamed: form fromApplicationNamed: app withVersion: (Integer fromString: version) ifNone: [nil].
+	newDefinition := self importFormDefinitionNamed: form version: version in: app.
 
-	^currentDefinition 
-		ifNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app.
-			app addSavedDefinition: newDefinition definition.
-			app addPublishedDefinition: newDefinition.
-			self importFormInstancesOf: newDefinition version: version]
-		ifNotNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app.
+	currentDefinition 
+		ifNil: [app addSavedDefinition: newDefinition definition.
+				app addPublishedDefinition: newDefinition]
+		ifNotNil: [
 			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
-				ifTrue: [(self getOrbeonApplicationClass applicationNamed: app) addPublishedDefinition: newDefinition.
-							self importFormInstancesOf: newDefinition version: version] 
+				ifTrue: [(self getOrbeonApplicationClass applicationNamed: app) addPublishedDefinition: newDefinition] 
 				ifFalse: [ | dbDefnition dbArray |
 					dbDefnition := self execute: (sqlReader sqlGetAllFormsDefinition: form of: app version: version after: self getOldTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.
 					currentDefinition updateFrom: dbArray. "the form is almost the same --> we update the existing one"
 					currentDefinition processXMLDefinition.
-					self importFormInstancesOf: currentDefinition version: version].].
+					newDefinition := currentDefinition.].
+			].
+	^self importFormInstancesOf: newDefinition version: version
