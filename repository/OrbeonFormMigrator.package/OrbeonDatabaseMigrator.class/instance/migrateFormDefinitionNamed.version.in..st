@@ -4,7 +4,7 @@ migrateFormDefinitionNamed: aString version: version in: applicationName
 	An OrbeonFormDefinition will be create inside OrbeonApplication <application>"
 	| definition instanceDefinition dbString app |
 
-	definition := self importFormDefinitionNamed: aString version: version in: applicationName addToApp: true.
+	definition := self importFormDefinitionNamed: aString version: version in: applicationName.
 	definition setMetadata.
 	dbString := self getDBStringForInstanceDefinitionWithId: definition id version: version.
 	"it could be a form definition with version = 2, but NO form instance definition with version 2 (it was never save after being published) --> we get the last"
@@ -16,6 +16,7 @@ migrateFormDefinitionNamed: aString version: version in: applicationName
 	instanceDefinition definition: definition.
 	app := self getOrbeonApplicationClass applicationNamed: applicationName.
 	app addSavedDefinition: instanceDefinition.
+	app addPublishedDefinition: definition.
 
 	self importAllFormInstancesOf: definition. "import data <OrbeonFormInstance> filtered by <definition> version"
 

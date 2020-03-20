@@ -1,8 +1,8 @@
 db import core
-importFormDefinitionNamed: formDefinitionName version: version in: appName addToApp: aBoolean
+importFormDefinitionNamed: formDefinitionName version: version in: appName
 	"The receiver import into Orbeon Application <anOrbeonApplication> a form named <formDefinitionName>.
 	Does NOT import attachments."
-	| dbDefnition gsDefinition dbArray app sqlString |
+	| dbDefnition gsDefinition dbArray sqlString |
 
 	sqlString := sqlReader sqlGetFormDefinition: formDefinitionName version: version of: appName after: self getOldTimeStamp.
 
@@ -14,8 +14,5 @@ importFormDefinitionNamed: formDefinitionName version: version in: appName addTo
 	"gsDefinition id: 'ec6132c917fa583f3d527ae4fd1d526ad7354a8c'."
 
 	gsDefinition processXMLDefinition. "set the OrbeonFormDefinition with it's values -xml-"
-
-	aBoolean ifTrue: [app := self getOrbeonApplicationClass applicationNamed: appName.
-							app addPublishedDefinition: gsDefinition].
 
 	^gsDefinition

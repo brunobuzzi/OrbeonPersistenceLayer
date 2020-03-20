@@ -1,6 +1,6 @@
 db migration api
 updateFormDefinitionNamed: form app: app version: version
-	"The receiver update or create the OrbeonFormDefinition named <form> with version <version> in OrbeonApplication named <app>.
+	"The receiver update or create the <anOrbeonFormDefinition> named <form> with version <version> in <OrbeonApplication> named <app>.
 	1. Get the current definition named <form>
 	2. If NOT exist then it creates a new defnition and store it in OrbeonApplication named <app>
 	3. If already exist then compare the current version with the new one and decide whether or not is necesary another definition.
@@ -11,9 +11,11 @@ updateFormDefinitionNamed: form app: app version: version
 	currentDefinition := self getOrbeonApplicationClass getLastPublishedDefinitionNamed: form fromApplicationNamed: app withVersion: (Integer fromString: version) ifNone: [nil].
 
 	^currentDefinition 
-		ifNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: true.
+		ifNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app.
+			app addSavedDefinition: newDefinition definition.
+			app addPublishedDefinition: newDefinition.
 			self importFormInstancesOf: newDefinition version: version]
-		ifNotNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app addToApp: false.
+		ifNotNil: [newDefinition := self importFormDefinitionNamed: form version: version in: app.
 			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
