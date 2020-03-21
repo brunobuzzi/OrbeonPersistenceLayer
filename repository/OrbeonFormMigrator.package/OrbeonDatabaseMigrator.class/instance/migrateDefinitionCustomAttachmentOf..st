@@ -1,4 +1,4 @@
-attachments
+db attachments
 migrateDefinitionCustomAttachmentOf: anOrbeonFormDefinition
 	"The receiver export all attachments of <anOrbeonFormDefinition> to the file system.
 	This is done directly from the relational database. For exmaple in MySql is done via: select file_content INTO DUMPFILE 'fileName'.
