@@ -1,5 +1,5 @@
 other
-importDataFromDatabase
+importApplicationAndForm
 	| applicationName formName |
 
 	applicationName := self componentValueAt: 'app-name'.
