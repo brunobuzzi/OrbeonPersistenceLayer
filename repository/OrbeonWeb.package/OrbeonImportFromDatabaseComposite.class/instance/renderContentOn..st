@@ -5,4 +5,5 @@ renderContentOn: html
 		self renderMigrateAllOn: html.
 		self renderMigrateApplicationAndFormOn: html.
 		self renderMigrateApplicationAndFormVersionFromDateOn: html.
+		self renderMigrateInstancesOfFormVersionFromDateOn: html.
 	].
