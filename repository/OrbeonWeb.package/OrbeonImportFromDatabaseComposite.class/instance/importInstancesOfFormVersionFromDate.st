@@ -9,5 +9,4 @@ importInstancesOfFormVersionFromDate
 	application := self getOrbeonApplicationClass applicationNamed: applicationName ifNone: [^self].
 	form := application getDefinitionNamed: formName withVersion: version ifNone: [^self].
 
-	self getOrbeonWebServerConfiguration databaseMigrator importFormInstancesOf: form version: version from: date printString.
-	self getOrbeonWebServerConfiguration migrateInstanceAttachmentsOf: form from: date printString.
+	self getOrbeonWebServerConfiguration databaseMigrator migrateInstancesOf: form version: version from: date printString.
