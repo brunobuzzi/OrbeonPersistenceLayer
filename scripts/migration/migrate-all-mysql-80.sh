@@ -30,7 +30,6 @@ set user DataCurator password swordfish gemstone $1
 login
 exec
 | migrator |
-OrbeonHandler default mySqlReader: OrbeonMySQL80 new.
 migrator := OrbeonMySQLMigrator new.
 migrator migrateAll.
 System commit.

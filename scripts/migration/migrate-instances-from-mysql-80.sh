@@ -30,7 +30,6 @@ set user DataCurator password swordfish gemstone $1
 login
 exec
 | migrator |
-OrbeonHandler default mySqlReader: OrbeonMySQL80 new.
 migrator := OrbeonMySQLMigrator forApplicationNamed: '$2'.
 migrator importFormInstancesOf: '$3' version: $4 from: (TimeStamp fromString: '$5').
 System commit.
