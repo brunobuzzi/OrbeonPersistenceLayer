@@ -16,7 +16,8 @@
 		"searchTypes",
 		"formsAudit",
 		"orbeonFormReaderClass",
-		"databaseMigrator" ],
+		"databaseMigrator",
+		"baseUrlDocumentation" ],
 	"name" : "OrbeonServerConfiguration",
 	"pools" : [
 		 ],

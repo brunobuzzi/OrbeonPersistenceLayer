@@ -17,3 +17,5 @@ initialize
 	orbeonFormReaderClass := OrbeonXPathFormReader2019_1.
 
 	databaseMigrator := OrbeonMySQLMigrator new.
+
+	baseUrlDocumentation := 'https://bpmflow.gitbook.io/project'.
