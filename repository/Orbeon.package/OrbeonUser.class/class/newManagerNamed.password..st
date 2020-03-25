@@ -2,5 +2,5 @@ other
 newManagerNamed: aString password: password
 
 	^(self newNamed: aString password: password)
-			managerRole: OrbeonManagerUserRole new;
+			managerRole: OrbeonManagerAdminRole new;
 			yourself
