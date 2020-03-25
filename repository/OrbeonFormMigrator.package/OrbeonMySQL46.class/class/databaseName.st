@@ -1,4 +1,4 @@
 other
 databaseName
 
-	^'MySQL - Orbebon 4.6'
+	^'MySQL 4.6'

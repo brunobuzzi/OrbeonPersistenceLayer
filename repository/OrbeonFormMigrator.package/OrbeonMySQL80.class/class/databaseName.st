@@ -1,4 +1,4 @@
 other
 databaseName
 
-	^'DB2'
+	^'MySQL 8.0'
