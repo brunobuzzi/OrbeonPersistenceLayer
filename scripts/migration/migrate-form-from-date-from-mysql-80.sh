@@ -2,9 +2,9 @@
 # Requires GS_HOME variable defined
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: migrate-instances-from-mysql-80.sh STONE_NAME APPLICATION_NAME FORM_NAME VERSION TIME_STAMP"
-  echo "Migrate from MySQL v8.0 Orbeon Forms Instances in applicaiton named [APPLICATION_NAME] of form named [FORM_NAME] version [VERSION] from [TIME_STAMP] to GemStone/S [STONE_NAME]";
-  echo "example: sh migrate-instances-from-mysql-80.sh devKit_351 sales sales-item-form 01/01/2018"
+  echo "Usage: migrate-form-from-date-from-mysql-80.sh STONE_NAME APPLICATION_NAME FORM_NAME VERSION FROM_DATE"
+  echo "Migrate from MySQL v8.0 Orbeon Forms in applicaiton named [APPLICATION_NAME] of form named [FORM_NAME] verssion [VERSION] from date [FROM_DATE] to GemStone/S [STONE_NAME]";
+  echo "example: sh migrate-form-from-date-from-mysql-80.sh devKit_351 sales sales-item-form 3 01/01/2017"
   echo "The environment variable GS_HOME must be set";    
   exit 0
 fi
@@ -30,8 +30,8 @@ set user DataCurator password swordfish gemstone $1
 login
 exec
 | migrator |
-migrator := OrbeonMySQLMigrator forApplicationNamed: '$2'.
-migrator importFormInstancesOf: '$3' version: $4 from: (TimeStamp fromString: '$5').
+migrator := OrbeonMySQLMigrator new.
+migrator updateFormDefinitionNamed: '$3' app: '$2' version: $4 from: '$5'.
 System commit.
 %
 exit
