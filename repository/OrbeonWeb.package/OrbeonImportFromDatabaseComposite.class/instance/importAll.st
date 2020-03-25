@@ -1,4 +1,4 @@
-other
+migration operations
 importAll
 
 	self getOrbeonWebServerConfiguration databaseMigrator migrateAll

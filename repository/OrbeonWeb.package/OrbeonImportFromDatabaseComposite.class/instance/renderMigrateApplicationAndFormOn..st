@@ -1,4 +1,4 @@
-other
+render
 renderMigrateApplicationAndFormOn: html
 
 	html div class: 'centered-unique-form'; with: [

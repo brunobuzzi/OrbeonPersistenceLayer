@@ -1,4 +1,4 @@
-other
+migration operations
 importApplicationAndFormVersionFromDate
 	| applicationName formName date version |
 

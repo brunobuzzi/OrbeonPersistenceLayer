@@ -1,4 +1,4 @@
-other
+render
 renderContentOn: html
 
 	html div class: 'display-inline-flex'; with: [

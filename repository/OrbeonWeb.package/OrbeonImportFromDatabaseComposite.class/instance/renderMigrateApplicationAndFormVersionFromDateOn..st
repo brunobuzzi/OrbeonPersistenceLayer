@@ -1,4 +1,4 @@
-other
+render
 renderMigrateApplicationAndFormVersionFromDateOn: html
 
 	html div class: 'centered-unique-form'; with: [
