@@ -1,11 +1,12 @@
 highcharts
 drawFieldEvolutionDistributionBarGraphOn: html
-	| highchart |
+	| highchart error |
 
 	selectedDefinition ifNil: [^self].
 
-	distributionReport := selectedDefinition reportFieldEvolutionFor: self getFieldName startDate: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport := selectedDefinition reportFieldEvolutionFor: self getFieldName startDate: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
 	distributionReport xAxisIsDate: true.
+	distributionReport exception: error.
 	distributionReport createSecondaryDistributions.
 
 	highchart := html highcharts newChart.
