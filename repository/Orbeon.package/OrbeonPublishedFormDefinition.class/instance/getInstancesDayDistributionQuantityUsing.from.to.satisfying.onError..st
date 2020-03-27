@@ -7,7 +7,7 @@ getInstancesDayDistributionQuantityUsing: sortSelector from: startDate to: endDa
 
 	(instances select: [:each | | value |
 		value := each perform: sortSelector.
-		startDate <= value  and: [(value <= endDate) and: [formConditionBlock value: each]]])
+		startDate <= value  and: [(value <= endDate) and: [formConditionBlock asApplicationBlock value: each onError: errorHandler]]])
 			do: [:each | | key value |
 				value := each perform: sortSelector.
 				key := OrderedCollection with: ((value date asDays - heatMapStartDate asDays) // 7).
