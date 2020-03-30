@@ -1,4 +1,4 @@
-other
+distribution
 getInstancesQuantityFrom: startDate to: endDate
 	""
 	| total |
