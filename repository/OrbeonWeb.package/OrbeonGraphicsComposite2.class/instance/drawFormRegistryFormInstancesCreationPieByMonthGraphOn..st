@@ -1,9 +1,10 @@
 highcharts
 drawFormRegistryFormInstancesCreationPieByMonthGraphOn: html
-	
+	| error |
+
 	selectedDefinition ifNil: [^self].
 
-	distributionReport := selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport := selectedDefinition registry reportCreationDistributionByMonthFrom: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
 
 	self renderArray2Chart: html highcharts newChart 
 			distributions: (OrderedCollection with: distributionReport) 
