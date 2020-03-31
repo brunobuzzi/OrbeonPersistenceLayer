@@ -43,7 +43,7 @@ renderContentOn: html
 
 	(self isFieldValuesScope and: [self isDonutQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionPieGraphOn: html].
 	(self isFieldValuesScope and: [self isBarQuantityChart]) ifTrue: [^self drawFieldInstancesDistributionBarGraphOn: html].
-	(self isFieldValuesScope and: [self isFieldEvolutionDistributionChart]) ifTrue: [^self drawFieldEvolutionDistributionBarGraphOn: html].
-	(self isFieldValuesScope and: [self isFieldEvolutionComparisonDistributionChart]) ifTrue: [^self drawFieldEvolutionComparisionDistributionBarGraphOn: html].
+	(self isFieldValuesScope and: [self isFieldEvolutionDistributionChart]) ifTrue: [^self drawFieldEvolutionDistributionGraphOn: html].
+	(self isFieldValuesScope and: [self isFieldEvolutionComparisonDistributionChart]) ifTrue: [^self drawFieldEvolutionComparisionDistributionGraphOn: html].
 
 	isRenderingChart := false.

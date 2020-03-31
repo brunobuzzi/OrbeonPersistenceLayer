@@ -1,12 +1,15 @@
 highcharts
-drawFieldEvolutionDistributionBarGraphOn: html
+drawFieldEvolutionComparisionDistributionGraphOn: html
 	| highchart error |
 
 	selectedDefinition ifNil: [^self].
+	self queryBlockInInvalid ifTrue: [^self renderInvalidQueryBlockOn: html].
 
-	distributionReport := selectedDefinition reportFieldEvolutionFor: self getFieldName startDate: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
+	distributionReport := selectedDefinition reportFieldsComparisonEvolutionFor: selectedFields startDate: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
+
+	error ifNotNil: [:exception | ^self renderException: exception on: html].
+
 	distributionReport xAxisIsDate: true.
-	distributionReport exception: error.
 	distributionReport createSecondaryDistributions.
 
 	highchart := html highcharts newChart.
@@ -19,12 +22,12 @@ drawFieldEvolutionDistributionBarGraphOn: html
 
 	distributionReport categories ifNotNil: [:categories | highchart xAxis categories: categories].
 
-	distributionReport getAllReports do: [:eachDistributionReport | | data |
+	distributionReport fieldDistributions do: [:eachDistributionReport | | data |
 		data := OrderedCollection new.
 		(eachDistributionReport getDistributionToRenderFor: (self componentValueAt: 'time-span')) keysAndValuesDo: [:key :value | 
 			data add: (Array with: key with: value).
 		].
-		(highchart addSeriesOf: HighchartsSeriesAreaspline)
+		(highchart addSeriesOf: HighchartsSeriesSpline)
 			index: 0;
 			name: eachDistributionReport seriesName;
 			data: data asArray.
