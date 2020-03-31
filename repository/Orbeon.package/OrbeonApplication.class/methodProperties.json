@@ -131,6 +131,7 @@
 		"reportCreationDistributionByMonthFrom:to:satisfying:" : "BrunoBB 10/18/2016 11:43",
 		"reportCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 15:48",
 		"reportModificationDayDistributionQuantityFrom:to:" : "BrunoBB 10/19/2016 06:59",
+		"reportModificationDayDistributionQuantityFrom:to:satisfying:onError:" : "brunobb 03/31/2020 13:10",
 		"reportModificationDistributionByMonthFrom:to:" : "BrunoBB 10/18/2016 11:47",
 		"reportModificationDistributionByMonthFrom:to:satisfying:" : "BrunoBB 10/19/2016 07:00",
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 17:08",
