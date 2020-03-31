@@ -1,8 +1,8 @@
 chart command
 drawFormRegistryQuantityChartOn: html series: aHighchartsSeriesClass
-	| highchart |
+	| highchart error |
 	
-	distributionReport := selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: self queryBlock.
+	distributionReport := selectedDefinition registry reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.

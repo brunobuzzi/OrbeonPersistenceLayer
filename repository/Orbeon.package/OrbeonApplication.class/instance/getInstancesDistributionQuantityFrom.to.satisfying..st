@@ -10,7 +10,7 @@ getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formCond
 	definitionRegistry keysAndValuesDo: [:formName :registry | 
 		distribution at: formName put: (registry getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formConditionBlock)].
 
-	distribution asSortedCollection reverse do: [:each | | key |
+	distribution "asSortedCollection reverse" do: [:each | | key |
 		key := distribution keyAtValue: each ifAbsent: [].
 		orderedQuantity at: key put: each.
 		distribution removeKey: key ifAbsent: [].

@@ -1,10 +1,14 @@
 chart command
 drawAppDonutQuantityChartOn: html series: aHighchartsSeriesClass
-	| highchart |
+	| highchart error |
 	
 	selectedDefinition ifNil: [^self].
 
-	distributionReport := selectedDefinition application reportQuantityDistributionFrom: self getStartDate to: self getEndDate. 
+	self queryBlockInInvalid ifTrue: [^self renderInvalidQueryBlockOn: html].
+
+	distributionReport := selectedDefinition application reportQuantityDistributionFrom: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex]. 
+
+	error ifNotNil: [:exception | ^self renderException: exception on: html].
 
 	highchart := html highcharts newChart.
 	highchart addYAxis title text: distributionReport yTitle.
