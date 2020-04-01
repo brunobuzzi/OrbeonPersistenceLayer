@@ -1,4 +1,4 @@
-highcharts
+highcharts basic
 renderChartType: chartTypeClass withException: anExceptionOrNil on: html 
 
 	anExceptionOrNil ifNotNil: [:exception | ^self renderException: exception on: html].

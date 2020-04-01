@@ -1,4 +1,4 @@
-highcharts
+highcharts basic
 renderHeatMapWithException: anExceptionOrNil on: html 
 
 	anExceptionOrNil ifNotNil: [:exception | ^self renderException: exception on: html].
