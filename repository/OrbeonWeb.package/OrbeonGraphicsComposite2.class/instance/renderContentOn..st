@@ -14,6 +14,8 @@ renderContentOn: html
 	].
 	isRenderingChart ifFalse: [^self].
 
+	self queryBlockInInvalid ifTrue: [^self renderInvalidQueryBlockOn: html].
+
 	(self isGlobalScope and: [self isDayDistributionCreationChart]) ifTrue: [^self drawGlobalAppFormInstancesCreationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isDayDistributionModificationChart]) ifTrue: [^self drawGlobalAppFormInstancesModificationDayDistributionGraphOn: html].
 	(self isGlobalScope and: [self isDonutCreationByMonthChart]) ifTrue: [^self drawGlobalFormInstancesCreationPieByMonthGraphOn: html].
