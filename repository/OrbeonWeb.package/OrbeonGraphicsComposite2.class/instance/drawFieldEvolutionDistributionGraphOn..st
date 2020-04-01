@@ -4,8 +4,6 @@ drawFieldEvolutionDistributionGraphOn: html
 
 	selectedDefinition ifNil: [^self].
 
-	self queryBlockInInvalid ifTrue: [^self renderInvalidQueryBlockOn: html].
-
 	distributionReport := selectedDefinition reportFieldEvolutionFor: self getFieldName startDate: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
 
 	error ifNotNil: [:exception | ^self renderException: exception on: html].
