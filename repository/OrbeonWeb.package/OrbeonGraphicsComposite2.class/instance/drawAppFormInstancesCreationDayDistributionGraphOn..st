@@ -2,6 +2,8 @@ highcharts
 drawAppFormInstancesCreationDayDistributionGraphOn: html
 	| error |
 
+	selectedDefinition ifNil: [^self].
+
 	self queryBlockInInvalid ifTrue: [^self renderInvalidQueryBlockOn: html].
 
 	distributionReport := selectedDefinition application reportCreationDayDistributionQuantityFrom: self getStartDate to: self getEndDate satisfying: self queryBlock onError: [:ex | error := ex].
