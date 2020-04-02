@@ -1,5 +1,5 @@
 highcharts basic
-renderArray3Chart: aHighchart distributions: distributionCollection chartsTypes: seriesClassCollection atDiv: aWADivTag
+renderHeatMapChart: aHighchart distributions: distributionCollection chartsTypes: seriesClassCollection atDiv: aWADivTag
 	| mainDistribution yAxisCategories newSerie |
 
 	distributionCollection ifEmpty: [^self].
