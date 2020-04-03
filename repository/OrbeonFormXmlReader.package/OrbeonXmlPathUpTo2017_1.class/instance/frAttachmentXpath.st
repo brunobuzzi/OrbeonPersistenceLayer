@@ -1,0 +1,4 @@
+attachments
+frAttachmentXpath
+
+	^'fr:attachment'

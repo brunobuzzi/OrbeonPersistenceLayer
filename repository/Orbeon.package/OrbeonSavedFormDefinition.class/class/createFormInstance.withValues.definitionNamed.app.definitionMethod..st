@@ -6,6 +6,8 @@ createFormInstance: xmlMethodName withValues: anArray definitionNamed: definitio
 	application := self defaultApplicationManagerClass applicationNamed: app.
 	definition := application definitionNamed: definitionName ifNone: [self createDefinition: definitionName with: definitionMethod in: application].
 
+	definition ifNil: [definition := self createDefinition: definitionName with: definitionMethod in: application]. "see issue #294"
+
 	formInstance := 
 		(OrbeonFormInstance newFor: definition withId: UUID new asString)
 			definition: definition;

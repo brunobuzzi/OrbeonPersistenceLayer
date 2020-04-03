@@ -1,0 +1,4 @@
+attachments
+frWpaintXpath
+
+	^'fr:wpaint'
