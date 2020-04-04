@@ -2,7 +2,6 @@ other
 setUp
 	| definition application |
 
-	self getOrbeonApplicationClass cache removeKey: 'agesic'.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'test-3' ifNone: [self createFormDefinition].
 

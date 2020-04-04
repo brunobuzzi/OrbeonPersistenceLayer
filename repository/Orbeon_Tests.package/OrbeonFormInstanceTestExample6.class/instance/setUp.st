@@ -2,7 +2,6 @@ other
 setUp
 	| definition application xPathManager |
 
-	self getOrbeonApplicationClass cache removeKey: 'ue'.
 	xPathManager := self getOrbeonXmlXpathUpto2017_1.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
 	application definitionNamed: 'library' ifNone: [self createFormStructureFor: 'library' in: 'ue' definitionTemplate: #form_ue_library title: 'Library' xPathVersion: xPathManager].

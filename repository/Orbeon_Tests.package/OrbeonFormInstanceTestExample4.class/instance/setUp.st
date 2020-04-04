@@ -2,7 +2,6 @@ other
 setUp
 	| definition application |
 
-	self getOrbeonApplicationClass cache removeKey: 'agesic' ifAbsent: [].
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure.].
 
