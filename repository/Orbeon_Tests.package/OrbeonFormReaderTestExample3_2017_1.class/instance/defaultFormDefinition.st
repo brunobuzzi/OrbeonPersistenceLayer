@@ -1,4 +1,4 @@
 other
 defaultFormDefinition
 
-	^OrbeonFormDefinitionTemplateUpTo2017_1 form_FormReader_example_3
+	^OrbeonFormDefinitionTemplateUpTo2017_1 formDefinition_example_3

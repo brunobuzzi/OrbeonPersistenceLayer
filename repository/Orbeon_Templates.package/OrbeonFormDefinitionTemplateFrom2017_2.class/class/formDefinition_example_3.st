@@ -1,7 +1,7 @@
 other
-form_FormReader_example_3
+formDefinition_example_3
 
-	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
+^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -18,7 +18,7 @@ form_FormReader_example_3
         <xh:title>Test</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
             <!-- Main instance -->
-            <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
                     <section-1>
                         <section-1-iteration>
@@ -30,9 +30,11 @@ form_FormReader_example_3
                                 <control-8/>
                                 <mobile/>
                                 <grid-10>
-                                    <moneySubject/>
-                                    <quantity/>
-                                    <currency/>
+                                    <grid-10-iteration>
+                                        <moneySubject/>
+                                        <quantity/>
+                                        <currency/>
+                                    </grid-10-iteration>
                                 </grid-10>
                             </section-7>
                         </section-1-iteration>
@@ -45,8 +47,10 @@ form_FormReader_example_3
                         <details/>
                         <type/>
                         <grid-19>
-                            <options/>
-                            <otherOptions/>
+                            <grid-19-iteration>
+                                <options/>
+                                <otherOptions/>
+                            </grid-19-iteration>
                         </grid-19>
                         <section-24>
                             <formatedText/>
@@ -68,9 +72,11 @@ form_FormReader_example_3
                             <xf:bind id="control-8-bind" ref="control-8" name="control-8"/>
                             <xf:bind id="mobile-bind" ref="mobile" name="mobile"/>
                             <xf:bind id="grid-10-bind" ref="grid-10" name="grid-10">
-                                <xf:bind id="quantity-bind" ref="quantity" name="quantity" type="xf:decimal"/>
-                                <xf:bind id="currency-bind" ref="currency" name="currency" type="xf:decimal"/>
-                                <xf:bind id="moneySubject-bind" ref="moneySubject" name="moneySubject"/>
+                                <xf:bind id="grid-10-iteration-bind" ref="grid-10-iteration" name="grid-10-iteration">
+                                    <xf:bind id="quantity-bind" ref="quantity" name="quantity" type="xf:decimal"/>
+                                    <xf:bind id="currency-bind" ref="currency" name="currency" type="xf:decimal"/>
+                                    <xf:bind id="moneySubject-bind" ref="moneySubject" name="moneySubject"/>
+                                </xf:bind>
                             </xf:bind>
                         </xf:bind>
                     </xf:bind>
@@ -81,8 +87,10 @@ form_FormReader_example_3
                     <xf:bind id="date2-bind" ref="date2" name="date2" type="xf:date"/>
                     <xf:bind id="date3-bind" ref="date3" name="date3" type="xf:date"/>
                     <xf:bind id="grid-19-bind" ref="grid-19" name="grid-19">
-                        <xf:bind id="options-bind" ref="options" name="options"/>
-                        <xf:bind id="otherOptions-bind" ref="otherOptions" name="otherOptions"/>
+                        <xf:bind id="grid-19-iteration-bind" ref="grid-19-iteration" name="grid-19-iteration">
+                            <xf:bind id="options-bind" ref="options" name="options"/>
+                            <xf:bind id="otherOptions-bind" ref="otherOptions" name="otherOptions"/>
+                        </xf:bind>
                     </xf:bind>
                     <xf:bind id="details-bind" ref="details" name="details"/>
                     <xf:bind id="type-bind" ref="type" name="type"/>
@@ -95,7 +103,7 @@ form_FormReader_example_3
             <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>agesic</application-name>
-                    <form-name>test</form-name>
+                    <form-name>test-all-types-3</form-name>
                     <title xml:lang="en">Test</title>
                     <description xml:lang="en"/>
                     <permissions>
@@ -262,14 +270,7 @@ form_FormReader_example_3
                     </resource>
                 </resources>
             </xf:instance>
-            <!-- Utility instances for services -->
-            <xf:instance id="fr-service-request-instance" xxf:exclude-result-prefixes="#all">
-                <request/>
-            </xf:instance>
-            <xf:instance id="fr-service-response-instance" xxf:exclude-result-prefixes="#all">
-                <response/>
-            </xf:instance>
-            <xf:instance xxf:readonly="true" id="section-1-template">
+            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="section-1-template">
                 <section-1-iteration>
                     <name/>
                     <surname/>
@@ -286,18 +287,18 @@ form_FormReader_example_3
                     </section-7>
                 </section-1-iteration>
             </xf:instance>
-            <xf:instance xxf:readonly="true" id="grid-10-template">
-                <grid-10>
+            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="grid-10-template">
+                <grid-10-iteration>
                     <quantity/>
                     <currency/>
                     <moneySubject/>
-                </grid-10>
+                </grid-10-iteration>
             </xf:instance>
-            <xf:instance xxf:readonly="true" id="grid-19-template">
-                <grid-19>
+            <xf:instance xxf:readonly="true" xxf:exclude-result-prefixes="#all" id="grid-19-template">
+                <grid-19-iteration>
                     <options/>
                     <otherOptions/>
-                </grid-19>
+                </grid-19-iteration>
             </xf:instance>
         </xf:model>
     </xh:head>
@@ -305,76 +306,67 @@ form_FormReader_example_3
         <fr:view>
             <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
-                <fr:section id="section-1-control" bind="section-1-bind" repeat="true" min="1"
+                <fr:section id="section-1-control" bind="section-1-bind" repeat="content" min="1"
                             template="instance(''section-1-template'')">
                     <xf:label ref="$form-resources/section-1/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-1-grid">
+                        <fr:c y="1" x="1" w="6">
                                 <xf:input id="name-control" bind="name-bind" class="fr-summary fr-search">
                                     <xf:label ref="$form-resources/name/label"/>
                                     <xf:hint ref="$form-resources/name/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="7" w="6">
                                 <xf:input id="surname-control" bind="surname-bind" class="fr-summary fr-search">
                                     <xf:label ref="$form-resources/surname/label"/>
                                     <xf:hint ref="$form-resources/surname/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="6">
                                 <fr:us-phone xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                             xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                             id="phone-control"
-                                             bind="phone-bind"
-                                             class="fr-summary fr-search">
+                                         xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                         id="phone-control"
+                                         bind="phone-bind"
+                                         class="fr-summary fr-search">
                                     <xf:label ref="$form-resources/phone/label"/>
                                     <xf:hint ref="$form-resources/phone/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:us-phone>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="7" w="6">
                                 <xf:input id="mail-control" bind="mail-bind">
                                     <xf:label ref="$form-resources/mail/label"/>
                                     <xf:hint ref="$form-resources/mail/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                     <fr:section id="section-7-control" bind="section-7-bind">
                         <xf:label ref="$form-resources/section-7/label"/>
-                        <fr:grid>
-                            <xh:tr>
-                                <xh:td>
+                        <fr:grid id="grid-2-grid">
+                            <fr:c y="1" x="1" w="12">
                                     <xf:output id="control-8-control" bind="control-8-bind">
                                         <xf:label ref="$form-resources/control-8/label"/>
                                         <xf:hint ref="$form-resources/control-8/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                     </xf:output>
-                                </xh:td>
-                            </xh:tr>
-                            <xh:tr>
-                                <xh:td>
+                                </fr:c>
+                            <fr:c y="2" x="1" w="12">
                                     <xf:input id="mobile-control" bind="mobile-bind">
                                         <xf:label ref="$form-resources/mobile/label"/>
                                         <xf:hint ref="$form-resources/mobile/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                     </xf:input>
-                                </xh:td>
-                            </xh:tr>
+                                </fr:c>
                         </fr:grid>
-                        <fr:grid id="grid-10-grid" repeat="true" bind="grid-10-bind"
+                        <fr:grid id="grid-10-grid" repeat="content" bind="grid-10-bind"
                                  template="instance(''grid-10-template'')"
                                  min="1">
-                            <xh:tr>
-                                <xh:td>
+                            <fr:c y="1" x="1" w="4">
                                     <fr:dropdown-select1 xmlns:xxbl="http://orbeon.org/oxf/xml/xbl" id="moneySubject-control"
-                                                         bind="moneySubject-bind">
+                                                     bind="moneySubject-bind">
                                         <xf:label ref="$form-resources/moneySubject/label"/>
                                         <xf:hint ref="$form-resources/moneySubject/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
@@ -383,82 +375,76 @@ form_FormReader_example_3
                                             <xf:value ref="value"/>
                                         </xf:itemset>
                                     </fr:dropdown-select1>
-                                </xh:td>
-                                <xh:td>
+                                </fr:c>
+                            <fr:c y="1" x="5" w="4">
                                     <fr:number xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                               xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                               xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                                               id="quantity-control"
-                                               bind="quantity-bind">
+                                           xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                           xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                                           id="quantity-control"
+                                           bind="quantity-bind">
                                         <xf:label ref="$form-resources/quantity/label"/>
                                         <xf:hint ref="$form-resources/quantity/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                     </fr:number>
-                                </xh:td>
-                                <xh:td>
+                                </fr:c>
+                            <fr:c y="1" x="9" w="4">
                                     <fr:currency xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                 xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                 id="currency-control"
-                                                 bind="currency-bind">
+                                             xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                             id="currency-control"
+                                             bind="currency-bind">
                                         <xf:label ref="$form-resources/currency/label"/>
                                         <xf:hint ref="$form-resources/currency/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                     </fr:currency>
-                                </xh:td>
-                            </xh:tr>
+                                </fr:c>
                         </fr:grid>
                     </fr:section>
                 </fr:section>
                 <fr:section id="section-14-control" bind="section-14-bind">
                     <xf:label ref="$form-resources/section-14/label"/>
-                    <fr:grid>
-                        <xh:tr>
-                            <xh:td>
+                    <fr:grid id="grid-3-grid">
+                        <fr:c y="1" x="1" w="6">
                                 <xf:input id="date1-control" bind="date1-bind">
                                     <xf:label ref="$form-resources/date1/label"/>
                                     <xf:hint ref="$form-resources/date1/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="7" w="6">
                                 <xf:input id="dateTime-control" bind="dateTime-bind">
                                     <xf:label ref="$form-resources/dateTime/label"/>
                                     <xf:hint ref="$form-resources/dateTime/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="1" w="6">
                                 <fr:dropdown-date xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                  xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                  id="date2-control"
-                                                  bind="date2-bind">
+                                              xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                              id="date2-control"
+                                              bind="date2-bind">
                                     <xf:label ref="$form-resources/date2/label"/>
                                     <xf:hint ref="$form-resources/date2/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:dropdown-date>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="2" x="7" w="6">
                                 <fr:fields-date xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                                xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                id="date3-control"
-                                                bind="date3-bind">
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="date3-control"
+                                            bind="date3-bind">
                                     <xf:label ref="$form-resources/date3/label"/>
                                     <xf:hint ref="$form-resources/date3/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </fr:fields-date>
-                            </xh:td>
-                        </xh:tr>
-                        <xh:tr>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="3" x="1" w="6">
                                 <xf:textarea id="details-control" bind="details-bind">
                                     <xf:label ref="$form-resources/details/label"/>
                                     <xf:hint ref="$form-resources/details/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:textarea>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="3" x="7" w="6">
                                 <xf:select1 id="type-control" appearance="full" bind="type-bind">
                                     <xf:label ref="$form-resources/type/label"/>
                                     <xf:hint ref="$form-resources/type/hint"/>
@@ -469,14 +455,12 @@ form_FormReader_example_3
                                         <xf:hint ref="hint"/>
                                     </xf:itemset>
                                 </xf:select1>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
-                    <fr:grid id="grid-19-grid" repeat="true" bind="grid-19-bind"
+                    <fr:grid id="grid-19-grid" repeat="content" bind="grid-19-bind"
                              template="instance(''grid-19-template'')"
                              min="1">
-                        <xh:tr>
-                            <xh:td>
+                        <fr:c y="1" x="1" w="6">
                                 <xf:select id="options-control" appearance="full" bind="options-bind">
                                     <xf:label ref="$form-resources/options/label"/>
                                     <xf:hint ref="$form-resources/options/hint"/>
@@ -487,8 +471,8 @@ form_FormReader_example_3
                                         <xf:hint ref="hint"/>
                                     </xf:itemset>
                                 </xf:select>
-                            </xh:td>
-                            <xh:td>
+                            </fr:c>
+                        <fr:c y="1" x="7" w="6">
                                 <xf:select1 id="otherOptions-control" appearance="compact" bind="otherOptions-bind">
                                     <xf:label ref="$form-resources/otherOptions/label"/>
                                     <xf:hint ref="$form-resources/otherOptions/hint"/>
@@ -498,25 +482,22 @@ form_FormReader_example_3
                                         <xf:value ref="value"/>
                                     </xf:itemset>
                                 </xf:select1>
-                            </xh:td>
-                        </xh:tr>
+                            </fr:c>
                     </fr:grid>
                     <fr:section id="section-24-control" bind="section-24-bind">
                         <xf:label ref="$form-resources/section-24/label"/>
-                        <fr:grid>
-                            <xh:tr>
-                                <xh:td>
+                        <fr:grid id="grid-4-grid">
+                            <fr:c y="1" x="1" w="12">
                                     <fr:tinymce xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                                                xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                                xmlns:f="http://orbeon.org/oxf/xml/formatting"
-                                                id="formatedText-control"
-                                                bind="formatedText-bind">
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            xmlns:f="http://orbeon.org/oxf/xml/formatting"
+                                            id="formatedText-control"
+                                            bind="formatedText-bind">
                                         <xf:label ref="$form-resources/formatedText/label"/>
                                         <xf:hint ref="$form-resources/formatedText/hint"/>
                                         <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                     </fr:tinymce>
-                                </xh:td>
-                            </xh:tr>
+                                </fr:c>
                         </fr:grid>
                     </fr:section>
                 </fr:section>
