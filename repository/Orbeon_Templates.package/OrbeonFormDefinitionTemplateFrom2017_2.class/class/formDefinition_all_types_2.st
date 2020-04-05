@@ -1,5 +1,5 @@
 form test
-form_test
+formDefinition_all_types_2
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -127,7 +127,7 @@ form_test
          <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>agesic</application-name>
-                    <form-name>test</form-name>
+                    <form-name>test-all-types-2</form-name>
                     <title xml:lang="en">Test</title>
                     <description xml:lang="en"/>
                     <permissions>

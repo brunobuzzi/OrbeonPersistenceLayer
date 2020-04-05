@@ -2,6 +2,7 @@
 	"class" : {
 		"formDefinition_Test_2017_1" : "brunobb 03/06/2018 11:44",
 		"formDefinition_all_types" : "brunobb 03/03/2018 09:01",
+		"formDefinition_all_types_2" : "brunobb 04/05/2020 16:12",
 		"formDefinition_alta_empresa" : "brunobb 02/22/2019 07:51",
 		"formDefinition_alta_instalacion" : "brunobb 02/22/2019 07:50",
 		"formDefinition_alta_representacion" : "brunobb 02/22/2019 07:49",
@@ -43,7 +44,6 @@
 		"form_library_composed_form2" : "brunobb 03/03/2018 09:02",
 		"form_orbeon_library" : "brunobb 03/03/2018 09:02",
 		"form_sales_application" : "brunobb 03/03/2018 09:02",
-		"form_test" : "brunobb 03/03/2018 10:30",
 		"form_test_2" : "brunobb 03/03/2018 09:02",
 		"form_test_3" : "brunobb 03/03/2018 09:02",
 		"form_ue_library" : "brunobb 03/03/2018 09:02",
