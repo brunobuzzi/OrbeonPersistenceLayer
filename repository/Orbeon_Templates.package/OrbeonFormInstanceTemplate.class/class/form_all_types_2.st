@@ -1,5 +1,5 @@
 test
-form_test
+form_all_types_2
 
 	^'<?xml version="1.0" encoding="UTF-8"?>
 <form>
