@@ -38,6 +38,7 @@ baseline: spec
 
 		spec 
 				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'AbstractBIObjects' 'XMLParser' 'XPath')];
+				package: 'OrbeonBusinessIntelligence' with: [spec requires: #('AbstractBIObjects' 'Orbeon')];
 				package: 'OrbeonFormXmlReader' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormComparator' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator' 'OrbeonFormXmlReader')];
