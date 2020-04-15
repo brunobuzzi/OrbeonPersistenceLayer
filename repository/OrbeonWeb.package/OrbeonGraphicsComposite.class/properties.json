@@ -1,0 +1,21 @@
+{
+	"category" : "OrbeonWeb",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formsBatchedList",
+		"selectedDefinition",
+		"showDefinitionList",
+		"distributionReport",
+		"showOptionsForms",
+		"selectedFields",
+		"isRenderingChart",
+		"chartDefinition" ],
+	"name" : "OrbeonGraphicsComposite",
+	"pools" : [
+		 ],
+	"super" : "SEWAFWebObjectComposite",
+	"type" : "normal" }

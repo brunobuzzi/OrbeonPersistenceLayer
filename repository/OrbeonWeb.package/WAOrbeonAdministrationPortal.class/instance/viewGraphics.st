@@ -1,6 +1,6 @@
 other
 viewGraphics
 
-	^(arena class == OrbeonGraphicsComposite2) 
+	^(arena class == OrbeonGraphicsComposite) 
 	ifTrue: [arena]
-	ifFalse: [OrbeonGraphicsComposite2 parent: self]
+	ifFalse: [OrbeonGraphicsComposite parent: self]

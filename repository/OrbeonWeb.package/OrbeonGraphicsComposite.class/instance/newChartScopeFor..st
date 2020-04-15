@@ -1,0 +1,2 @@
+chart scope
+newChartScopeFor: aBIChartScope

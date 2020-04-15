@@ -1,0 +1,3 @@
+Accessing
+isRenderingChart
+	^isRenderingChart
