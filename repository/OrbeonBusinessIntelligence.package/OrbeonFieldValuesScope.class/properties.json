@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonBusinessIntelligence",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonFieldValuesScope",
+	"pools" : [
+		 ],
+	"super" : "BIChartScope",
+	"type" : "normal" }
