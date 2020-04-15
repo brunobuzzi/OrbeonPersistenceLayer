@@ -6,6 +6,7 @@ renderGraphicsOptionsOn: html
 			html fieldSet class: 'border-radius10px'; with: [ 
 				html legend: ('Charts Configuration' translateIn: self session).
 				self renderChartScopeComboOn: html.
+				self renderDistributionComboOn: html.
 				self renderStartEndDatesOn: html.
 				self renderFormFieldFilterOn: html. 
 				html submitButton callback: [self drawSelectedChart]; with: 'Show Chart'.

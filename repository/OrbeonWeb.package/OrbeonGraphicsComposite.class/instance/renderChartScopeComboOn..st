@@ -1,18 +1,9 @@
 render
 renderChartScopeComboOn: html
+	| scopes |
 
-	html label attributeAt: 'for' put: 'scope'; with: ('Scope' translateIn: self session).
-	html select 
-		attributeAt: 'id' put: 'scope';
-		list: self getCharScopeNames;
-		onChange: 'submit()';
-		selected: (self searchValueAt: 'chart-scope'); 
-		callback: [:value | self addSearchValue: value named: 'chart-scope'].
+	scopes := self getCharScopeNames collect: [:each | each translateIn: self session].
 
-	html label attributeAt: 'for' put: 'chart-type'; with: ('Chart Type' translateIn: self session).
-	html select 
-		attributeAt: 'id' put: 'chart-type'; 
-		list: self getChartTypes;
-		selected: (self searchValueAt: 'chart-type'); 
-		onChange: 'submit()';
-		callback: [:value | self addSearchValue: value named: 'chart-type'].
+	self storeReverseTranslationFor: scopes withOriginalNames: self getCharScopeNames.
+
+	^self renderGenericActiveComboOn: html withList: self getCharScopeNames forVariable: 'scope' label: ('Scope' translateIn: self session)
