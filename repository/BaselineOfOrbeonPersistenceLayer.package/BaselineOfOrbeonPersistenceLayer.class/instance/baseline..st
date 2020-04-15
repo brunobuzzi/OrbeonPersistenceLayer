@@ -26,6 +26,8 @@ baseline: spec
 
 		spec baseline: 'AbstractApplicationObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master/repository' ].
+		spec baseline: 'AbstractBIObjects' with: [
+			spec repository: 'github://brunobuzzi/AbstractBIObjects:master/repository' ].
 		spec baseline: 'Ston' with: [
 			spec repository: 'github://GsDevKit/ston:gemstone/repository' ].
 		spec baseline: 'Sewaf' with: [
@@ -35,7 +37,7 @@ baseline: spec
 				repository: 'github://SeasideSt/Seaside:master/repository' ].
 
 		spec 
-				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'XMLParser' 'XPath')];
+				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'AbstractBIObjects' 'XMLParser' 'XPath')];
 				package: 'OrbeonFormXmlReader' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormComparator' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator' 'OrbeonFormXmlReader')];
