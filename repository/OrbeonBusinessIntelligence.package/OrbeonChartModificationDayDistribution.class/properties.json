@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonBusinessIntelligence",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonChartModificationDayDistribution",
+	"pools" : [
+		 ],
+	"super" : "BIChartSingleDistribution",
+	"type" : "normal" }

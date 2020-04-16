@@ -1,4 +1,4 @@
 other
 getDistributionOptions
 
-	^#('Field Quantity' 'Field Evolution' 'Field Comparison')
+	^#('Quantity' 'Field Evolution' 'Field Comparison')
