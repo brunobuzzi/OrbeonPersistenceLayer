@@ -1,4 +1,4 @@
 other
 getEndDate
 
-	^self searchValueAt: 'end-date' ifAbsent: [nil]
+	^self getDateFromSearchValueNamed: 'end-date' onError: (Date fromString: '12/31/2020')

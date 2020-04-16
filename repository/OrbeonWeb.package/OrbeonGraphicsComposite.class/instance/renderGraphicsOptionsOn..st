@@ -7,6 +7,7 @@ renderGraphicsOptionsOn: html
 				html legend: ('Charts Configuration' translateIn: self session).
 				self renderChartScopeComboOn: html.
 				self renderDistributionComboOn: html.
+				self renderChartTypeComboOn: html.
 				self renderStartEndDatesOn: html.
 				self renderFormFieldFilterOn: html. 
 				html submitButton callback: [self drawSelectedChart]; with: 'Show Chart'.
