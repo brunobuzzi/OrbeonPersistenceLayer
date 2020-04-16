@@ -1,4 +1,4 @@
 other
 getFormFieldList
 
-	^selectedDefinition getFieldsNames
+	^selectedDefinition getFieldsNames asSortedCollection

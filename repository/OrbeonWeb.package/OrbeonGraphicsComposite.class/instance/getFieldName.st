@@ -1,4 +1,4 @@
-render
+other
 getFieldName
 
-	^self searchValueAt: 'field-name'
+	^self searchValueAt: 'field-name' ifAbsent: [nil]
