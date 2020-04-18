@@ -1,0 +1,4 @@
+other
+chartsTypes
+
+	^#('Heat Map')
