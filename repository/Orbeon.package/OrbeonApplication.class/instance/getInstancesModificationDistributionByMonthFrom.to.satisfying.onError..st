@@ -2,7 +2,7 @@ distribution
 getInstancesModificationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock onError: errorHandler
 	| distribution |
 
-	distribution := Dictionary new.
+	distribution := OrderPreservingDictionary new.
 	self getAllDefinitions do: [:each |  | definitionDistribution |
 		definitionDistribution := each getInstancesModificationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock onError: errorHandler.
 		definitionDistribution keysAndValuesDo: [:key : value |

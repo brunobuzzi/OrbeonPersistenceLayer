@@ -9,7 +9,7 @@ getInstancesModificationDistributionByMonthFrom: startDate to: endDate satisfyin
 		do: [:each | newDistribution at: each put: 0]. 
 
 	distribution keysAndValuesDo: [:arrayKey :value | | currentDate currentValue |
-		currentDate := startDate addDays: arrayKey first.
+		currentDate := startDate addDays: (arrayKey first * 7).
 		currentValue := newDistribution at: currentDate monthName ifAbsent: [0].
 		newDistribution at: currentDate monthName put: (currentValue + value).
 	].
