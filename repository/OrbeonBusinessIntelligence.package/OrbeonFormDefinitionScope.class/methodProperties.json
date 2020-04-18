@@ -2,5 +2,7 @@
 	"class" : {
 		"scopeName" : "brunobb 04/15/2020 16:05" },
 	"instance" : {
+		"createCreationByMonthDistributionReport" : "brunobb 04/18/2020 11:26",
 		"createCreationDayDistributionReport" : "brunobb 04/18/2020 10:26",
+		"createModificationByMonthDistributionReport" : "brunobb 04/18/2020 11:27",
 		"getDistributionOptions" : "brunobb 04/15/2020 16:29" } }

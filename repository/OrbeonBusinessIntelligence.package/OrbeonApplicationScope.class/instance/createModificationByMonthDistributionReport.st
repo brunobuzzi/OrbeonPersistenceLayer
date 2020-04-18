@@ -1,0 +1,4 @@
+other
+createModificationByMonthDistributionReport
+
+	^self distribution createApplicationDistributionReport

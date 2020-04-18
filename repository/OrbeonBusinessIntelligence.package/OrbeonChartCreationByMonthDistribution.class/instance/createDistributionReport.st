@@ -1,2 +1,4 @@
 other
 createDistributionReport
+
+	^self scope createCreationByMonthDistributionReport
