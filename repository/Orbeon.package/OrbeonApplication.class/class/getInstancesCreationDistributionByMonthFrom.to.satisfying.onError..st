@@ -2,7 +2,7 @@ distribution
 getInstancesCreationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock onError: errorHandler
 	| distribution |
 
-	distribution := Dictionary new.
+	distribution := OrderPreservingDictionary new.
 	(self cache select: [:each | each class == self]) do: [:each |  | definitionDistribution |
 		definitionDistribution := each getInstancesCreationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock onError: errorHandler.
 		definitionDistribution keysAndValuesDo: [:key : value |
