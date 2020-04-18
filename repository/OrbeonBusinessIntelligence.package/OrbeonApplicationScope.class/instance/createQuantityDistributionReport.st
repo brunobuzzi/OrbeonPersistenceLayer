@@ -1,0 +1,4 @@
+other
+createQuantityDistributionReport
+
+	^self distribution createApplicationDistributionReport
