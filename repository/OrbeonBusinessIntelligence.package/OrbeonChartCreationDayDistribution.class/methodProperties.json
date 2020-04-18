@@ -2,4 +2,7 @@
 	"class" : {
 		"getComboName" : "brunobb 04/15/2020 17:18" },
 	"instance" : {
-		"createDistributionReport" : "brunobb 04/15/2020 17:36" } }
+		"chartsTypes" : "brunobb 04/18/2020 10:05",
+		"createApplicationDistributionReport" : "brunobb 04/18/2020 10:18",
+		"createDistributionReport" : "brunobb 04/18/2020 10:16",
+		"createFormDefinitionAllVersionsDistributionReport" : "brunobb 04/18/2020 10:22" } }

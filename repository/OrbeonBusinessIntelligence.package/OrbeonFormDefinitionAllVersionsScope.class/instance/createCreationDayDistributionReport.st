@@ -1,0 +1,4 @@
+other
+createCreationDayDistributionReport
+
+	^self distribution createFormDefinitionAllVersionsDistributionReport
