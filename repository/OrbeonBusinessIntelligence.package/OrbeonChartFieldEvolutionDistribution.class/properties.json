@@ -10,5 +10,5 @@
 	"name" : "OrbeonChartFieldEvolutionDistribution",
 	"pools" : [
 		 ],
-	"super" : "BIChartSingleDistribution",
+	"super" : "OrbeonChartDistribution",
 	"type" : "normal" }

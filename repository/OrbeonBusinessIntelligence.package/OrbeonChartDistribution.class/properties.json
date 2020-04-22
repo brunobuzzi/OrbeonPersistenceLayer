@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonChartModificationByMonthDistribution",
+	"name" : "OrbeonChartDistribution",
 	"pools" : [
 		 ],
-	"super" : "OrbeonChartDistribution",
+	"super" : "BIChartSingleDistribution",
 	"type" : "normal" }

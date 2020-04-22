@@ -10,5 +10,5 @@
 	"name" : "OrbeonChartModificationDayDistribution",
 	"pools" : [
 		 ],
-	"super" : "BIChartSingleDistribution",
+	"super" : "OrbeonChartDistribution",
 	"type" : "normal" }
