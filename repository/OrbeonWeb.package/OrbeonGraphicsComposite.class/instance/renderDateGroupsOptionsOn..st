@@ -10,7 +10,7 @@ renderDateGroupsOptionsOn: html
 				html legend with: 'Time Span'.
 				html radioGroup
 					callback: [:value | self onDateRadioButtonChanged: value];
-					selected: (self componentValueAt: 'time-span');
+					selected: chartDefinition dateGroupName;
 					with: [ :group |
 						groupsOptions do: [ :each |
 							html label class: 'radio-button-horizontal'; with: [ 

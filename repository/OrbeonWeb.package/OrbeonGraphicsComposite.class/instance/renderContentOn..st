@@ -26,7 +26,6 @@ renderContentOn: html
 	isRenderingChart ifFalse: [^self].
 
 	self setPropertiesTo: chartDefinition distribution.
-	chartDefinition dateGroupName: self getDateGroup. 
 
 	(self componentValueAt: 'queryBlock-error') ifNotNil: [:value | ^self].
 

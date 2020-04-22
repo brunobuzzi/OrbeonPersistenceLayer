@@ -1,4 +1,4 @@
 other
 getDateGroup
 
-	^(self searchValueAt: 'date-groups' ifAbsent: [^''])
+	^(self searchValueAt: 'time-span' ifAbsent: [^''])

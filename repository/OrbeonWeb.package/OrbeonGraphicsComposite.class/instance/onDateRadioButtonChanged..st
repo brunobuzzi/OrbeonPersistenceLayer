@@ -1,4 +1,4 @@
 render
 onDateRadioButtonChanged: value
 
-	self addValue: value named: 'time-span'
+	chartDefinition dateGroupName: value.
