@@ -1,8 +1,11 @@
 {
 	"class" : {
-		 },
+		"distribution:" : "brunobb 04/24/2020 15:28" },
 	"instance" : {
 		"canonizeXAxis" : "brunobb 03/03/2020 09:45",
-		"createSecondaryDistributions" : "brunobb 03/03/2020 09:51",
+		"createSecondaryDistributionByMonth" : "brunobb 04/24/2020 15:50",
+		"createSecondaryDistributionByWeek" : "brunobb 04/24/2020 15:49",
+		"createSecondaryDistributionByYear" : "brunobb 04/24/2020 15:49",
 		"fieldDistributions" : "brunobb 03/03/2020 09:42",
-		"fieldDistributions:" : "brunobb 03/03/2020 09:42" } }
+		"fieldDistributions:" : "brunobb 03/03/2020 09:42",
+		"getAllReports" : "brunobb 04/24/2020 15:45" } }
