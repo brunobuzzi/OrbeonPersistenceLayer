@@ -3,7 +3,7 @@ renderAddFieldIconOn: html
 
 	html anchor 
 		class: 'float-right';
-		callback: [selectedFields add: self getFieldName];
+		callback: [self addFieldToCompare];
 		with: [
 			html image url: (SEWAFIconLibrary / #add24Png); 
 				altText: 'Add Field'; 

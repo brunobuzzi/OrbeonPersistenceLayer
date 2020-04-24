@@ -3,7 +3,7 @@ renderRemoveFieldIconOn: html
 
 	html anchor 
 		class: 'float-right';
-		callback: [selectedFields remove: self getFieldName ifAbsent: []];
+		callback: [self removeFieldToCompare];
 		with: [
 			html image url: (SEWAFIconLibrary / #remove24Png); 
 				altText: 'Remove Field'; 

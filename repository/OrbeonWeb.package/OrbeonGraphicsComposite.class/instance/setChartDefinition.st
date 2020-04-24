@@ -6,3 +6,7 @@ setChartDefinition
 		distribution: (OrbeonChartDistribution createSubInstanceFrom: (self reverseTranslation getOriginalStringFrom: self getDistributionName) on: chartDefinition);
 		distributionType: (BIChartQuantityDistribution newOn: chartDefinition);
 		chartType: (BIChartType createSubInstanceFrom: (self reverseTranslation getOriginalStringFrom: self getChartType) on: chartDefinition).
+
+	chartDefinition distribution ifNotNil: [:distri | 
+		distri isFieldEvolutionComparison ifTrue: [distri fieldsCollection: selectedFields].
+	].
