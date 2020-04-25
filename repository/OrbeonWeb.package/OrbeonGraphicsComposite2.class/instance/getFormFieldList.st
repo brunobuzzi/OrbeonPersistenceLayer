@@ -1,4 +1,0 @@
-other
-getFormFieldList
-
-	^selectedDefinition getFieldsNames
