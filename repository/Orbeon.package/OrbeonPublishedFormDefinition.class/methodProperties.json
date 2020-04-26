@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"defaultXmlDefinition:app:" : "BrunoBB 01/04/2017 06:01" },
+		"defaultXmlDefinition:app:" : "BrunoBB 01/04/2017 06:01",
+		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 04/26/2020 14:14" },
 	"instance" : {
 		"acceptVisitor:" : "brunobb 04/01/2019 13:00",
 		"addDraft:" : "BrunoBB 01/04/2017 06:01",

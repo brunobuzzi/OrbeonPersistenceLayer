@@ -7,7 +7,7 @@ initialize
 
 	showDefinitionList := true.
 	showOptionsForms := true.
-	selectedFields := OrderedCollection new.
+	selectedFields := Dictionary new.
 	isRenderingChart := false.
 
 	self basicCreateChartDefinition.

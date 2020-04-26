@@ -20,7 +20,7 @@ renderFormFieldComboOn: html
 			self renderAddFieldIconOn: html.
 			self renderRemoveFieldIconOn: html.
 		].
-		html div class: 'selected-field-list'; with: [selectedFields do: [:each | html text: ' [',each, '] ']].
+		html div class: 'selected-field-list'; with: [self getAllSelectedFields do: [:each | html text: ' [',each, '] ']].
 	].
 	(self isFieldEvolutionComparisonDistributionChart or: [self isFieldEvolutionDistributionChart]) ifTrue: [
 		self renderDateGroupsOptionsOn: html.

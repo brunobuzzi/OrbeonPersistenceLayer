@@ -1,6 +1,12 @@
 render
 removeFieldToCompare
+	| fieldsCollection field | 
 
-	selectedFields remove: self getFieldName ifAbsent: [].
+	selectedDefinition ifNil: [^self]. 
+
+	field := self getFieldName.
+	fieldsCollection := selectedFields at: selectedDefinition ifAbsent: [^self].
+
+	fieldsCollection remove: field ifAbsent: [].
 
 	chartDefinition distribution fieldsCollection: selectedFields

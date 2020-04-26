@@ -1,8 +1,11 @@
 render
 addFieldToCompare
-	| field |
+	| field fieldsCollection |
+
+	selectedDefinition ifNil: [^self]. 
 
 	field := self getFieldName.
-	selectedFields add: field.
+	fieldsCollection := selectedFields at: selectedDefinition ifAbsentPut: [OrderedCollection new].
+	fieldsCollection add: field.
 
 	chartDefinition distribution fieldsCollection: selectedFields
