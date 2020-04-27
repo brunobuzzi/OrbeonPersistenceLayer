@@ -22,6 +22,5 @@ renderFormFieldComboOn: html
 		].
 		html div class: 'selected-field-list'; with: [self getAllSelectedFields do: [:each | html text: ' [',each, '] ']].
 	].
-	(self isFieldEvolutionComparisonDistributionChart or: [self isFieldEvolutionDistributionChart]) ifTrue: [
-		self renderDateGroupsOptionsOn: html.
-	].
+	(self isFieldEvolutionComparisonDistributionChart or: [self isFieldEvolutionDistributionChart]) 
+	ifTrue: [self renderDateGroupsOptionsOn: html].
