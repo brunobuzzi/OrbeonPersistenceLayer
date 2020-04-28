@@ -2,7 +2,7 @@ render
 renderChartTypeComboOn: html
 	| chartTypes translatedChartTypes |
 
-	chartTypes := chartDefinition distribution ifNil: [#()] ifNotNil: [:distribution | distribution chartsTypes].
+	chartTypes := (chartDefinition distribution notNil and:[self getDistributionValue notEmpty]) ifTrue: [chartDefinition distribution chartsTypes] ifFalse: [#()].
 
 	translatedChartTypes := chartTypes collect: [:each | each translateIn: self session].
 
@@ -13,4 +13,4 @@ renderChartTypeComboOn: html
 			label: ('Chart Type' translateIn: self session) 
 			list: (#(''), translatedChartTypes)
 			callback: [:value | searchValues at: 'chart-type' put: value. self setChartDefinition]  
-			selected: [searchValues at: 'chart-type' ifAbsent: ['']]
+			selected: [self getChartTypeValue]

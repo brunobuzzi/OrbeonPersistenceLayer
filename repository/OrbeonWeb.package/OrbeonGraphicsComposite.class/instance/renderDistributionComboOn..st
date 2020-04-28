@@ -13,4 +13,4 @@ renderDistributionComboOn: html
 			label: ('Distribution' translateIn: self session) 
 			list: (#(''), distributions)
 			callback: [:value | searchValues at: 'distribution' put: value. self setChartDefinition]  
-			selected: [searchValues at: 'distribution' ifAbsent: ['']]
+			selected: [self getDistributionValue]

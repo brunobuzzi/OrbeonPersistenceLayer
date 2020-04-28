@@ -10,5 +10,5 @@ renderChartScopeComboOn: html
 			id: 'scope' 
 			label: ('Scope' translateIn: self session) 
 			list: (#(''), self getChartScopeNames) 
-			callback: [:value | searchValues at: 'scope' put: value. self setChartDefinition. searchValues at: 'chart-type' put: '']  
-			selected: [searchValues at: 'scope' ifAbsent: ['']]
+			callback: [:value | searchValues at: 'scope' put: value. self setChartDefinition]  
+			selected: [self getScopeValue]
