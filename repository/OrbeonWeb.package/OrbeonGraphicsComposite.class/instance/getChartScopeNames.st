@@ -1,4 +1,4 @@
 charts names
-getCharScopeNames
+getChartScopeNames
 
 	^BIChartScope getOrbeonScopeNames

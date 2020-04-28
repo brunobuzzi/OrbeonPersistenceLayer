@@ -8,5 +8,6 @@ setChartDefinition
 		chartType: (BIChartType createSubInstanceFrom: (self reverseTranslation getOriginalStringFrom: self getChartType) on: chartDefinition).
 
 	chartDefinition distribution ifNotNil: [:distri | 
+		self setPropertiesTo: distri.
 		distri isFieldEvolutionComparison ifTrue: [distri fieldsCollection: selectedFields].
 	].

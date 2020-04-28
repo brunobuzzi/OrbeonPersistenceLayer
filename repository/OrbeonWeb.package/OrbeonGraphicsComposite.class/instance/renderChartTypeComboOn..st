@@ -8,4 +8,9 @@ renderChartTypeComboOn: html
 
 	self storeReverseTranslationFor: translatedChartTypes withOriginalNames: chartTypes.
 
-	^self renderGenericActiveComboOn: html withList: translatedChartTypes forVariable: 'chart-type' label: ('Chart Type' translateIn: self session)
+	^self renderGenericActiveComboOn: html 
+			id: 'chart-type'
+			label: ('Chart Type' translateIn: self session) 
+			list: (#(''), translatedChartTypes)
+			callback: [:value | searchValues at: 'chart-type' put: value. self setChartDefinition]  
+			selected: [searchValues at: 'chart-type' ifAbsent: ['']]

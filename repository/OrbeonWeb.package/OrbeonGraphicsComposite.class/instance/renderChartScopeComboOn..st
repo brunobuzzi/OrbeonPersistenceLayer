@@ -2,8 +2,13 @@ render
 renderChartScopeComboOn: html
 	| scopes |
 
-	scopes := self getCharScopeNames collect: [:each | each translateIn: self session].
+	scopes := self getChartScopeNames collect: [:each | each translateIn: self session].
 
-	self storeReverseTranslationFor: scopes withOriginalNames: self getCharScopeNames.
+	self storeReverseTranslationFor: scopes withOriginalNames: self getChartScopeNames.
 
-	^self renderGenericActiveComboOn: html withList: self getCharScopeNames forVariable: 'scope' label: ('Scope' translateIn: self session)
+	^self renderGenericActiveComboOn: html 
+			id: 'scope' 
+			label: ('Scope' translateIn: self session) 
+			list: (#(''), self getChartScopeNames) 
+			callback: [:value | searchValues at: 'scope' put: value. self setChartDefinition. searchValues at: 'chart-type' put: '']  
+			selected: [searchValues at: 'scope' ifAbsent: ['']]

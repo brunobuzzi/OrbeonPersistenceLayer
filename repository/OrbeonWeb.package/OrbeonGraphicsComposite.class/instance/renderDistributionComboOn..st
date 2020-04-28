@@ -8,4 +8,9 @@ renderDistributionComboOn: html
 
 	self storeReverseTranslationFor: translatedDistributions withOriginalNames: distributions.
 
-	^self renderGenericActiveComboOn: html withList: distributions forVariable: 'distribution' label: ('Distribution' translateIn: self session)
+	^self renderGenericActiveComboOn: html 
+			id: 'distribution' 
+			label: ('Distribution' translateIn: self session) 
+			list: (#(''), distributions)
+			callback: [:value | searchValues at: 'distribution' put: value. self setChartDefinition]  
+			selected: [searchValues at: 'distribution' ifAbsent: ['']]
