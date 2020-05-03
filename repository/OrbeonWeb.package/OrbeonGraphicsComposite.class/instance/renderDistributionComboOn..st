@@ -12,5 +12,7 @@ renderDistributionComboOn: html
 			id: 'distribution' 
 			label: ('Distribution' translateIn: self session) 
 			list: (#(''), distributions)
-			callback: [:value | searchValues at: 'distribution' put: value. self setChartDefinition]  
+			callback: [:value | searchValues at: 'distribution' put: value. 
+										self resetChartTypeValue.
+										self setChartDefinition]  
 			selected: [self getDistributionValue]

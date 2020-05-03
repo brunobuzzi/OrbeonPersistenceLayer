@@ -10,8 +10,10 @@ renderGraphicsOptionsOn: html
 				self renderChartTypeComboOn: html.
 				self renderStartEndDatesOn: html.
 				self renderFormFieldFilterOn: html. 
-				html submitButton callback: [self drawSelectedChart]; with: 'Show Chart'.
-				html submitButton callback: [self saveChart]; with: 'Save Chart'.
+				chartDefinition isReadyToRender
+				ifTrue:[ html submitButton callback: [self drawSelectedChart]; with: 'Show Chart'.
+					html submitButton callback: [self saveChart]; with: 'Save Chart'.
+				].
 			].
 		].
 	].
