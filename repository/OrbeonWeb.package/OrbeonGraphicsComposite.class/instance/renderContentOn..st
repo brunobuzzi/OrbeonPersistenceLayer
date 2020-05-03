@@ -16,7 +16,7 @@ renderContentOn: html
 		html div id: 'system-rols'; class: 'default-gray-table flex-2';
 			with:[self renderOpenCloseIconOn: html.
 					showDefinitionList ifTrue: [html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
-		searchValues keysAndValuesDo: [:key :value | html text: key, ': [', value, ']'. html break].
+		"searchValues keysAndValuesDo: [:key :value | html text: key, ': [', value, ']'. html break]."
 	].
 
 		(showDefinitionList and: [showOptionsForms]) 
