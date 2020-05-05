@@ -1,4 +1,4 @@
 chart distribution
 resetDistributionValue
 
-	^searchValues removeKey: 'distribution' ifAbsent: []
+	^self removeSearchValueNamed: 'distribution'

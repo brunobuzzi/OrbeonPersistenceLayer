@@ -1,4 +1,4 @@
 chart scope
 resetScopeValue
 
-	^searchValues at: 'scope' put: ''
+	^self removeSearchValueNamed: 'scope'

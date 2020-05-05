@@ -1,4 +1,4 @@
-other
+chart settings
 basicCreateChartDefinition
 
 	chartDefinition := BISingleChartDefinition newFor: self session user in: selectedDefinition.

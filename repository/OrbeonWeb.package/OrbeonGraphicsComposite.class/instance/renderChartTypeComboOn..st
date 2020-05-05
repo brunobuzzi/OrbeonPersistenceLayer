@@ -12,5 +12,6 @@ renderChartTypeComboOn: html
 			id: 'chart-type'
 			label: ('Chart Type' translateIn: self session) 
 			list: (#(''), translatedChartTypes)
-			callback: [:value | searchValues at: 'chart-type' put: value. self setChartDefinition]  
-			selected: [self getChartTypeValue]
+			callback: [:value | 	self addSearchValue: value named: 'chart-type'.
+										self setChartDefinition]  
+			selected: [self getChartTypeValue].

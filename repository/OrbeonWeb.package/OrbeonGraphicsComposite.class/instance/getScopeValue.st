@@ -1,4 +1,4 @@
 chart scope
 getScopeValue
 
-	^searchValues at: 'scope' ifAbsent: ['']
+	^self searchValueAt: 'scope' ifAbsent: ['']

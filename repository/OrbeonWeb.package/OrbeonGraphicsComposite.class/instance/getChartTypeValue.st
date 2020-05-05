@@ -1,4 +1,4 @@
 chart type
 getChartTypeValue
 
-	^searchValues at: 'chart-type' ifAbsent: ['']
+	^self searchValueAt: 'chart-type' ifAbsent: ['']

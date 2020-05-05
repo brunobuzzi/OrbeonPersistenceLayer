@@ -10,8 +10,8 @@ renderChartScopeComboOn: html
 			id: 'scope' 
 			label: ('Scope' translateIn: self session) 
 			list: (#(''), self getChartScopeNames) 
-			callback: [:value | searchValues at: 'scope' put: value. 
+			callback: [:value | 	self addSearchValue: value named: 'scope'.
 										self resetDistributionValue.
 										self resetChartTypeValue.
-										self setChartDefinition]  
+										self setChartDefinition.] 
 			selected: [self getScopeValue]
