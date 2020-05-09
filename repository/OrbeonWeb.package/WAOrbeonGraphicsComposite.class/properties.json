@@ -14,7 +14,7 @@
 		"selectedFields",
 		"isRenderingChart",
 		"chartDefinition" ],
-	"name" : "OrbeonGraphicsComposite",
+	"name" : "WAOrbeonGraphicsComposite",
 	"pools" : [
 		 ],
 	"super" : "SEWAFWebObjectComposite",
