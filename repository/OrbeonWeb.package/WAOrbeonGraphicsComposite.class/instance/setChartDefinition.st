@@ -12,5 +12,8 @@ setChartDefinition
 	chartDefinition distribution ifNotNil: [:distri | 
 		self setPropertiesTo: distri.
 		distri isFieldEvolutionComparison ifTrue: [distri fieldsCollection: selectedFields].
-		chartDefinition resetDateGroupNameIfNeeded.
 	].
+
+	(self isFieldEvolutionDistributionChart or: [self isFieldEvolutionComparisonDistributionChart])
+	ifTrue: [chartDefinition dateGroupName: self getDateGroupNameValue]
+	ifFalse: [chartDefinition dateGroupName:nil]

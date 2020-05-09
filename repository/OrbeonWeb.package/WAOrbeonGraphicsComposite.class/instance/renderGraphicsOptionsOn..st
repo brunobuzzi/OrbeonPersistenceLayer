@@ -5,9 +5,9 @@ renderGraphicsOptionsOn: html
 		html form with: [
 			html fieldSet class: 'border-radius10px'; with: [ 
 				html legend: ('Charts Configuration' translateIn: self session).
-				self renderChartScopeComboOn: html.
-				self renderDistributionComboOn: html.
-				self renderChartTypeComboOn: html.
+				self renderChartScopeRadioGroupOn: html.
+				self renderDistributionRadioGroupOn: html.
+				self renderChartTypeRadioGroupOn: html.
 				self renderStartEndDatesOn: html.
 				self renderFormFieldFilterOn: html. 
 				(chartDefinition isReadyToRender and: [chartDefinition isGlobalScope or:[selectedDefinition notNil]])
