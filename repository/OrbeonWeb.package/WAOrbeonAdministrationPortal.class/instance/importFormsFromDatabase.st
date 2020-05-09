@@ -1,6 +1,6 @@
 other
 importFormsFromDatabase
 
-	^(arena class == OrbeonImportFromDatabaseComposite) 
+	^(arena class == WAOrbeonImportFromDatabaseComposite) 
 	ifTrue: [arena]
-	ifFalse: [OrbeonImportFromDatabaseComposite parent: self]
+	ifFalse: [WAOrbeonImportFromDatabaseComposite parent: self]
