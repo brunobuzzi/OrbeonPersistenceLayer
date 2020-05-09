@@ -1,4 +1,0 @@
-other
-ldapLoginModeName
-
-	^AppLdapLogin modeName
