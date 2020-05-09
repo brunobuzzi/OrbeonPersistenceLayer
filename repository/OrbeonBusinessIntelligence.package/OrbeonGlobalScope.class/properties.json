@@ -10,5 +10,5 @@
 	"name" : "OrbeonGlobalScope",
 	"pools" : [
 		 ],
-	"super" : "BIChartScope",
+	"super" : "OrbeonChartScope",
 	"type" : "normal" }
