@@ -1,6 +1,6 @@
 other
 setServersConfiguration
 
-	^(arena class == FormOrbeonServerConfigurationComposite) 
+	^(arena class == WAOrbeonServerConfigurationComposite) 
 	ifTrue: [arena]
-	ifFalse: [FormOrbeonServerConfigurationComposite parent: self]
+	ifFalse: [WAOrbeonServerConfigurationComposite parent: self]
