@@ -1,6 +1,6 @@
 other
 viewGraphicsReports
 
-	^(arena class == OrbeonChartsReportComposite) 
+	^(arena class == WAOrbeonChartsReportComposite) 
 	ifTrue: [arena]
-	ifFalse: [OrbeonChartsReportComposite parent: self]
+	ifFalse: [WAOrbeonChartsReportComposite parent: self]

@@ -9,7 +9,7 @@
 		"currentIndex",
 		"currentGroup",
 		"currentReport" ],
-	"name" : "OrbeonChartsReportComposite",
+	"name" : "WAOrbeonChartsReportComposite",
 	"pools" : [
 		 ],
 	"super" : "SEWAFWebObjectComposite",
