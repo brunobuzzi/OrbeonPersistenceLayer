@@ -27,4 +27,5 @@ renderContentOn: html
 
 	(self componentValueAt: 'queryBlock-error') ifNotNil: [:value | ^self].
 
-	chartDefinition renderOn: html.
+	chartDefinition isReadyToRender ifFalse: [^self].
+	chartDefinition renderOn: html

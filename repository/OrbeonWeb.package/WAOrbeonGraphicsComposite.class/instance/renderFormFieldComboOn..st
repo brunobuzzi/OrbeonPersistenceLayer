@@ -1,8 +1,8 @@
 render
 renderFormFieldComboOn: html
 
-	selectedDefinition ifNil: [^self]. 
- 
+	(selectedDefinition isNil or: [chartDefinition scope isFieldValuesScope not]) ifTrue: [^self].
+
 	html label 
 		attributeAt: 'for' put: 'formFields';
 		with: ('Field' translateIn: self session).

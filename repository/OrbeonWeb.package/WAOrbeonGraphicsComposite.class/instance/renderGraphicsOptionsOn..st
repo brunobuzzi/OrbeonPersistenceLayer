@@ -10,7 +10,7 @@ renderGraphicsOptionsOn: html
 				self renderChartTypeComboOn: html.
 				self renderStartEndDatesOn: html.
 				self renderFormFieldFilterOn: html. 
-				chartDefinition isReadyToRender
+				(chartDefinition isReadyToRender and: [chartDefinition isGlobalScope or:[selectedDefinition notNil]])
 				ifTrue:[ html submitButton callback: [self drawSelectedChart]; with: 'Show Chart'.
 					html submitButton callback: [self saveChart]; with: 'Save Chart'.
 				].
