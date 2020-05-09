@@ -1,4 +1,0 @@
-other
-hide
-
-	self subclassResponsibility

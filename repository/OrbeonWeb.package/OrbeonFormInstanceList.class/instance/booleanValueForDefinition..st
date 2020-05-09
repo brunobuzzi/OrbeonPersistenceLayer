@@ -1,4 +1,0 @@
-other
-booleanValueForDefinition: aBoolean
-
-	^false

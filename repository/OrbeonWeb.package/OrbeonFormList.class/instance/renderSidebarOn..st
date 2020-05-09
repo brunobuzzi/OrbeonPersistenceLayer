@@ -1,2 +1,0 @@
-other
-renderSidebarOn: html

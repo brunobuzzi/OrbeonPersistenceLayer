@@ -1,4 +1,0 @@
-other
-getCollectionToExport
-
-	^collection
