@@ -8,7 +8,7 @@
 	"instvars" : [
 		"exportCollection",
 		"exportMode" ],
-	"name" : "OrbeonExportComposite",
+	"name" : "WAOrbeonExportComposite",
 	"pools" : [
 		 ],
 	"super" : "SewafChildComponent",

@@ -2,4 +2,4 @@ other
 exportToCSV
 
 	exportComponent := exportComponent 
-		ifNil: [(OrbeonExportComposite parent: self) exportCollection: innerBatchList items; yourself]
+		ifNil: [(WAOrbeonExportComposite parent: self) exportCollection: innerBatchList items; yourself]

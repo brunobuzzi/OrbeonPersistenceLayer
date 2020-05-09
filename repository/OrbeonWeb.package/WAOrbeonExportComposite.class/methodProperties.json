@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"downloadCSV" : "brunobb 05/08/2020 18:43",
+		"exportCSVClass" : "brunobb 05/08/2020 18:43",
+		"exportCollection" : "brunobb 05/08/2020 18:43",
+		"exportCollection:" : "brunobb 05/08/2020 18:43",
+		"exportMode" : "brunobb 05/08/2020 18:43",
+		"exportMode:" : "brunobb 05/08/2020 18:43",
+		"exportToCSV:fileNamed:" : "brunobb 05/08/2020 18:43",
+		"exportToCSV:fileNamed:format:" : "brunobb 05/08/2020 18:43",
+		"getAllExportOptions" : "brunobb 05/08/2020 18:43",
+		"multilineRecursiveExport" : "brunobb 05/08/2020 18:43",
+		"renderContentOn:" : "brunobb 05/08/2020 18:43",
+		"sendToClientCSV:stream:" : "brunobb 05/08/2020 18:43",
+		"singlelineRecursiveExport" : "brunobb 05/08/2020 18:43",
+		"singlelineSimpleExport" : "brunobb 05/08/2020 18:43" } }
