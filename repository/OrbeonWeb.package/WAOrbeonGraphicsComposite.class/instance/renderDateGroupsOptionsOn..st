@@ -4,7 +4,7 @@ renderDateGroupsOptionsOn: html
 
 	groupsOptions := #('Year' 'Month' 'Week' 'Day') collect: [:each | each translateIn: self session].
 
-	html div id: 'report-bottom-options'; class: 'radio-button-container'; with: [
+	html div class: 'radio-button-container'; with: [
 		html form with: [ 
 			html fieldSet with: [
 				html legend with: 'Time Span'.
@@ -13,7 +13,7 @@ renderDateGroupsOptionsOn: html
 					selected: self getDateGroupNameValue;
 					with: [ :group |
 						groupsOptions do: [ :each |
-							html label class: 'radio-button-horizontal'; with: [ 
+							html label with: [ 
 								group radioButton 
 									onChange: 'submit()';
 									value: each.
