@@ -13,7 +13,8 @@
 		"showOptionsForms",
 		"selectedFields",
 		"isRenderingChart",
-		"chartDefinition" ],
+		"chartDefinition",
+		"wizard" ],
 	"name" : "WAOrbeonGraphicsComposite",
 	"pools" : [
 		 ],

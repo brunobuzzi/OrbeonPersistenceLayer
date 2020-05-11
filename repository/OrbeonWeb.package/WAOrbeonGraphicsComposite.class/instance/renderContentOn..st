@@ -20,9 +20,10 @@ renderContentOn: html
 	].
 
 		(showDefinitionList and: [showOptionsForms]) 
-		ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: [self renderGraphicsOptionsOn: html]].
+		ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: ["self renderGraphicsOptionsOn: html" self renderWizardOn: html.]].
 		showDefinitionList ifTrue: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
 	].
+
 	isRenderingChart ifFalse: [^self].
 
 	(self componentValueAt: 'queryBlock-error') ifNotNil: [:value | ^self].
