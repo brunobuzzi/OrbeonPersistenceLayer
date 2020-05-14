@@ -8,6 +8,6 @@ renderStartEndDatesOn: html
 		html textInput attributeAt: 'id' put: 'end'; callback: [:value | self addSearchValue: value named: 'end-date']; with: (self searchValueAt: 'end-date').
 	].
 
-	html div class: 'display-inline-block'; with: [self renderFormFieldFilterOn: html].
+	html div class: 'display-block'; with: [self renderFormFieldFilterOn: html].
 
-	html div class: 'display-inline-block'; with: [self renderRenderChartOn: html].
+	html div class: 'display-block'; with: [self renderRenderChartOn: html].
