@@ -12,7 +12,7 @@ renderFormFieldComboOn: html
 		class: 'search-section-width-200';
 		list: self getFormFieldList;
 		onChange: 'submit()';
-		callback: [:value | self addSearchValue: value named: 'field-name'];
+		callback: [:value | self addSearchValue: value named: 'field-name'. self setChartDefinition];
 		selected: (self searchValueAt: 'field-name' ifAbsent: ['']).
 
 	self isFieldEvolutionComparisonDistributionChart ifTrue: [

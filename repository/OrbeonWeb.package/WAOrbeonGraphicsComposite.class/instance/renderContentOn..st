@@ -13,12 +13,10 @@ renderContentOn: html
 	ifFalse: [self removeValueNamed: 'queryBlock-runtime-error'].
 
 	html div class: 'display-flex'; with: [
-		html div id: 'system-rols'; class: 'default-gray-table flex-2';
+		html div class: 'default-gray-table flex-2';
 			with:[self renderOpenCloseIconOn: html.
 					showDefinitionList ifTrue: [html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
-		"searchValues keysAndValuesDo: [:key :value | html text: key, ': [', value, ']'. html break]."
-	].
-
+		].
 		(showDefinitionList and: [showOptionsForms]) 
 		ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: [self renderWizardOn: html.]].
 		showDefinitionList ifTrue: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
