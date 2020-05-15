@@ -45,7 +45,7 @@
 		"reportCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 15:51",
 		"reportModificationDayDistributionQuantityFrom:to:satisfying:onError:" : "brunobb 03/30/2020 14:34",
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 16:16",
-		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 03/30/2020 14:42" },
+		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 05/15/2020 13:42" },
 	"instance" : {
 		"addPublishedDefinition:" : "BrunoBB 04/27/2016 14:52",
 		"addSavedDefinition:" : "BrunoBB 04/27/2016 14:52",
@@ -123,7 +123,7 @@
 		"reportCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 15:48",
 		"reportModificationDayDistributionQuantityFrom:to:satisfying:onError:" : "brunobb 03/31/2020 13:10",
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/30/2020 17:08",
-		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 03/30/2020 17:17",
+		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 05/15/2020 13:43",
 		"resetDefinitionRegistry" : "brunobb 05/22/2019 10:56",
 		"setRegistryFormNamed:with:" : "BrunoBB 04/30/2016 15:24",
 		"throwExceptionAlreadyInCache" : "brunobb 02/10/2020 10:06",
