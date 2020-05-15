@@ -14,7 +14,7 @@ renderContentOn: html
 
 	html div class: 'display-flex'; with: [
 		html div class: 'default-gray-table flex-2';
-			with:[self renderOpenCloseIconOn: html.
+			with:[isRenderingChart ifTrue: [self renderOpenCloseIconOn: html].
 					showDefinitionList ifTrue: [html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
 		].
 		(showDefinitionList and: [showOptionsForms]) 
