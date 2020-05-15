@@ -5,7 +5,7 @@ setPropertiesTo: aBIChartDistribution
 		applicationName: self getApplicationName;
 		fieldName: self getFieldName;
 		formName: self getFormName ;
-		startDate: (Date fromString: self getStartDate usingFormat: #(3 2 1 $- 1 1 true true false));
-		endDate: (Date fromString: self getEndDate usingFormat: #(3 2 1 $- 1 1 true true false));
+		startDate: (self getStartDate ifNotNil: [:yyyyDDmm | Date fromString: yyyyDDmm usingFormat: #(3 2 1 $- 1 1 true true false)] ifNil: []);
+		endDate: (self getEndDate ifNotNil: [:yyyyDDmm | Date fromString: yyyyDDmm usingFormat: #(3 2 1 $- 1 1 true true false)] ifNil: []);
 		version: self getVersion;
 		queryBlock: self queryBlock.
