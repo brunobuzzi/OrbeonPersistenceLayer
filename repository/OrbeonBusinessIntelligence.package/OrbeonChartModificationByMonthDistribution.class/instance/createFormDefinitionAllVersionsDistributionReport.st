@@ -6,7 +6,7 @@ createFormDefinitionAllVersionsDistributionReport
 	formDefinition := application definitionNamed: self formName ifNone: [].
 
 	^formDefinition registry
-			reportCreationDistributionByMonthFrom: self startDate 
+			reportModificationDistributionByMonthFrom: self startDate 
 			to: self endDate 
 			satisfying: self queryBlock 
 			onError: [:ex | error := ex]

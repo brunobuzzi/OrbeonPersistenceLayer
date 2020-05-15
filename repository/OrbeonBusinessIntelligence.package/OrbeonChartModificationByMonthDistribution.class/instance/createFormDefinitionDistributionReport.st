@@ -6,7 +6,7 @@ createFormDefinitionDistributionReport
 	formDefinition := application definitionNamed: self formName ifNone: [].
 
 	^formDefinition
-			reportCreationDistributionByMonthFrom: self startDate 
+			reportModificationDistributionByMonthFrom: self startDate 
 			to: self endDate 
 			satisfying: self queryBlock 
 			onError: [:ex | error := ex]
