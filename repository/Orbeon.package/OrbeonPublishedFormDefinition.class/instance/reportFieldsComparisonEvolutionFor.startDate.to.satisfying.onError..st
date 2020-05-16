@@ -13,6 +13,10 @@ reportFieldsComparisonEvolutionFor: fieldCollection startDate: startDate to: end
 	].
 
 	^(OrbeonFieldComparisonDistributionReport distribution: distributionCollection)
+		name: 'Fields Summation Comparison';
+		description: 'Display the summation of the selected fields';
+		xTitle: 'Timespan';
+		yTitle: 'Field Summation';
 		sumSecondsToConstruct: secondsToRun;
 		xAxisIsDate: true; 
 		canonizeXAxis;

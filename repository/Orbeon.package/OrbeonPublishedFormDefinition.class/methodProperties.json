@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"defaultXmlDefinition:app:" : "BrunoBB 01/04/2017 06:01",
-		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 04/26/2020 14:14" },
+		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 05/16/2020 11:23" },
 	"instance" : {
 		"acceptVisitor:" : "brunobb 04/01/2019 13:00",
 		"addDraft:" : "BrunoBB 01/04/2017 06:01",
@@ -152,11 +152,11 @@
 		"removePermission:to:" : "BrunoBB 01/04/2017 06:01",
 		"removeSectionDefinition:" : "BrunoBB 01/04/2017 06:01",
 		"repeatableFieldDefinitions" : "brunobb 03/12/2018 13:07",
-		"reporFormDefinitionTypesDistribution" : "brunobb 03/03/2020 04:21",
+		"reporFormDefinitionTypesDistribution" : "brunobb 05/16/2020 11:05",
 		"reportCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 05/15/2020 14:09",
-		"reportFieldDistributionFor:startDate:to:satisfying:onError:" : "brunobb 03/26/2020 16:22",
-		"reportFieldEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 03/26/2020 16:04",
-		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 04/24/2020 16:01",
+		"reportFieldDistributionFor:startDate:to:satisfying:onError:" : "brunobb 05/16/2020 11:08",
+		"reportFieldEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 05/16/2020 11:23",
+		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 05/16/2020 11:24",
 		"reportInstancesCreationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/26/2020 16:42",
 		"reportInstancesDayDistributionUsing:from:to:satisfying:onError:" : "brunobb 05/15/2020 14:02",
 		"reportInstancesModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/26/2020 16:42",
