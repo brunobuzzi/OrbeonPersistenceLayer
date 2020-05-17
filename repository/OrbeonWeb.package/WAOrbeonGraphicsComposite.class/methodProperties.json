@@ -6,7 +6,7 @@
 		"basicCreateChartDefinition" : "brunobb 05/09/2020 14:31",
 		"chartDefinition" : "brunobb 05/08/2020 18:48",
 		"chartDefinition:" : "brunobb 05/08/2020 18:48",
-		"columnsForFormsDefinitions" : "brunobb 05/08/2020 18:48",
+		"columnsForFormsDefinitions" : "brunobb 05/17/2020 13:10",
 		"createChartDistributionOrNil" : "brunobb 05/09/2020 13:22",
 		"createChartTypeOrNil" : "brunobb 05/09/2020 13:22",
 		"distributionReport" : "brunobb 05/08/2020 18:48",
@@ -48,7 +48,7 @@
 		"renderChartConditionOn:" : "brunobb 05/14/2020 12:47",
 		"renderChartScopeRadioGroupOn:" : "brunobb 05/10/2020 16:44",
 		"renderChartTypeRadioGroupOn:" : "brunobb 05/10/2020 16:44",
-		"renderContentOn:" : "brunobb 05/14/2020 12:28",
+		"renderContentOn:" : "brunobb 05/17/2020 12:54",
 		"renderDateGroupsOptionsOn:" : "brunobb 05/14/2020 11:26",
 		"renderDatesFieldsAndConditionOn:" : "brunobb 05/15/2020 10:41",
 		"renderDistributionRadioGroupOn:" : "brunobb 05/10/2020 16:44",
@@ -74,4 +74,5 @@
 		"showDefinitionList:" : "brunobb 05/08/2020 18:48",
 		"showOptionsForms" : "brunobb 05/08/2020 18:48",
 		"showOptionsForms:" : "brunobb 05/08/2020 18:48",
+		"sortColumn:orderMode:" : "brunobb 05/17/2020 12:46",
 		"storeReverseTranslationFor:withOriginalNames:" : "brunobb 05/08/2020 18:48" } }

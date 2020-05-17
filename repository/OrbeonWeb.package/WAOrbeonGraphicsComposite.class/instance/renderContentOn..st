@@ -2,7 +2,7 @@ render
 renderContentOn: html
 
 	self initializeReverseTranslation.
-	formsBatchedList items: self getOrbeonApplicationClass getAllFormDefinitions.
+	formsBatchedList orderMode ifNil: [formsBatchedList items: self getOrbeonApplicationClass getAllFormDefinitions].
 
 	"see issue #1039 (option 2). The chart is generated inside a 'fake' html to see if there is any runtime error when evaluating the -query block-.
 	this is a workaround of #1039 because the chart is generated twice"
