@@ -15,7 +15,10 @@ https://github.com/GsDevKit/GsDevKit_home
 In order to implement your own persistence layer check the official Documentation of Orbeon [here](http://doc.orbeon.com/form-runner/api/persistence/index.html).
 
 ## Backoffice Web Application
-This web application is an add on to the Persistence Layer. It can export Orbeon Forms in different formats and render charts of existing forms in GemStone/S.
+The **Backoffice Web Application** has NO relation with **Orbeon Web Application** is an addon to the **Persistence Layer** for **GemStone/S**. If you click to view or edit an **Orbeon Form** it will redirect you to **Orbeon Web Application**.<br>
+It has some useful functionalities:
+* Create Charts (using Highcharts) based on **Orbeon Forms** stored in **GemStone/S**.
+* **GemStone/S** configuration options.<br>
 
 **Orbeon Forms - Main Chart Page**
 ![Orbeon](https://github.com/brunobuzzi/OrbeonPersistenceLayer/blob/master/wiki/orbeon-main.png)<br><br>
