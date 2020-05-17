@@ -5,7 +5,7 @@ The repository contains two projects:
 * The Backoffice Web Application that has some extra funcionalities
 
 ## Persistence Layer
-The manuals and complete documentation of Orbeon Persistence Layer for GemStone/S can be found here:<br>
+The manuals and complete documentation of **Orbeon Persistence Layer for GemStone/S** can be found here:<br>
 https://bpmflow.gitbook.io/project/orbeon-integration/orbeon-persistence-layer-for-gemstone-s
 
 **Orbeon Persistence Layer for GemStone/S** is an implementation of **REST Services** on the top of **GemStone/S** (http://www.gemtalksystems.com) to store **Orbeon Forms** (http://www.orbeon.com) natively in **GemStone/S database** (a NON SQL database).<br>
