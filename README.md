@@ -17,6 +17,8 @@ In order to implement your own persistence layer check the official Documentatio
 ## Backoffice Web Application
 This web application is an add on to the Persistence Layer. It can export Orbeon Forms in different formats and render charts of existing forms in GemStone/S.
 
+**Orbeon Forms - Main Chart Page**
+![Orbeon](https://github.com/brunobuzzi/OrbeonPersistenceLayer/blob/master/wiki/orbeon-main.png)<br><br>
 **Orbeon Forms - Pie Chart**
 ![Orbeon](https://github.com/brunobuzzi/OrbeonPersistenceLayer/blob/master/wiki/orbeon-chart-1.png)<br><br>
 **Orbeon Forms - Heatmap Chart**
