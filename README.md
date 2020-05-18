@@ -5,14 +5,14 @@ The repository contains two projects:
 * The Backoffice Web Application to create Charts based on stored Forms and manage some GemStone/S configuration
 
 ## Persistence Layer
-**Orbeon Persistence Layer for GemStone/S** is an implementation of **REST Services** on the top of **[GemStone/S][1]** to store **Orbeon Forms[2]** natively in **GemStone/S database**.<br>
+**Orbeon Persistence Layer for GemStone/S** is an implementation of **REST Services** on the top of **[GemStone/S][1]** to store **[Orbeon Forms][2]** natively in **GemStone/S database**.<br>
 
-The manuals and complete documentation of **Orbeon Persistence Layer for GemStone/S** can be found **here[3]**.<br>
+The manuals and complete documentation of **Orbeon Persistence Layer for GemStone/S** can be found **[here][3]**.<br>
 
 To install GemStone/S:<br>
 https://github.com/GsDevKit/GsDevKit_home
 
-In order to implement your own persistence layer check the official Documentation of Orbeon **[here][4]**].
+In order to implement your own persistence layer check the official Documentation of Orbeon **[here][4]**.
 
 ## Backoffice Web Application
 The **Backoffice Web Application** is an addon to the **Persistence Layer** for **GemStone/S** and has NO relation with **Orbeon Web Application** . If you click to view or edit an **Orbeon Form** it will redirect you to **Orbeon Web Application**.<br>
