@@ -7,6 +7,7 @@ renderDatesFieldsAndConditionOn: html
 			html div class: 'display-block margin-top-15px'; with:[
 				html label attributeAt: 'for' put: 'start'; with: ('Start' translateIn: self session).
 				html dateInput5 
+							style: ('background-color: ', (self componentValueAt: 'dateBackcolor' ifAbsent: 'white'));
 							class: 'margin-left-10px margin-right-10px';
 							attributeAt: 'id' put: 'start'; 
 							callback: [:value | self addSearchValue: value named: 'start-date'];
@@ -15,6 +16,7 @@ renderDatesFieldsAndConditionOn: html
 			html div class: 'display-block margin-top-15px'; with: [
 				html label attributeAt: 'for' put: 'end'; with: ('End  ' translateIn: self session).
 				html dateInput5
+							style: ('background-color: ', (self componentValueAt: 'dateBackcolor' ifAbsent: 'white'));
 							class: 'margin-left-10px margin-right-10px';
 							attributeAt: 'id' put: 'end'; 
 							callback: [:value | self addSearchValue: value named: 'end-date']; 
