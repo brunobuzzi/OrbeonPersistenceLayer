@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getAllSavedCharts" : "brunobb 05/21/2020 12:15",
+		"getCurrentCollection" : "brunobb 05/20/2020 14:29",
+		"getIconNameFormItem" : "brunobb 05/21/2020 12:11",
+		"getTextForItem:" : "brunobb 05/21/2020 12:11",
+		"initialize" : "brunobb 05/20/2020 14:30",
+		"removeChart" : "brunobb 05/21/2020 13:39",
+		"renderItemComponentOn:" : "brunobb 05/21/2020 13:34",
+		"renderItemDescriptionAditionalDataOn:" : "brunobb 05/21/2020 13:36",
+		"renderItemDescriptionSecondaryDataOn:" : "brunobb 05/21/2020 12:12",
+		"renderItemDescriptionTitleOn:" : "brunobb 05/21/2020 13:38",
+		"renderLateralItemDetailsOn:for:" : "brunobb 05/21/2020 12:11",
+		"renderSearchAreaOn:" : "brunobb 05/21/2020 12:11" } }
