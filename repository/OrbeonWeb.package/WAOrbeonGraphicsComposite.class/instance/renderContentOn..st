@@ -17,9 +17,7 @@ renderContentOn: html
 			with:[isRenderingChart ifTrue: [self renderOpenCloseIconOn: html].
 					showDefinitionList ifTrue: [html render: (formsBatchedList table: self sewafTableForFormsDefinitions)].
 		].
-		(showDefinitionList and: [showOptionsForms]) 
-		ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: [self renderWizardOn: html.]].
-		showDefinitionList ifTrue: [html div with: [self renderGraphicsOptionsSwitchIconOn: html]].
+		showDefinitionList ifTrue: [html div id: 'form-chart-configuration'; class: 'flex-1'; with: [self renderWizardOn: html.]].
 	].
 
 	isRenderingChart ifFalse: [^self].
