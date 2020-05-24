@@ -1,0 +1,4 @@
+definition redirect
+editDefinition: anOrbeonPublishedFormDefinition
+
+	self requestContext redirectTo: (self generateEditUrlForDefinition: anOrbeonPublishedFormDefinition)
