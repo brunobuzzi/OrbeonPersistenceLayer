@@ -1,6 +1,9 @@
 chart settings
 setChartDefinition
+	| currentDistribution |
 
+	currentDistribution := chartDefinition distribution.
+	
 	self basicCreateChartDefinition.
 
 	chartDefinition
@@ -16,4 +19,7 @@ setChartDefinition
 
 	(self isFieldEvolutionDistributionChart or: [self isFieldEvolutionComparisonDistributionChart])
 	ifTrue: [chartDefinition dateGroupName: self getDateGroupNameValue]
-	ifFalse: [chartDefinition dateGroupName:nil]
+	ifFalse: [chartDefinition dateGroupName:nil].
+
+	"if the distribution types is changed then the selected fields are reset"
+	(chartDefinition distribution class == currentDistribution class) ifFalse: [selectedFields := Dictionary new].
