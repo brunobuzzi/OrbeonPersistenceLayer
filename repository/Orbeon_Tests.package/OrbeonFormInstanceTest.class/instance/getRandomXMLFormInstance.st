@@ -1,4 +1,0 @@
-other
-getRandomXMLFormInstance
-
-	^self subclassResponsibility
