@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addFieldToCompare" : "brunobb 05/12/2020 13:46",
+		"addFieldToCompare" : "brunobb 05/25/2020 14:33",
 		"basicCreateChartDefinition" : "brunobb 05/09/2020 14:31",
 		"chartDefinition" : "brunobb 05/08/2020 18:48",
 		"chartDefinition:" : "brunobb 05/08/2020 18:48",
@@ -26,7 +26,7 @@
 		"getDistributionValue" : "brunobb 05/08/2020 18:48",
 		"getEndDate" : "brunobb 05/15/2020 10:35",
 		"getFieldName" : "brunobb 05/08/2020 18:48",
-		"getFormFieldList" : "brunobb 05/22/2020 12:00",
+		"getFormFieldList" : "brunobb 05/25/2020 14:35",
 		"getFormName" : "brunobb 05/08/2020 18:48",
 		"getScopeValue" : "brunobb 05/08/2020 18:48",
 		"getStartDate" : "brunobb 05/15/2020 10:21",

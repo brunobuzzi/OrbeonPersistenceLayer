@@ -5,7 +5,7 @@ addFieldToCompare
 	selectedDefinition ifNil: [^self]. 
 
 	field := self getFieldName.
-	field ifNil: [field := self getFormFieldList first]. 
+	field ifNil: [^self]. 
 	fieldsCollection := selectedFields at: selectedDefinition ifAbsentPut: [OrderedCollection new].
 	fieldsCollection add: field.
 
