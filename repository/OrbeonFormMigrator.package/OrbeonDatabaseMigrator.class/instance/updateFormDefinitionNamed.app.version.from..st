@@ -6,19 +6,21 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 	3. If already exist then compare the current version with the new one and decide whether or not is necesary another definition.
 	4. If is necesary then add the new definition to OrbeonApplication named <app>
 	5. If NOT necesary then update the existing one"
-	| currentDefinition newDefinition comparator shouldCreateAnotherVersion |
+	| application currentDefinition savedDefinition newDefinition comparator shouldCreateAnotherVersion |
 
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: app.
 	currentDefinition := self getOrbeonApplicationClass getLastPublishedDefinitionNamed: form fromApplicationNamed: app withVersion: (Integer fromString: version) ifNone: [nil].
-	newDefinition := self importFormDefinitionNamed: form version: version in: app from: stringTimeStamp.
+	savedDefinition := self importFormDefinitionNamed: form version: version in: app from: stringTimeStamp.
+	newDefinition := savedDefinition definition.
 
 	currentDefinition 
-		ifNil: [app addSavedDefinition: newDefinition definition.
-				app addPublishedDefinition: newDefinition]
+		ifNil: [application addSavedDefinition: newDefinition definition.
+				application addPublishedDefinition: newDefinition]
 		ifNotNil: [
 			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
-				ifTrue: [(self getOrbeonApplicationClass applicationNamed: app) addPublishedDefinition: newDefinition] 
+				ifTrue: [application addPublishedDefinition: newDefinition] 
 				ifFalse: [ | dbDefnition dbArray |
 					dbDefnition := self execute: (sqlReader sqlGetAllFormsDefinition: form of: app version: version after: stringTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.
