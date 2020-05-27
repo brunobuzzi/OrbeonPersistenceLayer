@@ -1,0 +1,4 @@
+other
+defaultMigratorClass
+
+	self subclassResponsibility

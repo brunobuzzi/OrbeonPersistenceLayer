@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormMigrator_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"migrator" ],
+	"name" : "OrbeonDatabaseMigratorTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"defaultMigratorClass" : "brunobb 05/27/2020 13:21",
+		"migrator" : "brunobb 05/27/2020 13:20",
+		"migrator:" : "brunobb 05/27/2020 13:20",
+		"setUp" : "brunobb 05/27/2020 13:21" } }
