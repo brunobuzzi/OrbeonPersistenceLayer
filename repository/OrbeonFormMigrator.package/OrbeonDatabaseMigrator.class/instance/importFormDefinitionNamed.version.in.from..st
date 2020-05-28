@@ -10,7 +10,9 @@ importFormDefinitionNamed: formDefinitionName version: version in: appName from:
 	dbArray := dbDefnition trimLeadingSeparators subStrings: String tab.
 	gsDefinition := self generateFormDefinition: formDefinitionName app: appName from: dbArray. "generate object from <dbArray>"
 	"get the db id from the form definition"
+
 	gsDefinition id: (self getIdForDefinition: gsDefinition). 
+	gsDefinition definition id: gsDefinition id.
 	"gsDefinition id: 'ec6132c917fa583f3d527ae4fd1d526ad7354a8c'."
 
 	gsDefinition processXMLDefinition. "set the OrbeonFormDefinition with it's values -xml-"

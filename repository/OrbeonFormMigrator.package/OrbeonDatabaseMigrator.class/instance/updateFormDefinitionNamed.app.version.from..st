@@ -17,7 +17,7 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 		ifNil: [application addSavedDefinition: newDefinition definition.
 				application addPublishedDefinition: newDefinition]
 		ifNotNil: [
-			comparator := FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition.
+			comparator := (FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition) compare; yourself.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
 				ifTrue: [application addPublishedDefinition: newDefinition] 
@@ -28,4 +28,8 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 					currentDefinition processXMLDefinition.
 					newDefinition := currentDefinition.].
 			].
-	^self importFormInstancesOf: newDefinition version: version from: stringTimeStamp
+	self importFormInstancesOf: newDefinition version: version from: stringTimeStamp.
+
+	self migrateDefinitionCustomAttachmentOf: newDefinition.
+	self migrateDefinitionAttachmentsOf: newDefinition.
+	self migrateInstanceAttachmentsOf: newDefinition.
