@@ -3,5 +3,7 @@
 		 },
 	"instance" : {
 		"testAppFieldValuesWithFormInstances" : "brunobb 11/27/2019 09:15",
-		"testAvailableFlagConsistency" : "brunobb 05/28/2020 13:08",
-		"testFormInstancesQuantity" : "brunobb 11/20/2019 10:25" } }
+		"testAvailableFlagConsistency" : "brunobb 05/28/2020 13:33",
+		"testFormInstancesQuantity" : "brunobb 11/20/2019 10:25",
+		"testPublishDefinitionWithoutSavedDefinition" : "brunobb 05/28/2020 13:37",
+		"testSavedDefinitionWithoutPublishDefinition" : "brunobb 05/28/2020 13:40" } }

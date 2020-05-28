@@ -5,7 +5,8 @@ testAvailableFlagConsistency
 	(self getOrbeonApplicationCache select: [:each | each isOrbeonApplication]) do: [:application |
 		application definitionRegistry do: [:formRegistry |
 			formRegistry getAllVersion do: [:publishedDefinition | 
-				publishedDefinition 
+				"self assert: (publishedDefinition newFormReader isAvailable = publishedDefinition definition newFormReader isAvailable)"
+				self assert: (publishedDefinition isAvailable = publishedDefinition definition isAvailable)
 			].
 		].
 	].
