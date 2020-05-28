@@ -1,9 +1,11 @@
 other
 doIt
 	"This service is called when rendering the Draft of the form in Form Instance page"
-	| gsFile |
+	| gsFile pathFile |
 
-	gsFile := GsFile openOnServer: ((self getOrbeonWebServerConfiguration getDraftsPathFor: self getFormName in: self getApplicationName), id, '-', fileId) mode: 'rb'.
+	pathFile := (self getOrbeonWebServerConfiguration getDraftsPathFor: self getFormName in: self getApplicationName), id, '-', fileId.
+	gsFile := GsFile openOnServer: pathFile mode: 'rb'.
+	gsFile ifNil: [OrbeonGsFileDoesNotExistException signal: 'Orbeon File [', pathFile, '] does not exist'].
 	fileContents := gsFile contentsAsUtf8.
 
 	gsFile close.
