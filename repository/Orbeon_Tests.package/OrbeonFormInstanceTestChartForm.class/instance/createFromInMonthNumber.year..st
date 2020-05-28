@@ -9,5 +9,8 @@ createFromInMonthNumber: monthIndex year: year
 					createdTime: (TimeStamp date: date time: Time now);
 					modifiedTime: (TimeStamp date: date time: Time now);
 					xmlString: (self getRandomXmlStringTemplateMonth: monthIndex year: year);
-					processXMLSections;
 					yourself.
+
+	self keepTempObjectsInSystem
+	ifTrue: [form processXML] "process and store the form elements"
+	ifFalse: [form processXMLSections] "only process form elements"

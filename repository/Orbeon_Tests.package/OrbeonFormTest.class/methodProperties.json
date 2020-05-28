@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"keepTempObjectsInSystem" : "brunobb 05/25/2020 13:53" },
+		"keepTempObjectsInSystem" : "brunobb 05/25/2020 13:53",
+		"keepTempObjectsInSystem:" : "brunobb 05/25/2020 13:58" },
 	"instance" : {
 		"createFormStructureFor:in:definitionTemplate:title:xPathVersion:" : "brunobb 11/13/2018 02:57",
 		"keepTempObjectsInSystem" : "brunobb 05/25/2020 13:55",

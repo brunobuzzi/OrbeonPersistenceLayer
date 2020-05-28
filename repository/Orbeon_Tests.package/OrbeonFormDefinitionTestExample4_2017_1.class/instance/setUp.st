@@ -12,4 +12,4 @@ setUp
 
 	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	form := OrbeonSavedFormDefinition createDefinition: 'test' with: #form_example4 in: anOrbeonApplication title: 'Test' xPathVersion: self getOrbeonXmlXpathUpto2017_1
+	form := OrbeonSavedFormDefinition createDefinition: 'test' with: #formDefinition_example_4 in: anOrbeonApplication title: 'Test' xPathVersion: self getOrbeonXmlXpathUpto2017_1

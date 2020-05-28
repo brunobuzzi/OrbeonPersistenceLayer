@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 11/13/2018 02:57",
+		"setUp" : "brunobb 05/28/2020 13:16",
 		"testAttachments" : "brunobb 11/12/2018 11:55",
 		"testCustomPDFAttachment" : "brunobb 03/07/2018 13:16",
 		"testFieldTypes" : "brunobb 03/07/2018 13:16",
@@ -15,4 +15,4 @@
 		"testIsSingleton" : "brunobb 03/07/2018 13:16",
 		"testMainSectionsStructure" : "brunobb 03/07/2018 13:16",
 		"testPermissions" : "brunobb 03/07/2018 13:16",
-		"testSwitchAvailable" : "brunobb 11/12/2018 09:57" } }
+		"testSwitchAvailable" : "brunobb 05/28/2020 13:17" } }
