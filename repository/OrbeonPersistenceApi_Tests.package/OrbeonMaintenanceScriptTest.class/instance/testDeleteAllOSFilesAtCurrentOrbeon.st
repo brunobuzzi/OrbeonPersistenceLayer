@@ -1,0 +1,4 @@
+other
+testDeleteAllOSFilesAtCurrentOrbeon
+
+	self deleteAllOSFilesAt: self getOrbeonWebServerConfiguration baseAttachmentPath
