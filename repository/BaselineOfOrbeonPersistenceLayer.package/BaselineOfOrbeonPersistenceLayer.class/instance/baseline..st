@@ -47,7 +47,8 @@ baseline: spec
 				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormXmlReader' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
 				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport' 'OrbeonFormXmlReader')];
 				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator' 'OrbeonFormXmlReader')];
-				package: 'OrbeonFormMigrator_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormMigrator')].
+				package: 'OrbeonFormMigrator_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormMigrator')];
+				package: 'OrbeonPersistenceApi_Tests' with: [spec requires: #('OrbeonPersistenceApi' 'Orbeon_Templates')].
 
 		spec
 			group: 'core' with: #('Orbeon' 'OrbeonFormXmlReader'); "to load" "aMetacello load: #('core' 'rest' 'web' 'test')"
