@@ -1,4 +1,4 @@
-os files
+os files deployment
 deleteUnusedOSFiles: usedDictionaryIds pathSelector: pathSelector
 	"Delete unused OS files from calculated <pathSelector> that are no included in the dictionary <usedDictionaryIds>.
 	<usedDictionaryIds> key is (app.formName) and value is a collection of ids."

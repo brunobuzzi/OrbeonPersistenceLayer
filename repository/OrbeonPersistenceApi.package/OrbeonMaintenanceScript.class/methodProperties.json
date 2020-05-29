@@ -1,8 +1,9 @@
 {
 	"class" : {
-		"createEmptyAttachmentStructureOn:" : "brunobb 05/29/2020 10:04",
+		"createEmptyAttachmentStructure" : "brunobb 05/29/2020 11:16",
+		"createEmptyAttachmentStructureAt:" : "brunobb 05/29/2020 11:16",
 		"deleteAllOSFiles" : "brunobb 05/29/2020 11:14",
-		"deleteAllOSFilesAt:" : "brunobb 05/29/2020 11:13",
+		"deleteAllOSFilesAt:" : "brunobb 05/29/2020 11:43",
 		"deleteUnusedFormInstanceOSFiles" : "BrunoBB 05/04/2016 14:52",
 		"deleteUnusedOSFiles:pathSelector:" : "brunobb 03/12/2020 15:05",
 		"deleteUnusedPublishedFormsOSFiles" : "BrunoBB 05/04/2016 14:53",
