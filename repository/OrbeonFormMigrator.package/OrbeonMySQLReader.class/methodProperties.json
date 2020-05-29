@@ -14,6 +14,7 @@
 		"sqlGetAllFormsDataAfter:" : "BrunoBB 10/31/2014 16:58",
 		"sqlGetAllFormsDefinition" : "BrunoBB 10/31/2014 16:58",
 		"sqlGetAllFormsDefinition:" : "BrunoBB 10/31/2014 16:58",
+		"sqlGetAllFormsDefinition:of:after:" : "BrunoBB 03/29/2015 12:48",
 		"sqlGetAllFormsDefinitionOf:" : "BrunoBB 10/31/2014 16:58",
 		"sqlGetAllInstanceDefinitions" : "BrunoBB 10/15/2015 11:20",
 		"sqlGetAllInstancesOf:in:" : "BrunoBB 10/31/2014 16:58",
