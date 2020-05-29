@@ -2,6 +2,7 @@ other
 updateFrom: dbArray
 	"The receiver update it's self using an update row <dbArray> of the database "
 
+	(dbArray size < 8) ifTrue: [NoSqlDataRetrievedException signal: 'No enough data was retrieved from database'].
 	createdTime := TimeStamp fromOrbeonString: dbArray first.
 	modifiedTime := TimeStamp fromOrbeonString: dbArray second.
 	id := dbArray third.
