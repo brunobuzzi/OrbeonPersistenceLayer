@@ -9,6 +9,8 @@ setXmlString: aString
 
 	definition 
 		ifNil: [definition := self createPublishedFormDefinition.
-				definition definition: self].
+				definition definition: self;
+					createdTime: createdTime;
+					modifiedTime: modifiedTime].
 
 	definition xmlString: xmlString.

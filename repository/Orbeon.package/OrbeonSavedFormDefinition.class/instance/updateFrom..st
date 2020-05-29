@@ -8,6 +8,9 @@ updateFrom: dbArray
 	modifiedUser := dbArray fourth notEmpty ifTrue:[dbArray fourth allButFirst] ifFalse: [''].
 	username := dbArray fifth notEmpty ifTrue:[dbArray fifth allButFirst] ifFalse: [''].
 	groupname := (dbArray at: 6) notEmpty ifTrue:[(dbArray at: 6) allButFirst] ifFalse: [''].
-	xmlString := dbArray at: 7.
+	version := Integer fromString: (dbArray at: 7).
+	xmlString := dbArray at: 8.
+	
+	self setXmlString: ((dbArray at: 8) copyReplaceAll: '\n' with: Character lf). "-\n- is inserted by Bash "
 
 	^self
