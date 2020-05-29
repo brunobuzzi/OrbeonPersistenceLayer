@@ -5,5 +5,8 @@ generateFormDefinition: formName app: appName from: dbArray
 
 	formDefinition := OrbeonSavedFormDefinition newNamed: formName inAppNamed: appName.
 
-	^formDefinition updateFrom: dbArray;
-		yourself
+	formDefinition updateFrom: dbArray.
+	
+	formDefinition setXmlString: ((dbArray at: 8) copyReplaceAll: '\n' with: Character lf). "-\n- is inserted by Bash "
+
+	^formDefinition

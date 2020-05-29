@@ -11,7 +11,5 @@ updateFrom: dbArray
 	groupname := (dbArray at: 6) notEmpty ifTrue:[(dbArray at: 6) allButFirst] ifFalse: [''].
 	version := Integer fromString: (dbArray at: 7).
 	xmlString := dbArray at: 8.
-	
-	self setXmlString: ((dbArray at: 8) copyReplaceAll: '\n' with: Character lf). "-\n- is inserted by Bash "
 
 	^self
