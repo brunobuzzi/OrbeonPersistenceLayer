@@ -22,9 +22,9 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 			shouldCreateAnotherVersion "is a different form"
 				ifTrue: [application addPublishedDefinition: newDefinition] 
 				ifFalse: [ | dbDefnition dbArray |
-					dbDefnition := self execute: (sqlReader sqlGetAllFormsDefinition: form of: app version: version after: stringTimeStamp).
+					dbDefnition := self execute: (sqlReader sqlGetFormDefinition: form version: (Integer fromString: version) of: app after: stringTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.
-					currentDefinition updateFrom: dbArray. "the form is almost the same --> we update the existing one"
+					currentDefinition updateFrom: dbArray. "the <xmlString> and inst var of the <currentDefinition> definition is update with the latest row of the SQL database"
 					currentDefinition processXMLDefinition.
 					newDefinition := currentDefinition.].
 			].

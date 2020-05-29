@@ -7,6 +7,7 @@ importFormDefinitionNamed: formDefinitionName version: version in: appName from:
 	sqlString := sqlReader sqlGetFormDefinition: formDefinitionName version: version of: appName after: stringTimeStamp.
 
 	dbDefnition := self execute: sqlString.
+
 	dbArray := dbDefnition trimLeadingSeparators subStrings: String tab.
 	gsDefinition := self generateFormDefinition: formDefinitionName app: appName from: dbArray. "generate object from <dbArray>"
 	"get the db id from the form definition"
