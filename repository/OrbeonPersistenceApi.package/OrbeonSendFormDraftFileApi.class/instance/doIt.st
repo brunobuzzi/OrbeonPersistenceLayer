@@ -5,7 +5,7 @@ doIt
 
 	pathFile := (self getOrbeonWebServerConfiguration getDraftsPathFor: self getFormName in: self getApplicationName), id, '-', fileId.
 	gsFile := GsFile openOnServer: pathFile mode: 'rb'.
-	gsFile ifNil: [OrbeonGsFileDoesNotExistException signal: 'Orbeon File [', pathFile, '] does not exist'].
+	gsFile ifNil: [^OrbeonGsFileDoesNotExistException signal: 'Orbeon File [', pathFile, '] does not exist'].
 	fileContents := gsFile contentsAsUtf8.
 
 	gsFile close.
