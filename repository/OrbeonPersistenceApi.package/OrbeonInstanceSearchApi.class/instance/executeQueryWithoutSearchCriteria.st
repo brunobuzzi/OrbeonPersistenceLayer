@@ -7,7 +7,7 @@ executeQueryWithoutSearchCriteria
 
 	(draftsNodes notEmpty and: [((draftsNodes first attributeAt: 'for-never-saved-document') = 'true') and: [draftsNodes first contentString = 'only']]) "drafts to display"
 	ifTrue: [total := drafts size.
-			^resultCollection := (drafts select: [:each | each version = version]) ]. "only display draft of the selected version"
+			^self resultCollection: (drafts select: [:each | each version = version]) ]. "only display draft of the selected version"
 
 	formsInRange := OrderedCollection new.
 	instancesShift := (self pageFrom = 1) ifTrue: [1] ifFalse: [self pageFrom - drafts size].
@@ -23,6 +23,6 @@ executeQueryWithoutSearchCriteria
 	stream close.
 
 	draftsNodes isEmpty 
-	ifTrue: [^resultCollection :=  (self pageFrom = 1) ifTrue: [drafts, formsInRange] ifFalse: [formsInRange]].
+	ifTrue: [^self resultCollection: ((self pageFrom = 1) ifTrue: [drafts, formsInRange] ifFalse: [formsInRange])].
 
-	^resultCollection :=  (self pageFrom = 1) ifTrue: [drafts, formsInRange] ifFalse: [formsInRange]
+	^self resultCollection: ((self pageFrom = 1) ifTrue: [drafts, formsInRange] ifFalse: [formsInRange])

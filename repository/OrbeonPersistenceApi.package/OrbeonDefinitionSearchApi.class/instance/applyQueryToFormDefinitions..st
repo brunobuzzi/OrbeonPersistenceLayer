@@ -22,4 +22,4 @@ applyQueryToFormDefinitions: anOrderedCollection
 
 	conditions do: [:conditionBlock | result := result select: conditionBlock].
 
-	^self setResultCollection: result
+	^self setResultAsSortedCollection: result
