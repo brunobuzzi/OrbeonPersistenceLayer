@@ -16,6 +16,4 @@ searchInFormBuilderSummary
 				user: (self requestContext request headerAt: 'orbeon-username');
 				setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
-	searchApi doIt. 
-
-	^searchApi generateXmlAnswerForBuilderSummary
+	^searchApi doIt

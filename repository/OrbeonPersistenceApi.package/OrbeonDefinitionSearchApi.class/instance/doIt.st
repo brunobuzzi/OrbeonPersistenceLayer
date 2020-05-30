@@ -6,3 +6,5 @@ doIt
 	searchTotal := savedDefinitions size.
 
 	self applyQueryToFormDefinitions: savedDefinitions.
+
+	^self generateXmlAnswerForBuilderSummary
