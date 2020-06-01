@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FDRegistryGsQueryIteratorWithoutPermissons",
+	"pools" : [
+		 ],
+	"super" : "FDRegistryIteratorWithoutPermissons",
+	"type" : "normal" }
