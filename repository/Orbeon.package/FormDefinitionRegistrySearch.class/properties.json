@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormDefinitionRegistrySearch",
+	"pools" : [
+		 ],
+	"super" : "FormDefinitionRegistryAbstractSearch",
+	"type" : "normal" }

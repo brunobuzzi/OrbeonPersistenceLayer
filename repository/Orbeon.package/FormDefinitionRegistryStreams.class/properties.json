@@ -1,0 +1,20 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formDefinitionRegistry",
+		"instancesReadStream",
+		"draftsReadStream",
+		"fieldsReadStreams",
+		"mode",
+		"xmlQuery",
+		"queryNodes" ],
+	"name" : "FormDefinitionRegistryStreams",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }

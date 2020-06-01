@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"newOn:mode:" : "brunobb 06/01/2020 13:39" },
+	"instance" : {
+		"application" : "brunobb 06/01/2020 13:39",
+		"buildStreamsForDraftsSearch" : "brunobb 06/01/2020 13:39",
+		"buildStreamsForMode" : "brunobb 06/01/2020 13:39",
+		"buildStreamsForRegularSummaryPaging" : "brunobb 06/01/2020 13:39",
+		"buildStreamsForSearchSummaryPaging" : "brunobb 06/01/2020 13:39",
+		"createQueryNodes" : "brunobb 06/01/2020 13:39",
+		"draftsReadStream" : "brunobb 06/01/2020 13:39",
+		"draftsReadStream:" : "brunobb 06/01/2020 13:39",
+		"fieldsReadStreams" : "brunobb 06/01/2020 13:39",
+		"fieldsReadStreams:" : "brunobb 06/01/2020 13:39",
+		"formDefinitionRegistry" : "brunobb 06/01/2020 13:39",
+		"formDefinitionRegistry:" : "brunobb 06/01/2020 13:39",
+		"instancesReadStream" : "brunobb 06/01/2020 13:39",
+		"instancesReadStream:" : "brunobb 06/01/2020 13:39",
+		"latestFormDefinition" : "brunobb 06/01/2020 13:39",
+		"mode" : "brunobb 06/01/2020 13:39",
+		"mode:" : "brunobb 06/01/2020 13:39",
+		"newOn:mode:" : "brunobb 06/01/2020 13:39",
+		"queryNodes" : "brunobb 06/01/2020 13:39",
+		"queryNodes:" : "brunobb 06/01/2020 13:39",
+		"xmlQuery" : "brunobb 06/01/2020 13:39",
+		"xmlQuery:" : "brunobb 06/01/2020 13:39" } }

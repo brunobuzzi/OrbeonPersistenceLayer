@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormDefinitionRegistryIndexedStreams",
+	"pools" : [
+		 ],
+	"super" : "FormDefinitionRegistryStreams",
+	"type" : "normal" }

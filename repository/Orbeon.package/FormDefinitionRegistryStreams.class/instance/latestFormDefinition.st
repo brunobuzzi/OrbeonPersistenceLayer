@@ -1,0 +1,4 @@
+other
+latestFormDefinition
+
+	^formDefinitionRegistry getLastVersion
