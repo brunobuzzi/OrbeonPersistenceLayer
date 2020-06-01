@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FormRegistryPermissionsIterator",
+	"pools" : [
+		 ],
+	"super" : "FormRegistryAbstractPermissionsIterator",
+	"type" : "normal" }

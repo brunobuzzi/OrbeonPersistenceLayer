@@ -1,0 +1,22 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"definitionRegistry",
+		"user",
+		"group",
+		"fromIndex",
+		"toIndex",
+		"versionNumber",
+		"permissionsIterator",
+		"searchIterator",
+		"indexIterator" ],
+	"name" : "FormRegistryIteratorController",
+	"pools" : [
+		 ],
+	"super" : "OrbeonObject",
+	"type" : "normal" }
