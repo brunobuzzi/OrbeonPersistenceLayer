@@ -18,7 +18,8 @@
 		"pageSize",
 		"user",
 		"group",
-		"credentials" ],
+		"credentials",
+		"numberOfForms" ],
 	"name" : "FormDefinitionRegistryStreams",
 	"pools" : [
 		 ],

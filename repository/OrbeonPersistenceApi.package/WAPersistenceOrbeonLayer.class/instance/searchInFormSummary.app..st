@@ -15,8 +15,7 @@ searchInFormSummary: formName app: app
 
 	searchApi := OrbeonInstanceSearchApi2 newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') application: application form: definition.
 
-	searchApi createQueryNodes;
-					setPageSize;
+	searchApi setPageSize;
 					setPageNumber;
 					group: (self requestContext request headerAt: 'orbeon-group');
 					user: (self requestContext request headerAt: 'orbeon-username');
