@@ -5,7 +5,7 @@ createQueryNodes
 
 	queryNodes := OrderedCollection new.
 
-	(xmlSearchDefinitionDocument allElementsNamed: 'query') do: [:node | | queryNode value |
+	(xmlDocument allElementsNamed: 'query') do: [:node | | queryNode value |
 		value := node strings notEmpty ifTrue: [node strings last] ifFalse: [nil]. "get the field Value to Search"
 		queryNode := OrbeonQueryNode new name: (node attributeAt: 'name');
 								path: (node attributeAt: 'path');

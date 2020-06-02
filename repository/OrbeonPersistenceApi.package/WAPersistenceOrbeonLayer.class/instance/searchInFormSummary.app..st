@@ -13,10 +13,9 @@ searchInFormSummary: formName app: app
 
 	definition isDeleted ifTrue: [^self noRouteFound: self requestContext].
 
-	searchApi := OrbeonInstanceSearchApi for: application formName: formName.
+	searchApi := OrbeonInstanceSearchApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') application: application form: definition.
 
-	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: (self requestContext request bodyDecodeUsing: 'utf-8'));
-					createQueryNodes;
+	searchApi createQueryNodes;
 					getPageSize;
 					getPageNumber;
 					group: (self requestContext request headerAt: 'orbeon-group');

@@ -5,7 +5,7 @@ getPageSize
 	This number is used for paging Orbeon Forms in Summaries"
 	| pageSizeNodes pageSizeNode |
 
-	pageSizeNodes := xmlSearchDefinitionDocument allElementsNamed: 'page-size'.
+	pageSizeNodes := xmlDocument allElementsNamed: 'page-size'.
 	pageSizeNodes isEmpty ifTrue: [^pageSize := 10].
 
 	pageSizeNode := pageSizeNodes last.

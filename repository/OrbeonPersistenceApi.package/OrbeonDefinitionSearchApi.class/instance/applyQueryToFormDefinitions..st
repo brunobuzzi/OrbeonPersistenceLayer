@@ -7,7 +7,7 @@ applyQueryToFormDefinitions: anOrderedCollection
 	conditions := OrderedCollection new.
 	result := anOrderedCollection select: [:each | each deleted = 'N']. "exclude deleted definitions"
 
-	queryNodes := (xmlSearchDefinitionDocument allElementsNamed: 'query') do: [:node | "get the criteria from <xmlDocument>"
+	queryNodes := (xmlDocument allElementsNamed: 'query') do: [:node | "get the criteria from <xmlDocument>"
 		node strings notEmpty ifTrue: [queryFields at: (node attributeAt: 'name') put: node strings last]].
 
 	"apply all available criteria to the result collection <result>"

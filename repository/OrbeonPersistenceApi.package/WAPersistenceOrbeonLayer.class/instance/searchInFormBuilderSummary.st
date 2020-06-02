@@ -8,8 +8,7 @@ searchInFormBuilderSummary
 	<produces: 'application/xml'>
 	<path: '/search/orbeon/builder'>
 
-	searchApi := OrbeonDefinitionSearchApi new.
-	searchApi xmlSearchDefinitionDocument: (XMLDOMParser parse: (self requestContext request bodyDecodeUsing: 'utf-8')).
+	searchApi := OrbeonDefinitionSearchApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8').
 	searchApi getPageSize;
 				getPageNumber;
 				group: (self requestContext request headerAt: 'orbeon-group');

@@ -2,7 +2,7 @@ queries
 executeQuerySearchFormWithDraft
 	| draftNode draftId |
 
-	draftNode := xmlSearchDefinitionDocument allElementsNamed: 'drafts'.
+	draftNode := xmlDocument allElementsNamed: 'drafts'.
 
 	draftNode isEmpty ifTrue: [^resultCollection := #()].
 

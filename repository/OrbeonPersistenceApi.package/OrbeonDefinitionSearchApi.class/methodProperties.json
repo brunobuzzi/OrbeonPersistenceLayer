@@ -1,8 +1,8 @@
 {
 	"class" : {
-		 },
+		"newFor:withXml:" : "brunobb 06/02/2020 07:54" },
 	"instance" : {
-		"applyQueryToFormDefinitions:" : "brunobb 05/30/2020 13:50",
+		"applyQueryToFormDefinitions:" : "brunobb 06/02/2020 07:48",
 		"doIt" : "brunobb 05/30/2020 12:34",
 		"generateXmlAnswerForBuilderSummary" : "BrunoBB 12/30/2016 03:27",
 		"generateXmlNodeForAllDefinitionWith:" : "BrunoBB 09/18/2015 13:39",
