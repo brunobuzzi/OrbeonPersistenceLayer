@@ -5,8 +5,6 @@
 		"log:" : "brunobb 02/16/2018 13:04" },
 	"instance" : {
 		"addToLog" : "brunobb 02/16/2018 13:02",
-		"getPageNumber" : "brunobb 06/02/2020 07:29",
-		"getPageSize" : "brunobb 06/02/2020 07:29",
 		"group" : "brunobb 02/16/2018 13:02",
 		"group:" : "brunobb 02/16/2018 13:02",
 		"initialize" : "brunobb 02/16/2018 13:02",
@@ -28,6 +26,8 @@
 		"searchTotal:" : "brunobb 02/16/2018 13:02",
 		"searchValues" : "brunobb 02/16/2018 13:02",
 		"searchValues:" : "brunobb 02/16/2018 13:02",
+		"setPageNumber" : "brunobb 06/02/2020 08:08",
+		"setPageSize" : "brunobb 06/02/2020 08:08",
 		"setResultAsSortedCollection:" : "brunobb 05/30/2020 13:50",
 		"setUserCredentialsFrom:" : "brunobb 11/26/2019 02:42",
 		"total" : "brunobb 02/16/2018 13:02",
@@ -35,6 +35,4 @@
 		"user" : "brunobb 02/16/2018 13:02",
 		"user:" : "brunobb 02/16/2018 13:02",
 		"userCredentials" : "brunobb 07/10/2019 08:35",
-		"userCredentials:" : "brunobb 07/10/2019 08:35",
-		"xmlSearchDefinitionDocument" : "brunobb 02/16/2018 13:02",
-		"xmlSearchDefinitionDocument:" : "brunobb 02/16/2018 13:02" } }
+		"userCredentials:" : "brunobb 07/10/2019 08:35" } }
