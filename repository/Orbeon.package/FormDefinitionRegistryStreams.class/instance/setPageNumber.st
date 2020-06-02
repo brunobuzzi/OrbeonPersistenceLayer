@@ -1,5 +1,5 @@
 page intervals
-getPageNumber
+setPageNumber
 	"The receiver extract the page number from the XMLDocument <xmlQuery>.
 	This number is used for paging forms in Orbeon web pages.
 	The page number is the current page to show.(The first time is 1).

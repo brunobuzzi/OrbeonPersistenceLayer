@@ -1,5 +1,5 @@
 page intervals
-getPageSize
+setPageSize
 	"The receiver extract the page size from the xml document <xmlQuery>.
 	The page size set how many forms are displayed in a single page.
 	This number is used for paging Orbeon Forms in Summaries"
