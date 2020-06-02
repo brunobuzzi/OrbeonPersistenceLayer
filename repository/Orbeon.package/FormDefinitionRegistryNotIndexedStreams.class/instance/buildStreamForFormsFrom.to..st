@@ -2,7 +2,7 @@ streams set
 buildStreamForFormsFrom: startIndex to: endIndex
 	| realEndIndex instancesCollection |
 
-	instancesCollection := (instancesCollection formDefinitionRegistry instancesSetOfVersion: version) asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime].
+	instancesCollection := (formDefinitionRegistry instancesSetOfVersion: version) asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime].
 	realEndIndex := (instancesCollection size >= endIndex) 
 							ifTrue: [endIndex] 
 							ifFalse: [instancesCollection size]. 
