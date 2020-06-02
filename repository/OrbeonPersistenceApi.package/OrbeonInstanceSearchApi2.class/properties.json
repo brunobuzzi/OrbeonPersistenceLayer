@@ -1,0 +1,16 @@
+{
+	"category" : "OrbeonPersistenceApi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"application",
+		"lastFormDefinition",
+		"streamsHandler" ],
+	"name" : "OrbeonInstanceSearchApi2",
+	"pools" : [
+		 ],
+	"super" : "OrbeonSummaryApi",
+	"type" : "normal" }

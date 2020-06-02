@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"newFor:withXml:application:form:" : "brunobb 06/02/2020 08:23" },
+	"instance" : {
+		"application" : "brunobb 06/02/2020 08:33",
+		"application:" : "brunobb 06/02/2020 08:33",
+		"createQueryNodes" : "brunobb 06/02/2020 08:36",
+		"doIt" : "brunobb 06/02/2020 08:51",
+		"generateXmlAnswer" : "brunobb 06/02/2020 08:23",
+		"generateXmlNodeFor:with:" : "brunobb 06/02/2020 08:25",
+		"generateXmlNodeForAllWith:" : "brunobb 06/02/2020 08:27",
+		"getArrayOfOrbeonHeaders" : "brunobb 06/02/2020 08:24",
+		"lastFormDefinition" : "brunobb 06/02/2020 08:33",
+		"lastFormDefinition:" : "brunobb 06/02/2020 08:33",
+		"streamsHandler" : "brunobb 06/02/2020 08:33",
+		"streamsHandler:" : "brunobb 06/02/2020 08:33",
+		"summaryFields" : "brunobb 06/02/2020 08:57" } }
