@@ -1,2 +1,2 @@
-building streams
+streams building
 buildStreamsForSearchSummaryPaging

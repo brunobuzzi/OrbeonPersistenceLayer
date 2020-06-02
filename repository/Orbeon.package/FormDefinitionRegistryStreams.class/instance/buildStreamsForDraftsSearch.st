@@ -1,4 +1,4 @@
-building streams
+streams building
 buildStreamsForDraftsSearch
 	| draftNode draftId |
 
@@ -9,6 +9,6 @@ buildStreamsForDraftsSearch
 	"if there is an id <for-document-id> --> Orbeon is searching for a draft, 
 	if NOT --> is a Summary of drafts (there are more than one draft stored --> we are going to show all of them)"
 
-	draftId := draftNode attributeAt: 'for-document-id' ifAbsent: [^self setStreamForDraftsSummary].
+	draftId := draftNode attributeAt: 'for-document-id' ifAbsent: [^self buildStreamForDraftsSummary].
 
-	self setStreamForDraftWithId: draftId
+	self buildStreamForDraftWithId: draftId

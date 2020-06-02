@@ -1,4 +1,4 @@
-building streams
+streams building
 buildStreams
 
 	"if there is NO query nodes --> Orbeon is searching for a draft with a given form <id>"

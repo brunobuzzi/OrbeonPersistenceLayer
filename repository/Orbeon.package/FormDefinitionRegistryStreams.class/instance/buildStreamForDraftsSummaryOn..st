@@ -1,0 +1,4 @@
+streams set
+buildStreamForDraftsSummaryOn: collectionOfOrbeonDrafts
+	
+	self subclassResponsibility
