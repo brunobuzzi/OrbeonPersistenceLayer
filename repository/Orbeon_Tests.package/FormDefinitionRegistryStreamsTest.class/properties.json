@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "FDRegistryGsQueryIteratorWithPermissonsTest",
+		"registryStreams" ],
+	"name" : "FormDefinitionRegistryStreamsTest",
 	"pools" : [
 		 ],
-	"super" : "FDRegistryIteratorWithPermissonsTest",
+	"super" : "TestCase",
 	"type" : "normal" }
