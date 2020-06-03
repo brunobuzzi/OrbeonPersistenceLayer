@@ -1,6 +1,8 @@
 streams building
 buildStreams
 
+	self createQueryNodes.
+
 	"if there is NO query nodes --> Orbeon is searching for a draft with a given form <id>"
 	queryNodes isEmpty ifTrue: [^self buildStreamsForDraftsSearch].
 

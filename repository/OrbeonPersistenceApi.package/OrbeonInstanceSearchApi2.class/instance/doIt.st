@@ -9,7 +9,6 @@ doIt
 		pageNumber: pageNumber;
 		user: user;
 		group: group;
-		createQueryNodes;
 		buildStreams.
 
 	^self generateXmlAnswer
