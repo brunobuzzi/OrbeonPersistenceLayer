@@ -19,7 +19,8 @@
 		"user",
 		"group",
 		"credentials",
-		"numberOfForms" ],
+		"numberOfForms",
+		"permissions" ],
 	"name" : "FormDefinitionRegistryStreams",
 	"pools" : [
 		 ],
