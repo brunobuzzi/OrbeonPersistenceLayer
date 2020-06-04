@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"headerVersionValue" ],
-	"name" : "OrbeonLastFormDefinitionSourceApi",
+	"name" : "OrbeonPublishedFormDefinitionSourceApi",
 	"pools" : [
 		 ],
 	"super" : "OrbeonGenericGetApi",
