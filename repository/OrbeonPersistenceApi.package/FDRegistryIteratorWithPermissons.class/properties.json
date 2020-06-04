@@ -1,13 +1,14 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonPersistenceApi",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "FDRegistryIteratorWithoutPermissons",
+		"gsQuery",
+		"roles" ],
+	"name" : "FDRegistryIteratorWithPermissons",
 	"pools" : [
 		 ],
 	"super" : "FormDefinitionRegistryIterator",

@@ -1,5 +1,5 @@
 {
-	"category" : "Orbeon",
+	"category" : "OrbeonPersistenceApi",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -17,5 +17,5 @@
 	"name" : "FormDefinitionRegistryIterator",
 	"pools" : [
 		 ],
-	"super" : "OrbeonObject",
+	"super" : "Object",
 	"type" : "normal" }
