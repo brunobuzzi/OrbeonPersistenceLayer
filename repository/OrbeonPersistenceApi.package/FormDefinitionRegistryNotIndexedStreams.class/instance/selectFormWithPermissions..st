@@ -4,7 +4,7 @@ selectFormWithPermissions: collectionOfForms
 
 	self hasPermissionsEnabled ifFalse: [^collectionOfForms].
 
-	allPermissions := permissions at: 'read' ifAbsent: [^collectionOfForms].
+	allPermissions := self formDefinition getInvertedPermissions at: 'read' ifAbsent: [^collectionOfForms].
 	hasOwnerPermission := allPermissions includesSubString: 'owner'.
 	hasGroupPermission := allPermissions includesSubString: 'group-member'.
 	rolesWithReadPermission := allPermissions subStrings: ' '.

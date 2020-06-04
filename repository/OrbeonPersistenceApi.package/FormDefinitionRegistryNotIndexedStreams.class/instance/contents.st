@@ -7,5 +7,6 @@ contents
 
 	draftsReadStream ifNotNil: [contents addAll: draftsReadStream contents].
 	instancesReadStream ifNotNil: [contents addAll: instancesReadStream contents].
+	fieldsReadStreams ifNotNil: [contents addAll: fieldsReadStreams contents].
 
 	^contents
