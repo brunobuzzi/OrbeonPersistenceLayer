@@ -1,6 +1,6 @@
 permissions
 selectFormWithPermissions: collectionOfForms
-	| allPermissions hasReadPermissionOnAll hasOwnerPermission hasGroupPermission rolesWithReadPermission queryString |
+	| allPermissions hasReadPermissionOnAll hasOwnerPermission hasGroupPermission rolesWithReadPermission |
 
 	self hasPermissionsEnabled ifFalse: [^collectionOfForms].
 
@@ -13,10 +13,8 @@ selectFormWithPermissions: collectionOfForms
 	"the user has any of its <roles> included on form definition <rolesWithReadPermission> --> has read permission on all"
 	hasReadPermissionOnAll := (credentials intersection: rolesWithReadPermission) notEmpty.
 
-	queryString := ''. 
-	hasOwnerPermission ifTrue: [queryString := queryString, (queryString ifEmpty: [''] ifNotEmpty: [' | ']), '(each.username = ''', self user, ''')' ].
-	hasGroupPermission ifTrue: [queryString := queryString, (queryString ifEmpty: [''] ifNotEmpty: [' | ']), '(each.groupname = ''', self group, ''')' ].
-
 	hasReadPermissionOnAll ifTrue:[^collectionOfForms].
 
-	^collectionOfForms select: [:each | (each username = self user) or: [each groupname = self group]]
+	^collectionOfForms select: [:each | 
+			(hasOwnerPermission not or: [hasOwnerPermission and: [each username = self user]]) or: 
+			[hasGroupPermission not or: [hasGroupPermission and: [each groupname = self group]]] ]

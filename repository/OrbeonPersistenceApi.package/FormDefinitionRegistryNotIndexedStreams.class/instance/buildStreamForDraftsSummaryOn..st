@@ -1,5 +1,9 @@
 streams set
 buildStreamForDraftsSummaryOn: collectionOfOrbeonDrafts
+	| draftsCollection |
 
 	numberOfForms := numberOfForms + collectionOfOrbeonDrafts size.
-	draftsReadStream := ReadStreamPortable on: collectionOfOrbeonDrafts.
+
+	draftsCollection := self selectFormWithPermissions: collectionOfOrbeonDrafts.
+
+	draftsReadStream := ReadStreamPortable on: draftsCollection.
