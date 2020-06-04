@@ -11,7 +11,7 @@ doIt
 	headerVersion := headerVersionValue ifNil: [application getLastFormDefinitionVersionOf: self getFormName] ifNotNil: [Number fromString: headerVersionValue].
 
 	latestDefinition := application getSavedDefinition: formName version: headerVersion ifNone: [^restHandler noRouteFound: restHandler requestContext].
-
+self halt.
 	restHandler requestContext response headerAt: 'orbeon-form-definition-version' put: latestDefinition version printString.
 
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
