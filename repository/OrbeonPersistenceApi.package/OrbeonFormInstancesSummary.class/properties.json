@@ -7,9 +7,6 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"formDefinitionRegistry",
-		"instancesReadStream",
-		"draftsReadStream",
-		"fieldsReadStreams",
 		"version" ],
 	"name" : "OrbeonFormInstancesSummary",
 	"pools" : [

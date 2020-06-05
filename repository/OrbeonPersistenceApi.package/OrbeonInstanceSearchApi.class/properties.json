@@ -9,7 +9,7 @@
 		"application",
 		"lastFormDefinition",
 		"streamsHandler" ],
-	"name" : "OrbeonInstanceSearchApi2",
+	"name" : "OrbeonInstanceSearchApi",
 	"pools" : [
 		 ],
 	"super" : "OrbeonSummaryApi",
