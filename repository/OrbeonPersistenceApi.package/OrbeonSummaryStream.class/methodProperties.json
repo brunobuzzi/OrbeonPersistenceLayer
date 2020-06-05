@@ -1,5 +1,11 @@
 {
 	"class" : {
-		"newOn:" : "brunobb 06/05/2020 07:35" },
+		"newOn:" : "brunobb 06/05/2020 11:30" },
 	"instance" : {
-		"on:" : "brunobb 06/05/2020 07:35" } }
+		"contents" : "brunobb 06/05/2020 13:26",
+		"fetchAllDrafts" : "brunobb 06/05/2020 13:04",
+		"fetchAllDraftsButFirst:" : "brunobb 06/05/2020 13:05",
+		"fetchFormsInstancesOn:from:to:" : "brunobb 06/05/2020 13:24",
+		"fetchIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 13:06",
+		"fetchUnIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 13:20",
+		"setSummary:" : "brunobb 06/05/2020 11:30" } }

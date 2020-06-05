@@ -1,4 +1,4 @@
 other
-on: anOrbeonFormSummary
+setSummary: anOrbeonFormSummary
 
 	summary := anOrbeonFormSummary
