@@ -3,6 +3,6 @@ fetchFormsInstancesOn: instances from: startIndex to: endIndex
 
 	instances ifEmpty: [^self].
 
-	instances _hasIndexes
-	ifTrue: [self fetchIndexedFormsInstancesOn: instances from: startIndex to: endIndex] 
-	ifFalse: [self fetchUnIndexedFormsInstancesOn: instances from: startIndex to: endIndex]
+	instances indexSpec specs isEmpty
+	ifFalse: [self fetchIndexedFormsInstancesOn: instances from: startIndex to: endIndex] 
+	ifTrue: [self fetchUnIndexedFormsInstancesOn: instances from: startIndex to: endIndex]

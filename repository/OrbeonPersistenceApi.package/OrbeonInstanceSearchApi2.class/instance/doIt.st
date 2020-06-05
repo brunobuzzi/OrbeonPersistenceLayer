@@ -1,14 +1,16 @@
 other
 doIt
 
-	streamsHandler := FormDefinitionRegistryNotIndexedStreams newOn: lastFormDefinition registry version: version xmlQuery: xmlDocument.
+	summary := OrbeonFormInstancesSummary 
+								newWith: lastFormDefinition registry
+								version: version
+								user: user 
+								group: group 
+								credentials: userCredentials
+								pageSize: pageSize 
+								pageNumber: pageNumber 
+								xmlQuery: xmlDocument.
 
-	streamsHandler 
-		pageSize: pageSize;
-		pageNumber: pageNumber;
-		user: user;
-		group: group;
-		credentials: userCredentials;
-		buildStreams.
+	summary buildStreams.
 
 	^self generateXmlAnswer

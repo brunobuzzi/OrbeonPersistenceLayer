@@ -17,7 +17,8 @@
 		"queryNodes",
 		"queryString",
 		"searchValues",
-		"userCredentials" ],
+		"userCredentials",
+		"summary" ],
 	"name" : "OrbeonSummaryApi",
 	"pools" : [
 		 ],

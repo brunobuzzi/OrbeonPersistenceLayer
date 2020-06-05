@@ -2,7 +2,7 @@ fetch
 fetchUnIndexedFormsInstancesOn: formInstances from: startIndex to: endIndex
 	| filteredCollection realEndIndex |
 
-	filteredCollection := (summary selectFormWithPermissions: formInstances) asSortedCollection: [:a :b | a modifiedTime <= b modifiedTime].
+	filteredCollection := (summary selectFormWithPermissions: formInstances) asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime].
 
 	(startIndex > filteredCollection size) ifTrue: [^self].
 	realEndIndex := (endIndex > filteredCollection size) ifTrue: [filteredCollection size] ifFalse: [endIndex]. 

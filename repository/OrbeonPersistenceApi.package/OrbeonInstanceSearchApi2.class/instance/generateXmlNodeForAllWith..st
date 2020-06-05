@@ -11,4 +11,4 @@ generateXmlNodeForAllWith: aXMLWriter
 		ifTrue: [resultCollection]
 		ifFalse: [resultCollection copyFrom: self pageFrom to: to]."
 
-	streamsHandler contents do: [:each | self generateXmlNodeFor: each with: aXMLWriter]
+	summary contents do: [:each | self generateXmlNodeFor: each with: aXMLWriter]

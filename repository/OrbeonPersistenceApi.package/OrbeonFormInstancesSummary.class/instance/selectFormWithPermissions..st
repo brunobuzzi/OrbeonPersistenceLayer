@@ -16,5 +16,5 @@ selectFormWithPermissions: collectionOfForms
 	hasReadPermissionOnAll ifTrue:[^collectionOfForms].
 
 	^collectionOfForms select: [:each | 
-			(hasOwnerPermission not or: [hasOwnerPermission and: [each username = self user]]) or: 
-			[hasGroupPermission not or: [hasGroupPermission and: [each groupname = self group]]] ]
+			(hasOwnerPermission not or: [hasOwnerPermission and: [each username = user]]) or: 
+			[hasGroupPermission not or: [hasGroupPermission and: [each groupname = group]]] ]
