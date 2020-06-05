@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"newFor:group:credentials:pageSize:pageNumber:xmlQuery:" : "brunobb 06/05/2020 09:18" },
+	"instance" : {
+		"buildStreams" : "brunobb 06/05/2020 09:27",
+		"hasPermissionsEnabled" : "brunobb 06/05/2020 09:56",
+		"initialize" : "brunobb 06/05/2020 09:57",
+		"pageFrom" : "brunobb 06/05/2020 09:56",
+		"pageTo" : "brunobb 06/05/2020 09:56",
+		"setUser:group:credentials:pageSize:pageNumber:xmlQuery:" : "brunobb 06/05/2020 09:20" } }
