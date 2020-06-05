@@ -1,4 +1,0 @@
-permissions
-selectFormWithPermissions: collectionOfForms
-
-	self subclassResponsibility

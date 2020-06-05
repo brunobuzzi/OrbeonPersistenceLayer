@@ -1,4 +1,0 @@
-streams set
-buildStreamForDraftsSummary
-
-	self subclassResponsibility

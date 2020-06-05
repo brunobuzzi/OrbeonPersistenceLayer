@@ -1,4 +1,0 @@
-Updating
-lastFormDefinition: anOrbeonPublishedFormDefinition
-
-	lastFormDefinition := anOrbeonPublishedFormDefinition.

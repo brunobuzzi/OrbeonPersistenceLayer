@@ -1,4 +1,0 @@
-Updating
-formName
-
-	^lastFormDefinition formName

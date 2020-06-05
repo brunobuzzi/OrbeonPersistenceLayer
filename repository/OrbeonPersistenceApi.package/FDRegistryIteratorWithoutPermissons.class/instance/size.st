@@ -1,4 +1,0 @@
-stream
-size
-
-	^currentStream size

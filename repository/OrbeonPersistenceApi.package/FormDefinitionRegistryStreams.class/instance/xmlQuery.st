@@ -1,3 +1,0 @@
-Accessing
-xmlQuery
-	^xmlQuery

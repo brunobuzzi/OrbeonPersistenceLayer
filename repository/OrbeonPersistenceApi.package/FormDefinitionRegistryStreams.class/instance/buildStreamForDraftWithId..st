@@ -1,2 +1,0 @@
-streams set
-buildStreamForDraftWithId: draftId

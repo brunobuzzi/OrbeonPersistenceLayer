@@ -1,4 +1,0 @@
-stream
-atEnd
-
-	self subclassResponsibility

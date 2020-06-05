@@ -1,4 +1,0 @@
-streaming
-contents
-
-	self subclassResponsibility
