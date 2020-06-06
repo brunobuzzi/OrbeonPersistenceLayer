@@ -2,10 +2,11 @@
 	"class" : {
 		"newOn:" : "brunobb 06/05/2020 11:30" },
 	"instance" : {
-		"contents" : "brunobb 06/05/2020 13:26",
+		"contents" : "brunobb 06/05/2020 19:32",
 		"fetchAllDrafts" : "brunobb 06/05/2020 13:04",
 		"fetchAllDraftsButFirst:" : "brunobb 06/05/2020 13:05",
+		"fetchFormDefinitionsOn:from:to:" : "brunobb 06/05/2020 19:30",
 		"fetchFormsInstancesOn:from:to:" : "brunobb 06/05/2020 14:12",
 		"fetchIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 13:06",
-		"fetchUnIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 14:22",
+		"fetchUnIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 19:25",
 		"setSummary:" : "brunobb 06/05/2020 11:30" } }

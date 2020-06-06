@@ -1,5 +1,5 @@
 other
-applyQueryToFormDefinitions: anOrderedCollection
+selectFormsDefinitionsFrom: anOrderedCollection
 	"The receiver apply the query contained in xml document <xmlDocument> to all <OrbeonSavedFormDefinition> in collection <anOrderedCollection>"
 	| queryFields result conditions |
 
@@ -7,7 +7,7 @@ applyQueryToFormDefinitions: anOrderedCollection
 	conditions := OrderedCollection new.
 	result := anOrderedCollection select: [:each | each deleted = 'N']. "exclude deleted definitions"
 
-	queryNodes := (xmlDocument allElementsNamed: 'query') do: [:node | "get the criteria from <xmlDocument>"
+	queryNodes := (xmlQuery allElementsNamed: 'query') do: [:node | "get the criteria from <xmlDocument>"
 		node strings notEmpty ifTrue: [queryFields at: (node attributeAt: 'name') put: node strings last]].
 
 	"apply all available criteria to the result collection <result>"
@@ -19,7 +19,8 @@ applyQueryToFormDefinitions: anOrderedCollection
 		(key = '') ifTrue: [conditions add: [:each | (value match: each getApplicationName) or: [(value match: each formName) or: [(value match: each title) or: [(value match: each description)]]]]
 					].
 	].
-
 	conditions do: [:conditionBlock | result := result select: conditionBlock].
 
-	^self setResultAsSortedCollection: result
+	totalFormsSize := totalFormsSize + result size.
+
+	^result

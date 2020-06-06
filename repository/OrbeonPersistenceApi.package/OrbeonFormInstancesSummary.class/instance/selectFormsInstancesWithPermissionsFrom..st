@@ -1,5 +1,5 @@
 permissions
-selectFormWithPermissions: collectionOfForms
+selectFormsInstancesWithPermissionsFrom: collectionOfForms
 	| allPermissions hasReadPermissionOnAll hasOwnerPermission hasGroupPermission rolesWithReadPermission |
 
 	self hasPermissionsEnabled ifFalse: [^collectionOfForms].

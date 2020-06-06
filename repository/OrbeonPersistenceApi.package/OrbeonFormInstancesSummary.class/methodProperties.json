@@ -9,11 +9,10 @@
 		"buildStreamsForDraftsSearch" : "brunobb 06/05/2020 09:28",
 		"buildStreamsForRegularSummaryPaging" : "brunobb 06/05/2020 09:28",
 		"buildStreamsForSearchSummaryPaging" : "brunobb 06/05/2020 09:30",
-		"contents" : "brunobb 06/05/2020 13:25",
 		"createQueryNodes" : "brunobb 06/05/2020 09:26",
 		"formDefinition" : "brunobb 06/05/2020 09:52",
 		"getAllDrafts" : "brunobb 06/05/2020 09:49",
 		"getAllVersion" : "brunobb 06/05/2020 10:04",
-		"selectFormWithPermissions:" : "brunobb 06/05/2020 14:21",
+		"selectFormsInstancesWithPermissionsFrom:" : "brunobb 06/05/2020 19:25",
 		"setRegistry:" : "brunobb 06/05/2020 09:22",
 		"setVersion:" : "brunobb 06/05/2020 09:55" } }

@@ -1,12 +1,12 @@
 fetch
-fetchUnIndexedFormsInstancesOn: formInstances from: startIndex to: endIndex
+fetchFormDefinitionsOn: definitions from: startIndex to: endIndex
 	| filteredCollection realEndIndex |
 
-	filteredCollection := (summary selectFormsInstancesWithPermissionsFrom: formInstances) asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime].
+	filteredCollection := (summary selectFormsDefinitionsFrom: definitions) asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime].
 
 	(startIndex > filteredCollection size) ifTrue: [^self].
 	realEndIndex := (endIndex > filteredCollection size) ifTrue: [filteredCollection size] ifFalse: [endIndex]. 
 
 	filteredCollection := filteredCollection copyFrom: startIndex to: realEndIndex.
 
-	instancesReadStream := ReadStreamPortable on: filteredCollection
+	definitionsReadStream := ReadStreamPortable on: filteredCollection

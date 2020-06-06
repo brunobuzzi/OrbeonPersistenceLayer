@@ -1,10 +1,14 @@
 other
 doIt
-	| savedDefinitions |
 
-	savedDefinitions := self getOrbeonApplicationClass getAllSavedDefinitions.
-	searchTotal := savedDefinitions size.
+	summary := OrbeonFormDefinitionsSummary 
+								newFor: user 
+								group: group 
+								credentials: userCredentials
+								pageSize: pageSize 
+								pageNumber: pageNumber 
+								xmlQuery: xmlDocument.
 
-	self applyQueryToFormDefinitions: savedDefinitions.
+	summary buildStreams.
 
 	^self generateXmlAnswerForBuilderSummary

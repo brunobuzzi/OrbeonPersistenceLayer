@@ -16,7 +16,7 @@ getArrayOfOrbeonHeaders
 		add: 'xmlns:xpl' -> 'java:org.orbeon.oxf.pipeline.api.FunctionLibrary';
 		add: 'xmlns:xs' -> 'http://www.w3.org/2001/XMLSchema';
 		add: 'xmlns:xxf' -> 'http://orbeon.org/oxf/xml/xforms';
-		add: 'page-size' -> pageSize printString;
-		add: 'total' -> searchTotal printString;
-		add: 'search-total' -> resultCollection size printString;
+		add: 'page-size' -> summary pageSize printString;
+		add: 'total' -> summary totalFormsSize printString;
+		add: 'search-total' -> summary totalFormsSize printString;
 		asArray
