@@ -1,6 +1,6 @@
 fetch fields
 fetchFieldInstances
-	| gsQueries result andResult orResult allDefinitions |
+	| gsQueries result andResult orResult allDefinitions querySize |
 
 	result := Dictionary new.
 	"create all <GsQuery> for each field with a search value"
@@ -12,9 +12,11 @@ fetchFieldInstances
 			rcIdentitySet := eachDef fieldInstancesOf: fieldName."get the collection of ALL field's values of <fieldName>"
 			gsQuery on: rcIdentitySet. "set the collection of the <GsQuery>"
 			(result at: fieldName) addAll: gsQuery queryResult.
+			querySize := rcIdentitySet size.
 		]
 	]."Excecute the <GsQuery> and store it on <result> dictionary"
 
+	summary setTotalFormsSize: querySize.
 	result isEmpty ifTrue: [^self].
 
 	"perform an OR search if OR is setted - (OR or AND search is useful when the search has more than one search criteria)"

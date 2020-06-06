@@ -8,14 +8,13 @@ createGsQueriesFor: collectionOfOrbeonQueryNode
 	nodesWithQuery := collectionOfOrbeonQueryNode select: [:each | each isSearchAndHasValue].
 	nodesWithQuery isEmpty ifTrue: [^self createGenericGsQueriesFor: collectionOfOrbeonQueryNode].
 
-	nodesWithQuery do: [:each | | stream type gsQuery stValue queryString |
+	nodesWithQuery do: [:each | | stream type gsQuery stValue |
 		stream := PrintStream on: String new.
 		type := self formDefinition stTypeOf: each name.
 		"searchValues at: each name put: each value."
 		stValue := (type == String) ifTrue: [each value] ifFalse: [type fromOrbeonString: each value].
-		stream nextPutAll: '(each.value = stValue) & '.
-		queryString := stream contents allButLast: 3.
-		gsQuery := GsQuery fromString: queryString. 
+		stream nextPutAll: '(each.value = stValue)'.
+		gsQuery := GsQuery fromString: stream contents.
 		gsQuery bind: 'stValue' to: stValue.
 		gsQueries at: each name put: gsQuery.
 		stream close.].
