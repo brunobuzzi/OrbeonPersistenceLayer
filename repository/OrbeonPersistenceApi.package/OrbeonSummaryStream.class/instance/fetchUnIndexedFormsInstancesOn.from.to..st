@@ -1,4 +1,4 @@
-fetch
+fetch instances
 fetchUnIndexedFormsInstancesOn: formInstances from: startIndex to: endIndex
 	| filteredCollection realEndIndex |
 

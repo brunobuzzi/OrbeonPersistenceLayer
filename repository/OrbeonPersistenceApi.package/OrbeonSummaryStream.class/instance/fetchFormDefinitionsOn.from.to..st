@@ -1,4 +1,4 @@
-fetch
+fetch definitions
 fetchFormDefinitionsOn: definitions from: startIndex to: endIndex
 	| filteredCollection realEndIndex |
 

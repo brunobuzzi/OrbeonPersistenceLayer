@@ -2,11 +2,21 @@
 	"class" : {
 		"newOn:" : "brunobb 06/05/2020 11:30" },
 	"instance" : {
+		"application" : "brunobb 06/06/2020 15:04",
+		"applicationName" : "brunobb 06/06/2020 15:07",
 		"contents" : "brunobb 06/05/2020 19:32",
+		"createGenericGsQueriesFor:" : "brunobb 06/06/2020 14:33",
+		"createGsQueriesFor:" : "brunobb 06/06/2020 14:32",
 		"fetchAllDrafts" : "brunobb 06/05/2020 13:04",
 		"fetchAllDraftsButFirst:" : "brunobb 06/05/2020 13:05",
+		"fetchFieldInstances" : "brunobb 06/06/2020 15:22",
 		"fetchFormDefinitionsOn:from:to:" : "brunobb 06/05/2020 19:30",
 		"fetchFormsInstancesOn:from:to:" : "brunobb 06/05/2020 14:12",
 		"fetchIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 13:06",
 		"fetchUnIndexedFormsInstancesOn:from:to:" : "brunobb 06/05/2020 19:25",
+		"formDefinition" : "brunobb 06/06/2020 15:03",
+		"formName" : "brunobb 06/06/2020 15:06",
+		"getAllDefinitions" : "brunobb 06/06/2020 15:22",
+		"isGenericSearch" : "brunobb 06/06/2020 15:08",
+		"registry" : "brunobb 06/06/2020 15:23",
 		"setSummary:" : "brunobb 06/05/2020 11:30" } }

@@ -1,3 +1,4 @@
-Accessing
+other
 queryNodes
-	^queryNodes
+
+	^summary queryNodes

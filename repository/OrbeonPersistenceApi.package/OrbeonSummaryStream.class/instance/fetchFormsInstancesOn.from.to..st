@@ -1,4 +1,4 @@
-fetch
+fetch instances
 fetchFormsInstancesOn: instances from: startIndex to: endIndex
 
 	instances ifEmpty: [^self].
