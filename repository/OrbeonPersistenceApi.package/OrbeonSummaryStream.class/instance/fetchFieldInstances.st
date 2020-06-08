@@ -24,11 +24,11 @@ fetchFieldInstances
 	ifTrue: [orResult := Set new.
 		result do: [:queryResult | orResult addAll: queryResult].
 		orResult  := (orResult collect: [:each | each parentObject]) asOrderedCollection.
-		^fieldsReadStreams := ReadStreamPortable on: (summary selectFormsInstancesWithPermissionsFrom: orResult) "filter by permissions"].
+		^self fetchFieldInstancesOn: orResult "filter by permissions"].
 
 	"perform an AND search"
 	andResult := (OrderedCollection withAll: (result at: result keys asArray first)) collect: [:each | each parentObject].
 
 	result asOrderedCollection allButFirst do: [:queryResult | andResult := andResult intersection: (queryResult collect: [:each | each parentObject])].
 	"filter by permissions"
-	^fieldsReadStreams := ReadStreamPortable on: (self selectFormsInstancesWithPermissionsFrom: orResult)
+	^self fetchFieldInstancesOn: andResult

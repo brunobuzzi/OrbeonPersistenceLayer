@@ -7,9 +7,7 @@ contents
 
 	draftsReadStream ifNotNil: [contents addAll: draftsReadStream contents].
 	instancesReadStream ifNotNil: [contents addAll: instancesReadStream contents].
-	fieldsReadStreams ifNotNil: [
-		summary setReturnedFormsSize: fieldsReadStreams contents size.
-		contents addAll: fieldsReadStreams contents].
+	fieldsReadStreams ifNotNil: [contents addAll: fieldsReadStreams contents].
 	definitionsReadStream ifNotNil: [contents addAll: definitionsReadStream contents].
 
 	^contents

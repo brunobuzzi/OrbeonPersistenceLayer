@@ -1,4 +1,4 @@
-other
+page intervals
 pageFrom
 	"The receiver answer the start page to display search results"
 
