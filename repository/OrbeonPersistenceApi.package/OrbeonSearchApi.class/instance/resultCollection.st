@@ -1,3 +1,0 @@
-Accessing
-resultCollection
-	^resultCollection

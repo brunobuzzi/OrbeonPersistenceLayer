@@ -1,4 +1,0 @@
-other
-resultSize
-
-	^resultCollection size
