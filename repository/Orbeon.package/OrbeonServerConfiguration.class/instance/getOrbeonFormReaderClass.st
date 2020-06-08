@@ -1,4 +1,4 @@
 other
 getOrbeonFormReaderClass
 
-	^OrbeonXPathFormReader subclasses detect: [:each | each comboBoxName = orbeonFormReaderClass comboBoxName] ifNone: [nil]
+	^OrbeonXPathFormReader subclasses detect: [:each | each comboBoxName = self orbeonFormReaderClass comboBoxName] ifNone: [nil]
