@@ -1,6 +1,8 @@
 streams building
 buildStreams
 
+	invertedPermissions := self formDefinition getInvertedPermissions.
+
 	self createQueryNodes.
 
 	"if there is NO query nodes --> Orbeon is searching for a draft with a given form <id>"

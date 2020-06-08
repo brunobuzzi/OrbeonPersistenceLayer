@@ -1,18 +1,18 @@
 {
 	"class" : {
-		"newWith:version:user:group:credentials:pageSize:pageNumber:xmlQuery:" : "brunobb 06/05/2020 09:55" },
+		"newWith:version:user:group:credentials:pageSize:pageNumber:xmlQuery:" : "brunobb 06/08/2020 13:15" },
 	"instance" : {
-		"application" : "brunobb 06/05/2020 09:51",
-		"buildStreamForDraftsAndFormsSummary" : "brunobb 06/05/2020 13:16",
-		"buildStreamForDraftsSummary" : "brunobb 06/05/2020 12:50",
-		"buildStreams" : "brunobb 06/05/2020 09:26",
-		"buildStreamsForDraftsSearch" : "brunobb 06/05/2020 09:28",
-		"buildStreamsForRegularSummaryPaging" : "brunobb 06/05/2020 09:28",
-		"buildStreamsForSearchSummaryPaging" : "brunobb 06/06/2020 14:46",
-		"createQueryNodes" : "brunobb 06/05/2020 09:26",
-		"formDefinition" : "brunobb 06/05/2020 09:52",
-		"getAllDrafts" : "brunobb 06/05/2020 09:49",
-		"getAllVersion" : "brunobb 06/05/2020 10:04",
-		"selectFormsInstancesWithPermissionsFrom:" : "brunobb 06/05/2020 19:25",
-		"setRegistry:" : "brunobb 06/05/2020 09:22",
-		"setVersion:" : "brunobb 06/05/2020 09:55" } }
+		"application" : "brunobb 06/08/2020 13:15",
+		"buildStreamForDraftsAndFormsSummary" : "brunobb 06/08/2020 13:15",
+		"buildStreamForDraftsSummary" : "brunobb 06/08/2020 13:15",
+		"buildStreams" : "brunobb 06/08/2020 13:16",
+		"buildStreamsForDraftsSearch" : "brunobb 06/08/2020 13:15",
+		"buildStreamsForRegularSummaryPaging" : "brunobb 06/08/2020 13:15",
+		"buildStreamsForSearchSummaryPaging" : "brunobb 06/08/2020 13:15",
+		"createQueryNodes" : "brunobb 06/08/2020 13:15",
+		"formDefinition" : "brunobb 06/08/2020 13:15",
+		"getAllDrafts" : "brunobb 06/08/2020 13:15",
+		"getAllVersion" : "brunobb 06/08/2020 13:15",
+		"selectFormsInstancesWithPermissionsFrom:" : "brunobb 06/08/2020 13:17",
+		"setRegistry:" : "brunobb 06/08/2020 13:15",
+		"setVersion:" : "brunobb 06/08/2020 13:15" } }

@@ -14,7 +14,9 @@ fetchIndexedFormsInstancesOn: indexedCollection from: startIndex to: endIndex
 		form := btreePlusReadStream next.
 		(currentIndex >= startIndex)
 		ifTrue: [
-			(summary selectFormsInstancesWithPermissionsFrom: (OrderedCollection with:form)) ifNotEmpty: [:col | resultCollection addAll: col. currentIndex := currentIndex + 1].
+			(summary selectFormsInstancesWithPermissionsFrom: (OrderedCollection with:form)) 
+			ifNotEmpty: [:col | resultCollection addAll: col. 
+										currentIndex := currentIndex + 1].
 		]
 		ifFalse: [currentIndex := currentIndex + 1].
 	].
