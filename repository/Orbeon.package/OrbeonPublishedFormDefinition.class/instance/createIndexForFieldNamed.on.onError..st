@@ -1,4 +1,4 @@
-indexes
+indexes-fields
 createIndexForFieldNamed: fieldName on: aRcIdentityBag onError: aBlock
 	"The receiver create (initialization - executed only once) an Index for the field named <fieldName>.
 	If the collection size <= 2000 then raise <anCollectionWithout2000ElementsException> exception.

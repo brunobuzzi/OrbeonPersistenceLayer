@@ -1,4 +1,4 @@
-indexes
+indexes-fields
 createIndexForFieldNamed: fieldName on: aRcIdentityBag onSmallCollection: smallCollectionBlock onError: errorBlock
 	"The receiver create (initialization - executed only once) an Index for the field named <fieldName>.
 	If the collection size <= 2000 then evaluates the niladic block <smallCollectionBlock>.
@@ -8,5 +8,5 @@ createIndexForFieldNamed: fieldName on: aRcIdentityBag onSmallCollection: smallC
 	ifFalse: [^smallCollectionBlock value]. 
 
 	[GsIndexSpec new
-		equalityIndex: 'each.value' lastElementClass: (self stTypeOf: fieldName);
+		equalityIndex: 'each.value' lastElementClass: (self stTypeOf: fieldName) options: self defaultIndexOptions;
 		createIndexesOn: aRcIdentityBag] on: Error do: [:ex | ^errorBlock value].

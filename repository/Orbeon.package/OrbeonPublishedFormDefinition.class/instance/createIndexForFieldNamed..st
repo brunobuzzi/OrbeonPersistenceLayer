@@ -1,4 +1,4 @@
-indexes
+indexes-fields
 createIndexForFieldNamed: fieldName
 	"The receiver create (initialization - executed only once) an Index for the field named <fieldName>.
 	The index is created if the field is a search field."

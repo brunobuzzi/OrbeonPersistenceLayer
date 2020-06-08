@@ -1,4 +1,4 @@
-indexes
+indexes-fields
 removeIndexForFieldNamed: fieldName
 	"The receiver remove the Index for the field named <fieldName>"
 	| indexedCollection |

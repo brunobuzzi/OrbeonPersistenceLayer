@@ -1,4 +1,4 @@
-indexes
+indexes-fields
 rebuildAllIndexes
 	"The receiver rebuild all existing indexes"
 
