@@ -8,7 +8,7 @@ getInstanceDefinitionUsedAttachmentIDs
 	self getOrbeonApplicationCache do: [:eachApp | 
 		eachApp definitionRegistry keysAndValuesDo: [:formName :registry |
 
-			registry savedDefinitions do: [:eachInstDef | 
+			registry savedDefinitionsDo: [:eachInstDef | 
 				allAttachmentIds at: (eachInstDef getApplicationName, '.', eachInstDef formName) 
 					ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachInstDef formName) 
 															put: (OrderedCollection withAll: eachInstDef attachments)]
