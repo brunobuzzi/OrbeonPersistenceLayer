@@ -1,0 +1,4 @@
+Accessing
+instancesSetIncludes: anOrbeonFormInstance
+
+	^instancesSet includes: anOrbeonFormInstance

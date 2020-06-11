@@ -18,9 +18,9 @@ testAppFieldValuesWithFormInstances
 					"check form instance from <AppFieldValue> is included in the any definition of the form registry"
 					self assert: (formRegistry anyDefinitionIncludes: formInstance). 
 					"check form instance from <AppFieldValue> is included in <instancesSet> of the form registry"
-					self assert: (formRegistry instancesSet includes: formInstance).
+					self assert: (formRegistry instancesSetIncludes: formInstance).
 					"check form instance from <AppFieldValue> is included in <instancesVersionSet> of the form registry"
-					self assert: ((formRegistry instancesSetOfVersion: formInstance version) includes: formInstance).
+					self assert: (formRegistry instancesSetOfVersion: formInstance version includes: formInstance).
 					"check if all <AppFieldValue> are included in fields general collection of the form definition"
 					formInstance getAllFieldsValues do: [:fieldValue | 
 						self assert: ((publishedDefinition fieldInstancesOf: fieldValue name) includes: fieldValue).
