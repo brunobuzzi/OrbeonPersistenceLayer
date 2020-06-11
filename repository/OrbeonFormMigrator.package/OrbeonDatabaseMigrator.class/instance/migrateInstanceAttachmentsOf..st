@@ -10,7 +10,7 @@ migrateInstanceAttachmentsOf: anOrbeonFormDefinition
 	../definitions/saved
 	../definitions/published"
 
-	anOrbeonFormDefinition instances do:[:eachInstance |
+	anOrbeonFormDefinition instancesDo:[:eachInstance |
 		eachInstance getAttachmentIds do: [:instIdFileId | | path instanceId fileId |
 			path := self getOrbeonWebServerConfiguration getInstancesPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
 			instanceId := eachInstance id.

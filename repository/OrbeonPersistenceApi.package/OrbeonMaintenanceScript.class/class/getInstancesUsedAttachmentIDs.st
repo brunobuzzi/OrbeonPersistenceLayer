@@ -9,14 +9,14 @@ getInstancesUsedAttachmentIDs
 		eachApp definitionRegistry keysAndValuesDo: [:formName :registry |
 
 			registry currentVersionsDo: [:eachDef | 
-				eachDef instances do: [:eachInst | 
+				eachDef instancesDo: [:eachInst | 
 					allAttachmentIds at: (eachApp applicationName, '.', eachDef formName)
 						ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
 																put: (OrderedCollection withAll: eachInst getAttachmentIds)]
 						ifPresent: [:collection | collection addAll: eachInst getAttachmentIds]].
 			].
 			registry oldVersionsDo: [:eachDef | 
-				eachDef instances do: [:eachInst | 
+				eachDef instancesDo: [:eachInst | 
 					allAttachmentIds at: (eachApp applicationName, '.', eachDef formName)
 						ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
 																put: (OrderedCollection withAll: eachInst getAttachmentIds)]

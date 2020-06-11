@@ -4,8 +4,8 @@ numberOfInstances
 
 	total := 0.
 
-	currentVersions do: [:each | total := total + each instances size].
+	currentVersions do: [:each | total := total + each instancesSize].
 
-	oldVersions do: [:each | total := total + each instances size].
+	oldVersions do: [:each | total := total + each instancesSize].
 
 	^total

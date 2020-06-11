@@ -1,0 +1,3 @@
+Accessing
+instancesSize
+	^instances size

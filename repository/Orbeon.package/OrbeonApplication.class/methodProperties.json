@@ -6,7 +6,6 @@
 		"getAllDefinitionsWithId:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getAllFormDefinitions" : "brunobb 05/21/2020 10:44",
 		"getAllInstances" : "brunobb 05/21/2020 10:44",
-		"getAllInstancesOf:definitionNamed:" : "brunobb 05/21/2020 10:44",
 		"getAllPublishedDefinitionNamed:fromApplicationNamed:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getAllPublishedDefinitionNamed:fromApplicationNamed:withVersion:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getAllSavedDefinitions" : "brunobb 05/21/2020 10:44",

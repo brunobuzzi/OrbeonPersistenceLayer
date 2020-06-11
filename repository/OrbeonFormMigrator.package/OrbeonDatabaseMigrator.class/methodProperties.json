@@ -34,7 +34,7 @@
 		"migrateDefinitionCustomAttachmentOf:" : "brunobb 03/17/2020 05:58",
 		"migrateFormDefinitionNamed:in:" : "brunobb 03/17/2020 05:49",
 		"migrateFormDefinitionNamed:version:in:" : "brunobb 03/20/2020 11:18",
-		"migrateInstanceAttachmentsOf:" : "brunobb 03/17/2020 05:58",
+		"migrateInstanceAttachmentsOf:" : "brunobb 06/11/2020 14:34",
 		"migrateInstanceAttachmentsOf:from:" : "brunobb 03/20/2020 16:47",
 		"migrateInstancesOf:version:from:" : "brunobb 03/24/2020 14:06",
 		"setDatabaseIP:user:password:" : "brunobb 03/16/2020 13:37",

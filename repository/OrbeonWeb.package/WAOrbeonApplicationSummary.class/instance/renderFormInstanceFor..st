@@ -3,6 +3,6 @@ renderFormInstanceFor: anOrbeonFormDefinition
 
 	self setInstanceSide.
 
-	innerBatchList items: anOrbeonFormDefinition instances asArray.
+	innerBatchList items: anOrbeonFormDefinition instancesAsArray.
 
 	selectedFormDefinition := anOrbeonFormDefinition

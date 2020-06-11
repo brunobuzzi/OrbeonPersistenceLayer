@@ -5,6 +5,7 @@ getAllInstances
 
 	all := OrderedCollection new.
 
-	self getAllVersion do: [:each | all addAll: each instances asArray].
+	self getAllVersion do: [:formDefinition | 
+		formDefinition instancesDo: [:formInstance | all add: formInstance]].
 
 	^all

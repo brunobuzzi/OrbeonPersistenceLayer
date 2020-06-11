@@ -1,0 +1,3 @@
+Accessing
+instancesAsArray
+	^instances asArray
