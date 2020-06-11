@@ -8,6 +8,4 @@ getAllDefinitionsNamed: aString ifNone: aBlock
 
 	registry := self registryForFormNamed: aString.
 
-	^registry hasVersions 
-		ifTrue: [registry oldVersions, registry currentVersions] 
-		ifFalse: [aBlock value]
+	^registry getAllDefinitionsNamed: aString ifNone: aBlock
