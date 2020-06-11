@@ -2,6 +2,7 @@
 	"class" : {
 		"newFor:" : "brunobb 07/09/2019 06:55" },
 	"instance" : {
+		"acceptVisitor:" : "brunobb 06/11/2020 13:42",
 		"addCurrentVersion:" : "brunobb 07/09/2019 06:55",
 		"addForm:" : "brunobb 11/19/2019 06:47",
 		"addSavedDefinition:" : "brunobb 07/09/2019 06:55",
@@ -12,6 +13,7 @@
 		"createModifiedTimeIndexForVersion:onError:" : "brunobb 06/08/2020 10:42",
 		"currentVersions" : "brunobb 07/09/2019 06:55",
 		"currentVersions:" : "brunobb 07/09/2019 06:55",
+		"currentVersionsDo:" : "brunobb 06/11/2020 13:51",
 		"defaultIndexOptions" : "brunobb 06/08/2020 10:39",
 		"getAllInstances" : "brunobb 07/09/2019 06:55",
 		"getAllInstancesKeys" : "brunobb 07/09/2019 06:55",
@@ -69,15 +71,18 @@
 		"initialize" : "brunobb 11/19/2019 06:47",
 		"instancesSet" : "brunobb 07/09/2019 06:55",
 		"instancesSet:" : "brunobb 07/09/2019 06:55",
+		"instancesSetDo:" : "brunobb 06/11/2020 14:01",
 		"instancesSetOfVersion:" : "brunobb 07/09/2019 07:01",
 		"instancesVersionSet" : "brunobb 07/09/2019 06:55",
 		"instancesVersionSet:" : "brunobb 07/09/2019 06:55",
+		"instancesVersionSetDo:" : "brunobb 06/11/2020 14:03",
 		"isCurrentVersion:" : "brunobb 11/20/2019 09:14",
 		"migrateSaveDefinitions" : "brunobb 07/09/2019 06:55",
 		"move:toApplication:andForm:" : "brunobb 07/09/2019 06:55",
 		"numberOfInstances" : "brunobb 07/09/2019 06:55",
 		"oldVersions" : "brunobb 07/09/2019 06:55",
 		"oldVersions:" : "brunobb 07/09/2019 06:55",
+		"oldVersionsDo:" : "brunobb 06/11/2020 13:54",
 		"orbeonApplication" : "brunobb 07/09/2019 06:55",
 		"orbeonApplication:" : "brunobb 07/09/2019 06:55",
 		"printAllVersionNumbers" : "brunobb 07/09/2019 06:55",
@@ -90,4 +95,5 @@
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 03/27/2020 14:11",
 		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 05/15/2020 13:44",
 		"savedDefinitions" : "brunobb 07/09/2019 06:55",
-		"savedDefinitions:" : "brunobb 07/09/2019 06:55" } }
+		"savedDefinitions:" : "brunobb 07/09/2019 06:55",
+		"savedDefinitionsDo:" : "brunobb 06/11/2020 13:56" } }

@@ -53,6 +53,7 @@
 		"storeDashboard:" : "brunobb 05/21/2020 13:06",
 		"usersChartsAndDashboardRepository" : "brunobb 05/21/2020 10:46" },
 	"instance" : {
+		"acceptVisitor:" : "brunobb 06/11/2020 13:40",
 		"addPublishedDefinition:" : "brunobb 05/21/2020 10:44",
 		"addSavedDefinition:" : "brunobb 05/21/2020 10:44",
 		"addTestPermissions" : "brunobb 05/21/2020 10:44",
@@ -65,6 +66,7 @@
 		"definitionNamed:version:ifNone:" : "brunobb 05/21/2020 10:44",
 		"definitionRegistry" : "brunobb 05/21/2020 10:44",
 		"definitionRegistry:" : "brunobb 05/21/2020 10:44",
+		"definitionRegistryDo:" : "brunobb 06/11/2020 13:44",
 		"getAllDefinitions" : "brunobb 05/21/2020 10:44",
 		"getAllDefinitionsNamed:" : "brunobb 05/21/2020 10:44",
 		"getAllDefinitionsNamed:ifNone:" : "brunobb 05/21/2020 10:44",

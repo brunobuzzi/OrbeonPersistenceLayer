@@ -1,4 +1,4 @@
 other
 acceptVisitor: aVisitor
 
-	aVisitor acceptFormDefinition: self
+	aVisitor acceptPublishedFormDefinition: self
