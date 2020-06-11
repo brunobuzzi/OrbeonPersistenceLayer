@@ -1,4 +1,4 @@
 form instances
 getInstanceWithId: aString
 
-	^instances at: aString ifAbsent: [nil]
+	^instances at: aString ifAbsent: []
