@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"sectionsDo",
-		"gridsDo",
-		"fieldsDo" ],
-	"name" : "OrbeonFormVisitor",
+		 ],
+	"name" : "OrbeonAbstractVisitor",
 	"pools" : [
 		 ],
-	"super" : "OrbeonAbstractVisitor",
+	"super" : "Object",
 	"type" : "normal" }
