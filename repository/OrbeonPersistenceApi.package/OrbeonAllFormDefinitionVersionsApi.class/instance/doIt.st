@@ -17,7 +17,7 @@ doIt
 
 	xmlWriter writeWith: [:writer | 
 		writer tag: 'forms' with: [
-			registry currentVersions do: [:publishedVersion | self generateXmlNodeForFormBuilderVersionList: publishedVersion with: writer].
+			registry currentVersionsDo: [:publishedVersion | self generateXmlNodeForFormBuilderVersionList: publishedVersion with: writer].
 		].
 	].
 

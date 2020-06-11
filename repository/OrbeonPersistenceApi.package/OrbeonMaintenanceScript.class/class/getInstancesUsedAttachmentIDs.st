@@ -8,14 +8,14 @@ getInstancesUsedAttachmentIDs
 	self getOrbeonApplicationCache do: [:eachApp | 
 		eachApp definitionRegistry keysAndValuesDo: [:formName :registry |
 
-			registry currentVersions do: [:eachDef | 
+			registry currentVersionsDo: [:eachDef | 
 				eachDef instances do: [:eachInst | 
 					allAttachmentIds at: (eachApp applicationName, '.', eachDef formName)
 						ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
 																put: (OrderedCollection withAll: eachInst getAttachmentIds)]
 						ifPresent: [:collection | collection addAll: eachInst getAttachmentIds]].
 			].
-			registry oldVersions do: [:eachDef | 
+			registry oldVersionsDo: [:eachDef | 
 				eachDef instances do: [:eachInst | 
 					allAttachmentIds at: (eachApp applicationName, '.', eachDef formName)
 						ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
