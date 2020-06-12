@@ -7,3 +7,5 @@ acceptFormDefinitionRegistry: aFormDefinitionRegistry
 
 	aFormDefinitionRegistry instancesSetDo: [:formInstance | formInstance acceptVisitor: self].
 	aFormDefinitionRegistry instancesVersionSetDo: [:formInstance | formInstance acceptVisitor: self].
+
+	self checkFormInstancesQuantityFor: aFormDefinitionRegistry

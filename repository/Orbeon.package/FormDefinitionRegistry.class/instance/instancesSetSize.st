@@ -1,0 +1,3 @@
+Accessing
+instancesSetSize
+	^instancesSet size

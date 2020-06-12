@@ -2,7 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptFormDefinitionRegistry:" : "brunobb 06/12/2020 11:02",
+		"acceptFormDefinitionRegistry:" : "brunobb 06/12/2020 11:32",
 		"acceptFormInstance:" : "brunobb 06/12/2020 10:30",
-		"acceptPublishedFormDefinition:" : "brunobb 06/12/2020 11:14",
-		"acceptSavedFormDefinition:" : "brunobb 06/12/2020 10:30" } }
+		"acceptPublishedFormDefinition:" : "brunobb 06/12/2020 11:42",
+		"acceptSavedFormDefinition:" : "brunobb 06/12/2020 11:43",
+		"checkAppFieldValuesWithFormInstancesFor:" : "brunobb 06/12/2020 11:39",
+		"checkAvailableFlagConsistencyFor:" : "brunobb 06/12/2020 11:47",
+		"checkDefinitionsNotNilFor:" : "brunobb 06/12/2020 11:43",
+		"checkFormInstancesQuantityFor:" : "brunobb 06/12/2020 11:41" } }

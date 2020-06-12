@@ -1,2 +1,4 @@
 other
 acceptSavedFormDefinition: anOrbeonSavedFormDefinition
+
+	self checkDefinitionsNotNilFor: anOrbeonSavedFormDefinition.
