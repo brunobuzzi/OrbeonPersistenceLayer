@@ -3,6 +3,6 @@ getAllInstances
 	| instances |
 
 	instances := OrderedCollection new.
-	self getOrbeonCache do: [:each | instances addAll: each getAllInstances].
+	self doInOrbeonCache: [:each | instances addAll: each getAllInstances].
 
 	^instances

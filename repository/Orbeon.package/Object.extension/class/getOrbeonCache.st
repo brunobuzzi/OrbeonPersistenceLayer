@@ -1,4 +1,0 @@
-*orbeon
-getOrbeonCache
-
-	^AbstractApplication getOrbeonCache

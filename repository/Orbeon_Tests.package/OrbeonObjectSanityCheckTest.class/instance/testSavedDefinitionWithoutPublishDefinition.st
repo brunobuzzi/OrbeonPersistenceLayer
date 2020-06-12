@@ -1,7 +1,7 @@
 other
 testSavedDefinitionWithoutPublishDefinition
 
-	(self getOrbeonApplicationCache select: [:each | each isOrbeonApplication]) do: [:application |
+	(self getOrbeonApplicationClass selectInCache: [:each | each isOrbeonApplication]) do: [:application |
 		application definitionRegistry do: [:formRegistry |
 			formRegistry savedDefinitionsDo: [:savedDefinition | 
 				self assert: savedDefinition definition notNil.

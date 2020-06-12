@@ -3,7 +3,7 @@ testAppFieldValuesWithFormInstances
 	"Iterate over all field values and check if are contained in any Orbeon Form Instance and viceversa.
 	It could be a time consuming operation"
 
-	(self getOrbeonApplicationCache select: [:each | each isOrbeonApplication]) do: [:application | | diff |
+	(self getOrbeonApplicationClass selectInCache: [:each | each isOrbeonApplication]) do: [:application | | diff |
 		application definitionRegistry do: [:formRegistry | | allInstances |
 			allInstances := Set new.
 			formRegistry getAllVersion do: [:publishedDefinition | | instances |

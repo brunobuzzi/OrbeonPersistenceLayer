@@ -2,7 +2,7 @@ other
 testFormInstancesQuantity
 	"Test the number of instanes contained in each <OrbeonPublishedFormDefinition> with the number instances contained in general collections"
 
-	(self getOrbeonApplicationCache select: [:each | each isOrbeonApplication]) do: [:application | 
+	(self getOrbeonApplicationClass selectInCache: [:each | each isOrbeonApplication]) do: [:application | 
 		application definitionRegistry do: [:formRegistry | 
 
 			"compare instances contained in <oldVersions> & <currentVersions> with instances contained in <instancesSet>"

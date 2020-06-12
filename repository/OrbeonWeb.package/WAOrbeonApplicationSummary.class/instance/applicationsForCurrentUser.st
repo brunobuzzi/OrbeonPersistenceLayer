@@ -1,4 +1,4 @@
 other
 applicationsForCurrentUser
 
-	^self getOrbeonApplicationCache select: [:each | each hasReadAccess: self session user]
+	^self getOrbeonApplicationClass selectInCache: [:each | each hasReadAccess: self session user]
