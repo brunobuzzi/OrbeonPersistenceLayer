@@ -1,4 +1,4 @@
 other
 definitionRegistryDo: aBlock
 
-	aBlock value: definitionRegistry
+	definitionRegistry do: aBlock

@@ -2,8 +2,4 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testAppFieldValuesWithFormInstances" : "brunobb 06/12/2020 09:47",
-		"testAvailableFlagConsistency" : "brunobb 06/12/2020 09:47",
-		"testFormInstancesQuantity" : "brunobb 06/12/2020 09:47",
-		"testPublishDefinitionWithoutSavedDefinition" : "brunobb 06/12/2020 09:48",
-		"testSavedDefinitionWithoutPublishDefinition" : "brunobb 06/12/2020 09:48" } }
+		"testPerformAllSanityChecks" : "brunobb 06/12/2020 13:19" } }
