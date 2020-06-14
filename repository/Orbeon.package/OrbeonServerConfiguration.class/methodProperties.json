@@ -16,6 +16,7 @@
 		"enableDraftAuditFor:in:" : "brunobb 03/25/2020 10:56",
 		"enableInstanceAuditFor:in:" : "brunobb 03/25/2020 10:56",
 		"existDirectoryStructureForAttachments" : "brunobb 03/25/2020 10:56",
+		"getAllAttachmentsPaths" : "brunobb 06/14/2020 10:54",
 		"getBasePathFor:in:" : "brunobb 03/25/2020 10:56",
 		"getDraftsPathFor:in:" : "brunobb 03/25/2020 10:56",
 		"getInstancesPathFor:in:" : "brunobb 03/25/2020 10:56",
