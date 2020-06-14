@@ -1,4 +1,4 @@
 other
 testCreateEmptyAttachmentStructureAtCurrentOrbeon
 
-	self createEmptyAttachmentStructureAt: self getOrbeonWebServerConfiguration baseAttachmentPath
+	self createEmptyAttachmentStructureAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath
