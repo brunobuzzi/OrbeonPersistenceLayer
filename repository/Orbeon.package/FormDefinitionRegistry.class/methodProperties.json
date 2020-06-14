@@ -14,7 +14,7 @@
 		"createModifiedTimeIndexForVersion:onError:" : "brunobb 06/08/2020 10:42",
 		"currentVersionsDo:" : "brunobb 06/11/2020 13:51",
 		"defaultIndexOptions" : "brunobb 06/08/2020 10:39",
-		"getAllDefinitionsNamed:ifNone:" : "brunobb 06/11/2020 14:14",
+		"getAllDefinitionsNamed:ifNone:" : "brunobb 06/14/2020 12:18",
 		"getAllInstances" : "brunobb 06/11/2020 14:29",
 		"getAllInstancesKeys" : "brunobb 06/11/2020 14:33",
 		"getAllInstancesKeysOf:" : "brunobb 06/11/2020 14:41",
