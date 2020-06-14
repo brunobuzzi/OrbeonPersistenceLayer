@@ -4,8 +4,6 @@
 		"initializeDateFormat" : "brunobb 03/25/2020 10:56",
 		"initializeTimeFormat" : "brunobb 03/25/2020 10:56" },
 	"instance" : {
-		"baseAttachmentPath" : "brunobb 03/25/2020 10:56",
-		"baseAttachmentPath:" : "brunobb 03/25/2020 10:56",
 		"baseUrlDocumentation" : "brunobb 03/25/2020 10:56",
 		"baseUrlDocumentation:" : "brunobb 03/25/2020 10:56",
 		"databaseMigrator" : "brunobb 03/25/2020 10:56",
@@ -47,8 +45,7 @@
 		"orbeonIP:" : "brunobb 03/25/2020 10:56",
 		"orbeonXpathVersion" : "brunobb 03/25/2020 10:56",
 		"orbeonXpathVersion:" : "brunobb 03/25/2020 10:56",
-		"pathForAttachments" : "brunobb 03/25/2020 10:56",
-		"pathForAttachments:" : "brunobb 03/25/2020 10:56",
+		"printBaseAttachmentPath" : "brunobb 06/13/2020 17:23",
 		"searchTypes" : "brunobb 03/25/2020 10:56",
 		"searchTypes:" : "brunobb 03/25/2020 10:56",
 		"setAndTypeSearchFor:in:" : "brunobb 03/25/2020 10:56",

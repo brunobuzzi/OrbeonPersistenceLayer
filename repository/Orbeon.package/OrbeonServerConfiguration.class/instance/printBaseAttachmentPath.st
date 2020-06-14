@@ -1,0 +1,4 @@
+other
+printBaseAttachmentPath
+
+	^baseAttachmentPath copy
