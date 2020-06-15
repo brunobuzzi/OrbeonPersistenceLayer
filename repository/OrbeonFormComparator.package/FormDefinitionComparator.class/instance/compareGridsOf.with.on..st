@@ -2,7 +2,7 @@ other
 compareGridsOf: aSectionDefinitionOne with: aSectionDefinitionTwo on: anOrderedCollection
 	"The receiver compare the Grid's of section <aSectionDefinitionOne> and section <aSectionDefinitionTwo> and store difference on <anOrderedCollection>"
 
-	aSectionDefinitionOne gridDefinitions do: [:each | 
+	aSectionDefinitionOne gridDefinitionsDo: [:each | 
 		aSectionDefinitionTwo 
 			getGridDefinitionNamed: each name 
 			ifNone: [anOrderedCollection 
@@ -12,7 +12,7 @@ compareGridsOf: aSectionDefinitionOne with: aSectionDefinitionTwo on: anOrderedC
 										yourself)].
 	].
 
-	aSectionDefinitionTwo gridDefinitions do: [:each | 
+	aSectionDefinitionTwo gridDefinitionsDo: [:each | 
 		aSectionDefinitionOne 
 			getGridDefinitionNamed: each name 
 			ifNone: [anOrderedCollection 

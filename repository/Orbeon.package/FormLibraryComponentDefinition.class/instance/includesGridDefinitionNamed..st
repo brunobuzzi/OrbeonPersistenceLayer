@@ -1,0 +1,4 @@
+other
+includesGridDefinitionNamed: aString
+
+	^sectionDefinition includesGridDefinitionNamed: aString

@@ -6,4 +6,4 @@ createSimpleComponentsOf: aFormSectionInstance basedOn: aFormSectionDefinition x
 	self createFieldsInstancesFor: aFormSectionInstance xmlSegment: xmlSegment.
 
 	"create grid instances for the current section definition"
-	aFormSectionDefinition gridDefinitions do: [:gridDefnition | self createGridsFor: aFormSectionInstance xmlSegment: xmlSegment].
+	aFormSectionDefinition gridDefinitionsDo: [:gridDefnition | self createGridsFor: aFormSectionInstance xmlSegment: xmlSegment].

@@ -1,4 +1,4 @@
 other
 hasGrids
 
-	^self gridDefinitions notEmpty
+	self subclassResponsibility

@@ -6,7 +6,7 @@ createInnerStructureOf: aFormSectionInstance basedOn: aFormSectionDefinition xml
 	self createSimpleComponentsOf: aFormSectionInstance basedOn: aFormSectionDefinition xmlSegment: xmlSegment.
 
 	"create the recursive subsections of the receiver"
-	aFormSectionDefinition subSections do: [:subSectionDef | | sections |
+	aFormSectionDefinition subSectionsDo: [:subSectionDef | | sections |
 		sections := (xmlSegment xPath: subSectionDef getXpathForNodeContent)
 								ifNotEmpty: [:collection | collection] 
 								ifEmpty: [OrbeonInvalidXMLException signal: 'Invalid Subsections Structure'].

@@ -1,4 +1,4 @@
 other
 getGridDefinitionNamed: aString ifNone: aBlock
 
-	self subclassResponsibility
+	^gridDefinitions at: aString ifAbsent: aBlock

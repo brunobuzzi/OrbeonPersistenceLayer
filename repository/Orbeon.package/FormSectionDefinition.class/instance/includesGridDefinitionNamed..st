@@ -1,4 +1,4 @@
 other
 includesGridDefinitionNamed: aString
 
-	self subclassResponsibility
+	^gridDefinitions includesKey: aString
