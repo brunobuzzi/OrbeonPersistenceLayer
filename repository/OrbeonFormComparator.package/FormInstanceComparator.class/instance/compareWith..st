@@ -6,7 +6,7 @@ compareWith: aDictionary
 	| difference |
 
 	difference := OrderedCollection new.
-	formOne fields keysAndValuesDo: [:key :value |
+	formOne fieldsKeysAndValuesDo: [:key :value |
 		(aDictionary includesKey: key)
 		ifFalse: [difference add: (FieldDoesNotExist form: nil fieldName: key)] "<aDictionary> does NOT include <formOne> field"
 		ifTrue: [(value = (aDictionary at: key)) "<aDictionary> VALUE does is equal to <formOne> field value ???"

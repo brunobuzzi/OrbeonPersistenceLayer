@@ -2,8 +2,8 @@ export
 printInstancesGridsOf: aFormSectionInstance
 	"The receiver print the top grids of <aFormSectionInstance> in <printArray>"
 
-	aFormSectionInstance grids do: [:eachGrid | 
-		eachGrid gridIterations do: [:eachDictionary | "initialize array for each grid iteration"
+	aFormSectionInstance gridsDo: [:eachGrid | 
+		eachGrid gridIterationsDo: [:eachDictionary | "initialize array for each grid iteration"
 			1 to: self numberOfFields do: [:each | printArray at: lineNumber put: (Array new: self numberOfFields)].
 
 			self printInfoForGrid: eachGrid. "print in the 2 column info about the grid"

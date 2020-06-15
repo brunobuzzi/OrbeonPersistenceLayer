@@ -29,7 +29,7 @@ testSectionStructureAndValues
 	self assert: ((section7 valueAt: 'control-8') = '').
 	self assert: ((section7 valueAt: 'mobile') = '09998').
 
-	grid10 := section7 grids at: 'grid-10' ifAbsent: [self assert: false].
+	grid10 := section7 getGridNamed: 'grid-10' ifAbsent: [self assert: false].
 	self assert: ((grid10 getAllValuesFor: 'moneySubject') includes: '3').
 	self assert: ((grid10 getAllValuesFor: 'quantity') includes: 5005).
 	self assert: ((grid10 getAllValuesFor: 'currency') includes: 122.5).
@@ -39,6 +39,6 @@ testSectionStructureAndValues
 
 	self assert: ((section24 valueAt: 'formatedText') findString: 'this is a') ~= 0.
 
-	grid19 := section14 grids at: 'grid-19' ifAbsent: [self assert: false].
+	grid19 := section14 getGridNamed: 'grid-19' ifAbsent: [self assert: false].
 	self assert: ((grid19 getAllValuesFor: 'options') includes: '2 1').
 	self assert: ((grid19 getAllValuesFor: 'otherOptions') includes: '2').

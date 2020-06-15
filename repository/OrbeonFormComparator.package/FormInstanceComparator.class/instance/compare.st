@@ -6,7 +6,7 @@ compare
 	| difference |
 
 	difference := OrderedCollection new.
-	formOne fields keysAndValuesDo: [:key :value |
+	formOne fieldsKeysAndValuesDo: [:key :value |
 		(formTwo hasFieldNamed: key) "<formTwo> has the field name <key> of <formOne> ???"
 		ifFalse: [difference add: (FieldDoesNotExist form: formTwo fieldName: key)] "field does NOT exist in <formTwo> "
 		ifTrue: [(value = (formTwo valueAt: key)) 

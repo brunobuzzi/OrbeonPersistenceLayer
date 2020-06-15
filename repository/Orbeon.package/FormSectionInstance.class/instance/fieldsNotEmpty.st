@@ -1,0 +1,4 @@
+other
+fieldsNotEmpty
+
+   ^fields notEmpty

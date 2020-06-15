@@ -8,5 +8,3 @@ processXML
 	definition addInstance: self.
 
 	self generateFormFieldValueSet. "store field values as instance of <FormFieldValue>"
-
-	^fields

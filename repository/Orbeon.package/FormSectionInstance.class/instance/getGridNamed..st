@@ -1,4 +1,4 @@
 other
 getGridNamed: aString
 
-	^grids at: aString ifAbsent: [nil]
+	^self getGridNamed: aString ifAbsent: []

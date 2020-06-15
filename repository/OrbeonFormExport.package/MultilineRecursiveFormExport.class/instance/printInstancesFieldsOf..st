@@ -4,9 +4,9 @@ printInstancesFieldsOf: aFormSectionInstance
 
 	self printInfoForFormFieldsOf: aFormSectionInstance. "put info of the section <aFormSectionInstance> in the second column"
 	
-	aFormSectionInstance fields keysAndValuesDo: [:fieldName :fieldValue |
+	aFormSectionInstance fieldsKeysAndValuesDo: [:fieldName :fieldValue |
 		
 		self insert: fieldName value: fieldValue. "for each field insert in <printArray> field name and value"
 	].
 
-	(aFormSectionInstance fields notEmpty) ifTrue: [lineNumber := lineNumber + 1.]. "new row if the fields where not empty"
+	(aFormSectionInstance fieldsNotEmpty) ifTrue: [lineNumber := lineNumber + 1.]. "new row if the fields where not empty"

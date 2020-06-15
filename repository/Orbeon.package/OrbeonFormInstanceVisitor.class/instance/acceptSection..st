@@ -3,8 +3,8 @@ acceptSection: aFormSectionInstance
 
 	sectionsDo value: aFormSectionInstance.
 
-	fieldsDo value: aFormSectionInstance value: nil value: aFormSectionInstance fields.
+	fieldsDo value: aFormSectionInstance value: nil value: aFormSectionInstance getFields.
 
-	aFormSectionInstance grids do: [:each | each acceptVisitor: self].
+	aFormSectionInstance gridsDo: [:each | each acceptVisitor: self].
 
 	aFormSectionInstance subSectionsDo: [:each | each acceptVisitor: self].

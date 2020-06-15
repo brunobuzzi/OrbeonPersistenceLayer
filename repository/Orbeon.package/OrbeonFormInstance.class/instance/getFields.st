@@ -6,6 +6,6 @@ getFields
 
 	allFields := Dictionary new.
 
-	self getAllSections do: [:each | allFields addAll: each fields].
+	self getAllSections do: [:each | allFields addAll: each getFields].
 
 	^allFields

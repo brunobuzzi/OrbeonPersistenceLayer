@@ -9,12 +9,12 @@ getAllFields
 	allFields := Dictionary new.
 
 	self getAllSections do: [:eachSection | 
-		eachSection fields keysAndValuesDo: [:fieldName :fieldValue |
+		eachSection fieldsKeysAndValuesDo: [:fieldName :fieldValue |
 			(allFields includesKey: fieldName)
 			ifTrue: [(allFields at: fieldName) add: fieldValue]
 			ifFalse: [allFields at: fieldName put: (OrderedCollection with: fieldValue)]].
-		eachSection grids do: [:eachGrid | 
-			eachGrid gridIterations do: [:dictIteration | 
+		eachSection gridsDo: [:eachGrid | 
+			eachGrid gridIterationsDo: [:dictIteration | 
 				dictIteration keysAndValuesDo: [:fieldName :fieldValue |
 					(allFields includesKey: fieldName)
 					ifTrue: [(allFields at: fieldName) add: fieldValue]
