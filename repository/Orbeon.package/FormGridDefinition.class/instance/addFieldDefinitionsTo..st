@@ -1,0 +1,4 @@
+other
+addFieldDefinitionsTo: anOrderedCollection
+
+	anOrderedCollection addAll: fieldDefinitions asOrderedCollection

@@ -4,10 +4,9 @@
 	"instance" : {
 		"acceptVisitor:" : "brunobb 04/01/2019 12:57",
 		"addFieldDefinition:" : "BrunoBB 03/14/2017 09:58",
+		"addFieldDefinitionsTo:" : "brunobb 06/15/2020 10:25",
 		"bind" : "BrunoBB 03/14/2017 09:58",
 		"bind:" : "BrunoBB 03/14/2017 09:58",
-		"fieldDefinitions" : "BrunoBB 03/14/2017 09:58",
-		"fieldDefinitions:" : "BrunoBB 03/14/2017 09:58",
 		"fieldDefinitionsAnySatisfy:" : "brunobb 06/15/2020 06:18",
 		"fieldDefinitionsDetect:" : "brunobb 06/15/2020 06:16",
 		"fieldDefinitionsDetect:ifNone:" : "brunobb 06/15/2020 06:16",

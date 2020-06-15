@@ -8,6 +8,6 @@ getAllFieldDefinitions
 
 	allFields addAll: fieldDefinitions asOrderedCollection.
 
-	gridDefinitions do: [:each | allFields addAll: each fieldDefinitions asOrderedCollection]. 
+	gridDefinitions do: [:gridDefinition | gridDefinition addFieldDefinitionsTo: allFields]. 
 
 	^allFields
