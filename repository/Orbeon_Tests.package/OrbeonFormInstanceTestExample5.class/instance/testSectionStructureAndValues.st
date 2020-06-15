@@ -17,7 +17,7 @@ testSectionStructureAndValues
 		].
 	sectionsUser do: [:eachSection |
 		grid := eachSection getGridNamed: 'grid-mobile'.
-		grid gridIterations do: [:eachDictionary | 
+		grid gridIterationsDo: [:eachDictionary | 
 			self assert: (#('099' '098' '123' '789' '456') includes: (eachDictionary at: 'mobile')).		
 			]. 
 	].
@@ -28,14 +28,14 @@ testSectionStructureAndValues
 		].
 	sections8 do: [:eachSection |
 		grid := eachSection getGridNamed: 'grid-amount'.
-		grid gridIterations do: [:eachDictionary | 
+		grid gridIterationsDo: [:eachDictionary | 
 			self assert: (#('100' '1500' '2000' '2500' '3000') includes: (eachDictionary at: 'mount')).		
 			]. 
 	].
 
 	sectionsGrid do: [:eachSection |
 		grid := eachSection getGridNamed: 'grid-15'.
-		grid gridIterations do: [:eachDictionary | 
+		grid gridIterationsDo: [:eachDictionary | 
 			self assert: (#('020' '021') includes: (eachDictionary at: 'number')).		
 			]. 
 	].

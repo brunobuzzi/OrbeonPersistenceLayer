@@ -7,6 +7,6 @@ getAllGrids
 	allGrids := OrderedCollection new.
 
 	self getAllSections do: [:eachSection | 
-		eachSection gridsDo: [:eachGrid | allGrids addAll: eachGrid gridIterations].].
+		eachSection gridsDo: [:eachGrid | eachGrid addIterationsTo: allGrids].].
 
 	^allGrids
