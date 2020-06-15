@@ -2,5 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 03/08/2018 10:31",
+		"setUp" : "brunobb 06/15/2020 13:58",
+		"testLibraryComponentIdentity" : "brunobb 06/15/2020 13:31",
 		"testSectionsStructure" : "brunobb 06/15/2020 06:49" } }

@@ -1,0 +1,4 @@
+other
+isLibraryComponent
+
+	^false
