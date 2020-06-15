@@ -2,7 +2,7 @@ test
 testFormFieldsInSection3
 	| section subSection grid |
 
-	section := form sectionDefinitions at: 'section-3'.
+	section := form getSectionNamed: 'section-3'.
 	self assert: section isRepeatable.
 	"fields of this section only and fields in grids of this section - does NOT includes subsections"
 	self assert: (section getAllFieldDefinitions size = 6).
@@ -21,11 +21,11 @@ testFormFieldsInSection3
 	self assert: (subSection  name = 'section-4').
 	self assert: (grid name = 'grid-4').
 	
-	self assert: (grid fieldDefinitions size = 3).
+	self assert: (grid fieldDefinitionsSize = 3).
 
-	self assert: (grid fieldDefinitions anySatisfy: [:e | e name = 'control-1']).
-	self assert: (grid fieldDefinitions anySatisfy: [:e | e name = 'time']).
-	self assert: (grid fieldDefinitions anySatisfy: [:e | e name = 'checkOptions']).
+	self assert: (grid fieldDefinitionsAnySatisfy: [:e | e name = 'control-1']).
+	self assert: (grid fieldDefinitionsAnySatisfy: [:e | e name = 'time']).
+	self assert: (grid fieldDefinitionsAnySatisfy: [:e | e name = 'checkOptions']).
 
 	self assert: ((grid getFieldNamed: 'control-1') type = 'xf:decimal').
 	self assert: ((grid getFieldNamed: 'time') type = 'xf:time').

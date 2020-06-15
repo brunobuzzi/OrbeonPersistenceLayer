@@ -3,9 +3,10 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "brunobb 04/01/2019 12:55",
-		"fieldDefinitions" : "BrunoBB 03/18/2017 10:13",
+		"fieldNames" : "brunobb 06/15/2020 06:34",
 		"getAllFieldDefinitions" : "BrunoBB 03/18/2017 10:06",
 		"getAllSectionsIn:" : "BrunoBB 03/26/2017 09:24",
+		"getFieldNamed:ifAbsent:" : "brunobb 06/15/2020 06:39",
 		"getGridDefinitionNamed:ifNone:" : "brunobb 06/15/2020 05:59",
 		"getReferencedSectionName" : "BrunoBB 03/18/2017 09:43",
 		"getSubSectionNamed:ifNone:" : "BrunoBB 03/18/2017 10:15",
@@ -17,12 +18,14 @@
 		"gridSearchFields" : "brunobb 06/15/2020 06:01",
 		"hasCustomIterationName" : "BrunoBB 03/18/2017 10:19",
 		"hasGrids" : "brunobb 06/15/2020 06:02",
+		"includesFieldDefinition:" : "brunobb 06/15/2020 06:37",
 		"includesGridDefinitionNamed:" : "brunobb 06/15/2020 06:03",
 		"isRepeatable" : "BrunoBB 03/18/2017 12:57",
 		"parentSection" : "BrunoBB 03/18/2017 09:45",
 		"publishedComponent" : "BrunoBB 03/14/2017 12:50",
 		"publishedComponent:" : "BrunoBB 03/14/2017 12:50",
+		"searchFields" : "brunobb 06/15/2020 06:36",
 		"sectionDefinition" : "BrunoBB 03/14/2017 12:50",
 		"sectionDefinition:" : "BrunoBB 03/14/2017 12:50",
-		"sectionDefinitions" : "BrunoBB 03/18/2017 10:18",
-		"subSectionsDo:" : "brunobb 06/15/2020 05:34" } }
+		"subSectionsDo:" : "brunobb 06/15/2020 05:34",
+		"summaryFields" : "brunobb 06/15/2020 06:35" } }

@@ -1,4 +1,4 @@
 other
 includesFieldDefinition: aFormFieldDefinition
 
-	^self fieldDefinitions includes: aFormFieldDefinition
+	self subclassResponsibility

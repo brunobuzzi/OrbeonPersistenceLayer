@@ -1,4 +1,0 @@
-section
-sectionDefinitions
-
-	^sectionDefinition sectionDefinitions

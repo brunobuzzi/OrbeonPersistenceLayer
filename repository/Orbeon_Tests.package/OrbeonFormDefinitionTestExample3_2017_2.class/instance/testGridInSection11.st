@@ -2,7 +2,7 @@ other
 testGridInSection11
 	| section1 section11 |
 
-	section1 := form sectionDefinitions at: 'section-1'.
+	section1 := form getSectionNamed: 'section-1'.
 	section11 := section1 subSectionsLast.
 
 	"fields of this section only and fields in grids of this section - does NOT includes subsections"

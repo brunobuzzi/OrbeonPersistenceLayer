@@ -2,7 +2,7 @@ other
 testFormFieldsInSection1
 	| section1 |
 
-	section1 := form sectionDefinitions at: 'Datos-generales'.
+	section1 := form getSectionNamed: 'Datos-generales'.
 
 	"fields of this section only and fields in grids of this section - does NOT includes subsections"
 	self assert: (section1 getAllFieldDefinitions size = 8).

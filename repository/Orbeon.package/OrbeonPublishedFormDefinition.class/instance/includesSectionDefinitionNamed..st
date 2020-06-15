@@ -1,4 +1,4 @@
 field definitions
 includesSectionDefinitionNamed: aString
 
-	^(self getSectionNamed: aString) notNil
+	^(self getSectionNamed: aString ifAbsent:[]) notNil

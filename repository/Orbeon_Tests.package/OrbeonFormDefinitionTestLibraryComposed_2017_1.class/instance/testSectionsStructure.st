@@ -23,6 +23,6 @@ testSectionsStructure
 	section getFieldNamed: 'number' ifAbsent: [self assert: false].
 	section getFieldNamed: 'subNumber' ifAbsent: [self assert: false].
 
-	self assert: (form sectionDefinitions size = 4).
-	self assert: (form fieldDefinitions size = 13).
+	self assert: (form sectionDefinitionsSize = 4).
+	self assert: (form fieldDefinitionsSize = 13).
 	self assert: ((form getAllSectionsIn: OrderedCollection new) size = 4).

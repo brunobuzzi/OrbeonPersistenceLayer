@@ -1,0 +1,4 @@
+Accessing
+fieldDefinitionsSize
+
+   ^fieldDefinitions size

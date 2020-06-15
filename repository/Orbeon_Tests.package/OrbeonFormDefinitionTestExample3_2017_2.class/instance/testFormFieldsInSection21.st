@@ -2,7 +2,7 @@ other
 testFormFieldsInSection21
 	| section2 section21 |
 
-	section2 := form sectionDefinitions at: 'section-14'.
+	section2 := form getSectionNamed: 'section-14'.
 	section21 := section2 subSectionsLast.
 
 	self assert: (section21 getAllFieldDefinitions size = 5).

@@ -2,8 +2,8 @@ other
 testSectionsStructure
 	| section grid |
 
-	self assert: (form sectionDefinitions size = 3).
-	self assert: (form fieldDefinitions size = 6).
+	self assert: (form sectionDefinitionsSize = 3).
+	self assert: (form fieldDefinitionsSize = 6).
 	self assert: ((form getAllSectionsIn: OrderedCollection new) size = 3).
 
 	section := form getSectionNamed: 'userInfoSection'.

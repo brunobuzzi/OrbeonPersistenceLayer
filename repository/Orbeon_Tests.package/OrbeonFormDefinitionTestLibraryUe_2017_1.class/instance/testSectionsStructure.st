@@ -2,8 +2,8 @@ other
 testSectionsStructure
 	| section |
 
-	self assert: (form sectionDefinitions size = 2).
-	self assert: (form fieldDefinitions size = 5).
+	self assert: (form sectionDefinitionsSize = 2).
+	self assert: (form fieldDefinitionsSize = 5).
 	self assert: ((form getAllSectionsIn: OrderedCollection new) size = 2).
 
 	section := form getSectionNamed: 'section-name'.

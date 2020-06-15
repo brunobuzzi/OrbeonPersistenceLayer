@@ -1,4 +1,4 @@
 form instances
 getSectionNamed: aString
 
-	^sectionDefinitions at: aString ifAbsent: [nil]
+	^self getSectionNamed: aString ifAbsent: []

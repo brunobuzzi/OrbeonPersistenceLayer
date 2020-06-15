@@ -2,7 +2,7 @@ other
 testFormFieldsInSection3
 	| section1 grid43 |
 
-	section1 := form sectionDefinitions at: 'section-53'.
+	section1 := form getSectionNamed: 'section-53'.
 
 	"fields of this section only and fields in grids of this section - does NOT includes subsections"
 	self assert: (section1 getAllFieldDefinitions size = 4).
