@@ -10,7 +10,7 @@ createFieldDefinitionFor: aFormSectionDefinition reader: anOrbeonFormReader with
 		fieldDefinition := FormFieldDefinition name: fieldName.
 		fieldDefinition label: (labels at: fieldName ifAbsent: ['']);
 			bind: (fieldNode attributeAt: 'bind');
-			type: (fieldsType at: fieldName ifAbsent: ['']);
+			type: (fieldsType at: fieldName ifAbsent: ['']); "the possible fields types has been previously registered in <fieldsType>"
 			isSummary: (summary includes: fieldName);
 			isSearch: (search includes: fieldName);
 			isAttachmentField: (anOrbeonFormReader isAttachmentField: fieldNode);
