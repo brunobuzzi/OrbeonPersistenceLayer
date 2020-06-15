@@ -8,7 +8,7 @@ printStructure
 	visitor := OrbeonFormDefinitionVisitor new.
 	visitor sectionsDo: [:s |  
 		1 to: s levelNumber do: [:idx |  stream nextPutAll: String tab].
-		stream nextPutAll: ('[', s name, ']').
+		stream nextPutAll: ('[', s printStructureName, ']').
 		stream nextPutAll: (s isRepeatable ifTrue: ['(R)'] ifFalse: ['(N)']).
 		stream nextPutAll: String lf.
 	].
