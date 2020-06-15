@@ -3,10 +3,10 @@ testSectionStructureAndValues
 	| mainSections mainIteration1 mainIteration2 subSections subSection grid subSubSections subSubSection |
 
 	"Main Sections"
-	self assert: ((form sections select: [:each | each name = 'main-section']) size = 2).
+	self assert: ((form sectionsSelect: [:each | each name = 'main-section']) size = 2).
 
 	"Main Sections - Fields"
-	mainSections := form sections select: [:each | each name = 'main-section'].
+	mainSections := form sectionsSelect: [:each | each name = 'main-section'].
 	mainIteration1 := mainSections at: 1.
 	mainIteration2 := mainSections at: 2. 
 	"ITERATION 1"
@@ -14,14 +14,14 @@ testSectionStructureAndValues
 	grid := mainIteration1 grids at: 'grid-4' ifAbsent: [self assert: false].
 	self assert: ((grid getAllValuesFor: 'surname') includes: 'Buzzi').
 	self assert: ((grid getAllValuesFor: 'surname') includes: 'Brassesco').
-	subSections := mainIteration1 subSections select: [:each | each name = 'section-7'].
+	subSections := mainIteration1 subSectionsSelect: [:each | each name = 'section-7'].
 		self assert: (subSections size = 2).
 		subSection := subSections at: 1.
 		grid := subSection grids at: 'grid-10' ifAbsent: [self assert: false].
 		self assert: ((subSection valueAt: 'address') = 'Chana 1938').
 		self assert: ((grid getAllValuesFor: 'phone') includes: '408').
 		self assert: ((grid getAllValuesFor: 'phone') includes: '407').
-		subSubSections := subSection subSections select: [:each | each name = 'section-13'].
+		subSubSections := subSection subSectionsSelect: [:each | each name = 'section-13'].
 			self assert: (subSubSections size = 2).
 			subSubSection := subSubSections at: 1.
 			self assert: ((subSubSection valueAt: 'housePlace') = 'Comedor').
@@ -37,7 +37,7 @@ testSectionStructureAndValues
 		grid := subSection grids at: 'grid-10' ifAbsent: [self assert: false].
 		self assert: ((subSection valueAt: 'address') = 'Colonia 124').
 		self assert: ((grid getAllValuesFor: 'phone') includes: '901').
-		subSubSections := subSection subSections select: [:each | each name = 'section-13'].
+		subSubSections := subSection subSectionsSelect: [:each | each name = 'section-13'].
 			self assert: (subSubSections size = 2).
 			subSubSection := subSubSections at: 1.
 			self assert: ((subSubSection valueAt: 'housePlace') = 'Barbacoa').
@@ -54,13 +54,13 @@ testSectionStructureAndValues
 	grid := mainIteration2 grids at: 'grid-4' ifAbsent: [self assert: false].
 	self assert: ((grid getAllValuesFor: 'surname') includes: 'Pereira').
 	self assert: ((grid getAllValuesFor: 'surname') includes: 'Nieto').
-	subSections := mainIteration2 subSections select: [:each | each name = 'section-7'].
+	subSections := mainIteration2 subSectionsSelect: [:each | each name = 'section-7'].
 		self assert: (subSections size = 2).
 		subSection := subSections at: 1.
 		grid := subSection grids at: 'grid-10' ifAbsent: [self assert: false].
 		self assert: ((subSection valueAt: 'address') = 'Punta del Este1345').
 		self assert: ((grid getAllValuesFor: 'phone') includes: '368').
-		subSubSections := subSection subSections select: [:each | each name = 'section-13'].
+		subSubSections := subSection subSectionsSelect: [:each | each name = 'section-13'].
 			self assert: (subSubSections size = 1).
 			subSubSection := subSubSections at: 1.
 			self assert: ((subSubSection valueAt: 'housePlace') = 'Comedor').
@@ -70,7 +70,7 @@ testSectionStructureAndValues
 		grid := subSection grids at: 'grid-10' ifAbsent: [self assert: false].
 		self assert: ((subSection valueAt: 'address') = '18 de Julio').
 		self assert: ((grid getAllValuesFor: 'phone') includes: '909').
-		subSubSections := subSection subSections select: [:each | each name = 'section-13'].
+		subSubSections := subSection subSectionsSelect: [:each | each name = 'section-13'].
 			self assert: (subSubSections size = 1).
 			subSubSection := subSubSections at: 1.
 			self assert: ((subSubSection valueAt: 'housePlace') = 'Sala').

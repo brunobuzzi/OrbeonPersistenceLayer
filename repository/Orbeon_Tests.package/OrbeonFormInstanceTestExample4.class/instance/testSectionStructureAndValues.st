@@ -3,13 +3,13 @@ testSectionStructureAndValues
 	| sectionMain section41 sections53 section53 sections81 section81 subSection grid |
 
 	"Main Sections"
-	self assert: ((form sections detect: [:each | each name = 'Datos-generales'] ifNone: [self assert: false])) notNil.
-	self assert: ((form sections detect: [:each | each name = 'section-41'] ifNone: [self assert: false])) notNil.
-	self assert: ((form sections detect: [:each | each name = 'section-53'] ifNone: [self assert: false])) notNil.
-	self assert: ((form sections detect: [:each | each name = 'section-81'] ifNone: [self assert: false])) notNil.
+	self assert: ((form sectionsDetect: [:each | each name = 'Datos-generales'] ifNone: [self assert: false])) notNil.
+	self assert: ((form sectionsDetect: [:each | each name = 'section-41'] ifNone: [self assert: false])) notNil.
+	self assert: ((form sectionsDetect: [:each | each name = 'section-53'] ifNone: [self assert: false])) notNil.
+	self assert: ((form sectionsDetect: [:each | each name = 'section-81'] ifNone: [self assert: false])) notNil.
 
 	"Main Sections - Fields"
-	sectionMain := form sections detect: [:each | each name = 'Datos-generales'].
+	sectionMain := form sectionsDetect: [:each | each name = 'Datos-generales'] ifNone: [self assert: false].
 
 	self assert: ((sectionMain valueAt: 'nombre') = 'Antofagasta').
 	self assert: ((sectionMain valueAt: 'rut') = 987654).
@@ -20,14 +20,14 @@ testSectionStructureAndValues
 	self assert: ((sectionMain valueAt: 'ventasAnuales') = '2').
 	self assert: ((sectionMain valueAt: 'certificado_pyme') = '/fr/service/persistence/crud/agesic/energy-recursive/data/03445ab8620c6850ab81da36479179b777c56975/78f2d57503b87203da975a48915f736897dc4ee9.bin').
 
-	section41 := form sections detect: [:each | each name = 'section-41'].
+	section41 := form sectionsDetect: [:each | each name = 'section-41'] ifNone: [self assert: false].
 	self assert: ((section41 valueAt: 'nombreDirectivo') = 'Bill Gates').
 	self assert: ((section41 valueAt: 'cargoDirectivo') = 'CEO').
 	self assert: ((section41 valueAt: 'direccionDirectivo') = 'California 45689').
 	self assert: ((section41 valueAt: 'telefonoDirectivo') = 994444).
 	self assert: ((section41 valueAt: 'emailDirectivo') = 'bill@bill.com').
 
-	sections53 := form sections select: [:each | each name = 'section-53'].
+	sections53 := form sectionsSelect: [:each | each name = 'section-53'].
 	section53 := sections53 at: 1.
 	self assert: ((section53 valueAt: 'nombreCertificador') = 'Steve Jobs').
 	self assert: ((section53 valueAt: 'cargoCertificador') = 'CEO').
@@ -36,12 +36,12 @@ testSectionStructureAndValues
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 4).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'None').
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 23).
-	subSection := section53 subSections at: 1.
+	subSection := section53 subSectionsAt: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'UCLA').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Computing').
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'History').
-	subSection := section53 subSections at: 2.
+	subSection := section53 subSectionsAt: 2.
 	self assert: ((subSection valueAt: 'universidad') = 'New York').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Computing History').
@@ -57,18 +57,18 @@ testSectionStructureAndValues
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 1).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'Bong').
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
-	subSection := section53 subSections at: 1.
+	subSection := section53 subSectionsAt: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'Arizona').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Computing').
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Computing Layer').
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Programming').
-	subSection := section53 subSections at: 2.
+	subSection := section53 subSectionsAt: 2.
 	self assert: ((subSection valueAt: 'universidad') = 'Oregon').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Programming 2').
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Programming 23').
-	subSection := section53 subSections at: 3.
+	subSection := section53 subSectionsAt: 3.
 	self assert: ((subSection valueAt: 'universidad') = 'Orlando').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Next').
@@ -81,17 +81,17 @@ testSectionStructureAndValues
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
 	self assert: ((grid getAllValuesFor: 'control-45') includes: 'CEO').
 	self assert: ((grid getAllValuesFor: 'control-46') includes: 2).
-	subSection := section53 subSections at: 1.
+	subSection := section53 subSectionsAt: 1.
 	self assert: ((subSection valueAt: 'universidad') = 'Harvard').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Biology').
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Computer Programming').
-	subSection := section53 subSections at: 2.
+	subSection := section53 subSectionsAt: 2.
 	self assert: ((subSection valueAt: 'universidad') = 'UCLA').
 	grid := subSection getGridNamed: 'grid-50'.
 	self assert: ((grid getAllValuesFor: 'curso') includes: 'Laws').
 
-	sections81 := form sections select: [:each | each name = 'section-81'].
+	sections81 := form sectionsSelect: [:each | each name = 'section-81'].
 	section81 := sections81 at: 1.
 	self assert: ((section81 valueAt: 'denominacionLocal') = 'Montevideo 1').
 	self assert: ((section81 valueAt: 'direccion') = 'Colonia 87').

@@ -7,4 +7,4 @@ acceptSection: aFormSectionInstance
 
 	aFormSectionInstance grids do: [:each | each acceptVisitor: self].
 
-	aFormSectionInstance subSections do: [:each | each acceptVisitor: self].
+	aFormSectionInstance subSectionsDo: [:each | each acceptVisitor: self].

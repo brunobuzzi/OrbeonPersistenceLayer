@@ -14,8 +14,8 @@ testMainSectionsStructure
 	self assert: (section1 name = 'section-1').
 	self assert: (section2 name = 'section-14').
 
-	self assert: (section1 subSections size = 1).
-	self assert: (section2 subSections size = 1).
+	self assert: (section1 subSectionsSize = 1).
+	self assert: (section2 subSectionsSize = 1).
 
-	self assert: (section1 subSections last name = 'section-7').
-	self assert: (section2 subSections last name = 'section-24').
+	self assert: (section1 subSectionsLast name = 'section-7').
+	self assert: (section2 subSectionsLast name = 'section-24').

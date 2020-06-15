@@ -1,0 +1,4 @@
+Accessing
+sectionDefinitionsSize
+
+	^sectionDefinitions size

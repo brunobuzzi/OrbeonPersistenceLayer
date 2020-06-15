@@ -2,15 +2,15 @@ other
 testSectionStructureAndValues
 	| sectionsUser sections8 sectionsGrid grid |
 	"Main Sections"
-	sectionsUser := form sections select: [:each | each name = 'userInfoSection'].
-	sections8 := form sections select: [:each | each name = 'section-8'].
-	sectionsGrid := form sections select: [:each | each name = 'section-grid'].
+	sectionsUser := form sectionsSelect: [:each | each name = 'userInfoSection'].
+	sections8 := form sectionsSelect: [:each | each name = 'section-8'].
+	sectionsGrid := form sectionsSelect: [:each | each name = 'section-grid'].
 
 	self assert: sectionsUser notEmpty.
 	self assert: sections8 notEmpty.
 	self assert: sectionsGrid notEmpty.
 
-	(form sections select: [:each | each name = 'userInfoSection'])
+	(form sectionsSelect: [:each | each name = 'userInfoSection'])
 		do: [:sectionInst | 
 				self assert: (#('bruno' 'alberto') includes: (sectionInst valueAt: 'name')).
 				self assert: (#('buzzi' 'joya') includes: (sectionInst valueAt: 'surname')).
@@ -22,7 +22,7 @@ testSectionStructureAndValues
 			]. 
 	].
 
-	(form sections select: [:each | each name = 'section-8'])
+	(form sectionsSelect: [:each | each name = 'section-8'])
 		do: [:sectionInst | 
 				self assert: (#('888' '999') includes: (sectionInst valueAt: 'code')).
 		].

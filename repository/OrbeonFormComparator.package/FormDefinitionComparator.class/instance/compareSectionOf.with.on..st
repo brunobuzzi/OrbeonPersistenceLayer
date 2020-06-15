@@ -14,14 +14,14 @@ compareSectionOf: aSectionDefinitionOne with: aSectionDefinitionTwo on: anOrdere
 
 	"comparing the tree structure of the sections <aSectionDefinitionOne> and <aSectionDefinitionTwo>"
 	"also comparing subsection in <subSectionTwo> not present in <aSectionDefinitionTwo>"
-	aSectionDefinitionOne subSections do: [:each | | subSectionTwo |
+	aSectionDefinitionOne subSectionsDo: [:each | | subSectionTwo |
 		subSectionTwo := aSectionDefinitionTwo getSubSectionNamed: each name 
 									ifNone: [anOrderedCollection add: (SectionDoesNotExist form: aSectionDefinitionTwo formDefinition object: each). nil].
 
 		subSectionTwo ifNotNil: [self compareSectionOf: each with: subSectionTwo on: anOrderedCollection]]. "recursive CALL"
 
 	"comparing subsection in <aSectionDefinitionTwo> not present in <aSectionDefinitionOne>"
-	aSectionDefinitionTwo subSections do: [:each |
+	aSectionDefinitionTwo subSectionsDo: [:each |
 		aSectionDefinitionOne getSubSectionNamed: each name 
 										ifNone: [anOrderedCollection add: (SectionDoesNotExist form: aSectionDefinitionTwo formDefinition object: each)]].
 

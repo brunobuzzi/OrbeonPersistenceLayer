@@ -34,5 +34,7 @@
 		"removeGridDefinition:" : "brunobb 03/01/2018 09:24",
 		"removeSubSection:" : "brunobb 03/01/2018 09:24",
 		"sectionDefinitions" : "brunobb 03/01/2018 09:24",
-		"subSections" : "brunobb 03/01/2018 09:24",
-		"subSections:" : "brunobb 03/01/2018 09:24" } }
+		"subSectionsDetect:ifNone:" : "brunobb 06/15/2020 04:50",
+		"subSectionsDo:" : "brunobb 06/15/2020 04:44",
+		"subSectionsLast" : "brunobb 06/15/2020 04:53",
+		"subSectionsSize" : "brunobb 06/15/2020 04:53" } }

@@ -3,7 +3,7 @@ testFormFieldsInSection21
 	| section2 section21 |
 
 	section2 := form sectionDefinitions at: 'section-14'.
-	section21 := section2 subSections last.
+	section21 := section2 subSectionsLast.
 	"fields of this section only and fields in grids of this section - does NOT includes subsections"
 	self assert: (section21 getAllFieldDefinitions size = 5).
 

@@ -7,4 +7,4 @@ acceptSection: aFormSectionDefinition
 
 	aFormSectionDefinition gridDefinitions do: [:each | each acceptVisitor: self].
 
-	aFormSectionDefinition subSections do: [:each | each acceptVisitor: self].
+	aFormSectionDefinition subSectionsDo: [:each | each acceptVisitor: self].

@@ -16,7 +16,7 @@ testFormFieldsInSection3
 	self assert: ((section getFieldNamed: 'option') type = 'xf:boolean').
 
 	grid := section gridDefinitions at: 'grid-4'. 
-	subSection := section subSections last.
+	subSection := section subSectionsLast.
 
 	self assert: (subSection  name = 'section-4').
 	self assert: (grid name = 'grid-4').

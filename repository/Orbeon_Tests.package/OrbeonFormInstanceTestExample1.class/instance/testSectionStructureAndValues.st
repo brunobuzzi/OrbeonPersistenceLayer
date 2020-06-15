@@ -3,12 +3,12 @@ testSectionStructureAndValues
 	| section1 section14 section7 section24 grid10 grid19 |
 
 	"Main Sections"
-	self assert: ((form sections select: [:each | each name = 'section-1']) size = 1).
-	self assert: ((form sections select: [:each | each name = 'section-14']) size = 1).
+	self assert: ((form sectionsSelect: [:each | each name = 'section-1']) size = 1).
+	self assert: ((form sectionsSelect: [:each | each name = 'section-14']) size = 1).
 
 	"Main Sections - Fields"
-	section1 := form sections detect: [:each | each name = 'section-1'] ifNone: [self assert: false].
-	section14 := form sections detect: [:each | each name = 'section-14'] ifNone: [self assert: false].
+	section1 := form sectionsDetect: [:each | each name = 'section-1'] ifNone: [self assert: false].
+	section14 := form sectionsDetect: [:each | each name = 'section-14'] ifNone: [self assert: false].
 
 	self assert: ((section1 valueAt: 'name') = 'bruno').
 	self assert: ((section1 valueAt: 'surname') = 'buzzo').
@@ -24,7 +24,7 @@ testSectionStructureAndValues
 	self assert: ((section14 valueAt: 'type') = '1').
 
 	"SubSection 7 - Fields"
-	section7 := section1 subSections detect: [:each | each name = 'section-7'] ifNone: [self assert: false].
+	section7 := section1 subSectionsDetect: [:each | each name = 'section-7'] ifNone: [self assert: false].
 
 	self assert: ((section7 valueAt: 'control-8') = '').
 	self assert: ((section7 valueAt: 'mobile') = '09998').
@@ -35,7 +35,7 @@ testSectionStructureAndValues
 	self assert: ((grid10 getAllValuesFor: 'currency') includes: 122.5).
 
 	"SubSection 14 - Fields"
-	section24 := section14 subSections detect: [:each | each name = 'section-24'] ifNone: [self assert: false].
+	section24 := section14 subSectionsDetect: [:each | each name = 'section-24'] ifNone: [self assert: false].
 
 	self assert: ((section24 valueAt: 'formatedText') findString: 'this is a') ~= 0.
 

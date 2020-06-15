@@ -2,8 +2,8 @@ other
 testGridInSection11
 	| section1 section11 grid |
 
-	section1 := form sectionDefinitions at: 'section-1'.
-	section11 := section1 subSections last.
+	section1 := form getSectionNamed: 'section-1'.
+	section11 := section1 subSectionsLast.
 	grid := section11 getGridDefinitionNamed: 'grid-10'.
 	self assert: grid notNil.
 
