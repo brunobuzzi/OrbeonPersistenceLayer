@@ -11,6 +11,6 @@ setUp
 
 	form := application definitionNamed: 'library-composed-form2' ifNone: [self createFormStructureFor: 'library-composed-form2' in: 'ue' definitionTemplate: #form_library_composed_form2 title: 'Test Section Library Composed Forms' xPathVersion: xPathManager].
 
-	form "xmlString: OrbeonFormDefinitionTemplateFrom2017_2 form_library_composed_form2;"
+	form
 		title: 'Test Section Library Composed Forms';
 		processXMLDefinitionFor: xPathManager.
