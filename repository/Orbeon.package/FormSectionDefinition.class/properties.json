@@ -13,7 +13,8 @@
 		"subSections",
 		"iterationName",
 		"bind",
-		"libraryComponent" ],
+		"libraryComponent",
+		"libraryComponentReferences" ],
 	"name" : "FormSectionDefinition",
 	"pools" : [
 		 ],
