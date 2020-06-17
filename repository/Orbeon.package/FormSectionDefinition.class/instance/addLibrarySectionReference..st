@@ -5,3 +5,5 @@ addLibrarySectionReference: aFormLibraryComponentDefinition
 	libraryComponentReferences add: aFormLibraryComponentDefinition.
 
 	aFormLibraryComponentDefinition sectionDefinition: self.
+
+	self purgeRemovedLibraryComponentReferences.

@@ -4,5 +4,5 @@ purgeRemovedLibraryComponentReferences
 	This method purge those library sections"
 
 	(Array with: libraryComponentReferences) do: [:libComponent | 
-		libComponent isInRegistry ifFalse: [libraryComponent remove: libComponent].
+		libComponent isInRegistry ifFalse: [libraryComponentReferences remove: libComponent].
 	].

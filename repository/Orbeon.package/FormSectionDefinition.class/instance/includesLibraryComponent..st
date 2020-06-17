@@ -1,0 +1,4 @@
+library components
+includesLibraryComponent: formLibraryComponent
+
+	^libraryComponentReferences includes: formLibraryComponent
