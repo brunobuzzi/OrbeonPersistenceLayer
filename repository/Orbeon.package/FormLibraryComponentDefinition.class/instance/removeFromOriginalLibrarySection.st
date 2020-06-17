@@ -1,0 +1,4 @@
+other
+removeFromOriginalLibrarySection
+
+	sectionDefinition removeLibrarySectionReference: self
