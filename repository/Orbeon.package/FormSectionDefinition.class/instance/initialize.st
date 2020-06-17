@@ -7,3 +7,4 @@ initialize
 	gridDefinitions := Dictionary new.
 	isRepeatable := false.
 	subSections := OrderedCollection new.
+	libraryComponentReferences := OrderedCollection new.

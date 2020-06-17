@@ -1,8 +1,8 @@
 other
 registry
-	| application |
+	| app |
 
-	application := self getApplication.
-	application ifNil: [^nil].
+	app := self getApplication.
+	app ifNil: [^nil].
 
-	^application registryForFormNamed: self formName ifNone: [nil]
+	^app registryForFormNamed: self formName ifNone: [nil]

@@ -1,9 +1,9 @@
 process xml
 createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: xmlSection with: anOrbeonFormReader
 	"The receiver create a reference to a -Library Section- named <sectionName>"
-		| section componentNode httpStringReference publishedComponent appName referencedSectionName referencedSection |
+		| librarySection componentNode httpStringReference publishedComponent appName referencedSectionName referencedSection |
 
-	section := FormLibraryComponentDefinition newNamed: sectionName definition: self.
+	librarySection := FormLibraryComponentDefinition newNamed: sectionName definition: self.
 
 	componentNode := xmlSection descendantNodesDetect: [:e | 'component:*' match: e name].
 
@@ -12,7 +12,7 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 	appName := (httpStringReference subStrings: '/') at: 7 ifAbsent: [LibraryReferenceException signal: 'The reference to the application is missing. There is an error in the reference''s string format'].
 
 	publishedComponent := self getOrbeonApplicationClass formDefinitionNamed: 'library' in: appName.
-	section publishedComponent: publishedComponent.
+	librarySection publishedComponent: publishedComponent.
 
 	publishedComponent ifNil: [LibraryReferenceException signal: 'The referenced Published Form does NOT exist !'].
 
@@ -21,7 +21,6 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 
 	referencedSection getAllFieldDefinitions do: [:each | labels at: each name put: each label]. "set the labels of the referenced Section"
 
-	section sectionDefinition: referencedSection.
-	referencedSection libraryComponent: section. "causing issue #347"
+	referencedSection addLibrarySectionReference: librarySection.
 
-	^section
+	^librarySection

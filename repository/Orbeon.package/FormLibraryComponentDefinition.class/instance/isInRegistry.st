@@ -1,0 +1,4 @@
+other
+isInRegistry
+
+	^formDefinition isInRegistry
