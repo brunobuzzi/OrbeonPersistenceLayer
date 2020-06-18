@@ -1,4 +1,6 @@
 other
 removeFromOriginalLibrarySection
 
-	sectionDefinition removeLibrarySectionReference: self
+	sectionDefinition removeLibrarySectionReference: self.
+
+	formDefinition := nil.
