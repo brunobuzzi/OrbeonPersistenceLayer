@@ -3,5 +3,6 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 04/04/2020 14:21",
+		"testIssue347" : "brunobb 06/18/2020 11:58",
 		"testLibraryComponentIdentity" : "brunobb 06/17/2020 14:36",
 		"testSectionsStructure" : "brunobb 06/15/2020 06:49" } }

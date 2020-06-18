@@ -14,3 +14,6 @@ setUp
 	form
 		title: 'Test Section Library Composed Forms';
 		processXMLDefinitionFor: xPathManager.
+	"the sections are created from scratch again but using the same <OrbeonPublishedFormDefinition> (same oop) 
+	--> new <FormLibraryComponentDefinition> are stored in the current library section <FormSectionDefinition> so there are some unreachable <FormLibraryComponentDefinition> 
+	in <libraryComponentReferences> collection (it must be removed)"
