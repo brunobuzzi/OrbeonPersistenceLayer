@@ -6,3 +6,5 @@ acceptPublishedFormDefinition: anOrbeonPublishedFormDefinition
 	self checkAvailableFlagConsistencyFor: anOrbeonPublishedFormDefinition.
 
 	self checkDefinitionsNotNilFor: anOrbeonPublishedFormDefinition.
+
+	self checkUnreacheableLibrarySectionDefinitionsFor: anOrbeonPublishedFormDefinition.
