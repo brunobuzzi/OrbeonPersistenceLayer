@@ -5,3 +5,4 @@ initialize
 
 	label := ''.
 	tabIndex := FormTabIndex for: self withIndex: 0.
+	isRepeatable := false

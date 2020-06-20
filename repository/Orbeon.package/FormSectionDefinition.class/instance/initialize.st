@@ -5,6 +5,5 @@ initialize
 
 	fieldDefinitions := Dictionary new.
 	gridDefinitions := Dictionary new.
-	isRepeatable := false.
 	subSections := OrderedCollection new.
 	libraryComponentReferences := Set new.
