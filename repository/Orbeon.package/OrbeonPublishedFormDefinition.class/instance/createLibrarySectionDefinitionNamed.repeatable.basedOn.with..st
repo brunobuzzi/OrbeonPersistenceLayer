@@ -4,7 +4,7 @@ createLibrarySectionDefinitionNamed: sectionName repeatable: aBoolean basedOn: x
 		| librarySection componentNode httpStringReference publishedComponent appName referencedSectionName referencedSection |
 
 	librarySection := FormLibraryComponentDefinition newNamed: sectionName definition: self.
-
+	librarySection isRepeatable: (xmlSection includesAttribute: 'repeat'). "set if the library section is repeatable (issue #122)"
 	componentNode := xmlSection descendantNodesDetect: [:e | 'component:*' match: e name].
 
 	httpStringReference := componentNode namespaceScope prefixMappingAt: 'component'.
