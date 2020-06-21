@@ -4,4 +4,4 @@ removeFromMainDictionary: anOrbeonFormInstance
 	
 	self removeInstance: anOrbeonFormInstance.
 
-	^self deletedInstances at: anOrbeonFormInstance id put: anOrbeonFormInstance
+	^deletedInstances at: anOrbeonFormInstance id put: anOrbeonFormInstance
