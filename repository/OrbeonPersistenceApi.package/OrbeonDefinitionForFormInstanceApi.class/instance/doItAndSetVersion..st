@@ -1,5 +1,5 @@
 other
-doIt
+doItAndSetVersion: aBlock
 	"This service is called when a click is performed on the Orbeon Form Summary page (or go directly to edit/view page of a form). The Summary then open the Form Instance in it's corresponding form definition.
 	This service is used in combination of #getXmlOfFormInstanceWithId:form:app: to <get> the actual data of the form"
 	| application orbeonDefinition instance |
@@ -12,7 +12,7 @@ doIt
 
 	orbeonDefinition := instance definition.
 
-	restHandler requestContext response headerAt: 'orbeon-form-definition-version' put: orbeonDefinition version printString.
+	aBlock value: orbeonDefinition version printString.
 
 "	^self decodeFromUTF8: orbeonDefinition xmlString"
 

@@ -11,4 +11,4 @@ getDefinitionForFormInstanceWithId: id form: form app: app
 	apiOperation appName: app;
 		formName: form.
 
-	^apiOperation doIt
+	^apiOperation doItAndSetVersion: [:versionString | self requestContext response headerAt: 'orbeon-form-definition-version' put: versionString]

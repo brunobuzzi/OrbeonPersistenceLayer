@@ -1,5 +1,5 @@
 other
-doIt
+doItAndSetVersion: aBlock
 	"This method is called by Orbeon when a Form Definition (inside the Builder) is about to be Published.
 	This method answer the latest version of the form definition <formName> in application <app>.
 	Using the header <orbeon-form-definition-version> to set the version number.
@@ -13,7 +13,7 @@ doIt
 	"fix issue #340"
 	latestDefinition := application getDefinitionNamed: formName withVersion: headerVersion ifNone: [^restHandler noRouteFound: restHandler requestContext].
 
-	restHandler requestContext response headerAt: 'orbeon-form-definition-version' put: latestDefinition version printString.
+	aBlock value: latestDefinition version printString.
 
 	latestDefinition isDeleted ifTrue: [^restHandler noRouteFound: restHandler requestContext].
 
