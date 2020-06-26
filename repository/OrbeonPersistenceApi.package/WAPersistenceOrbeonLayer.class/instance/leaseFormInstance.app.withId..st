@@ -8,7 +8,7 @@ leaseFormInstance: formName app: app withId: id
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
 	timeoutValue := self requestContext request headerAt: 'timeout'.
-	apiOperation := OrbeonFormInstanceGetLeaseApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
+	apiOperation := OrbeonFormInstanceGetLeaseApi newWithXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 	apiOperation appName: app;
 		formName: formName.
 

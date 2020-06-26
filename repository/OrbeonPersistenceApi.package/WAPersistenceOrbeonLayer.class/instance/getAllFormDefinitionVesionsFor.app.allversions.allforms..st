@@ -7,7 +7,7 @@ getAllFormDefinitionVesionsFor: formName app: app allversions: allversionBoolean
 	<produces: 'application/xml'>
 	<path: '/form/{2}/{1}?all-versions={3}&all-forms={4}'>
 
-	apiOperation := OrbeonAllFormDefinitionVersionsApi newFor: self.
+	apiOperation := OrbeonAllFormDefinitionVersionsApi new.
 	apiOperation appName: app;
 		formName: formName;
 		allversions: allversionBoolean;

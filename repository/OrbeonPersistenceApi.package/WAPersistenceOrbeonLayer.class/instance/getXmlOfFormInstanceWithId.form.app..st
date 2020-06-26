@@ -8,7 +8,7 @@ getXmlOfFormInstanceWithId: id form: form app: app
 	<produces: 'application/xml'>
 	<path: '/crud/{3}/{2}/data/{1}/data.xml'>
 
-	apiOperation := OrbeonFormInstanceSourceApi newFor: self id: id.
+	apiOperation := OrbeonFormInstanceSourceApi newWithId: id.
 	apiOperation appName: app;
 		formName: form;
 		group: (self requestContext request headerAt: 'orbeon-group');

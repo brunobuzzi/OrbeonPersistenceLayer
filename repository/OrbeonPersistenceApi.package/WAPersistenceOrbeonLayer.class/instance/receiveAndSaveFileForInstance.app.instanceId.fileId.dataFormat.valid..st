@@ -6,7 +6,7 @@ receiveAndSaveFileForInstance: formName app: app instanceId: instanceId fileId: 
 	<put>
 	<path: '/crud/{2}/{1}/data/{3}/{4}?valid={6}&data-format-version={5}'>
 
-	apiOperation := OrbeonReceiveAndSaveInstanceFileApi newFor: self id: instanceId.
+	apiOperation := OrbeonReceiveAndSaveInstanceFileApi newWithId: instanceId.
 	apiOperation fileId: fileId;
 		fileContents: self requestContext request rawBody;
 		appName: app;

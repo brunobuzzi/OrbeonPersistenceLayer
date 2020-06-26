@@ -6,7 +6,7 @@ saveDraftFormInstance: formName app: app withId: id valid: aBoolean
 	<produces: 'application/xml'>
 	<path: '/crud/{2}/{1}/draft/{3}/data.xml?valid={4}'>
 
-	apiOperation := OrbeonFormSaveDraftApi newFor: self withXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
+	apiOperation := OrbeonFormSaveDraftApi newWithXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 	apiOperation appName: app;
 		formName: formName;
 		isValid: aBoolean;

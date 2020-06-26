@@ -9,7 +9,7 @@ getFormVersion: formName app: app
 	<produces: 'application/xml'>
 	<path: '/crud/{2}/{1}/form/form.xhtml'>
 
-	apiOperation := OrbeonPublishedFormDefinitionSourceApi newFor: self.
+	apiOperation := OrbeonPublishedFormDefinitionSourceApi new.
 	apiOperation appName: app;
 		formName: formName;
 		headerVersionValue: (self requestContext request headerAt: 'orbeon-form-definition-version').

@@ -5,4 +5,4 @@ getOrbeonFr
 	<produces: 'application/xml'>
 	<path: '/form'>
 
-	^(OrbeonFrPageApi newFor: self) doIt
+	^OrbeonFrPageApi new doIt

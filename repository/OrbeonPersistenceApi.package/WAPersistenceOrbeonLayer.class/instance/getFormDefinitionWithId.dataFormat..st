@@ -6,4 +6,4 @@ getFormDefinitionWithId: id dataFormat: dataFormatVersion
 	<produces: 'application/xml'>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml?data-format-version={2}'>
 
-	^(OrbeonFormDefinitionSourceApi newFor: self id: id) doIt
+	^(OrbeonFormDefinitionSourceApi newWithId: id) doIt

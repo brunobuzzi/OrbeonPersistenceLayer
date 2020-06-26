@@ -7,7 +7,7 @@ getDefinitionForFormInstanceWithId: id form: form app: app
 	<produces: 'application/xml'>
 	<path: '/crud/{3}/{2}/form/form.xhtml?document={1}'>
 
-	apiOperation := OrbeonDefinitionForFormInstanceApi newFor: self id: id.
+	apiOperation := OrbeonDefinitionForFormInstanceApi newWithId: id.
 	apiOperation appName: app;
 		formName: form.
 

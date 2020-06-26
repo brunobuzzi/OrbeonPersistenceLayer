@@ -8,7 +8,7 @@ getXmlOfFormDraftWithId: id form: form app: app
 	<produces: 'application/xml'>
 	<path: '/crud/{3}/{2}/draft/{1}/data.xml'>
 
-	apiOperation := OrbeonFormDraftSourceApi newFor: self id: id.
+	apiOperation := OrbeonFormDraftSourceApi newWithId: id.
 	apiOperation appName: app;
 		formName: form;
 		group: (self requestContext request headerAt: 'orbeon-group');

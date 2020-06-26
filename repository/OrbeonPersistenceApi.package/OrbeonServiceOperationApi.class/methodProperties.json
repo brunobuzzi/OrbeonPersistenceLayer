@@ -1,9 +1,13 @@
 {
 	"class" : {
+		"new" : "brunobb 06/26/2020 15:15",
 		"newFor:" : "brunobb 02/16/2018 11:44",
 		"newFor:id:" : "brunobb 02/16/2018 12:28",
 		"newFor:withXml:" : "brunobb 02/16/2018 11:44",
-		"newFor:withXml:id:" : "brunobb 02/15/2018 14:05" },
+		"newFor:withXml:id:" : "brunobb 02/15/2018 14:05",
+		"newWithId:" : "brunobb 06/26/2020 15:14",
+		"newWithXml:" : "brunobb 06/26/2020 15:19",
+		"newWithXml:id:" : "brunobb 06/26/2020 15:19" },
 	"instance" : {
 		"addDeferredProcessingFor:" : "brunobb 02/17/2018 09:10",
 		"appName" : "brunobb 02/16/2018 09:47",
@@ -29,6 +33,7 @@
 		"parseXmlString" : "brunobb 02/15/2018 13:05",
 		"restHandler:" : "brunobb 02/15/2018 14:00",
 		"seasideMimeDocument" : "brunobb 02/17/2018 09:10",
+		"setId:" : "brunobb 06/26/2020 15:14",
 		"signalNoApplicationException:" : "brunobb 02/16/2018 10:18",
 		"signalNoFormException" : "brunobb 02/16/2018 10:26",
 		"version" : "brunobb 02/15/2018 12:44",

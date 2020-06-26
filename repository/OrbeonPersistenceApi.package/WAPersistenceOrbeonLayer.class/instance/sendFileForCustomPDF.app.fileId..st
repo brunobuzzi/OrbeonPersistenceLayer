@@ -6,7 +6,7 @@ sendFileForCustomPDF: formName app: app fileId: fileId
 	<produces: 'application/octet-stream'>
 	<path: '/crud/{2}/{1}/form/{3}'>
 
-	apiOperation := OrbeonSendCustomPdfFileApi newFor: self.
+	apiOperation := OrbeonSendCustomPdfFileApi new.
 	apiOperation fileId: fileId;
 		appName: app;
 		formName: formName.

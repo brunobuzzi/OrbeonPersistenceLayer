@@ -5,7 +5,7 @@ deleteFormInstance: formName app: app withId: id
 	<delete>
 	<path: '/crud/{2}/{1}/data/{3}/data.xml'>
 
-	apiOperation := OrbeonFormInstanceDeleteApi newFor: self id: id.
+	apiOperation := OrbeonFormInstanceDeleteApi newWithId: id.
 	apiOperation appName: app;
 		formName: formName;
 		doIt.

@@ -6,7 +6,7 @@ receiveAndSaveFileForDraft: formName app: app draftId: draftId fileId: fileId va
 	<put>
 	<path: '/crud/{2}/{1}/draft/{3}/{4}?valid={5}'>
 
-	apiOperation := OrbeonReceiveAndSaveDraftFileApi newFor: self id: draftId.
+	apiOperation := OrbeonReceiveAndSaveDraftFileApi newWithId: draftId.
 	apiOperation fileId: fileId;
 		fileContents: self requestContext request rawBody;
 		appName: app;

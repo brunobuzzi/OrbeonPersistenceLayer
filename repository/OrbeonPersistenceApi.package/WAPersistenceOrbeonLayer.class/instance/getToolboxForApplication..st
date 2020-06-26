@@ -7,7 +7,7 @@ getToolboxForApplication: appName
 	<produces: 'application/xml'>
 	<path: '/custom/{1}/builder/toolbox'>
 
-	apiOperation := OrbeonGetToolboxApi newFor: self.
+	apiOperation := OrbeonGetToolboxApi new.
 	apiOperation appName: appName;
 		headerValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
 

@@ -6,7 +6,7 @@ sendFileForInstance: formName app: app instanceId: instanceId fileId: fileId
 	<produces: 'application/octet-stream'>
 	<path: '/crud/{2}/{1}/data/{3}/{4}'>
 
-	apiOperation := OrbeonSendFormInstanceFileApi newFor: self id: instanceId.
+	apiOperation := OrbeonSendFormInstanceFileApi newWithId: instanceId.
 	apiOperation fileId: fileId;
 		appName: app;
 		formName: formName.

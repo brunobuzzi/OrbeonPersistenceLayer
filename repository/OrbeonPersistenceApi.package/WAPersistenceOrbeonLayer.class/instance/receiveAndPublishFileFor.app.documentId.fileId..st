@@ -8,7 +8,7 @@ receiveAndPublishFileFor: formName app: app documentId: documentId fileId: fileI
 	<put>
 	<path: '/crud/{2}/{1}/form/{4}?document={3}'>
 
-	apiOperation := OrbeonReceiveAndPublishFileApi newFor: self id: documentId.
+	apiOperation := OrbeonReceiveAndPublishFileApi newWithId: documentId.
 	apiOperation fileId: fileId;
 		fileContents: self requestContext request rawBody;
 		appName: app;

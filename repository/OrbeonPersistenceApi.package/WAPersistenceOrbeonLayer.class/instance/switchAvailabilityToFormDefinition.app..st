@@ -5,7 +5,7 @@ switchAvailabilityToFormDefinition: formName app: app
 	<put>
 	<path: '/crud/{2}/{1}/form/form.xhtml'>
 
-	apiOperation := OrbeonSwitchAvailabilityApi newFor: self.
+	apiOperation := OrbeonSwitchAvailabilityApi new.
 	apiOperation appName: app;
 		formName: formName.
 

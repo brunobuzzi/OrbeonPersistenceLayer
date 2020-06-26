@@ -7,7 +7,7 @@ receiveAndSaveFileForDefinitionWithId: definitionId fileId: fileId valid: aBoole
 	<put>
 	<path: '/crud/orbeon/builder/data/{1}/{2}.bin?valid={3}'>
 
-	apiOperation := OrbeonReceiveAndSaveDefinitionFileApi newFor: self id: definitionId.
+	apiOperation := OrbeonReceiveAndSaveDefinitionFileApi newWithId: definitionId.
 	apiOperation fileId: fileId;
 		fileContents: self requestContext request rawBody.
 		

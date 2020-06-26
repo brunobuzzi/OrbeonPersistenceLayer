@@ -7,7 +7,7 @@ sendFileForDefinitionWithId: definitionId fileId: fileId
 	<produces: 'application/octet-stream'>
 	<path: '/crud/orbeon/builder/data/{1}/{2}'>
 
-	apiOperation := OrbeonSendFormDefinitionFileApi newFor: self id: definitionId.
+	apiOperation := OrbeonSendFormDefinitionFileApi newWithId: definitionId.
 	apiOperation fileId: fileId.
 
 	self requestContext response contentType: WAMimeType applicationOctetStream.
