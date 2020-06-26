@@ -23,6 +23,4 @@ searchInFormSummary: formName app: app
 					version: version;
 					setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
-	searchApi doIt.
-
-	^searchApi generateXmlAnswer
+	^searchApi doIt

@@ -1,5 +1,5 @@
 other
-doIt
+doItIfNotFound: aBlock
 	"The receiver publish the form named <formName> in application named <app> with id <id> title <title> description <description> and xml <xmlString>. 
 	The version of the form is in <headerVersion> - orbeon parameter.
 	* Calculate the version number & create <anOrbeonSavedFormDefinition> 
@@ -24,7 +24,7 @@ doIt
 
 	(headerVersion = 'next') ifTrue: [application addPublishedDefinition: publishedFormDefinition. ^self]. "is a new definition --> is added as published"
 
-	existingVersion := application definitionNamed: publishedFormDefinition formName version: version ifNone: [^restHandler noRouteFound: restHandler requestContext].
+	existingVersion := application definitionNamed: publishedFormDefinition formName version: version ifNone: [^aBlock value].
 	(self shouldCreateAnotherVersionFor: publishedFormDefinition)
 	ifFalse: ["the current published definition is updated"
 				existingVersion "get the last existing definition and discard <publishedFormDefinition>"

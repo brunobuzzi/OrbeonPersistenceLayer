@@ -14,4 +14,6 @@ getFormVersion: formName app: app
 		formName: formName;
 		headerVersionValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
 
-	^apiOperation doItAndSetVersion: [:versionString | self requestContext response headerAt: 'orbeon-form-definition-version' put: versionString]
+	^apiOperation 
+		doItAndSetVersion: [:versionString | self requestContext response headerAt: 'orbeon-form-definition-version' put: versionString]
+		ifNotFound: [self noRouteFound: self requestContext]

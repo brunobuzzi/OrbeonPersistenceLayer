@@ -11,4 +11,4 @@ getToolboxForApplication: appName
 	apiOperation appName: appName;
 		headerValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
 
-	^apiOperation doIt
+	^apiOperation doItIfNotFound: [self noRouteFound: self requestContext]
