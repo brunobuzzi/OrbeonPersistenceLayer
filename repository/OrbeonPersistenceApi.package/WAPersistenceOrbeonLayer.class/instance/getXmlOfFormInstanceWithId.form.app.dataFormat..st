@@ -14,4 +14,4 @@ getXmlOfFormInstanceWithId: id form: form app: app dataFormat: dataFormatVersion
 		group: (self requestContext request headerAt: 'orbeon-group');
 		username: (self requestContext request headerAt: 'orbeon-username').
 
-	^apiOperation doIt
+	^apiOperation doItAndInjectPermissions: [:permissionsString | self requestContext response headerAt: 'orbeon-operations' put: permissionsString]

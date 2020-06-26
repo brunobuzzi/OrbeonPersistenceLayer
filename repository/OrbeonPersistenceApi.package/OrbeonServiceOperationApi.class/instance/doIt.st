@@ -1,4 +1,4 @@
-other
+operations
 doIt
 
 	self subclassResponsibility

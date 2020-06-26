@@ -1,4 +1,4 @@
 operations
-doItIfRejected: aBlock
+doItAndInjectPermissions: aBlock
 
 	self subclassResponsibility
