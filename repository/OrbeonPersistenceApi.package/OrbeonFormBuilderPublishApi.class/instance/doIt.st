@@ -15,7 +15,8 @@ doIt
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: formName app: appName ifNone: [nil].
 	"is there a form definition with <formName> in application <appName> & the document_id <id> are different ??? 
 	--> if <true> --> creation NOT allowed"
-	(restHandler isCreationRejectedFor: latestSavedDefinition withId: id appName: self getApplicationName formName: self getFormName) 
+
+	(self isCreationRejectedFor: latestSavedDefinition)
 	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
 	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', formName,'] in application [', appName, ']'].
 
