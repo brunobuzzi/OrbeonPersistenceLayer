@@ -14,4 +14,4 @@ relinquishLeaseFormInstance: formName app: app withId: id
 
 	((app = 'orbeon') and: [formName = 'builder']) ifTrue: [^self requestContext response headerAt: 'timeout' put: 'Second-600']. "issue #189 & #190"
 
-	^apiOperation doIt
+	^apiOperation doItIfRejected: [:instance :xmlRejection | self rejectRelinquishLeaseFor: instance withXml: xmlRejection]

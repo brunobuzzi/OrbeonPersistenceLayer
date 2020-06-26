@@ -16,4 +16,4 @@ leaseFormInstance: formName app: app withId: id
 
 	timeoutValue ifNotNil: [apiOperation setTimeoutFromString: timeoutValue]. 
 
-	^apiOperation doIt
+	^apiOperation doItIfRejected: [:instance :xmlRejection | self rejectLeaseFor: instance withXml: xmlRejection]
