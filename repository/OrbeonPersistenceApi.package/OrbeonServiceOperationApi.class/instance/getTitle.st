@@ -1,4 +1,0 @@
-metadata
-getTitle
-
-	^formReader getTitle

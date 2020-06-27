@@ -8,10 +8,9 @@ createSavedDefinition
 
 	savedDefinition id: id;
 		version: version;
-		title: self getTitle;
-		description: self getDescription;
 		setXmlString: xmlString; "here the <OrbeonPublishedFormDefinition> is created and associate to the receiver <savedDefinition>"
 		updateLastModifiedTime;
+		setTitleAndDescription;
 		yourself.
 
 	savedDefinition storeInApplication. "anOrbeonApplication addSavedDefinition: savedDefinition"
