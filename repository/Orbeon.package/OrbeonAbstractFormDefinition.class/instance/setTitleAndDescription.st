@@ -1,0 +1,4 @@
+other
+setTitleAndDescription
+
+	self setTitleAndDescriptionWith: self newFormReader
