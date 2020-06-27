@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonInstanceSearchApiTest",
+	"name" : "OrbeonFileReceiveApiTest",
 	"pools" : [
 		 ],
-	"super" : "OrbeonSummaryApiTest",
+	"super" : "OrbeonFileOperationApiTest",
 	"type" : "normal" }

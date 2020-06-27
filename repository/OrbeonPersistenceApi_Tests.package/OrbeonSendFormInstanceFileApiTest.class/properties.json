@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "OrbeonInstanceSearchApiTest",
+	"name" : "OrbeonSendFormInstanceFileApiTest",
 	"pools" : [
 		 ],
-	"super" : "OrbeonSummaryApiTest",
+	"super" : "OrbeonFileSendApiTest",
 	"type" : "normal" }
