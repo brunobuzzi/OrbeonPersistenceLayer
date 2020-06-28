@@ -12,6 +12,8 @@ doIt
 
 	gsFile := GsFile open: (path, id, '-',fileId) mode: 'wb' onClient: false.
 
+	gsFile ifNil: [^OrbeonOSException signal: 'An error ocurred while writing to: [', (path, id, '-',fileId) ,']'].
+ 
 	gsFile
 		nextPutAll: fileContents;
 		flush;
