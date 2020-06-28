@@ -7,7 +7,7 @@ setUp
 	definition := self createFormDefinition.
 	formId := definition id.
 
-	apiOperation := OrbeonSendCustomPdfFileApi newWithId: formId.
+	apiOperation := OrbeonSendFormDefinitionFileApi newWithId: formId.
 	apiOperation fileId: fileId;
 		appName: 'migration';
 		formName: 'all-fields-types'.
