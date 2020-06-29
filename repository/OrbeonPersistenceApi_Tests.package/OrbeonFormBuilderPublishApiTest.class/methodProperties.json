@@ -2,7 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"newDefinitionToMove" : "brunobb 06/29/2020 13:27",
 		"setUp" : "brunobb 06/29/2020 11:42",
 		"testDoItIfNotFound_creationRejected" : "brunobb 06/29/2020 12:57",
+		"testDoItIfNotFound_moveForm" : "brunobb 06/29/2020 13:46",
 		"testDoItIfNotFound_newVersion" : "brunobb 06/29/2020 12:59",
+		"testDoItIfNotFound_shouldCreateAnotherVersion" : "brunobb 06/29/2020 13:47",
 		"testDoItIfNotFound_updateVersion" : "brunobb 06/29/2020 12:59" } }
