@@ -10,7 +10,4 @@ ifRequiredUpdateForm
 	ifTrue: [^self]. "no change has been made to application name and form name --> no update required"
 
 	"move the registry to the new location and set the form name and application as requiered"
-	currentIdDefinition registry
-		move: currentIdDefinition 
-		toApplication: appName	 
-		andForm: formName
+	currentIdDefinition moveToApplicationNamed: appName as: formName
