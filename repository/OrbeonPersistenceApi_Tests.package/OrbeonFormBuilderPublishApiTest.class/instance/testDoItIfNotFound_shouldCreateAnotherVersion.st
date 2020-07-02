@@ -1,7 +1,7 @@
 other
 testDoItIfNotFound_shouldCreateAnotherVersion
-	| latestSavedDefinition currentPublishedVersion |
- 
+	| latestSavedDefinition currentPublishedVersion newPublishedSameVersion match |
+
 	currentPublishedVersion := self getOrbeonApplicationClass formDefinitionNamed: apiOperation formName in: apiOperation appName.
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
 	apiOperation 
@@ -11,4 +11,16 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 
 	apiOperation doItIfNotFound: [self assert: false].
 
-	"the structre of this version has to be different from the current in order to create another version with the same number"
+	newPublishedSameVersion := self getOrbeonApplicationClass formDefinitionNamed: apiOperation formName in: apiOperation appName.
+
+	self deny: (currentPublishedVersion == newPublishedSameVersion).
+	self assert: (currentPublishedVersion version = newPublishedSameVersion version).
+	self assert: (currentPublishedVersion registry == newPublishedSameVersion registry).
+
+	match := false.
+	currentPublishedVersion registry currentVersionsDo: [:formDef | (formDef == newPublishedSameVersion) ifTrue: [match := true]].
+	self assert: match.
+
+	match := false.
+	currentPublishedVersion registry oldVersionsDo: [:formDef | (formDef == currentPublishedVersion) ifTrue: [match := true]].
+	self assert: match.
