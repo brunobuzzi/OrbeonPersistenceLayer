@@ -14,6 +14,6 @@ replaceCurrentDefinition: currentDefinition with: newDefinition
 	
 	[stream atEnd] whileFalse: [ | definition |
 		definition := stream next.
-		(definition version = currentDefinition version)  ifTrue: [oldVersions add: currentDefinition after: definition].
-		(definition version > currentDefinition version)  ifTrue: [oldVersions add: currentDefinition before: definition].
+		(definition version = currentDefinition version) ifTrue: [oldVersions add: currentDefinition after: definition].
+		(definition version > currentDefinition version) ifTrue: [oldVersions add: currentDefinition before: definition].
 	].

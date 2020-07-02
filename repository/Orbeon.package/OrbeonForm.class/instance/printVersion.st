@@ -1,0 +1,4 @@
+other
+printVersion
+
+	^version printString
