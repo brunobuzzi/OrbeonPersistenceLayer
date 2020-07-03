@@ -18,5 +18,4 @@ move: currentSavedFormDefinition toApplication: newAppName andForm: newFormName
 	oldVersions do: [:each | each application: newApplication; formName: newFormName].
 
 	"(aDictionary of collections) <savedDefinitions> we must only modify the forms with id equal to <currentSavedFormDefinition>"
-	(savedDefinitions at: currentSavedFormDefinition id ifAbsent: [OrbeonDefinitionNotFoundException signal: 'OrbeonFormSavedDefinition with id [', currentSavedFormDefinition id ,'] not found'])
-		do:[:eachDef | eachDef application: newApplication; formName: newFormName].
+	savedDefinitions do:[:eachDef | eachDef application: newApplication; formName: newFormName].

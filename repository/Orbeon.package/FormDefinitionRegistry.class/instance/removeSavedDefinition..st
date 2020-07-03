@@ -1,0 +1,4 @@
+saved definitions
+removeSavedDefinition: anOrbeonSavedFormDefinition
+
+	^savedDefinitions remove: anOrbeonSavedFormDefinition ifAbsent: [OrbeonDefinitionNotFoundException signal]
