@@ -5,4 +5,4 @@ getSavedDefinitionVersion: version ifNone: aBlock
 
 	savedDefinitions ifEmpty: [^aBlock value].
 
-	^savedDefinitions asArray first reverse detect: [:each | each version = version] ifNone: aBlock
+	^savedDefinitions reverse detect: [:each | each version = version] ifNone: aBlock

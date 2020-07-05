@@ -1,4 +1,4 @@
 Accessing
 getSavedDefinitions
 
-	^(savedDefinitions collect: [:each | each last]) asOrderedCollection
+	^OrderedCollection with: self getLastSavedDefinition
