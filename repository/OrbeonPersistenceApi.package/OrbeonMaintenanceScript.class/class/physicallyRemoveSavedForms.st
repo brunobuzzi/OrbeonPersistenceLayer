@@ -5,4 +5,4 @@ physicallyRemoveSavedForms
 	"Remove all FormInstanceDefinitions where <deleted> is 'Y' "
 
 	(self getOrbeonApplicationClass getAllSavedDefinitions select: [:each | each deleted = 'Y']) do: [:each | 
-		each getApplication removeInstanceDefinition: each]
+		each getApplication removeSavedDefinition: each]
