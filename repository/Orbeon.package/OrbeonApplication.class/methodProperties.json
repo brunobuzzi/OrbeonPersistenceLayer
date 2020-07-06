@@ -106,6 +106,7 @@
 		"getLatestSavedDefinition:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getNumberOfFormsDefinition" : "brunobb 05/21/2020 10:44",
 		"getNumberOfInstances" : "brunobb 05/21/2020 10:44",
+		"getSaveDefinitionsSizeFor:" : "brunobb 07/06/2020 14:11",
 		"getSavedDefinition:version:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getSavedDefinitionFor:withId:ifNone:" : "brunobb 05/21/2020 10:44",
 		"getSavedDefinitionWithId:ifNone:" : "brunobb 07/05/2020 14:07",
