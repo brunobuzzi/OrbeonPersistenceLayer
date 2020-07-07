@@ -1,4 +1,4 @@
-other
+registry
 registry
 	| app |
 

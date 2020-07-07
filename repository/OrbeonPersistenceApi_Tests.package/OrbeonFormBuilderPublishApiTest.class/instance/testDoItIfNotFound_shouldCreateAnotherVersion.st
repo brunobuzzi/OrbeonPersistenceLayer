@@ -18,9 +18,9 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 	self assert: (currentPublishedVersion registry == newPublishedSameVersion registry).
 
 	match := false.
-	currentPublishedVersion registry currentVersionsDo: [:formDef | (formDef == newPublishedSameVersion) ifTrue: [match := true]].
+	currentPublishedVersion currentVersionsDo: [:formDef | (formDef == newPublishedSameVersion) ifTrue: [match := true]].
 	self assert: match.
 
 	match := false.
-	currentPublishedVersion registry oldVersionsDo: [:formDef | (formDef == currentPublishedVersion) ifTrue: [match := true]].
+	currentPublishedVersion oldVersionsDo: [:formDef | (formDef == currentPublishedVersion) ifTrue: [match := true]].
 	self assert: match.
