@@ -4,10 +4,10 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 
 	currentPublishedVersion := self getOrbeonApplicationClass formDefinitionNamed: apiOperation formName in: apiOperation appName.
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
-	apiOperation 
-		xmlString: OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_simple_registration_shouldCreateAnotherVersion;
-		headerVersion: latestSavedDefinition printVersion;
-		id: latestSavedDefinition id.
+	apiOperation xmlString: OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_simple_registration_shouldCreateAnotherVersion.
+	latestSavedDefinition 
+	ifNil: [apiOperation headerVersion: latestSavedDefinition printVersion; id: latestSavedDefinition id] 
+	ifNotNil: [apiOperation headerVersion: '1']. 
 
 	apiOperation doItIfNotFound: [self assert: false].
 
