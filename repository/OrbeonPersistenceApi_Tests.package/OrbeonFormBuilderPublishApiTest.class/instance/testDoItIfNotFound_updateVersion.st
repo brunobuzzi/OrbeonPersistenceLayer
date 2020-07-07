@@ -4,8 +4,8 @@ testDoItIfNotFound_updateVersion
  
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
 	latestSavedDefinition 
-	ifNil: [apiOperation headerVersion: latestSavedDefinition version printString;id: latestSavedDefinition id] 
-	ifNotNil: [apiOperation headerVersion: '1'].
+	ifNil: [apiOperation headerVersion: '1'] 
+	ifNotNil: [apiOperation headerVersion: latestSavedDefinition version printString;id: latestSavedDefinition id].
 	
 	apiOperation doItIfNotFound: [self assert: false].
 
