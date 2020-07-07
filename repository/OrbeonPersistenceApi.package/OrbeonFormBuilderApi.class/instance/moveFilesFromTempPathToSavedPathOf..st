@@ -1,5 +1,5 @@
 other
-moveFromTempPathFileOf: anOrbeonFormDefinition
+moveFilesFromTempPathToSavedPathOf: anOrbeonFormDefinition
 	"The receiver move all files from temp path to the actual path of <anOrbeonFormDefinition>"
 	| filesToMove defaultFilePath currentFiles |
 
