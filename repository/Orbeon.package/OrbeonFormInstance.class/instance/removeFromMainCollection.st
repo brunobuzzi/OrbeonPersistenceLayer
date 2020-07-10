@@ -7,3 +7,5 @@ removeFromMainCollection
 	definition removeFromMainDictionary: self.
 
 	self removeFieldInstancesFromAllValuesOfAllForms.
+
+	definition := nil.
