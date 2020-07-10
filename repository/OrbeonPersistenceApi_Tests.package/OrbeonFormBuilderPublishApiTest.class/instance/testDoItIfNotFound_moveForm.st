@@ -7,7 +7,7 @@ testDoItIfNotFound_moveForm
 	(application registryForFormNamed: apiOperation formName) oldVersionsDo: [:definition | self assert: (definition formName = 'simple-registration')].
 
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [].
-	latestSavedDefinition ifNil: [apiOperation headerVersion: '1'] ifNotNil: [apiOperation headerVersion: latestSavedDefinition printVersion; id: latestSavedDefinition id]. 
+	latestSavedDefinition ifNil: [apiOperation headerVersion: 'next'] ifNotNil: [apiOperation headerVersion: latestSavedDefinition printVersion; id: latestSavedDefinition id]. 
 
 	apiOperation formName: 'simple-registration-2'.
 

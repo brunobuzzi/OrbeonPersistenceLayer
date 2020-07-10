@@ -2,4 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"setUp" : "brunobb 07/10/2020 10:15",
+		"testDoItIfNotFound" : "brunobb 07/10/2020 10:25" } }
