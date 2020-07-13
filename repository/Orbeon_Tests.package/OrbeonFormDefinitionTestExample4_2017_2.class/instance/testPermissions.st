@@ -1,8 +1,6 @@
 other
 testPermissions
 
-	self assert: (form permissions class == OrbeonPermissions).
-
 	self assert: (form hasCreatePermission: 'orbeon-role').
 	self assert: (form hasReadPermission: 'orbeon-role').
 	self assert: (form hasDeletePermission: 'orbeon-role').

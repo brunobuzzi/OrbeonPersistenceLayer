@@ -1,8 +1,6 @@
 other
 testPermissions
 
-	self assert: (form permissions class == OrbeonPermissions).
-
 	self assert: (form hasCreatePermission: 'orbeon-agesic-uaip-admin').
 	self assert: (form hasReadPermission: 'orbeon-agesic-uaip-admin').
 	self assert: (form hasUpdatePermission: 'orbeon-agesic-uaip-admin').
