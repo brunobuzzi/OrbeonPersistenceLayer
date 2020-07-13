@@ -8,20 +8,20 @@ getPermissionsForUser: user inGroup: group with: formDefinition
 
 	printStream := PrintStream on: String new.
 
-	((self hasUser: user createAccessUsing: formDefinition permissions) 
-	or: [self hasRole: group createAccessUsing: formDefinition permissions])
+	((formDefinition hasUserNamed: user createPermissionsOn: self) 
+	or: [formDefinition hasRoleNamed: group createPermissionsOn: self])
 		ifTrue: [printStream nextPutAll: 'create '].
 
-	((self hasUser: user readAccessUsing: formDefinition permissions) 
-	or: [self hasRole: group readAccessUsing: formDefinition permissions])
+	((formDefinition hasUserNamed: user readPermissionsOn: self) 
+	or: [formDefinition hasRoleNamed: group readPermissionsOn: self])
 		ifTrue: [printStream nextPutAll: 'read '].
 
-	((self hasUser: user updateAccessUsing: formDefinition permissions) 
-	or: [self hasRole: group updateAccessUsing: formDefinition permissions])
+	((formDefinition hasUserNamed: user updatePermissionsOn: self) 
+	or: [formDefinition hasRoleNamed: group updatePermissionsOn: self])
 		ifTrue: [printStream nextPutAll: 'update '].
 
-	((self hasUser: user deleteAccessUsing: formDefinition permissions) 
-	or: [self hasRole: group deleteAccessUsing: formDefinition permissions])
+	((self hasUserNamed: user deletePermissionsOn: self) 
+	or: [formDefinition hasRoleNamed: group deletePermissionsOn: self])
 		ifTrue: [printStream nextPutAll: 'delete '].
 
 	^printStream contents
