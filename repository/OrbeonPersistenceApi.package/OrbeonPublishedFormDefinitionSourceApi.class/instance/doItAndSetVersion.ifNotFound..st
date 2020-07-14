@@ -13,7 +13,7 @@ doItAndSetVersion: setVersionBlock ifNotFound: notFoundBlock
 	"fix issue #340"
 	latestDefinition := application getDefinitionNamed: formName withVersion: headerVersion ifNone: [^notFoundBlock value].
 
-	setVersionBlock value: latestDefinition version printString.
+	setVersionBlock value: latestDefinition printVersion.
 
 	latestDefinition isDeleted ifTrue: [^notFoundBlock value].
 
