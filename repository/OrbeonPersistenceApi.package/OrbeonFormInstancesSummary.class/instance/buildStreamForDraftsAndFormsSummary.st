@@ -11,7 +11,7 @@ buildStreamForDraftsAndFormsSummary
 	pageToShift := self pageTo - drafts size "+ 1".
 	(draftsShift >= pageToShift) ifTrue: [^self].
 
-	instances := (formDefinitionRegistry instancesSetOfVersion: version) "asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime]".
+	instances := (application instancesSetOf: definition formName version: version) "asSortedCollection: [:a :b | b modifiedTime <= a modifiedTime]".
 
 	"instancesCollection := self selectFormWithPermissions: instancesCollection."
 

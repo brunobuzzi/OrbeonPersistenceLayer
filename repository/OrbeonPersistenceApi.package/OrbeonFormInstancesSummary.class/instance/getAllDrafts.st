@@ -5,7 +5,7 @@ getAllDrafts
 
 	drafts := OrderedCollection new.
 
-	(self application getAllDefinitionsNamed: self formDefinition formName withVersion: version ifNone: [^#()]) 
+	(self application getAllDefinitionsNamed: definition formName withVersion: version ifNone: [^#()]) 
 		do: [:each | drafts addAll: (each getAllDraftsFor: user orGroup: group)].
 
 	^drafts

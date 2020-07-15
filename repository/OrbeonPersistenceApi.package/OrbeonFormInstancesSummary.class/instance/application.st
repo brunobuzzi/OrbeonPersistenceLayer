@@ -1,4 +1,4 @@
 other
 application
 
-	^formDefinitionRegistry orbeonApplication
+	^application

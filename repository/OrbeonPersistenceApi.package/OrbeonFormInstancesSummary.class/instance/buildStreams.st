@@ -1,7 +1,7 @@
 streams building
 buildStreams
 
-	invertedPermissions := self formDefinition getInvertedPermissions.
+	invertedPermissions := definition getInvertedPermissions.
 
 	self createQueryNodes.
 

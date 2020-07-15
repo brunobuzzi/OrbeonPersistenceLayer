@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"formDefinitionRegistry",
 		"version",
-		"invertedPermissions" ],
+		"invertedPermissions",
+		"application",
+		"definition" ],
 	"name" : "OrbeonFormInstancesSummary",
 	"pools" : [
 		 ],
