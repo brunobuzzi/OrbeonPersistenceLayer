@@ -4,7 +4,7 @@ addInstance: anOrbeonFormInstance
 
 	anOrbeonFormInstance definition: self.
 
-	self registry addForm: anOrbeonFormInstance. "<instancesSet> used to search with indexes"
+	registry addForm: anOrbeonFormInstance. "<instancesSet> used to search with indexes"
 
 	"<instances> used to direct access via <id>"
 	^instances at: anOrbeonFormInstance id put: anOrbeonFormInstance

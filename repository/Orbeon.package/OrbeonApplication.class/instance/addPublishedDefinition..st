@@ -2,6 +2,7 @@ published forms
 addPublishedDefinition: anOrbeonFormDefinition
 	"Add a new form definition <anOrbeonFormDefinition> to receiver's registry"
 
+	anOrbeonFormDefinition setRegistry: self.
 	(self hasRegistryFor: anOrbeonFormDefinition) "check if the registry already exist, if not it creates it"
 	ifFalse: [self createRegistryFor: anOrbeonFormDefinition].
 
