@@ -1,4 +1,4 @@
 other
 getAllDefinitions
 
-	^self registry getAllVersion
+	^self formDefinition getAllVersion
