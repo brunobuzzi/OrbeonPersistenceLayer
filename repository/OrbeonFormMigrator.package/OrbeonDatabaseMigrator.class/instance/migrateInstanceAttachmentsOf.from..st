@@ -11,7 +11,7 @@ migrateInstanceAttachmentsOf: anOrbeonFormDefinition from: timeStamp
 	../definitions/published"
 	| instances |
 
-	instances := (GsQuery fromString: 'each.modifiedTime >= timeStamp' on: (anOrbeonFormDefinition registry instancesSetOfVersion: anOrbeonFormDefinition version))
+	instances := (GsQuery fromString: 'each.modifiedTime >= timeStamp' on: (anOrbeonFormDefinition instancesSetOfVersion: anOrbeonFormDefinition version))
 						bind: 'timeStamp' to: timeStamp;
 						queryResult.
 	instances do:[:eachInstance |

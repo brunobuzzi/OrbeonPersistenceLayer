@@ -1,0 +1,4 @@
+registry query
+anyDefinitionIncludes: anOrbeonFormInstance
+
+	^registry anyDefinitionIncludes: anOrbeonFormInstance
