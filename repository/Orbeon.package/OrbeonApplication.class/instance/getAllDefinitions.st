@@ -5,6 +5,6 @@ getAllDefinitions
 	| all |
 
 	all := OrderedCollection new.
-	(definitionsRegistry select: [:each | each hasVersions]) do: [:each | all addAll: each getAllVersion].
+	(definitionsRegistry select: [:each | each hasVersions]) do: [:each | all addAll: each getAllVersions].
 
 	^all

@@ -3,7 +3,7 @@ getInstancesDayDistributionQuantityUsing: sortSelector from: startDate to: endDa
 	| distribution |
 
 	distribution := Dictionary new.
-	self getAllVersion do: [:each |  | definitionDistribution |
+	self getAllVersions do: [:each |  | definitionDistribution |
 		definitionDistribution := each getInstancesDayDistributionQuantityUsing: sortSelector from: startDate to: endDate satisfying: formConditionBlock onError: errorHandler.
 		definitionDistribution keysAndValuesDo: [:key : value |
 			(distribution includesKey: key) 

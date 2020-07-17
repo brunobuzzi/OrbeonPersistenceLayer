@@ -1,6 +1,6 @@
 published definition
 getFormName
 
-	self getAllVersion do: [:each | each formName ifNotNil: [:value | ^value]].
+	self getAllVersions do: [:each | each formName ifNotNil: [:value | ^value]].
 
 	^nil

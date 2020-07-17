@@ -5,6 +5,6 @@ getAllSearchFields
 
 	searchFields := Set new.
 
-	self getAllVersion do: [:each | searchFields addAll: each searchFields].
+	self getAllVersions do: [:each | searchFields addAll: each searchFields].
 
 	^searchFields

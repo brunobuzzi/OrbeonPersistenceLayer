@@ -3,7 +3,7 @@ getInstancesCreationDistributionByMonthFrom: startDate to: endDate satisfying: f
 	| distribution |
 
 	distribution := OrderPreservingDictionary new.
-	self getAllVersion do: [:each |  | definitionDistribution |
+	self getAllVersions do: [:each |  | definitionDistribution |
 		definitionDistribution := each getInstancesCreationDistributionByMonthFrom: startDate to: endDate satisfying: formConditionBlock onError: errorHandler.
 		definitionDistribution keysAndValuesDo: [:key : value |
 			(distribution includesKey: key) 

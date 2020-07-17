@@ -4,7 +4,7 @@ getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formCond
 
 	distribution := Dictionary new.
 
-	self getAllVersion do: [:each | | currentQuantity currentVersionName |
+	self getAllVersions do: [:each | | currentQuantity currentVersionName |
 		currentVersionName := each version printString.
 		(distribution includesKey: currentVersionName) ifFalse: [distribution at: currentVersionName put: 0].
 		currentQuantity := distribution at: currentVersionName.

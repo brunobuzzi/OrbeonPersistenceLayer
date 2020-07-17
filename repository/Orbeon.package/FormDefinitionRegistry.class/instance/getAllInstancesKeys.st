@@ -5,7 +5,7 @@ getAllInstancesKeys
 
 	allKeys := OrderedCollection new.
 
-	self getAllVersion do: [:formDefinition | 
+	self getAllVersions do: [:formDefinition | 
 		formDefinition instancesDo: [:formInstance | allKeys add: formInstance id]].
 
 	^allKeys
