@@ -1,5 +1,5 @@
 other
-getAllVersion
+getAllVersions
 	| allVersions |
 
 	allVersions := OrderedCollection new.

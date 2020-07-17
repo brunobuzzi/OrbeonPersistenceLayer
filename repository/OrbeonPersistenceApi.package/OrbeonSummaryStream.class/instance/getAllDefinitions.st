@@ -1,4 +1,4 @@
 other
 getAllDefinitions
 
-	^self formDefinition getAllVersion
+	^self formDefinition getAllVersions
