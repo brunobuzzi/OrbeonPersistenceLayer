@@ -1,4 +1,4 @@
 other
-definitionRegistryDo: aBlock
+definitionsRegistryDo: aBlock
 
 	definitionsRegistry do: aBlock
