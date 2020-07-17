@@ -6,4 +6,4 @@ initialize
 	applicationName := ''.
 
 	definitionsRegistry := RcKeyValueDictionary new.
-	clonesRegistry := Dictionary new.
+	clonedDefinitionsRegistry := Dictionary new.

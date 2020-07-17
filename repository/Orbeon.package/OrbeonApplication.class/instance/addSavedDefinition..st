@@ -1,9 +1,14 @@
 saved forms
-addSavedDefinition: anOrbeonFormInstanceDefinition
-	"Add a new saved definition <anOrbeonFormInstanceDefinition> to receiver's registry"
+addSavedDefinition: anOrbeonSavedFormDefinition
+	"Add a new saved definition <anOrbeonSavedFormDefinition> to receiver's registry"
+	| registry |
 
-	(self hasRegistryFor: anOrbeonFormInstanceDefinition) "check if the registry already exist, if not it creates it"
-	ifFalse: [self createRegistryFor: anOrbeonFormInstanceDefinition].
+	(self hasRegistryFor: anOrbeonSavedFormDefinition) "check if the registry already exist, if not it creates it"
+	ifFalse: [self createRegistryFor: anOrbeonSavedFormDefinition].
+
+	registry := self registryFor: anOrbeonSavedFormDefinition.
+ 
+	(registry isIdEqualTo: anOrbeonSavedFormDefinition id) ifFalse: [^self addToClonedRegistry: anOrbeonSavedFormDefinition].
 
 	"add the definition to the registry"
-	^(self registryFor: anOrbeonFormInstanceDefinition) addSavedDefinition: anOrbeonFormInstanceDefinition
+	^registry addSavedDefinition: anOrbeonSavedFormDefinition
