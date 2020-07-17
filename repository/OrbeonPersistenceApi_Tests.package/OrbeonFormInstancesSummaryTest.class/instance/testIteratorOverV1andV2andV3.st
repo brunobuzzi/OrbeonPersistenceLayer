@@ -41,7 +41,7 @@ testIteratorOverV1andV2andV3
 		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v2_name:surname: withValues: (Array with: each with: each) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV2.
 	].
 
-	self assert: (summary getAllVersion size = 2).
+	self assert: (summary getAllVersions size = 2).
 
 	"page size = 10 and 16 forms - version: 2"
 	self createSummaryVersion: 2 pageNumber: 1 pageSize: 10.
@@ -65,7 +65,7 @@ testIteratorOverV1andV2andV3
 		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v3_name:surname:number: withValues: (Array with: each with: each with: key printString) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV3.
 	].
 
-	self assert: (summary getAllVersion size = 3).
+	self assert: (summary getAllVersions size = 3).
 
 	"page size = 10 and 16 forms - version: 3"
 	self createSummaryVersion: 3 pageNumber: 1 pageSize: 10.
