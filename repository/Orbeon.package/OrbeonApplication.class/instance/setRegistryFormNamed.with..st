@@ -2,6 +2,6 @@ registry operations
 setRegistryFormNamed: formName with: aFormDefinitionRegistry
 	"The receiver set/put at <formName> the registry <aFormDefinitionRegistry>"
 
-	^definitionRegistry 
+	^definitionsRegistry 
 		at: formName 
 		put: aFormDefinitionRegistry

@@ -6,7 +6,7 @@
 		"UsersChartsAndDashboardRepository" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"definitionRegistry" ],
+		"definitionsRegistry" ],
 	"name" : "OrbeonApplication",
 	"pools" : [
 		 ],

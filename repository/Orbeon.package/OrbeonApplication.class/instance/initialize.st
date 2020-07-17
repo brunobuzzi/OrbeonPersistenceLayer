@@ -5,4 +5,4 @@ initialize
 
 	applicationName := ''.
 
-	definitionRegistry := RcKeyValueDictionary new. "aDictionary of Collections (each Collection with OrbeonFormDefinition objects)"
+	definitionsRegistry := RcKeyValueDictionary new. "aDictionary of Collections (each Collection with OrbeonFormDefinition objects)"

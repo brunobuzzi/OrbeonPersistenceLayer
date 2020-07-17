@@ -7,7 +7,7 @@ getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formCond
 	orderedQuantity := OrderPreservingDictionary new.
 	total := 0.
 
-	definitionRegistry keysAndValuesDo: [:formName :registry | 
+	definitionsRegistry keysAndValuesDo: [:formName :registry | 
 		distribution at: formName put: (registry getInstancesDistributionQuantityFrom: startDate to: endDate satisfying: formConditionBlock)].
 
 	distribution "asSortedCollection reverse" do: [:each | | key |

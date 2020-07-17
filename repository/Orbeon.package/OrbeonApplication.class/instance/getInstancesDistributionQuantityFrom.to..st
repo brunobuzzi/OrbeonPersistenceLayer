@@ -6,7 +6,7 @@ getInstancesDistributionQuantityFrom: startDate to: endDate
 	distribution := Dictionary new.
 	orderedQuantity := OrderPreservingDictionary new.
 
-	definitionRegistry keysAndValuesDo: [:formName :registry | | registryDistribution total |
+	definitionsRegistry keysAndValuesDo: [:formName :registry | | registryDistribution total |
 		registryDistribution := registry getInstancesDistributionQuantityFrom: startDate to: endDate."answer a dictionary key->value"
 		total := registryDistribution inject: 0 into: [:sum :each | sum + each].
 		distribution at: formName put: total].

@@ -1,4 +1,4 @@
 other
 definitionRegistryKeysAndValuesDo: aBlock
 
-	definitionRegistry keysAndValuesDo: aBlock
+	definitionsRegistry keysAndValuesDo: aBlock

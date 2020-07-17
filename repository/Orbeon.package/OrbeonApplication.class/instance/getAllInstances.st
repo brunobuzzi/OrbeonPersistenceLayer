@@ -5,6 +5,6 @@ getAllInstances
 	| all |
 
 	all := OrderedCollection new.
-	definitionRegistry do: [:each | all addAll: each getAllInstances].
+	definitionsRegistry do: [:each | all addAll: each getAllInstances].
 
 	^all

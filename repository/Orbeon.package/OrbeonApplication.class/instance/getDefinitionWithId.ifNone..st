@@ -5,6 +5,6 @@ getDefinitionWithId: stringId ifNone: aBlock
 	2- Use the registry the get the form definition"
 	| registry |
 
-	registry := definitionRegistry detect: [:eachReg | (eachReg getDefinitionWithId: stringId ifNone: [nil]) notNil] ifNone: [^aBlock value].
+	registry := definitionsRegistry detect: [:eachReg | (eachReg getDefinitionWithId: stringId ifNone: [nil]) notNil] ifNone: [^aBlock value].
 
 	^registry getDefinitionWithId: stringId ifNone: aBlock

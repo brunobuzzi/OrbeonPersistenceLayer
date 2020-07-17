@@ -5,7 +5,7 @@ getNumberOfInstances
 
 	total := 0.
 
-	definitionRegistry keysAndValuesDo: [:formName :registry | 
+	definitionsRegistry keysAndValuesDo: [:formName :registry | 
 		total := total + registry getAllInstancesSize].
 
 	^total

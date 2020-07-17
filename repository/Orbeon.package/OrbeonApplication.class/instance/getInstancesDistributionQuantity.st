@@ -7,7 +7,7 @@ getInstancesDistributionQuantity
 	orderedQuantity := OrderPreservingDictionary new.
 	total := 0.
 
-	definitionRegistry keysAndValuesDo: [:formName :registry | 
+	definitionsRegistry keysAndValuesDo: [:formName :registry | 
 		distribution at: formName put: registry getAllInstancesSize].
 
 	distribution asSortedCollection reverse do: [:each | | key |
