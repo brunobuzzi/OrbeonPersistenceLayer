@@ -1,9 +1,9 @@
 {
 	"class" : {
-		"newFor:id:" : "brunobb 07/05/2020 14:04" },
+		"newFor:id:" : "bruno 07/17/2020 13:09" },
 	"instance" : {
 		"acceptVisitor:" : "brunobb 07/05/2020 14:03",
-		"addCurrentVersion:" : "brunobb 07/05/2020 14:03",
+		"addCurrentVersion:" : "bruno 07/17/2020 13:10",
 		"addForm:" : "brunobb 07/05/2020 14:03",
 		"addSavedDefinition:" : "brunobb 07/16/2020 12:18",
 		"allVersionsDo:" : "brunobb 07/05/2020 14:03",
@@ -89,4 +89,5 @@
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 07/05/2020 14:03",
 		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 07/05/2020 14:03",
 		"savedDefinitionsDo:" : "brunobb 07/05/2020 14:03",
-		"savedDefinitionsSize" : "brunobb 07/06/2020 14:10" } }
+		"savedDefinitionsSize" : "brunobb 07/06/2020 14:10",
+		"setApplication:id:" : "bruno 07/17/2020 13:09" } }

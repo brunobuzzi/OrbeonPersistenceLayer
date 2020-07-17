@@ -1,7 +1,6 @@
 other
 newFor: anOrbeonApplication id: formId
 
-	^super new initialize
-		orbeonApplication: anOrbeonApplication;
-		id: formId;
+	^self new initialize
+		setApplication: anOrbeonApplication id: formId;
 		yourself

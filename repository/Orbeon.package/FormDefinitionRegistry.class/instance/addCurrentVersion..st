@@ -5,6 +5,7 @@ addCurrentVersion: newFormDefinition
 	If exist then move the current version to <oldVersion> collection and set <newFormDefinition> as the current version in <currentVersions> collection"
 	| oldVersion |
 
+	newFormDefinition setRegistry: self. 
 	oldVersion := self getDefinitionWithSameVersionAs: newFormDefinition.
 	"there is no registered definition with the same version as <newFormDefinition>"
 	oldVersion ifNil: [^currentVersions add: newFormDefinition]. 
