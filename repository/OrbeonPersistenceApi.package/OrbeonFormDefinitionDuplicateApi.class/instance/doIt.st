@@ -1,6 +1,6 @@
 other
 doIt
-	| savedDefinition application |
+	| savedDefinition |
 
 	savedDefinition := OrbeonSavedFormDefinition new.
 
@@ -10,10 +10,8 @@ doIt
 		version: 1; "when a form is duplicate it always start at version 1"
 		updateLastModifiedTime.
 
-	application := savedDefinition application.
-
 	savedDefinition setXmlString: savedDefinition xmlString. "create the associated <OrbeonPublishedFormDefinition>"
 
-	application addSavedDefinition: savedDefinition.
+	savedDefinition storeInApplication.
 
 	^savedDefinition xmlString

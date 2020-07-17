@@ -11,7 +11,7 @@ createDefinition: formName version: version withXML: xmlString in: anOrbeonAppli
 	"an instance of <OrbeonPublishedFormDefinition> is created here"
 	savedDefinition setXmlString: xmlString. 
 
-	anOrbeonApplication addSavedDefinition: savedDefinition.
+	savedDefinition storeInApplication.
 
 	savedDefinition definition 
 		publish; 
