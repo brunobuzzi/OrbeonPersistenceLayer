@@ -7,12 +7,7 @@ doIt
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: self getFormName app: self getApplicationName ifNone: [nil].
 	version := (self getOrbeonApplicationClass getDefinitionWithId: id ifNone: [nil]) ifNil: [1] ifNotNil: [:def | def version].
 
-	"is there a form definition with <formName> in application <appName> & the document_id <id> are different ??? 
-	--> if <true> --> creation NOT allowed"
-
-	(self isCreationRejectedFor: latestSavedDefinition)
-	ifFalse: [self ifRequiredUpdateForm] "if the <formName> or <appName> has been changed"
-	ifTrue: [^AlreadyExistApplicationOrFormNameException signal: 'Not allowed to save [', self getFormName,'] in application [', self getApplicationName, ']'].
+	self ifRequiredUpdateForm. "if the <formName> or <appName> has been changed"
 
 	savedFormDefinition := self createSavedDefinition. "here the OrbeonFormDefinition is created and associate to the receiver <savedFormDefinition>"
 

@@ -1,4 +1,4 @@
-other
+publish
 storeInApplication
 
 	^application addSavedDefinition: self
