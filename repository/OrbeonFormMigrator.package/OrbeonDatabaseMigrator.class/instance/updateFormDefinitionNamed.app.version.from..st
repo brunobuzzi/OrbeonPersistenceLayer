@@ -14,13 +14,13 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 	newDefinition := savedDefinition definition.
 
 	currentDefinition 
-		ifNil: [application addSavedDefinition: newDefinition definition.
-				application addPublishedDefinition: newDefinition]
+		ifNil: [newDefinition definition storeInApplication.
+				newDefinition storeInApplication]
 		ifNotNil: [
 			comparator := (FormDefinitionComparator formOne: currentDefinition formTwo: newDefinition) compare; yourself.
 			shouldCreateAnotherVersion := comparator shouldCreateAnotherVersion.
 			shouldCreateAnotherVersion "is a different form"
-				ifTrue: [application addPublishedDefinition: newDefinition] 
+				ifTrue: [newDefinition storeInApplication] 
 				ifFalse: [ | dbDefnition dbArray |
 					dbDefnition := self execute: (sqlReader sqlGetFormDefinition: form version: (Integer fromString: version) of: app after: stringTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.

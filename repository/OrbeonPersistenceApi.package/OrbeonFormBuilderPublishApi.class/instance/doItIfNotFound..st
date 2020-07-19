@@ -22,7 +22,7 @@ doItIfNotFound: aBlock
 
 	publishedFormDefinition := self createPublishedDefinition.
 
-	(headerVersion = 'next') ifTrue: [application addPublishedDefinition: publishedFormDefinition. ^self]. "is a new definition --> is added as published"
+	(headerVersion = 'next') ifTrue: [publishedFormDefinition storeInApplication. ^self]. "is a new definition --> is added as published"
 
 	existingVersion := application definitionNamed: publishedFormDefinition formName version: version ifNone: [^aBlock value].
 	(self shouldCreateAnotherVersionFor: publishedFormDefinition)

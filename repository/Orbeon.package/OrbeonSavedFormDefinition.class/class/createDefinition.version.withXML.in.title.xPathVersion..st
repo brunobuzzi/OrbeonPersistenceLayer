@@ -17,6 +17,6 @@ createDefinition: formName version: version withXML: xmlString in: anOrbeonAppli
 		publish; 
 		processXMLDefinitionFor: anOrbeonXmlPath.
 
-	anOrbeonApplication addPublishedDefinition: savedDefinition definition.
+	savedDefinition definition storeInApplication.
 
 	^savedDefinition definition

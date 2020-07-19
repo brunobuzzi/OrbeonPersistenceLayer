@@ -2,7 +2,7 @@ db migration api
 migrateFormDefinitionNamed: aString version: version in: applicationName
 	"The receiver migrate (from relational database to GemStone) the form definition named <aString> with version <version>.
 	An OrbeonFormDefinition will be create inside OrbeonApplication <application>"
-	| definition instanceDefinition dbString app |
+	| definition savedDefinition dbString app |
 
 	definition := self importFormDefinitionNamed: aString version: version in: applicationName.
 	definition setMetadata.
@@ -10,13 +10,13 @@ migrateFormDefinitionNamed: aString version: version in: applicationName
 	"it could be a form definition with version = 2, but NO form instance definition with version 2 (it was never save after being published) --> we get the last"
 	dbString isEmpty ifTrue: [dbString := self getDBStringForInstanceDefinitionWithId: definition id].
 
-	instanceDefinition := self generateFormInstanceDefinition: aString app: applicationName from: dbString.
-	instanceDefinition setMetadata.
-	definition definition: instanceDefinition.
-	instanceDefinition definition: definition.
+	savedDefinition := self generateFormInstanceDefinition: aString app: applicationName from: dbString.
+	savedDefinition setMetadata.
+	definition definition: savedDefinition.
+	savedDefinition definition: definition.
 	app := self getOrbeonApplicationClass applicationNamed: applicationName.
-	app addSavedDefinition: instanceDefinition.
-	app addPublishedDefinition: definition.
+	savedDefinition storeInApplication.
+	definition storeInApplication.
 
 	self importAllFormInstancesOf: definition. "import data <OrbeonFormInstance> filtered by <definition> version"
 
