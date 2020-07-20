@@ -1,4 +1,4 @@
-saved forms
+registry cloned definitions
 addToClonedRegistry: anOrbeonSavedFormDefinition
 
 	(clonedDefinitionsRegistry includesKey: anOrbeonSavedFormDefinition id)
