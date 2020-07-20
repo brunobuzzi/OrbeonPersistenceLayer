@@ -3,4 +3,6 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 07/03/2020 12:21",
-		"testDoIt" : "brunobb 07/06/2020 14:25" } }
+		"testDoIt" : "brunobb 07/06/2020 14:25",
+		"testIfRequiredUpdateForm" : "bruno 07/20/2020 13:34",
+		"testIssue359" : "bruno 07/20/2020 13:40" } }
