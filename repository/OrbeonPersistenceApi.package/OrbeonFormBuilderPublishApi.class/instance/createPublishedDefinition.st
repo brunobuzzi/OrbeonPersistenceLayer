@@ -3,7 +3,7 @@ createPublishedDefinition
 	"The receiver create a new definition <anOrbeonFormDefinition> named <formName> in application <anOrbeonApplication> with id <id>"
 	| orbeonSavedDefinition orbeonDefinition |
 
-	orbeonSavedDefinition := self createSavedDefinition.
+	orbeonSavedDefinition := self createAndStoreSavedDefinitionOnApplication.
 
 	orbeonDefinition := orbeonSavedDefinition definition. "get the <OrbeonPublishedFormDefinition>"
 

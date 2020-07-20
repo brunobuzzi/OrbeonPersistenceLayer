@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createSavedDefinition" : "brunobb 06/27/2020 09:14",
+		"createAndStoreSavedDefinitionOnApplication" : "bruno 07/20/2020 12:49",
 		"ifRequiredUpdateForm" : "brunobb 06/29/2020 13:15",
 		"initialize" : "brunobb 02/15/2018 13:03",
 		"isCreationRejectedFor:" : "brunobb 06/26/2020 13:55",

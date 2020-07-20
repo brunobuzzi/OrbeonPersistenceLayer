@@ -9,7 +9,7 @@ doIt
 
 	self ifRequiredUpdateForm. "if the <formName> or <appName> has been changed"
 
-	savedFormDefinition := self createSavedDefinition. "here the OrbeonFormDefinition is created and associate to the receiver <savedFormDefinition>"
+	savedFormDefinition := self createAndStoreSavedDefinitionOnApplication. "here the OrbeonFormDefinition is created and associate to the receiver <savedFormDefinition>"
 
 	self moveFilesFromTempPathToSavedPathOf: savedFormDefinition. "move attachments if it is the case -issue #37-"
 

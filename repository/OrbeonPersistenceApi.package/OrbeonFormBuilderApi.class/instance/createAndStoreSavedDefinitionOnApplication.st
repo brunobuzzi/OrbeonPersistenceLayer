@@ -1,5 +1,5 @@
 other
-createSavedDefinition
+createAndStoreSavedDefinitionOnApplication
 	"The receiver creates <anOrbeonSavedFormDefinition> named <formName> in the <OrbeonApplication> named <appName> with version number <version> with id <id> with title <title> with description <description> from XML string <xmlString>.
 	In the process it create & associate the <anOrbeonSavedFormDefinition> with <anOrbeonPublishedFormDefinition>"
 	| savedDefinition |
