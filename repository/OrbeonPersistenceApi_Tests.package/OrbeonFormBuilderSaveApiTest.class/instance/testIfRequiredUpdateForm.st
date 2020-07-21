@@ -9,3 +9,6 @@ testIfRequiredUpdateForm
 	currentSize := application getSaveDefinitionsSizeFor: apiOperation formName.
 
 	apiOperation doIt.
+
+	apiOperation appName: 'ue-test';
+		formName: 'simple-registration'
