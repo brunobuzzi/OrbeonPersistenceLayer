@@ -1,4 +1,4 @@
-permissions
+other
 isGroupNameEqualTo: aString
 
 	^groupname = aString

@@ -1,4 +1,4 @@
-permissions
+other
 isUserNameEqualTo: aString
 
 	^username = aString
