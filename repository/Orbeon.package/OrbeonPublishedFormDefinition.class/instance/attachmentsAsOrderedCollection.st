@@ -1,0 +1,4 @@
+Accessing
+attachmentsAsOrderedCollection
+
+	^OrderedCollection withAll: attachments

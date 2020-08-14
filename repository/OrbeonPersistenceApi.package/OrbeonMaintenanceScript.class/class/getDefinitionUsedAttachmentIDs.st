@@ -11,14 +11,14 @@ getDefinitionUsedAttachmentIDs
 			registry currentVersionsDo: [:eachDef | 
 				allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
 					ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
-															put: (OrderedCollection withAll: eachDef attachments)]
-					ifPresent: [:collection | collection addAll: eachDef attachments].
+															put: eachDef attachmentsAsOrderedCollection]
+					ifPresent: [:collection | collection addAll: eachDef attachmentsAsOrderedCollection].
 			].
 			registry oldVersionsDo: [:eachDef | 
 				allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
 					ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachDef formName) 
-															put: (OrderedCollection withAll: eachDef attachments)]
-					ifPresent: [:collection | collection addAll: eachDef attachments].
+															put: eachDef attachmentsAsOrderedCollection]
+					ifPresent: [:collection | collection addAll: eachDef attachmentsAsOrderedCollection].
 			].
 		].
 	].

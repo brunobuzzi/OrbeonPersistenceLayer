@@ -11,8 +11,8 @@ getInstanceDefinitionUsedAttachmentIDs
 			registry savedDefinitionsDo: [:eachInstDef | 
 				allAttachmentIds at: (eachInstDef getApplicationName, '.', eachInstDef formName) 
 					ifAbsent: [allAttachmentIds at: (eachApp applicationName, '.', eachInstDef formName) 
-															put: (OrderedCollection withAll: eachInstDef attachments)]
-					ifPresent: [:collection | collection addAll: eachInstDef attachments].
+															put: (OrderedCollection withAll: eachInstDef attachmentsAsOrderedCollection)]
+					ifPresent: [:collection | collection addAll: eachInstDef attachmentsAsOrderedCollection].
 			].
 		].
 	].

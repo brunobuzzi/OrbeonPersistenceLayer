@@ -10,7 +10,7 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 	../definitions/saved
 	../definitions/published"
 
-	anOrbeonFormDefinition attachments do: [:orbeonFileName | | savedPath publishedPath |
+	anOrbeonFormDefinition attachmentsDo: [:orbeonFileName | | savedPath publishedPath |
 			savedPath := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
 			publishedPath := self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName. 
 
