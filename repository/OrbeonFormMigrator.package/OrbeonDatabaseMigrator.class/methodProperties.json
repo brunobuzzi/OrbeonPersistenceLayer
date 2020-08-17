@@ -38,7 +38,6 @@
 		"migrateInstanceAttachmentsOf:from:" : "brunobb 07/16/2020 14:06",
 		"migrateInstancesOf:version:from:" : "brunobb 03/24/2020 14:06",
 		"setDatabaseIP:user:password:" : "brunobb 03/16/2020 13:37",
-		"sqlReader" : "brunobb 03/16/2020 13:34",
 		"sqlReader:" : "brunobb 03/16/2020 13:34",
 		"updateFormDefinitionNamed:app:version:" : "brunobb 03/20/2020 16:09",
 		"updateFormDefinitionNamed:app:version:from:" : "bruno 07/19/2020 14:36" } }
