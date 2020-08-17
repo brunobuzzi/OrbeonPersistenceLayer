@@ -3,5 +3,6 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormDefinitionDuplicateApi newWithId: UUID new asString.
-	apiOperation appName: 'ue'.
+	self createFormDefinition.
+
+	apiOperation := OrbeonFormDefinitionDuplicateApi newWithXml: OrbeonFormDefinitionTemplateUpTo2017_1 form_test_2 id: UUID new asString.

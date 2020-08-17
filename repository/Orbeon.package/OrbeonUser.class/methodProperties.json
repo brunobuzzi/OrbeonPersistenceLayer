@@ -1,7 +1,6 @@
 {
 	"class" : {
 		"addAdminUser" : "BrunoBB 02/04/2016 10:11",
-		"allRols" : "BrunoBB 12/20/2015 11:23",
 		"cache" : "BrunoBB 12/20/2015 11:23",
 		"cache:" : "BrunoBB 12/20/2015 11:23",
 		"getExistingOrNewUserNamed:" : "BrunoBB 06/29/2016 07:34",
@@ -42,6 +41,5 @@
 		"password:" : "BrunoBB 12/20/2015 11:47",
 		"removeFromCache" : "BrunoBB 12/20/2015 11:46",
 		"removeRol:" : "BrunoBB 12/20/2015 11:23",
-		"rols" : "BrunoBB 12/20/2015 11:23",
-		"rols:" : "BrunoBB 12/20/2015 11:23",
+		"rolsDo:" : "brunobb 08/17/2020 10:48",
 		"username" : "BrunoBB 07/03/2016 08:56" } }

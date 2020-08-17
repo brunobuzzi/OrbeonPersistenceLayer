@@ -1,7 +1,7 @@
 other
 testAttachments
 
-	self assert: form customAttachment equals: '9428f017fea4876d39f15cea48ea78b5e2bb822b.bin'.
+	self assert: (form customAttachmentIsEqualTo: '9428f017fea4876d39f15cea48ea78b5e2bb822b.bin').
 
 	self assert: (form attachmentsAt: 'image1') fileId equals: '1d7b2864a55661c99f577e0506c55d3c6f0a915d.bin'.
 	self assert: (form attachmentsAt: 'image1') class equals: OrbeonFileName.

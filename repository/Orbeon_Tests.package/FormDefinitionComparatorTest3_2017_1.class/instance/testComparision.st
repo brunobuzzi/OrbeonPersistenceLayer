@@ -1,11 +1,11 @@
 other
 testComparision
-	| differences |
+	| comparator |
 
-	differences := (formOne compareWith: formTwo) comparisionResult.
+	comparator := formOne compareWith: formTwo.
 
-	self assert: (differences size = 3).
+	self assert: (comparator differencesSize = 3).
 
-	self assert: ((differences select: [:each | each isFieldDoesNotExist]) size = 2).
+	self assert: ((comparator differencesSelect: [:each | each isFieldDoesNotExist]) size = 2).
 
-	self assert: ((differences select: [:each | each isGridDoesNotExist]) size = 1).
+	self assert: ((comparator differencesSelect: [:each | each isGridDoesNotExist]) size = 1).

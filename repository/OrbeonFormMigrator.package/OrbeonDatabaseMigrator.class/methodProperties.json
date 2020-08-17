@@ -31,7 +31,7 @@
 		"initialize" : "brunobb 03/16/2020 13:49",
 		"migrateAll" : "brunobb 03/18/2020 16:19",
 		"migrateDefinitionAttachmentsOf:" : "brunobb 08/14/2020 10:32",
-		"migrateDefinitionCustomAttachmentOf:" : "brunobb 03/17/2020 05:58",
+		"migrateDefinitionCustomAttachmentOf:" : "brunobb 08/17/2020 11:11",
 		"migrateFormDefinitionNamed:in:" : "brunobb 03/17/2020 05:49",
 		"migrateFormDefinitionNamed:version:in:" : "bruno 07/19/2020 14:35",
 		"migrateInstanceAttachmentsOf:" : "brunobb 06/11/2020 14:34",

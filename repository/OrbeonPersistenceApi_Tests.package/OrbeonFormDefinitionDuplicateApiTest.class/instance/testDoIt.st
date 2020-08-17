@@ -1,5 +1,4 @@
 other
 testDoIt
 
-
-	apiOperation xmlString: ''.
+	apiOperation doIt.

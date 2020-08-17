@@ -1,0 +1,4 @@
+other
+differencesSize
+
+	^comparisionResult size
