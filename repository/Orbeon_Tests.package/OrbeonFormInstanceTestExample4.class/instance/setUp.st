@@ -1,6 +1,6 @@
 other
 setUp
-	| definition application |
+	| definition |
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure.].

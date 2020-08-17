@@ -1,6 +1,6 @@
 other
 setUp
-	| application xPathManager |
+	| xPathManager |
 
 	xPathManager := self getOrbeonXmlXpathUpto2017_1.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon'.

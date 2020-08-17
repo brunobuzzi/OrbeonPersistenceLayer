@@ -1,6 +1,8 @@
 other
 setUp
 
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+
 	form := OrbeonPublishedFormDefinition newNamed: 'test-section-interation-name' inAppNamed: 'agesic'.
 	form xmlString: OrbeonFormDefinitionTemplateUpTo2017_1 formDefinition_custom_iteration;
 		id: self defaultFormId;

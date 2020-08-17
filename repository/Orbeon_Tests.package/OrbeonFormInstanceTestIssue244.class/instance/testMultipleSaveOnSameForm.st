@@ -1,8 +1,7 @@
 other
 testMultipleSaveOnSameForm
-	| application formDefinition |
+	| formDefinition |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue-test'.
 	formDefinition := application definitionNamed: 'issue-243' ifNone: [self assert: false].
 
 	form := (OrbeonFormInstance newFor: formDefinition withId: UUID new asString)

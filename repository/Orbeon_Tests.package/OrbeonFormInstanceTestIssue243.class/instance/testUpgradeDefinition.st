@@ -1,8 +1,7 @@
 other
 testUpgradeDefinition
-	| application form_v1 |
+	| form_v1 |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue-test'.
 	formDefinition_v1 := application definitionNamed: 'issue-243' ifNone: [self assert: false].
 
 	form_v1 := (OrbeonFormInstance newFor: formDefinition_v1 withId: UUID new asString)

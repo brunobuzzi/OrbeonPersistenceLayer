@@ -1,6 +1,6 @@
 other
 setUp
-	| application xPathManager |
+	| xPathManager |
 
 	super setUp.
 
@@ -8,7 +8,7 @@ setUp
 
 	xPathManager := self getOrbeonXmlXpathFrom2017_2.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
-	"application unregisterDefinitionNamed: 'charts-forms'."
+
 	form := application definitionNamed: 'charts-forms' ifNone: [self createFormStructureFor: 'charts-forms' in: 'charts' definitionTemplate: #formDefinition_chartForm title: 'Charts Form' xPathVersion: xPathManager].
 
 	form processXMLDefinitionFor: xPathManager

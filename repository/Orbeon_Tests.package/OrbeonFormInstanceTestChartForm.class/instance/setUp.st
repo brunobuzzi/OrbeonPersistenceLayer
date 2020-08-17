@@ -1,6 +1,6 @@
 other
 setUp
-	| definition application |
+	| definition |
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
 	definition := self getOrCreateFormDefinition.

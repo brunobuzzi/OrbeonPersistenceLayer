@@ -6,8 +6,6 @@ setUp
 		title: 'Test';
 		processXMLDefinitionFor: self getOrbeonXmlXpathUpto2017_1."
 
-	| anOrbeonApplication |
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
-
-	form := OrbeonSavedFormDefinition createDefinition: 'test' with: #form_imageAnnotation in: anOrbeonApplication title: 'Test' xPathVersion: self getOrbeonXmlXpathUpto2017_1
+	form := OrbeonSavedFormDefinition createDefinition: 'test' with: #form_imageAnnotation in: application title: 'Test' xPathVersion: self getOrbeonXmlXpathUpto2017_1

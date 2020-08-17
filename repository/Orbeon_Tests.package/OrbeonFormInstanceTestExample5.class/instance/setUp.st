@@ -1,6 +1,6 @@
 other
 setUp
-	| definition application |
+	| definition |
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'test-section-interation-name' ifNone: [self createFormStructure.].

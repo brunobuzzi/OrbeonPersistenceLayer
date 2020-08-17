@@ -1,6 +1,6 @@
 other
 setUp
-	| definition application xPathManager |
+	| definition xPathManager |
 
 	xPathManager := self getOrbeonXmlXpathUpto2017_1.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.

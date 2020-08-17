@@ -1,6 +1,6 @@
 other
 setUp
-	| application xPathManager |
+	| xPathManager |
 
 	super setUp.
 

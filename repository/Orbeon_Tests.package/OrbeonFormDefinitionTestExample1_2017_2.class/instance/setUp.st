@@ -1,6 +1,6 @@
 other
 setUp
-	| application xPathManager |
+	| xPathManager |
 
 	xPathManager := self getOrbeonXmlXpathFrom2017_2.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'test'.

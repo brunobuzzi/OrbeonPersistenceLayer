@@ -1,7 +1,7 @@
 other
 getOrCreateFormDefinition
-	| application |
+	| anOrbeonApplication |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
+	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
 
-	^application definitionNamed: 'charts-forms' ifNone: [self createFormDefinition].
+	^anOrbeonApplication definitionNamed: 'charts-forms' ifNone: [self createFormDefinition].

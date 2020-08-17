@@ -4,6 +4,6 @@
 	"instance" : {
 		"createFormStructure_v1" : "brunobb 11/19/2019 03:03",
 		"createFormStructure_v1_1" : "brunobb 11/19/2019 03:03",
-		"setUp" : "brunobb 11/19/2019 03:02",
-		"tearDown" : "brunobb 11/19/2019 04:25",
-		"testUpgradeDefinition" : "brunobb 11/19/2019 05:06" } }
+		"setUp" : "brunobb 08/17/2020 14:59",
+		"tearDown" : "brunobb 08/17/2020 15:00",
+		"testUpgradeDefinition" : "brunobb 08/17/2020 15:00" } }

@@ -1,8 +1,6 @@
 other
 testIssue347
-	| application form2 allLibrarySections |
-
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
+	| form2 allLibrarySections |
 
 	form2 := application definitionNamed: 'library-composed-form' 
 									ifNone: [self createFormStructureFor: 'library-composed-form' in: 'ue' definitionTemplate: #form_library_composed_form title: 'Test Section Library Composed Forms' xPathVersion: self getOrbeonXmlXpathFrom2017_2].
