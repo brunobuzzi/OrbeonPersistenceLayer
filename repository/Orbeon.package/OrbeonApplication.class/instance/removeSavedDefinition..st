@@ -1,4 +1,4 @@
-other
+saved forms
 removeSavedDefinition: anOrbeonSavedFormDefinition
 	"The receiver remove the form definition <anOrbeonSavedFormDefinition> from the registry"
 

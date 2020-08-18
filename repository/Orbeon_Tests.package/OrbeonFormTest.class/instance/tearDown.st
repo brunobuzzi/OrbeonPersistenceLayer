@@ -1,4 +1,6 @@
 other
 tearDown
 
-	form := nil
+	super tearDown.
+
+	application removeFromCache
