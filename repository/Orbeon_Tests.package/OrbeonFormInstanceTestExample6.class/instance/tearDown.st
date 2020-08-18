@@ -1,4 +1,7 @@
 other
 tearDown
 
-	form := nil
+	application unregisterDefinitionNamed: 'library'.
+	application unregisterDefinitionNamed: 'library-composed-form'.
+	(self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon') unregisterDefinitionNamed: 'library'.
+	(self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon') removeFromCache.
