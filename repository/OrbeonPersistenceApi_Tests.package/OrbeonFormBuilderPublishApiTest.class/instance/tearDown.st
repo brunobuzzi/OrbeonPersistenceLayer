@@ -3,6 +3,7 @@ tearDown
 
 	super tearDown.
 
+	apiOperation application unregisterDefinitionNamed: 'simple-registration'.
+	apiOperation application unregisterDefinitionNamed: 'simple-registration-2'.
 
-	"apiOperation appName: 'st';
-		formName: 'simple-registration'."
+	apiOperation application removeFromCache.
