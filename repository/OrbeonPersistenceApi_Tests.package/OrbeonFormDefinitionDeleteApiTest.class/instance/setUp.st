@@ -4,4 +4,4 @@ setUp
 	super setUp.
 
 	apiOperation := OrbeonFormDefinitionDeleteApi newWithId: ''.
-	apiOperation appName: 'ue'.
+	apiOperation appName: 'agesic'.

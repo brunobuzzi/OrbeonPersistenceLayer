@@ -3,4 +3,5 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 07/07/2020 11:54",
-		"testDoIt" : "brunobb 07/07/2020 12:10" } }
+		"tearDown" : "brunobb 08/20/2020 14:13",
+		"testDoIt" : "brunobb 08/20/2020 14:19" } }
