@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 07/03/2020 12:21",
-		"testDoIt" : "brunobb 07/06/2020 14:25",
+		"tearDown" : "brunobb 08/20/2020 12:01",
+		"testDoIt" : "brunobb 08/20/2020 12:03",
 		"testIfRequiredUpdateForm" : "bruno 07/21/2020 15:06",
-		"testIssue359" : "bruno 07/20/2020 13:40" } }
+		"testIssue359" : "brunobb 08/20/2020 12:06" } }

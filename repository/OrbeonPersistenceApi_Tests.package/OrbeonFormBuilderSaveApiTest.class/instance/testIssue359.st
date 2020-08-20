@@ -3,6 +3,8 @@ testIssue359
 	"Test save form with same appName and formName but different id"
 	| application currentSize newId xmlString |
  
+	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: apiOperation appName.
+
 	apiOperation doIt.
 
 	newId := UUID new asString.

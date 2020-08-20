@@ -1,6 +1,8 @@
 other
 testDoIt
 	| latestSavedDefinition application currentSize |
+
+	apiOperation doIt.
  
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
 	apiOperation id: latestSavedDefinition id.
