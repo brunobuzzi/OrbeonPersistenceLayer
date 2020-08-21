@@ -2,7 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createLeaseXmlInfoForBruno" : "brunobb 08/21/2020 13:22",
-		"createLeaseXmlInfoForJohn" : "brunobb 08/21/2020 13:22",
-		"setUp" : "brunobb 08/21/2020 13:23",
+		"setUp" : "brunobb 08/21/2020 13:34",
 		"testDoItLeaseAcceptedAndRejected" : "brunobb 08/21/2020 13:29" } }
