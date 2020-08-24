@@ -4,5 +4,7 @@
 	"instance" : {
 		"allforms:" : "brunobb 07/04/2019 03:43",
 		"allversions:" : "brunobb 02/16/2018 13:20",
-		"doIt" : "brunobb 07/15/2020 11:35",
-		"generateXmlNodeForFormBuilderVersionList:with:" : "brunobb 02/16/2018 13:23" } }
+		"doIt" : "brunobb 08/24/2020 14:10",
+		"generateXmlNodeForFormBuilderVersionList:with:" : "brunobb 02/16/2018 13:23",
+		"generateXmlWithAllFormDefinitionsIn:" : "brunobb 08/24/2020 14:09",
+		"generateXmlWithLatestFormDefinitionVersionIn:" : "brunobb 08/24/2020 14:16" } }
