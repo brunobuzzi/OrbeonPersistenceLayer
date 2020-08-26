@@ -9,7 +9,8 @@ testDoIt
 	self assert: xmlResultString equals: '<form/>'.
 
 	formDefinition := self createFormStructure.
-	stringTS := formDefinition createdTime asOrbeonDateTimeString.
+
+	stringTS := formDefinition modifiedTime asOrbeonDateTimeString.
 
 	xmlResultString := apiOperation doIt.
 
