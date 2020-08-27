@@ -12,7 +12,10 @@ getFormVersion: formName app: app
 	apiOperation := OrbeonPublishedFormDefinitionSourceApi new.
 	apiOperation appName: app;
 		formName: formName;
-		headerVersionValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
+		headerVersionValue: (self requestContext request headerAt: 'orbeon-form-definition-version');
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation 
 		doItAndSetVersion: [:versionString | self requestContext response headerAt: 'orbeon-form-definition-version' put: versionString]

@@ -10,7 +10,10 @@ relinquishLeaseFormInstance: formName app: app withId: id
 	timeoutValue := self requestContext request headerAt: 'Timeout'.
 	apiOperation := OrbeonFormInstanceRelinquishLeaseApi newWithXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 	apiOperation appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	((app = 'orbeon') and: [formName = 'builder']) ifTrue: [^self requestContext response headerAt: 'timeout' put: 'Second-600']. "issue #189 & #190"
 

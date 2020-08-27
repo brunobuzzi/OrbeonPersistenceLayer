@@ -9,6 +9,9 @@ receiveAndSaveFileForDefinitionWithId: definitionId fileId: fileId valid: aBoole
 
 	apiOperation := OrbeonReceiveAndSaveDefinitionFileApi newWithId: definitionId.
 	apiOperation fileId: fileId;
-		fileContents: self requestContext request rawBody.
+		fileContents: self requestContext request rawBody;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 		
 	^apiOperation doIt

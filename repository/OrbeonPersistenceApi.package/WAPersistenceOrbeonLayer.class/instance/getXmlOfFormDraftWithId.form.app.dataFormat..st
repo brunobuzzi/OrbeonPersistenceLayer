@@ -12,6 +12,7 @@ getXmlOfFormDraftWithId: id form: form app: app dataFormat: dataFormatVersion
 	apiOperation appName: app;
 		formName: form;
 		group: (self requestContext request headerAt: 'orbeon-group');
-		username: (self requestContext request headerAt: 'orbeon-username').
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doItAndInjectPermissions: [:permissionsString | self requestContext response headerAt: 'orbeon-operations' put: permissionsString]

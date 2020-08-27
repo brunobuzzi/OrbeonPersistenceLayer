@@ -9,6 +9,9 @@ getDefinitionForFormInstanceWithId: id form: form app: app
 
 	apiOperation := OrbeonDefinitionForFormInstanceApi newWithId: id.
 	apiOperation appName: app;
-		formName: form.
+		formName: form;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doItAndSetVersion: [:versionString | self requestContext response headerAt: 'orbeon-form-definition-version' put: versionString]

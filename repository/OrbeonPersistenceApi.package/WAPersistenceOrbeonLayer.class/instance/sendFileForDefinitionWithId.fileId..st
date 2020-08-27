@@ -8,7 +8,11 @@ sendFileForDefinitionWithId: definitionId fileId: fileId
 	<path: '/crud/orbeon/builder/data/{1}/{2}'>
 
 	apiOperation := OrbeonSendFormDefinitionFileApi newWithId: definitionId.
-	apiOperation fileId: fileId.
+	apiOperation 
+		fileId: fileId;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	self requestContext response contentType: WAMimeType applicationOctetStream.
 

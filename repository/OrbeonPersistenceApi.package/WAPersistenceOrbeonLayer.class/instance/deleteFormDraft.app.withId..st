@@ -7,7 +7,10 @@ deleteFormDraft: formName app: app withId: id
 
 	apiOperation := OrbeonFormDraftDeleteApi newWithId: id.
 	apiOperation appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	apiOperation doIt.
 

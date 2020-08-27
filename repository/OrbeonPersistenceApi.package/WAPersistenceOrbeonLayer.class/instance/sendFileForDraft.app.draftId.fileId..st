@@ -7,9 +7,13 @@ sendFileForDraft: formName app: app draftId: draftId fileId: fileId
 	<path: '/crud/{2}/{1}/draft/{3}/{4}'>
 
 	apiOperation := OrbeonSendFormDraftFileApi newWithId: draftId.
-	apiOperation fileId: fileId;
+	apiOperation 
+		fileId: fileId;
 		appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	self requestContext response contentType: WAMimeType applicationOctetStream.
 

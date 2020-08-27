@@ -1,4 +1,4 @@
-other
+Updating
 doItAndInjectPermissions: aBlock
 	"This service is called when a click is performed on the Orbeon Form Summary page.
 	The Summary then should open the Form Instance (view/edit mode ) in the corresponding form definition (template).
@@ -7,7 +7,7 @@ doItAndInjectPermissions: aBlock
 
 	instance := self getInstance.
 
-	permissions := instance getPermissionsForUser: username inGroup: group with: instance definition.
+	permissions := instance getPermissionsForUser: user inGroup: group with: instance definition.
 	
 	aBlock value: permissions.
 

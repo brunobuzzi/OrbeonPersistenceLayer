@@ -6,4 +6,8 @@ getFormDefinitionWithId: id dataFormat: dataFormatVersion
 	<produces: 'application/xml'>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml?data-format-version={2}'>
 
-	^(OrbeonFormDefinitionSourceApi newWithId: id) doIt
+	^(OrbeonFormDefinitionSourceApi newWithId: id) 
+			group: (self requestContext request headerAt: 'orbeon-group');
+			user: (self requestContext request headerAt: 'orbeon-username');
+			setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials');
+			doIt

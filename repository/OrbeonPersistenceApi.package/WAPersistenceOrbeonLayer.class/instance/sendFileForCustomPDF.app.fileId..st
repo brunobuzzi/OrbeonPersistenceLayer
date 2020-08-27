@@ -7,9 +7,13 @@ sendFileForCustomPDF: formName app: app fileId: fileId
 	<path: '/crud/{2}/{1}/form/{3}'>
 
 	apiOperation := OrbeonSendCustomPdfFileApi new.
-	apiOperation fileId: fileId;
+	apiOperation 
+		fileId: fileId;
 		appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	self requestContext response contentType: WAMimeType applicationOctetStream.
 

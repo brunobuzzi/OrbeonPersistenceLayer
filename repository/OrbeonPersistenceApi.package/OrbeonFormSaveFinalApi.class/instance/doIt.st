@@ -16,9 +16,9 @@ doIt
 		draft: 'N';
 		definition: definition;
 		version: version;
-		username: username; "BUG - creator set only one time"
+		username: user; "BUG - creator set only one time"
 		modifiedUser: modifiedUser;
-		groupname: groupname;
+		groupname: group;
 		isValid: isValid;
 		updateLastModifiedTime.
 

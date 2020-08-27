@@ -9,6 +9,9 @@ getToolboxForApplication: appName
 
 	apiOperation := OrbeonGetToolboxApi new.
 	apiOperation appName: appName;
-		headerValue: (self requestContext request headerAt: 'orbeon-form-definition-version').
+		headerValue: (self requestContext request headerAt: 'orbeon-form-definition-version');
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doItIfNotFound: [self noRouteFound: self requestContext]

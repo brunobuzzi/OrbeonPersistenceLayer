@@ -7,6 +7,9 @@ switchAvailabilityToFormDefinition: formName app: app
 
 	apiOperation := OrbeonSwitchAvailabilityApi new.
 	apiOperation appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doIt

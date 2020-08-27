@@ -10,6 +10,9 @@ getAllFormDefinitionVesionsFor: formName app: app allversions: allversionBoolean
 	apiOperation := OrbeonAllFormDefinitionVersionsApi new.
 	apiOperation appName: app;
 		formName: formName;
-		allversions: allversionBoolean.
+		allversions: allversionBoolean;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doIt

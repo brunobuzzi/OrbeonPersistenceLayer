@@ -9,7 +9,10 @@ sendFileForInstance: formName app: app instanceId: instanceId fileId: fileId
 	apiOperation := OrbeonSendFormInstanceFileApi newWithId: instanceId.
 	apiOperation fileId: fileId;
 		appName: app;
-		formName: formName.
+		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	self requestContext response contentType: WAMimeType applicationOctetStream.
 

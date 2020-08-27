@@ -15,8 +15,8 @@ doIt
 		definition: definition;
 		draft: 'Y';
 		version: version;
-		username: username; "BUG - creator set only one time"
+		username: user; "BUG - creator set only one time"
 		modifiedUser: modifiedUser;
-		groupname: groupname;
+		groupname: group;
 		updateLastModifiedTime;
 		processXMLSections. "create the sections and fields but NOT the FormFieldValues"

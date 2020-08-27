@@ -12,6 +12,9 @@ duplicateFormInstance: formName app: app newId: id
 	apiOperation := OrbeonFormInstanceDuplicateApi newWithXml: (self requestContext request bodyDecodeUsing: 'utf-8') id: id.
 	apiOperation appName: app;
 		formName: formName;
-		version: versionNumber.
+		version: versionNumber;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
 	^apiOperation doIt

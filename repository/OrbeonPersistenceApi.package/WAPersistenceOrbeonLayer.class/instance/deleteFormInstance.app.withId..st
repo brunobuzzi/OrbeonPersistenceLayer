@@ -8,6 +8,9 @@ deleteFormInstance: formName app: app withId: id
 	apiOperation := OrbeonFormInstanceDeleteApi newWithId: id.
 	apiOperation appName: app;
 		formName: formName;
+		group: (self requestContext request headerAt: 'orbeon-group');
+		user: (self requestContext request headerAt: 'orbeon-username');
+		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials');
 		doIt.
 
 	^apiOperation

@@ -20,7 +20,7 @@ searchInFormSummary: formName app: app
 					setPageNumber;
 					group: (self requestContext request headerAt: 'orbeon-group');
 					user: (self requestContext request headerAt: 'orbeon-username');
-					version: version;
-					setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
+					setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials');
+					version: version.
 
 	^searchApi doIt
