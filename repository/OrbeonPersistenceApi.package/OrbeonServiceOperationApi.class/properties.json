@@ -11,7 +11,10 @@
 		"version",
 		"xmlDocument",
 		"appName",
-		"formName" ],
+		"formName",
+		"user",
+		"group",
+		"userCredentials" ],
 	"name" : "OrbeonServiceOperationApi",
 	"pools" : [
 		 ],

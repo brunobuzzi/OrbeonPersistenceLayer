@@ -7,11 +7,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"user",
-		"group",
 		"pageNumber",
 		"pageSize",
-		"userCredentials",
 		"summary" ],
 	"name" : "OrbeonSummaryApi",
 	"pools" : [
