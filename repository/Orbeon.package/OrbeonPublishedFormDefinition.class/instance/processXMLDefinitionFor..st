@@ -5,7 +5,7 @@ processXMLDefinitionFor: anOrbeonXmlPath
 
 	reader := self newFormReaderFor: anOrbeonXmlPath.
 	labels := reader formFieldsLabels. 						"answer: aDictionary (key: field name value: label)"
-	permissions := reader getPermissions. 						"answer: aDictionary (key: permission name value: collection of rols)"
+	permissions := reader getPermissions. 						"answer: anOrbeonPermissions"
 	fieldsType := reader getFieldTypes.						"answer: aDictionary (key: field name value: field type)"
 	self isSingleton: reader isSingleton.
 
