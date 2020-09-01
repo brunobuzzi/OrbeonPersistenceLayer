@@ -1,4 +1,4 @@
-other
+options
 generateXmlWithAllFormDefinitionsIn: anOrbeonApplication
 	| xmlWriter |
 
@@ -6,7 +6,9 @@ generateXmlWithAllFormDefinitionsIn: anOrbeonApplication
 
 	xmlWriter writeWith: [:writer | 
 		writer tag: 'forms' with: [
-			anOrbeonApplication currentVersionsOf: self getFormName do: [:publishedVersion | self generateXmlNodeForFormBuilderVersionList: publishedVersion with: writer].
+			anOrbeonApplication 
+					currentVersionsOf: self getFormName 
+					do: [:publishedVersion | self generateXmlNodeForFormBuilderVersionList: publishedVersion with: writer]
 		].
 	].
 

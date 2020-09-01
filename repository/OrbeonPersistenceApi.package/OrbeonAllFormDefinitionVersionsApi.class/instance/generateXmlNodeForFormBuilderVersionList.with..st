@@ -1,10 +1,13 @@
-other
+xml generation
 generateXmlNodeForFormBuilderVersionList: anOrbeonPublishedFormDefinition with: anXMLWriter
 	"The receiver create a XML structure to display the definition <anOrbeonFormDefinition> in ../orbeon/fr page"
-	| attributes |
+	| attributes permissions |
+
+	permissions := allforms ifFalse: [anOrbeonPublishedFormDefinition getPermissionsForRole: group] ifTrue: ['*'].
+	(allforms not and: [permissions isEmpty]) ifTrue: [^self].
 
 	attributes := OrderedCollection new.
-	attributes add: ('operations' -> '*').
+	attributes add: ('operations' -> permissions).
 
 	anXMLWriter tag: 'form' attributes: attributes asArray  with: [
 		anXMLWriter tag: 'application-name' with: anOrbeonPublishedFormDefinition getApplicationName.

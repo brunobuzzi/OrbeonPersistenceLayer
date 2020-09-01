@@ -1,4 +1,4 @@
-other
+options
 generateXmlWithLatestFormDefinitionVersionIn: anOrbeonApplication
 	| xmlWriter |
 

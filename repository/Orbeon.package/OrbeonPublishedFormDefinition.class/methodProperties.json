@@ -90,7 +90,7 @@
 		"getNumericFieldsNames" : "brunobb 05/22/2020 11:59",
 		"getPercentageDistributionForFieldNamed:" : "BrunoBB 01/04/2017 06:01",
 		"getPercentageDistributionForFieldNamed:range:" : "BrunoBB 01/04/2017 06:01",
-		"getPermissionsForUser:inGroup:" : "brunobb 08/26/2020 14:02",
+		"getPermissionsForRole:" : "brunobb 09/01/2020 10:27",
 		"getQuantityDistributionForFieldCollection:range:" : "BrunoBB 01/04/2017 06:01",
 		"getQuantityDistributionForFieldNamed:" : "BrunoBB 01/04/2017 06:01",
 		"getQuantityDistributionForFieldNamed:from:to:" : "BrunoBB 01/04/2017 06:01",
