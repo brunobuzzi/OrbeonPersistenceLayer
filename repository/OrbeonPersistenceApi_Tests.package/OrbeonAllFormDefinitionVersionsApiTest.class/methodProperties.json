@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 08/24/2020 14:18",
-		"testDoIt" : "brunobb 08/26/2020 11:57",
-		"testDoItAllVersions" : "brunobb 08/26/2020 11:57" } }
+		"setUp" : "brunobb 09/02/2020 11:31",
+		"testDoIt" : "brunobb 09/02/2020 11:32",
+		"testDoItAllForms" : "brunobb 09/02/2020 11:39",
+		"testDoItAllVersions" : "brunobb 09/02/2020 11:35" } }
