@@ -9,7 +9,7 @@ generateXmlNodeForFormBuilderVersionList: anOrbeonPublishedFormDefinition with: 
 	attributes := OrderedCollection new.
 	attributes add: ('operations' -> permissions).
 
-	anXMLWriter tag: 'form' attributes: attributes asArray  with: [
+	anXMLWriter tag: 'form' attributes: attributes asArray with: [
 		anXMLWriter tag: 'application-name' with: anOrbeonPublishedFormDefinition getApplicationName.
 		anXMLWriter tag: 'form-name' with: anOrbeonPublishedFormDefinition formName.
 		anXMLWriter tag: 'title' with: anOrbeonPublishedFormDefinition title.

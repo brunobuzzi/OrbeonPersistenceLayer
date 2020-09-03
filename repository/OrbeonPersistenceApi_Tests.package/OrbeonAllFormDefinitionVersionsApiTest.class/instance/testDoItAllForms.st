@@ -4,13 +4,19 @@ testDoItAllForms
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	formDefinition := self createFormStructure.
+	apiOperation appName: 'st';
+		formName: 'simple-registration';
+		allversions: 'false'.
+
+	formDefinition := self createFormStructureNoPermissions.
 	stringTS := formDefinition modifiedTime asOrbeonDateTimeString.
 
+	apiOperation allforms: 'false'.
+	apiOperation group: 'ungranted-role'.
 	xmlResultString := apiOperation doIt.
-	self assert: xmlResultString equals: '<forms><form operations="create "><application-name>agesic</application-name><form-name>test-all-types-4</form-name><title>Test</title><description/><last-modified-time>',stringTS,'</last-modified-time><form-version>1</form-version></form></forms>'.
+	self assert: xmlResultString equals: '<forms/>'.
 
-	apiOperation group: 'orbeon-role'.
+	apiOperation allforms: 'true'.
+	apiOperation group: 'ungranted-role'.
 	xmlResultString := apiOperation doIt.
-	self assert: xmlResultString equals: '<forms><form operations="create delete read "><application-name>agesic</application-name><form-name>test-all-types-4</form-name><title>Test</title><description/><last-modified-time>',stringTS,'</last-modified-time><form-version>1</form-version></form></forms>'.
-	self assert: false
+	self assert: xmlResultString equals: '<forms><form operations="*"><application-name>st</application-name><form-name>simple-registration</form-name><title>Test</title><description/><last-modified-time>',stringTS,'</last-modified-time><form-version>1</form-version></form></forms>'.
