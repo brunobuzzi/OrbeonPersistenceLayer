@@ -10,6 +10,6 @@ getPermissionsForRole: group
 
 	(self hasReadPermission: group) ifTrue: [printStream nextPutAll: 'read '].
 
-	(self hasUpdateAccess: group) ifTrue: [printStream nextPutAll: 'update '].
+	(self hasUpdatePermission: group) ifTrue: [printStream nextPutAll: 'update '].
 
 	^printStream contents
