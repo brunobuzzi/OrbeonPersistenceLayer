@@ -1,0 +1,34 @@
+other
+jsonForTest
+
+	^'{
+   "username":"admin",
+   "groups":[
+      "admin"
+   ],
+   "roles":[
+      {
+         "name":"admin"
+      },
+      {
+         "name":"Full-time"
+      },
+      {
+         "name":"Manager"
+      },
+      {
+         "name":"Scrum master"
+      }
+   ],
+   "organizations":[
+      [
+         "Acme",
+         "Engineering",
+         "iOS"
+      ],
+      [
+         "Acme",
+         "Support"
+      ]
+   ]
+}'
