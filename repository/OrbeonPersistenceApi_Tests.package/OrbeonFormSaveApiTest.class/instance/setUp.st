@@ -8,6 +8,6 @@ setUp
 		formName: 'energy-recursive';
 		version: 1;
 		isValid: true;
-		username: 'bruno';
+		user: 'bruno';
 		modifiedUser: 'bruno'; 
-		groupname: 'admin'.
+		group: 'admin'.

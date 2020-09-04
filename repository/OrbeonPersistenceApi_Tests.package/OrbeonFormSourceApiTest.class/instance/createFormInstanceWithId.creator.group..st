@@ -10,7 +10,7 @@ createFormInstanceWithId: formId creator: username group: group
 		formName: 'test-all-types-4';
 		version: 1;
 		isValid: true;
-		username: username;
+		user: username;
 		modifiedUser: username; 
-		groupname: group;
+		group: group;
 		doIt
