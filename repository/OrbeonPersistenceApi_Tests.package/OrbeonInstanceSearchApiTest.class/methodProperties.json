@@ -2,4 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"xmlQueryString" : "brunobb 06/27/2020 08:49" } }
+		"createFormInstance:" : "brunobb 09/08/2020 11:40",
+		"requestXmlForGenericSummaryNoSearch" : "brunobb 09/08/2020 11:06",
+		"requestXmlForGenericSummaryWithSearch:" : "brunobb 09/08/2020 11:07",
+		"responseXmlForGenericSearchFor:" : "brunobb 09/08/2020 11:44",
+		"responseXmlForSearchWitnNoMatchesFor:" : "brunobb 09/08/2020 11:10",
+		"testGenericSummaryNoSearch" : "brunobb 09/08/2020 11:42",
+		"testGenericSummaryWithSearch" : "brunobb 09/08/2020 11:04" } }
