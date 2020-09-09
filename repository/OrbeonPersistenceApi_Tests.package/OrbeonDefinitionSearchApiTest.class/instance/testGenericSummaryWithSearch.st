@@ -23,4 +23,4 @@ testGenericSummaryWithSearch
 		setUserCredentialsFrom: ''.
 
 	resultXml := apiOperation doIt.
-	self assert: resultXml equals: (self responseXmlForSearchWitnNoMatchesFor: formDefinition).
+	self assert: resultXml equals: (self responseXmlForSearchWithNoMatchesFor: formDefinition).
