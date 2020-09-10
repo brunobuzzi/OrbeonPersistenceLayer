@@ -18,7 +18,7 @@ testGenericSummaryNoSearch
 					setPageNumber;
 					group: 'admin';
 					user: 'admin';
-					setUserCredentialsFrom: '';
+					setUserCredentialsFrom: self jsonForTest;
 					version: version.
 
 	resultXml := apiOperation doIt.
