@@ -1,8 +1,9 @@
 other
 testUpgradeDefinition
-	| form_v1 |
+	| form_v1 uuid |
 
-	formDefinition_v1 := application definitionNamed: 'issue-243' ifNone: [self assert: false].
+	uuid := UUID new asString.
+	formDefinition_v1 := self createFormStructure_v1: uuid.
 
 	form_v1 := (OrbeonFormInstance newFor: formDefinition_v1 withId: UUID new asString)
 					definition: formDefinition_v1;
@@ -14,7 +15,7 @@ testUpgradeDefinition
 	self assert: (formDefinition_v1 getInstancesSatisfying: [:fieldValue | fieldValue value = 'McCarthy'] in: 'surname') size equals: 1.
 	self assert: (formDefinition_v1 getInstanceWithId: form_v1 id) notNil.
 
-	formDefinition_1_1 := self createFormStructure_v1_1. "here the surname is removed"
+	formDefinition_1_1 := self createFormStructure_v1_1: uuid. "here the surname is removed"
 
 	self assert: (formDefinition_v1 getInstancesSatisfying: [:fieldValue | fieldValue value = 'John'] in: 'name') size equals: 1.
 	self assert: (formDefinition_v1 getInstancesSatisfying: [:fieldValue | fieldValue value = 'McCarthy'] in: 'surname') size equals: 1.

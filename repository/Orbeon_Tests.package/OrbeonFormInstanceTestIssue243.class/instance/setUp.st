@@ -1,6 +1,6 @@
 other
 setUp
-	| definition |
+
+	super setUp.
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue-test'.
-	definition := application definitionNamed: 'issue-243' ifNone: [self createFormStructure_v1].
