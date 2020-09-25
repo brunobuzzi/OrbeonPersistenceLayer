@@ -2,6 +2,8 @@ permissions
 getPermissionsForRole: group
 	| printStream |
 
+	self hasPermissionsEnabled ifFalse: [^'*'].
+
 	printStream := PrintStream on: String new.
 
 	(self hasCreatePermission: group) ifTrue: [printStream nextPutAll: 'create '].
