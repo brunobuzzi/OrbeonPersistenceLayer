@@ -6,6 +6,8 @@ doItIfNotFound: aBlock
 	* Compare latest published version with the new one --> [update the current |or| add the new one]"
 	| latestSavedDefinition existingVersion |
 
+	(self getFormName isNil or: [self getApplicationName isNil]) ifTrue: [self setApplicationAndFormNameFromXmlString].
+
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
 
 	version := (headerVersion = 'next') 

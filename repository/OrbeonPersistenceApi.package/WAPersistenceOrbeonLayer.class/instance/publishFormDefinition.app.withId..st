@@ -15,4 +15,4 @@ publishFormDefinition: formName app: app withId: documentId
 		user: (self requestContext request headerAt: 'orbeon-username');
 		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
 
-	^apiOperation doIt.
+	^apiOperation doItIfNotFound: [OrbeonPersistenceApiException signal: 'Error performing the publishing'].

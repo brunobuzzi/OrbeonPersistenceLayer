@@ -4,8 +4,6 @@ createAndStoreSavedDefinitionOnApplication
 	In the process it create & associate the <anOrbeonSavedFormDefinition> with <anOrbeonPublishedFormDefinition>"
 	| savedDefinition |
 
-	(self getFormName isNil or: [self getApplicationName isNil]) ifTrue: [self setApplicationAndFormNameFromXmlString].
-
 	savedDefinition := OrbeonSavedFormDefinition newNamed: self getFormName inAppNamed: self getApplicationName.
 
 	savedDefinition id: id;
