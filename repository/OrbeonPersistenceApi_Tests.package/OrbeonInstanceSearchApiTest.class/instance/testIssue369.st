@@ -1,18 +1,18 @@
 test
-testGenericSummaryNoSearch
+testIssue369
 	| formDefinition resultXml application version definition instance uuid |
 
-	formDefinition := self createFormStructure.
+	formDefinition := self createRepeatableFormStructure.
 
 	application := self getOrbeonApplicationClass applicationNamed: 'agesic' ifNone: [self assert: false].
 	version := 1.
-	definition := application getDefinitionNamed: 'test-all-types-4' withVersion: version ifNone: [self assert: false].
+	definition := application getDefinitionNamed: 'manual-form' withVersion: version ifNone: [self assert: false].
 
 	uuid := UUID new asString.
-	self createFormInstance: uuid.
+	self createRepeatableFormInstance: uuid.
 	instance := formDefinition getInstanceWithId: uuid ifNone: [self assert: false].
 
-	apiOperation := OrbeonInstanceSearchApi newWithXml: self requestXmlForGenericSummaryNoSearch application: application form: formDefinition.
+	apiOperation := OrbeonInstanceSearchApi newWithXml: self requestXmlForGenericSummaryNoSearch_369 application: application form: formDefinition.
 	apiOperation setPageSize;
 					setPageNumber;
 					group: 'admin';
@@ -22,4 +22,4 @@ testGenericSummaryNoSearch
 
 	resultXml := apiOperation doIt.
 
-	self assert: resultXml equals: (self responseXmlForGenericSearchFor: instance)
+	self assert: resultXml equals: (self responseXmlForGenericSearch369For: instance)
