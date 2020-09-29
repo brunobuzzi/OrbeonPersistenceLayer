@@ -9,6 +9,7 @@
 		"deleteFormDraft:app:withId:" : "brunobb 08/27/2020 12:13",
 		"deleteFormInstance:app:withId:" : "brunobb 08/27/2020 12:13",
 		"duplicateFormDefinitionNewId:" : "brunobb 08/27/2020 12:24",
+		"duplicateFormDefinitionNewId:dataFormat:" : "brunobb 09/29/2020 10:47",
 		"duplicateFormInstance:app:newId:" : "brunobb 09/29/2020 10:12",
 		"duplicateFormInstance:app:newId:dataFormat:" : "brunobb 09/29/2020 10:15",
 		"getAllFormDefinitionVesionsFor:app:allversions:" : "brunobb 08/27/2020 12:14",
