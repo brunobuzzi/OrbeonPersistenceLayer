@@ -1,0 +1,9 @@
+xml response
+responseXmlForGenericSummaryNoSearchWithClonesFor: anArray
+	| form clone1 clone2 |
+
+	form := anArray at: 1.
+	clone1 := anArray at: 2.
+	clone2 := anArray at: 3.
+
+	^'<documents xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:f="http//www.orbeon.com/function" xmlns:frf="java:org.orbeon.oxf.fr.FormRunner" xmlns:odt="http://orbeon.org/oxf/xml/datatypes" xmlns:oxf="http://www.orbeon.com/oxf/processors" xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:saxon="http://saxon.sf.net/" xmlns:sql="http://orbeon.org/oxf/xml/sql" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xpl="java:org.orbeon.oxf.pipeline.api.FunctionLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xxf="http://orbeon.org/oxf/xml/xforms" page-size="10" total="3" search-total="3"><document created="',form createdTime asOrbeonDateTimeString,'" draft="false" last-modified="',form modifiedTime asOrbeonDateTimeString,'" name="',form id,'" operations="*"><details><detail>agesic</detail><detail>test-all-types-4</detail><detail>Test</detail><detail/></details></document><document created="',clone1 createdTime asOrbeonDateTimeString,'" draft="false" last-modified="',clone1 modifiedTime asOrbeonDateTimeString,'" name="',clone1 id,'" operations="*"><details><detail>agesic</detail><detail>test-all-types-4</detail><detail>Test</detail><detail/></details></document><document created="',clone2 createdTime asOrbeonDateTimeString,'" draft="false" last-modified="',clone1 modifiedTime asOrbeonDateTimeString,'" name="',clone2 id,'" operations="*"><details><detail>agesic</detail><detail>test-all-types-4</detail><detail>Test</detail><detail/></details></document></documents>'

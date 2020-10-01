@@ -5,6 +5,8 @@
 		"requestXmlForGenericSummaryNoSearch" : "brunobb 09/07/2020 13:43",
 		"requestXmlForGenericSummaryWithSearch:" : "brunobb 09/07/2020 14:02",
 		"responseXmlForGenericSummaryNoSearchFor:" : "brunobb 09/07/2020 14:00",
+		"responseXmlForGenericSummaryNoSearchWithClonesFor:" : "brunobb 10/01/2020 14:36",
 		"responseXmlForSearchWithNoMatchesFor:" : "brunobb 09/09/2020 10:34",
 		"testGenericSummaryNoSearch" : "brunobb 09/07/2020 13:55",
-		"testGenericSummaryWithSearch" : "brunobb 09/09/2020 10:35" } }
+		"testGenericSummaryWithSearch" : "brunobb 09/09/2020 10:35",
+		"testIssue371" : "brunobb 10/01/2020 14:37" } }
