@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"createFormInstance:" : "brunobb 09/08/2020 11:40",
+		"createRepeatableFormDraft:" : "brunobb 10/02/2020 12:34",
 		"createRepeatableFormInstance:" : "brunobb 09/28/2020 11:45",
 		"requestXmlForGenericSummaryNoSearch" : "brunobb 09/08/2020 11:06",
 		"requestXmlForGenericSummaryNoSearch_369" : "brunobb 09/28/2020 11:51",
@@ -13,4 +14,5 @@
 		"responseXmlForGenericSearchNoMatches" : "brunobb 09/10/2020 11:34",
 		"testGenericSummaryNoSearch" : "brunobb 09/28/2020 11:46",
 		"testGenericSummaryWithSearch" : "brunobb 09/10/2020 11:34",
-		"testIssue369" : "brunobb 09/28/2020 11:58" } }
+		"testIssue369" : "brunobb 09/28/2020 11:58",
+		"testIssue374" : "brunobb 10/02/2020 12:36" } }
