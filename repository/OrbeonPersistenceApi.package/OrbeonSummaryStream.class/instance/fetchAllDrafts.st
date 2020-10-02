@@ -1,4 +1,4 @@
 fetch instances
 fetchAllDrafts
 
-	self fetchAllDraftsButFirst: 0
+	draftsReadStream := ReadStreamPortable on: summary getAllDrafts

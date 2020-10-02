@@ -3,11 +3,11 @@
 		"newWith:definition:version:user:group:credentials:pageSize:pageNumber:xmlQuery:" : "brunobb 07/15/2020 16:42" },
 	"instance" : {
 		"application" : "brunobb 07/15/2020 16:42",
-		"buildStreamForDraftsAndFormsSummary" : "brunobb 07/15/2020 16:42",
+		"buildStreamForDraftsAndFormsSummary" : "brunobb 10/02/2020 14:56",
 		"buildStreamForDraftsSummary" : "brunobb 07/15/2020 16:42",
 		"buildStreams" : "brunobb 07/15/2020 16:42",
 		"buildStreamsForDraftsSearch" : "brunobb 07/15/2020 16:42",
-		"buildStreamsForRegularSummaryPaging" : "brunobb 07/15/2020 16:42",
+		"buildStreamsForRegularSummaryPaging" : "brunobb 10/02/2020 14:56",
 		"buildStreamsForSearchSummaryPaging" : "brunobb 07/15/2020 16:42",
 		"createQueryNodes" : "brunobb 07/15/2020 16:42",
 		"formDefinition" : "brunobb 09/09/2020 10:54",
