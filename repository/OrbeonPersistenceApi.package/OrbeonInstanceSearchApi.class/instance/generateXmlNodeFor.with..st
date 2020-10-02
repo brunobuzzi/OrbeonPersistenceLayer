@@ -17,5 +17,5 @@ generateXmlNodeFor: anOrbeonFormInstance with: aXMLWriter
 
 	tag with: [aXMLWriter 
 						tag: 'details' 
-						with: [(anOrbeonFormInstance getValueOfFields: self summaryFields) "get the values of fields to display in the summary" 
+						with: [(anOrbeonFormInstance getValueOfFieldsForSummary: self summaryFields) "get the values of fields to display in the summary" 
 										do: [:each | aXMLWriter tag: 'detail' with: (each isOctetString ifTrue:[each] ifFalse: [each printString])]]].
