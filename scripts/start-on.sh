@@ -2,8 +2,14 @@
 # Requires GS_HOME variable defined
 # This command take the port as an argument and start a Gem Process on that port. 
 # The port number must be defined in ports-all.ini file.
+SCRIPT="start-on"
+source ./common.sh
+usage() {
+  error "Usage: ${SCRIPT} -s STONE_NAME"
+}
+
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: start-on STONE_NAME PORT"
+  echo "Usage: start-on -s STONE_NAME -p PORT1,PORT2,PORT3"
   echo "Start a Web Server on port number PORT"; 
   echo "The environment variable GS_HOME must be set"; 
   echo "This script is used in conjunction with stop-on.sh script";   
@@ -13,24 +19,36 @@ if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
   exit 0
 fi
-if [ -z "$1" ]; then
-  echo "GemStone/S name must be an argument of the script";
-  exit 0
-fi
-if sh checkIfStoneExist.sh "$1"; 
-  then echo "" 
-  else 
-    echo ;
-    echo "Topaz for Stone named [$1] failed to start";
-    echo;
-    exit 0
+
+while getopts :l:s:p: opt; do
+  case $opt in
+    s) STONE=$OPTARG ;;
+    p) PORTS=$OPTARG ;;
+    \?) error "Invalid option: -$OPTARG"
+      usage
+      exit 1
+      ;;
+    :)error "Option -$OPTARG requires Stone name and ports."
+      usage
+      exit 1
+     ;;
+  esac
+done
+
+./checkIfStoneExist.sh $STONE
+if [ $? -ne 0 ]; then
+  error "The Stone {$STONE} does NOT exist"
+  exit 1
 fi
 
-nohup $GS_HOME/bin/startTopaz $1 -u "WebServer" -il <<EOF >>MFC.out
-set user DataCurator password swordfish gemstone $1
+info "Start: Starting Web Servers on port $PORTS"
+
+$GS_HOME/bin/startTopaz $STONE -u "WebServer" -il <<EOF >>start-on.log
+set user DataCurator password swordfish gemstone $STONE
 login
 exec 
    | handler commitThreshold usedMemory |
+
    commitThreshold := 80.
    handler := AlmostOutOfMemory addDefaultHandler: [ :ex | 
      Transcript show: ('AlmostOutOfMemory: ', ex printString); cr.
@@ -47,10 +65,17 @@ exec
    ].
    SessionTemps current at: #'AlmostOutOfMemoryStaticException' put: handler.
    System signalAlmostOutOfMemoryThreshold: commitThreshold.
-  OrbeonLayerAppLinuxScripts startOnPortScript: $2.
+
+  OrbeonLayerAppLinuxScripts startOnPortScript: '$PORTS'.
 %
-exit
+logout
+quit
 EOF
-echo
-echo "A Gem process has been started on Stone named [$1] on port [$2]"
-echo
+
+if [ $? -ne 0 ]; then
+  error "Failed to start Web Servers check {start-on.log}"
+  exit 1
+fi
+
+
+info "Finish: Starting Web Servers on port $PORTS"

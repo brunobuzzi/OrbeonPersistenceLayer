@@ -2,6 +2,12 @@
 # Requires GS_HOME variable defined
 # This command will stop all Gem processes serving the Web Application on all ports. 
 # The Web Application will no longer respond to http requests.
+SCRIPT="stop-all"
+source ./common.sh
+usage() {
+  error "Usage: ${SCRIPT} -s STONE_NAME"
+}
+
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: stop-all STONE_NAME"
   echo "Stop all Web Servers contained in the file (ports-all.ini):"; 
@@ -19,29 +25,44 @@ if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
   exit 0
 fi
-if [ -z "$1" ]; then
-  echo "GemStone/S name must be an argument of the script";
-  exit 0
-fi
-if sh checkIfStoneExist.sh "$1"; 
-  then echo "" 
-  else 
-    echo ;
-    echo "Topaz for Stone named [$1] failed to start";
-    echo;
-    exit 0
+
+while getopts :l:s: opt; do
+  case $opt in
+    s) STONE=$OPTARG ;;
+    \?) error "Invalid option: -$OPTARG"
+      usage
+      exit 1
+      ;;
+    :)error "Option -$OPTARG requires Stone name and ports."
+      usage
+      exit 1
+     ;;
+  esac
+done
+
+./checkIfStoneExist.sh $STONE
+if [ $? -ne 0 ]; then
+  error "The Stone {$STONE} does NOT exist"
+  exit 1
 fi
 
-nohup $GS_HOME/bin/startTopaz $1 -il <<EOF >>MFC.out &
-set user DataCurator password swordfish gemstone $1
+info "Start: Stopping Gem processes (Web Servers)"
+
+$GS_HOME/bin/startTopaz $STONE -il <<EOF >>stop-all.log
+set user DataCurator password swordfish gemstone $STONE
 login
 exec 
 System beginTransaction.
 OrbeonLayerAppLinuxScripts stopAllScript.
 System commit.
 %
-exit
+logout
+quit
 EOF
-echo
-echo "A group of Gem processes has been stopped on Stone named [$1] on ports contained in [ports-all.ini]"
-echo
+
+if [ $? -ne 0 ]; then
+  error "Failed to stop Web Servers check {stop-all.log}"
+  exit 1
+fi
+
+info "Finish: Stopping Gem processes (Web Servers)"

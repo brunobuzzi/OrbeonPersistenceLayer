@@ -1,6 +1,10 @@
 #!/bin/sh
 # Requires GS_HOME variable defined
-
+PROGRAM_NAME="install_all"
+source ./common.sh
+usage() {
+  error "Usage: ${PROGRAM_NAME} -s DBNAME"
+}
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: install-all STONE_NAME "
   echo "Install the entire BPM application on Stone named STONE_NAME"; 
@@ -11,24 +15,30 @@ if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
   exit 0
 fi
-if [ -z "$1" ]; then
-  echo "GemStone/S name must be an argument of the script";
-  exit 0
+
+while getopts :l:s: opt; do
+  case $opt in
+    s) STONE=$OPTARG ;;
+    \?) error "Invalid option: -$OPTARG"
+      usage
+      exit 1
+      ;;
+    :)error "Option -$OPTARG requires an argument."
+      usage
+      exit 1
+     ;;
+  esac
+done
+./checkIfStoneExist.sh $STONE
+if [ $? -ne 0 ]; then
+  error "The Stone {$STONE} does NOT exist"
+  exit 1
 fi
-if sh checkIfStoneExist.sh "$1"; 
-  then echo "" 
-  else 
-    echo ;
-    echo "Topaz for Stone named [$1] failed to start";
-    echo;
-    exit 0
-fi
-echo
-date
-echo "Start: BPM Packages Installation"
-echo
-$GS_HOME/bin/startTopaz $1 -il <<EOF
-set user DataCurator password swordfish gemstone $1
+
+info  "Start: OrbeonPersistenceLayer Packages Installation"
+
+$GS_HOME/bin/startTopaz $STONE -il <<EOF >>install-all.log
+set user DataCurator password swordfish gemstone $STONE
 login
 exec
 Gofer new
@@ -61,15 +71,19 @@ GsDeployer deploy: [
     onLock: [:ex | ex honor];
     load ].   
 %
-exit
+logout
+quit
 EOF
-echo
-date
-echo "Finish: BPM Packages Installation"
-echo
-date
-echo "Start: HighchartsSt Packages Installation"
-echo
+
+if [ $? -ne 0 ]; then
+  error "The installation process has failed check {install-all.log}"
+  exit 1
+fi
+
+info "Finish: OrbeonPersistenceLayer Packages Installation"
+
+info "Start: HighchartsSt Packages Installation"
+
 # Highcharts is installed locally
 # Check: https://github.com/brunobuzzi/BpmFlow/issues/482
 cd $GS_HOME/shared/repos
@@ -79,8 +93,8 @@ git branch
 git branch -a
 git checkout origin/v6.0.1
 git checkout v6.0.1
-$GS_HOME/bin/startTopaz $1 -il -T 500000 <<EOF  
-set user DataCurator password swordfish gemstone $1
+$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF >>install-all.log
+set user DataCurator password swordfish gemstone $STONE
 login
 exec
 GsDeployer deploy: [
@@ -92,14 +106,21 @@ GsDeployer deploy: [
          load.
 ].
 %
-exit
+logout
+quit
 EOF
-echo
-date
-echo "Finish: HighchartsSt Packages Installation"
-echo
-$GS_HOME/bin/startTopaz $1 -il <<EOF
-set user DataCurator password swordfish gemstone $1
+
+if [ $? -ne 0 ]; then
+  error "Highcharts installation has failed check {install-all.log}"
+  exit 1
+fi
+
+info "Finish: HighchartsSt Packages Installation"
+
+info "Start: System Initialization"
+
+$GS_HOME/bin/startTopaz $STONE -il <<EOF
+set user DataCurator password swordfish gemstone $STONE
 login
 exec
 OrbeonServerConfiguration default orbeonIP: 'http://192.168.178.130'. "example IP"
@@ -111,8 +132,13 @@ WAPersistenceOrbeonLayer register.
 WAOrbeonLogin register. "ipaddress:port/orbeon"
 %
 commit
-exit
+logout
+quit
 EOF
-echo
-echo "System Initialized"
-echo
+
+if [ $? -ne 0 ]; then
+  error "System Initialization has failed check {install-all.log}"
+  exit 1
+fi
+
+info "Finish: System Initialization"
