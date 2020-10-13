@@ -2,6 +2,7 @@
 [._]s[a-w][a-z]
 *.un~
 *.out
+*.log
 Session.vim
 .netrwhist
 *~

@@ -66,7 +66,7 @@ exec
    SessionTemps current at: #'AlmostOutOfMemoryStaticException' put: handler.
    System signalAlmostOutOfMemoryThreshold: commitThreshold.
 
-  OrbeonLayerAppLinuxScripts startOnPortScript: '$PORTS'.
+  OrbeonLayerAppLinuxScripts startOnPortsScript: '$PORTS'.
 %
 logout
 quit
