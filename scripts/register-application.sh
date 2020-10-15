@@ -58,7 +58,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to register Web Applications check {unregister-application.log}"
+  error "Failed to register Web Applications check {register-application.log}"
   exit 1
 fi
 
