@@ -5,25 +5,12 @@ baseline: spec
    spec
      for: #'common'
      do: [
-		spec project: 'XMLParser' with: [
-			spec className: 'ConfigurationOfXMLParser';
-				loads: #('default');
-				versionString: #stable;
-				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main'].
-		spec project: 'XPath' with: [
-			spec className: 'ConfigurationOfXPath';
-				loads: #('default');
-				versionString: #stable;
-				file: 'ConfigurationOfXPath';
-				repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XPath/main'].
-		spec project: 'XMLWriter' with: [
-			spec className: 'ConfigurationOfXMLWriter';
-				versionString: #stable;
-				file: 'ConfigurationOfXMLWriter';
-				repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLWriter/main';
-				loads: #('Core').
-				].
-
+		spec baseline: 'XML-XMLWriter' with: [
+			spec repository: 'github://GsDevKit/XML-XMLWriter:gemstone/filetree'].
+		spec baseline: 'XML-XMLParser' with: [
+			spec repository: 'github://GsDevKit/XML-XMLParser:gemstone/filetree'].
+		spec baseline: 'XML-XPath' with: [
+			spec repository: 'github://GsDevKit/XML-XPath:gemstone/filetree'].
 		spec baseline: 'AbstractApplicationObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master/repository' ].
 		spec baseline: 'AbstractBIObjects' with: [
@@ -37,14 +24,14 @@ baseline: spec
 				repository: 'github://SeasideSt/Seaside:master/repository' ].
 
 		spec 
-				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'AbstractBIObjects' 'XMLParser' 'XPath')];
+				package: 'Orbeon' with: [spec requires: #('AbstractApplicationObjects' 'AbstractBIObjects' 'XML-XMLParser' 'XML-XPath')];
 				package: 'OrbeonBusinessIntelligence' with: [spec requires: #('AbstractBIObjects' 'Orbeon')];
 				package: 'OrbeonFormXmlReader' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormComparator' with: [spec requires: #('Orbeon')];
 				package: 'OrbeonFormMigrator' with: [spec requires: #('Orbeon' 'OrbeonFormComparator' 'OrbeonFormXmlReader')];
 				package: 'OrbeonFormExport' with: [spec requires: #('Orbeon')];
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
-				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormXmlReader' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
+				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormXmlReader' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XML-XMLWriter' 'XML-XMLParser' 'XML-XPath')];
 				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport' 'OrbeonFormXmlReader')];
 				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator' 'OrbeonFormXmlReader')];
 				package: 'OrbeonFormMigrator_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormMigrator')];
