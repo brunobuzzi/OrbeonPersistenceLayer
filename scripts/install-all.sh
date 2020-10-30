@@ -67,7 +67,7 @@ GsDeployer deploy: [
 GsDeployer deploy: [
   Metacello new
     baseline: 'OrbeonPersistenceLayer';
-    repository: 'github://brunobuzzi/OrbeonPersistenceLayer:issue378/repository';
+    repository: 'github://brunobuzzi/OrbeonPersistenceLayer:master/repository';
     onLock: [:ex | ex honor];
     load ].   
 %
