@@ -1,6 +1,6 @@
 other
 tearDown
 
-	application unregisterDefinitionNamed: 'test-all-types-4-1'.
+	self keepTempObjectsInSystem ifFalse: [application unregisterDefinitionNamed: 'test-all-types-4-1'].
 	
 	super tearDown.

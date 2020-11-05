@@ -3,7 +3,6 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 08/17/2020 14:53",
-		"tearDown" : "brunobb 08/18/2020 04:44",
 		"testFieldTypes" : "brunobb 03/07/2018 12:52",
 		"testFormFieldsInSection1" : "brunobb 06/15/2020 06:53",
 		"testFormFieldsInSection2" : "brunobb 06/15/2020 06:53",

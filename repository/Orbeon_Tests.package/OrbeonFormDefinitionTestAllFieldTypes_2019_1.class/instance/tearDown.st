@@ -1,6 +1,6 @@
 other
 tearDown
 
-	application unregisterDefinitionNamed: 'all-fields-types'.
+	self keepTempObjectsInSystem ifFalse: [application unregisterDefinitionNamed: 'all-fields-types'].
 
 	super tearDown.
