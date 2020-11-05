@@ -12,5 +12,5 @@
 	"name" : "OrbeonFormTest",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "AbstractObjectCreatorTest",
 	"type" : "normal" }

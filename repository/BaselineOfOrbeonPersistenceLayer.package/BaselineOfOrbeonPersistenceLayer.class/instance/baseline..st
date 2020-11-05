@@ -13,6 +13,8 @@ baseline: spec
 			spec repository: 'github://GsDevKit/XML-XPath:gemstone/filetree'].
 		spec baseline: 'AbstractApplicationObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractApplicationObjects:master/repository' ].
+		spec baseline: 'AbstractTestFramework' with: [
+			spec repository: 'github://brunobuzzi/AbstractTestFramework:master/repository' ].
 		spec baseline: 'AbstractBIObjects' with: [
 			spec repository: 'github://brunobuzzi/AbstractBIObjects:master/repository' ].
 		spec baseline: 'Ston' with: [
@@ -33,7 +35,7 @@ baseline: spec
 				package: 'Orbeon_Templates' with: [spec requires: #('AbstractApplicationObjects')];
 				package: 'OrbeonPersistenceApi' with: [spec requires: #('Orbeon' 'OrbeonFormXmlReader' 'OrbeonFormMigrator' 'Ston' 'Seaside3' 'XMLWriter' 'XMLParser' 'XPath')];
 				package: 'OrbeonWeb' with: [spec requires: #('Sewaf' 'Orbeon' 'Seaside3' 'OrbeonFormMigrator' 'OrbeonFormExport' 'OrbeonFormXmlReader')];
-				package: 'Orbeon_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator' 'OrbeonFormXmlReader')];
+				package: 'Orbeon_Tests' with: [spec requires: #('AbstractTestFramework' 'Orbeon' 'Orbeon_Templates' 'OrbeonFormComparator' 'OrbeonFormMigrator' 'OrbeonFormXmlReader')];
 				package: 'OrbeonFormMigrator_Tests' with: [spec requires: #('Orbeon' 'Orbeon_Templates' 'OrbeonFormMigrator')];
 				package: 'OrbeonPersistenceApi_Tests' with: [spec requires: #('OrbeonPersistenceApi' 'Orbeon_Templates')].
 
