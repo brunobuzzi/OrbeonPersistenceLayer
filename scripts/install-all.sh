@@ -117,7 +117,7 @@ if [ $? -ne 0 ]; then
 fi
 info "Start: Downloading HighchartsSt static files"
 cd scripts
-sh downloadAndPrepareFilesForFileLibraries.sh -f -d $GS_HOME/shared/repos/OrbeonPersistenceLAyer/js -p Highstock -v 6.0.1
+sh downloadAndPrepareFilesForFileLibraries.sh -f -d $GS_HOME/shared/repos/OrbeonPersistenceLayer/js -p Highstock -v 6.0.1
 info "Finish: Downloading HighchartsSt static files"
 $GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF  >>highcharts.log
 set user DataCurator password swordfish gemstone $STONE
