@@ -37,6 +37,7 @@ fi
 
 info  "Start: OrbeonPersistenceLayer Packages Installation"
 
+#Topaz Installation Script
 $GS_HOME/bin/startTopaz $STONE -il <<EOF >>install-all.log
 set user DataCurator password swordfish gemstone $STONE
 login
@@ -93,14 +94,14 @@ git branch
 git branch -a
 git checkout origin/v6.0.1
 git checkout v6.0.1
-$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF >>install-all.log
+$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF  >>highcharts.log
 set user DataCurator password swordfish gemstone $STONE
 login
 exec
 GsDeployer deploy: [
     Metacello new
          baseline: 'HighchartsSt';
-         filetreeDirectory: '/home/gemstone/GsDevKit_home/shared/repos/HighchartsSt/repository';
+         filetreeDirectory: ('$GS_HOME/shared/repos/HighchartsSt/repository');
          onLock: [:ex | ex honor];
 		     onConflictUseLoaded;
          load.
@@ -111,10 +112,29 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Highcharts installation has failed check {install-all.log}"
+  error "Highcharts installation has failed check {highcharts.log}"
   exit 1
 fi
-
+info "Start: Downloading HighchartsSt static files"
+cd scripts
+sh downloadAndPrepareFilesForFileLibraries.sh -f -d $GS_HOME/shared/repos/OrbeonPersistenceLAyer/js -p Highstock -v 6.0.1
+info "Finish: Downloading HighchartsSt static files"
+$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF  >>highcharts.log
+set user DataCurator password swordfish gemstone $STONE
+login
+exec
+Highstock6DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$GS_HOME/shared/repos/BpmFlow/js/6.0.3/Highstock/styled/deployment/'.
+Highstock6DevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$GS_HOME/shared/repos/BpmFlow/js/6.0.3/Highstock/styled/development/'.
+Highstock6ClassicModeDeploymentMetadataLibrary recursivelyAddAllFilesIn: '$GS_HOME/shared/repos/BpmFlow/js/6.0.3/Highstock/oldMode/deployment/'.
+Highstock6ClassicModeDevelopmentMetadataLibrary recursivelyAddAllFilesIn: '$GS_HOME/shared/repos/BpmFlow/js/6.0.3/Highstock/oldMode/development/'.
+%
+logout
+quit
+EOF
+if [ $? -ne 0 ]; then
+  error "Highcharts installation has failed check {highcharts.log}"
+  exit 1
+fi
 info "Finish: HighchartsSt Packages Installation"
 
 info "Start: System Initialization"
