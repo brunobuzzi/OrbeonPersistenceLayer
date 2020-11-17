@@ -11,8 +11,7 @@
 		"parentSection",
 		"subSections",
 		"fields",
-		"grids",
-		"nextIteration" ],
+		"grids" ],
 	"name" : "FormSectionInstance",
 	"pools" : [
 		 ],

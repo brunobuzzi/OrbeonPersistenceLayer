@@ -1,4 +1,3 @@
 other
 isRepeatable
-
-	^false
+	^sectionDefinition isRepeatable
