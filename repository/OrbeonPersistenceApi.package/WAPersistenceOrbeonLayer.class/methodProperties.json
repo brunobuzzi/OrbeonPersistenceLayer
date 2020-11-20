@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"register" : "brunobb 04/11/2019 04:49",
+		"register" : "brunobb 11/20/2020 12:04",
 		"unregister" : "brunobb 04/11/2019 04:49" },
 	"instance" : {
 		"auditStorage" : "brunobb 08/27/2020 12:45",
@@ -14,7 +14,7 @@
 		"duplicateFormInstance:app:newId:dataFormat:" : "brunobb 10/02/2020 15:24",
 		"getAllFormDefinitionVesionsFor:app:allversions:" : "brunobb 08/27/2020 12:14",
 		"getAllFormDefinitionVesionsFor:app:allversions:allforms:" : "brunobb 09/25/2020 14:05",
-		"getDefinitionForFormInstanceWithId:form:app:" : "brunobb 10/15/2020 11:01",
+		"getDefinitionForFormInstanceWithId:form:app:" : "brunobb 11/20/2020 11:48",
 		"getFormDefinitionWithId:dataFormat:" : "brunobb 10/02/2020 15:08",
 		"getFormVersion:app:" : "brunobb 10/02/2020 15:23",
 		"getOrbeonFr" : "brunobb 08/27/2020 12:15",
@@ -23,8 +23,8 @@
 		"getXmlOfFormDraftWithId:form:app:dataFormat:" : "brunobb 10/02/2020 15:23",
 		"getXmlOfFormInstanceWithId:form:app:" : "brunobb 10/02/2020 15:23",
 		"getXmlOfFormInstanceWithId:form:app:dataFormat:" : "brunobb 10/15/2020 10:39",
-		"handle:" : "brunobb 10/02/2020 15:20",
-		"leaseFormInstance:app:withId:" : "brunobb 10/15/2020 11:31",
+		"handle:" : "brunobb 11/20/2020 11:55",
+		"leaseFormInstance:app:withId:" : "brunobb 11/20/2020 12:04",
 		"noRouteFound:" : "brunobb 10/15/2020 11:36",
 		"publishFormDefinition:app:withId:" : "brunobb 09/25/2020 13:51",
 		"receiveAndPublishFileFor:app:documentId:fileId:" : "brunobb 08/27/2020 12:25",
