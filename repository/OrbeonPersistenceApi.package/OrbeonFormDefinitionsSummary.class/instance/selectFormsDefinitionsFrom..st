@@ -16,7 +16,7 @@ selectFormsDefinitionsFrom: anOrderedCollection
 		(key = 'form-name') ifTrue: [conditions add: [:each | value match: each formName]].
 		(key = 'title') ifTrue: [conditions add: [:each | value match: each title]].
 		(key = 'description') ifTrue: [conditions add: ([:each | value match: each description])].
-		(key = '') ifTrue: [conditions add: [:each | (value match: each getApplicationName) or: [(value match: each formName) or: [(value match: each title) or: [(value match: each description)]]]]
+		(key = '') ifTrue: [conditions add: [:each | (value match: each getApplicationName) or: [(value match: each formName) or: [(each title notNil and: [value match: each title]) or: [(each description notNil and: [value match: each description])]]]]
 					].
 	].
 	conditions do: [:conditionBlock | result := result select: conditionBlock].
