@@ -1,9 +1,9 @@
 other
 logicalRemoveDefinitionWithId: stringId ifNone: aBlock
-	| instanceDefinition |
+	| savedDefinition |
 
-	instanceDefinition := self getSavedDefinitionWithId: stringId ifNone: [^aBlock value].
+	savedDefinition := self getSavedDefinitionWithId: stringId ifNone: [^aBlock value].
 
-	instanceDefinition logicalDelete. "delete the OrbeonFormInstanceDefinition"
+	savedDefinition logicalDelete. "delete the OrbeonFormInstanceDefinition"
 
-	^instanceDefinition definition logicalDelete.  "delete the OrbeonFormDefinition"
+	^savedDefinition definition logicalDelete.  "delete the OrbeonFormDefinition"
