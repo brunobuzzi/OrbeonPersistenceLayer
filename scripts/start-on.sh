@@ -78,4 +78,4 @@ if [ $? -ne 0 ]; then
 fi
 
 
-info "Finish: Starting Web Servers on port $PORTS"
+info "Finish: Web Servers started on ports $PORTS"
