@@ -14,7 +14,6 @@ createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSe
 													elementAt: section name 
 													ifAbsent: [OrbeonInvalidXMLException signal: 'The Form definition structure does not match with the Form Instance structure']. 
 						OrderedCollection with: subSegment].
-
 		(xmlSubSegments select: [:each | each notNil]) do: [:xmlSegment | | sectionInst |
 			sectionInst := FormSectionInstance newNamed: section name definition: section.
 			sectionsInstances add: sectionInst. "store the section instance in the dictionary collector"
