@@ -16,16 +16,24 @@ testNonRepeatableToRepeatableStructure
 	self assert: ((formInstance multipleFieldValuesAt: 'surname') includes: 'keuroglian').
 
 	self assert: ((formInstance multipleFieldValuesAt: 'country') includes: 'Uruguay').
-	self assert: ((formInstance multipleFieldValuesAt: 'country') includes: 'Argetina').
+	self assert: ((formInstance multipleFieldValuesAt: 'country') includes: 'Argentina').
 
 	self assert: ((formInstance multipleFieldValuesAt: 'city') includes: 'Montevideo').
 	self assert: ((formInstance multipleFieldValuesAt: 'city') includes: 'Punta del Este').
 	self assert: ((formInstance multipleFieldValuesAt: 'city') includes: 'Buenos Aires').
 	self assert: ((formInstance multipleFieldValuesAt: 'city') includes: 'La Plata').
-	
-"	(formInstance sectionsSelect: [:sec | sec name = 'section-2']) do: [:section |
-		self assert: ((section valueAt: 'street') = 'chana').
-		self assert: (((section valueAt: 'number') = '1938') or: [(section valueAt: 'number') = '555']).
-		self assert: (((section valueAt: 'subNumber') = '101') or: [(section valueAt: 'number') = '4']).
+
+	(formInstance sectionsSelect: [:sec | sec name = 'section-1']) do: [:section |
+		self assert: ((section valueAt: 'number') = '123456')].
+
+	(formInstance sectionsSelect: [:sec | sec name = 'section-2']) do: [:section |
+		self assert: (#('bruno' 'franco' 'cecilia') includes: (section valueAt: 'name')).
+		self assert: (#('buzzi' 'buzzi' 'keuroglian') includes: (section valueAt: 'surname')).
 	].
-"
+	(formInstance sectionsSelect: [:sec | sec name = 'section-3']) keysAndValuesDo: [:index :section | | subSection grid cityCollection |
+		self assert: (#('Uruguay' 'Argentina') includes: (section valueAt: 'country')).
+		subSection := section subSectionsAt: 1.
+		grid := subSection getGridNamed: 'grid-4' ifAbsent: [self assert: false].
+		cityCollection := (index = 1) ifTrue: [#('Montevideo' 'Punta del Este')] ifFalse: [#('Buenos Aires' 'La Plata')].
+		(grid getAllValuesFor: 'city') do: [:value | cityCollection includes: value]  
+	].
