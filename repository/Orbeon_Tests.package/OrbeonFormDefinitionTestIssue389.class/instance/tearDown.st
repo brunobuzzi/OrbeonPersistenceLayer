@@ -4,6 +4,6 @@ tearDown
 	self keepTempObjectsInSystem ifTrue: [^self].
 
 	application unregisterDefinitionNamed: 'library'.
-	application unregisterDefinitionNamed: 'issue122'.
+	application unregisterDefinitionNamed: 'test-library'.
 	
 	super tearDown.

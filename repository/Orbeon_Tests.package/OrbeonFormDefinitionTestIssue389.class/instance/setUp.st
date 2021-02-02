@@ -1,6 +1,10 @@
 other
 setUp
 
+	super setUp.
+
+	self getOrbeonWebServerConfiguration orbeonFormReaderClass: OrbeonXPathFormReader2020_1.
+
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'gs'.
 
 	application definitionNamed: 'library' ifNone: [self createLibraryDefinition].

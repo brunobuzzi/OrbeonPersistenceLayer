@@ -20,5 +20,5 @@ testNonRepeatableToRepeatableStructure
 	(formInstance sectionsSelect: [:sec | sec name = 'section-2']) do: [:section |
 		self assert: ((section valueAt: 'street') = 'chana').
 		self assert: (((section valueAt: 'number') = '1938') or: [(section valueAt: 'number') = '555']).
-		self assert: (((section valueAt: 'subNumber') = '101') or: [(section valueAt: 'number') = '4']).
+		self assert: (((section valueAt: 'subNumber') = '101') or: [(section valueAt: 'subNumber') = '4']).
 	].
