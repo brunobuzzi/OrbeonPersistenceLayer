@@ -47,7 +47,7 @@ form_issue389
 		</section-3-iteration>
 		<section-3-iteration>
 			<grid-5>
-				<country>Argetina</country>
+				<country>Argentina</country>
 			</grid-5>
 			<section-4>
 				<grid-4>
