@@ -1,4 +1,4 @@
-other
+metadata
 libraryVersion
 
 	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceMetadataLibraryVersionXpath)
