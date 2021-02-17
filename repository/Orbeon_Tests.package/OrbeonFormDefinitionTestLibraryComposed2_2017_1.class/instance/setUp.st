@@ -2,6 +2,8 @@ other
 setUp
 	| xPathManager |
 
+	self getOrbeonWebServerConfiguration setOrbeonFormReaderTo2017_2.
+
 	xPathManager := self getOrbeonXmlXpathUpto2017_1.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
 

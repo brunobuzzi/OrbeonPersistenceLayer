@@ -9,4 +9,6 @@ tearDown
 	(self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon') unregisterDefinitionNamed: 'library'.
 	(self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon') removeFromCache.
 
+	self getOrbeonWebServerConfiguration setOrbeonFormReaderTo2019_1.
+
 	super tearDown.

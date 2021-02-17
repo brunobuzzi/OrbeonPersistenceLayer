@@ -2,6 +2,8 @@ other
 setUp
 	| definition xPathManager |
 
+	self getOrbeonWebServerConfiguration setOrbeonFormReaderTo2017_2.
+
 	xPathManager := self getOrbeonXmlXpathUpto2017_1.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
 	application definitionNamed: 'library' ifNone: [self createFormStructureFor: 'library' in: 'ue' definitionTemplate: #form_ue_library title: 'Library' xPathVersion: xPathManager].
