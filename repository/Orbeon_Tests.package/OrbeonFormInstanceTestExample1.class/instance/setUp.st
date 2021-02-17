@@ -2,6 +2,8 @@ other
 setUp
 	| definition |
 
+	self getOrbeonWebServerConfiguration setOrbeonFormReaderTo2017_2.
+
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'test-all-types-2' ifNone: [self createFormDefinition].
 

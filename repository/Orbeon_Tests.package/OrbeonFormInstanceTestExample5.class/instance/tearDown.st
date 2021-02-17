@@ -6,3 +6,5 @@ tearDown
 	application unregisterDefinitionNamed: 'test-section-interation-name'.
 
 	super tearDown.
+
+	self getOrbeonWebServerConfiguration setOrbeonFormReaderTo2019_1.

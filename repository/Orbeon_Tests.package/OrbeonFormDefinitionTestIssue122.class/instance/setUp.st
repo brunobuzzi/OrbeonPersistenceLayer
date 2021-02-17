@@ -3,7 +3,7 @@ setUp
 
 	super setUp.
 
-	self getOrbeonWebServerConfiguration orbeonFormReaderClass: OrbeonXPathFormReader2020_1.
+	self getOrbeonWebServerConfiguration orbeonFormReaderClass: OrbeonXPathFormReader2019_1.
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
 
