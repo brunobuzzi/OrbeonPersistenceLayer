@@ -1,0 +1,4 @@
+other
+publishedComponentVersion
+
+	^publishedComponent version
