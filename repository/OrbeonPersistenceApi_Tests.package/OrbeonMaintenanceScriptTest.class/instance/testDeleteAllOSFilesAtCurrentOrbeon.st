@@ -1,4 +1,6 @@
 other
 testDeleteAllOSFilesAtCurrentOrbeon
 
-	self deleteAllOSFilesAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath
+	self deleteAllOSFilesAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath.
+
+	self testCreateEmptyAttachmentStructureAtCurrentOrbeon.
