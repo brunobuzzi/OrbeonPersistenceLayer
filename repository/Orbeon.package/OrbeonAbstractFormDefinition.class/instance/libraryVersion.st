@@ -1,4 +1,4 @@
 other
 libraryVersion
 
-	^self newFormReader libraryVersion
+	self subclassResponsibility

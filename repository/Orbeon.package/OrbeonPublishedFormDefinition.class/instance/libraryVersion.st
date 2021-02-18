@@ -1,0 +1,4 @@
+library
+libraryVersion
+
+	^definition libraryVersion
