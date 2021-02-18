@@ -2,6 +2,7 @@ other
 testDoItIfNotFound_creationRejected
 	| error |
  
+
 	apiOperation headerVersion: 'next'.
 
 	apiOperation doItIfNotFound: [self assert: false].
