@@ -8,3 +8,5 @@ getXpathForNodeContent
 	iterationXpath := iterationName ifNotNil: [iterationName] ifNil: [name, '-iteration']. "does NOT have a Custom Iteration Name"
 
 	^name, '/', iterationXpath
+
+	"^name"
