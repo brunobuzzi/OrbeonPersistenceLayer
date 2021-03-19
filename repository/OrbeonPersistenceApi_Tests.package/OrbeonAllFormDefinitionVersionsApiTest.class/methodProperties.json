@@ -4,5 +4,6 @@
 	"instance" : {
 		"setUp" : "brunobb 09/04/2020 13:21",
 		"testDoIt" : "brunobb 09/02/2020 11:32",
-		"testDoItAllForms" : "brunobb 09/03/2020 13:53",
+		"testDoItAllFormsFalse" : "brunobb 02/19/2021 12:43",
+		"testDoItAllFormsTrue" : "brunobb 02/19/2021 12:47",
 		"testDoItAllVersions" : "brunobb 09/02/2020 11:35" } }
