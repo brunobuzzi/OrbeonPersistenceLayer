@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "NewOrbeonFormInstanceTest",
+	"pools" : [
+		 ],
+	"super" : "OrbeonFormTest",
+	"type" : "normal" }
