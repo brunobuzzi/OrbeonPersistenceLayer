@@ -5,6 +5,7 @@ getXmlNodeForRunnerHome: anOrbeonFormDefinition with: anXMLWriter
 	anXMLWriter tag: 'form' with: [
 		anXMLWriter tag: 'application-name' with: anOrbeonFormDefinition getApplicationName.
 		anXMLWriter tag: 'form-name' with: anOrbeonFormDefinition formName.
+		anXMLWriter tag: 'form-version' with: anOrbeonFormDefinition printVersion.
 		anXMLWriter tag: 'title' with: anOrbeonFormDefinition title.
 		anXMLWriter tag: 'description' with: anOrbeonFormDefinition description.
 		anXMLWriter tag: 'last-modified-time' with: anOrbeonFormDefinition modifiedTime asOrbeonDateTimeString.
