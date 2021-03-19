@@ -6,7 +6,6 @@ createGridsFor: aFormSectionInstance xmlSegment: xmlSubSegment
 	sectionDefinition := aFormSectionInstance sectionDefinition.
 	"iteration over grid definitions of the <FormSectionDefinition> sectionDefinition "
 	sectionDefinition gridNamesDo: [:gridName | | gridDefinition grid xmlGrid |
-
 		gridDefinition := sectionDefinition getGridDefinitionNamed: gridName. "get the actual grid definition"
 		grid := FormGridInstance newNamed: gridName definition: gridDefinition. "create the grid instance"
 		"iterate over each grid iterations. Each Grid Iteration is a Dictionary where the key is the field name and the value is the field value "
