@@ -1,0 +1,15 @@
+{
+	"category" : "Orbeon_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"formOne",
+		"formTwo" ],
+	"name" : "NewFormDefinitionComparatorTest",
+	"pools" : [
+		 ],
+	"super" : "FormComparatorTest",
+	"type" : "normal" }

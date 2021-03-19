@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "FormInstanceComparatorTest",
+		"reader" ],
+	"name" : "NewOrbeonFormReaderTest",
 	"pools" : [
 		 ],
-	"super" : "FormComparatorTest",
+	"super" : "TestCase",
 	"type" : "normal" }
