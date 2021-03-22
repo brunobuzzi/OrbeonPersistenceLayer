@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonDataFormat4_0_0",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDataFormatVersion",
+	"type" : "normal" }
