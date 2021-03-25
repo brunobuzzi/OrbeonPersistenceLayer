@@ -6,19 +6,19 @@ doItAndSetVersion: setVersionBlock ifNotFound: notFoundBlock
 	It also called when a new Form Instance page is about to be displayed (app/form/new)"
 	| application latestDefinition headerVersion |
 
-	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^notFoundBlock value].
+	application := self getOrbeonApplicationClass 
+									applicationNamed: self getApplicationName 
+									ifNone: [^(appName = 'orbeon') ifFalse: [notFoundBlock value] ifTrue: [self defaultLibrarySourceTemplate]].
 
 	headerVersion := headerVersionValue ifNil: [application getLastFormDefinitionVersionOf: self getFormName] ifNotNil: [Number fromString: headerVersionValue].
 
 	"fix issue #340"
-	latestDefinition := application getDefinitionNamed: formName withVersion: headerVersion ifNone: [^notFoundBlock value].
+	latestDefinition := application getDefinitionNamed: formName 
+												withVersion: headerVersion 
+												ifNone: [^(formName = 'library') ifFalse: [notFoundBlock value] ifTrue: [self defaultLibrarySourceTemplate]].
 
 	setVersionBlock value: latestDefinition printVersion.
 
 	latestDefinition isDeleted ifTrue: [^notFoundBlock value].
-
-	"^self decodeFromUTF8: latestDefinition xmlString"
-
-	"^latestDefinition xmlString decodeFromUTF8ToString"
 
 	^latestDefinition xmlString

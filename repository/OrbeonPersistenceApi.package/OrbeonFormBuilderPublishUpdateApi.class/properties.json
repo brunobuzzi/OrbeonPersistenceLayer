@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"orbeonDataFormatVersion" ],
-	"name" : "OrbeonSwitchAvailabilityApi",
+		"headerVersion",
+		"application",
+		"publishedFormDefinition" ],
+	"name" : "OrbeonFormBuilderPublishUpdateApi",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormRunnerApi",
+	"super" : "OrbeonFormBuilderApi",
 	"type" : "normal" }
