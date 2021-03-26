@@ -8,7 +8,7 @@ doItAndSetVersion: setVersionBlock ifNotFound: notFoundBlock
 
 	application := self getOrbeonApplicationClass 
 									applicationNamed: self getApplicationName 
-									ifNone: [^(appName = 'orbeon') ifFalse: [notFoundBlock value] ifTrue: [self defaultLibrarySourceTemplate]].
+									ifNone: [^((appName = 'orbeon') or: [formName = 'library']) ifFalse: [notFoundBlock value] ifTrue: [self defaultLibrarySourceTemplate]].
 
 	headerVersion := headerVersionValue ifNil: [application getLastFormDefinitionVersionOf: self getFormName] ifNotNil: [Number fromString: headerVersionValue].
 
