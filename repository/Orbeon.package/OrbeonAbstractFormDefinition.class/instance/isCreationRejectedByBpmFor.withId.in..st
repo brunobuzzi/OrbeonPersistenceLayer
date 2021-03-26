@@ -13,11 +13,9 @@ isCreationRejectedByBpmFor: fNamed withId: fId in: appName
 	So if aBpmProcessDefinition already exist (using) FormDefinitions 
 	--> app name and form name can NOT be renamed."
 	(self defaultProcessDefinitionClass getAllVersionsIn: self getApplicationName) do: [:eachDef | 
-		(eachDef getOrbeonTasks anySatisfy: [:eachTask | [(eachTask name = self formName) and: 
-																						[self id ~= fId]]]) 
-		ifTrue: [^true "creation rejected"]
+		(eachDef getOrbeonTasks anySatisfy: [:eachTask | (eachTask name = self formName) and: [self id ~= fId]]) 
+		ifTrue: [^true "creation rejected"].
 	].
-
 
 	^(self getOrbeonApplicationClass includesDefinitionNamed: fNamed in: appName) 
 			and:[(self applicationName = appName) 
