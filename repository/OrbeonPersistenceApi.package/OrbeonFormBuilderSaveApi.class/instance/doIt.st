@@ -3,7 +3,7 @@ doIt
 	"This service is called by Orbeon when a user click on -Save- inside the Form Builder.
 	A Form Definition has been saved "
 	| latestSavedDefinition |
-self halt.
+
 	(self getFormName isNil or: [self getApplicationName isNil]) ifTrue: [self setApplicationAndFormNameFromXmlString].
 
 	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: self getFormName app: self getApplicationName ifNone: [nil].
