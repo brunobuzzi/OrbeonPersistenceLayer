@@ -1,7 +1,10 @@
 metadata
 isSingleton
 	"Answer whether or not the form definition is a Singleton form or not"
+	| node |
 
-	^(xmlDocument findElementNamed: 'singleton')
-		ifNotNil: [:value | value strings isEmpty ifTrue: [false] ifFalse: [(value strings last) = 'true']]
-		ifNil: [false].
+	node := self getXmlSingletonNodeIfNone: [^false].
+
+	node strings isEmpty ifTrue: [OrbeonInvalidXMLException signal: '<singleton> node value is invalid'].
+
+	^node strings last = 'true'

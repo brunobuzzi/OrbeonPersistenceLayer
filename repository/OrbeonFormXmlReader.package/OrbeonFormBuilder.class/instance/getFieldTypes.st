@@ -4,7 +4,8 @@ getFieldTypes
 	| fieldTypes |
 
 	fieldTypes := Dictionary new.
-	xmlDocument allElementsNamed: self dataFormatVersion xfBindXpath do: [:eachBindNode | 
-			fieldTypes at: (eachBindNode attributeAt: 'name') 
-							put: (self getTypeFrom: eachBindNode)].
+
+	(xmlDocument xPath: self defaultOrbeonXpathVersion xfBindXpath) do: [:eachBindNode |  
+		fieldTypes at: (eachBindNode attributeAt: 'name') put: (self getTypeFrom: eachBindNode)].
+
 	^fieldTypes

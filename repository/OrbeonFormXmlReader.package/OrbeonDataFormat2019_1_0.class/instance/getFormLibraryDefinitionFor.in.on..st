@@ -1,0 +1,4 @@
+double dispatch
+getFormLibraryDefinitionFor: anOrbeonPublishedFormDefinition in: appName on: anOrbeonFormBuilder
+
+	^anOrbeonFormBuilder getFormLibraryDefinition_from2019_1_0_format_For: anOrbeonPublishedFormDefinition in: appName

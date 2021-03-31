@@ -1,6 +1,6 @@
 metadata
 getXmlAvailableNodeIfNone: aBlock
 
-	^(xmlDocument findElementNamed: self dataFormatVersion xfInstanceFormAvailableXpath)
-		ifNotNil: [:value | value]
-		ifNil: aBlock.
+	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceFormAvailableXpath)
+		ifEmpty: aBlock 
+		ifNotEmpty: [:collection | collection first]

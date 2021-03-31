@@ -5,7 +5,6 @@ createExternalFileObjectFor: anOrbeonFormDefinition field: aFormFieldDefinition 
 
 	fileId := self getValueFrom: xmlNode.
 	fileId ifNil: [^nil].
-
 	fileId := (fileId subStrings: '=') last.
 	
 	aFormFieldDefinition isAnnotationField

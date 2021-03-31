@@ -1,7 +1,5 @@
 orbeon sections
 formSubSectionsOf: xmlElement
-	| subSections |
+	"Answer a collection with the subsection of <xmlElement>"
 
-	subSections := OrderedCollection new.
-	xmlElement elementsAt: self dataFormatVersion frSectionXpath do: [:eachSection | subSections add: eachSection].
-	^subSections
+	^(xmlElement xPath: self defaultOrbeonXpathVersion frSectionXpath) asOrderedCollection
