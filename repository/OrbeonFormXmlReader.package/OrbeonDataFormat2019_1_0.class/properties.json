@@ -1,0 +1,14 @@
+{
+	"category" : "OrbeonFormXmlReader",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OrbeonDataFormat2019_1_0",
+	"pools" : [
+		 ],
+	"super" : "OrbeonDataFormatVersion",
+	"type" : "normal" }

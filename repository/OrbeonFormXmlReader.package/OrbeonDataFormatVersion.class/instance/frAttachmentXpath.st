@@ -1,0 +1,4 @@
+attachments
+frAttachmentXpath
+
+	self subclassResponsibility

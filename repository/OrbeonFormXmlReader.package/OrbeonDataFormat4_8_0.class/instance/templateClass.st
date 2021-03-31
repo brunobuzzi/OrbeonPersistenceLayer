@@ -1,0 +1,4 @@
+other
+templateClass
+
+	^OrbeonFormDefinitionTemplateUpTo2017_1

@@ -1,0 +1,4 @@
+metadata
+xfFormIsSingletonXpath
+
+	^'//metadata/singleton'

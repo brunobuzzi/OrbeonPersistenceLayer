@@ -1,0 +1,4 @@
+section
+frFieldsInSectionXpath
+
+	self subclassResponsibility

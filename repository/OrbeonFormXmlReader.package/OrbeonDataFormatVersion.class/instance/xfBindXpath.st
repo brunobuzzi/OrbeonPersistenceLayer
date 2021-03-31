@@ -1,0 +1,4 @@
+binding
+xfBindXpath
+
+	self subclassResponsibility

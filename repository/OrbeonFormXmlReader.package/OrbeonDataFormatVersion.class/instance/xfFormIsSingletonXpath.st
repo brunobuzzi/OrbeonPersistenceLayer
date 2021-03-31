@@ -1,0 +1,4 @@
+metadata
+xfFormIsSingletonXpath
+
+	self subclassResponsibility

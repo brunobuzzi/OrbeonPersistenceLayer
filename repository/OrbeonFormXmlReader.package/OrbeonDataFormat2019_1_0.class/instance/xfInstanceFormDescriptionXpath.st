@@ -1,0 +1,4 @@
+metadata
+xfInstanceFormDescriptionXpath
+
+	^'//metadata/description'

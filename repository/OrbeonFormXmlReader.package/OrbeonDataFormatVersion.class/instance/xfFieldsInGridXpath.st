@@ -1,0 +1,4 @@
+grid
+xfFieldsInGridXpath
+
+	self subclassResponsibility

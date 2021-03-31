@@ -1,0 +1,4 @@
+document
+usFieldsInDocumentXpath
+
+	self subclassResponsibility

@@ -1,0 +1,4 @@
+section
+xhBodyFrViewFrBodyFrSectionsXpath
+
+	self subclassResponsibility

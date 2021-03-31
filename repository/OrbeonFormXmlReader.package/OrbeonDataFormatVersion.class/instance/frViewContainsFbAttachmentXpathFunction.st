@@ -1,0 +1,4 @@
+function
+frViewContainsFbAttachmentXpathFunction
+
+	self subclassResponsibility
