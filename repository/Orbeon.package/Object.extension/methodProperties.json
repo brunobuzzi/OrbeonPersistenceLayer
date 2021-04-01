@@ -1,8 +1,10 @@
 {
 	"class" : {
+		"defaultOrbeonDataFormatVersion" : "brunobb 04/01/2021 12:51",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:09",
 		"getOrbeonWebServerConfiguration" : "BrunoBB 02/03/2016 10:07" },
 	"instance" : {
+		"defaultOrbeonDataFormatVersion" : "brunobb 04/01/2021 12:49",
 		"defaultXFormReaderClass" : "brunobb 03/12/2020 15:14",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:08",
 		"getOrbeonWebServerConfiguration" : "BrunoBB 02/03/2016 08:44",
