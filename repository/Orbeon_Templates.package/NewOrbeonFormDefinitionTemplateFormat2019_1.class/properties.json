@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon_Templates",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "NewOrbeonFormDefinitionTemplateFormat2019_1",
+	"pools" : [
+		 ],
+	"super" : "NewOrbeonFormDefinitionTemplate",
+	"type" : "normal" }

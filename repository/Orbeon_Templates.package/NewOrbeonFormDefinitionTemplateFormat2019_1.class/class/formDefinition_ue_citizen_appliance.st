@@ -1,5 +1,5 @@
 visa process
-formDefinition_citizen_appliance_2
+formDefinition_ue_citizen_appliance
 
 ^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -13,111 +13,119 @@ formDefinition_citizen_appliance_2
          xmlns:saxon="http://saxon.sf.net/"
          xmlns:sql="http://orbeon.org/oxf/xml/sql"
          xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-         xmlns:fb="http://orbeon.org/oxf/xml/form-builder">
+         xmlns:fb="http://orbeon.org/oxf/xml/form-builder"
+         fr:data-format-version="2019.1.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <xh:title>Visa Citizen Appliance</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
-         <!-- Main instance -->
-         <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
+            <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
                     <internal-section>
-                        <s/>
-                        <k/>
-                        <uuid/>
-                        <oop/>
-                        <assignmentOop/>
+                        <grid-1>
+                            <s/>
+                            <k/>
+                            <uuid/>
+                            <oop/>
+                            <assignmentOop/>
+                        </grid-1>
                     </internal-section>
                     <section-11>
-                        <username/>
-                        <rol/>
-                        <processId/>
+                        <grid-2>
+                            <username/>
+                            <rol/>
+                            <processId/>
+                        </grid-2>
                     </section-11>
                     <section-12>
-                        <citizenName/>
-                        <citizenSurname/>
-                        <citizenEmail/>
-                        <citizenPhone/>
-                        <citizenBirth/>
-                        <gender/>
-                        <originCountry/>
-                        <citizenId/>
+                        <grid-3>
+                            <citizenName/>
+                            <citizenSurname/>
+                            <citizenEmail/>
+                            <citizenPhone/>
+                            <citizenBirth/>
+                            <gender/>
+                            <originCountry/>
+                            <citizenId/>
+                        </grid-3>
                     </section-12>
                 </form>
             </xf:instance>
-            <!-- Bindings -->
-         <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
+            <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
                 <xf:bind id="internal-section-bind" name="internal-section" ref="internal-section">
-                    <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''s'')"/>
-                    <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''k'')"/>
-                    <xf:bind id="uuid-bind" ref="uuid" name="uuid"
-                             xxf:default="xxf:get-request-parameter(''token'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''token'')"/>
-                    <xf:bind id="oop-bind" ref="oop" name="oop"
-                             xxf:default="xxf:get-request-parameter(''oop'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''oop'')"/>
-                    <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''oop2'')"
-                             xxf:default="xxf:get-request-parameter(''oop2'')"/>
+                    <xf:bind id="grid-1-bind" ref="grid-1" name="grid-1">
+                        <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''s'')"/>
+                        <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''k'')"/>
+                        <xf:bind id="uuid-bind" ref="uuid" name="uuid"
+                                 xxf:default="xxf:get-request-parameter(''token'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''token'')"/>
+                        <xf:bind id="oop-bind" ref="oop" name="oop"
+                                 xxf:default="xxf:get-request-parameter(''oop'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''oop'')"/>
+                        <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''oop2'')"
+                                 xxf:default="xxf:get-request-parameter(''oop2'')"/>
+                    </xf:bind>
                 </xf:bind>
                 <xf:bind id="section-11-bind" ref="section-11" name="section-11">
-                    <xf:bind id="username-bind" ref="username" name="username" required="true()"
-                             readonly="true()"/>
-                    <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
-                             readonly="true()"/>
-                    <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
+                    <xf:bind id="grid-2-bind" ref="grid-2" name="grid-2">
+                        <xf:bind id="username-bind" ref="username" name="username" required="true()"
+                                 readonly="true()"/>
+                        <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
+                        <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
+                                 readonly="true()"/>
+                    </xf:bind>
                 </xf:bind>
                 <xf:bind id="section-12-bind" ref="section-12" name="section-12">
-                    <xf:bind id="citizenName-bind" ref="citizenName" name="citizenName" required="true()"/>
-                    <xf:bind id="citizenSurname-bind" ref="citizenSurname" name="citizenSurname"
-                             required="true()"/>
-                    <xf:bind id="citizenEmail-bind" ref="citizenEmail" name="citizenEmail" type="xf:email"
-                             required="true()"/>
-                    <xf:bind id="citizenPhone-bind" ref="citizenPhone" name="citizenPhone" required="true()"/>
-                    <xf:bind id="citizenBirth-bind" ref="citizenBirth" name="citizenBirth" type="xs:date"
-                             required="true()"/>
-                    <xf:bind id="gender-bind" ref="gender" name="gender" required="true()"/>
-                    <xf:bind id="originCountry-bind" ref="originCountry" name="originCountry"
-                             required="true()"/>
-                    <xf:bind id="citizenId-bind" ref="citizenId" name="citizenId" required="true()"
-                             type="xs:positiveInteger"/>
+                    <xf:bind id="grid-3-bind" ref="grid-3" name="grid-3">
+                        <xf:bind id="citizenName-bind" ref="citizenName" name="citizenName" required="true()"/>
+                        <xf:bind id="citizenSurname-bind" ref="citizenSurname" name="citizenSurname"
+                                 required="true()"/>
+                        <xf:bind id="citizenEmail-bind" ref="citizenEmail" name="citizenEmail" type="xf:email"
+                                 required="true()"/>
+                        <xf:bind id="citizenPhone-bind" ref="citizenPhone" name="citizenPhone" required="true()"/>
+                        <xf:bind id="citizenBirth-bind" ref="citizenBirth" name="citizenBirth" type="xs:date"
+                                 required="true()"/>
+                        <xf:bind id="gender-bind" ref="gender" name="gender" required="true()"/>
+                        <xf:bind id="originCountry-bind" ref="originCountry" name="originCountry"
+                                 required="true()"/>
+                        <xf:bind id="citizenId-bind" ref="citizenId" name="citizenId" required="true()"
+                                 type="xs:positiveInteger"/>
+                    </xf:bind>
                 </xf:bind>
             </xf:bind>
-            <!-- Metadata -->
-         <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
+            <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>ue-test</application-name>
+                    <application-name>ue</application-name>
+                    <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
                     <form-name>citizen-appliance</form-name>
                     <title xml:lang="en">Visa Citizen Appliance</title>
                     <description xml:lang="en">Process of Visa Citizen Appliance</description>
                     <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
                     <description xml:lang="es"/>
                     <singleton>false</singleton>
-                    
+                    <available>false</available>
                 </metadata>
             </xf:instance>
-            <!-- Attachments -->
-         <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
                 <attachments>
                     <css mediatype="text/css" filename="" size=""/>
                     <pdf mediatype="application/pdf" filename="" size=""/>
                 </attachments>
             </xf:instance>
-            <!-- All form resources -->
-         <!-- Dont make readonly by default in case a service modifies the resources -->
-         <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
                         <citizenName>
@@ -334,29 +342,19 @@ formDefinition_citizen_appliance_2
                            mediatype="application/xml"
                            replace="instance"
                            instance="fr-service-response-instance"/>
-            
             <xf:action id="security-action-binding">
-            <!-- React to event... on control... -->
-            <xf:action event="fr-run-form-load-action-after-controls" ev:observer="fr-form-model"
+                <xf:action event="fr-run-form-load-action-after-controls" ev:observer="fr-form-model"
                            if="true()">
-               <!-- Service to call -->
-               <xf:send submission="security-token-submission"/>            
+                    <xf:send submission="security-token-submission"/>            
                 </xf:action> 
-                <!-- Request actions -->
-            <xf:action event="xforms-submit" ev:observer="security-token-submission">
-               <!-- Get reference to initial request -->
-               <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
-                    <!-- Copy over to read-write request instance -->
-               <xf:insert ref="instance(''fr-service-request-instance'')"
+                <xf:action event="xforms-submit" ev:observer="security-token-submission">
+                    <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
+                    <xf:insert ref="instance(''fr-service-request-instance'')"
                                origin="saxon:parse(instance($request-instance-name))"/>
-                    <!--<xf:insert ref="instance(''fr-service-request-instance'')" origin="instance($request-instance-name)"/>-->
-               <!-- Set values if needed -->
-               <xf:action context="instance(''fr-service-request-instance'')">
-                  <!-- Setvalue actions will be here -->
+                    <xf:action context="instance(''fr-service-request-instance'')">
                </xf:action>
                 </xf:action>
-                <!-- Response actions -->
-            <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
+                <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
                            context="instance(''fr-service-response-instance'')">
                     <xf:action class="fr-set-control-value-action">
                         <xf:var name="control-name" value="''username''"/>
@@ -370,18 +368,17 @@ formDefinition_citizen_appliance_2
                         <xf:var name="control-name" value="''processId''"/>
                         <xf:var name="control-value" value="/result/processid"/>
                     </xf:action>
-                    <!-- Response actions will be here -->
-            </xf:action>
+                </xf:action>
             </xf:action>
         </xf:model>
    </xh:head>
    <xh:body>
         <fr:view>
-            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
+            <fr:body xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:xbl="http://www.w3.org/ns/xbl"
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
-                    <fr:grid id="grid-1-grid">
+                    <fr:grid id="grid-1-grid" bind="grid-1-bind">
                         <fr:c y="1" x="1" w="4">
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
@@ -422,7 +419,7 @@ formDefinition_citizen_appliance_2
                 </fr:section>
                 <fr:section id="section-11-control" bind="section-11-bind">
                     <xf:label ref="$form-resources/section-11/label"/>
-                    <fr:grid id="grid-2-grid">
+                    <fr:grid id="grid-2-grid" bind="grid-2-bind">
                         <fr:c y="1" x="1" w="4">
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
@@ -442,14 +439,13 @@ formDefinition_citizen_appliance_2
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                    
                                 </xf:input>
                             </fr:c>
                     </fr:grid>
                 </fr:section>
                 <fr:section id="section-12-control" bind="section-12-bind">
                     <xf:label ref="$form-resources/section-12/label"/>
-                    <fr:grid id="grid-3-grid">
+                    <fr:grid id="grid-3-grid" bind="grid-3-bind">
                         <fr:c y="1" x="1" w="6">
                                 <xf:input id="citizenName-control" bind="citizenName-bind" class="fr-summary fr-search">
                                     <xf:label ref="$form-resources/citizenName/label"/>
@@ -480,11 +476,14 @@ formDefinition_citizen_appliance_2
                                 </xf:input>
                             </fr:c>
                         <fr:c y="3" x="1" w="6">
-                                <xf:input id="citizenBirth-control" bind="citizenBirth-bind">
+                                <fr:date xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+                                     xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+                                     id="citizenBirth-control"
+                                     bind="citizenBirth-bind">
                                     <xf:label ref="$form-resources/citizenBirth/label"/>
                                     <xf:hint ref="$form-resources/citizenBirth/hint"/>
                                     <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                </xf:input>
+                                </fr:date>
                             </fr:c>
                         <fr:c y="3" x="7" w="6">
                                 <xf:select1 id="gender-control" appearance="full" bind="gender-bind">
