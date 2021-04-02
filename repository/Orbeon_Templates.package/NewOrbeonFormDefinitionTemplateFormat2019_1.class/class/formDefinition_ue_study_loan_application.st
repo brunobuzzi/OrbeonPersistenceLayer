@@ -1,5 +1,5 @@
 event based gateway
-form_proceed_purchase_2
+formDefinition_ue_study_loan_application
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -13,104 +13,120 @@ form_proceed_purchase_2
          xmlns:saxon="http://saxon.sf.net/"
          xmlns:sql="http://orbeon.org/oxf/xml/sql"
          xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-         xmlns:fb="http://orbeon.org/oxf/xml/form-builder">
+         xmlns:fb="http://orbeon.org/oxf/xml/form-builder"
+         fr:data-format-version="2019.1.0">
    <xh:head>
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <xh:title>Proceed House Purchase</xh:title>
+        <xh:title>Study Loan Application</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
-         <!-- Main instance -->
-         <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
+            <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
                     <internal-section>
-                        <s/>
-                        <k/>
-                        <uuid/>
-                        <oop/>
-                        <assignmentOop/>
+                        <grid-1>
+                            <s/>
+                            <k/>
+                            <uuid/>
+                            <oop/>
+                            <assignmentOop/>
+                        </grid-1>
                     </internal-section>
                     <section-11>
-                        <username/>
-                        <rol/>
-                        <processId/>
+                        <grid-2>
+                            <username/>
+                            <rol/>
+                            <processId/>
+                        </grid-2>
                     </section-11>
                     <section-20>
-                        <transferDate/>
-                        <purchaseDetails/>
+                        <grid-4>
+                            <purchaseProcessId/>
+                            <loanDecision/>
+                            <loanApproved/>
+                        </grid-4>
                     </section-20>
                 </form>
             </xf:instance>
-            <!-- Bindings -->
-         <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
+            <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
                 <xf:bind id="internal-section-bind" name="internal-section" ref="internal-section">
-                    <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''s'')"/>
-                    <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''k'')"/>
-                    <xf:bind id="uuid-bind" ref="uuid" name="uuid"
-                             xxf:default="xxf:get-request-parameter(''token'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''token'')"/>
-                    <xf:bind id="oop-bind" ref="oop" name="oop"
-                             xxf:default="xxf:get-request-parameter(''oop'')"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''oop'')"/>
-                    <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
-                             required="true()"
-                             readonly="true()"
-                             calculate="xxf:get-request-parameter(''oop2'')"
-                             xxf:default="xxf:get-request-parameter(''oop2'')"/>
+                    <xf:bind id="grid-1-bind" ref="grid-1" name="grid-1">
+                        <xf:bind id="s-bind" name="s" ref="s" xxf:default="xxf:get-request-parameter(''s'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''s'')"/>
+                        <xf:bind id="k-bind" ref="k" name="k" xxf:default="xxf:get-request-parameter(''k'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''k'')"/>
+                        <xf:bind id="uuid-bind" ref="uuid" name="uuid"
+                                 xxf:default="xxf:get-request-parameter(''token'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''token'')"/>
+                        <xf:bind id="oop-bind" ref="oop" name="oop"
+                                 xxf:default="xxf:get-request-parameter(''oop'')"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''oop'')"/>
+                        <xf:bind id="assignmentOop-bind" ref="assignmentOop" name="assignmentOop"
+                                 required="true()"
+                                 readonly="true()"
+                                 calculate="xxf:get-request-parameter(''oop2'')"
+                                 xxf:default="xxf:get-request-parameter(''oop2'')"/>
+                    </xf:bind>
                 </xf:bind>
                 <xf:bind id="section-11-bind" ref="section-11" name="section-11">
-                    <xf:bind id="username-bind" ref="username" name="username" required="true()"
-                             readonly="true()"/>
-                    <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
-                             readonly="true()"/>
-                    <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
+                    <xf:bind id="grid-2-bind" ref="grid-2" name="grid-2">
+                        <xf:bind id="username-bind" ref="username" name="username" required="true()"
+                                 readonly="true()"/>
+                        <xf:bind id="rol-bind" ref="rol" name="rol" required="true()" readonly="true()"/>
+                        <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
+                                 readonly="true()"/>
+                    </xf:bind>
                 </xf:bind>
                 <xf:bind id="section-20-bind" ref="section-20" name="section-20">
-                    <xf:bind id="transferDate-bind" ref="transferDate" name="transferDate" type="xf:date"/>
-                    <xf:bind id="purchaseDetails-bind" ref="purchaseDetails" name="purchaseDetails"/>
+                    <xf:bind id="grid-4-bind" ref="grid-4" name="grid-4">
+                        <xf:bind id="purchaseProcessId-bind" ref="purchaseProcessId" name="purchaseProcessId"
+                                 xxf:whitespace="trim"
+                                 type="xf:integer"/>
+                        <xf:bind id="loanDecision-bind" ref="loanDecision" name="loanDecision"/>
+                        <xf:bind id="loanApproved-bind" ref="loanApproved" name="loanApproved" type="xf:boolean"/>
+                    </xf:bind>
                 </xf:bind>
             </xf:bind>
-            <!-- Metadata -->
-         <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
+            <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
-                    <application-name>ue-test</application-name>
-                    <form-name>proceed-purchase</form-name>
-                    <title xml:lang="en">Proceed House Purchase</title>
-                    <description xml:lang="en">Proceed House Purchase</description>
-                    <title xml:lang="es">Petición de Permiso de Construccion CASA</title>
+                    <application-name>ue</application-name>
+                    <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
+                    <form-name>study-loan-application</form-name>
+                    <title xml:lang="en">Study Loan Application</title>
+                    <description xml:lang="en">Study Loan Application</description>
                     <description xml:lang="es"/>
+                    <available>false</available>
                 </metadata>
             </xf:instance>
-            <!-- Attachments -->
-         <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
                 <attachments>
                     <css mediatype="text/css" filename="" size=""/>
                     <pdf mediatype="application/pdf" filename="" size=""/>
                 </attachments>
             </xf:instance>
-            <!-- All form resources -->
-         <!-- Dont make readonly by default in case a service modifies the resources -->
-         <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
+            <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
-                        <transferDate>
-                            <label>Transfer Date</label>
+                        <purchaseProcessId>
+                            <label>House Purchase Process Id</label>
                             <hint/>
-                        </transferDate>
-                        <purchaseDetails>
-                            <label>Purchase Details</label>
+                        </purchaseProcessId>
+                        <loanDecision>
+                            <label>Loan Decision</label>
                             <hint/>
-                        </purchaseDetails>
+                        </loanDecision>
+                        <loanApproved>
+                            <label>Loan Approved</label>
+                            <hint/>
+                        </loanApproved>
                         <section-20>
-                            <label>Proceed Purchase</label>
+                            <label>Loan Application</label>
                             <help/>
                         </section-20>
                         <username>
@@ -154,14 +170,18 @@ form_proceed_purchase_2
                         </section-11>
                     </resource>
                     <resource xml:lang="es">
-                        <transferDate>
+                        <purchaseProcessId>
                             <label/>
                             <hint/>
-                        </transferDate>
-                        <purchaseDetails>
+                        </purchaseProcessId>
+                        <loanDecision>
                             <label/>
                             <hint/>
-                        </purchaseDetails>
+                        </loanDecision>
+                        <loanApproved>
+                            <label/>
+                            <hint/>
+                        </loanApproved>
                         <section-20>
                             <label/>
                             <help/>
@@ -224,27 +244,18 @@ form_proceed_purchase_2
                            replace="instance"
                            instance="fr-service-response-instance"/>
             <xf:action id="security-action-binding">
-            <!-- React to event... on control... -->
-            <xf:action event="fr-run-form-load-action-after-controls" ev:observer="fr-form-model"
+                <xf:action event="fr-run-form-load-action-after-controls" ev:observer="fr-form-model"
                            if="true()">
-               <!-- Service to call -->
-               <xf:send submission="security-token-submission"/>            
+                    <xf:send submission="security-token-submission"/>            
                 </xf:action> 
-                <!-- Request actions -->
-            <xf:action event="xforms-submit" ev:observer="security-token-submission">
-               <!-- Get reference to initial request -->
-               <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
-                    <!-- Copy over to read-write request instance -->
-               <xf:insert ref="instance(''fr-service-request-instance'')"
+                <xf:action event="xforms-submit" ev:observer="security-token-submission">
+                    <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
+                    <xf:insert ref="instance(''fr-service-request-instance'')"
                                origin="saxon:parse(instance($request-instance-name))"/>
-                    <!--<xf:insert ref="instance(''fr-service-request-instance'')" origin="instance($request-instance-name)"/>-->
-               <!-- Set values if needed -->
-               <xf:action context="instance(''fr-service-request-instance'')">
-                  <!-- Setvalue actions will be here -->
+                    <xf:action context="instance(''fr-service-request-instance'')">
                </xf:action>
                 </xf:action>
-                <!-- Response actions -->
-            <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
+                <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
                            context="instance(''fr-service-response-instance'')">
                     <xf:action class="fr-set-control-value-action">
                         <xf:var name="control-name" value="''username''"/>
@@ -258,18 +269,17 @@ form_proceed_purchase_2
                         <xf:var name="control-name" value="''processId''"/>
                         <xf:var name="control-value" value="/result/processid"/>
                     </xf:action>
-                    <!-- Response actions will be here -->
-            </xf:action>
+                </xf:action>
             </xf:action>
         </xf:model>
    </xh:head>
    <xh:body>
         <fr:view>
-            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
+            <fr:body xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:xbl="http://www.w3.org/ns/xbl"
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="internal-section-control" bind="internal-section-bind">
                     <xf:label ref="$form-resources/internal-section/label"/>
-                    <fr:grid id="grid-1-grid">
+                    <fr:grid id="grid-1-grid" bind="grid-1-bind">
                         <fr:c y="1" x="1" w="4">
                                 <xf:input id="s-control" bind="s-bind">
                                     <xf:label ref="$form-resources/s/label"/>
@@ -310,7 +320,7 @@ form_proceed_purchase_2
                 </fr:section>
                 <fr:section id="section-11-control" bind="section-11-bind">
                     <xf:label ref="$form-resources/section-11/label"/>
-                    <fr:grid id="grid-2-grid">
+                    <fr:grid id="grid-2-grid" bind="grid-2-bind">
                         <fr:c y="1" x="1" w="4">
                                 <xf:input id="username-control" bind="username-bind">
                                     <xf:label ref="$form-resources/username/label"/>
@@ -336,20 +346,30 @@ form_proceed_purchase_2
                 </fr:section>
                 <fr:section id="section-20-control" bind="section-20-bind">
                     <xf:label ref="$form-resources/section-20/label"/>
-                    <fr:grid id="grid-4-grid">
+                    <fr:grid id="grid-4-grid" bind="grid-4-bind">
                         <fr:c y="1" x="1" w="12">
-                            <xf:input id="transferDate-control" bind="transferDate-bind">
-                                <xf:label ref="$form-resources/transferDate/label"/>
-                                <xf:hint ref="$form-resources/transferDate/hint"/>
+                            <fr:number id="purchaseProcessId-control" bind="purchaseProcessId-bind">
+                                <xf:label ref="$form-resources/purchaseProcessId/label"/>
+                                <xf:hint ref="$form-resources/purchaseProcessId/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
+                            </fr:number>
                             </fr:c>
                         <fr:c x="1" y="2" w="12">
-                            <xf:textarea id="purchaseDetails-control" bind="purchaseDetails-bind">
-                                <xf:label ref="$form-resources/purchaseDetails/label"/>
-                                <xf:hint ref="$form-resources/purchaseDetails/hint"/>
+                            <xf:textarea id="loanDecision-control" bind="loanDecision-bind">
+                                <xf:label ref="$form-resources/loanDecision/label"/>
+                                <xf:hint ref="$form-resources/loanDecision/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                             </xf:textarea>
+                        </fr:c>
+                        <fr:c x="1" y="3" w="12">
+                            <fr:yesno-input xmlns="http://orbeon.org/oxf/xml/form-builder"
+                                            xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
+                                            id="loanApproved-control"
+                                            bind="loanApproved-bind">
+                                <xf:label ref="$form-resources/loanApproved/label"/>
+                                <xf:hint ref="$form-resources/loanApproved/hint"/>
+                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
+                            </fr:yesno-input>
                         </fr:c>
                     </fr:grid>
                 </fr:section>
