@@ -1,5 +1,5 @@
 iterator
-formDefinition_iteratorV3withPermissions
+formDefinition_ue_iterator_v3
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -48,18 +48,6 @@ formDefinition_iteratorV3withPermissions
                     <description xml:lang="en"/>
                     <created-with-version>2018.2.3.201905172253 PE</created-with-version>
                     <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
-                    <permissions>
-                        <permission operations="read">
-                            <group-member/>
-                        </permission>
-                        <permission operations="read update delete">
-                            <owner/>
-                        </permission>
-                        <permission operations="create"/>
-                        <permission operations="read update delete">
-                            <user-role any-of="admin"/>
-                        </permission>
-                    </permissions>
                     <available>false</available>
                 </metadata>
             </xf:instance>

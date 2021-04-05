@@ -1,5 +1,5 @@
 iterator
-formDefinition_iteratorV3withPermissions
+formDefinition_ue_iterator_v1
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -25,8 +25,6 @@ formDefinition_iteratorV3withPermissions
                     <section-1>
                         <grid-1>
                             <name/>
-                            <surname/>
-                            <number/>
                         </grid-1>
                     </section-1>
                 </form>
@@ -35,8 +33,6 @@ formDefinition_iteratorV3withPermissions
                 <xf:bind id="section-1-bind" name="section-1" ref="section-1">
                     <xf:bind id="grid-1-bind" ref="grid-1" name="grid-1">
                         <xf:bind id="name-bind" name="name" ref="name" xxf:whitespace="trim"/>
-                        <xf:bind id="surname-bind" ref="surname" name="surname" xxf:whitespace="trim"/>
-                        <xf:bind id="number-bind" ref="number" name="number" type="xf:decimal"/>
                     </xf:bind>
                 </xf:bind>
             </xf:bind>
@@ -48,18 +44,6 @@ formDefinition_iteratorV3withPermissions
                     <description xml:lang="en"/>
                     <created-with-version>2018.2.3.201905172253 PE</created-with-version>
                     <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
-                    <permissions>
-                        <permission operations="read">
-                            <group-member/>
-                        </permission>
-                        <permission operations="read update delete">
-                            <owner/>
-                        </permission>
-                        <permission operations="create"/>
-                        <permission operations="read update delete">
-                            <user-role any-of="admin"/>
-                        </permission>
-                    </permissions>
                     <available>false</available>
                 </metadata>
             </xf:instance>
@@ -76,14 +60,6 @@ formDefinition_iteratorV3withPermissions
                             <label>Name</label>
                             <hint/>
                         </name>
-                        <surname>
-                            <label>Surname</label>
-                            <hint/>
-                        </surname>
-                        <number>
-                            <label>Number</label>
-                            <hint/>
-                        </number>
                     </resource>
                 </resources>
             </xf:instance>
@@ -96,32 +72,13 @@ formDefinition_iteratorV3withPermissions
                 <fr:section id="section-1-section" bind="section-1-bind">
                     <xf:label ref="$form-resources/section-1/label"/>
                     <fr:grid id="grid-1-grid" bind="grid-1-bind">
-                        <fr:c y="1" x="1" w="4">
+                        <fr:c y="1" x="1" w="12">
                                 <xf:input id="name-control" bind="name-bind" class="fr-summary fr-search">
                                     <xf:label ref="$form-resources/name/label"/>
                                     <xf:hint ref="$form-resources/name/hint"/>
                                 <xf:alert ref="$fr-resources/detail/labels/alert"/>
                                 </xf:input>
                             </fr:c>
-                        <fr:c x="5" y="1" w="4" h="1">
-                            <xf:input id="surname-control" bind="surname-bind" class="fr-search fr-summary">
-                                <xf:label ref="$form-resources/surname/label"/>
-                                <xf:hint ref="$form-resources/surname/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </xf:input>
-                        </fr:c>
-                        <fr:c x="9" y="1" w="4" h="1">
-                            <fr:number xmlns="http://orbeon.org/oxf/xml/form-builder"
-                                       xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"
-                                       xmlns:NumberSupport="java:org.orbeon.xbl.NumberSupportJava"
-                                       id="number-control"
-                                       bind="number-bind"
-                                       class="fr-summary fr-search">
-                                <xf:label ref="$form-resources/number/label"/>
-                                <xf:hint ref="$form-resources/number/hint"/>
-                                <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                            </fr:number>
-                        </fr:c>
                     </fr:grid>
                 </fr:section>
             </fr:body>
