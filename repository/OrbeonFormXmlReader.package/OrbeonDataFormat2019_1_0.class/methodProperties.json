@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"templateClass" : "brunobb 04/05/2021 14:06" },
+		"definitionTemplateClass" : "brunobb 04/05/2021 14:29",
+		"instanceTemplateClass" : "brunobb 04/05/2021 14:32" },
 	"instance" : {
 		"containsClassFbAttachmentXpathFunction" : "brunobb 03/31/2021 09:59",
 		"createExternalFileObjectFor:field:node:on:" : "brunobb 03/31/2021 10:42",

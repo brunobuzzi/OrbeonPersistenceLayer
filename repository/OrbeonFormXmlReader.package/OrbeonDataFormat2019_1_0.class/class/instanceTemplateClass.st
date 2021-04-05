@@ -1,0 +1,4 @@
+other
+instanceTemplateClass
+
+	^NewOrbeonFormInstanceTemplateFormat2019_1

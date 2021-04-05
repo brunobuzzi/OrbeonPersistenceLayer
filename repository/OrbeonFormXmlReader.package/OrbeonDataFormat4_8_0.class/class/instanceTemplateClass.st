@@ -1,4 +1,4 @@
 other
-templateClass
+instanceTemplateClass
 
 	self notYetImplemented

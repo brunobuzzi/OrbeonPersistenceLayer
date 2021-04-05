@@ -1,8 +1,9 @@
 {
 	"class" : {
 		"default" : "brunobb 03/31/2021 09:50",
-		"setAsDefault" : "brunobb 03/31/2021 09:51",
-		"templateClass" : "brunobb 04/05/2021 14:06" },
+		"definitionTemplateClass" : "brunobb 04/05/2021 14:30",
+		"instanceTemplateClass" : "brunobb 04/05/2021 14:30",
+		"setAsDefault" : "brunobb 03/31/2021 09:51" },
 	"instance" : {
 		"comboBoxName" : "brunobb 03/31/2021 09:59",
 		"containsClassFbAttachmentXpathFunction" : "brunobb 03/31/2021 09:59",

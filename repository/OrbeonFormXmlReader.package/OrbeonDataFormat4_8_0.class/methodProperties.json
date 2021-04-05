@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"templateClass" : "brunobb 04/05/2021 14:08" },
+		"definitionTemplateClass" : "brunobb 04/05/2021 14:32",
+		"instanceTemplateClass" : "brunobb 04/05/2021 14:32" },
 	"instance" : {
 		"createExternalFileObjectFor:field:node:on:" : "brunobb 03/31/2021 10:58",
 		"createGridsFor:xmlSegment:on:" : "brunobb 03/31/2021 10:58",
