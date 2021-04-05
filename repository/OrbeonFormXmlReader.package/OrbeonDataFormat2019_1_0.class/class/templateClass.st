@@ -1,0 +1,4 @@
+other
+templateClass
+
+	^NewOrbeonFormDefinitionTemplateFormat2019_1
