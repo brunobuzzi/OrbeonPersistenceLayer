@@ -1,0 +1,4 @@
+*Orbeon_Templates
+newDefinitionTemplate
+
+	^self defaultOrbeonDataFormatVersion definitionTemplateClass new
