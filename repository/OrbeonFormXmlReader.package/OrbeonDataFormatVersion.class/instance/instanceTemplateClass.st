@@ -1,4 +1,4 @@
-other
+templates
 instanceTemplateClass
 
 	self subclassResponsibility

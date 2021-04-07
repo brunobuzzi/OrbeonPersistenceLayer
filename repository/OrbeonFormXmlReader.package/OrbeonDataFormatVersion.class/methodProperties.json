@@ -1,14 +1,13 @@
 {
 	"class" : {
 		"default" : "brunobb 03/31/2021 09:50",
-		"definitionTemplateClass" : "brunobb 04/05/2021 14:30",
-		"instanceTemplateClass" : "brunobb 04/05/2021 14:30",
 		"setAsDefault" : "brunobb 03/31/2021 09:51" },
 	"instance" : {
 		"comboBoxName" : "brunobb 03/31/2021 09:59",
 		"containsClassFbAttachmentXpathFunction" : "brunobb 03/31/2021 09:59",
 		"createExternalFileObjectFor:field:node:on:" : "brunobb 03/31/2021 10:42",
 		"createGridsFor:xmlSegment:on:" : "brunobb 03/31/2021 10:52",
+		"definitionTemplateClass" : "brunobb 04/06/2021 14:12",
 		"frAttachmentXpath" : "brunobb 03/31/2021 09:59",
 		"frFieldsInDocumentXpath" : "brunobb 03/31/2021 09:59",
 		"frFieldsInGridXpath" : "brunobb 03/31/2021 09:59",
@@ -24,6 +23,7 @@
 		"frWpaintXpath" : "brunobb 03/31/2021 09:59",
 		"getCustomAttachmentIdOn:" : "brunobb 03/31/2021 10:52",
 		"getFormLibraryDefinitionFor:in:on:" : "brunobb 03/31/2021 10:54",
+		"instanceTemplateClass" : "brunobb 04/06/2021 14:12",
 		"printName" : "brunobb 04/01/2021 12:50",
 		"searchFieldsXPath" : "brunobb 03/31/2021 09:59",
 		"summaryFieldsXPath" : "brunobb 03/31/2021 09:59",

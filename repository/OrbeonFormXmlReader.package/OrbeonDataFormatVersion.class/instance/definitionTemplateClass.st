@@ -1,4 +1,4 @@
-other
+templates
 definitionTemplateClass
 
 	self subclassResponsibility
