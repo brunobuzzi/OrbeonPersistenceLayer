@@ -1,7 +1,6 @@
 instance creation
 for: xmlOrbeonFormDefinition
 
-	^super new initialize
-		xmlDefinition: xmlOrbeonFormDefinition;
-		parseXMLDefinition;
+	^self new 
+		setXmlDefinition: xmlOrbeonFormDefinition;
 		yourself

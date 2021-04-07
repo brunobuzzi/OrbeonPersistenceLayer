@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"for:" : "brunobb 03/31/2021 10:08",
+		"for:" : "brunobb 04/07/2021 14:06",
 		"for:orbeonVersion:" : "brunobb 03/31/2021 10:09",
-		"for:with:" : "brunobb 03/31/2021 10:09" },
+		"for:with:" : "brunobb 04/07/2021 14:06" },
 	"instance" : {
 		"addAnyOnePermissionTo:fromString:" : "brunobb 03/31/2021 10:09",
 		"addPermissionTo:fromString:using:" : "brunobb 03/31/2021 10:44",
@@ -65,6 +65,8 @@
 		"searchFormFieldsIn:" : "brunobb 03/31/2021 10:46",
 		"searchFormFieldsNameIn:" : "brunobb 03/31/2021 10:12",
 		"setAvailableNodeValueWith:" : "brunobb 03/31/2021 10:12",
+		"setXmlDefinition:" : "brunobb 04/07/2021 14:03",
+		"setXmlDefinition:setXmlInstanceDocument:" : "brunobb 04/07/2021 14:08",
 		"setXmlInstanceDocument:" : "brunobb 03/31/2021 10:12",
 		"summaryFormFieldsIn:" : "brunobb 03/31/2021 10:46",
 		"summaryFormFieldsNameIn:" : "brunobb 03/31/2021 10:12",
