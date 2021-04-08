@@ -6,5 +6,6 @@ buildDefinitionFrom: xmlString name: formName version: version in: anOrbeonAppli
 	^self buildDefinitionFrom: xmlString
 			name: formName 
 			version: version 
+			id: UUID new asString
 			in: anOrbeonApplication 
 			title: title
