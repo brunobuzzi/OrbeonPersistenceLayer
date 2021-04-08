@@ -4,7 +4,7 @@ testNonRepeatableToRepeatableStructure
 
 	formInstance := (OrbeonFormInstance newFor: form withId: UUID new asString)
 					definition: form;
-					xmlString: self newInstanceTemplate formInstance_ue_issue122;
+					xmlString: self newInstanceTemplate formInstance_ue_issue_122;
 					buildForm;
 					yourself.
 

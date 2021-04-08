@@ -1,5 +1,5 @@
 issue 122
-formInstance_ue_issue122
+formInstance_ue_issue_122
 
 	^'<?xml version="1.0" encoding="UTF-8"?>
 <form xmlns:fr="http://orbeon.org/oxf/xml/form-runner" fr:data-format-version="4.0.0">
