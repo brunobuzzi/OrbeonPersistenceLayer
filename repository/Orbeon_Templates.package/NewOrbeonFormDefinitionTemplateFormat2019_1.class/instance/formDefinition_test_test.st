@@ -119,7 +119,7 @@ formDefinition_test_test
                             <user-role any-of="admins"/>
                         </permission>
                     </permissions>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">

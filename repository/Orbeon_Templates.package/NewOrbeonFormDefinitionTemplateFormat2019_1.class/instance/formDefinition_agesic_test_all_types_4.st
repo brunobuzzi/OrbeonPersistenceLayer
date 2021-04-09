@@ -148,7 +148,7 @@ formDefinition_agesic_test_all_types_4
                         </permission>
                     </permissions>
                     <singleton>false</singleton>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">

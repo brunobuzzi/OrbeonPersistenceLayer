@@ -100,7 +100,7 @@ formDefinition_agesic_test_section_interaction_name
                     <title xml:lang="en">Test Section Interation Name</title>
                     <description xml:lang="en"/>
                     <singleton>false</singleton>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
