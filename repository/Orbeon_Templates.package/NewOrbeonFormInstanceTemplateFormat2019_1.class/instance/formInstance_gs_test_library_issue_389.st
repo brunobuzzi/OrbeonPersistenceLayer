@@ -1,5 +1,5 @@
 issue 389
-formInstance_issue_389
+formInstance_gs_test_library_issue_389
 	^'<?xml version="1.0" encoding="UTF-8"?>
 <form xmlns:fr="http://orbeon.org/oxf/xml/form-runner" fr:data-format-version="4.0.0">
 	<section-2>

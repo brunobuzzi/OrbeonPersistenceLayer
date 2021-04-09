@@ -1,4 +1,0 @@
-other
-getRandomXMLFormInstance
-
-	^OrbeonFormInstanceTemplate form_test_random

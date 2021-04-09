@@ -3,7 +3,6 @@
 		 },
 	"instance" : {
 		"createFormDefinition" : "brunobb 02/17/2021 10:56",
-		"getRandomXMLFormInstance" : "BrunoBB 08/20/2016 09:41",
 		"setUp" : "brunobb 02/17/2021 11:06",
 		"tearDown" : "brunobb 02/17/2021 11:07",
 		"testFieldInstances" : "BrunoBB 07/24/2016 15:55",
