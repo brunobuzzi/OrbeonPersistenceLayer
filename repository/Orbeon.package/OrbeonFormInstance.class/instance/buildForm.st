@@ -1,9 +1,8 @@
 form building
 buildForm
-	"Set the values of receiver field's from <xmlString> using an orbeon form reader.
-	The receiver has a dictionary (fieldName>value) to hold fields."
+	"Set the values of receiver field's from <xmlString> using an orbeon form builder"
 
-	sections := self newFormBuilder createSectionsInstancesWith: definition. "Create the GS Sections from the XML string"
+	self buildFormSections.
 
 	definition addInstance: self.
 
