@@ -1,4 +1,4 @@
-image annotation
+test x
 formDefinition_agesic_test_2
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"

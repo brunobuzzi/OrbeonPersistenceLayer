@@ -4,14 +4,14 @@ setUp
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application 
-						definitionNamed: 'test-2' 
-						ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_2
-											name: 'test-2'
+						definitionNamed: 'test-3' 
+						ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_3
+											name: 'test-3'
 											in: 'agesic'
-											title: 'Test 2'].
+											title: 'Test 3'].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;
-					xmlString: self newInstanceTemplate formInstance_agesic_test_2 ;
+					xmlString: self newInstanceTemplate formInstance_agesic_test_3 ;
 					buildForm;
 					yourself.
