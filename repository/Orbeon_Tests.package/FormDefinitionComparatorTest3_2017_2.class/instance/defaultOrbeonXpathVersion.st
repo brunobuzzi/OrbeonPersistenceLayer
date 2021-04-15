@@ -1,4 +1,0 @@
-other
-defaultOrbeonXpathVersion
-
-	^self getOrbeonXmlXpathFrom2017_2

@@ -1,4 +1,0 @@
-other
-defaultForm1FormDefinition
-
-	^OrbeonFormDefinitionTemplateUpTo2017_1 form_withAllField_Types_no_Attachements_02

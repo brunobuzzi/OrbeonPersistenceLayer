@@ -11,5 +11,5 @@
 	"name" : "NewFormDefinitionComparatorTest",
 	"pools" : [
 		 ],
-	"super" : "FormComparatorTest",
+	"super" : "TestCase",
 	"type" : "normal" }
