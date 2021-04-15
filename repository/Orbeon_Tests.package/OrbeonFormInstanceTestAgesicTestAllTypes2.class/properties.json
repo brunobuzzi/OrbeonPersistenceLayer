@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"formOne",
-		"formTwo" ],
-	"name" : "FormComparatorTest",
+		 ],
+	"name" : "OrbeonFormInstanceTestAgesicTestAllTypes2",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "OrbeonFormInstanceTest",
 	"type" : "normal" }

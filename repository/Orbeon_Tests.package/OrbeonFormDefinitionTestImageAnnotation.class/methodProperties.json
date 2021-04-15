@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"setUp" : "brunobb 04/15/2021 13:53",
+		"tearDown" : "brunobb 04/15/2021 13:53",
+		"testFormFieldsInSection1" : "brunobb 04/15/2021 13:53",
+		"testFormFieldsInSection2" : "brunobb 04/15/2021 13:53",
+		"testFormFieldsInSection21" : "brunobb 04/15/2021 13:53",
+		"testFormFieldsInSection7" : "brunobb 04/15/2021 13:53",
+		"testGridInSection11" : "brunobb 04/15/2021 13:53",
+		"testGridInSection2" : "brunobb 04/15/2021 13:53",
+		"testIsSingleton" : "brunobb 04/15/2021 13:53",
+		"testMainSectionsStructure" : "brunobb 04/15/2021 13:53",
+		"testPermissions" : "brunobb 04/15/2021 13:53" } }

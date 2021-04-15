@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"formOne",
-		"formTwo" ],
-	"name" : "FormComparatorTest",
+		"formDefinition_v1",
+		"formDefinition_1_1" ],
+	"name" : "OrbeonFormInstanceTestUpgradeDefinition",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "OrbeonFormInstanceTest",
 	"type" : "normal" }
