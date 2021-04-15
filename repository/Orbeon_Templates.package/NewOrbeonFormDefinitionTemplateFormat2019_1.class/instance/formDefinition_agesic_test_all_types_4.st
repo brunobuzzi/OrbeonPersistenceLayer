@@ -154,6 +154,9 @@ formDefinition_agesic_test_all_types_4
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
                 <attachments>
                     <css mediatype="text/css" filename="" size=""/>
+                    <pdf name="Template" lang="" filename="37673595+-+2021+-+4.pdf"
+                         mediatype="application/pdf"
+                         size="16013">/fr/service/persistence/crud/orbeon/builder/data/832d55c7330bd185a843b802269035cfb0f595bc/35a384f9dcd3982e91b0b8e9d63986ddc618a630.bin</pdf>
                 </attachments>
             </xf:instance>
             <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">

@@ -127,7 +127,7 @@ formDefinition_agesic_test_all_types_3
                             <user-role any-of="orbeon-agesic-uaip-admin"/>
                         </permission>
                     </permissions>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">

@@ -31,7 +31,7 @@ testXmlFormDefinition_agesic_test_all_types_4
 	self deny: builder isAvailable.
 
 "CustomPDFAttachment"
-	self assert: builder getCustomAttachmentId equals: 'e483cd29568e074402e8461223977d0ac23be915'.
+	self assert: builder getCustomAttachmentId equals: '35a384f9dcd3982e91b0b8e9d63986ddc618a630.bin'.
 
 "Description"
 	self assert: (builder getDescription = '').
