@@ -1,4 +1,0 @@
-other
-defaultFormDefinition
-
-	^OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_example_4
