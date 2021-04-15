@@ -1,4 +1,0 @@
-xpath version
-setOrbeonFormReaderTo2019_1
-
-	orbeonFormReaderClass := OrbeonXPathFormReader2019_1

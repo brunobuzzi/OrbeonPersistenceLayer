@@ -1,17 +1,11 @@
 other
 createFormDefinition
-	| application xPathManager form |
+	| application form |
 
-	self getOrbeonWebServerConfiguration orbeonFormReaderClass: OrbeonXPathFormReader2019_1.
-
-	xPathManager := OrbeonXmlPath2017_2 new.
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'migration'.
 	application unregisterDefinitionNamed: 'all-fields-types'.
-	form := application definitionNamed: 'all-fields-types' ifNone: [self createFormStructureFor: 'all-fields-types' in: 'migration' definitionTemplate: #formDefinition_all_fields_types title: 'Test' xPathVersion: xPathManager].
-
-	form xmlString: OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_all_fields_types;
-		title: 'Test'.
-
-	form processXMLDefinitionFor: xPathManager.
+	form := application 
+					definitionNamed: 'all-fields-types' 
+					ifNone: [self buildFormStructureFrom: self newDefinitionTemplate  formDefinition_migration_all_fields_types name: 'all-fields-types' in: 'migration' title: 'Test'].
 
 	^form
