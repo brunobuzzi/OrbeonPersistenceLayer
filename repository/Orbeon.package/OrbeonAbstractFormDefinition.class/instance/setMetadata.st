@@ -2,6 +2,6 @@ other
 setMetadata
 	| formReader |
 
-	formReader := self newFormReader.
+	formReader := self newFormBuilder.
 
 	self setMetadataWith: formReader.

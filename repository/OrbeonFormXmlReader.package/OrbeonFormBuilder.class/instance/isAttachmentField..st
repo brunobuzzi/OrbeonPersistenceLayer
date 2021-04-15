@@ -5,11 +5,11 @@ isAttachmentField: fieldNode
 	'fr:wpaint' - (image annotation) - the attachment is an image to make annotations.
 	class= 'fb-attachment' - (fixed image attachments) - attachment can NOT be removed from form instance"
 
-	^((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frAttachmentXpath)
-		or:[((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frImageAttachmentXpath)
-			or:[((fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frWpaintXpath)
-				or: [(fieldNode xPath: self defaultOrbeonXpathVersion containsClassFbAttachmentXpathFunction) notEmpty 
-					or: [(fieldNode xPath: 'name()') = self defaultOrbeonXpathVersion frImageXpath]
+	^((fieldNode xPath: 'name()') = self defaultOrbeonDataFormatVersion frAttachmentXpath)
+		or:[((fieldNode xPath: 'name()') = self defaultOrbeonDataFormatVersion frImageAttachmentXpath)
+			or:[((fieldNode xPath: 'name()') = self defaultOrbeonDataFormatVersion frWpaintXpath)
+				or: [(fieldNode xPath: self defaultOrbeonDataFormatVersion containsClassFbAttachmentXpathFunction) notEmpty 
+					or: [(fieldNode xPath: 'name()') = self defaultOrbeonDataFormatVersion frImageXpath]
 				]
 			]
 		]

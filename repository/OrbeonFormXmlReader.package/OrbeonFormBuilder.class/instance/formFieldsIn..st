@@ -6,7 +6,7 @@ formFieldsIn: xmlSection
 
 	orbeonXPath := self dataFormatVersion.
 	fields := OrderedCollection new.
-	(xmlSection xPath: self defaultOrbeonXpathVersion frGridsNoRepeatXpath) "does NOT contain attribute <repeat>"
+	(xmlSection xPath: self defaultOrbeonDataFormatVersion frGridsNoRepeatXpath) "does NOT contain attribute <repeat>"
 		do: [:eachGrid | 
 			(eachGrid xPath: orbeonXPath frFieldsInSectionXpath) addAllTo: fields.
 			(eachGrid xPath: orbeonXPath usFieldsInSectionXpath) addAllTo: fields.

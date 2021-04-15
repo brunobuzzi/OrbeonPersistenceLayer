@@ -1,4 +1,4 @@
 other
 setTitleAndDescription
 
-	self setTitleAndDescriptionWith: self newFormReader
+	self setTitleAndDescriptionWith: self newFormBuilder

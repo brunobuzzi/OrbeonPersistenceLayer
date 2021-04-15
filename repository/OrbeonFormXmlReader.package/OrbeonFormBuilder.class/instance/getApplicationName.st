@@ -1,7 +1,7 @@
 metadata
 getApplicationName
 
-	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceApplicationNameXpath)
+	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceApplicationNameXpath)
 		ifEmpty: [OrbeonInvalidXMLException signal: '<application-name> node is missing'] 
 		ifNotEmpty: [:collection | 
 			collection first strings isEmpty 

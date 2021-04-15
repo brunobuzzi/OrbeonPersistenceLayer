@@ -4,7 +4,7 @@ getPermissions
 	| permissions permissionNodes |
 
 	permissions := OrbeonPermissions new.
-	permissionNodes := xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceFormPermissionsXpath.
+	permissionNodes := xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceFormPermissionsXpath.
  	permissionNodes ifNotEmpty: [permissions isEnabled: true].
 
 	permissionNodes do: [:node |

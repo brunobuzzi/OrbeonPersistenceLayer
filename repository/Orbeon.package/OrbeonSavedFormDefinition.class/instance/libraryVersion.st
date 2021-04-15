@@ -1,4 +1,4 @@
 library
 libraryVersion
 
-	^self newFormReader libraryVersion
+	^self newFormBuilder libraryVersion

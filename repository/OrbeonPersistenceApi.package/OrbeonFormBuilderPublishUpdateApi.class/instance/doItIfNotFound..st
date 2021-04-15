@@ -14,7 +14,7 @@ doItIfNotFound: aBlock
 					updateLastModifiedTime;
 					xmlString: xmlString.
 
-	reader := publishedFormDefinition newFormReader.
+	reader := publishedFormDefinition newFormBuilder.
 	"<isAvailable> is set after <xmlString> was set (if not the previous value is picked)"
 	publishedFormDefinition isAvailable: reader isAvailable. 
 	

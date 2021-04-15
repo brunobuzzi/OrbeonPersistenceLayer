@@ -1,7 +1,7 @@
 metadata
 getTitle
 
-	^(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceFormTitleXpath)
+	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceFormTitleXpath)
 		ifEmpty: [OrbeonInvalidXMLException signal: '<title> node is missing'] 
 		ifNotEmpty: [:collection | 
 			collection first strings isEmpty 

@@ -5,7 +5,7 @@ formFieldsLabels
 
 	fieldsLabels := Dictionary new.
 
-	(xmlDocument xPath: self defaultOrbeonXpathVersion xfInstanceResourcesXpath) do: [:each |  | originalLabel textNode |
+	(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceResourcesXpath) do: [:each |  | originalLabel textNode |
 		textNode := each elementAt: 'label' ifAbsent: [nil].
 
 		originalLabel := textNode 

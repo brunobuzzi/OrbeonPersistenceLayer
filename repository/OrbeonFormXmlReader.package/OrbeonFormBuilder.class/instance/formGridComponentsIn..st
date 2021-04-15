@@ -6,6 +6,6 @@ formGridComponentsIn: xmlSection
 	grids := OrderedCollection new.
 
 	"includes attribute -repeat-"
-	(xmlSection xPath: self defaultOrbeonXpathVersion frGridsRepeatXpath) addAllTo: grids. 
+	(xmlSection xPath: self defaultOrbeonDataFormatVersion frGridsRepeatXpath) addAllTo: grids. 
 	
 	^grids
