@@ -12,6 +12,6 @@ upgradeDefinition
 	"All <OrbeonFieldValueHolder> have been already processed with the previous definition <oldDefinition> but the new definition <newDefinition> has no holder --> we set the flag to <false> and holder will be added"
 	fieldsValues do: [:valueHolder | valueHolder alreadyAddedToFormDefinition: false]. 
 
-	self processXML. "update fields based on the new definition"
+	self buildForm. "update fields based on the new definition"
  
 	self removeFieldsValuesIn: oldDefinition.
