@@ -2,6 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"buildFormStructureFrom:name:id:in:title:" : "brunobb 04/15/2021 14:21",
+		"buildFormStructureFrom:name:version:id:in:title:" : "brunobb 04/15/2021 14:21",
+		"buildFormStructureFrom:name:version:in:title:" : "brunobb 04/15/2021 14:22",
 		"createFormStructureFor:in:definitionTemplate:title:xPathVersion:" : "brunobb 08/26/2020 10:41",
 		"createFormStructureFor:version:id:in:definitionTemplate:title:xPathVersion:" : "brunobb 08/26/2020 11:22",
 		"createFormStructureFor:version:in:definitionTemplate:title:xPathVersion:" : "brunobb 08/26/2020 11:21",
