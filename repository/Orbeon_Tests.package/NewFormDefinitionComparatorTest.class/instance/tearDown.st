@@ -1,4 +1,0 @@
-other
-tearDown
-
-	super tearDown.
