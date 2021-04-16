@@ -2,7 +2,7 @@ tests
 testXmlFormDefinition_test_test
 	| fields types grids summaryFields subSection |
 
-	builder := OrbeonFormBuilder for: self newDefinitionTemplate formDefinition_test_test.
+	builder := self defaultOrbeonFormBuilderClass for: self newDefinitionTemplate formDefinition_test_test.
 
 "Availability"
 	self assert: builder isAvailable.

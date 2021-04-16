@@ -1,0 +1,4 @@
+*orbeon
+defaultOrbeonFormBuilderClass
+
+	^OrbeonFormBuilder
