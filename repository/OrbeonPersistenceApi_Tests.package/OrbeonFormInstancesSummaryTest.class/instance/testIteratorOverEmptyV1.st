@@ -2,7 +2,7 @@ test
 testIteratorOverEmptyV1
 	| formDefinition |
 
-	formDefinition := OrbeonSavedFormDefinition createDefinition: 'iterator' version: 1 with: #formDefinition_iteratorV1 in: self application. "create the <OrbeonPublishedFormDefinition>"
+	formDefinition := OrbeonSavedFormDefinition buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v1 name: 'iterator' version: 1 in: self application.
 
 	"page size = 10 and 16 forms"
 	self createSummaryVersion: 1 pageNumber: 1 pageSize: 10.

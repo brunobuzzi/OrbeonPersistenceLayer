@@ -3,11 +3,14 @@ testIteratorOverV1andV2andV3
 	| formDefinition id |
 
 	id := UUID new asString.
-	formDefinition := OrbeonSavedFormDefinition createDefinition: 'iterator' version: 1 id: id with: #formDefinition_iteratorV1 in: self application. "create the <OrbeonPublishedFormDefinition>"
+	formDefinition := OrbeonSavedFormDefinition buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v1 name: 'iterator' version: 1 id: id in: self application.
 
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |
-		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v1_name: withValues: (Array with: each) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV1.
+		OrbeonSavedFormDefinition buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each)
+													definitionNamed: 'iterator' 
+													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v1
+													app: self application 
 	].
 
 	"page size = 10 and 16 forms"
@@ -34,10 +37,13 @@ testIteratorOverV1andV2andV3
 	self createSummaryVersion: 1 pageNumber: 1 pageSize: 16.
 	self assert: (summary contents size = 16).
 
-	formDefinition := OrbeonSavedFormDefinition createDefinition: 'iterator' version: 2 id: id with: #formDefinition_iteratorV2 in: self application. "create the <OrbeonPublishedFormDefinition>"
+	formDefinition := OrbeonSavedFormDefinition buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v2 name: 'iterator' version: 2 id: id in: self application.
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |
-		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v2_name:surname: withValues: (Array with: each with: each) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV2.
+		OrbeonSavedFormDefinition buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each surname: each)
+													definitionNamed: 'iterator' 
+													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v2
+													app: self application 
 	].
 
 	self assert: (summary getAllVersions size = 2).
@@ -58,10 +64,13 @@ testIteratorOverV1andV2andV3
 	self createSummaryVersion: 1 pageNumber: 1 pageSize: 16.
 	self assert: (summary contents size = 16).
 
-	formDefinition := OrbeonSavedFormDefinition createDefinition: 'iterator' version: 3 id: id with: #formDefinition_iteratorV3 in: self application. "create the <OrbeonPublishedFormDefinition>"
+	formDefinition := OrbeonSavedFormDefinition buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v3 name: 'iterator' version: 3 id: id in: self application.
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" keysAndValuesDo: [:key :each |
-		OrbeonSavedFormDefinition createFormInstance: #form_iterator_v3_name:surname:number: withValues: (Array with: each with: each with: key printString) definitionNamed: 'iterator' app: 'ue' definitionMethod: #formDefinition_iteratorV3.
+			OrbeonSavedFormDefinition buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each surname: each number: key printString)
+														definitionNamed: 'iterator' 
+														definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v3
+														app: self application
 	].
 
 	self assert: (summary getAllVersions size = 3).
