@@ -1,5 +1,5 @@
 all type conditions
-formDefinition_ue_all_types
+formDefinition_ue_all_field_types
 
 	^'<xh:html xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
