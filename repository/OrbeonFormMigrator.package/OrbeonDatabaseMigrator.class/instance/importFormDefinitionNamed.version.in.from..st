@@ -16,6 +16,6 @@ importFormDefinitionNamed: formDefinitionName version: version in: appName from:
 	gsDefinition definition id: gsDefinition id.
 	"gsDefinition id: 'ec6132c917fa583f3d527ae4fd1d526ad7354a8c'."
 
-	gsDefinition processXMLDefinition. "set the OrbeonFormDefinition with it's values -xml-"
+	gsDefinition buildForm. "set the OrbeonFormDefinition with it's values -xml-"
 
 	^gsDefinition

@@ -13,4 +13,4 @@ createPublishedDefinition
 		setTitleAndDescription;
 		xmlString: xmlString;
 		publish;
-		processXMLDefinition.
+		buildForm

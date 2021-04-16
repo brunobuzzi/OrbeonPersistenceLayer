@@ -25,7 +25,7 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 					dbDefnition := self execute: (sqlReader sqlGetFormDefinition: form version: (Integer fromString: version) of: app after: stringTimeStamp).
 					dbArray := dbDefnition subStrings: String tab.
 					currentDefinition updateFrom: dbArray. "the <xmlString> and inst var of the <currentDefinition> definition is update with the latest row of the SQL database"
-					currentDefinition processXMLDefinition;
+					currentDefinition buildForm;
 						updateSavedDefinition.
 					newDefinition := currentDefinition.].
 			].

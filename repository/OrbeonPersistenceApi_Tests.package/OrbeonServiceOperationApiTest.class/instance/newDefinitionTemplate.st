@@ -1,4 +1,0 @@
-other
-newDefinitionTemplate
-
-	^self defaultOrbeonDataFormatVersion definitionTemplateClass new

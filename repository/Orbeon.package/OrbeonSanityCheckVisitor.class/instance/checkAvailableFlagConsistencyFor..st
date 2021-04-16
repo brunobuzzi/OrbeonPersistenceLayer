@@ -2,8 +2,8 @@ sanity checks
 checkAvailableFlagConsistencyFor: anOrbeonPublishedFormDefinition
 	| publishedReader savedReader |
 
-	publishedReader := anOrbeonPublishedFormDefinition newFormReader.
-	savedReader := anOrbeonPublishedFormDefinition definition newFormReader.
+	publishedReader := anOrbeonPublishedFormDefinition newFormBuilder.
+	savedReader := anOrbeonPublishedFormDefinition definition newFormBuilder.
 
 	(publishedReader isAvailable =  savedReader isAvailable)
 	ifFalse: [OrbeonSanityCheckException signal: 'Inconsistency in <available> flag between Saved Definition and Published Definition'].

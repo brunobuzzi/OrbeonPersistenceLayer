@@ -35,5 +35,5 @@ doItIfNotFound: aBlock
 					version: publishedFormDefinition version;
 					xmlString: xmlString;
 					publish;
-					processXMLDefinition] 
+					buildForm] 
 	ifTrue: [application replaceCurrentDefinition: existingVersion with: publishedFormDefinition]
