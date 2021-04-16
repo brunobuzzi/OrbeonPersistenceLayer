@@ -19,7 +19,6 @@ formDefinition_ue_data_entry
         <xh:meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <xh:title>Data Entry</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true">
-         
             <xf:instance id="fr-form-instance" xxf:exclude-result-prefixes="#all" xxf:index="id">
                 <form>
                     <internal-section>
@@ -30,11 +29,6 @@ formDefinition_ue_data_entry
                             <oop/>
                             <assignmentOop/>
                         </grid-1>
-                        
-                        
-                        
-                        
-                        
                     </internal-section>
                     <section-11>
                         <grid-2>
@@ -42,9 +36,6 @@ formDefinition_ue_data_entry
                             <rol/>
                             <processId/>
                         </grid-2>
-                        
-                        
-                        
                     </section-11>
                     <section-12>
                         <grid-3>
@@ -52,14 +43,9 @@ formDefinition_ue_data_entry
                             <options2/>
                             <options3/>
                         </grid-3>
-                        
-                        
-                        
-                        
                     </section-12>
                 </form>
-            </xf:instance>
-            
+            </xf:instance>            
             <xf:bind id="fr-form-binds" ref="instance(''fr-form-instance'')">
                 <xf:bind id="internal-section-bind" name="internal-section" ref="internal-section">
                     <xf:bind id="grid-1-bind" ref="grid-1" name="grid-1">
@@ -87,11 +73,6 @@ formDefinition_ue_data_entry
                                  calculate="xxf:get-request-parameter(''oop2'')"
                                  xxf:default="xxf:get-request-parameter(''oop2'')"/>
                     </xf:bind>
-                    
-                    
-                    
-                    
-                    
                 </xf:bind>
                 <xf:bind id="section-11-bind" ref="section-11" name="section-11">
                     <xf:bind id="grid-2-bind" ref="grid-2" name="grid-2">
@@ -101,9 +82,6 @@ formDefinition_ue_data_entry
                         <xf:bind id="processId-bind" ref="processId" name="processId" required="true()"
                                  readonly="true()"/>
                     </xf:bind>
-                    
-                    
-                    
                 </xf:bind>
                 <xf:bind id="section-12-bind" ref="section-12" name="section-12">
                     <xf:bind id="grid-3-bind" ref="grid-3" name="grid-3">
@@ -111,13 +89,8 @@ formDefinition_ue_data_entry
                         <xf:bind id="options2-bind" ref="options2" name="options2"/>
                         <xf:bind id="options3-bind" ref="options3" name="options3"/>
                     </xf:bind>
-                    
-                    
-                    
-                    
                 </xf:bind>
             </xf:bind>
-            
             <xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
                 <metadata>
                     <application-name>ue</application-name>
@@ -130,16 +103,13 @@ formDefinition_ue_data_entry
                     <singleton>false</singleton>
                     <available>false</available>
                 </metadata>
-            </xf:instance>
-            
+            </xf:instance>            
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
                 <attachments>
                     <css mediatype="text/css" filename="" size=""/>
                     <pdf mediatype="application/pdf" filename="" size=""/>
                 </attachments>
-            </xf:instance>
-            
-         
+            </xf:instance> 
             <xf:instance id="fr-form-resources" xxf:readonly="false" xxf:exclude-result-prefixes="#all">
                 <resources>
                     <resource xml:lang="en">
@@ -200,7 +170,6 @@ formDefinition_ue_data_entry
                                 <hint/>
                             </item>
                         </options3>
-                        
                         <username>
                             <label>User</label>
                             <hint/>
@@ -302,8 +271,7 @@ formDefinition_ue_data_entry
                                 <value>3</value>
                                 <hint/>
                             </item>
-                        </options3>
-                        
+                        </options3>                        
                         <username>
                             <label>User</label>
                             <hint/>
@@ -365,28 +333,18 @@ formDefinition_ue_data_entry
                            mediatype="application/xml"
                            replace="instance"
                            instance="fr-service-response-instance"/>
-            
-            <xf:action id="security-action-binding">
-            
+            <xf:action id="security-action-binding">      
                 <xf:action event="fr-run-form-load-action-after-controls" ev:observer="fr-form-model"
                            if="true()">
-               
                     <xf:send submission="security-token-submission"/>            
                 </xf:action> 
-                
                 <xf:action event="xforms-submit" ev:observer="security-token-submission">
-               
                     <xf:var name="request-instance-name" value="''security-token-instance''" as="xs:string"/>
-                    
                     <xf:insert ref="instance(''fr-service-request-instance'')"
                                origin="saxon:parse(instance($request-instance-name))"/>
-                    
-               
                     <xf:action context="instance(''fr-service-request-instance'')">
-                  
                </xf:action>
                 </xf:action>
-                
                 <xf:action event="xforms-submit-done" ev:observer="security-token-submission"
                            context="instance(''fr-service-response-instance'')">
                     <xf:action class="fr-set-control-value-action">
@@ -401,7 +359,6 @@ formDefinition_ue_data_entry
                         <xf:var name="control-name" value="''processId''"/>
                         <xf:var name="control-value" value="/result/processid"/>
                     </xf:action>
-                    
                 </xf:action>
             </xf:action>
         </xf:model>
@@ -472,8 +429,7 @@ formDefinition_ue_data_entry
                                 <xf:input id="processId-control" bind="processId-bind">
                                     <xf:label ref="$form-resources/processId/label"/>
                                     <xf:hint ref="$form-resources/processId/hint"/>
-                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>
-                                    
+                                    <xf:alert ref="$fr-resources/detail/labels/alert"/>                                    
                                 </xf:input>
                             </fr:c>
                     </fr:grid>
