@@ -5,7 +5,7 @@ createFormInstanceWithId: formId creator: username group: group
 
 	self createFormStructure.
 
-	(self defaultOrbeonSaveApiClass newWithXml: OrbeonFormInstanceTemplate form_all_types_2 id:formId)
+	(self defaultOrbeonSaveApiClass newWithXml: self newInstanceTemplate formInstance_agesic_test_all_types_2 id:formId)
 		appName: 'agesic';
 		formName: 'test-all-types-4';
 		version: 1;

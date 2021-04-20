@@ -3,8 +3,7 @@ createFormStructureNoPermissions
 
 	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'st'.
 
-	^self createFormStructureFor: 'simple-registration' 
+	^self buildFormStructureFrom: self newDefinitionTemplate formDefinition_st_simple_registration
+			name: 'simple-registration'
 			in: 'st' 
-			definitionTemplate: #formDefinition_simple_registration 
-			title: 'Test'
-			xPathVersion: self getOrbeonXmlXpathFrom2017_2
+			title: 'Simple Registration'

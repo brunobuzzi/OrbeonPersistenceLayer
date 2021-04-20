@@ -1,8 +1,7 @@
 other
 createFormStructure
 
-	^self createFormStructureFor: 'energy-recursive' 
-			in: 'agesic' 
-			definitionTemplate: #form_energy_recursive_form 
+	^self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_energy_recursive 
+			name: 'energy-recursive' 
+			in: 'agesic'  
 			title: 'Energy Recursive Form'
-			xPathVersion: self getOrbeonXmlXpathFrom2017_2

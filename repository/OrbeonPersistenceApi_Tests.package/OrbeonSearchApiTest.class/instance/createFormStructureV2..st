@@ -3,10 +3,9 @@ createFormStructureV2: stringId
 
 	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	^self createFormStructureFor: 'test-all-types-4' 
-			version: 2 
+	^self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_4
+			name: 'test-all-types-4'
+			version: 2
 			id: stringId
 			in: 'agesic' 
-			definitionTemplate: #formDefinition_example_4 
-			title: 'Test' 
-			xPathVersion: self getOrbeonXmlXpathFrom2017_2
+			title: 'Test'
