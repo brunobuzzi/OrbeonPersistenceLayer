@@ -10,7 +10,7 @@ testDoIt
 	id := UUID new asString.
 	form := (OrbeonFormInstance newFor: definition withId: id)
 					definition: definition;
-					xmlString: OrbeonFormInstanceTemplate form_energy_survey_recursive;
+					xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive;
 					processXML;
 					yourself.
 

@@ -2,7 +2,7 @@ forms
 createRepeatableFormInstance: stringID
 	| newFormApi |
 
-	newFormApi := OrbeonFormSaveFinalApi newWithXml: OrbeonFormInstanceTemplate form_issue369_v1 id: stringID.
+	newFormApi := OrbeonFormSaveFinalApi newWithXml: self newInstanceTemplate formInstance_agesic_manual_form_issue_369 id: stringID.
 
 	newFormApi appName: 'agesic';
 		formName: 'manual-form';

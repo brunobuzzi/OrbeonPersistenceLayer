@@ -19,4 +19,4 @@ doIt
 		modifiedUser: modifiedUser;
 		groupname: group;
 		updateLastModifiedTime;
-		processXMLSections. "create the sections and fields but NOT the FormFieldValues"
+		buildFormSections "create the sections and fields but NOT the FormFieldValues"

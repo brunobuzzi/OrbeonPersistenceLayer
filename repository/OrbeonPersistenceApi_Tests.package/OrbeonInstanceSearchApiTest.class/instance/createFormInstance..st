@@ -2,7 +2,7 @@ forms
 createFormInstance: stringID
 	| newFormApi |
 
-	newFormApi := OrbeonFormSaveFinalApi newWithXml: OrbeonFormInstanceTemplate form_all_types_2 id: stringID.
+	newFormApi := OrbeonFormSaveFinalApi newWithXml: self newInstanceTemplate formInstance_agesic_test_all_types_2 id: stringID.
 
 	newFormApi appName: 'agesic';
 		formName: 'test-all-types-4';

@@ -9,8 +9,8 @@ testDoIt
 	form := (OrbeonFormInstance newFor: definition withId: id)
 					definition: definition;
 					draft: 'Y';
-					xmlString: OrbeonFormInstanceTemplate form_energy_survey_recursive;
-					processXMLSections;
+					xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive;
+					buildFormSections;
 					yourself.
 
 	definition addDraft: form.

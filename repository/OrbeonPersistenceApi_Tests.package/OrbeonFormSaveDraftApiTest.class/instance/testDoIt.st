@@ -5,7 +5,7 @@ testDoIt
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure].
 
-	apiOperation xmlString: OrbeonFormInstanceTemplate form_energy_survey_recursive.
+	apiOperation xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive.
 
 	self assert: (definition getDraftWithId: apiOperation id) isNil.
 	apiOperation doIt.
