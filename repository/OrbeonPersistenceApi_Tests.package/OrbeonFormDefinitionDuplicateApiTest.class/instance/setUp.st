@@ -5,4 +5,4 @@ setUp
 
 	self createFormDefinition.
 
-	apiOperation := OrbeonFormDefinitionDuplicateApi newWithXml: OrbeonFormDefinitionTemplateUpTo2017_1 form_test_2 id: UUID new asString.
+	apiOperation := OrbeonFormDefinitionDuplicateApi newWithXml: self newDefinitionTemplate formDefinition_agesic_test_2 id: UUID new asString.

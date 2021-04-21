@@ -8,7 +8,7 @@ testIssue359
 	apiOperation doIt.
 
 	newId := UUID new asString.
-	apiOperation := OrbeonFormBuilderSaveApi newWithXml: OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_simple_registration id: newId.
+	apiOperation := OrbeonFormBuilderSaveApi newWithXml: self newDefinitionTemplate formDefinition_st_simple_registration id: newId.
 	apiOperation appName: 'st';
 		formName: 'simple-registration';
 		id: newId.

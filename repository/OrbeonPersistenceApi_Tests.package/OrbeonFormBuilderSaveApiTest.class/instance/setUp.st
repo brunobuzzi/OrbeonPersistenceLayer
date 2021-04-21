@@ -3,6 +3,6 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormBuilderSaveApi newWithXml: OrbeonFormDefinitionTemplateFrom2017_2 formDefinition_simple_registration id: UUID new asString.
+	apiOperation := OrbeonFormBuilderSaveApi newWithXml: self newDefinitionTemplate formDefinition_st_simple_registration id: UUID new asString.
 	apiOperation appName: 'st';
 		formName: 'simple-registration'.
