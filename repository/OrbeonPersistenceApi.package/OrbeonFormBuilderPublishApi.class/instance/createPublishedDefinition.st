@@ -1,12 +1,16 @@
 other
 createPublishedDefinition
 	"The receiver create a new definition <anOrbeonFormDefinition> named <formName> in application <anOrbeonApplication> with id <id>"
-	| orbeonSavedDefinition orbeonDefinition |
+	| anOrbeonPublishedDefinition |
 
-	orbeonSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: self getFormName app: self getApplicationName ifNone: [NoOrbeonFormException signal].
-	orbeonDefinition := orbeonSavedDefinition definition. "get the <OrbeonPublishedFormDefinition>"
+	anOrbeonPublishedDefinition := OrbeonSavedFormDefinition 
+														buildDefinitionFrom: xmlString 
+														name: self getFormName 
+														version: version 
+														id: id
+														in: (self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: self getApplicationName).
 
-	^orbeonDefinition "new definition to be published"
+	^anOrbeonPublishedDefinition "new definition to be published"
 		id: id;
 		updateLastModifiedTime;
 		version: version;
