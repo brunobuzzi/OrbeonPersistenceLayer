@@ -3,7 +3,10 @@
 		 },
 	"instance" : {
 		"setUp" : "brunobb 09/04/2020 13:21",
-		"testDoIt" : "brunobb 09/02/2020 11:32",
-		"testDoItAllFormsFalse" : "brunobb 02/19/2021 12:43",
+		"testDoIt" : "brunobb 04/22/2021 07:42",
+		"testDoItAllFormsFalse" : "brunobb 04/22/2021 07:16",
 		"testDoItAllFormsTrue" : "brunobb 02/19/2021 12:47",
-		"testDoItAllVersions" : "brunobb 09/02/2020 11:35" } }
+		"testDoItAllVersionsFalse" : "brunobb 04/22/2021 08:03",
+		"testDoItAllVersionsFalseExcludeLibrary" : "brunobb 04/22/2021 10:10",
+		"testDoItAllVersionsFalseExcludeNotAvailable" : "brunobb 04/22/2021 10:18",
+		"testDoItAllVersionsTrue" : "brunobb 04/22/2021 08:17" } }

@@ -142,7 +142,9 @@ formDefinition_agesic_test_all_types_4
                         <permission operations="read update delete">
                             <owner/>
                         </permission>
-                        <permission operations="create"/>
+                        <permission operations="create">
+							<user-role any-of="orbeon-role"/>
+						</permission>
                         <permission operations="read delete">
                             <user-role any-of="orbeon-role"/>
                         </permission>

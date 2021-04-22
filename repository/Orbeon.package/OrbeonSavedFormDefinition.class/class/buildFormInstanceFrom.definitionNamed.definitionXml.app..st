@@ -1,4 +1,4 @@
-instance creation
+build form instances
 buildFormInstanceFrom: xmlString definitionNamed: definitionName definitionXml: definitionXml app: application 
 	"The receiver create <anOrbeonFormInstance> of form definition named <definitionName> of Orbeon Application named <app> using the method <xmlMethodName> to get the XML string of the form"
 	| definition formInstance |

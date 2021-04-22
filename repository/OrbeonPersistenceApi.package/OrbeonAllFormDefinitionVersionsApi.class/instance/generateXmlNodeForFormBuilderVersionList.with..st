@@ -6,6 +6,9 @@ generateXmlNodeForFormBuilderVersionList: anOrbeonPublishedFormDefinition with: 
 	permissions := allforms ifFalse: [anOrbeonPublishedFormDefinition getPermissionsForRole: group] ifTrue: ['*'].
 	(allforms not and: [permissions isEmpty]) ifTrue: [^self].
 
+	(allforms not and: [anOrbeonPublishedFormDefinition formName = 'library']) ifTrue: [^self].
+	(allforms not and: [anOrbeonPublishedFormDefinition isAvailable not]) ifTrue: [^self].
+
 	attributes := OrderedCollection new.
 	attributes add: ('operations' -> permissions).
 

@@ -6,7 +6,7 @@ doIt
 
 	application := self getOrbeonApplicationClass applicationNamed: self getApplicationName ifNone: [^'<form/>'].
 
-	(application hasRegistryForFormNamed: self getFormName) ifFalse: [^'<form/>'].
+	((application hasRegistryForFormNamed: self getFormName) not and: [self getFormName notNil]) ifTrue: [^'<form/>'].
 
 	allversions := allversions = 'true'. "the original values is <aString>"
 	allforms := allforms = 'true'. "the original values is <aString>"
