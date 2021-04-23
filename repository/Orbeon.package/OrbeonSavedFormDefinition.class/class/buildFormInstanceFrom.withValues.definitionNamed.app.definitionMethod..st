@@ -4,9 +4,9 @@ buildFormInstanceFrom: instanceXmlString withValues: anArray definitionNamed: de
 	| application definition formInstance |
 
 	application := self defaultApplicationManagerClass applicationNamed: app.
-	definition := application definitionNamed: definitionName ifNone: [self buildDefinition: definitionName with: definitionXmlString in: application].
+	definition := application definitionNamed: definitionName ifNone: [self buildDefinitionFrom: definitionXmlString name: definitionName in: application].
 
-	definition ifNil: [definition := self buildDefinition: definitionName with: definitionXmlString in: application]. "see issue #294"
+	definition ifNil: [definition := self buildDefinitionFrom: definitionXmlString name: definitionName in: application]. "see issue #294"
 
 	formInstance := 
 		(OrbeonFormInstance newFor: definition withId: UUID new asString)
