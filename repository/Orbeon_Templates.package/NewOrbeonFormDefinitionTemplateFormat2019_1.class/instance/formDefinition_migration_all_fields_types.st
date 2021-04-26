@@ -16,7 +16,7 @@ formDefinition_migration_all_fields_types
          xmlns:sql="http://orbeon.org/oxf/xml/sql"
          xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
          xmlns:fb="http://orbeon.org/oxf/xml/form-builder"
-         fr:data-format-version="2019.1.0">
+         fr:data-format-version="4.0.0">
     <xh:head>
         <xh:title>Migration Form with all Field Types</xh:title>
         <xf:model id="fr-form-model" xxf:expose-xpath-types="true" xxf:analysis.calculate="true">
@@ -59,14 +59,14 @@ formDefinition_migration_all_fields_types
                         </grid-8>
                         <grid-9>
                             <checked/>
-                            <image1 filename="document-32.png" mediatype="image/png" size="632">/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/1d7b2864a55661c99f577e0506c55d3c6f0a915d.bin</image1>
-                            <image2 filename="File-Adobe-Illustrator-SVG-01-24.png" mediatype="image/png"
-                                    size="1252">/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/3a5b75e6be2360d278b516cc91954bbe95d6be3c.bin</image2>
-                            <image3 filename="2018-04-30-PHOTO-00000517.jpg" mediatype="image/jpeg">/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/3fd2db0028d3a793dc020fab2203f610b6924d8c.bin</image3>
+                            <image1 filename="Franco 02.jpg" mediatype="image/jpeg" size="104197">file:/tmp/xforms_upload_9859581130490036864.tmp?filename=Franco+02.jpg&amp;mediatype=image%2Fjpeg&amp;size=104197&amp;mac=56491db675169fcf219847f3a3f02ca4f4f5e0a1</image1>
+                            <image2 filename="Franco 01.jpg" mediatype="image/jpeg" size="171357">file:/tmp/xforms_upload_8825167472621514801.tmp?filename=Franco+01.jpg&amp;mediatype=image%2Fjpeg&amp;size=171357&amp;mac=30574740332e9c5041e8c070f5cdcc6254fe6535</image2>
+                            <image3 filename="libssh-0.9.4.zip" mediatype="application/x-zip-compressed"
+                                    size="950946">file:/tmp/xforms_upload_9114170163555396962.tmp?filename=libssh-0.9.4.zip&amp;mediatype=application%2Fx-zip-compressed&amp;size=950946&amp;mac=3de1ee4da671a9a241b9f4a1a06e55eae4b833ab</image3>
                             <signature/>
                             <control-5>
-                                <image filename="actions-view-list-details-24.png" mediatype="image/png" size="632">/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/4de14834755ca5d91838a4f06072f5dd4f33551f.bin</image>
-                                <annotation>/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/48714c83d54676cbe8861db428d002b3c59a7a2d.bin</annotation>
+                                <image filename="Franco 01.jpg" mediatype="image/jpeg" size="171357">file:/tmp/xforms_upload_10961030215473178884.tmp?filename=Franco+01.jpg&amp;mediatype=image%2Fjpeg&amp;size=171357&amp;mac=b410189676b1dc313a389dfa16d5eb60d72e4160</image>
+                                <annotation>file:/tmp/xforms_upload_10961030215473178884.tmp?filename=Franco+01.jpg&amp;mediatype=image%2Fjpeg&amp;size=171357&amp;mac=b410189676b1dc313a389dfa16d5eb60d72e4160</annotation>
                             </control-5>
                         </grid-9>
                         <grid-10>
@@ -74,7 +74,7 @@ formDefinition_migration_all_fields_types
                             <otherExplanation/>
                         </grid-10>
                         <grid-11>
-                            <otherAttachment filename="Atop Application(3).xml" mediatype="text/xml" size="2369">/fr/service/persistence/crud/orbeon/builder/data/8dd1e85d8fe2168cbcdc260e902cf442ac541f85/1f47717cf4f04a73b3d58520f9f30a2fabbbb0bb.bin</otherAttachment>
+                            <otherAttachment filename="Diagram 1.xpdl" mediatype="" size="18312">file:/tmp/xforms_upload_1054033834777692782.tmp?filename=Diagram+1.xpdl&amp;mediatype=&amp;size=18312&amp;mac=ba55469e935016a1584c9f5477656e23fffa93b5</otherAttachment>
                         </grid-11>
                     </section-1>
                 </form>
@@ -153,6 +153,7 @@ formDefinition_migration_all_fields_types
                     <created-with-version>2019.2.1.202002282212 PE</created-with-version>
                     <updated-with-version>2019.2.1.202002282212 PE</updated-with-version>
                     <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
+                    <updated-with-version>2020.1.2.202103042356 PE</updated-with-version>
                     <available>false</available>
                     <library-versions>
                         <orbeon>1</orbeon>
@@ -344,7 +345,7 @@ formDefinition_migration_all_fields_types
     </xh:head>
     <xh:body>
         <fr:view>
-            <fr:body xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:xbl="http://www.w3.org/ns/xbl"
+            <fr:body xmlns:xbl="http://www.w3.org/ns/xbl" xmlns:p="http://www.orbeon.com/oxf/pipeline"
                      xmlns:oxf="http://www.orbeon.com/oxf/processors">
                 <fr:section id="section-1-section" bind="section-1-bind">
                     <xf:label ref="$form-resources/section-1/label"/>
