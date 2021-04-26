@@ -12,5 +12,6 @@ buildForm
 	customAttachment := builder getCustomAttachmentId. "set the id of the custom pdf of the receiver"
 	self createSectionsDefinitionWith: builder.
 
-	self attachments: (builder getAttachmentIdsFrom: self).
+	self buildAttachmentsWith: builder.
+	
 	^self

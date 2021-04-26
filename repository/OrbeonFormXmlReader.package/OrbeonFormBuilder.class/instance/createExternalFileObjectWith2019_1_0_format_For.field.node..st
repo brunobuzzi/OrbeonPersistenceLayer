@@ -5,13 +5,13 @@ createExternalFileObjectWith2019_1_0_format_For: anOrbeonFormDefinition field: a
 
 	fileId := self getValueFrom: xmlNode.
 	fileId ifNil: [^nil].
-	fileId := (fileId subStrings: '/') last. 
+	fileId := (fileId subStrings: '=') last. 
 	
 	aFormFieldDefinition isAnnotationField
 	ifFalse: [^OrbeonFileName newForFieldNamed: aFormFieldDefinition name fileName: (anOrbeonFormDefinition getId, '-', fileId)].
 
-	image := ((self getValueFrom: (xmlNode elementAt: 'image')) subStrings: '/') last.
-	annotation := ((self getValueFrom: (xmlNode elementAt: 'annotation')) subStrings: '/') last.
+	image := ((self getValueFrom: (xmlNode elementAt: 'image')) subStrings: '=') last.
+	annotation := ((self getValueFrom: (xmlNode elementAt: 'annotation')) subStrings: '=') last.
 
 	^OrbeonAnnotationFileName 
 			newForFieldNamed: aFormFieldDefinition name 
