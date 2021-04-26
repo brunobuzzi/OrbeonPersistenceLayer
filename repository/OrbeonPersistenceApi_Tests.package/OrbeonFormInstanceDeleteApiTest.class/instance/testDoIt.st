@@ -9,7 +9,7 @@ testDoIt
 	form := (OrbeonFormInstance newFor: definition withId: id)
 					definition: definition;
 					xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive;
-					processXML;
+					buildForm;
 					yourself.
 
 	self assert: (definition getInstanceWithId: id) notNil.

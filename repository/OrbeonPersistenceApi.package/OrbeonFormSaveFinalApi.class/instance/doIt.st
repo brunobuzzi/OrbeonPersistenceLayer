@@ -24,6 +24,6 @@ doIt
 
 	(self getOrbeonWebServerConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
 	ifTrue: [self addDeferredProcessingFor: instance] 
-	ifFalse: [instance processXML].
+	ifFalse: [instance buildForm].
 
 	definition removeDraft: instance. "this is the final version so we remove the current draft if any"

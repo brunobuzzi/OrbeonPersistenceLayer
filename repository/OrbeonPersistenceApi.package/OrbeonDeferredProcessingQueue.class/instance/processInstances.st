@@ -6,7 +6,7 @@ processInstances
 	
 	processedInstances  := OrderedCollection new.
 	instances do: [:each | 
-		each processXML.
+		each buildForm.
 		processedInstances add: each].
 
 	processedInstances do: [:each | instances remove: each ifAbsent: []]

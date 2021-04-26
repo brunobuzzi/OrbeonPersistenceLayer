@@ -15,6 +15,6 @@ importAllFormInstancesOf: anOrbeonFormDefinition
 	gsObjects do: [:each | 
 		each definition: anOrbeonFormDefinition;
 			addToDefinition;
-			processXML "process the XML and map it to a GsObject"].
+			buildForm "process the XML and map it to a GsObject"].
 
 	^gsObjects

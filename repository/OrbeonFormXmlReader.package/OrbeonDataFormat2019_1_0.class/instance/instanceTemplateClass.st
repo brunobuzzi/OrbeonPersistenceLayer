@@ -1,4 +1,4 @@
 templates
 instanceTemplateClass
 
-	^NewOrbeonFormInstanceTemplateFormat2019_1
+	^OrbeonFormInstanceTemplateFormat2019_1
