@@ -1,4 +1,0 @@
-attachments
-frAttachmentXpath
-
-	^'fr:attachment'

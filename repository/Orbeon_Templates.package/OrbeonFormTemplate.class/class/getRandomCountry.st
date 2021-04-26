@@ -1,4 +1,0 @@
-other
-getRandomCountry
-
-	^self getBasicValuesGenerator peekRandomCountry

@@ -1,4 +1,0 @@
-binding
-xfBindXpath
-
-	self subclassResponsibility

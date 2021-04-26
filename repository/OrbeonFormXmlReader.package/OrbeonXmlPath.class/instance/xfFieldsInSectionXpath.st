@@ -1,4 +1,0 @@
-section
-xfFieldsInSectionXpath
-
-	self subclassResponsibility

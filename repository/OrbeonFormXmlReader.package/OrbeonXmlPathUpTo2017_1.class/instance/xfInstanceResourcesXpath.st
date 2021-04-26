@@ -1,4 +1,0 @@
-resources
-xfInstanceResourcesXpath
-
-	^'xf:instance'

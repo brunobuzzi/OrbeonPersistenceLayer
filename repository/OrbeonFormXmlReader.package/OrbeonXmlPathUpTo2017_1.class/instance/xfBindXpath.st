@@ -1,4 +1,0 @@
-binding
-xfBindXpath
-
-	^'xf:bind'

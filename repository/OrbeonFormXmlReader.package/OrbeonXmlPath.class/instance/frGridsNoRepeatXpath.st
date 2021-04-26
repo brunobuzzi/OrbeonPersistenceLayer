@@ -1,4 +1,0 @@
-grid
-frGridsNoRepeatXpath
-
-	self subclassResponsibility

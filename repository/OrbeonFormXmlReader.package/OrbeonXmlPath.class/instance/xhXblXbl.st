@@ -1,4 +1,0 @@
-xbl
-xhXblXbl
-
-	^'//xbl:xbl'

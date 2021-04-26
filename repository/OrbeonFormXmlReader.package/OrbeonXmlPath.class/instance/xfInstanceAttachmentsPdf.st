@@ -1,4 +1,0 @@
-attachments
-xfInstanceAttachmentsPdf
-
-	self subclassResponsibility

@@ -1,4 +1,0 @@
-function
-xhExistFrBodyXpathFunction
-
-	self subclassResponsibility

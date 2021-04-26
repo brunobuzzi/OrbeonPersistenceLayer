@@ -1,4 +1,0 @@
-metadata
-xfInstanceApplicationNameXpath
-
-	self subclassResponsibility

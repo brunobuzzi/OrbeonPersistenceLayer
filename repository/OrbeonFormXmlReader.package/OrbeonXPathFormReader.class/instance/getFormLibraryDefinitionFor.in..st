@@ -1,4 +1,0 @@
-library
-getFormLibraryDefinitionFor: anOrbeonPublishedFormDefinition in: appName
-
-	self subclassResponsibility

@@ -1,4 +1,0 @@
-section
-frSectionXpath
-
-	^'fr:section'

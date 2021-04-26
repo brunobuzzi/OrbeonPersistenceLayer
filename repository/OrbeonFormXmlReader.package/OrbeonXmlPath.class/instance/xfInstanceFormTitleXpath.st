@@ -1,4 +1,0 @@
-metadata
-xfInstanceFormTitleXpath
-
-	self subclassResponsibility

@@ -1,4 +1,0 @@
-function
-containsClassFbAttachmentXpathFunction
-
-	self subclassResponsibility

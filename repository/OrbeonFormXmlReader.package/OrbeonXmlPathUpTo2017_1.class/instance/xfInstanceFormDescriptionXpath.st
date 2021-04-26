@@ -1,4 +1,0 @@
-metadata
-xfInstanceFormDescriptionXpath
-
-	^'description'

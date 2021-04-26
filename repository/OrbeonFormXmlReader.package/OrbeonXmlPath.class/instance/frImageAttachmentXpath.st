@@ -1,4 +1,0 @@
-attachments
-frImageAttachmentXpath
-
-	self subclassResponsibility

@@ -1,4 +1,0 @@
-document
-frFieldsInDocumentXpath
-
-	self subclassResponsibility

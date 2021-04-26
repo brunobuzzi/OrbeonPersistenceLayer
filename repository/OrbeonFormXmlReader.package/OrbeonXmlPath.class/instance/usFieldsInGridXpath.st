@@ -1,4 +1,0 @@
-grid
-usFieldsInGridXpath
-
-	self subclassResponsibility
