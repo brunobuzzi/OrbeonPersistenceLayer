@@ -10,5 +10,5 @@
 	"name" : "OrbeonFormDefinitionTestAllFieldTypes",
 	"pools" : [
 		 ],
-	"super" : "OrbeonFormInstanceTest",
+	"super" : "OrbeonFormDefinitionTest",
 	"type" : "normal" }

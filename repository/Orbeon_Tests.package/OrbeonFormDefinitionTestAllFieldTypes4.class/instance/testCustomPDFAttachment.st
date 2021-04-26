@@ -1,4 +1,4 @@
 tests
 testCustomPDFAttachment
 
-	self assert: (form customAttachmentIsEqualTo: 'e483cd29568e074402e8461223977d0ac23be915')
+	self assert: (form customAttachmentIsEqualTo: '35a384f9dcd3982e91b0b8e9d63986ddc618a630.bin')
