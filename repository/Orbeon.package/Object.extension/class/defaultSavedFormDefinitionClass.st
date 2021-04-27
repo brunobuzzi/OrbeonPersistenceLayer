@@ -1,0 +1,4 @@
+*orbeon
+defaultSavedFormDefinitionClass
+
+	^OrbeonSavedFormDefinition

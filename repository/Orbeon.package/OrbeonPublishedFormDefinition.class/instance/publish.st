@@ -12,5 +12,5 @@ publish
 	definition version: version.
 	definition definition: self.
 
-	self setAvailableNodeWith: 'true'. "3"
-	definition setAvailableNodeWith: 'true'. "3"
+	"self setAvailableNodeWith: 'true'. 
+	definition setAvailableNodeWith: 'true'. "

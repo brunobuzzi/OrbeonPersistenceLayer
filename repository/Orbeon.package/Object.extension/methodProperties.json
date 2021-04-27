@@ -1,11 +1,15 @@
 {
 	"class" : {
 		"defaultOrbeonDataFormatVersion" : "brunobb 04/01/2021 12:51",
+		"defaultPublishedFormDefinitionClass" : "brunobb 04/27/2021 13:06",
+		"defaultSavedFormDefinitionClass" : "brunobb 04/27/2021 13:06",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:09",
 		"getOrbeonWebServerConfiguration" : "BrunoBB 02/03/2016 10:07" },
 	"instance" : {
 		"defaultOrbeonDataFormatVersion" : "brunobb 04/01/2021 12:49",
 		"defaultOrbeonFormBuilderClass" : "brunobb 04/16/2021 08:00",
+		"defaultPublishedFormDefinitionClass" : "brunobb 04/27/2021 13:07",
+		"defaultSavedFormDefinitionClass" : "brunobb 04/27/2021 13:07",
 		"defaultXFormReaderClass" : "brunobb 03/12/2020 15:14",
 		"getOrbeonApplicationClass" : "BrunoBB 02/08/2016 11:08",
 		"getOrbeonWebServerConfiguration" : "BrunoBB 02/03/2016 08:44",

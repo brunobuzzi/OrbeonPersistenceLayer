@@ -1,0 +1,4 @@
+*orbeon
+defaultPublishedFormDefinitionClass
+
+	^OrbeonPublishedFormDefinition

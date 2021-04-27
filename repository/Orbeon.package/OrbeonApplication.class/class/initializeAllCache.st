@@ -3,6 +3,6 @@ initializeAllCache
 	"self initializeCache"
 
 	self initializeCache.
-	OrbeonPublishedFormDefinition initializeCache.
+	self defaultPublishedFormDefinitionClass initializeCache.
 	OrbeonFormInstance initializeCache.
-	OrbeonSavedFormDefinition initializeCache.
+	self defaultSavedFormDefinitionClass initializeCache.

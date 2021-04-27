@@ -4,7 +4,7 @@ createPublishedFormDefinition
 	In Orbeon the <available> node is not present but in GemStone we force it (see issue: #194)"
 	| publishedForm |
 
-	publishedForm := OrbeonPublishedFormDefinition new
+	publishedForm := self defaultPublishedFormDefinitionClass new
 									id: id;
 									version: version;
 									application: application;

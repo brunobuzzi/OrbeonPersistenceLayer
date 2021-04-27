@@ -1,5 +1,11 @@
 {
 	"class" : {
+		"buildDefinitionFrom:name:in:" : "brunobb 04/27/2021 12:03",
+		"buildDefinitionFrom:name:in:title:" : "brunobb 04/27/2021 12:03",
+		"buildDefinitionFrom:name:version:id:in:" : "brunobb 04/27/2021 12:03",
+		"buildDefinitionFrom:name:version:id:in:title:" : "brunobb 04/27/2021 13:08",
+		"buildDefinitionFrom:name:version:in:" : "brunobb 04/27/2021 12:03",
+		"buildDefinitionFrom:name:version:in:title:" : "brunobb 04/27/2021 12:03",
 		"defaultXmlDefinition:app:" : "BrunoBB 01/04/2017 06:01",
 		"reportFieldsComparisonEvolutionFor:startDate:to:satisfying:onError:" : "brunobb 05/16/2020 11:23" },
 	"instance" : {
@@ -11,6 +17,7 @@
 		"addSectionDefinition:" : "BrunoBB 01/04/2017 06:01",
 		"addTestPermissions" : "BrunoBB 01/04/2017 06:01",
 		"anyDefinitionIncludes:" : "brunobb 07/16/2020 13:40",
+		"associateSavedAndPublishedForms" : "brunobb 04/27/2021 12:47",
 		"attachments:" : "BrunoBB 01/04/2017 06:01",
 		"attachmentsAsOrderedCollection" : "brunobb 08/14/2020 10:37",
 		"attachmentsAt:" : "brunobb 08/14/2020 10:33",
@@ -154,7 +161,7 @@
 		"printCustomAttachmentId" : "BrunoBB 01/04/2017 06:01",
 		"printNumberOfInstances" : "BrunoBB 01/04/2017 06:01",
 		"printStructure" : "brunobb 06/15/2020 12:49",
-		"publish" : "brunobb 02/12/2021 12:44",
+		"publish" : "brunobb 04/27/2021 12:32",
 		"purgeLibraryComponentsDefinitions" : "brunobb 06/17/2020 15:20",
 		"rebuildAllIndexes" : "brunobb 07/05/2018 08:24",
 		"rebuildIndexForFieldNamed:" : "brunobb 07/05/2018 08:14",

@@ -9,14 +9,11 @@ buildDefinitionFrom: xmlString name: formName version: version id: stringId in: 
 		version: version;
 		title: title.
 	"an instance of <OrbeonPublishedFormDefinition> is created here"
-	savedDefinition setXmlString: xmlString. 
+	"savedDefinition setXmlString: xmlString. "
+"	savedDefinition basicBuildPublishedFormDefinition."
 
-	savedDefinition storeInApplication.
-
-	savedDefinition definition 
-		publish; 
+	savedDefinition 
+		storeInApplication;
 		buildForm.
 
-	savedDefinition definition storeInApplication.
-
-	^savedDefinition definition
+	^savedDefinition

@@ -1,0 +1,4 @@
+*orbeon
+defaultSavedFormDefinitionClass
+
+	^self class defaultSavedFormDefinitionClass
