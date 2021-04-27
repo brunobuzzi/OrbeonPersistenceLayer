@@ -3,7 +3,7 @@ createRepeatableFormStructure
 
 	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	^self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_manual_form_issue_369
+	^self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_manual_form_issue_369
 			name: 'manual-form'
 			in: 'agesic' 
 			title: 'Manual Form'

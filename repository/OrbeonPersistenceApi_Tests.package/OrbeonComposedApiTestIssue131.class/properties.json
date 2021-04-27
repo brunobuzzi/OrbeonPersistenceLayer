@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"apiOperations" ],
-	"name" : "OrbeonComposedApiTest",
+		 ],
+	"name" : "OrbeonComposedApiTestIssue131",
 	"pools" : [
 		 ],
-	"super" : "OrbeonApiTest",
+	"super" : "OrbeonComposedApiTest",
 	"type" : "normal" }
