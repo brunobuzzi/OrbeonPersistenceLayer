@@ -2,7 +2,7 @@ other
 createDistributionReport
 	| error |
 
-	^OrbeonPublishedFormDefinition 
+	^self defaultPublishedFormDefinitionClass 
 		reportFieldsComparisonEvolutionFor: fieldsCollection 
 		startDate: self startDate 
 		to: self endDate  

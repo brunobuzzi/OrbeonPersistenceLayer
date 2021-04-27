@@ -4,7 +4,7 @@ generateFormInstanceDefinition: formName app: appName from: aDBString
 	| instance resultArray |
 
 	resultArray := aDBString subStrings: String tab.
-	instance := OrbeonSavedFormDefinition new.
+	instance := self defaultSavedFormDefinitionClass new.
 	^instance setApplication: appName;
 		formName: formName;
 		updateFrom: resultArray;
