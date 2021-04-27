@@ -1,8 +1,9 @@
 test
 testIteratorOverV1
-	| formDefinition |
+	| savedDefinition publishedDefinition |
 
-	formDefinition := self defaultSavedFormDefinitionClass buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v1 name: 'iterator' version: 1 in: self application.
+	savedDefinition := self defaultSavedFormDefinitionClass buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v1 name: 'iterator' version: 1 id: UUID new asString in: self application.
+	publishedDefinition := self defaultPublishedFormDefinitionClass buildDefinitionFrom: self newDefinitionTemplate formDefinition_ue_iterator_v1 name: 'iterator' version: 1 id: savedDefinition id in: self application.
 
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |

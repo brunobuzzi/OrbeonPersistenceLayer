@@ -12,8 +12,16 @@ setUp
 							in: 'ue' 
 							title: 'Library'.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_issue_122
+	"form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_issue_122
 							name: 'issue122'
 							version: 1 
 							in: 'ue' 
-							title: 'Issue 122'.
+							title: 'Issue 122'."
+
+	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_issue_122 
+						name: 'issue122' 
+						version: 1 
+						id: UUID new asString 
+						savedXml: self newDefinitionTemplate formSavedDefinition_ue_issue_122  
+						in: 'ue' 
+						title: 'Issue 122'.
