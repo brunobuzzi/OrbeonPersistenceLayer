@@ -1,4 +1,4 @@
 other
 createOrbeonSavedDefinition
 
-	^OrbeonSavedFormDefinition newNamed: self getFormName inAppNamed: self getApplicationName
+	^self defaultSavedFormDefinitionClass newNamed: self getFormName inAppNamed: self getApplicationName

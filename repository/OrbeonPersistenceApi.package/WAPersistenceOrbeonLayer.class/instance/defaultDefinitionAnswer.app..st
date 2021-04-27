@@ -4,4 +4,4 @@ defaultDefinitionAnswer: formName app: app
 
 	self requestContext response headerAt: 'orbeon-form-definition-version' put: '1'.
 
-	^(GRCodec forEncoding: 'utf-8') decode: (OrbeonPublishedFormDefinition defaultXmlDefinition: formName app: app)
+	^(GRCodec forEncoding: 'utf-8') decode: (self defaultPublishedFormDefinitionClass defaultXmlDefinition: formName app: app)

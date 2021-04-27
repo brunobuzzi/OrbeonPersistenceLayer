@@ -3,7 +3,7 @@ createPublishedDefinition
 	"The receiver create a new definition <anOrbeonFormDefinition> named <formName> in application <anOrbeonApplication> with id <id>"
 	| anOrbeonPublishedDefinition |
 
-	anOrbeonPublishedDefinition := OrbeonSavedFormDefinition 
+	anOrbeonPublishedDefinition := self defaultPublishedFormDefinitionClass 
 														buildDefinitionFrom: xmlString 
 														name: self getFormName 
 														version: version 

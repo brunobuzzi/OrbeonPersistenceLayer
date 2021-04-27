@@ -2,7 +2,7 @@ other
 doIt
 	| savedDefinition |
 
-	savedDefinition := OrbeonSavedFormDefinition new.
+	savedDefinition := self defaultSavedFormDefinitionClass new.
 
 	savedDefinition xmlString: xmlString;
 		id: id;
