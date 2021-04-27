@@ -5,7 +5,7 @@ setUp
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application 
 						definitionNamed: 'energy-recursive' 
-						ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_energy_recursive
+						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_energy_recursive
 											name: 'energy-recursive'
 											in: 'agesic'
 											title: 'Energy Recursive'].

@@ -5,13 +5,13 @@ testComponentVersions
 	id := UUID new asString.
 	libId := UUID new asString.
 
-	library := self buildFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
+	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
 							name: 'library'
 							version: 1 
 							id: libId
 							in: 'gs' 
 							title: 'Library'.
-	formV1 := self buildFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v1
+	formV1 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v1
 							name: 'test-library'
 							version: 1 
 							id: id
@@ -22,13 +22,13 @@ testComponentVersions
 		self assert: (secDefinition publishedComponentVersion = 1).
 	].
 
-	library := self buildFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
+	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
 							name: 'library'
 							version: 2 
 							id: libId
 							in: 'gs' 
 							title: 'Library'.
-	formV2 := self buildFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v2
+	formV2 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v2
 							name: 'test-library'
 							version: 2
 							id: id
@@ -39,7 +39,7 @@ testComponentVersions
 		self assert: (secDefinition publishedComponentVersion = 2).
 	].
 
-	formV3 := self buildFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v3
+	formV3 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_390_v3
 							name: 'test-library'
 							version: 3
 							id: id

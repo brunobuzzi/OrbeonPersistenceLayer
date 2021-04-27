@@ -5,7 +5,7 @@ setUp
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application 
 						definitionNamed: 'test-2' 
-						ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_2
+						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_2
 											name: 'test-2'
 											in: 'agesic'
 											title: 'Test 2'].

@@ -8,7 +8,7 @@ setUp
 
 	definition := application 
 						definitionNamed: 'test-all-types-2' 
-						ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_2
+						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_2
 											name: 'test-all-types-2'
 											in: 'agesic'
 											title: 'Test'].

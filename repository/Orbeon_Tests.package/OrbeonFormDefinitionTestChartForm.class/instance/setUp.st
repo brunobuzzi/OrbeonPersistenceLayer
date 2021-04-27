@@ -5,4 +5,8 @@ setUp
 
 	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
 
-	form := application definitionNamed: 'charts-forms' ifNone: [self buildFormStructureFrom: self newDefinitionTemplate formDefinition_charts_charts_forms name: 'charts-forms' in: 'charts' title: 'Charts Form'].
+	form := application definitionNamed: 'charts-forms' 
+								ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_charts_charts_forms 
+													name: 'charts-forms' 
+													in: 'charts' 
+													title: 'Charts Form'].

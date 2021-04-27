@@ -3,7 +3,7 @@ testComparision_1
 	| comparator id |
 
 	id := UUID new asString.
-	formOne := OrbeonPublishedFormDefinition new
+	formOne := self defaultPublishedFormDefinitionClass new
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';
@@ -11,7 +11,7 @@ testComparision_1
 				buildForm;
 				yourself.
 
-	formTwo := OrbeonPublishedFormDefinition new
+	formTwo := self defaultPublishedFormDefinitionClass new
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';
