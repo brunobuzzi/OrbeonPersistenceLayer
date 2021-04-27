@@ -7,6 +7,7 @@ buildDefinitionFrom: xmlString name: formName version: version id: stringId in: 
 	savedDefinition := self newNamed: formName inAppNamed: anOrbeonApplication applicationName.
 	savedDefinition id: stringId;
 		version: version;
+		xmlString: xmlString;
 		title: title.
 	"an instance of <OrbeonPublishedFormDefinition> is created here"
 	"savedDefinition setXmlString: xmlString. "
