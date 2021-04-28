@@ -42,7 +42,7 @@ formDefinition_emb_registration
                     <updated-with-version>2020.1.1.202102012142 PE</updated-with-version>
                     <library-versions>
                     </library-versions>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>            
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">

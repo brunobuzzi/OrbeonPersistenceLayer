@@ -43,7 +43,7 @@ formSavedDefinition_emb_registration
                     <library-versions>
 						<app>1</app>
                     </library-versions>
-                    <available>false</available>
+                    <available>true</available>
                 </metadata>
             </xf:instance>            
             <xf:instance id="fr-form-attachments" xxf:exclude-result-prefixes="#all">
