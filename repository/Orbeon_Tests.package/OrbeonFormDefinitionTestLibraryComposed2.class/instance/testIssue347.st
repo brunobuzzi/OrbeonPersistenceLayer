@@ -2,11 +2,14 @@ tests
 testIssue347
 	| form2 allLibrarySections |
 
-	form2 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form
-							name: 'library-composed-form'
-							version: 1 
-							in: 'ue' 
-							title: 'Issue 347'.
+	form2 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form  
+					savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form
+					name: 'library-composed-form' 
+					version: 1 
+					id: UUID new asString 
+					in: 'ue' 
+					title: 'Test Section Library Composed Forms'.
+
 
 	allLibrarySections := Set new.
 
