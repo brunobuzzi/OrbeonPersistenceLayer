@@ -4,9 +4,9 @@ buildDefinitionFrom: xmlString name: formName version: version id: stringId in: 
 	The current template class lookup the form's source using the symbol method <definitionMethod>"
 	
 	^self buildDefinitionFrom: xmlString 
+			savedXml: xmlString 
 			name: formName
 			version: version 
 			id: stringId 
-			savedXml: xmlString 
 			in: anOrbeonApplication 
 			title: title

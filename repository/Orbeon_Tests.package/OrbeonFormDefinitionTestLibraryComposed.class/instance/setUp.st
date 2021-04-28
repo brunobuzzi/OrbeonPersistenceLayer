@@ -14,7 +14,10 @@ setUp
 			in: 'ue' 
 			title: 'Library'.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form 
-						name: 'library-composed-form' 
-						in: 'ue' 
-						title: 'Test Section Library Composed Forms'.
+	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form  
+					savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form
+					name: 'library-composed-form' 
+					version: 1 
+					id: UUID new asString 
+					in: 'ue' 
+					title: 'Test Section Library Composed Forms'.

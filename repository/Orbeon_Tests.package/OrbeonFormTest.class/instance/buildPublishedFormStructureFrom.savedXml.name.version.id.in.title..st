@@ -1,9 +1,9 @@
 other
-buildPublishedFormStructureFrom: xmlString name: formName version: version id: stringId savedXml: savedXml in: appName title: title 
+buildPublishedFormStructureFrom: xmlString savedXml: savedXml name: formName version: version id: stringId in: appName title: title 
 	"The receiver create a new <OrbeonPublishedFormDefinition> named <formName> in Application named <appName>.
 	The XML of the form is take it from <OrbeonFormDefinitionTemplate> using the class method <methodName>"
 	| anOrbeonApplication |
 
 	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
 
-	^self defaultPublishedFormDefinitionClass buildDefinitionFrom: xmlString name: formName version: version id: stringId savedXml: savedXml in: anOrbeonApplication title: title
+	^self defaultPublishedFormDefinitionClass buildDefinitionFrom: xmlString savedXml: savedXml name: formName version: version id: stringId in: anOrbeonApplication title: title

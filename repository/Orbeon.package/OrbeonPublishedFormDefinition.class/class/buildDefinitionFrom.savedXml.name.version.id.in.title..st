@@ -1,5 +1,5 @@
 build form definitions
-buildDefinitionFrom: xmlString name: formName version: version id: stringId savedXml: savedXml in: anOrbeonApplication title: title
+buildDefinitionFrom: xmlString savedXml: savedXml name: formName version: version id: stringId in: anOrbeonApplication title: title
 	"The receiver create the pair <OrbeonSavedFormDefinition> & <OrbeonPublishedFormDefinition> for as form named <formName> in application <anOrbeonApplication>.
 	The current template class lookup the form's source using the symbol method <definitionMethod>"
 	| publidhedDefinition |
