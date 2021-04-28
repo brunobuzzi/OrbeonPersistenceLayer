@@ -20,9 +20,12 @@ setUp
 	definition := application 
 							definitionNamed: 'library-composed-form2' 
 							ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form_2
-											name: 'library-composed-form2'
-											in: 'ue'
-											title: 'Library Composed Form'].
+											savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form_2
+											name: 'library-composed-form2' 
+											version: 1 
+											id: UUID new asString 
+											in: 'ue' 
+											title: 'Test Section Library Composed Forms 2'].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;
