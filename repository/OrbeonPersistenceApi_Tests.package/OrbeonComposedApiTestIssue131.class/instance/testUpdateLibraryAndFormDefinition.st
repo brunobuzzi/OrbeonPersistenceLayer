@@ -15,6 +15,8 @@ testUpdateLibraryAndFormDefinition
 					xmlString: self newInstanceTemplate formInstance_emb_registration_v1;
 					buildForm;
 					yourself.
+	self assert: (formInstanceV1 valueAt: 'name') equals: 'Adele Goldberg'.
+	self deny: (formInstanceV1 hasFieldNamed: 'surname').
 
 	"Form Definition Version 2 with Library Version 2"
 	self createDefinitions_v2.
@@ -25,10 +27,12 @@ testUpdateLibraryAndFormDefinition
 
 	definitionV2 := app definitionNamed: 'registration' ifNone: [self assert: false].
 	formInstanceV2 := (OrbeonFormInstance newFor: definitionV2 withId: UUID new asString)
-					definition: definitionV1;
+					definition: definitionV2;
 					xmlString: self newInstanceTemplate formInstance_emb_registration_v2;
 					buildForm;
 					yourself.
+	self assert: (formInstanceV2 valueAt: 'name') equals: 'Alan'.
+	self assert: (formInstanceV2 valueAt: 'surname') equals: 'Kay'.
 
 	"Form Definition Version 1 with Library Version 1 - again"
 	definitionV1 := app definitionNamed: 'registration' version: 1 ifNone: [self assert: false].
@@ -37,3 +41,5 @@ testUpdateLibraryAndFormDefinition
 					xmlString: self newInstanceTemplate formInstance_emb_registration_v1;
 					buildForm;
 					yourself.
+	self assert: (formInstanceV1 valueAt: 'name') equals: 'Adele Goldberg'.
+	self deny: (formInstanceV1 hasFieldNamed: 'surname').
