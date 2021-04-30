@@ -1,4 +1,0 @@
-other
-defaultOrbeonXpathVersion
-
-	^self getOrbeonWebServerConfiguration orbeonXpathVersion

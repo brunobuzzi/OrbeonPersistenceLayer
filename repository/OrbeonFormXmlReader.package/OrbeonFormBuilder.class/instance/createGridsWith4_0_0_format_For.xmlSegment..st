@@ -1,4 +1,4 @@
-data format version
+build instance components
 createGridsWith4_0_0_format_For: aFormSectionInstance xmlSegment: xmlSubSegment
 	"Creates and store FormGridInstance on the form instance <aFormSectionInstance> getting values from xml node <xmlSubSegment>"
 	| sectionDefinition |

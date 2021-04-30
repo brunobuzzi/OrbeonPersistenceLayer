@@ -1,4 +1,4 @@
-attachments
+build definition attachments
 isAttachmentField: fieldNode
 	"'fr:attachment' - (regular attachments) the attachment can be removed from form instance.
 	'fr:image-attachment' - (image attachments) - the attachment can be removed from form instance.

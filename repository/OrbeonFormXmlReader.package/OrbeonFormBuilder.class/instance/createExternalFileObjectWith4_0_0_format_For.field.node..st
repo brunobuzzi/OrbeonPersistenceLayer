@@ -1,4 +1,4 @@
-data format version
+build definition attachments
 createExternalFileObjectWith4_0_0_format_For: anOrbeonFormDefinition field: aFormFieldDefinition node: xmlNode
 	"Answer the orbeon external file object to be fileout for field <aFormFieldDefinition> from node <xmlNode> in definition <anOrbeonFormDefinition> "
 	| image annotation fileId |

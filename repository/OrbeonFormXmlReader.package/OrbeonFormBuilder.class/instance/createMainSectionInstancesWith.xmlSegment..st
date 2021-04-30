@@ -1,4 +1,4 @@
-recursive section
+build instance components
 createMainSectionInstancesWith: anOrbeonFormDefinition xmlSegment: xmlInstanceSegment
 	"The receiver answer anOrderedCollection of FormSectionInstance based on form definition <anOrbeonFormDefinition> using the xml node <xmlInstanceSegment> (/form for main sections).
 	Iterate over Main Sections definitions of <anOrbeonFormDefinition> and recursively creates the sub sections.

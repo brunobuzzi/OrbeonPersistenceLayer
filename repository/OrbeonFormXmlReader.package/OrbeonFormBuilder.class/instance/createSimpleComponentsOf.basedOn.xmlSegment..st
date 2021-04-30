@@ -1,4 +1,4 @@
-recursive section
+build instance components
 createSimpleComponentsOf: aFormSectionInstance basedOn: aFormSectionDefinition xmlSegment: xmlSegment
 	"The receiver create the simple components of section <aFormSectionInstance> with definition <aFormSectionDefinition> taking data from xml node <xmlSegment>"
 

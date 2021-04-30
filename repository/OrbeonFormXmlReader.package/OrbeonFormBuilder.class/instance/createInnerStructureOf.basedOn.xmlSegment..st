@@ -1,4 +1,4 @@
-recursive section
+build instance components
 createInnerStructureOf: aFormSectionInstance basedOn: aFormSectionDefinition xmlSegment: xmlSegment
 	"The receiver create the inner structure of section <aFormSectionInstance> with definition <aFormSectionDefinition> taking data from xml node <xmlSegment>"
 

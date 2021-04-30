@@ -1,4 +1,4 @@
-attachments
+build definition attachments
 getAttachmentIdsFrom: anOrbeonFormDefinition
 	"The receiver collect all attachment's id of the form definition <anOrbeonFormDefinition>.
 	Each attachment has an associated file. 

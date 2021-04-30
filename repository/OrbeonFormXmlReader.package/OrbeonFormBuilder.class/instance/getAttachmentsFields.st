@@ -1,4 +1,4 @@
-attachments
+build definition attachments
 getAttachmentsFields
 
 	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion frViewFrAttachmentXpath) , 
