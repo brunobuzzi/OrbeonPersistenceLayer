@@ -21,12 +21,10 @@ testComparision_2
 
 	comparator := formOne compareWith: formTwo.
 
-	comparator := formOne compareWith: formTwo.
+	self assert: comparator differencesSize equals: 9.
 
-	self assert: (comparator differencesSize = 9).
+	self assert: (comparator differencesSelect: [:each | each isFieldTypeChanged]) size equals: 2.
 
-	self assert: ((comparator differencesSelect: [:each | each isFieldTypeChanged]) size = 2).
+	self assert: (comparator differencesSelect: [:each | each isFieldDoesNotExist]) size equals: 6.
 
-	self assert: ((comparator differencesSelect: [:each | each isFieldDoesNotExist]) size = 6).
-
-	self assert: ((comparator differencesSelect: [:each | each isSectionDoesNotExist]) size = 1).
+	self assert: (comparator differencesSelect: [:each | each isSectionDoesNotExist]) size equals: 1.
