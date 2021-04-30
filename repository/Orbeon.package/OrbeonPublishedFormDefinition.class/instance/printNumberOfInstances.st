@@ -1,4 +1,4 @@
-process xml
+form building
 printNumberOfInstances
 
 	^self numberOfInstances printString

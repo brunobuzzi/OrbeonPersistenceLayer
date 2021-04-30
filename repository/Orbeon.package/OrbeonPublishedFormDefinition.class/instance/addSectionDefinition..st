@@ -1,4 +1,4 @@
-process xml
+form building
 addSectionDefinition: aFormSectionDefinition
 
 	aFormSectionDefinition tabIndex: (sectionDefinitions size + 1).

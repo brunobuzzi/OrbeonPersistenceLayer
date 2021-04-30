@@ -1,4 +1,4 @@
-process xml
+form building
 numberOfInstances
 
 	^instances size

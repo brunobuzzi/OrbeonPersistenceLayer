@@ -1,4 +1,4 @@
-process xml
+form building
 buildForm
 	"This is a time consuming operation. Uses a XML Parser to get data from <xmlString> variable"
 	| builder |
@@ -10,8 +10,10 @@ buildForm
 	self isSingleton: builder isSingleton.
 
 	customAttachment := builder getCustomAttachmentId. "set the id of the custom pdf of the receiver"
-	self createSectionsDefinitionWith: builder.
 
-	self buildAttachmentsWith: builder.
+	builder createSectionsDefinitionsOn: self. 
+	"self createSectionsDefinitionWith: builder."
+
+	attachments := (builder getAttachmentIdsFrom: self).
 	
 	^self
