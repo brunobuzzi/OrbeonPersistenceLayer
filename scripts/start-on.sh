@@ -43,8 +43,12 @@ fi
 
 info "Start: Starting Web Servers on port $PORTS"
 
+GS_USER=DataCurator
+PWD=`./getGsPwd.sh -u $GS_USER`
+echo "${GS_USER}"
+echo "${PWD}"
 $GS_HOME/bin/startTopaz $STONE -u "WebServer" -il <<EOF >>start-on.log
-set user DataCurator password swordfish gemstone $STONE
+set user $GS_USER password $PWD gemstone $STONE
 login
 exec 
    | handler commitThreshold usedMemory |
