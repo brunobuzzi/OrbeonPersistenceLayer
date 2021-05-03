@@ -46,8 +46,6 @@ info "Start: Unregistering Web Servers"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-echo "${GS_USER}"
-echo "${PWD}"
 $GS_HOME/bin/startTopaz $STONE -il <<EOF >>unregister-application.log
 set user $GS_USER password $PWD gemstone $STONE
 login

@@ -39,8 +39,6 @@ info  "Start: OrbeonPersistenceLayer Packages Installation"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-echo "${GS_USER}"
-echo "${PWD}"
 $GS_HOME/bin/startTopaz $STONE -il <<EOF >>install-all.log
 set user $GS_USER password $PWD gemstone $STONE
 login
