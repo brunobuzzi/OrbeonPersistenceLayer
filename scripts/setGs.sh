@@ -37,6 +37,7 @@ done
 INSTALL_PRE=$GS_HOME/shared/downloads/products/GemStone64Bit
 INSTALL_POST=-x86_64.Linux
 export GEMSTONE=$INSTALL_PRE$GS_VERSION$INSTALL_POST
+export GS_CLEAN_EXTENT=$GEMSTONE/bin/extent0.dbf
 export STONE_NAME=$STONE_NAME
 export GS_VERSION=$GS_VERSION
 export GS_BACKUPS=$GS_HOME/server/stones/$STONE_NAME/backups
@@ -44,10 +45,11 @@ export GS_EXTENTS=$GS_HOME/server/stones/$STONE_NAME/extents
 export GS_TRANLOGS=$GS_HOME/server/stones/$STONE_NAME/tranlogs
 export GS_LOGS=$GS_HOME/server/stones/$STONE_NAME/logs
 
-echo "GEMSTONE: " $GEMSTONE
-echo "STONE_NAME:   " $STONE_NAME
-echo "GS_VERSION:   " $GS_VERSION
-echo "GS_BACKUPS:   " $GS_BACKUPS
-echo "GS_EXTENTS:   " $GS_EXTENTS
-echo "GS_TRANLOGS:  " $GS_TRANLOGS
-echo "GS_LOGS:      " $GS_LOGS
+echo "STONE_NAME:  " $STONE_NAME
+echo "GS_VERSION:  " $GS_VERSION
+echo "GEMSTONE:    " $GEMSTONE
+echo "GS_BACKUPS:  " $GS_BACKUPS
+echo "GS_EXTENTS:  " $GS_EXTENTS
+echo "GS_TRANLOGS: " $GS_TRANLOGS
+echo "GS_LOGS:     " $GS_LOGS
+echo "GS_CLEAN_EXTENT:  " $GS_CLEAN_EXTENT
