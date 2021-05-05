@@ -55,3 +55,4 @@ fi
 
 
 info "Finish: Backup STONE ${STONE_NAME} VERSION ${GS_VERSION}"
+info "The backup ${FILE} has been created at ${GS_BACKUPS}"
