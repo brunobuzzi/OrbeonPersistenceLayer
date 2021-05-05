@@ -20,10 +20,11 @@ if [ -z ${GS_HOME+x} ]; then
   exit 0
 fi
 
-echo "GEMSTONE: " $GEMSTONE
 echo "STONE_NAME:   " $STONE_NAME
 echo "GS_VERSION:   " $GS_VERSION
+echo "GEMSTONE: " $GEMSTONE
 echo "GS_BACKUPS:   " $GS_BACKUPS
 echo "GS_EXTENTS:   " $GS_EXTENTS
 echo "GS_TRANLOGS:  " $GS_TRANLOGS
 echo "GS_LOGS:      " $GS_LOGS
+echo "GS_CLEAN_EXTENT:  " $GS_CLEAN_EXTENT
