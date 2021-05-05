@@ -32,6 +32,8 @@ info "Start: Set Session Variables"
 source ./setGs.sh -s $STONE -v $GS_VERSION
 info "Finish: Set Session Variables"
 
+info "Start: Restore BACKUP"
+
 info "Start STEP 1: Stop STONE ${STONE}"
 stopStone ${STONE}
 info "Finish STEP 1: Stop STONE ${STONE}"
@@ -82,8 +84,25 @@ fi
 
 info "Finish STEP 8 & 9: Log in to GemStone as DataCurator or SystemUser using linked Topaz (topaz -l) and Restore the most recent full backup to the new repository"
 
+info "Finish: Restore BACKUP"
 
-info "Start STEP 10: Restore TRAN_LOGS"
-info "Finish STEP 10: Restore TRAN_LOGS"
+info "Start: Restore TRANLOGS"
+
+info "Start STEP 1 & 2: Determine which transaction logs are needed for restore and their locations"
+info "Finish STEP 1 & 2: Determine which transaction logs are needed for restore and their locations"
+
+info "Start STEP 3: Restore archive transaction logs, if any"
+info "Finish STEP 3: Restore archive transaction logs, if any"
+
+info "Start STEP 4 & 5: Login again and Restore transactions from the current log files"
+info "Finish STEP 4 & 5: Login again and Restore transactions from the current log files"
+
+info "Start STEP 6: Finalize by commitRestore"
+info "Finish STEP 6: Finalize by commitRestore"
+
+
+info "Finish: Restore TRANLOGS"
+
+
 
 
