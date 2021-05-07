@@ -4,11 +4,11 @@
 PROGRAM_NAME="backup"
 source ./common.sh
 usage() {
-  error "Usage: ${PROGRAM_NAME} -s STONE_NAME -v GS_VERSION"
+  error "Usage: ${PROGRAM_NAME} -s STONE_NAME -v GS_VERSION -f BACKUP_FILE"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: backup -s STONE_NAME -v GS_VERSION"
+  echo "Usage: backup -s STONE_NAME -v GS_VERSION -f BACKUP_FILE"
   exit 0
 fi
 
@@ -29,14 +29,14 @@ while getopts :l:s:v:f: opt; do
 done
 
 info "Start: Set Session Variables"
-source ./setGs.sh -s $STONE -v $GS_VERSION
+source ./workwith.sh -s $STONE -v $GS_VERSION
 info "Finish: Set Session Variables"
 
 info "Start: Backup STONE ${STONE} VERSION ${GS_VERSION}"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>backup.log
+$GS_HOME/bin/startTopaz $STONE -il <<EOF >>$GS_LOGS/backup.log
 set user $GS_USER password $PWD gemstone $STONE
 login
 exec 
@@ -49,7 +49,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to peform backup {backup.log}"
+  error "Failed to peform backup ${GS_LOGS}/backup.log"
   exit 1
 fi
 
