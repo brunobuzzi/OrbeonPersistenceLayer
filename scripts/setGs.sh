@@ -42,6 +42,7 @@ export GEMSTONE=$INSTALL_PRE$GS_VERSION$INSTALL_POST
 export GS_CLEAN_EXTENT=$GEMSTONE/bin/extent0.dbf
 export STONE_NAME=$STONE_NAME
 export GS_VERSION=$GS_VERSION
+export GS_CONF_FILE=$GS_HOME/server/stones/$STONE_NAME/extents/system.conf
 export GS_BACKUPS=$GS_HOME/server/stones/$STONE_NAME/backups
 export GS_EXTENTS=$GS_HOME/server/stones/$STONE_NAME/extents
 export GS_TRANLOGS=$GS_HOME/server/stones/$STONE_NAME/tranlogs
