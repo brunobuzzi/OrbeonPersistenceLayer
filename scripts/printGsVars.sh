@@ -12,12 +12,22 @@ if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: printGsVars"
   echo "Print defined session variables for GemStone"; 
   echo "See also setGs.sh";
-  exit 0
+  return 0
 fi
 
 if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
-  exit 0
+  return 0
+fi
+
+if [ -z "${STONE_NAME}" ]; then
+  echo "Variable STONE_NAME is NOT set";
+  return 0
+fi
+
+if [ -z "${GS_VERSION}" ]; then
+  echo "Variable GS_VERSION is NOT set";
+  return 0
 fi
 
 echo "STONE_NAME:   " $STONE_NAME

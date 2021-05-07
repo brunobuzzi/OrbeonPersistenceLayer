@@ -19,18 +19,20 @@ if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
   exit 0
 fi
-
-while getopts :l:s:v: opt; do
+OPTIND=1
+printVerbose=1
+while getopts l:s:v:q opt; do
   case $opt in
     s) STONE_NAME=$OPTARG ;;
     v) GS_VERSION=$OPTARG ;;
+    q) printVerbose=0 ;;
     \?) error "Invalid option: -$OPTARG"
       usage
-      exit 1
+      return 1
       ;;
-    :)error "Option -$OPTARG requires Stone name and ports."
+    :) error "Option -$OPTARG requires Stone name and Version."
       usage
-      exit 1
+      return 1
      ;;
   esac
 done
@@ -45,4 +47,6 @@ export GS_EXTENTS=$GS_HOME/server/stones/$STONE_NAME/extents
 export GS_TRANLOGS=$GS_HOME/server/stones/$STONE_NAME/tranlogs
 export GS_LOGS=$GS_HOME/server/stones/$STONE_NAME/logs
 
-source ./printGsVars.sh 
+if (( printVerbose==1 )) ; then
+  source ./printGsVars.sh
+fi
