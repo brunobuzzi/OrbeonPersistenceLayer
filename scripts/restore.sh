@@ -4,18 +4,16 @@
 PROGRAM_NAME="backup"
 source ./common.sh
 usage() {
-  error "Usage: ${PROGRAM_NAME} -s STONE_NAME -v GS_VERSION"
+  error "Usage: ${PROGRAM_NAME}"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: restore -s STONE_NAME -v GS_VERSION -f FULL_BACKUP_FILE"
+  echo "Usage: ./restore -f FULL_BACKUP_FILE"
   exit 0
 fi
 
-while getopts :l:s:v:f: opt; do
+while getopts :l:f: opt; do
   case $opt in
-    s) STONE_NAME=$OPTARG ;;
-    v) GS_VERSION=$OPTARG ;;
     f) FILE_NAME=$OPTARG ;;
     \?) error "Invalid option: -$OPTARG"
       usage
@@ -28,15 +26,19 @@ while getopts :l:s:v:f: opt; do
   esac
 done
 
-info "Start: Set Session Variables"
-source ./workwith.sh -s $STONE_NAME -v $GS_VERSION
-info "Finish: Set Session Variables"
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
 
 info "Start: Restore BACKUP"
 
-info "Start STEP 1: Stop STONE ${STONE}"
+info "Start STEP 1: Stop STONE ${STONE_NAME}"
 stopStone $STONE_NAME
-info "Finish STEP 1: Stop STONE ${STONE}"
+info "Finish STEP 1: Stop STONE ${STONE_NAME}"
 
 info "Start STEP 2: Move old or corrupted EXTENTS for further analysis"
 mkdir -p $GS_EXTENTS/deleted-extents 

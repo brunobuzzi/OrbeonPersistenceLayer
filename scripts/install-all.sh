@@ -1,12 +1,13 @@
 #!/bin/sh
+# Install all required packages for Orbeon Persistence Layer
 # Requires GS_HOME variable defined
 PROGRAM_NAME="install_all"
 source ./common.sh
 usage() {
-  error "Usage: ${PROGRAM_NAME} -s DBNAME"
+  error "Usage: ${PROGRAM_NAME}"
 }
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: install-all STONE_NAME "
+  echo "Usage: install-all "
   echo "Install the entire BPM application on Stone named STONE_NAME"; 
   echo "The environment variable GS_HOME must be set";    
   exit 0
@@ -16,22 +17,17 @@ if [ -z ${GS_HOME+x} ]; then
   exit 0
 fi
 
-while getopts :l:s: opt; do
-  case $opt in
-    s) STONE=$OPTARG ;;
-    \?) error "Invalid option: -$OPTARG"
-      usage
-      exit 1
-      ;;
-    :)error "Option -$OPTARG requires an argument."
-      usage
-      exit 1
-     ;;
-  esac
-done
-./checkIfStoneExist.sh $STONE
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
+
+./checkIfStoneExist.sh $STONE_NAME
 if [ $? -ne 0 ]; then
-  error "The Stone {$STONE} does NOT exist"
+  error "The Stone ${STONE_NAME} does NOT exist"
   exit 1
 fi
 
@@ -39,8 +35,8 @@ info  "Start: OrbeonPersistenceLayer Packages Installation"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>install-all.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>install-all.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec
 Gofer new
@@ -95,8 +91,8 @@ git branch
 git branch -a
 git checkout origin/v6.0.1
 git checkout v6.0.1
-$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF  >>highcharts.log
-set user DataCurator password swordfish gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>highcharts.log
+set user DataCurator password swordfish gemstone $STONE_NAME
 login
 exec
 GsDeployer deploy: [
@@ -120,8 +116,8 @@ info "Start: Downloading HighchartsSt static files"
 cd scripts
 sh downloadAndPrepareFilesForFileLibraries.sh -f -d $GS_HOME/shared/repos/OrbeonPersistenceLayer/js -p Highstock -v 6.0.1
 info "Finish: Downloading HighchartsSt static files"
-$GS_HOME/bin/startTopaz $STONE -il -T 500000 <<EOF  >>highcharts.log
-set user DataCurator password swordfish gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>highcharts.log
+set user DataCurator password swordfish gemstone $STONE_NAME
 login
 exec
 Highstock6DeploymentMetadataLibrary recursivelyAddAllFilesIn: '$GS_HOME/shared/repos/BpmFlow/js/6.0.3/Highstock/styled/deployment/'.
@@ -140,8 +136,8 @@ info "Finish: HighchartsSt Packages Installation"
 
 info "Start: System Initialization"
 
-$GS_HOME/bin/startTopaz $STONE -il <<EOF
-set user DataCurator password swordfish gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF
+set user DataCurator password swordfish gemstone $STONE_NAME
 login
 exec
 OrbeonServerConfiguration default orbeonIP: 'http://192.168.178.130'. "example IP"

@@ -4,24 +4,24 @@
 SCRIPT="stop-on"
 source ./common.sh
 usage() {
-  error "Usage: ${SCRIPT} -s STONE_NAME"
+  error "Usage: ${SCRIPT}"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: stop-on STONE_NAME PORT"
+  echo "Usage: stop-on PORT"
   echo "Stop a Web Server on port number PORT"; 
   echo "The environment variable GS_HOME must be set"; 
   echo "This script is used in conjunction with start-on.sh script";   
   exit 0
 fi
+
 if [ -z ${GS_HOME+x} ]; then
   echo "GS_HOME variable is unset. Set this variable first and try again...";
   exit 0
 fi
 
-while getopts :l:s:p: opt; do
+while getopts :l:p: opt; do
   case $opt in
-    s) STONE=$OPTARG ;;
     p) PORTS=$OPTARG ;;
     \?) error "Invalid option: -$OPTARG"
       usage
@@ -34,6 +34,14 @@ while getopts :l:s:p: opt; do
   esac
 done
 
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
+
 ./checkIfStoneExist.sh $STONE
 if [ $? -ne 0 ]; then
   error "The Stone {$STONE} does NOT exist"
@@ -45,8 +53,8 @@ info "Start: Stopping Web Servers on port $PORTS"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -u "WebServer" -il <<EOF >>stop-on.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -u "WebServer" -il <<EOF >>stop-on.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
    | handler commitThreshold usedMemory |

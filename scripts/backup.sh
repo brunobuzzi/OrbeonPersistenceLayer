@@ -1,21 +1,21 @@
 #! /bin/sh
 # Requires GS_HOME variable defined
+# Requires workwith.sh to be executed first
 # Perform a backup operation on a given {STONE_NAME} and version {VERSION}
 PROGRAM_NAME="backup"
 source ./common.sh
 usage() {
-  error "Usage: ${PROGRAM_NAME} -s STONE_NAME -v GS_VERSION -f BACKUP_FILE"
+  error "Usage: ${PROGRAM_NAME} -f BACKUP_FILE"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+  echo "Requires workwith.sh -s -v to be executed first" 
   echo "Usage: backup -s STONE_NAME -v GS_VERSION -f BACKUP_FILE"
   exit 0
 fi
 
-while getopts :l:s:v:f: opt; do
+while getopts :l:f: opt; do
   case $opt in
-    s) STONE=$OPTARG ;;
-    v) GS_VERSION=$OPTARG ;;
     f) FILE=$OPTARG ;;
     \?) error "Invalid option: -$OPTARG"
       usage
@@ -28,16 +28,21 @@ while getopts :l:s:v:f: opt; do
   esac
 done
 
-info "Start: Set Session Variables"
-source ./workwith.sh -s $STONE -v $GS_VERSION
-info "Finish: Set Session Variables"
+
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
 
 info "Start: Backup STONE ${STONE} VERSION ${GS_VERSION}"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>$GS_LOGS/backup.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/backup.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
   System abort.

@@ -4,39 +4,28 @@
 PROGRAM_NAME="collectGarbage"
 source ./common.sh
 usage() {
-  error "Usage: ${PROGRAM_NAME} -s STONE -v GS_VERSION"
+  error "Usage: ${PROGRAM_NAME}"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: collectGarbage -s STONE -v GS_VERSION"
+  echo "Usage: collectGarbage"
   exit 0
 fi
 
-while getopts :l:s:v: opt; do
-  case $opt in
-    s) STONE=$OPTARG ;;
-    v) GS_VERSION=$OPTARG ;;    
-    \?) error "Invalid option: -$OPTARG"
-      usage
-      exit 1
-      ;;
-    :)error "Option -$OPTARG requires Stone name and ports."
-      usage
-      exit 1
-     ;;
-  esac
-done
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
 
-info "Start: Set Session Variables"
-source ./workwith.sh -s $STONE -v $GS_VERSION
-info "Finish: Set Session Variables"
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
 
-info "Start: Garbage Collection on STONE ${STONE}"
+info "Start: Garbage Collection on STONE ${STONE_NAME}"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>$GS_LOGS/collectGarbage.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/collectGarbage.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
   System abort.

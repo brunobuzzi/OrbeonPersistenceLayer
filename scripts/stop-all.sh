@@ -5,11 +5,11 @@
 SCRIPT="stop-all"
 source ./common.sh
 usage() {
-  error "Usage: ${SCRIPT} -s STONE_NAME"
+  error "Usage: ${SCRIPT}"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  echo "Usage: stop-all STONE_NAME"
+  echo "Usage: stop-all"
   echo "Stop all Web Servers contained in the file (ports-all.ini):"; 
   if [ ! -f ports-all.ini ]; 
     then echo "ports-all.ini file does not exist the script can not be executed"
@@ -26,23 +26,17 @@ if [ -z ${GS_HOME+x} ]; then
   exit 0
 fi
 
-while getopts :l:s: opt; do
-  case $opt in
-    s) STONE=$OPTARG ;;
-    \?) error "Invalid option: -$OPTARG"
-      usage
-      exit 1
-      ;;
-    :)error "Option -$OPTARG requires Stone name and ports."
-      usage
-      exit 1
-     ;;
-  esac
-done
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
 
 ./checkIfStoneExist.sh $STONE
 if [ $? -ne 0 ]; then
-  error "The Stone {$STONE} does NOT exist"
+  error "The Stone ${STONE_NAME} does NOT exist"
   exit 1
 fi
 
@@ -50,8 +44,8 @@ info "Start: Stopping Gem processes (Web Servers)"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>stop-all.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>stop-all.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
 System beginTransaction.

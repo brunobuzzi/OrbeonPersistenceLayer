@@ -6,7 +6,7 @@
 SCRIPT="unregister-application"
 source ./common.sh
 usage() {
-  error "Usage: ${SCRIPT} -s STONE_NAME"
+  error "Usage: ${SCRIPT}"
 }
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
@@ -22,19 +22,13 @@ if [ -z ${GS_HOME+x} ]; then
   exit 0
 fi
 
-while getopts :l:s: opt; do
-  case $opt in
-    s) STONE=$OPTARG ;;
-    \?) error "Invalid option: -$OPTARG"
-      usage
-      exit 1
-      ;;
-    :)error "Option -$OPTARG requires Stone name and ports."
-      usage
-      exit 1
-     ;;
-  esac
-done
+IS_STONE_DEFINED=$(isStoneNameAndVersionDefined) 
+
+if [ $IS_STONE_DEFINED = 0 ]; then
+  error "STONE_NAME AND VERSION are not defined"
+  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
 
 ./checkIfStoneExist.sh $STONE
 if [ $? -ne 0 ]; then
@@ -46,8 +40,8 @@ info "Start: Unregistering Web Servers"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -il <<EOF >>unregister-application.log
-set user $GS_USER password $PWD gemstone $STONE
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>unregister-application.log
+set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
 System beginTransaction.
