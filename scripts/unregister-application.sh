@@ -40,7 +40,7 @@ info "Start: Unregistering Web Servers"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>unregister-application.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/unregister-application.log
 set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
@@ -53,7 +53,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to unregister Web Applications check {unregister-application.log}"
+  error "Failed to unregister Web Applications check ${GS_LOGS}/unregister-application.log"
   exit 1
 fi
 

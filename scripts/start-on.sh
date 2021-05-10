@@ -52,7 +52,7 @@ info "Start: Starting Web Servers on port $PORTS"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE_NAME -u "WebServer" -il <<EOF >>start-on.log
+$GS_HOME/bin/startTopaz $STONE_NAME -u "WebServer" -il <<EOF >>$GS_LOGS/start-on.log
 set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
@@ -82,7 +82,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to start Web Servers check {start-on.log}"
+  error "Failed to start Web Servers check ${GS_LOGS}/start-on.log}"
   exit 1
 fi
 

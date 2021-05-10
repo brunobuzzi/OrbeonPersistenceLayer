@@ -51,7 +51,7 @@ fi
 info "Start: Starting Gem processes as Web Servers"
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE -u "WebServer" -il <<EOF >>start-all.log
+$GS_HOME/bin/startTopaz $STONE -u "WebServer" -il <<EOF >>$GS_LOGS/start-all.log
 set user $GS_USER password $PWD gemstone $STONE
 login
 exec 
@@ -81,7 +81,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to start Web Servers check {start-all.log}"
+  error "Failed to start Web Servers check ${GS_LOGS}/start-all.log"
   exit 1
 fi
 

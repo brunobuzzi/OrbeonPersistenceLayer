@@ -35,7 +35,7 @@ info  "Start: OrbeonPersistenceLayer Packages Installation"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>install-all.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/install-all.log
 set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec
@@ -74,7 +74,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "The installation process has failed check {install-all.log}"
+  error "The installation process has failed check ${GS_LOGS}/install-all.log"
   exit 1
 fi
 
@@ -91,7 +91,7 @@ git branch
 git branch -a
 git checkout origin/v6.0.1
 git checkout v6.0.1
-$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>highcharts.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>$GS_LOGS/highcharts.log
 set user DataCurator password swordfish gemstone $STONE_NAME
 login
 exec
@@ -109,14 +109,14 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Highcharts installation has failed check {highcharts.log}"
+  error "Highcharts installation has failed check ${GS_LOGS}/highcharts.log}"
   exit 1
 fi
 info "Start: Downloading HighchartsSt static files"
 cd scripts
 sh downloadAndPrepareFilesForFileLibraries.sh -f -d $GS_HOME/shared/repos/OrbeonPersistenceLayer/js -p Highstock -v 6.0.1
 info "Finish: Downloading HighchartsSt static files"
-$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>highcharts.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il -T 500000 <<EOF  >>$GS_LOGS/highcharts.log
 set user DataCurator password swordfish gemstone $STONE_NAME
 login
 exec
@@ -129,7 +129,7 @@ logout
 quit
 EOF
 if [ $? -ne 0 ]; then
-  error "Highcharts installation has failed check {highcharts.log}"
+  error "Highcharts installation has failed check ${GS_LOGS}/highcharts.log}"
   exit 1
 fi
 info "Finish: HighchartsSt Packages Installation"

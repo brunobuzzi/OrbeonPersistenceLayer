@@ -44,7 +44,7 @@ info "Start: Stopping Gem processes (Web Servers)"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>stop-all.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/stop-all.log
 set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
@@ -57,7 +57,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to stop Web Servers check {stop-all.log}"
+  error "Failed to stop Web Servers check ${GS_LOGS}/stop-all.log"
   exit 1
 fi
 

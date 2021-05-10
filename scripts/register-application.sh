@@ -41,7 +41,7 @@ info "Start: Registering Web Servers"
 
 GS_USER=DataCurator
 PWD=`./getGsPwd.sh -u $GS_USER`
-$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>register-application.log
+$GS_HOME/bin/startTopaz $STONE_NAME -il <<EOF >>$GS_LOGS/register-application.log
 set user $GS_USER password $PWD gemstone $STONE_NAME
 login
 exec 
@@ -54,7 +54,7 @@ quit
 EOF
 
 if [ $? -ne 0 ]; then
-  error "Failed to register Web Applications check {register-application.log}"
+  error "Failed to register Web Applications check ${GS_LOGS}/register-application.log"
   exit 1
 fi
 
