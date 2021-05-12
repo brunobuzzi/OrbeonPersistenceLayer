@@ -1,0 +1,41 @@
+#! /bin/sh
+# Requires GS_HOME variable defined
+# Print defined session variables for GemStone
+# See also setGs.sh
+PROGRAM_NAME="printGsVars"
+source ./common.sh
+usage() {
+  error "Usage: ${PROGRAM_NAME}"
+}
+
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+  echo "Usage: printGsVars"
+  echo "Print defined session variables for GemStone"; 
+  echo "See also setGs.sh";
+  return 0
+fi
+
+if [ -z ${GS_HOME+x} ]; then
+  echo "GS_HOME variable is unset. Set this variable first and try again...";
+  exit 0
+fi
+
+if [ -z "${STONE_NAME}" ]; then
+  echo "Variable STONE_NAME is NOT set";
+  exit 0
+fi
+
+if [ -z "${GS_VERSION}" ]; then
+  echo "Variable GS_VERSION is NOT set";
+  exit 0
+fi
+
+echo "STONE_NAME:   " $STONE_NAME
+echo "GS_VERSION:   " $GS_VERSION
+echo "GEMSTONE:     " $GEMSTONE
+echo "GS_CONF_FILE: " $GS_CONF_FILE
+echo "GS_BACKUPS:   " $GS_BACKUPS
+echo "GS_EXTENTS:   " $GS_EXTENTS
+echo "GS_TRANLOGS:  " $GS_TRANLOGS
+echo "GS_LOGS:      " $GS_LOGS
+echo "GS_CLEAN_EXTENT:  " $GS_CLEAN_EXTENT

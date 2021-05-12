@@ -49,5 +49,5 @@ export GS_TRANLOGS=$GS_HOME/server/stones/$STONE_NAME/tranlogs
 export GS_LOGS=$GS_HOME/server/stones/$STONE_NAME/logs
 
 if (( printVerbose==1 )) ; then
-  source ./printGsVars.sh
+  source ./printVars
 fi
