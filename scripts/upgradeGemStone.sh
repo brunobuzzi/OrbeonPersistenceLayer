@@ -30,9 +30,19 @@ fi
 info "Start: GemStone Upgrade"
 
 info "Start STEP 1: Check for use of deprecated methods"
+#This is a previous step to execute this script
+#Here is assumed that methods that call deprecated methods has already been upgraded
+#Inside a Gem:
+# 1) Deprecated doErrorOnDeprecated (or similar method or combine various methods)
+# 2) Run all tests and check if any is failing
+# 3) Update all calls to the deprecated methods
+# 4) Deprecated doNothingOnDeprecated 
+# Check "upgradeGemStone script" on documentation for more techniques to detect deprecated methods
 info "Finish STEP 1: Check for use of deprecated methods"
 
 info "Start STEP 2: File out modifications to GemStone classes"
+#These modifications are stored in separated packages
+#For now this step can be skiped
 info "Finish STEP 2: File out modifications to GemStone classes"
 
 info "Start: GemStone Prepare for Upgrade"
