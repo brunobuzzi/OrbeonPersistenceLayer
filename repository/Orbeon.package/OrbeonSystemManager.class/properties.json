@@ -1,0 +1,14 @@
+{
+	"category" : "Orbeon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"applications" ],
+	"name" : "OrbeonSystemManager",
+	"pools" : [
+		 ],
+	"super" : "AbstractSystemManager",
+	"type" : "normal" }
