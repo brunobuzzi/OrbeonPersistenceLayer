@@ -16,7 +16,13 @@ IS_STONE_DEFINED=$(isStoneNameAndVersionDefined)
 
 if [ $IS_STONE_DEFINED = 0 ]; then
   error "STONE_NAME AND VERSION are not defined"
-  print_actions "execute ./workwith -s STONE_NAME -v VERSION"
+  print_actions "execute . workwith -s STONE_NAME -v VERSION"
+  exit 1
+fi
+
+./checkIfStoneExist.sh $STONE_NAME
+if [ $? -ne 0 ]; then
+  error "The Stone ${STONE_NAME} does NOT exist"
   exit 1
 fi
 
