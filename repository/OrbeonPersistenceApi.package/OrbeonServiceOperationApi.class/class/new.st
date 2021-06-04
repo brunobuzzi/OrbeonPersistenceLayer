@@ -1,4 +1,4 @@
-other
+instance creation
 new
 
 	^super new initialize

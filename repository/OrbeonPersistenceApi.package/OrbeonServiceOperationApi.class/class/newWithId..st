@@ -1,4 +1,4 @@
-other
+instance creation
 newWithId: id
 
 	^self new

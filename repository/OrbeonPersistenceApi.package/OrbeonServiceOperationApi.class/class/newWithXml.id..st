@@ -1,4 +1,4 @@
-other
+instance creation
 newWithXml: xmlString id: id
 
 	^self new

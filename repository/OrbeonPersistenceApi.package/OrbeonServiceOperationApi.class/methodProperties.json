@@ -1,6 +1,9 @@
 {
 	"class" : {
 		"new" : "brunobb 06/26/2020 15:15",
+		"newOn:withXml:" : "brunobb 06/04/2021 14:00",
+		"newOn:withXml:id:" : "brunobb 06/04/2021 14:03",
+		"newOn:wthId:" : "brunobb 06/04/2021 13:57",
 		"newWithId:" : "brunobb 06/26/2020 15:14",
 		"newWithXml:" : "brunobb 06/26/2020 15:19",
 		"newWithXml:id:" : "brunobb 06/26/2020 15:19" },
@@ -28,6 +31,9 @@
 		"setApplicationAndFormNameFromXmlString" : "brunobb 04/16/2021 08:01",
 		"setId:" : "brunobb 06/26/2020 15:14",
 		"setUserCredentialsFrom:" : "brunobb 08/27/2020 12:07",
+		"setWorldManager:id:" : "brunobb 06/04/2021 13:58",
+		"setWorldManager:xmlString:" : "brunobb 06/04/2021 14:01",
+		"setWorldManager:xmlString:id:" : "brunobb 06/04/2021 14:03",
 		"signalNoApplicationException:" : "brunobb 02/16/2018 10:18",
 		"signalNoFormException" : "brunobb 02/16/2018 10:26",
 		"user:" : "brunobb 08/27/2020 12:07",

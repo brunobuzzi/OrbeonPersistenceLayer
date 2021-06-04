@@ -1,4 +1,4 @@
-other
+private
 setId: idValue
 
 	id := idValue
