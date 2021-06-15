@@ -3,6 +3,6 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormInstanceDeleteApi newWithId: ''.
+	apiOperation := OrbeonFormInstanceDeleteApi newOn: self systemRoot withId: ''.
 	apiOperation appName: 'agesic';
 		formName: 'energy-recursive'.

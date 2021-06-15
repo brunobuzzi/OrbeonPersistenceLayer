@@ -2,6 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 06/28/2020 14:28",
+		"setUp" : "brunobb 06/15/2021 11:43",
 		"testDoIt" : "brunobb 06/28/2020 14:34",
 		"testFileDoesNotExist" : "brunobb 06/28/2020 14:35" } }

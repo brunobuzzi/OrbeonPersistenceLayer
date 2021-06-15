@@ -3,6 +3,6 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormDefinitionSourceApi newWithId: UUID new asString.
+	apiOperation := OrbeonFormDefinitionSourceApi newOn: self systemRoot withId: UUID new asString.
 	apiOperation appName: 'agesic';
 		formName: 'test-all-types-4'.

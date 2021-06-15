@@ -3,6 +3,6 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormDraftDeleteApi newWithId: ''.
+	apiOperation := OrbeonFormDraftDeleteApi newOn: self systemRoot withId: ''.
 	apiOperation appName: 'agesic';
 		formName: 'energy-recursive'.

@@ -7,7 +7,7 @@ setUp
 	definition := self createFormDefinition.
 	formId := definition id.
 
-	apiOperation := OrbeonSendFormDefinitionFileApi newWithId: formId.
+	apiOperation := OrbeonSendFormDefinitionFileApi newOn: self systemRoot withId: formId.
 	apiOperation fileId: fileId;
 		appName: 'migration';
 		formName: 'all-fields-types'.
