@@ -1,5 +1,5 @@
 instance creation
-newOn: anOrbeonSystemManager wthId: id
+newOn: anOrbeonSystemManager withId: id
 
 	^self new
 		setWorldManager: anOrbeonSystemManager id: id;

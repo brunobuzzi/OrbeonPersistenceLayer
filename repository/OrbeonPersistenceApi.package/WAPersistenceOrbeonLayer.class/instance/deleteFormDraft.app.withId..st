@@ -5,7 +5,7 @@ deleteFormDraft: formName app: app withId: id
 	<delete>
 	<path: '/crud/{2}/{1}/draft/{3}/data.xml'>
 
-	apiOperation := OrbeonFormDraftDeleteApi newWithId: id.
+	apiOperation := OrbeonFormDraftDeleteApi newOn: self systemRoot withId: id.
 	apiOperation appName: app;
 		formName: formName;
 		group: (self requestContext request headerAt: 'orbeon-group');

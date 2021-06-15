@@ -4,7 +4,7 @@ deleteFormDefinitionWithId: id
 	<delete>
 	<path: '/crud/orbeon/builder/data/{1}/data.xml'>
 
-	^(OrbeonFormDefinitionDeleteApi newWithId: id) 
+	^(OrbeonFormDefinitionDeleteApi newOn: self systemRoot withId: id) 
 			group: (self requestContext request headerAt: 'orbeon-group');
 			user: (self requestContext request headerAt: 'orbeon-username');
 			setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials');
