@@ -21,7 +21,7 @@ testIssue374
 	draft1 := formDefinition getDraftWithId: uuid ifNone: [self assert: false].
 
 
-	apiOperation := OrbeonInstanceSearchApi newWithXml: self requestXmlForGenericSummaryNoSearch_369 application: application form: formDefinition.
+	apiOperation := OrbeonInstanceSearchApi newOn: self systemRoot withXml: self requestXmlForGenericSummaryNoSearch_369 application: application form: formDefinition.
 	apiOperation setPageSize;
 					setPageNumber;
 					group: 'admin';

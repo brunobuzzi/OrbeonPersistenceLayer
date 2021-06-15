@@ -16,7 +16,7 @@ testGenericSummaryWithSearch
 	instance1 := formDefinition getInstanceWithId: uuid1 ifNone: [self assert: false].
 	instance2 := formDefinition getInstanceWithId: uuid2 ifNone: [self assert: false].
 
-	apiOperation := OrbeonInstanceSearchApi newWithXml: (self requestXmlForGenericSummaryWithSearch: 'Bruno') application: application form: formDefinition.
+	apiOperation := OrbeonInstanceSearchApi newOn: self systemRoot withXml: (self requestXmlForGenericSummaryWithSearch: 'Bruno') application: application form: formDefinition.
 	apiOperation setPageSize;
 					setPageNumber;
 					group: 'admin';
@@ -28,7 +28,7 @@ testGenericSummaryWithSearch
 
 	self assert: resultXml equals: (self responseXmlForGenericSearchForArray: (Array with: instance1 with: instance2)).
 
-	apiOperation := OrbeonInstanceSearchApi newWithXml: (self requestXmlForGenericSummaryWithSearch: 'john') application: application form: formDefinition.
+	apiOperation := OrbeonInstanceSearchApi newOn: self systemRoot withXml: (self requestXmlForGenericSummaryWithSearch: 'john') application: application form: formDefinition.
 	apiOperation setPageSize;
 					setPageNumber;
 					group: 'admin';

@@ -4,7 +4,7 @@ testGenericSummaryNoSearch
 
 	formDefinition := self createFormStructure.
 
-	apiOperation := OrbeonDefinitionSearchApi newWithXml: self requestXmlForGenericSummaryNoSearch.
+	apiOperation := OrbeonDefinitionSearchApi newOn: self systemRoot withXml: self requestXmlForGenericSummaryNoSearch.
 	apiOperation setPageSize;
 		setPageNumber;
 		group: 'admin';

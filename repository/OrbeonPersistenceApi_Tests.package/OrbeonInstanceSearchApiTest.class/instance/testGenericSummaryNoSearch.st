@@ -12,7 +12,7 @@ testGenericSummaryNoSearch
 	self createFormInstance: uuid.
 	instance := formDefinition getInstanceWithId: uuid ifNone: [self assert: false].
 
-	apiOperation := OrbeonInstanceSearchApi newWithXml: self requestXmlForGenericSummaryNoSearch application: application form: formDefinition.
+	apiOperation := OrbeonInstanceSearchApi newOn: self systemRoot withXml: self requestXmlForGenericSummaryNoSearch application: application form: formDefinition.
 	apiOperation setPageSize;
 					setPageNumber;
 					group: 'admin';

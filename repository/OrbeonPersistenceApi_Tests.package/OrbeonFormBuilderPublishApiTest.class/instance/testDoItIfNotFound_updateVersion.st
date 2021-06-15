@@ -10,7 +10,7 @@ testDoItIfNotFound_updateVersion
 	ifNil: [apiOperation headerVersion: 'next'] 
 	ifNotNil: [apiOperation headerVersion: latestSavedDefinition version printString;id: latestSavedDefinition id].
 
-	saveApi := OrbeonFormBuilderSaveApi newWithXml: self newDefinitionTemplate formDefinition_st_simple_registration id: latestSavedDefinition id.
+	saveApi := OrbeonFormBuilderSaveApi newOn: self systemRoot withXml: self newDefinitionTemplate formDefinition_st_simple_registration id: latestSavedDefinition id.
 	saveApi appName: 'st';
 		formName: 'simple-registration'.
 	saveApi doIt.

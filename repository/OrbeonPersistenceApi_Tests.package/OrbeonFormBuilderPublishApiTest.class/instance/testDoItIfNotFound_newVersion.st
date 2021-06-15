@@ -8,12 +8,12 @@ testDoItIfNotFound_newVersion
 
 	apiOperation doItIfNotFound: [self assert: false]. "version 1"
 
-	apiOperation := OrbeonFormBuilderSaveApi newWithXml: self newDefinitionTemplate formDefinition_st_simple_registration_2 id: latestSavedDefinition id.
+	apiOperation := OrbeonFormBuilderSaveApi newOn: self systemRoot withXml: self newDefinitionTemplate formDefinition_st_simple_registration_2 id: latestSavedDefinition id.
 	apiOperation appName: 'st';
 		formName: 'simple-registration'.
 	apiOperation doIt. "version 2"
 
-	apiOperation := OrbeonFormBuilderPublishApi newWithXml: self newDefinitionTemplate formDefinition_st_simple_registration_2 id: latestSavedDefinition id.
+	apiOperation := OrbeonFormBuilderPublishApi newOn: self systemRoot withXml: self newDefinitionTemplate formDefinition_st_simple_registration_2 id: latestSavedDefinition id.
 	apiOperation appName: 'st';
 		formName: 'simple-registration';
 		headerVersion: 'next'.

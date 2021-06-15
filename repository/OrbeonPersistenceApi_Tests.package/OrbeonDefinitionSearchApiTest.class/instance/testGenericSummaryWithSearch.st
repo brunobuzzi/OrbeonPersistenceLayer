@@ -4,7 +4,7 @@ testGenericSummaryWithSearch
 
 	formDefinition := self createFormStructure.
 
-	apiOperation := OrbeonDefinitionSearchApi newWithXml: (self requestXmlForGenericSummaryWithSearch: 'agesic').
+	apiOperation := OrbeonDefinitionSearchApi newOn: self systemRoot withXml: (self requestXmlForGenericSummaryWithSearch: 'agesic').
 	apiOperation setPageSize;
 		setPageNumber;
 		group: 'admin';
@@ -15,7 +15,7 @@ testGenericSummaryWithSearch
 	self assert: resultXml equals: (self responseXmlForGenericSummaryNoSearchFor: formDefinition).
 
 
-	apiOperation := OrbeonDefinitionSearchApi newWithXml: (self requestXmlForGenericSummaryWithSearch: 'agesic2').
+	apiOperation := OrbeonDefinitionSearchApi newOn: self systemRoot withXml: (self requestXmlForGenericSummaryWithSearch: 'agesic2').
 	apiOperation setPageSize;
 		setPageNumber;
 		group: 'admin';

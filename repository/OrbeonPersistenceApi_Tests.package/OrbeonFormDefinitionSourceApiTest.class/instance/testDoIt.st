@@ -3,12 +3,12 @@ testDoIt
 	| publishOperation xmlString latestSavedDefinition saveApiOperation formId |
 
 	formId := UUID new asString.
-	saveApiOperation := OrbeonFormBuilderSaveApi newWithXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: formId.
+	saveApiOperation := OrbeonFormBuilderSaveApi newOn: self systemRoot withXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: formId.
 	saveApiOperation appName: 'st';
 		formName: 'simple-registration';
 		doIt.
 
-	publishOperation := OrbeonFormBuilderPublishApi newWithXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: formId.
+	publishOperation := OrbeonFormBuilderPublishApi newOn: self systemRoot withXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: formId.
 	publishOperation appName: apiOperation appName;
 		formName: apiOperation formName;
 		headerVersion: 'next'.
