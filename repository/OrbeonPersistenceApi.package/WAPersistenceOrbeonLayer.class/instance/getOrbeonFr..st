@@ -5,7 +5,7 @@ getOrbeonFr: allVersions
 	<produces: 'application/xml'>
 	<path: '/form?all-versions={1}'>
 
-	^OrbeonFrPageApi new 
+	^(OrbeonFrPageApi newOn: self systemRoot)
 			group: (self requestContext request headerAt: 'orbeon-group');
 			user: (self requestContext request headerAt: 'orbeon-username');
 			setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials');
