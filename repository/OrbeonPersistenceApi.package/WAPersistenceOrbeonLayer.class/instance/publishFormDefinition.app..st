@@ -6,7 +6,7 @@ publishFormDefinition: formName app: app
 	<path: '/crud/{2}/{1}/form/form.xhtml'>
 
 	request := self requestContext request.
-	apiOperation := OrbeonFormBuilderPublishUpdateApi newWithXml: (request bodyDecodeUsing: 'utf-8').
+	apiOperation := OrbeonFormBuilderPublishUpdateApi newOn: self systemRoot withXml: (request bodyDecodeUsing: 'utf-8').
 	apiOperation
 		appName: app;
 		formName: formName;
