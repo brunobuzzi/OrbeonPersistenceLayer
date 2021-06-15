@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"new" : "brunobb 06/26/2020 15:15",
+		"newOn:" : "brunobb 06/15/2021 10:45",
 		"newOn:withId:" : "brunobb 06/15/2021 10:44",
 		"newOn:withXml:" : "brunobb 06/04/2021 14:00",
 		"newOn:withXml:id:" : "brunobb 06/04/2021 14:03",
@@ -31,6 +32,7 @@
 		"setApplicationAndFormNameFromXmlString" : "brunobb 04/16/2021 08:01",
 		"setId:" : "brunobb 06/26/2020 15:14",
 		"setUserCredentialsFrom:" : "brunobb 08/27/2020 12:07",
+		"setWorldManager:" : "brunobb 06/15/2021 10:46",
 		"setWorldManager:id:" : "brunobb 06/04/2021 13:58",
 		"setWorldManager:xmlString:" : "brunobb 06/04/2021 14:01",
 		"setWorldManager:xmlString:id:" : "brunobb 06/04/2021 14:03",

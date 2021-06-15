@@ -1,17 +1,19 @@
 service-get
-getToolboxForApplication: appName form: formName
+getToolboxForApplication: appName form: formName 
 	"This method is called by Orbeon when the Form Builder is about to be Opened.
 	It show the available -Library- forms for the application named <appName> "
-	| apiOperation |
+
 	<get>
 	<produces: 'application/xml'>
 	<path: '/custom/{1}/builder/toolbox?application={1}&form={2}'>
-
-	apiOperation := OrbeonGetToolboxApi new.
-	apiOperation appName: appName;
-		headerValue: (self requestContext request headerAt: 'orbeon-form-definition-version');
+	| apiOperation |
+	apiOperation := OrbeonGetToolboxApi newOn: self systemRoot.
+	apiOperation
+		appName: appName;
+		headerValue: (self requestContext request 
+					headerAt: 'orbeon-form-definition-version');
 		group: (self requestContext request headerAt: 'orbeon-group');
 		user: (self requestContext request headerAt: 'orbeon-username');
-		setUserCredentialsFrom: (self requestContext request headerAt: 'orbeon-credentials').
-
+		setUserCredentialsFrom: (self requestContext request 
+					headerAt: 'orbeon-credentials').
 	^apiOperation doItIfNotFound: [self noRouteFound: self requestContext]
