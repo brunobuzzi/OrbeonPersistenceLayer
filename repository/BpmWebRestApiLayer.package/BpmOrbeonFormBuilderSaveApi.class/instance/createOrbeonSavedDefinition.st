@@ -1,0 +1,4 @@
+other
+createOrbeonSavedDefinition
+
+	^self defaultSavedFormDefinitionClass newNamed: self getFormName inBpmAppNamed: self getApplicationName

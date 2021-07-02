@@ -1,4 +1,4 @@
 system root
 systemRoot
 
-	^OrbeonSystemManager new
+	^OrbeonSystemRoot new

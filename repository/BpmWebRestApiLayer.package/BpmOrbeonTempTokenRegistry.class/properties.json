@@ -1,0 +1,15 @@
+{
+	"category" : "BpmWebRestApiLayer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Default" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tokens",
+		"failedTokens" ],
+	"name" : "BpmOrbeonTempTokenRegistry",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

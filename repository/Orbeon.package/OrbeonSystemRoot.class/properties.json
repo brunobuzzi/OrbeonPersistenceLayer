@@ -8,8 +8,8 @@
 	"instvars" : [
 		"applications",
 		"databaseConfiguration" ],
-	"name" : "OrbeonSystemManager",
+	"name" : "OrbeonSystemRoot",
 	"pools" : [
 		 ],
-	"super" : "AbstractSystemManager",
+	"super" : "AbstractSystemRoot",
 	"type" : "normal" }

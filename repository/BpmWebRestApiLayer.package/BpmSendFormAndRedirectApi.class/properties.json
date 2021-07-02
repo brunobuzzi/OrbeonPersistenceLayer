@@ -1,0 +1,17 @@
+{
+	"category" : "BpmWebRestApiLayer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"valid",
+		"language",
+		"orbeonFormInstance",
+		"bpmArtifact" ],
+	"name" : "BpmSendFormAndRedirectApi",
+	"pools" : [
+		 ],
+	"super" : "BpmServiceOperationApi",
+	"type" : "normal" }

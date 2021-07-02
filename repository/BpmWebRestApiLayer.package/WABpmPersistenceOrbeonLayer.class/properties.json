@@ -1,0 +1,14 @@
+{
+	"category" : "BpmWebRestApiLayer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WABpmPersistenceOrbeonLayer",
+	"pools" : [
+		 ],
+	"super" : "WAPersistenceOrbeonLayer",
+	"type" : "normal" }
