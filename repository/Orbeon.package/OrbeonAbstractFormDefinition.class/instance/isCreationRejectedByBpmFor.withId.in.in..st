@@ -1,5 +1,5 @@
 update restrictions
-isCreationRejectedByBpmFor: fNamed withId: fId in: appName
+isCreationRejectedByBpmFor: fNamed withId: fId in: appName in: aBpmSystemRoot
 	"The creation is rejected for <anOrbeonSavedFormDefinition> when already exist a form definition named <fNamed> in application named <appName> but the <ids> are different.
 	This case happend when a pair <appName,formName> is saved with different id. [IN THIS PERSISTENCE LAYER THIS IS FORBIDDEN BY CODE]"
 
@@ -12,7 +12,7 @@ isCreationRejectedByBpmFor: fNamed withId: fId in: appName
 
 	So if aBpmProcessDefinition already exist (using) FormDefinitions 
 	--> app name and form name can NOT be renamed."
-	(self defaultProcessDefinitionClass getAllVersionsIn: self getApplicationName) do: [:eachDef | 
+	(aBpmSystemRoot getAllVersionsIn: self getApplicationName) do: [:eachDef | 
 		(eachDef getOrbeonTasks anySatisfy: [:eachTask | (eachTask name = self formName) and: [self id ~= fId]]) 
 		ifTrue: [^true "creation rejected"].
 	].
