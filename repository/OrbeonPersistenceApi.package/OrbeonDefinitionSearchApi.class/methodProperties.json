@@ -1,7 +1,6 @@
 {
 	"class" : {
-		"newOn:withXml:" : "brunobb 06/04/2021 14:08",
-		"newWithXml:" : "brunobb 06/26/2020 15:29" },
+		"newOn:withXml:" : "brunobb 06/04/2021 14:08" },
 	"instance" : {
 		"doIt" : "brunobb 06/05/2020 19:54",
 		"generateXmlAnswerForBuilderSummary" : "BrunoBB 12/30/2016 03:27",
