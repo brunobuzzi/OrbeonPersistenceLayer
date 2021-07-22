@@ -1,0 +1,4 @@
+charts
+removeChart: aBIChartDefinition
+
+	^usersChartsAndDashboardRepository removeChart: aBIChartDefinition
