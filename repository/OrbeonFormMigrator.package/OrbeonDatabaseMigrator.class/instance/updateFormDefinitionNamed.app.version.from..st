@@ -8,8 +8,8 @@ updateFormDefinitionNamed: form app: app version: version from: stringTimeStamp
 	5. If NOT necesary then update the existing one"
 	| application currentDefinition savedDefinition newDefinition comparator shouldCreateAnotherVersion |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: app.
-	currentDefinition := self getOrbeonApplicationClass getLastPublishedDefinitionNamed: form fromApplicationNamed: app withVersion: (Integer fromString: version) ifNone: [nil].
+	application := systemRoot getExistingApplicationOrCreateNewNamed: app.
+	currentDefinition := systemRoot getLastPublishedDefinitionNamed: form fromApplicationNamed: app withVersion: (Integer fromString: version) ifNone: [nil].
 	savedDefinition := self importFormDefinitionNamed: form version: version in: app from: stringTimeStamp.
 	newDefinition := savedDefinition definition.
 

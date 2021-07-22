@@ -11,4 +11,4 @@ getIdForDefinition: anOrbeonFormDefinition
 
 	"<anOrbeonFormDefinition> has previous version --> we get the [id] from stored definitions"
 
-	^(self getOrbeonApplicationClass formDefinitionNamed: anOrbeonFormDefinition formName in: anOrbeonFormDefinition applicationName) id
+	^(systemRoot formDefinitionNamed: anOrbeonFormDefinition formName in: anOrbeonFormDefinition applicationName) id

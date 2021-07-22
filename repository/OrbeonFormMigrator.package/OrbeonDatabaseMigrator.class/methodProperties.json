@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17" },
+		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
+		"newOn:" : "brunobb 07/22/2021 14:29" },
 	"instance" : {
 		"defaultDatabaseReaderClass" : "brunobb 03/16/2020 14:17",
 		"execute:" : "brunobb 03/16/2020 13:37",
@@ -13,14 +14,14 @@
 		"getAllApplicationsName" : "brunobb 03/16/2020 13:39",
 		"getAllDocumentIdsForDefinition:" : "brunobb 03/16/2020 13:42",
 		"getAllFormsDefinitionNameOf:" : "brunobb 03/17/2020 06:10",
-		"getAllOrbeonApplications" : "brunobb 03/16/2020 13:39",
+		"getAllOrbeonApplications" : "brunobb 07/22/2021 14:31",
 		"getAllVersionsNumberOf:in:" : "brunobb 03/16/2020 13:46",
 		"getApplicationDefinitionVersionOf:" : "brunobb 03/16/2020 13:42",
 		"getDBStringForInstanceDefinitionWithId:" : "brunobb 03/16/2020 13:46",
 		"getDBStringForInstanceDefinitionWithId:version:" : "brunobb 03/16/2020 13:46",
 		"getDefinitionAttachmentContentFor:version:" : "brunobb 03/16/2020 13:38",
 		"getFormWithId:" : "brunobb 03/16/2020 13:39",
-		"getIdForDefinition:" : "brunobb 03/16/2020 13:42",
+		"getIdForDefinition:" : "brunobb 07/22/2021 14:31",
 		"getLastUpdateOf:in:version:" : "brunobb 03/17/2020 10:19",
 		"getOldTimeStamp" : "brunobb 03/17/2020 10:24",
 		"importAllFormInstancesOf:" : "brunobb 04/26/2021 14:14",
@@ -33,11 +34,12 @@
 		"migrateDefinitionAttachmentsOf:" : "brunobb 08/14/2020 10:32",
 		"migrateDefinitionCustomAttachmentOf:" : "brunobb 08/17/2020 11:11",
 		"migrateFormDefinitionNamed:in:" : "brunobb 03/17/2020 05:49",
-		"migrateFormDefinitionNamed:version:in:" : "bruno 07/19/2020 14:35",
+		"migrateFormDefinitionNamed:version:in:" : "brunobb 07/22/2021 14:31",
 		"migrateInstanceAttachmentsOf:" : "brunobb 06/11/2020 14:34",
 		"migrateInstanceAttachmentsOf:from:" : "brunobb 07/16/2020 14:06",
 		"migrateInstancesOf:version:from:" : "brunobb 03/24/2020 14:06",
 		"setDatabaseIP:user:password:" : "brunobb 03/16/2020 13:37",
+		"setRoot:" : "brunobb 07/22/2021 14:29",
 		"sqlReader:" : "brunobb 03/16/2020 13:34",
 		"updateFormDefinitionNamed:app:version:" : "brunobb 03/20/2020 16:09",
-		"updateFormDefinitionNamed:app:version:from:" : "brunobb 04/16/2021 08:34" } }
+		"updateFormDefinitionNamed:app:version:from:" : "brunobb 07/22/2021 14:31" } }

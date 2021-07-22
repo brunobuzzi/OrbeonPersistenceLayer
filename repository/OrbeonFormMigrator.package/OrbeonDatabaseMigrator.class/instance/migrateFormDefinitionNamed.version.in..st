@@ -14,7 +14,7 @@ migrateFormDefinitionNamed: aString version: version in: applicationName
 	savedDefinition setMetadata.
 	definition definition: savedDefinition.
 	savedDefinition definition: definition.
-	app := self getOrbeonApplicationClass applicationNamed: applicationName.
+	app := systemRoot applicationNamed: applicationName.
 	savedDefinition storeInApplication.
 	definition storeInApplication.
 
