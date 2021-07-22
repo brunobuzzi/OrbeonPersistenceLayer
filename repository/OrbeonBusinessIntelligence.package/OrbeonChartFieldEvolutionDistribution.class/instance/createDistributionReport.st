@@ -2,7 +2,7 @@ other
 createDistributionReport
 	| error application formDefinition report |
 
-	application := self getOrbeonApplicationClass applicationNamed: self applicationName ifNone: [].
+	application := self systemRoot applicationNamed: self applicationName ifNone: [].
 	formDefinition := application definitionNamed: self formName ifNone: [].
 
 	report  := formDefinition

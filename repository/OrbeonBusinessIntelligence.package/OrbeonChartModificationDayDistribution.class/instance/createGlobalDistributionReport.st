@@ -2,7 +2,7 @@ other
 createGlobalDistributionReport
 	| error |
 
-	^self getOrbeonApplicationClass  
+	^self systemRoot  
 			reportModificationDayDistributionQuantityFrom: self startDate 
 			to: self endDate 
 			satisfying: self queryBlock 
