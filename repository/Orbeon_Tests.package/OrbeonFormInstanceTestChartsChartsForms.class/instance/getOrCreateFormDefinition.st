@@ -2,7 +2,7 @@ setUp
 getOrCreateFormDefinition
 		| anOrbeonApplication |
 
-	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
+	anOrbeonApplication := testRoot getExistingApplicationOrCreateNewNamed: 'charts'.
 
 	^anOrbeonApplication 
 		definitionNamed: 'charts-forms' 

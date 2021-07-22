@@ -4,7 +4,7 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'gs'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'gs'.
 
 	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
 							name: 'library'

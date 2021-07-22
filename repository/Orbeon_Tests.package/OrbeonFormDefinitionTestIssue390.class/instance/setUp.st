@@ -3,4 +3,4 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'gs'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'gs'.

@@ -3,7 +3,7 @@ setUp
 	| definition |
 
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
 	application definitionNamed: 'library' 
 						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library
 											name: 'library'

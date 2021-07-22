@@ -3,4 +3,4 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue-test'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue-test'.

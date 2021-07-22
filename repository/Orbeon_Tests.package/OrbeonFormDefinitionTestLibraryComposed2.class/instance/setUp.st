@@ -1,14 +1,14 @@
 setUp
 setUp
 
-	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'orbeon'. 
+	testRoot getExistingApplicationOrCreateNewNamed: 'orbeon'. 
 
 	self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_orbeon_library 
 			name: 'library' 
 			in: 'orbeon' 
 			title: 'Library'.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
 
 	self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library 
 			name: 'library' 

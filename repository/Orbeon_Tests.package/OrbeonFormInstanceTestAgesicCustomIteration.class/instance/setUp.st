@@ -2,7 +2,7 @@ setUp
 setUp
 	| definition |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application 
 						definitionNamed: 'test-section-interation-name' 
 						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_section_interaction_name

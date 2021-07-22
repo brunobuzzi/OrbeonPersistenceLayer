@@ -4,7 +4,7 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	definition := application 
 						definitionNamed: 'test-all-types-2' 

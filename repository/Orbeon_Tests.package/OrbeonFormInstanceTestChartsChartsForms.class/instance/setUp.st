@@ -1,6 +1,6 @@
 setUp
 setUp
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'charts'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'charts'.
 
 	self getOrCreateFormDefinition

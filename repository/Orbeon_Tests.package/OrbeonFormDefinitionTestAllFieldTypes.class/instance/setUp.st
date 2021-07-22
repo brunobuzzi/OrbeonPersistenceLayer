@@ -3,7 +3,7 @@ setUp
 
 	super setUp.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'migration'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'migration'.
 	application unregisterDefinitionNamed: 'all-fields-types'.
 	form := application definitionNamed: 'all-fields-types' 
 								ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_migration_all_fields_types 

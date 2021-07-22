@@ -4,6 +4,6 @@ buildSavedFormStructureFrom: xmlString name: formName version: version id: strin
 	The XML of the form is take it from <OrbeonFormDefinitionTemplate> using the class method <methodName>"
 	| anOrbeonApplication |
 
-	anOrbeonApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: appName.
+	anOrbeonApplication := testRoot getExistingApplicationOrCreateNewNamed: appName.
 
 	^self defaultSavedFormDefinitionClass buildDefinitionFrom: xmlString name: formName version: version id: stringId in: anOrbeonApplication title: title
