@@ -6,7 +6,7 @@ importInstancesOfFormVersionFromDate
 	formName := self componentValueAt: 'form-name'.
 	date := self componentValueAt: 'from-date'.
 	version := self componentValueAt: 'version'.
-	application := self getOrbeonApplicationClass applicationNamed: applicationName ifNone: [^self].
+	application := self session systemRoot applicationNamed: applicationName ifNone: [^self].
 	form := application getDefinitionNamed: formName withVersion: version ifNone: [^self].
 
 	self getOrbeonWebServerConfiguration databaseMigrator migrateInstancesOf: form version: version from: (self converToTimeStamp: date).

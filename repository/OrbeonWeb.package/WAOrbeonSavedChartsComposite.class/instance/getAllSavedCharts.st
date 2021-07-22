@@ -1,4 +1,4 @@
 other
 getAllSavedCharts
 
-	^self getOrbeonApplicationClass getChartsFor: self session user
+	^self session systemRoot getChartsFor: self session user

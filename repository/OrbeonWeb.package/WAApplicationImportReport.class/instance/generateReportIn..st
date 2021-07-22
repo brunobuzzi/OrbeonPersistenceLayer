@@ -6,7 +6,7 @@ generateReportIn: anOrderedCollection
 			rowReport := FormImportReport app: appKey form: formKey.
 			rowReport numberOfForms: value size.
 			anOrderedCollection add: rowReport.
-			definition := (self getOrbeonApplicationClass applicationNamed: appKey) definitionNamed: formKey.
+			definition := (self session systemRoot applicationNamed: appKey) definitionNamed: formKey.
 			definition getFieldsWithHyphen do: [:eachField | | warning |
 				warning := FormImportWarning report: rowReport fieldName: formKey.
 				warning warningDetails: 'Field name [', eachField name, '] has hyphen character.'.

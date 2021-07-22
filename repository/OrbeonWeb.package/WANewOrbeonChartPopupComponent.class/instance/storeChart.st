@@ -1,4 +1,4 @@
 other
 storeChart
 
-	^self getOrbeonApplicationClass storeChart: model
+	^self session systemRoot storeChart: model

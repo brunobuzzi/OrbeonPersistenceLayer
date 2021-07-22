@@ -5,7 +5,7 @@ removeChart
 	ifNil: [^self]
 	ifNotNil: [:aBoolean | aBoolean ifFalse: [^self]].
 
-	self getOrbeonApplicationClass removeChart: selectedLateralItem.
+	self session systemRoot removeChart: selectedLateralItem.
 
 	lateralCollection remove: selectedLateralItem ifAbsent: [].
 
