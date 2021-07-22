@@ -9,6 +9,6 @@ testDoItAndSetVersion
 
 	xmlFormDefinition := apiOperation doItAndSetVersion: [:versionString | self assert: versionString equals: '1'].
 
-	registerXmlDefinition := ((self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic') definitionNamed: 'test-all-types-4' ifNone: [self assert: false]) xmlString.
+	registerXmlDefinition := ((testRoot getExistingApplicationOrCreateNewNamed: 'agesic') definitionNamed: 'test-all-types-4' ifNone: [self assert: false]) xmlString.
 
 	self assert: xmlFormDefinition equals: registerXmlDefinition

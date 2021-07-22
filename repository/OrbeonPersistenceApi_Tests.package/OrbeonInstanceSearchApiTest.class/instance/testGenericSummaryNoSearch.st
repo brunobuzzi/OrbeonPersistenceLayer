@@ -4,7 +4,7 @@ testGenericSummaryNoSearch
 
 	formDefinition := self createFormStructure.
 
-	application := self getOrbeonApplicationClass applicationNamed: 'agesic' ifNone: [self assert: false].
+	application := testRoot applicationNamed: 'agesic' ifNone: [self assert: false].
 	version := 1.
 	definition := application getDefinitionNamed: 'test-all-types-4' withVersion: version ifNone: [self assert: false].
 

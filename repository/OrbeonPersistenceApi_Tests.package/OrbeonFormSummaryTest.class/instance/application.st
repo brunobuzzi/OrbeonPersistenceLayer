@@ -1,4 +1,4 @@
 other
 application
 
-	^self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'
+	^testRoot getExistingApplicationOrCreateNewNamed: 'ue'

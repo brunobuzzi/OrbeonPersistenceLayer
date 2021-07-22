@@ -4,7 +4,7 @@ tearDown
 
 	super tearDown.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	
 	application unregisterDefinitionNamed: 'test-2'.
 

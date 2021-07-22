@@ -5,8 +5,8 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 	apiOperation headerVersion: 'next'.
 	apiOperation doItIfNotFound: [self assert: false].
 
-	currentPublishedVersion := self getOrbeonApplicationClass formDefinitionNamed: apiOperation formName in: apiOperation appName.
-	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
+	currentPublishedVersion := testRoot formDefinitionNamed: apiOperation formName in: apiOperation appName.
+	latestSavedDefinition := testRoot getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
 	apiOperation xmlString: self newDefinitionTemplate formDefinition_st_simple_registration_2.
 	latestSavedDefinition 
 	ifNil: [apiOperation headerVersion: 'next'] 
@@ -14,7 +14,7 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 
 	apiOperation doItIfNotFound: [self assert: false].
 
-	newPublishedSameVersion := self getOrbeonApplicationClass formDefinitionNamed: apiOperation formName in: apiOperation appName.
+	newPublishedSameVersion := testRoot formDefinitionNamed: apiOperation formName in: apiOperation appName.
 
 	self deny: (currentPublishedVersion == newPublishedSameVersion).
 	self assert: (currentPublishedVersion version = newPublishedSameVersion version).

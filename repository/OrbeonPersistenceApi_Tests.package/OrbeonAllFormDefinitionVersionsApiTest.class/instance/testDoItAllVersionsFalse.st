@@ -3,7 +3,7 @@ testDoItAllVersionsFalse
 	| application formDefinition xmlResultString stringTS |
 
 	apiOperation allversions: 'false'.
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	formDefinition := self createFormStructure.
 	stringTS := formDefinition modifiedTime asOrbeonDateTimeString.

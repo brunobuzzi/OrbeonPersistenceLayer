@@ -11,6 +11,6 @@ createClone
 
 	cloneOperation doIt.
 
-	application := self getOrbeonApplicationClass applicationNamed: 'agesic'.
+	application := testRoot applicationNamed: 'agesic'.
 
 	^application getSavedDefinitionWithId: uuid ifNone: [self assert: false]

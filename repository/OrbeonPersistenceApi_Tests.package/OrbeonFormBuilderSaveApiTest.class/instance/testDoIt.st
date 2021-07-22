@@ -4,7 +4,7 @@ testDoIt
 
 	apiOperation doIt.
  
-	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
+	latestSavedDefinition := testRoot getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
 	apiOperation id: latestSavedDefinition id.
 
 	application := latestSavedDefinition application.
@@ -14,4 +14,4 @@ testDoIt
 
 	self assert: (currentSize + 1) equals: (application getSaveDefinitionsSizeFor: apiOperation formName).
 
-	self deny: (latestSavedDefinition == (self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil])).
+	self deny: (latestSavedDefinition == (testRoot getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil])).

@@ -2,7 +2,7 @@ other
 testDoIt
 	| application registry |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	apiOperation doIt.
 
 	registry := application clonedRegistryWithId: apiOperation id ifNone: [self assert: false].

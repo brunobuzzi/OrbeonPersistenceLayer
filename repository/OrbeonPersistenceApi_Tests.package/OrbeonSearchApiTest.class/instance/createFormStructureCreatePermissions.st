@@ -1,7 +1,7 @@
 other
 createFormStructureCreatePermissions
 
-	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	^self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_4
 			name: 'test-all-types-4'

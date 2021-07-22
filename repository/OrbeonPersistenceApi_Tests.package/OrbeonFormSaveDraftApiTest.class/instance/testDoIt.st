@@ -2,7 +2,7 @@ other
 testDoIt
 	| definition application |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure].
 
 	apiOperation xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive.

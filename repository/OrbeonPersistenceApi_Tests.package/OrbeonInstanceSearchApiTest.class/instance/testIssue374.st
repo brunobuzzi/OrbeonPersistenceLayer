@@ -4,7 +4,7 @@ testIssue374
 
 	formDefinition := self createRepeatableFormStructure.
 
-	application := self getOrbeonApplicationClass applicationNamed: 'agesic' ifNone: [self assert: false].
+	application := testRoot applicationNamed: 'agesic' ifNone: [self assert: false].
 	version := 1.
 	definition := application getDefinitionNamed: 'manual-form' withVersion: version ifNone: [self assert: false].
 

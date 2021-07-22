@@ -1,7 +1,7 @@
 other
 createFormInstanceWithId: formId creator: username group: group
 
-	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	self createFormStructure.
 

@@ -2,7 +2,7 @@ other
 createFormDefinition
 	| application def |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	def := (self defaultPublishedFormDefinitionClass newNamed: 'test-2' inAppNamed: 'agesic')
 			xmlString: self newDefinitionTemplate formDefinition_agesic_test_2;
 			id: UUID new asString;

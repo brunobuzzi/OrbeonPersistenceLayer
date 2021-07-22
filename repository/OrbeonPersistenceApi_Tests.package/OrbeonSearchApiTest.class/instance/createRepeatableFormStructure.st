@@ -1,7 +1,7 @@
 other
 createRepeatableFormStructure
 
-	self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	^self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_manual_form_issue_369
 			name: 'manual-form'

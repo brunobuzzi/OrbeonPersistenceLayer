@@ -2,7 +2,7 @@ other
 testDoItIfNotFound
 	| application form libraryXmlString |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'ue'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
 	form := application definitionNamed: 'library' ifNone: [self createFormStructure].
 
 	apiOperation headerValue: form version printString.

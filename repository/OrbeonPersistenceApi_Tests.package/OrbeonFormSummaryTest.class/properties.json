@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"summary" ],
+		"summary",
+		"testRoot" ],
 	"name" : "OrbeonFormSummaryTest",
 	"pools" : [
 		 ],

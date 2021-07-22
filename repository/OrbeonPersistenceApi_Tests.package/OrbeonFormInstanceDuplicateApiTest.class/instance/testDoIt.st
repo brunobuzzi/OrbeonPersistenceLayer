@@ -2,7 +2,7 @@ other
 testDoIt
 	| definition form application id |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure].
 
 	self assert: (definition getInstanceWithId: id) isNil.

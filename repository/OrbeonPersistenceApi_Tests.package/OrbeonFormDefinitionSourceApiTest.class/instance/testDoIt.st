@@ -15,7 +15,7 @@ testDoIt
 
 	publishOperation doItIfNotFound: [self assert: false].
 
-	latestSavedDefinition := self getOrbeonApplicationClass getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [].
+	latestSavedDefinition := testRoot getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [].
 	latestSavedDefinition ifNotNil: [apiOperation id: latestSavedDefinition id].
 
 	xmlString := apiOperation doIt.

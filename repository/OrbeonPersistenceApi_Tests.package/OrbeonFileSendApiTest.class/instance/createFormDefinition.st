@@ -2,7 +2,7 @@ other
 createFormDefinition
 	| application form |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'migration'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'migration'.
 	application unregisterDefinitionNamed: 'all-fields-types'.
 	form := application 
 					definitionNamed: 'all-fields-types' 

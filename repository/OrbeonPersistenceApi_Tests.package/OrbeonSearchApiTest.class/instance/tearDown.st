@@ -4,7 +4,7 @@ tearDown
 
 	super tearDown.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	application unregisterDefinitionNamed: 'test-all-types-4';
 					unregisterDefinitionNamed: 'manual-form';
@@ -13,7 +13,7 @@ tearDown
 	application removeFromCache.
 
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'st'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'st'.
 
 	application unregisterDefinitionNamed: 'simple-registration'.
 

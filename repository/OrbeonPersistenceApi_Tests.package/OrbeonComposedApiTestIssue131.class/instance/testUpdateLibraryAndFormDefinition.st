@@ -8,7 +8,7 @@ testUpdateLibraryAndFormDefinition
 	(self apiNamed: 'savedDefinition') doIt.
 	(self apiNamed: 'formDefinition') doItIfNotFound: [self assert: false].
 
-	app := self getOrbeonApplicationClass applicationNamed: 'emb' ifNone: [self assert: false].
+	app := testRoot applicationNamed: 'emb' ifNone: [self assert: false].
 	definitionV1 := app definitionNamed: 'registration' ifNone: [self assert: false].
 	formInstanceV1 := (OrbeonFormInstance newFor: definitionV1 withId: UUID new asString)
 					definition: definitionV1;

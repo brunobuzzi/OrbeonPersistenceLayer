@@ -2,8 +2,8 @@ other
 testDoItAllFormsTrue
 	| application stApplication formDefinition xmlResultString stringTS |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
-	stApplication := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'st'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
+	stApplication := testRoot getExistingApplicationOrCreateNewNamed: 'st'.
 
 	apiOperation appName: 'agesic';
 		formName: 'test-all-types-4';

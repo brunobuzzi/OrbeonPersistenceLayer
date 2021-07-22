@@ -2,7 +2,7 @@ other
 testDoItLeaseAcceptedAndRejected
 	| definition form application |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 	definition := application definitionNamed: 'energy-recursive' ifNone: [self createFormStructure].
 
 	form := self createFormInstanceWithId: UUID new asString on: definition.

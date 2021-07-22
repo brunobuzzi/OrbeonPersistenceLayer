@@ -2,7 +2,7 @@ other
 testDoItAllVersionsFalseExcludeNotAvailable
 	| application formDefinition xmlResultString stringTS  |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	formDefinition := self createFormStructure.
 	stringTS := formDefinition modifiedTime asOrbeonDateTimeString.

@@ -2,7 +2,7 @@ other
 testDoIt
 	| application formDefinition xmlResultString stringTS |
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: 'agesic'.
+	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
 	xmlResultString := apiOperation doIt.
 
