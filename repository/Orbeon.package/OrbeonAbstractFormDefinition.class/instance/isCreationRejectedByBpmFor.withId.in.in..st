@@ -17,7 +17,7 @@ isCreationRejectedByBpmFor: fNamed withId: fId in: appName in: aBpmSystemRoot
 		ifTrue: [^true "creation rejected"].
 	].
 
-	^(self getOrbeonApplicationClass includesDefinitionNamed: fNamed in: appName) 
+	^(self systemRoot includesDefinitionNamed: fNamed in: appName) 
 			and:[(self applicationName = appName) 
 			and:[(self formName = fNamed) 
 			and: [self id ~= fId]]]

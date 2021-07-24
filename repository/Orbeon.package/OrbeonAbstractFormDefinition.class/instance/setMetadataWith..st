@@ -3,6 +3,6 @@ setMetadataWith: anOrbeonFormReader
 
 	formName := anOrbeonFormReader getFormName.
 
-	application := self getOrbeonApplicationClass getExistingApplicationOrCreateNewNamed: anOrbeonFormReader getApplicationName.
+	application := self systemRoot getExistingApplicationOrCreateNewNamed: anOrbeonFormReader getApplicationName.
 
 	self setTitleAndDescriptionWith: anOrbeonFormReader.

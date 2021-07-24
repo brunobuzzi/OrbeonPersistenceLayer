@@ -1,8 +1,8 @@
-charts
+forms - published
 getAllFormDefinitions
 	| definitions |
 
 	definitions := OrderedCollection new.
-	applications do: [:application | definitions addAll: application getAllDefinitions].
+	self doInCache: [:each | definitions addAll: each getAllDefinitions].
 
 	^definitions
