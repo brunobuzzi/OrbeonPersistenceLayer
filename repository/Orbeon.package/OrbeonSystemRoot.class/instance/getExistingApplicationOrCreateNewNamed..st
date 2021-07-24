@@ -1,0 +1,4 @@
+applications
+getExistingApplicationOrCreateNewNamed: aString
+
+	^self getExistingOrbeonApplicationOrCreateNewNamed: aString
