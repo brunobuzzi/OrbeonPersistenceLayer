@@ -1,8 +1,9 @@
 {
 	"class" : {
 		"for:" : "brunobb 04/07/2021 14:06",
-		"for:orbeonVersion:" : "brunobb 03/31/2021 10:09",
-		"for:with:" : "brunobb 04/07/2021 14:06" },
+		"for:with:" : "brunobb 04/07/2021 14:06",
+		"newOn:for:" : "brunobb 07/24/2021 12:54",
+		"newOn:for:with:" : "brunobb 07/24/2021 12:55" },
 	"instance" : {
 		"addAnyOnePermissionTo:fromString:" : "brunobb 03/31/2021 10:09",
 		"addPermissionTo:fromString:using:" : "brunobb 03/31/2021 10:44",
@@ -44,8 +45,8 @@
 		"getDescription" : "brunobb 04/15/2021 14:45",
 		"getFieldTypes" : "brunobb 04/15/2021 14:43",
 		"getFormLibraryDefinitionFor:in:" : "brunobb 03/31/2021 10:53",
-		"getFormLibraryDefinition_from2019_1_0_format_For:in:" : "brunobb 03/31/2021 10:35",
-		"getFormLibraryDefinition_from4_0_0_format_For:in:" : "brunobb 03/31/2021 10:36",
+		"getFormLibraryDefinition_from2019_1_0_format_For:in:" : "brunobb 07/24/2021 13:05",
+		"getFormLibraryDefinition_from4_0_0_format_For:in:" : "brunobb 07/24/2021 13:05",
 		"getFormName" : "brunobb 04/15/2021 14:45",
 		"getNameFrom:" : "brunobb 03/31/2021 10:11",
 		"getPermissions" : "brunobb 04/15/2021 14:42",
@@ -72,6 +73,8 @@
 		"searchFormFieldsIn:" : "brunobb 03/31/2021 10:46",
 		"searchFormFieldsNameIn:" : "brunobb 03/31/2021 10:12",
 		"setAvailableNodeValueWith:" : "brunobb 03/31/2021 10:12",
+		"setRoot:xmlDefinition:" : "brunobb 07/24/2021 12:54",
+		"setRoot:xmlDefinition:xmlInstanceDocument:" : "brunobb 07/24/2021 12:55",
 		"setXmlDefinition:" : "brunobb 04/07/2021 14:03",
 		"setXmlDefinition:setXmlInstanceDocument:" : "brunobb 04/07/2021 14:08",
 		"setXmlInstanceDocument:" : "brunobb 03/31/2021 10:12",

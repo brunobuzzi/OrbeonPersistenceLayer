@@ -10,7 +10,8 @@
 		"xmlDocument",
 		"xmlInstanceDocument",
 		"orbeonFormDefinition",
-		"orbeonFormInstance" ],
+		"orbeonFormInstance",
+		"systemRoot" ],
 	"name" : "OrbeonFormBuilder",
 	"pools" : [
 		 ],
