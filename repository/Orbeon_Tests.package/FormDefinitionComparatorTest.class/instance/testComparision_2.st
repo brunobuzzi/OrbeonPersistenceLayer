@@ -4,6 +4,7 @@ testComparision_2
 
 	id := UUID new asString.
 	formOne := self defaultPublishedFormDefinitionClass new
+				application: application;
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';
@@ -12,6 +13,7 @@ testComparision_2
 				yourself.
 
 	formTwo := self defaultPublishedFormDefinitionClass new
+				application: application;
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';

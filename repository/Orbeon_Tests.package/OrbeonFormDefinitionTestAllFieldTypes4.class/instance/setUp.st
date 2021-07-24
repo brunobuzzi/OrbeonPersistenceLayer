@@ -1,10 +1,12 @@
 setUp
 setUp
 
+	super setUp.
+
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
 
-	form := self defaultPublishedFormDefinitionClass 
-					buildDefinitionFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 
+	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 
 					name: 'test' 
-					in: application 
-					title: 'Test'
+					in: 'agesic' 
+					title: 'Test'.
+	"form buildForm"

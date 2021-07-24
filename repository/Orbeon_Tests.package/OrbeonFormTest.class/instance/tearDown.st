@@ -3,4 +3,4 @@ tearDown
 
 	super tearDown.
 
-	self keepTempObjectsInSystem ifFalse: [application removeFromCache]
+	"self keepTempObjectsInSystem ifFalse: [application removeFromCache]"
