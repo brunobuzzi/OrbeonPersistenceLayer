@@ -1,8 +1,11 @@
 setUp
 setUp
 
+	super setUp.
+
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_energy_recursive 
-						name: 'energy-recursive' 
-						in: 'agesic'
-						title: 'Energy Recursive Form'
+	form := testRoot 
+					buildPublishedFormNamed: 'energy-recursive' 
+					title: 'Energy Recursive Form' 
+					withXml: self newDefinitionTemplate formDefinition_agesic_energy_recursive 
+					in: application.

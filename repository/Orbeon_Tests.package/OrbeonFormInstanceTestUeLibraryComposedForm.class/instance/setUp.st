@@ -1,31 +1,34 @@
 setUp
 setUp
-	| definition |
+	| definition orbeon |
 
+	super setUp. 
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
+	orbeon := testRoot getExistingApplicationOrCreateNewNamed: 'orbeon'.
 	application definitionNamed: 'library' 
-						ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library
-											name: 'library'
-											in: 'ue'
-											title: 'Library'].
+						ifNone: [testRoot 
+												buildPublishedFormNamed: 'library' 
+												title: 'Library' 
+												withXml: self newDefinitionTemplate formDefinition_ue_library 
+												in: application].
 
-	(OrbeonApplication getExistingApplicationOrCreateNewNamed: 'orbeon') 
+	orbeon
 		definitionNamed: 'library' 
-		ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_orbeon_library
-											name: 'library'
-											in: 'orbeon'
-											title: 'Library'].
+		ifNone: [testRoot 
+							buildPublishedFormNamed: 'library' 
+							title: 'Library' 
+							withXml: self newDefinitionTemplate formDefinition_orbeon_library 
+							in: orbeon].
 
 	definition := application 
 							definitionNamed: 'library-composed-form' 
-							ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form
-											savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form
-											name: 'library-composed-form'
-											version: 1
-											id: UUID new asString 
-											in: 'ue'
-											title: 'Library Composed Form'].
+							ifNone: [testRoot buildPublishedFormNamed: 'library-composed-form' id: UUID new asString 
+														version: 1 
+														title: 'Library Composed Form' 
+														publishedXml: self newDefinitionTemplate formDefinition_ue_library_composed_form 
+														savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form 
+														in: application.].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;

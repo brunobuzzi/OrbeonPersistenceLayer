@@ -1,24 +1,28 @@
 setUp
 setUp
+	| orbeon |
 
-	testRoot getExistingApplicationOrCreateNewNamed: 'orbeon'. 
-
-	self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_orbeon_library 
-			name: 'library' 
-			in: 'orbeon' 
-			title: 'Library'.
+	super setUp.
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
+	orbeon := testRoot getExistingApplicationOrCreateNewNamed: 'orbeon'. 
 
-	self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library 
-			name: 'library' 
-			in: 'ue' 
-			title: 'Library'.
+	testRoot buildPublishedFormNamed: 'library' 
+					version: 1
+					title: 'Library' 
+					withXml: self newDefinitionTemplate formDefinition_orbeon_library
+					in: orbeon.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form_2  
+	testRoot buildPublishedFormNamed: 'library' 
+					version: 1
+					title: 'Library' 
+					withXml: self newDefinitionTemplate formDefinition_ue_library
+					in: application.
+
+	form := testRoot buildPublishedFormNamed: 'library-composed-form2' 
+					id: UUID new asString
+					version: 1
+					title: 'Test Section Library Composed Forms 2' 
+					publishedXml: self newDefinitionTemplate formDefinition_ue_library_composed_form_2
 					savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form_2
-					name: 'library-composed-form2' 
-					version: 1 
-					id: UUID new asString 
-					in: 'ue' 
-					title: 'Test Section Library Composed Forms 2'.
+					in: application.

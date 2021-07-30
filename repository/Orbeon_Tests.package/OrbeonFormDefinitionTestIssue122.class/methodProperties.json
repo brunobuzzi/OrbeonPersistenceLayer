@@ -2,6 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 07/22/2021 13:51",
+		"setUp" : "brunobb 07/26/2021 14:26",
 		"tearDown" : "brunobb 04/15/2021 13:53",
 		"testNonRepeatableToRepeatableStructure" : "brunobb 04/15/2021 13:53" } }

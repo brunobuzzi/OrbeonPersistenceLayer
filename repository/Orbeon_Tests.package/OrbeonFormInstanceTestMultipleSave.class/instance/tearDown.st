@@ -6,4 +6,4 @@ tearDown
 	application removeDefinition: (application definitionNamed: 'issue-243' ifNone: []). 
 	application unregisterDefinitionNamed: 'issue-243'.
 
-	application removeFromCache
+	testRoot unregisterApplication: application ifAbsent: [self assert: false]

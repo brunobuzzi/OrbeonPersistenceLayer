@@ -6,4 +6,10 @@ buildPublishedFormStructureFrom: xmlDefinition savedXml: savedXml name: formName
 
 	anOrbeonApplication := testRoot getExistingApplicationOrCreateNewNamed: appName.
 
-	^testRoot buildPublishedFormNamed: formName version: version title: title publishedXml: xmlDefinition savedXml: savedXml id: stringId in: anOrbeonApplication
+	^testRoot buildPublishedFormNamed: formName 
+					id: stringId
+					version: version 
+					title: title 
+					publishedXml: xmlDefinition 
+					savedXml: savedXml 
+					in: anOrbeonApplication

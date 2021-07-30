@@ -6,16 +6,16 @@ setUp
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'gs'.
 
-	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
-							name: 'library'
-							version: 1 
-							in: 'gs' 
-							title: 'Library'.
+	library := testRoot buildPublishedFormNamed: 'library'
+									version: 1
+									title: 'Library'
+									withXml: self newDefinitionTemplate formDefinition_gs_library
+									in: application.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_issue_385 
-						savedXml: self newDefinitionTemplate formSavedDefinition_gs_issue_385 
-						name: 'issue-385' 
-						version: 1 
-						id: UUID new asString 
-						in: 'gs'  
-						title: 'Issue 385'.
+	form := testRoot buildPublishedFormNamed: 'issue-385' 
+					id: UUID new asString
+					version: 1
+					title: 'Issue 385' 
+					publishedXml: self newDefinitionTemplate formDefinition_gs_issue_385
+					savedXml: self newDefinitionTemplate formSavedDefinition_gs_issue_385
+					in: application.

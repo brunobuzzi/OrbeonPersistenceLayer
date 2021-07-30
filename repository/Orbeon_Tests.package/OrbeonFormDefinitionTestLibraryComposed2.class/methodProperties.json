@@ -2,8 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 07/22/2021 13:53",
-		"tearDown" : "brunobb 07/22/2021 13:54",
+		"setUp" : "brunobb 07/26/2021 14:55",
+		"tearDown" : "brunobb 07/26/2021 14:52",
 		"testIssue347" : "brunobb 04/28/2021 07:49",
 		"testLibraryComponentIdentity" : "brunobb 04/15/2021 13:55",
 		"testSectionsStructure" : "brunobb 04/15/2021 13:55" } }

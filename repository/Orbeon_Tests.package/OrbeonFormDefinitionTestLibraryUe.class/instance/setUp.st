@@ -1,9 +1,12 @@
 setUp
 setUp
 
+	super setUp.
+
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'ue'.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_2 
-						name: 'library' 
-						in: 'ue' 
-						title: 'Library'
+	form := testRoot buildPublishedFormNamed: 'library' 
+					version: 1
+					title: 'Library' 
+					withXml: self newDefinitionTemplate formDefinition_ue_library_2
+					in: application.

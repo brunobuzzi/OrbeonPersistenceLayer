@@ -1,9 +1,12 @@
 setUp
 setUp
 
+	super setUp.
+
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'orbeon'.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_orbeon_library 
-						name: 'library' 
-						in: 'orbeon' 
-						title: 'Library'.
+	form := testRoot buildPublishedFormNamed: 'library' 
+					version: 1
+					title: 'Library' 
+					withXml: self newDefinitionTemplate formDefinition_orbeon_library
+					in: application.

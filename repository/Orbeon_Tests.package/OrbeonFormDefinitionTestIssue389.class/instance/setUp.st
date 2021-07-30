@@ -6,14 +6,14 @@ setUp
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'gs'.
 
-	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_library
-							name: 'library'
-							version: 1 
-							in: 'gs' 
-							title: 'Library'.
+	library := testRoot buildPublishedFormNamed: 'library'
+									version: 1
+									title: 'Library'
+									withXml: self newDefinitionTemplate formDefinition_gs_library
+									in: application.
 
-	form := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_gs_test_library
-							name: 'test-library'
-							version: 1 
-							in: 'gs' 
-							title: 'Test Library'.
+	form := testRoot buildPublishedFormNamed: 'test-library' 
+					version: 1
+					title: 'Test Library' 
+					withXml: self newDefinitionTemplate formDefinition_gs_test_library
+					in: application.

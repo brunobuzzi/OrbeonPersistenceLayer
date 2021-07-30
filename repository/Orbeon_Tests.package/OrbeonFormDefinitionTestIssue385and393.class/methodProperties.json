@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "brunobb 07/22/2021 13:51",
+		"setUp" : "brunobb 07/26/2021 14:28",
 		"tearDown" : "brunobb 04/15/2021 13:53",
 		"testCheckLibraryVersionNodeOnSavedAndPublishDefinition" : "brunobb 04/28/2021 09:15",
 		"testCheckXblNodeOnSavedAndPublishDefinition" : "brunobb 04/28/2021 09:16" } }
