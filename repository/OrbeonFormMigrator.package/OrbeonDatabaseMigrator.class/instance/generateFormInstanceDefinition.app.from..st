@@ -1,14 +1,15 @@
 generate orbeon objects
 generateFormInstanceDefinition: formName app: appName from: aDBString
 	"Create a new instance of the Form based on <dbArray>"
-	| instance resultArray |
+	| instance resultArray xmlString builder |
 
 	resultArray := aDBString subStrings: String tab.
-	instance := self defaultSavedFormDefinitionClass new.
-	^instance setApplication: appName;
-		formName: formName;
+	xmlString := ((resultArray at: 7) copyReplaceAll: '\n' with: Character lf). "-\n- is inserted by Bash "
+	builder := systemRoot newFormBuilderFor: xmlString.
+
+	instance := self defaultSavedFormDefinitionClass newNamed: formName in: (systemRoot getExistingApplicationOrCreateNewNamed: appName).
+	^instance 
 		updateFrom: resultArray;
-		xmlString: ((resultArray at: 7) copyReplaceAll: '\n' with: Character lf); "-\n- is inserted by Bash "
-		"setApplicationAndFormName;"
-		setMetadata;
+		xmlString: xmlString;
+		setTitleAndDescriptionWith: builder;
 		yourself.
