@@ -3,4 +3,5 @@ setUp
 
 	super setUp.
 
-	migrator := self defaultMigratorClass new.
+	testRoot := OrbeonSystemRoot new.
+	migrator := self defaultMigratorClass newOn: testRoot.
