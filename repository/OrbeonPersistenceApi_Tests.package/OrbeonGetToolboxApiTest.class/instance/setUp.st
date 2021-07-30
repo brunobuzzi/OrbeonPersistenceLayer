@@ -3,5 +3,5 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonGetToolboxApi new.
+	apiOperation := OrbeonGetToolboxApi newOn: testRoot.
 	apiOperation appName: 'ue'.

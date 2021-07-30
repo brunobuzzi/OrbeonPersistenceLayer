@@ -5,4 +5,4 @@ tearDown
 
 	apiOperation application unregisterDefinitionNamed: 'library'.
 
-	apiOperation application removeFromCache.
+	testRoot unregisterApplication: apiOperation application ifAbsent: [self assert: false]

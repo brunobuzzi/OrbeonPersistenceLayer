@@ -8,4 +8,4 @@ tearDown
 	
 	application unregisterDefinitionNamed: 'test-2'.
 
-	application removeFromCache.
+	testRoot unregisterApplication: apiOperation application ifAbsent: [self assert: false]

@@ -1,9 +1,8 @@
 other
 createFormStructureNoPermissions
 
-	testRoot getExistingApplicationOrCreateNewNamed: 'st'.
-
-	^self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_st_simple_registration
-			name: 'simple-registration'
-			in: 'st' 
-			title: 'Simple Registration'
+	^testRoot 
+			buildPublishedFormNamed: 'simple-registration'
+			title: 'Simple Registration' 
+			withXml: self newDefinitionTemplate formDefinition_st_simple_registration 
+			in: (testRoot getExistingApplicationOrCreateNewNamed: 'st')

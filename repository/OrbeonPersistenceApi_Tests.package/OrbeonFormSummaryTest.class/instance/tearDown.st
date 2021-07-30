@@ -5,4 +5,4 @@ tearDown
 
 	self application unregisterDefinitionNamed: 'iterator'.
 
-	self application removeFromCache.
+	testRoot unregisterApplication: self application ifAbsent: [self assert: false]

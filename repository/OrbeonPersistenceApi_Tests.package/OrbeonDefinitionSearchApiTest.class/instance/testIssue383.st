@@ -7,7 +7,7 @@ testIssue383
 	clone1 := self createClone.
 	clone2 := self createClone.
 
-	apiOperation := OrbeonDefinitionSearchApi newOn: self systemRoot withXml: self requestXmlForIssue383.
+	apiOperation := OrbeonDefinitionSearchApi newOn: testRoot withXml: self requestXmlForIssue383.
 	apiOperation setPageSize;
 		setPageNumber;
 		group: nil;

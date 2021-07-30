@@ -7,7 +7,7 @@ testDoItAllVersionsFalseExcludeLibrary
 	formDefinition := self createFormStructure.
 	stringTS := formDefinition modifiedTime asOrbeonDateTimeString.
 
-	library := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_agesic_library name: 'library' in: 'agesic' title: 'Library'.
+	library := testRoot buildPublishedFormNamed: 'library' title: 'Library' withXml: self newDefinitionTemplate formDefinition_agesic_library in: application.
 	libraryTS := library modifiedTime asOrbeonDateTimeString.
 
 	apiOperation allversions: 'false';

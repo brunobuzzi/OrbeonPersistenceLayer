@@ -8,4 +8,4 @@ tearDown
 
 	application unregisterDefinitionNamed: 'test-all-types-4'.
 
-	application removeFromCache.
+	testRoot unregisterApplication: application ifAbsent: [self assert: false]

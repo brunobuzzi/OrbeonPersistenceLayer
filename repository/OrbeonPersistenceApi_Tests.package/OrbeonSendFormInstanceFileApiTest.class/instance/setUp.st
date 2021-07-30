@@ -3,7 +3,7 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonSendFormInstanceFileApi newOn: self systemRoot withId: formId.
+	apiOperation := OrbeonSendFormInstanceFileApi newOn: testRoot withId: formId.
 	apiOperation fileId: fileId;
 		appName: 'test';
 		formName: 'test'.

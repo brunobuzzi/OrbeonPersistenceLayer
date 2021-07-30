@@ -3,7 +3,7 @@ createClone
 	| cloneOperation uuid application |
 
 	uuid := UUID new asString.
-	cloneOperation := OrbeonFormDefinitionDuplicateApi newOn: self systemRoot  withXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: uuid.
+	cloneOperation := OrbeonFormDefinitionDuplicateApi newOn: testRoot withXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 id: uuid.
 	cloneOperation
 		group: 'admin';
 		user: 'admin';

@@ -3,11 +3,11 @@ createFormDefinition
 	| application def |
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'agesic'.
-	def := (self defaultPublishedFormDefinitionClass newNamed: 'test-2' inAppNamed: 'agesic')
-			xmlString: self newDefinitionTemplate formDefinition_agesic_test_2;
-			id: UUID new asString;
-			title: 'Test 2';
-			buildForm;
-			yourself.
+
+	def := testRoot 
+		buildPublishedFormNamed: 'test-2' 
+		title: 'Test 2'
+		withXml: self newDefinitionTemplate formDefinition_agesic_test_2 
+		in: application.
 
 	def storeInApplication.

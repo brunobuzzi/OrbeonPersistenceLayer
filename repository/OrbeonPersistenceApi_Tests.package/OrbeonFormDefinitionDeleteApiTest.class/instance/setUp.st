@@ -3,5 +3,5 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonFormDefinitionDeleteApi newOn: self systemRoot withId: ''.
+	apiOperation := OrbeonFormDefinitionDeleteApi newOn: testRoot withId: ''.
 	apiOperation appName: 'agesic'.

@@ -7,7 +7,7 @@ deleteAllOSFilesAt: basePath
 	System performOnServer: 'touch ', basePath, 'instances/text.text'.
 	System performOnServer: 'touch ', basePath, 'temp/text.text'.
 
-	OrbeonMaintenanceScript deleteAllOSFilesAt: basePath.
+	maintenance deleteAllOSFilesAt: basePath.
 
 	self deny: (GsFile existsOnServer: basePath, 'definitions/published/text.text').
 	self deny: (GsFile existsOnServer: basePath, 'definitions/saved/text.text').

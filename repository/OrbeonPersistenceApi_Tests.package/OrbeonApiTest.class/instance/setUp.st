@@ -3,5 +3,8 @@ setUp
 
 	super setUp.
 
-	(OrbeonMaintenanceScript attachmentStructureExistAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath)
-	ifFalse: [OrbeonMaintenanceScript createEmptyAttachmentStructureAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath]
+	testRoot := OrbeonSystemRoot new.
+
+"	(OrbeonMaintenanceScript attachmentStructureExistAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath)
+	ifFalse: [OrbeonMaintenanceScript createEmptyAttachmentStructureAt: self getOrbeonWebServerConfiguration printBaseAttachmentPath].
+"

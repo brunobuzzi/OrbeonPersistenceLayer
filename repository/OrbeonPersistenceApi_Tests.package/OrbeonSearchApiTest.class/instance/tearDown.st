@@ -10,11 +10,11 @@ tearDown
 					unregisterDefinitionNamed: 'manual-form';
 					unregisterDefinitionNamed: 'library'.
 
-	application removeFromCache.
+	testRoot unregisterApplication: application ifAbsent: [self assert: false].
 
 
 	application := testRoot getExistingApplicationOrCreateNewNamed: 'st'.
 
 	application unregisterDefinitionNamed: 'simple-registration'.
 
-	application removeFromCache.
+	testRoot unregisterApplication: application ifAbsent: [self assert: false].

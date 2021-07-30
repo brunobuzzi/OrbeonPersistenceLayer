@@ -19,8 +19,6 @@ testDoItIfNotFound_moveForm
 	(application registryForFormNamed: apiOperation formName) currentVersionsDo: [:definition | self assert: (definition formName = 'simple-registration-2')].
 	(application registryForFormNamed: apiOperation formName) oldVersionsDo: [:definition | self assert: (definition formName = 'simple-registration-2')].
 
-	"now we move everything back again if not others tests will fail"
-	self setUp.
 	latestSavedDefinition := testRoot getLatestSavedDefinition: 'simple-registration-2' app: apiOperation appName ifNone: [nil].
 	apiOperation headerVersion: latestSavedDefinition version printString;
 		id: latestSavedDefinition id;

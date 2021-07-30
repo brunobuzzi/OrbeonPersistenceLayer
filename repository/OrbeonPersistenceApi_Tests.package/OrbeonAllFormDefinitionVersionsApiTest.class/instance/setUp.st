@@ -3,7 +3,7 @@ setUp
 
 	super setUp.
 
-	apiOperation := OrbeonAllFormDefinitionVersionsApi new.
+	apiOperation := OrbeonAllFormDefinitionVersionsApi newOn: testRoot.
 	apiOperation appName: 'agesic';
 		formName: 'test-all-types-4';
 		allversions: 'false';

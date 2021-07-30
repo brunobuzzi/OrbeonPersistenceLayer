@@ -5,4 +5,4 @@ tearDown
 
 	apiOperation application unregisterDefinitionNamed: 'energy-recursive'.
 
-	apiOperation application removeFromCache.
+	testRoot unregisterApplication: apiOperation application ifAbsent: [self assert: false]

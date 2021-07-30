@@ -7,7 +7,7 @@ testIssue371
 	clone1 := self createClone.
 	clone2 := self createClone.
 
-	apiOperation := OrbeonDefinitionSearchApi newOn: self systemRoot withXml: self requestXmlForGenericSummaryNoSearch.
+	apiOperation := OrbeonDefinitionSearchApi newOn: testRoot withXml: self requestXmlForGenericSummaryNoSearch.
 	apiOperation setPageSize;
 		setPageNumber;
 		group: 'admin';

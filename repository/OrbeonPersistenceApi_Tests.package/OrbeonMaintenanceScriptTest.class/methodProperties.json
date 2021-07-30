@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"createEmptyAttachmentStructureAt:" : "brunobb 05/29/2020 12:02",
-		"deleteAllOSFilesAt:" : "brunobb 05/29/2020 12:05",
+		"createEmptyAttachmentStructureAt:" : "brunobb 07/29/2021 07:15",
+		"deleteAllOSFilesAt:" : "brunobb 07/29/2021 07:15",
+		"setUp" : "brunobb 07/29/2021 07:15",
 		"testCreateEmptyAttachmentStructureAtCurrentOrbeon" : "brunobb 06/13/2020 17:23",
 		"testCreateEmptyAttachmentStructureAtTmp" : "brunobb 05/29/2020 12:07",
 		"testDeleteAllOSFilesAtCurrentOrbeon" : "brunobb 02/18/2021 12:42",

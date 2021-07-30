@@ -6,6 +6,10 @@ createFormDefinition
 	application unregisterDefinitionNamed: 'all-fields-types'.
 	form := application 
 					definitionNamed: 'all-fields-types' 
-					ifNone: [self buildPublishedFormStructureFrom: self newDefinitionTemplate  formDefinition_migration_all_fields_types name: 'all-fields-types' in: 'migration' title: 'Test'].
+					ifNone: [testRoot 
+									buildPublishedFormNamed: 'all-fields-types' 
+									title: 'Test' 
+									withXml: self newDefinitionTemplate formDefinition_migration_all_fields_types 
+									in: application].
 
 	^form

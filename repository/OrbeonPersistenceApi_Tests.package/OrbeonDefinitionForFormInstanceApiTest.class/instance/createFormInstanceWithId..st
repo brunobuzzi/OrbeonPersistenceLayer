@@ -5,7 +5,7 @@ createFormInstanceWithId: formId
 
 	self createFormStructure.
 
-	(OrbeonFormSaveFinalApi newOn: self systemRoot withXml: self newInstanceTemplate formInstance_agesic_test_all_types_2 id:formId)
+	(OrbeonFormSaveFinalApi newOn: testRoot withXml: self newInstanceTemplate formInstance_agesic_test_all_types_2 id:formId)
 		appName: 'agesic';
 		formName: 'test-all-types-4';
 		version: 1;

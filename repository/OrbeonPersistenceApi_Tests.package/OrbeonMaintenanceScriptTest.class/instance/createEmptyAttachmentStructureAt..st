@@ -4,7 +4,7 @@ createEmptyAttachmentStructureAt: basePath
 
 	System performOnServer: 'rm -R ', basePath.
 	System performOnServer: 'cd tmp; mkdir ', basePath.
-	OrbeonMaintenanceScript createEmptyAttachmentStructureAt: basePath.
+	maintenance createEmptyAttachmentStructureAt: basePath.
 
 	self assert: (GsFile existsOnServer: basePath).
 	self assert: (GsFile existsOnServer: basePath, 'definitions/published/').
