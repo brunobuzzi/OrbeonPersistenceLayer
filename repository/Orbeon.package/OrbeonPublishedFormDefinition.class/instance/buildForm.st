@@ -8,6 +8,8 @@ buildForm
 	permissions := builder getPermissions. 						"answer: anOrbeonPermissions"
 	fieldsType := builder getFieldTypes.						"answer: aDictionary (key: field name value: field type)"
 	self isSingleton: builder isSingleton.
+	self isAvailable: builder isAvailable.
+	"definition isAvailable: self isAvailable."
 
 	customAttachment := builder getCustomAttachmentId. "set the id of the custom pdf of the receiver"
 

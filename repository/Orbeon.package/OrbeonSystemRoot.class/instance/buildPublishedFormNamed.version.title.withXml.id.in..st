@@ -4,9 +4,9 @@ buildPublishedFormNamed: formName version: version title: title withXml: xmlDefi
 	The XML of the form is <xmlDefinition> "
 
 	^self buildPublishedFormNamed: formName 
+			id: anUIID
 			version: version 
 			title: title 
 			publishedXml: xmlDefinition 
 			savedXml: xmlDefinition
-			id: anUIID 
 			in: anOrbeonApplication
