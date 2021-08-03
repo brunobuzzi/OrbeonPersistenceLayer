@@ -24,12 +24,12 @@ formInstance_ue_analyze_appliance_2
                         <citizenName>Bruno</citizenName>
                         <citizenSurname>Buzzi Brassesco</citizenSurname>
                         <originCountry>uruguay</originCountry>
-                        <citizenId>rejected</citizenId>
+                        <citizenId>37673595</citizenId>
                         </grid-3>
                     </section-12>
                     <section-16>
                         <grid-4>
-                        <applianceResult>approved</applianceResult>
+                        <applianceResult>rejected</applianceResult>
                         </grid-4>
                     </section-16>
                 </form>'
