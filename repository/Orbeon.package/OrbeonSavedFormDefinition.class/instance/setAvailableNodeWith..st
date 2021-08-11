@@ -4,4 +4,4 @@ setAvailableNodeWith: aBooleanString
 	Answer xml <aString> the new xml definition. 
 	On any error answer the current xml definition"
 
-	self subclassResponsibility
+	^ImproperOrbeonOperationException signal: '<setAvailableNodeWith:> is property of <OrbeonPublishedFormDefinition>'

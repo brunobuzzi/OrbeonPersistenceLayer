@@ -5,12 +5,8 @@ publish
 	2) Is not a draft
 	3) Available node set to true"
 
-	self isAvailable: true. "1"
-	definition isAvailable: true. "1"
+	self isAvailable: true. 
 
-	definition draft: 'N'. "2"
+	definition draft: 'N'. 
 	definition version: version.
 	definition definition: self.
-
-	"self setAvailableNodeWith: 'true'. 
-	definition setAvailableNodeWith: 'true'. "
