@@ -2,7 +2,7 @@ other
 testWritePermissionsError
 	| temPath |
 
-	temPath := self getOrbeonWebServerConfiguration getTempPath.
+	temPath := testRoot getTempPath.
 
 	System performOnServer: 'chmod -R 000 ', temPath.
 

@@ -2,7 +2,7 @@ other
 testDoIt
 	| path |
 
-	path := self getOrbeonWebServerConfiguration getInstancesPathFor: formName in: app.
+	path := testRoot getInstancesPathFor: formName in: app.
 
 	apiOperation doIt.
 

@@ -2,7 +2,7 @@ other
 testWritePermissionsError
 	| path |
 
-	path := self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: formName in: app.
+	path := testRoot getPublishedDefinitionsPathFor: formName in: app.
 
 	System performOnServer: 'chmod -R 000 ', path.
 

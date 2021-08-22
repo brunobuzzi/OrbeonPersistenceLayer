@@ -2,7 +2,7 @@ other
 testDoIt
 	| path result |
 
-	path := self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: formName in: app.
+	path := testRoot getPublishedDefinitionsPathFor: formName in: app.
 	newFile := GsFile open: (path, formId, '-', fileId) mode: 'wb' onClient: false.
 	newFile
 		nextPutAll: fileContents;

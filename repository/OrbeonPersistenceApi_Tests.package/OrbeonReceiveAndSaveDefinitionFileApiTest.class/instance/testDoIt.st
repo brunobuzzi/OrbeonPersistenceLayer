@@ -2,8 +2,8 @@ other
 testDoIt
 	| defaultPath temPath |
 
-	temPath := self getOrbeonWebServerConfiguration getTempPath.
-	defaultPath := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: formName in: app.
+	temPath := testRoot getTempPath.
+	defaultPath := testRoot getSavedDefinitionsPathFor: formName in: app.
 
 	apiOperation doIt.
 
