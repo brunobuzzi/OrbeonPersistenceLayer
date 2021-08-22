@@ -4,5 +4,4 @@ fromOrbeonString: aString
 	The supported TimeStamp format is: Date + Time. Where Date format is defined in Date fromOrbeonString:.
 	Time part support p.m. or pm"
 
-	^self fromOrbeonString: aString 
-			dateFormat: self getOrbeonWebServerConfiguration dateFormat asUppercase
+	^self fromOrbeonString: aString dateFormat: 'y-m-d'

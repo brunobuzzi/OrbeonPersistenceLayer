@@ -12,7 +12,7 @@ if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   echo "Usage: setGS -s STONE_NAME -v VERSION"
   echo "Set session variables of a given {STONE_NAME} and -VERSION (with dots)"; 
   echo "The environment variable GS_HOME must be set";
-  exit 0
+  return 0
 fi
 
 if [ -z ${GS_HOME+x} ]; then

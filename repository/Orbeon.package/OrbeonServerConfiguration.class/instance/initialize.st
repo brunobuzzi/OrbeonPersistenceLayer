@@ -11,5 +11,3 @@ initialize
 	formsAudit := Dictionary new. "whether or not an app.form has any audit configurations #(#drafs #instances #definitions)"
 
 	databaseMigrator := OrbeonMySQLMigrator new.
-
-	baseUrlDocumentation := 'https://bpmflow.gitbook.io/project'.

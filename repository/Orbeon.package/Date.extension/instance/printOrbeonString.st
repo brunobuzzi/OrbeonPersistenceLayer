@@ -4,4 +4,4 @@ printOrbeonString
 	The Orbeon <oxf.xforms.format.input.date> configuration in XML file properties-loca.xml MUST be equal to: 
 	self getOrbeonWebServerConfiguration dateFormat"
 
-	^self printOrbeonStringFormat: self getOrbeonWebServerConfiguration dateFormat
+	^self printOrbeonStringFormat: 'y-m-d'

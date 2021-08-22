@@ -1,0 +1,4 @@
+database reader
+setDatabaseReaderFromDatabaseName: databaseNameName
+
+	^serverConfiguration setDatabaseReaderFromDatabaseName: databaseNameName

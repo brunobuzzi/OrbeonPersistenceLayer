@@ -1,0 +1,4 @@
+migration
+migrateAll
+
+	^serverConfiguration migrateAll

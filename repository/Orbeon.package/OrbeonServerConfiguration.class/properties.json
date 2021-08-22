@@ -14,8 +14,7 @@
 		"baseAttachmentPath",
 		"searchTypes",
 		"formsAudit",
-		"databaseMigrator",
-		"baseUrlDocumentation" ],
+		"databaseMigrator" ],
 	"name" : "OrbeonServerConfiguration",
 	"pools" : [
 		 ],

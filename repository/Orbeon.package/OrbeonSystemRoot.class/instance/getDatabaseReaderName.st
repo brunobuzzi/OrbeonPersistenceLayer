@@ -1,0 +1,4 @@
+database reader
+getDatabaseReaderName
+
+	^serverConfiguration getDatabaseReaderName

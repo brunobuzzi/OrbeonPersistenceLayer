@@ -1,0 +1,4 @@
+external path
+printBaseAttachmentPath
+
+	^serverConfiguration printBaseAttachmentPath
