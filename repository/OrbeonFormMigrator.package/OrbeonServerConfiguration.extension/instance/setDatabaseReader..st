@@ -1,4 +1,4 @@
 *orbeonFormMigrator
 setDatabaseReader: anOrbeonDatabaseReader
 
-	^self getOrbeonWebServerConfiguration databaseMigrator sqlReader: anOrbeonDatabaseReader
+	^databaseMigrator sqlReader: anOrbeonDatabaseReader

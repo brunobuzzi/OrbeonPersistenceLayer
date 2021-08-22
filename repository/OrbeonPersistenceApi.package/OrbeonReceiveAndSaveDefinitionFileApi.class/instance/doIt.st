@@ -7,7 +7,7 @@ doIt
 
 	definition := systemRoot getAnyDefinitionWithId: id ifNone: [^self storeFileOnTempPath].
 
-	path := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: definition formName in: definition getApplicationName.
+	path := systemRoot getSavedDefinitionsPathFor: definition formName in: definition getApplicationName.
 
 	gsFile := GsFile open: (path, id, '-', fileId, '.bin') mode: 'wb' onClient: false.
 

@@ -20,7 +20,7 @@ fetchFieldInstances
 	result isEmpty ifTrue: [^self].
 
 	"perform an OR search if OR is setted - (OR or AND search is useful when the search has more than one search criteria)"
-	((self getOrbeonWebServerConfiguration typeSearchIsOr: self formName in: self applicationName) or: [self isGenericSearch])
+	((self systemRoot typeSearchIsOr: self formName in: self applicationName) or: [self isGenericSearch])
 	ifTrue: [orResult := Set new.
 		result do: [:queryResult | orResult addAll: queryResult].
 		orResult  := (orResult collect: [:each | each parentObject]) asOrderedCollection.

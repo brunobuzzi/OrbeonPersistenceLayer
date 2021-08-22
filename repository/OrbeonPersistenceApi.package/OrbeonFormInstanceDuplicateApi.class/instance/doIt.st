@@ -15,6 +15,6 @@ doIt
 		version: version;
 		updateLastModifiedTime.
 
-	(self getOrbeonWebServerConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
+	(systemRoot isDeferredProcessing: self getFormName in: self getApplicationName) 
 	ifTrue: [self addDeferredProcessingFor: orbeonInstance] 
 	ifFalse: [orbeonInstance buildForm].

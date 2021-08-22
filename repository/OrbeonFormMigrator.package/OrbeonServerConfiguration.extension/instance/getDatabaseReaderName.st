@@ -1,4 +1,4 @@
 *orbeonFormMigrator
 getDatabaseReaderName
 
-	^self getOrbeonWebServerConfiguration databaseMigrator defaultDatabaseReaderClass databaseName
+	^databaseMigrator defaultDatabaseReaderClass databaseName

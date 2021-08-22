@@ -5,7 +5,7 @@ doIt
 
 	definition := systemRoot formDefinitionNamed: self getFormName in: self getApplicationName.
 
-	pathFile := (self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName), definition id, '-', fileId.
+	pathFile := (systemRoot getPublishedDefinitionsPathFor: self getFormName in: self getApplicationName), definition id, '-', fileId.
 	gsFile := GsFile openOnServer: pathFile mode: 'rb'.
 	gsFile ifNil: [^OrbeonGsFileDoesNotExistException signal: 'Orbeon File [', pathFile, '] does not exist'].
 	fileContents := gsFile contentsAsUtf8.

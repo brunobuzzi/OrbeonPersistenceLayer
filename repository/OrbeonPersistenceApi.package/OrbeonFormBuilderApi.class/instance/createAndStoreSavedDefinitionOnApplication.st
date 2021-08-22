@@ -4,18 +4,21 @@ createAndStoreSavedDefinitionOnApplication
 	In the process it create & associate the <anOrbeonSavedFormDefinition> with <anOrbeonPublishedFormDefinition>"
 	| savedDefinition |
 
-	savedDefinition := self createOrbeonSavedDefinition.
 
-	savedDefinition id: id;
+	savedDefinition := systemRoot buildSavedFormNamed: self getFormName id: id version: version withXml: xmlString in: (systemRoot getExistingApplicationOrCreateNewNamed: self getApplicationName).
+
+	"savedDefinition := self createOrbeonSavedDefinition."
+
+"	savedDefinition id: id;
 		version: version;
-		setXmlString: xmlString; "here the <OrbeonPublishedFormDefinition> is created and associate to the receiver <savedDefinition>"
+		setXmlString: xmlString; 
 		updateLastModifiedTime;
 		setTitleAndDescription;
-		yourself.
+		yourself."
 
-	savedDefinition storeInApplication. "anOrbeonApplication addSavedDefinition: savedDefinition"
+	"savedDefinition storeInApplication. "
 
-	(self getOrbeonWebServerConfiguration isDefinitionAuditEnableFor: savedDefinition formName in: savedDefinition getApplicationName) 
+	(systemRoot isDefinitionAuditEnableFor: savedDefinition formName in: savedDefinition getApplicationName) 
 	ifTrue: [self auditStorage addDefinitionAudit: savedDefinition cloneForAudit].
 
 	^savedDefinition

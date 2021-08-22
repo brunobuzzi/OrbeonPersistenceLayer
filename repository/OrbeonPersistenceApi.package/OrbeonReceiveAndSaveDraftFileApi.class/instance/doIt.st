@@ -4,7 +4,7 @@ doIt
 	When the form is autosaved then all form's attachments are sent to this service "
 	| gsFile path |
 
-	path := self getOrbeonWebServerConfiguration getDraftsPathFor: self getFormName in: self getApplicationName.
+	path := systemRoot getDraftsPathFor: self getFormName in: self getApplicationName.
 
 	gsFile := GsFile open: (path, id, '-', fileId) mode: 'wb' onClient: false.
 

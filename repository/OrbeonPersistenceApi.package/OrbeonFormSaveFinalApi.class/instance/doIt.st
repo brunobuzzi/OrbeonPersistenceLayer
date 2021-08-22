@@ -9,7 +9,7 @@ doIt
 				ifNone: [definition getDraftWithId: id ifNone: [OrbeonFormInstance newFor: definition withId: id]].
 
 	"execute the audit options. if <xmlString> is nil --> is a new form"
-	(instance xmlString notNil and:[self getOrbeonWebServerConfiguration isInstanceAuditEnableFor: self getFormName in: self getApplicationName]) 
+	(instance xmlString notNil and:[systemRoot isInstanceAuditEnableFor: self getFormName in: self getApplicationName]) 
 	ifTrue: [self auditStorage addInstanceAudit: instance cloneForAudit].
 
 	instance xmlString: xmlString;
@@ -22,7 +22,7 @@ doIt
 		isValid: isValid;
 		updateLastModifiedTime.
 
-	(self getOrbeonWebServerConfiguration isDeferredProcessing: self getFormName in: self getApplicationName) 
+	(systemRoot isDeferredProcessing: self getFormName in: self getApplicationName) 
 	ifTrue: [self addDeferredProcessingFor: instance] 
 	ifFalse: [instance buildForm].
 

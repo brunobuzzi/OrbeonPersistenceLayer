@@ -11,8 +11,8 @@ migrateDefinitionAttachmentsOf: anOrbeonFormDefinition
 	../definitions/published"
 
 	anOrbeonFormDefinition attachmentsDo: [:orbeonFileName | | savedPath publishedPath |
-			savedPath := self getOrbeonWebServerConfiguration getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
-			publishedPath := self getOrbeonWebServerConfiguration getPublishedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName. 
+			savedPath := systemRoot getSavedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName.
+			publishedPath := systemRoot getPublishedDefinitionsPathFor: anOrbeonFormDefinition formName in: anOrbeonFormDefinition getApplicationName. 
 
 			(anOrbeonFormDefinition getFieldNamed: orbeonFileName fieldName) isAnnotationField
 			ifFalse: [(Array with: savedPath with: publishedPath) do: [:eachPath | 
