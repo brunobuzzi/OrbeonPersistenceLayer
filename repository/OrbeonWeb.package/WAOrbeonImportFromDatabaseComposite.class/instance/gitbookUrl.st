@@ -1,4 +1,4 @@
 other
 gitbookUrl
 
-	^self getGemStoneServerConfiguration baseUrlDocumentation, '/orbeon-integration/persistence-layer-backoffice/migrate-from-relational-database'
+	^self session systemRoot baseUrlDocumentation, '/orbeon-integration/persistence-layer-backoffice/migrate-from-relational-database'

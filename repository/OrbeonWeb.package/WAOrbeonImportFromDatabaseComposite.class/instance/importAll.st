@@ -1,4 +1,4 @@
 migration operations
 importAll
 
-	self getOrbeonWebServerConfiguration databaseMigrator migrateAll
+	self session systemRoot migrateAll

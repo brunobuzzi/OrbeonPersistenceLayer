@@ -7,4 +7,4 @@ importApplicationAndFormVersionFromDate
 	date := self componentValueAt: 'from-date'.
 	version := self componentValueAt: 'version'.
 
-	self getOrbeonWebServerConfiguration databaseMigrator updateFormDefinitionNamed: formName app: applicationName version: version from: (self converToTimeStamp: date)
+	self session systemRoot updateFormDefinitionNamed: formName app: applicationName version: version from: (self converToTimeStamp: date)

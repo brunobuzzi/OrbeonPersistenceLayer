@@ -1,4 +1,4 @@
 operations
 setDatabaseName: databaseNameName
 
-	self getOrbeonWebServerConfiguration setDatabaseReaderFromDatabaseName: databaseNameName
+	self session systemRoot setDatabaseReaderFromDatabaseName: databaseNameName

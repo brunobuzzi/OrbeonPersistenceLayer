@@ -1,4 +1,4 @@
 other
 gitbookUrl
 
-	^self getGemStoneServerConfiguration baseUrlDocumentation, '/orbeon-integration/persistence-layer-backoffice/orbeon-server-configuration'
+	^self session systemRoot baseUrlDocumentation, '/orbeon-integration/persistence-layer-backoffice/orbeon-server-configuration'

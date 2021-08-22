@@ -10,7 +10,7 @@ renderOrbeonDatabaseSettingOn: html
 		attributeAt: 'id' put: 'databaseName';
 		list: OrbeonDatabaseReader getAllDatabaseReadersComboNames;
 		callback: [:versionName | self setDatabaseName: versionName];
-		selected: self getOrbeonWebServerConfiguration getDatabaseReaderName.
+		selected: self session systemRoot getDatabaseReaderName.
 	html label attributeAt: 'for' put: 'databaseUser'; with: ('Database User' translateIn: self session).
 	html textInput attributeAt: 'id' put: 'databaseUser'; 
 			callback: [:value | self getOrbeonDatabaseConfiguration databaseUser: value]; 

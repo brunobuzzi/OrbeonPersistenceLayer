@@ -1,4 +1,0 @@
-operations
-setFormReader: versionName
-
-	self getOrbeonWebServerConfiguration setOrbeonFormReaderName: versionName
