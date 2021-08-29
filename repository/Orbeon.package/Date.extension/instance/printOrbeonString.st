@@ -1,7 +1,12 @@
 *orbeon
 printOrbeonString
-	"Create an instance of the receiver from Orbeon formated string date <aString>.
-	The Orbeon <oxf.xforms.format.input.date> configuration in XML file properties-loca.xml MUST be equal to: 
-	self getOrbeonWebServerConfiguration dateFormat"
+	"See: https://github.com/orbeon/orbeon-forms/issues/4966"
+	| yearString monthString dayString |
 
-	^self printOrbeonStringFormat: 'y-m-d'
+	yearString := self year printString.
+	monthString := self monthIndex printString.
+	(monthString size = 1) ifTrue: [monthString := '0', monthString].
+	dayString := self dayOfMonth printString.
+	(dayString size = 1) ifTrue: [dayString := '0', dayString].
+
+	^yearString, '-', monthString , '-', dayString
