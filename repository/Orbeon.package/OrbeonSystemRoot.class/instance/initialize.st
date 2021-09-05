@@ -6,4 +6,5 @@ initialize
 	serverConfiguration := OrbeonServerConfiguration new.
 	databaseConfiguration := OrbeonDatabaseConfiguration new.
 	applications := Dictionary new.
-	usersChartsAndDashboardRepository := BIChartsDashboardsRepository newOn: self
+	usersChartsAndDashboardRepository := BIChartsDashboardsRepository newOn: self.
+	dataFormatVersion := OrbeonDataFormat2019_1_0 new.

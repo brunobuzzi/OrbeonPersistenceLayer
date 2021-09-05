@@ -1,0 +1,4 @@
+data format
+newInstanceTemplate
+
+	^dataFormatVersion newInstanceTemplate

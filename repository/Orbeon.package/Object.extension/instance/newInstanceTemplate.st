@@ -1,4 +1,0 @@
-*orbeon
-newInstanceTemplate
-
-	^self defaultOrbeonDataFormatVersion instanceTemplateClass new

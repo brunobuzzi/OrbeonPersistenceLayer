@@ -1,0 +1,4 @@
+data format
+newDefinitionTemplate
+
+	^dataFormatVersion newDefinitionTemplate
