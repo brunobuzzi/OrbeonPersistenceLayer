@@ -8,5 +8,5 @@ getOrCreateFormDefinition
 			[testRoot 
 				buildPublishedFormNamed: 'charts-forms'
 				title: 'Charts Forms'
-				withXml: self newDefinitionTemplate formDefinition_charts_charts_forms
+				withXml: testRoot newDefinitionTemplate formDefinition_charts_charts_forms
 				in: anOrbeonApplication]

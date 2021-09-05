@@ -6,7 +6,7 @@ testMultipleSaveOnSameForm
 
 	form := (OrbeonFormInstance newFor: formDefinition withId: UUID new asString)
 					definition: formDefinition;
-					xmlString: (self newInstanceTemplate form_issu243_v1_name: 'John' surname: 'McCarthy');
+					xmlString: (testRoot newInstanceTemplate form_issu243_v1_name: 'John' surname: 'McCarthy');
 					buildForm;
 					yourself.
 

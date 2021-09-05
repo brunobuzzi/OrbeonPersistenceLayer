@@ -8,10 +8,10 @@ setUp
 					[testRoot 
 						buildPublishedFormNamed: 'test-3'
 						title: 'Test 3'
-						withXml: self newDefinitionTemplate formDefinition_agesic_test_3
+						withXml: testRoot  newDefinitionTemplate formDefinition_agesic_test_3
 						in: application].
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 				definition: definition;
-				xmlString: self newInstanceTemplate formInstance_agesic_test_3;
+				xmlString: testRoot  newInstanceTemplate formInstance_agesic_test_3;
 				buildForm;
 				yourself

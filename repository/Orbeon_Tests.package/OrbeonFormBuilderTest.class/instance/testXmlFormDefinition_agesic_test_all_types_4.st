@@ -2,7 +2,7 @@ tests
 testXmlFormDefinition_agesic_test_all_types_4
 	| fieldsNodes document image annotation fieldTypes labels section1 section11 section2 section21 allFields grids grid fields searchFields summaryFields permissions |
 
-	builder := testRoot newFormBuilderFor:  self newDefinitionTemplate formDefinition_agesic_test_all_types_4.
+	builder := testRoot newFormBuilderFor:  testRoot newDefinitionTemplate formDefinition_agesic_test_all_types_4.
 
 "ApplicationName"
 	self assert: (builder getApplicationName = 'agesic').

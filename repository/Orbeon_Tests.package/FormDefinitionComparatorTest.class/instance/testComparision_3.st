@@ -8,7 +8,7 @@ testComparision_3
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';
-				xmlString: self newDefinitionTemplate formDefinition_agesic_test_comparison_3;
+				xmlString: testRoot newDefinitionTemplate formDefinition_agesic_test_comparison_3;
 				buildForm;
 				yourself.
 
@@ -17,7 +17,7 @@ testComparision_3
 				id: id;
 				setApplication: 'agesic';
 				formName: 'comparision';
-				xmlString: self newDefinitionTemplate formDefinition_agesic_test_comparison_4;
+				xmlString: testRoot newDefinitionTemplate formDefinition_agesic_test_comparison_4;
 				buildForm;
 				yourself.
 

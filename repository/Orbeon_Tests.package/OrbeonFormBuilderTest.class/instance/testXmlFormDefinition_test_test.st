@@ -2,7 +2,7 @@ tests
 testXmlFormDefinition_test_test
 	| fields types grids summaryFields subSection |
 
-	builder := testRoot newFormBuilderFor: self newDefinitionTemplate formDefinition_test_test.
+	builder := testRoot newFormBuilderFor: testRoot newDefinitionTemplate formDefinition_test_test.
 
 "Availability"
 	self assert: builder isAvailable.

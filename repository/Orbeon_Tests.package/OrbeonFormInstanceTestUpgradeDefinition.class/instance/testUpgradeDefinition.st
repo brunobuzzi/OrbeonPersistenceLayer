@@ -7,7 +7,7 @@ testUpgradeDefinition
 
 	form_v1 := (OrbeonFormInstance newFor: formDefinition_v1 withId: UUID new asString)
 					definition: formDefinition_v1;
-					xmlString: (self newInstanceTemplate form_issu243_v1_name: 'John' surname: 'McCarthy');
+					xmlString: (testRoot newInstanceTemplate form_issu243_v1_name: 'John' surname: 'McCarthy');
 					buildForm;
 					yourself.
 

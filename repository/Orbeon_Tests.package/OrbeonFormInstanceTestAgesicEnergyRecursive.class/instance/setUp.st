@@ -8,10 +8,10 @@ setUp
 					[testRoot 
 						buildPublishedFormNamed: 'energy-recursive'
 						title: 'Energy Recursive'
-						withXml: self newDefinitionTemplate formDefinition_agesic_energy_recursive
+						withXml: testRoot  newDefinitionTemplate formDefinition_agesic_energy_recursive
 						in: application].
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 				definition: definition;
-				xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive;
+				xmlString: testRoot  newInstanceTemplate formInstance_agesic_energy_recursive;
 				buildForm;
 				yourself

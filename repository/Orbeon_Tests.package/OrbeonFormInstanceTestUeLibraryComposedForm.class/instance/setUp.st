@@ -10,7 +10,7 @@ setUp
 						ifNone: [testRoot 
 												buildPublishedFormNamed: 'library' 
 												title: 'Library' 
-												withXml: self newDefinitionTemplate formDefinition_ue_library 
+												withXml: testRoot newDefinitionTemplate formDefinition_ue_library 
 												in: application].
 
 	orbeon
@@ -18,7 +18,7 @@ setUp
 		ifNone: [testRoot 
 							buildPublishedFormNamed: 'library' 
 							title: 'Library' 
-							withXml: self newDefinitionTemplate formDefinition_orbeon_library 
+							withXml: testRoot newDefinitionTemplate formDefinition_orbeon_library 
 							in: orbeon].
 
 	definition := application 
@@ -26,13 +26,13 @@ setUp
 							ifNone: [testRoot buildPublishedFormNamed: 'library-composed-form' id: UUID new asString 
 														version: 1 
 														title: 'Library Composed Form' 
-														publishedXml: self newDefinitionTemplate formDefinition_ue_library_composed_form 
-														savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form 
+														publishedXml: testRoot newDefinitionTemplate formDefinition_ue_library_composed_form 
+														savedXml: testRoot newDefinitionTemplate formSavedDefinition_ue_library_composed_form 
 														in: application.].
 
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 					definition: definition;
-					xmlString: self newInstanceTemplate formInstance_ue_library_composed_form;
+					xmlString: testRoot newInstanceTemplate formInstance_ue_library_composed_form;
 					yourself.
 
 	form buildForm

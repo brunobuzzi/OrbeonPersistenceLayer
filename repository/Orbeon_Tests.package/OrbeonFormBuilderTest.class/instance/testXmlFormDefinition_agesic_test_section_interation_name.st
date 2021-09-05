@@ -1,7 +1,7 @@
 tests
 testXmlFormDefinition_agesic_test_section_interation_name
 
-	builder := testRoot newFormBuilderFor: self newDefinitionTemplate formDefinition_agesic_test_section_interaction_name.
+	builder := testRoot newFormBuilderFor: testRoot newDefinitionTemplate formDefinition_agesic_test_section_interaction_name.
 
 "Availability"
 	self assert: builder isAvailable.

@@ -9,5 +9,5 @@ setUp
 								ifNone: [testRoot 
 												buildPublishedFormNamed: 'all-fields-types' 
 												title: 'Test' 
-												withXml: self newDefinitionTemplate formDefinition_migration_all_fields_types 
+												withXml: testRoot newDefinitionTemplate formDefinition_migration_all_fields_types 
 												in: application].

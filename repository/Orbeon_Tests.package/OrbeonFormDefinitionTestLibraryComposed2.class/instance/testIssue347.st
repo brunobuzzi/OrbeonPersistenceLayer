@@ -2,8 +2,8 @@ tests
 testIssue347
 	| form2 allLibrarySections |
 
-	form2 := self buildPublishedFormStructureFrom: self newDefinitionTemplate formDefinition_ue_library_composed_form  
-					savedXml: self newDefinitionTemplate formSavedDefinition_ue_library_composed_form
+	form2 := self buildPublishedFormStructureFrom: testRoot newDefinitionTemplate formDefinition_ue_library_composed_form  
+					savedXml: testRoot newDefinitionTemplate formSavedDefinition_ue_library_composed_form
 					name: 'library-composed-form' 
 					version: 1 
 					id: UUID new asString 

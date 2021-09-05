@@ -1,7 +1,7 @@
 private
 getRandomXmlStringTemplateMonth: monthIndex year: year
 
-	^self newInstanceTemplate
+	^testRoot newInstanceTemplate
 			form_chart_form: self randomGenerator peekRandomCompany 
 			industry: #('software' 'hardware' 'oil' 'transportation' 'solar-energy') randomPeek
 			total: (self randomGenerator peekRandomNumberOfSize: 6) 

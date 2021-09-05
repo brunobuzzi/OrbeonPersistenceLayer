@@ -9,12 +9,12 @@ setUp
 					[testRoot 
 						buildPublishedFormNamed: 'test-section-interation-name'
 						title: 'Energy Recursive'
-						withXml: self newDefinitionTemplate 
+						withXml: testRoot newDefinitionTemplate 
 								formDefinition_agesic_test_section_interaction_name
 						in: application].
 	form := (OrbeonFormInstance newFor: definition withId: UUID new asString)
 				definition: definition;
-				xmlString: self newInstanceTemplate 
+				xmlString: testRoot newInstanceTemplate 
 							formInstance_agesic_test_section_interaction_name;
 				buildForm;
 				yourself

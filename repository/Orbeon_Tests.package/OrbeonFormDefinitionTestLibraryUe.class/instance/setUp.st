@@ -8,5 +8,5 @@ setUp
 	form := testRoot buildPublishedFormNamed: 'library' 
 					version: 1
 					title: 'Library' 
-					withXml: self newDefinitionTemplate formDefinition_ue_library_2
+					withXml: testRoot newDefinitionTemplate formDefinition_ue_library_2
 					in: application.
