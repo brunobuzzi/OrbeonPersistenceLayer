@@ -1,6 +1,6 @@
 xbl
 xblNode
 
-	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xhXblXbl)
+	^(xmlDocument xPath: systemRoot dataFormatVersion xhXblXbl)
 		ifEmpty: [nil] 
 		ifNotEmpty: [:collection | collection first ]

@@ -1,6 +1,6 @@
 metadata
 getXmlMetadataNodeIfNone: aBlock
 
-	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceFormMetadataXpath)
+	^(xmlDocument xPath: systemRoot dataFormatVersion xfInstanceFormMetadataXpath)
 		ifEmpty: aBlock 
 		ifNotEmpty: [:collection | collection first]

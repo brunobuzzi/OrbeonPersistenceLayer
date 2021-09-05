@@ -1,7 +1,7 @@
 metadata
 getFormName
 
-	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceFormNameXpath)
+	^(xmlDocument xPath: systemRoot dataFormatVersion xfInstanceFormNameXpath)
 		ifEmpty: [OrbeonInvalidXMLException signal: '<form-name> is node missing'] 
 		ifNotEmpty: [:collection | 
 			collection first strings isEmpty 

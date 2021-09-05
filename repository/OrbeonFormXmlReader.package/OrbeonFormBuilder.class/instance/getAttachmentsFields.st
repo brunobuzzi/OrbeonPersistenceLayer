@@ -1,6 +1,6 @@
 build definition attachments
 getAttachmentsFields
 
-	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion frViewFrAttachmentXpath) , 
-		(xmlDocument xPath: self defaultOrbeonDataFormatVersion frViewFrImageAttachmentXpath),
-		(xmlDocument xPath: self defaultOrbeonDataFormatVersion frViewContainsFbAttachmentXpathFunction)
+	^(xmlDocument xPath: systemRoot dataFormatVersion frViewFrAttachmentXpath) , 
+		(xmlDocument xPath: systemRoot dataFormatVersion frViewFrImageAttachmentXpath),
+		(xmlDocument xPath: systemRoot dataFormatVersion frViewContainsFbAttachmentXpathFunction)

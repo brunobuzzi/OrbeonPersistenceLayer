@@ -1,6 +1,6 @@
 metadata
 getXmlSingletonNodeIfNone: aBlock
 
-	^(xmlDocument xPath: self defaultOrbeonDataFormatVersion xfFormIsSingletonXpath)
+	^(xmlDocument xPath: systemRoot dataFormatVersion xfFormIsSingletonXpath)
 		ifEmpty: aBlock 
 		ifNotEmpty: [:collection | collection first]

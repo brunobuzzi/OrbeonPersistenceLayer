@@ -5,7 +5,7 @@ getAttachmentIdsFrom: anOrbeonFormDefinition
 	Empty Attachment field definition (without file in the Form Definition) are NOT listed in this method"
 	| ids nodes formNode |
 
-	nodes := xmlDocument xPath: self defaultOrbeonDataFormatVersion xfInstanceFormXpath.
+	nodes := xmlDocument xPath: systemRoot dataFormatVersion xfInstanceFormXpath.
 	(nodes size = 1) ifFalse: [^OrbeonInvalidXMLException signal: 'Only one [form] node is allowed'].
 	formNode  := nodes last.
 	ids := Dictionary new.
