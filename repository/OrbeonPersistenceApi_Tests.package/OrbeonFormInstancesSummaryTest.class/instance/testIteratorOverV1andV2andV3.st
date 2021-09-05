@@ -8,7 +8,7 @@ testIteratorOverV1andV2andV3
 									id: id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	publishedDefinition := testRoot
@@ -16,15 +16,15 @@ testIteratorOverV1andV2andV3
 									id: savedDefinition id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |
-		self defaultSavedFormDefinitionClass buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each)
+		self defaultSavedFormDefinitionClass buildFormInstanceFrom: (testRoot newInstanceTemplate formInstance_ue_iterator: each)
 													definitionNamed: 'iterator' 
-													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v1
+													definitionXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1
 													app: self application 
 	].
 
@@ -57,7 +57,7 @@ testIteratorOverV1andV2andV3
 									id: id 
 									version: 2 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v2   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v2   
 									in: self application.
 
 
@@ -66,13 +66,13 @@ testIteratorOverV1andV2andV3
 									id: id 
 									version: 2 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v2   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v2   
 									in: self application.
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |
-		self defaultSavedFormDefinitionClass buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each surname: each)
+		self defaultSavedFormDefinitionClass buildFormInstanceFrom: (testRoot newInstanceTemplate formInstance_ue_iterator: each surname: each)
 													definitionNamed: 'iterator' 
-													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v2
+													definitionXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v2
 													app: self application 
 	].
 
@@ -99,7 +99,7 @@ testIteratorOverV1andV2andV3
 									id: id 
 									version: 3 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v3   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v3   
 									in: self application.
 
 
@@ -108,14 +108,14 @@ testIteratorOverV1andV2andV3
 									id: id 
 									version: 3 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v3   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v3   
 									in: self application.
 
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" keysAndValuesDo: [:key :each |
-			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each surname: each number: key printString)
+			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (testRoot newInstanceTemplate formInstance_ue_iterator: each surname: each number: key printString)
 														definitionNamed: 'iterator' 
-														definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v3
+														definitionXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v3
 														app: self application
 	].
 

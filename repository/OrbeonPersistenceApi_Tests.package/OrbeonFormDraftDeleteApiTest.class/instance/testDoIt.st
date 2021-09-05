@@ -9,7 +9,7 @@ testDoIt
 	form := (OrbeonFormInstance newFor: definition withId: id)
 					definition: definition;
 					draft: 'Y';
-					xmlString: self newInstanceTemplate formInstance_agesic_energy_recursive;
+					xmlString: testRoot newInstanceTemplate formInstance_agesic_energy_recursive;
 					buildFormSections;
 					yourself.
 

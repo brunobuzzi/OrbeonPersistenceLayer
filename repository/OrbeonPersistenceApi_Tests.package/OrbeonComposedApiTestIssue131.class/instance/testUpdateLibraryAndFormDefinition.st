@@ -12,7 +12,7 @@ testUpdateLibraryAndFormDefinition
 	definitionV1 := app definitionNamed: 'registration' ifNone: [self assert: false].
 	formInstanceV1 := (OrbeonFormInstance newFor: definitionV1 withId: UUID new asString)
 					definition: definitionV1;
-					xmlString: self newInstanceTemplate formInstance_emb_registration_v1;
+					xmlString: testRoot newInstanceTemplate formInstance_emb_registration_v1;
 					buildForm;
 					yourself.
 	self assert: (formInstanceV1 valueAt: 'name') equals: 'Adele Goldberg'.
@@ -28,7 +28,7 @@ testUpdateLibraryAndFormDefinition
 	definitionV2 := app definitionNamed: 'registration' ifNone: [self assert: false].
 	formInstanceV2 := (OrbeonFormInstance newFor: definitionV2 withId: UUID new asString)
 					definition: definitionV2;
-					xmlString: self newInstanceTemplate formInstance_emb_registration_v2;
+					xmlString: testRoot newInstanceTemplate formInstance_emb_registration_v2;
 					buildForm;
 					yourself.
 	self assert: (formInstanceV2 valueAt: 'name') equals: 'Alan'.
@@ -38,7 +38,7 @@ testUpdateLibraryAndFormDefinition
 	definitionV1 := app definitionNamed: 'registration' version: 1 ifNone: [self assert: false].
 	formInstanceV1 := (OrbeonFormInstance newFor: definitionV1 withId: UUID new asString)
 					definition: definitionV1;
-					xmlString: self newInstanceTemplate formInstance_emb_registration_v1;
+					xmlString: testRoot newInstanceTemplate formInstance_emb_registration_v1;
 					buildForm;
 					yourself.
 	self assert: (formInstanceV1 valueAt: 'name') equals: 'Adele Goldberg'.

@@ -7,7 +7,7 @@ testIteratorOverEmptyV1
 									id: UUID new asString 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	publishedDefinition := testRoot
@@ -15,7 +15,7 @@ testIteratorOverEmptyV1
 									id: savedDefinition id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	"page size = 10 and 16 forms"

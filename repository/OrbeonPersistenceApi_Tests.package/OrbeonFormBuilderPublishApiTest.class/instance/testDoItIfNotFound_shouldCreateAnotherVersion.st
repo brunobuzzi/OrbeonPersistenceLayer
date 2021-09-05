@@ -7,7 +7,7 @@ testDoItIfNotFound_shouldCreateAnotherVersion
 
 	currentPublishedVersion := testRoot formDefinitionNamed: apiOperation formName in: apiOperation appName.
 	latestSavedDefinition := testRoot getLatestSavedDefinition: apiOperation formName app: apiOperation appName ifNone: [nil].
-	apiOperation xmlString: self newDefinitionTemplate formDefinition_st_simple_registration_2.
+	apiOperation xmlString: testRoot newDefinitionTemplate formDefinition_st_simple_registration_2.
 	latestSavedDefinition 
 	ifNil: [apiOperation headerVersion: 'next'] 
 	ifNotNil: [apiOperation headerVersion: latestSavedDefinition printVersion; id: latestSavedDefinition id]. 

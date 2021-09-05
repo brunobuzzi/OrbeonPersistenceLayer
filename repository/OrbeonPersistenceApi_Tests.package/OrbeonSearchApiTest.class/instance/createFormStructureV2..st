@@ -6,5 +6,5 @@ createFormStructureV2: stringId
 			id: stringId
 			version: 2
 			title: 'Test' 
-			withXml: self newDefinitionTemplate formDefinition_agesic_test_all_types_4 
+			withXml: testRoot newDefinitionTemplate formDefinition_agesic_test_all_types_4 
 			in: (testRoot getExistingApplicationOrCreateNewNamed: 'agesic')

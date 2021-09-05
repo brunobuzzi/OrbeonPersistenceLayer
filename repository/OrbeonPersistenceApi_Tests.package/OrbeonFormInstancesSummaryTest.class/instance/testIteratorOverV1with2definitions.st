@@ -8,7 +8,7 @@ testIteratorOverV1with2definitions
 									id: id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	publishedDefinition := testRoot
@@ -16,14 +16,14 @@ testIteratorOverV1with2definitions
 									id: savedDefinition id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	"create 16 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('john' 'mike' 'donald' 'eric' 'alex' 'dale' 'james' 'mark' 'jason' 'todd' 'robert' 'scott' 'aaron' 'sean' 'peter' 'sam')  "array of 16" do: [:each |
-			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each)
+			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (testRoot newInstanceTemplate formInstance_ue_iterator: each)
 													definitionNamed: 'iterator' 
-													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v1
+													definitionXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1
 													app: self application 
 	].
 
@@ -63,7 +63,7 @@ testIteratorOverV1with2definitions
 									id: id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 
 	publishedDefinition := testRoot
@@ -71,13 +71,13 @@ testIteratorOverV1with2definitions
 									id: savedDefinition id 
 									version: 1 
 									title: 'Iterator' 
-									withXml: self newDefinitionTemplate formDefinition_ue_iterator_v1   
+									withXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1   
 									in: self application.
 	"create 8 instances of <OrbeonFormInstance> if <OrbeonPublishedFormDefinition> named <iterator> with source <formDefinition_iteratorV1>"
 	#('albert' 'bruce' 'carl' 'denis' 'emmanuel' 'jules' 'larry' 'maurice')  "array of 16" do: [:each |
-			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (self newInstanceTemplate formInstance_ue_iterator: each)
+			self defaultSavedFormDefinitionClass buildFormInstanceFrom: (testRoot newInstanceTemplate formInstance_ue_iterator: each)
 													definitionNamed: 'iterator' 
-													definitionXml: self newDefinitionTemplate formDefinition_ue_iterator_v1
+													definitionXml: testRoot newDefinitionTemplate formDefinition_ue_iterator_v1
 													app: self application 
 	].
 
