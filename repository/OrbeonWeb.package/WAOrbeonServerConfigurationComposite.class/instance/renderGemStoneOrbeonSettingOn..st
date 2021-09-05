@@ -14,6 +14,6 @@ renderGemStoneOrbeonSettingOn: html
 	html textInput 
 			attributeAt: 'id' put: 'dataFormatVersion';
 			readonly: true;
-			value: self defaultOrbeonDataFormatVersion printName.
+			value: self session systemRoot printDataFormatVersionName.
 
 	html submitButton callback: [self savePreferences]; with: ('Save Preferences' translateIn: self session).
