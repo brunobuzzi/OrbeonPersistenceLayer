@@ -32,7 +32,7 @@ fi
 
 echo "STONE_NAME:   " $STONE_NAME
 echo "GS_VERSION:   " $GS_VERSION
-echo "GEMSTONE:     " $GEMSTONE
+echo "GS_BASE:      " $GS_BASE
 echo "GS_CONF_FILE: " $GS_CONF_FILE
 echo "GS_BACKUPS:   " $GS_BACKUPS
 echo "GS_EXTENTS:   " $GS_EXTENTS

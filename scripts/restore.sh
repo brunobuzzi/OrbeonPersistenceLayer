@@ -56,7 +56,7 @@ rm -Rf $GS_EXTENTS/*.dbf
 info "Finish STEP 3: Delete current extent from EXTENTS location"
 
 info "Start STEP 4: Copy clean EXTENTS to EXTENTS location"
-$GEMSTONE/bin/copydbf $GS_CLEAN_EXTENT $GS_EXTENTS/extent0.dbf
+$GS_BASE/bin/copydbf $GS_CLEAN_EXTENT $GS_EXTENTS/extent0.dbf
 chmod 600 $GS_EXTENTS/extent0.dbf
 info "Finish STEP 4: Copy clean EXTENTS to EXTENTS location"
 

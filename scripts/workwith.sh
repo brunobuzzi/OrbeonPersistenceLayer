@@ -38,8 +38,8 @@ while getopts l:s:v:q opt; do
 done
 INSTALL_PRE=$GS_HOME/shared/downloads/products/GemStone64Bit
 INSTALL_POST=-x86_64.Linux
-export GEMSTONE=$INSTALL_PRE$GS_VERSION$INSTALL_POST
-export GS_CLEAN_EXTENT=$GEMSTONE/bin/extent0.dbf
+export GS_BASE=$INSTALL_PRE$GS_VERSION$INSTALL_POST
+export GS_CLEAN_EXTENT=$GS_BASE/bin/extent0.dbf
 export STONE_NAME=$STONE_NAME
 export GS_VERSION=$GS_VERSION
 export GS_CONF_FILE=$GS_HOME/server/stones/$STONE_NAME/extents/system.conf
