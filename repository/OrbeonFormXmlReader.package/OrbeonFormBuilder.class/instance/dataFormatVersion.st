@@ -1,4 +1,4 @@
 data format version
 dataFormatVersion
 
-	^OrbeonDataFormatVersion default
+	^systemRoot dataFormatVersion
