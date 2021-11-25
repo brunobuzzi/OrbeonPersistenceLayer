@@ -1,20 +1,8 @@
 {
 	"class" : {
-		"addAdminUser" : "BrunoBB 02/04/2016 10:11",
-		"cache" : "BrunoBB 12/20/2015 11:23",
-		"cache:" : "BrunoBB 12/20/2015 11:23",
-		"getExistingOrNewUserNamed:" : "BrunoBB 06/29/2016 07:34",
-		"getExistingOrNewUserNamed:password:" : "BrunoBB 06/29/2016 07:33",
-		"getUserNamed:" : "BrunoBB 06/29/2016 07:34",
-		"initializeCache" : "BrunoBB 12/20/2015 11:23",
-		"migrateToApplicationUser" : "BrunoBB 12/20/2015 11:44",
-		"named:" : "BrunoBB 12/20/2015 11:23",
-		"newManagerNamed:password:" : "brunobb 03/25/2020 14:46",
-		"newNamed:password:" : "brunobb 07/06/2021 12:57",
-		"transformCache" : "BrunoBB 12/20/2015 11:23" },
+		 },
 	"instance" : {
 		"addRol:" : "BrunoBB 12/20/2015 11:23",
-		"addToCache" : "BrunoBB 12/20/2015 11:46",
 		"beAdminUser" : "brunobb 07/09/2018 09:00",
 		"beNormalUser" : "brunobb 07/09/2018 08:59",
 		"centralUser" : "BrunoBB 12/20/2015 11:23",
@@ -39,7 +27,6 @@
 		"name:" : "BrunoBB 12/20/2015 11:46",
 		"password" : "BrunoBB 12/20/2015 11:47",
 		"password:" : "BrunoBB 12/20/2015 11:47",
-		"removeFromCache" : "BrunoBB 12/20/2015 11:46",
 		"removeRol:" : "BrunoBB 12/20/2015 11:23",
 		"rolsDo:" : "brunobb 08/17/2020 10:48",
 		"username" : "BrunoBB 07/03/2016 08:56" } }

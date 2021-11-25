@@ -1,4 +1,0 @@
-charts and dashboards
-storeDashboard: aBIDashboardDefinition
-
-	^self usersChartsAndDashboardRepository storeDashboard: aBIDashboardDefinition

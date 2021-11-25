@@ -1,4 +1,0 @@
-charts and dashboards
-removeDashboard: aBIDashboardDefinition
-
-	^self usersChartsAndDashboardRepository removeDashboard: aBIDashboardDefinition

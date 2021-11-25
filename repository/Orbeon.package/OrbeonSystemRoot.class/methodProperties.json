@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"adminRoleName" : "brunobb 11/25/2021 03:46",
 		"applicationNamed:" : "brunobb 09/03/2021 12:31",
 		"applicationNamed:ifNone:" : "brunobb 09/03/2021 12:31",
 		"buildFormInstanceNamed:withXml:definitionXml:in:" : "brunobb 09/03/2021 12:31",
@@ -73,6 +74,7 @@
 		"newFormBuilderFor:" : "brunobb 09/03/2021 12:31",
 		"newFormBuilderFor:with:" : "brunobb 09/03/2021 12:31",
 		"newInstanceTemplate" : "brunobb 09/03/2021 12:44",
+		"newUsername:password:" : "brunobb 11/24/2021 14:43",
 		"orbeonDateFormat" : "brunobb 09/03/2021 12:31",
 		"orbeonIP" : "brunobb 09/03/2021 12:31",
 		"orbeonIP:" : "brunobb 09/03/2021 12:31",
@@ -87,8 +89,9 @@
 		"reportModificationDistributionByMonthFrom:to:satisfying:onError:" : "brunobb 09/03/2021 12:31",
 		"reportQuantityDistributionFrom:to:satisfying:onError:" : "brunobb 09/03/2021 12:31",
 		"selectInCache:" : "brunobb 09/03/2021 12:31",
+		"setBasicObjects" : "brunobb 11/25/2021 03:47",
 		"setDatabaseReaderFromDatabaseName:" : "brunobb 09/03/2021 12:31",
 		"storeChart:" : "brunobb 09/03/2021 12:31",
 		"typeSearchIsOr:in:" : "brunobb 09/03/2021 12:31",
-		"unregisterApplication:ifAbsent:" : "brunobb 09/03/2021 12:31",
+		"unregisterApplication:ifAbsent:" : "brunobb 11/25/2021 05:34",
 		"updateFormDefinitionNamed:app:version:from:" : "brunobb 09/03/2021 12:31" } }
