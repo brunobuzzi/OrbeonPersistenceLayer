@@ -1,0 +1,4 @@
+applications
+hasAnyProcessInApplicationNamed: applicationName
+
+	^false

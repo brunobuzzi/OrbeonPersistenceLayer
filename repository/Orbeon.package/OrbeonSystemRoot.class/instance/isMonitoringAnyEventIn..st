@@ -1,0 +1,4 @@
+applications
+isMonitoringAnyEventIn: anApplication
+
+	^false
