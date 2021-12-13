@@ -1,4 +1,4 @@
 applications
-doInCache: aBlock
+applicationsDo: aBlock
 
 	^applications do: aBlock

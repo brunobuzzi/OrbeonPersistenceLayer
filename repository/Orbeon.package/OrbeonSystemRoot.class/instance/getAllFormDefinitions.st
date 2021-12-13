@@ -3,6 +3,6 @@ getAllFormDefinitions
 	| definitions |
 
 	definitions := OrderedCollection new.
-	self doInCache: [:each | definitions addAll: each getAllDefinitions].
+	self applicationsDo: [:each | definitions addAll: each getAllDefinitions].
 
 	^definitions
